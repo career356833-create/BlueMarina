@@ -15,9 +15,7 @@ function context(input: GenerationInput) {
   const ageText = input.ageGroup ? `${input.ageGroup}` : "유아";
   const dateText = input.activityDate ? new Date(input.activityDate).toLocaleDateString("ko-KR") : "오늘";
   const toneText = input.tone ? toneLabels[input.tone] : "따뜻한 감성형";
-  const photoText = input.analyzePhotos
-    ? `첨부 사진 ${input.images.length}장의 분위기도 함께 반영했습니다.`
-    : "사진은 첨부용으로만 사용하고 입력 정보 중심으로 작성했습니다.";
+  const photoText = input.analyzePhotos ? `첨부 사진 ${input.images.length}장의 분위기도 자연스럽게 반영했습니다.` : "";
 
   return { keywordText, place, classText, ageText, dateText, toneText, photoText };
 }
@@ -77,7 +75,7 @@ export const mockProvider: AiProvider = {
 
     return {
       title: `${activity} 알림장`,
-      body: `${dateText} ${classText}은 ${activity} 활동에 즐겁게 참여했습니다. ${photoText}`,
+      body: `${dateText} ${classText}은 ${activity} 활동에 즐겁게 참여했습니다.${photoText ? ` ${photoText}` : ""}`,
       sections: [
         { label: "오늘의 활동", value: `${keywordText}를 중심으로 몸과 마음을 활짝 열고 다양한 경험을 쌓았습니다.` },
         { label: "아이들의 반응", value: "처음에는 조심스러워하던 아이들도 곧 친구들과 웃으며 적극적으로 참여했습니다." },

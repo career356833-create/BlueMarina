@@ -5,7 +5,8 @@ import { Copy, ImagePlus, Loader2, Save, Sparkles, UploadCloud, X } from "lucide
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input, Textarea } from "@/components/ui/input";
-import { readInstitution, saveHistory } from "@/lib/local-store";
+import { formatGeneratedContent } from "@/lib/content-format";
+import { readInstitution, saveHistory, saveSavedItem } from "@/lib/local-store";
 import { createClient } from "@/lib/supabase/client";
 import { cn, formatContentType, uid } from "@/lib/utils";
 import type { ContentHistoryItem, ContentType, GeneratedContent, UploadedImage } from "@/types/content";
@@ -107,7 +108,9 @@ export function ContentStudio({ type, description, placeholders }: ContentStudio
 
     const supabase = createClient();
     if (supabase) {
+      const { data: userData } = await supabase.auth.getUser();
       await supabase.from("generated_contents").insert({
+        user_id: userData.user?.id,
         content_type: type,
         keywords,
         title: data.content.title,
@@ -124,17 +127,27 @@ export function ContentStudio({ type, description, placeholders }: ContentStudio
 
   async function copyResult() {
     if (!content) return;
-    const text = [
-      content.title,
-      content.body,
-      ...content.sections.map((section) => `${section.label}\n${section.value}`),
-      content.hashtags?.map((tag) => `#${tag}`).join(" ")
-    ]
-      .filter(Boolean)
-      .join("\n\n");
+    const text = formatGeneratedContent(type, content);
 
     await navigator.clipboard.writeText(text);
     setMessage("생성 결과를 복사했습니다.");
+  }
+
+  function saveResult() {
+    if (!content) return;
+    saveSavedItem({
+      id: uid("saved"),
+      title: content.title,
+      contentType: type,
+      content: formatGeneratedContent(type, content),
+      createdAt: new Date().toISOString(),
+      inputData: {
+        keywords,
+        memo,
+        images
+      }
+    });
+    setMessage("저장 목록에 저장했습니다.");
   }
 
   return (
@@ -203,9 +216,9 @@ export function ContentStudio({ type, description, placeholders }: ContentStudio
                 <Copy size={16} />
                 복사
               </Button>
-              <Button variant="secondary" disabled={!content} aria-label="저장됨">
+              <Button variant="secondary" onClick={saveResult} disabled={!content} aria-label="저장">
                 <Save size={16} />
-                저장됨
+                저장
               </Button>
             </div>
           </div>
@@ -218,18 +231,11 @@ export function ContentStudio({ type, description, placeholders }: ContentStudio
           ) : (
             <article className="space-y-5 p-5">
               <div>
-                <p className="text-xs font-bold uppercase tracking-wide text-brand-700">Title</p>
                 <h3 className="mt-2 text-xl font-black text-ink">{content.title}</h3>
               </div>
-              <p className="rounded-md bg-surface p-4 text-sm leading-7 text-ink">{content.body}</p>
-              <div className="space-y-3">
-                {content.sections.map((section) => (
-                  <div key={section.label} className="rounded-md border border-line p-4">
-                    <p className="text-sm font-black text-ink">{section.label}</p>
-                    <p className="mt-2 whitespace-pre-line text-sm leading-7 text-muted">{section.value}</p>
-                  </div>
-                ))}
-              </div>
+              <p className="whitespace-pre-line rounded-md bg-surface p-4 text-sm leading-7 text-ink">
+                {formatGeneratedContent(type, content).replace(content.title, "").trim()}
+              </p>
               {content.hashtags && (
                 <div className="flex flex-wrap gap-2">
                   {content.hashtags.map((tag) => (

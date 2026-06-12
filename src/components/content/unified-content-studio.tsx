@@ -17,10 +17,12 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input, Textarea } from "@/components/ui/input";
+import { formatGeneratedContent, sanitizeGeneratedText } from "@/lib/content-format";
 import {
   readDailyUsage,
   readInstitution,
   saveDailyUsage,
+  saveSavedItem,
   saveUnifiedRecord
 } from "@/lib/local-store";
 import { createClient } from "@/lib/supabase/client";
@@ -47,19 +49,8 @@ const toneOptions: { value: Tone; label: string }[] = [
 
 const ageGroups = ["만 2세", "만 3세", "만 4세", "만 5세", "혼합반"];
 
-function contentToText(content: GeneratedContent) {
-  return [
-    content.title,
-    content.body,
-    ...content.sections.map((section) => `${section.label}\n${section.value}`),
-    content.hashtags?.map((tag) => `#${tag}`).join(" ")
-  ]
-    .filter(Boolean)
-    .join("\n\n");
-}
-
 function deriveText(results: UnifiedGenerationResult, type: ContentType) {
-  return contentToText(results[type]);
+  return formatGeneratedContent(type, results[type]);
 }
 
 function compressForSms(text: string) {
@@ -201,7 +192,9 @@ export function UnifiedContentStudio() {
 
     const supabase = createClient();
     if (supabase) {
+      const { data } = await supabase.auth.getUser();
       await supabase.from("generation_records").insert({
+        user_id: data.user?.id,
         uploaded_images: record.uploadedImages,
         keywords: record.keywords,
         activity_name: record.activityName,
@@ -288,7 +281,7 @@ export function UnifiedContentStudio() {
     const nextResults = { ...results, [type]: data.content };
     const nextCount = regenerateCount + 1;
     setResults(nextResults);
-    setEditableTexts((current) => ({ ...(current ?? {}), [type]: contentToText(data.content) } as Record<ContentType, string>));
+    setEditableTexts((current) => ({ ...(current ?? {}), [type]: formatGeneratedContent(type, data.content) } as Record<ContentType, string>));
     setRegenerateCount(nextCount);
     saveDailyUsage({ ...usage, regenerationCount: usage.regenerationCount + 1 });
     await persistRecord(makeRecord(nextResults, nextCount));
@@ -302,17 +295,36 @@ export function UnifiedContentStudio() {
   }
 
   function saveEdit(type: ContentType) {
+    const content = editableTexts?.[type] ? sanitizeGeneratedText(editableTexts[type]) : "";
+    saveSavedItem({
+      id: uid("saved"),
+      title: results?.[type]?.title ?? `${formatContentType(type)} 저장본`,
+      contentType: type,
+      content,
+      createdAt: new Date().toISOString(),
+      inputData: {
+        activityName,
+        keywords,
+        className,
+        ageGroup,
+        activityDate,
+        tone,
+        analyzePhotos,
+        uploadedImages: images
+      }
+    });
+
     if (results && editableTexts) {
       const editedResults = { ...results };
       editedResults[type] = {
         ...editedResults[type],
-        body: editableTexts[type],
+        body: content,
         sections: []
       };
       void persistRecord(makeRecord(editedResults, regenerateCount));
     }
     setEditing(null);
-    setMessage(`${formatContentType(type)} 수정 내용을 저장했습니다.`);
+    setMessage(`${formatContentType(type)} 내용을 저장했습니다.`);
   }
 
   function applyQuickEdit(type: ContentType, mode: "warm" | "short" | "thanks") {
@@ -440,7 +452,7 @@ export function UnifiedContentStudio() {
             <input className="mt-1" type="checkbox" checked={analyzePhotos} onChange={(event) => setAnalyzePhotos(event.target.checked)} />
             <span>
               사진 내용도 AI 분석하기
-              <span className="mt-1 block text-xs font-medium text-muted">기본 OFF. 비용 절감을 위해 사진은 첨부용으로만 사용합니다.</span>
+              <span className="mt-1 block text-xs font-medium text-muted">기본 OFF. 비용 절감을 위해 사진 분석은 선택 시에만 사용합니다.</span>
             </span>
           </label>
 

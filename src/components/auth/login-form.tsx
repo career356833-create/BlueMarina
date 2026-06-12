@@ -33,6 +33,7 @@ export function LoginForm() {
       return;
     }
 
+    window.localStorage.setItem("kidsauto.demoUser", JSON.stringify({ email, role: "teacher" }));
     router.push("/dashboard");
   }
 

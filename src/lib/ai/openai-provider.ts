@@ -14,7 +14,7 @@ export const openAiProvider: AiProvider = {
         {
           role: "system",
           content:
-            "You write Korean childcare SaaS content. Return only JSON with title, body, sections[{label,value}], and optional hashtags[]."
+            "You write Korean childcare SaaS content. Return only JSON with title, body, sections[{label,value}], and optional hashtags[]. Keep labels useful for internal structure, but never place labels or system notes inside body/value text."
         },
         {
           role: "user",
@@ -23,6 +23,12 @@ export const openAiProvider: AiProvider = {
             keywords: input.keywords,
             memo: input.memo,
             institution: input.institution,
+            activityName: input.activityName,
+            className: input.className,
+            ageGroup: input.ageGroup,
+            activityDate: input.activityDate,
+            tone: input.tone,
+            analyzePhotos: input.analyzePhotos,
             imageCount: input.images.length,
             imageUrls: input.images.map((image) => image.url)
           })

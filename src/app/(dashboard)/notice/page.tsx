@@ -4,7 +4,7 @@ export default function NoticePage() {
   return (
     <ContentStudio
       type="notice"
-      description="오늘의 활동, 아이들의 반응, 가정 연계 문장을 자동으로 구성합니다."
+      description="보호자가 바로 읽기 좋은 자연스러운 알림장 문안을 생성합니다."
       placeholders={["물놀이", "체육활동", "미술활동"]}
     />
   );

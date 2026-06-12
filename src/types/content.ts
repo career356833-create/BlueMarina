@@ -93,3 +93,13 @@ export type UnifiedGenerationRecord = UnifiedGenerationInput & {
   createdAt: string;
   updatedAt: string;
 };
+
+export type SavedContentItem = {
+  id: string;
+  title: string;
+  contentType: ContentType;
+  content: string;
+  createdAt: string;
+  inputData: Record<string, unknown>;
+  userId: string;
+};
