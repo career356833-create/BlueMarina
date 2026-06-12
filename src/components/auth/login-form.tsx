@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { LockKeyhole, LogIn, Mail } from "lucide-react";
+import { Chrome, LockKeyhole, LogIn, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { createClient } from "@/lib/supabase/client";
@@ -36,6 +36,22 @@ export function LoginForm() {
     router.push("/dashboard");
   }
 
+  async function loginWithGoogle() {
+    const supabase = createClient();
+    if (!supabase) {
+      window.localStorage.setItem("kidsauto.demoUser", JSON.stringify({ email: "google-demo@kidsauto.kr", role: "teacher" }));
+      router.push("/dashboard");
+      return;
+    }
+
+    await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: `${window.location.origin}/dashboard`
+      }
+    });
+  }
+
   return (
     <div className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-5">
       <div className="rounded-md border border-line bg-white p-6 shadow-soft">
@@ -67,6 +83,11 @@ export function LoginForm() {
           <Button className="w-full" onClick={login} disabled={loading}>
             <LogIn size={17} />
             로그인
+          </Button>
+
+          <Button className="w-full" variant="secondary" onClick={loginWithGoogle} disabled={loading}>
+            <Chrome size={17} />
+            Google로 계속하기
           </Button>
         </div>
       </div>

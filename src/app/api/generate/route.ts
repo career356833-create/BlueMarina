@@ -25,7 +25,13 @@ const schema = z.object({
       address: z.string(),
       phone: z.string()
     })
-    .optional()
+    .optional(),
+  activityName: z.string().optional(),
+  className: z.string().optional(),
+  ageGroup: z.string().optional(),
+  activityDate: z.string().optional(),
+  tone: z.enum(["warm", "professional", "simple", "promotion"]).optional(),
+  analyzePhotos: z.boolean().optional()
 });
 
 export async function POST(request: Request) {

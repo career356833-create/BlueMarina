@@ -4,6 +4,9 @@ create type public.user_role as enum ('owner', 'teacher', 'admin');
 create type public.institution_type as enum ('daycare', 'kindergarten');
 create type public.content_type as enum ('notice', 'newsletter', 'homepage', 'blog', 'instagram');
 create type public.subscription_status as enum ('free', 'trialing', 'active', 'past_due', 'canceled');
+create type public.tone_type as enum ('warm', 'professional', 'simple', 'promotion');
+create type public.upload_status as enum ('pending', 'completed', 'failed');
+create type public.instagram_image_selection_mode as enum ('auto_first_3', 'manual', 'ai_recommended');
 
 create table public.profiles (
   id uuid primary key references auth.users(id) on delete cascade,
@@ -58,6 +61,45 @@ create table public.generated_contents (
   created_at timestamptz not null default now()
 );
 
+create table public.generation_records (
+  id uuid primary key default gen_random_uuid(),
+  institution_id uuid references public.institutions(id) on delete cascade,
+  user_id uuid references public.profiles(id) on delete set null,
+  uploaded_images jsonb not null default '[]',
+  keywords text[] not null default '{}',
+  activity_name text not null,
+  class_name text not null default '',
+  age_group text not null default '',
+  activity_date date,
+  tone public.tone_type not null default 'warm',
+  analyze_photos boolean not null default false,
+  notice_text text not null default '',
+  newsletter_text text not null default '',
+  homepage_text text not null default '',
+  blog_text text not null default '',
+  instagram_text text not null default '',
+  upload_status_homepage public.upload_status not null default 'pending',
+  upload_status_blog public.upload_status not null default 'pending',
+  upload_status_instagram public.upload_status not null default 'pending',
+  instagram_selected_images jsonb not null default '[]',
+  instagram_image_selection_mode public.instagram_image_selection_mode not null default 'auto_first_3',
+  generation_count integer not null default 1,
+  regeneration_count integer not null default 0,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create table public.daily_usage_limits (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  usage_date date not null default current_date,
+  generation_count integer not null default 0,
+  regeneration_count integer not null default 0,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  unique (user_id, usage_date)
+);
+
 create table public.subscriptions (
   id uuid primary key default gen_random_uuid(),
   institution_id uuid not null references public.institutions(id) on delete cascade,
@@ -75,6 +117,8 @@ alter table public.institutions enable row level security;
 alter table public.memberships enable row level security;
 alter table public.uploaded_images enable row level security;
 alter table public.generated_contents enable row level security;
+alter table public.generation_records enable row level security;
+alter table public.daily_usage_limits enable row level security;
 alter table public.subscriptions enable row level security;
 
 create policy "profiles_read_own" on public.profiles
@@ -111,6 +155,24 @@ create policy "generated_contents_member_access" on public.generated_contents
       where m.institution_id = generated_contents.institution_id and m.user_id = auth.uid()
     )
   );
+
+create policy "generation_records_member_access" on public.generation_records
+  for all using (
+    institution_id is null or exists (
+      select 1 from public.memberships m
+      where m.institution_id = generation_records.institution_id and m.user_id = auth.uid()
+    )
+  )
+  with check (
+    institution_id is null or exists (
+      select 1 from public.memberships m
+      where m.institution_id = generation_records.institution_id and m.user_id = auth.uid()
+    )
+  );
+
+create policy "daily_usage_own_access" on public.daily_usage_limits
+  for all using (user_id = auth.uid())
+  with check (user_id = auth.uid());
 
 create policy "uploaded_images_member_access" on public.uploaded_images
   for all using (

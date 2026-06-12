@@ -10,12 +10,14 @@ import {
   Home,
   Instagram,
   Newspaper,
+  Sparkles,
   Settings
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const items = [
   { href: "/dashboard", label: "대시보드", icon: ChartNoAxesCombined },
+  { href: "/create", label: "통합 콘텐츠 생성", icon: Sparkles },
   { href: "/notice", label: "알림장", icon: Bell },
   { href: "/newsletter", label: "가정통신문", icon: Newspaper },
   { href: "/homepage", label: "홈페이지 게시글", icon: Home },

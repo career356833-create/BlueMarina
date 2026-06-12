@@ -23,12 +23,24 @@ export type UploadedImage = {
   path?: string;
 };
 
+export type Tone = "warm" | "professional" | "simple" | "promotion";
+
+export type UploadStatus = "pending" | "completed" | "failed";
+
+export type InstagramImageSelectionMode = "auto_first_3" | "manual" | "ai_recommended";
+
 export type GenerationInput = {
   type: ContentType;
   keywords: string[];
   memo?: string;
   images: UploadedImage[];
   institution?: Institution;
+  activityName?: string;
+  className?: string;
+  ageGroup?: string;
+  activityDate?: string;
+  tone?: Tone;
+  analyzePhotos?: boolean;
 };
 
 export type GeneratedContent = {
@@ -48,4 +60,36 @@ export type ContentHistoryItem = {
   content: GeneratedContent;
   imageUrls: string[];
   createdAt: string;
+};
+
+export type UnifiedGenerationInput = {
+  uploadedImages: UploadedImage[];
+  keywords: string[];
+  activityName: string;
+  className: string;
+  ageGroup: string;
+  activityDate: string;
+  tone: Tone;
+  analyzePhotos: boolean;
+  institution?: Institution;
+};
+
+export type UnifiedGenerationResult = Record<ContentType, GeneratedContent>;
+
+export type UnifiedGenerationRecord = UnifiedGenerationInput & {
+  id: string;
+  results: UnifiedGenerationResult;
+  noticeText: string;
+  newsletterText: string;
+  homepageText: string;
+  blogText: string;
+  instagramText: string;
+  uploadStatusHomepage: UploadStatus;
+  uploadStatusBlog: UploadStatus;
+  uploadStatusInstagram: UploadStatus;
+  instagramSelectedImages: UploadedImage[];
+  instagramImageSelectionMode: InstagramImageSelectionMode;
+  regenerateCount: number;
+  createdAt: string;
+  updatedAt: string;
 };

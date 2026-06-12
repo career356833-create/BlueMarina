@@ -15,10 +15,13 @@
 ## 주요 기능
 
 - 이메일/비밀번호 로그인 화면
+- Google 간편 로그인
+- 통합 콘텐츠 생성: 사진 업로드 1회, 활동 입력 1회, 5종 동시 생성
 - 기관 정보 관리: 어린이집/유치원명, 로고, 주소, 연락처
 - jpg/png/webp 다중 사진 업로드
 - 키워드 기반 AI 콘텐츠 생성
 - 생성 결과 저장 및 대시보드 통계
+- 키즈노트 복사 최적화, 인스타그램 사진 선택, 업로드 예약 상태 관리
 - 모바일 우선 반응형 관리자 UI
 - Supabase 미설정 시 로컬 더미 모드로 실행 가능
 
@@ -70,7 +73,9 @@ STRIPE_PRICE_PRO_MONTHLY=
 src/app
   (auth)/login        로그인
   (dashboard)         관리자 SaaS 화면
+  (dashboard)/create  통합 콘텐츠 생성
   api/generate        AI 생성 API
+  api/generate-batch  5종 동시 생성 API
 src/components
   auth                인증 UI
   content             콘텐츠 생성 스튜디오

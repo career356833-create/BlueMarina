@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Bell, ChartNoAxesCombined, FileText, Instagram, Menu, Newspaper, Settings } from "lucide-react";
+import { ChartNoAxesCombined, FileText, Instagram, Menu, Newspaper, Settings, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const items = [
   { href: "/dashboard", label: "대시보드", icon: ChartNoAxesCombined },
-  { href: "/notice", label: "알림장", icon: Bell },
+  { href: "/create", label: "통합생성", icon: Sparkles },
   { href: "/newsletter", label: "통신문", icon: Newspaper },
   { href: "/blog", label: "블로그", icon: FileText },
   { href: "/instagram", label: "인스타", icon: Instagram },

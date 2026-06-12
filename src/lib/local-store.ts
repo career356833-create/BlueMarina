@@ -1,9 +1,11 @@
 "use client";
 
-import type { ContentHistoryItem, Institution } from "@/types/content";
+import type { ContentHistoryItem, Institution, UnifiedGenerationRecord } from "@/types/content";
 
 const historyKey = "kidsauto.history";
 const institutionKey = "kidsauto.institution";
+const unifiedHistoryKey = "kidsauto.unifiedHistory";
+const usageKey = "kidsauto.dailyUsage";
 
 export const defaultInstitution: Institution = {
   id: "demo_institution",
@@ -34,4 +36,28 @@ export function readInstitution(): Institution {
 export function saveInstitution(institution: Institution) {
   if (typeof window === "undefined") return;
   window.localStorage.setItem(institutionKey, JSON.stringify(institution));
+}
+
+export function readUnifiedHistory(): UnifiedGenerationRecord[] {
+  if (typeof window === "undefined") return [];
+  const raw = window.localStorage.getItem(unifiedHistoryKey);
+  return raw ? (JSON.parse(raw) as UnifiedGenerationRecord[]) : [];
+}
+
+export function saveUnifiedRecord(record: UnifiedGenerationRecord) {
+  if (typeof window === "undefined") return;
+  const existing = readUnifiedHistory().filter((item) => item.id !== record.id);
+  window.localStorage.setItem(unifiedHistoryKey, JSON.stringify([record, ...existing].slice(0, 50)));
+}
+
+export function readDailyUsage(date = new Date().toISOString().slice(0, 10)) {
+  if (typeof window === "undefined") return { date, generationCount: 0, regenerationCount: 0 };
+  const raw = window.localStorage.getItem(usageKey);
+  const usage = raw ? (JSON.parse(raw) as { date: string; generationCount: number; regenerationCount: number }) : null;
+  return usage?.date === date ? usage : { date, generationCount: 0, regenerationCount: 0 };
+}
+
+export function saveDailyUsage(usage: { date: string; generationCount: number; regenerationCount: number }) {
+  if (typeof window === "undefined") return;
+  window.localStorage.setItem(usageKey, JSON.stringify(usage));
 }

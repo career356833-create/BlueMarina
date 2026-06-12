@@ -3,26 +3,29 @@
 import { useEffect, useMemo, useState } from "react";
 import { Bell, Newspaper, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { readHistory } from "@/lib/local-store";
+import { readHistory, readUnifiedHistory } from "@/lib/local-store";
 import { formatContentType } from "@/lib/utils";
-import type { ContentHistoryItem } from "@/types/content";
+import type { ContentHistoryItem, UnifiedGenerationRecord } from "@/types/content";
 
 export function DashboardClient() {
   const [history, setHistory] = useState<ContentHistoryItem[]>([]);
+  const [unifiedHistory, setUnifiedHistory] = useState<UnifiedGenerationRecord[]>([]);
 
   useEffect(() => {
     setHistory(readHistory());
+    setUnifiedHistory(readUnifiedHistory());
   }, []);
 
   const stats = useMemo(() => {
     const month = new Date().getMonth();
     const thisMonth = history.filter((item) => new Date(item.createdAt).getMonth() === month);
+    const unifiedThisMonth = unifiedHistory.filter((item) => new Date(item.createdAt).getMonth() === month);
     return {
-      total: thisMonth.length,
-      notice: thisMonth.filter((item) => item.type === "notice").length,
-      newsletter: thisMonth.filter((item) => item.type === "newsletter").length
+      total: thisMonth.length + unifiedThisMonth.length * 5,
+      notice: thisMonth.filter((item) => item.type === "notice").length + unifiedThisMonth.length,
+      newsletter: thisMonth.filter((item) => item.type === "newsletter").length + unifiedThisMonth.length
     };
-  }, [history]);
+  }, [history, unifiedHistory]);
 
   const cards = [
     { label: "이번달 생성수", value: stats.total, icon: Sparkles },
@@ -60,22 +63,35 @@ export function DashboardClient() {
           <h2 className="text-base font-black">최근 생성 이력</h2>
         </div>
         <div className="divide-y divide-line">
-          {history.length === 0 ? (
+          {history.length === 0 && unifiedHistory.length === 0 ? (
             <div className="flex min-h-44 items-center justify-center text-sm text-muted">
               아직 생성 이력이 없습니다.
             </div>
           ) : (
-            history.slice(0, 8).map((item) => (
-              <div key={item.id} className="flex flex-col gap-2 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <p className="font-semibold text-ink">{item.content.title}</p>
-                  <p className="mt-1 text-sm text-muted">
-                    {formatContentType(item.type)} · {item.keywords.join(", ")}
-                  </p>
+            <>
+              {unifiedHistory.slice(0, 5).map((item) => (
+                <div key={item.id} className="flex flex-col gap-2 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p className="font-semibold text-ink">{item.activityName} 통합 생성</p>
+                    <p className="mt-1 text-sm text-muted">
+                      5종 콘텐츠 · {item.className} · {item.keywords.join(", ")}
+                    </p>
+                  </div>
+                  <div className="text-sm text-muted">{new Date(item.createdAt).toLocaleDateString("ko-KR")}</div>
                 </div>
-                <div className="text-sm text-muted">{new Date(item.createdAt).toLocaleDateString("ko-KR")}</div>
-              </div>
-            ))
+              ))}
+              {history.slice(0, 3).map((item) => (
+                <div key={item.id} className="flex flex-col gap-2 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p className="font-semibold text-ink">{item.content.title}</p>
+                    <p className="mt-1 text-sm text-muted">
+                      {formatContentType(item.type)} · {item.keywords.join(", ")}
+                    </p>
+                  </div>
+                  <div className="text-sm text-muted">{new Date(item.createdAt).toLocaleDateString("ko-KR")}</div>
+                </div>
+              ))}
+            </>
           )}
         </div>
       </section>
