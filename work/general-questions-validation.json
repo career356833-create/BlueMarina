@@ -1,0 +1,29 @@
+{
+  "total": 700,
+  "id_continuous": true,
+  "missing_ids": [],
+  "duplicate_ids": [],
+  "bad_choice_count": [],
+  "empty_choices": [],
+  "answer_missing": [],
+  "empty_questions": [],
+  "wrong_license": [],
+  "explanation_missing_count": 14,
+  "explanation_missing_ids": [
+    89,
+    191,
+    193,
+    293,
+    294,
+    295,
+    301,
+    302,
+    308,
+    309,
+    310,
+    313,
+    325,
+    637
+  ],
+  "suspicious_choice_ids": []
+}

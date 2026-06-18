@@ -1,38 +1,77 @@
-# 키즈오토(KidsAuto)
+# Blue Marina - 조종면허 학습앱
 
-어린이집 및 유치원 교사를 위한 AI 콘텐츠 자동생성 SaaS MVP입니다. 사진 여러 장과 키워드만 입력하면 알림장, 가정통신문, 홈페이지 게시글, 블로그 홍보글, 인스타그램 게시글 초안을 생성합니다.
+Blue Marina(블루마리나)는 수상동력기구 조종면허 필기시험 대비 학습앱입니다.
 
-## 기술 스택
-
-- Next.js 15 App Router
-- TypeScript
-- Tailwind CSS
-- Supabase Auth, Database, Storage
-- AI provider adapter 구조: `mock`, `openai`
-- Stripe 연동 준비 구조
-- Vercel 배포 가능
+- 슬로건: 바다로 가는 가장 쉬운 길
+- 운영/제작 브랜드: 암행漁사
+- short name: BluePass
 
 ## 주요 기능
 
-- 이메일/비밀번호 로그인 화면
-- Google 간편 로그인
-- 통합 콘텐츠 생성: 사진 업로드 1회, 활동 입력 1회, 5종 동시 생성
-- 기관 정보 관리: 어린이집/유치원명, 로고, 주소, 연락처
-- jpg/png/webp 다중 사진 업로드
-- 키워드 기반 AI 콘텐츠 생성
-- 생성 결과 저장 및 대시보드 통계
-- 키즈노트 복사 최적화, 인스타그램 사진 선택, 업로드 예약 상태 관리
-- 모바일 우선 반응형 관리자 UI
-- Supabase 미설정 시 로컬 더미 모드로 실행 가능
+- 요트조종면허 700문항 내장 문제은행
+- Blue Marina v3 8대 학습체계 기반 카테고리/태그 학습
+- 랜덤 문제풀이
+- 50문항 모의고사
+- 오답노트
+- 진도율
+- 약점분석 리포트
+- 합격예측
+- PWA 설치 구조
+- 애드센스 광고 슬롯 placeholder
 
-## 로컬 실행
+## 다중 면허 구조
+
+현재 앱은 다중 면허 문제은행 구조를 지원합니다.
+
+- `licenseType: "yacht"`: 요트조종면허, 현재 700문항 탑재
+- `licenseType: "general"`: 일반조종면허, 추후 700문항 탑재 예정
+
+데이터 구조:
+
+- `src/data/yacht-questions.ts`: 요트조종면허 문제은행
+- `src/data/general-questions.ts`: 일반조종면허 문제은행, 현재 빈 배열
+- `src/data/questions.ts`: 두 문제은행을 합치는 통합 entry
+
+URL 파라미터:
+
+- `/study?license=yacht`
+- `/random?license=yacht`
+- `/exam?license=yacht`
+- `/wrong?license=yacht`
+- `/progress?license=yacht`
+- `/analysis?license=yacht`
+
+`license` 파라미터가 없으면 기본값은 `yacht`입니다.
+
+localStorage는 면허별로 분리됩니다.
+
+- `blue-marina:yacht:progress`
+- `blue-marina:yacht:wrong`
+- `blue-marina:yacht:exam-history`
+- `blue-marina:yacht:answer-history`
+- `blue-marina:general:progress`
+- `blue-marina:general:wrong`
+- `blue-marina:general:exam-history`
+- `blue-marina:general:answer-history`
+
+개발 단계에서는 기존 localStorage 기록을 마이그레이션하지 않습니다. 화면 확인 중 데이터가 꼬이면 브라우저 개발자 도구에서 사이트 데이터를 초기화하세요.
+
+## 문항 분류 데이터
+
+- `src/data/question-category-map.csv`: v1, NotebookLM 초기 분류. 폐기.
+- `src/data/question-category-map-v2.csv`: v2, 5대 분류 개선안. 보관.
+- `src/data/question-category-map-v3.csv`: v3, Blue Marina 최종 8대 학습체계. 현재 기준.
+
+현재 `src/data/yacht-questions.ts`의 분류 필드는 v3 기준으로 반영되어 있습니다.
+
+## 실행
 
 ```bash
 npm install
 npm run dev
 ```
 
-PowerShell 실행 정책으로 `npm`이 막히면 Windows에서 아래처럼 실행할 수 있습니다.
+Windows PowerShell에서 스크립트 실행 정책 때문에 `npm`이 막히면 다음 명령을 사용하세요.
 
 ```bash
 npm.cmd install
@@ -41,69 +80,20 @@ npm.cmd run dev
 
 브라우저에서 `http://localhost:3000`을 엽니다.
 
-## 환경변수
-
-`.env.example`을 참고해 `.env.local`을 만듭니다.
+## 검증
 
 ```bash
-NEXT_PUBLIC_SUPABASE_URL=
-NEXT_PUBLIC_SUPABASE_ANON_KEY=
-SUPABASE_SERVICE_ROLE_KEY=
-AI_PROVIDER=mock
-OPENAI_API_KEY=
-OPENAI_MODEL=gpt-4o-mini
-STRIPE_SECRET_KEY=
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
-STRIPE_PRICE_PRO_MONTHLY=
-```
-
-`AI_PROVIDER=mock`이면 API 키 없이도 생성 플로우를 테스트할 수 있습니다. OpenAI를 쓰려면 `AI_PROVIDER=openai`와 `OPENAI_API_KEY`를 설정합니다.
-
-## Supabase 설정
-
-1. Supabase 프로젝트를 생성합니다.
-2. SQL Editor에서 `supabase/schema.sql`을 실행합니다.
-3. Authentication에서 Email provider를 활성화합니다.
-4. Storage bucket `content-images`가 생성되었는지 확인합니다.
-5. `.env.local`에 Supabase URL과 anon key를 입력합니다.
-
-## 폴더 구조
-
-```text
-src/app
-  (auth)/login        로그인
-  (dashboard)         관리자 SaaS 화면
-  (dashboard)/create  통합 콘텐츠 생성
-  api/generate        AI 생성 API
-  api/generate-batch  5종 동시 생성 API
-src/components
-  auth                인증 UI
-  content             콘텐츠 생성 스튜디오
-  dashboard           대시보드/설정
-  layout              사이드바/모바일 내비게이션
-  ui                  기본 UI 컴포넌트
-src/lib
-  ai                  AI provider 교체 계층
-  supabase            Supabase 클라이언트
-  stripe              결제 준비 설정
-src/types             공통 타입
-supabase/schema.sql   DB, RLS, Storage 설계
-```
-
-## AI 교체 구조
-
-`src/lib/ai/index.ts`에서 provider를 선택합니다. Claude 등 다른 API를 추가하려면 `AiProvider` 인터페이스를 구현한 파일을 추가하고 환경변수 기준 분기만 확장하면 됩니다.
-
-## 구독 준비
-
-`src/lib/stripe/config.ts`와 `subscriptions` 테이블에 Stripe 고객/구독 ID를 저장할 수 있는 구조를 포함했습니다. MVP에서는 실제 결제 플로우를 호출하지 않습니다.
-
-## 배포
-
-Vercel에 배포할 때 환경변수를 동일하게 등록합니다.
-
-```bash
+npm run lint
 npm run build
 ```
 
-빌드가 성공하면 Vercel Git 연동 또는 CLI 배포를 사용할 수 있습니다.
+Windows PowerShell에서는:
+
+```bash
+npm.cmd run lint
+npm.cmd run build
+```
+
+## 환경변수
+
+`.env.example`을 참고하세요. 광고와 PWA 관련 값은 실제 배포 전에 확정합니다.

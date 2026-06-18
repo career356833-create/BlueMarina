@@ -1,5 +1,10 @@
-import { redirect } from "next/navigation";
+import { AppFrame } from "@/components/boat/AppFrame";
+import { HomeLanding } from "@/components/boat/home/HomeLanding";
 
-export default function Home() {
-  redirect("/create");
+export default function HomePage() {
+  return (
+    <AppFrame>
+      <HomeLanding />
+    </AppFrame>
+  );
 }

@@ -1,0 +1,56 @@
+{
+  "screenshots": {
+    "mobile": "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\home-mobile.png",
+    "desktop": "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\home-desktop.png"
+  },
+  "mobile": {
+    "brandVisible": true,
+    "startButtonsImmediate": true,
+    "noHorizontalScroll": true,
+    "bottomNavDoesNotCoverFirstActions": true,
+    "adCount": 4,
+    "firstAdBelowHero": true,
+    "hasPreparedButtons": true,
+    "sectionCoverage": {
+      "guide": true,
+      "locations": true,
+      "official": true,
+      "products": true,
+      "roadmap": true,
+      "notices": true
+    }
+  },
+  "desktop": {
+    "heroPresent": true,
+    "featureCardsVisible": true,
+    "adCount": 4,
+    "noHorizontalScroll": true,
+    "guideGridPresent": true,
+    "comingSoonLooksPlanned": true,
+    "oceanPlatformTone": true
+  },
+  "ads": {
+    "heroBelow": "ADHero 하단 광고 영역Google AdSense 자동 광고 준비",
+    "learningSide": "AD학습과정 옆 광고 영역Google AdSense 자동 광고 준비",
+    "middleAds": [
+      "AD중간 콘텐츠 광고 영역Google AdSense 자동 광고 준비",
+      "AD중간 콘텐츠 광고 영역Google AdSense 자동 광고 준비"
+    ],
+    "count": 4
+  },
+  "clicks": {
+    "일반조종면허 시작": "http://localhost:3000/study?license=general",
+    "요트조종면허 시작": "http://localhost:3000/study?license=yacht",
+    "랜덤풀이": "http://localhost:3000/random?license=yacht",
+    "모의고사": "http://localhost:3000/exam?license=yacht",
+    "오답노트": "http://localhost:3000/wrong?license=yacht",
+    "학습분석": "http://localhost:3000/analysis?license=yacht",
+    "면허취득 가이드 카드": "clicked-no-navigation",
+    "시험장/교육장 카드": "clicked-no-navigation",
+    "공식 신청 바로가기 카드": "clicked-no-navigation",
+    "준비중 카드": "clicked-no-navigation"
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "network404": []
+}

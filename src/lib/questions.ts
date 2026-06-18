@@ -1,0 +1,23 @@
+export {
+  categories,
+  DEFAULT_LICENSE_TYPE,
+  DEFAULT_CATEGORY,
+  DEFAULT_CATEGORY_LABEL,
+  getAllQuestions,
+  getAvailableCategories,
+  getAvailableTags,
+  getMockExamQuestions,
+  getLicenseLabel,
+  getQuestionById,
+  getQuestionsByCategory,
+  getQuestionsByDetailCategory,
+  getQuestionsBySubCategory,
+  getQuestionsByTag,
+  getRandomQuestions,
+  getTotalQuestionCount,
+  normalizeLicenseType,
+  questions,
+  V3_CATEGORIES,
+  type LicenseType,
+  type Question
+} from "@/lib/boat/questions";

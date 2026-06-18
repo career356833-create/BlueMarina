@@ -1,0 +1,88 @@
+[
+  {
+    "name": "portal-home-mobile",
+    "url": "http://localhost:3000/",
+    "width": 390,
+    "height": 844,
+    "step": 764,
+    "metrics": {
+      "innerHeight": 844,
+      "innerWidth": 390,
+      "scrollHeight": 9381,
+      "scrollWidth": 375
+    },
+    "count": 13,
+    "files": [
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-mobile-000.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-mobile-001.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-mobile-002.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-mobile-003.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-mobile-004.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-mobile-005.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-mobile-006.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-mobile-007.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-mobile-008.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-mobile-009.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-mobile-010.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-mobile-011.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-mobile-012.png"
+    ]
+  },
+  {
+    "name": "coming-soon-mobile",
+    "url": "http://localhost:3000/coming-soon?section=%ED%95%B4%EC%96%91%EC%A0%95%EB%B3%B4&feature=%EC%A1%B0%EC%84%9D%ED%91%9C",
+    "width": 390,
+    "height": 844,
+    "step": 764,
+    "metrics": {
+      "innerHeight": 844,
+      "innerWidth": 390,
+      "scrollHeight": 845,
+      "scrollWidth": 375
+    },
+    "count": 2,
+    "files": [
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\coming-soon-mobile-000.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\coming-soon-mobile-001.png"
+    ]
+  },
+  {
+    "name": "portal-home-desktop",
+    "url": "http://localhost:3000/",
+    "width": 1440,
+    "height": 1000,
+    "step": 920,
+    "metrics": {
+      "innerHeight": 1000,
+      "innerWidth": 1440,
+      "scrollHeight": 3749,
+      "scrollWidth": 1425
+    },
+    "count": 5,
+    "files": [
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-desktop-000.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-desktop-001.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-desktop-002.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-desktop-003.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\portal-home-desktop-004.png"
+    ]
+  },
+  {
+    "name": "coming-soon-desktop",
+    "url": "http://localhost:3000/coming-soon?section=%ED%95%B4%EC%96%91%EC%A0%95%EB%B3%B4&feature=%EC%A1%B0%EC%84%9D%ED%91%9C",
+    "width": 1440,
+    "height": 1000,
+    "step": 920,
+    "metrics": {
+      "innerHeight": 1000,
+      "innerWidth": 1440,
+      "scrollHeight": 1049,
+      "scrollWidth": 1425
+    },
+    "count": 2,
+    "files": [
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\coming-soon-desktop-000.png",
+      "C:\\Users\\USER\\Documents\\Codex\\2026-06-12\\kidsauto-ai-saas-mvp-next-js\\work\\screenshots\\stitched-src\\coming-soon-desktop-001.png"
+    ]
+  }
+]

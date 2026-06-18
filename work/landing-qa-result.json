@@ -1,0 +1,36 @@
+{
+  "mobile": {
+    "hasHero": true,
+    "hasGeneralLink": true,
+    "hasYachtLink": true,
+    "hasExamLink": true,
+    "hasAnalysisLink": true,
+    "hasAds": true,
+    "hasGuide": true,
+    "hasLocations": true,
+    "hasOfficial": true,
+    "hasProducts": true,
+    "hasRoadmap": true,
+    "hasNotices": true,
+    "noHorizontalScroll": true,
+    "linkCount": 11
+  },
+  "desktop": {
+    "hasHero": true,
+    "hasGeneralLink": true,
+    "hasYachtLink": true,
+    "hasExamLink": true,
+    "hasAnalysisLink": true,
+    "hasAds": true,
+    "hasGuide": true,
+    "hasLocations": true,
+    "hasOfficial": true,
+    "hasProducts": true,
+    "hasRoadmap": true,
+    "hasNotices": true,
+    "noHorizontalScroll": true,
+    "linkCount": 11
+  },
+  "consoleErrors": [],
+  "pageErrors": []
+}
