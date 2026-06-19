@@ -1,0 +1,2 @@
+id,name,type,region,city,address,phone,availableLicenses,sourceUrl,sourceCheckedAt,note,status
+sample-id,시설명,필기시험장|실기시험장|수상안전교육장|면제교육장,시도,시군구,공식 자료 기준 주소,전화번호,일반조종면허|요트조종면허,공식 출처 URL,YYYY-MM-DD,검증 메모,active|unknown|closed

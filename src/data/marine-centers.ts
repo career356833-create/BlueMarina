@@ -32,10 +32,10 @@ export const marineCenters: MarineCenter[] = [
     type: "written-test",
     region: "샘플지역",
     city: "데이터 준비중",
-    address: "공식 자료 확인 후 주소가 반영됩니다.",
+    address: "공식 자료 검증 후 실제 주소가 반영됩니다.",
     phone: "데이터 준비중",
     availableLicenses: ["general", "yacht"],
-    note: "실제 기관명이 아닌 구조 확인용 샘플입니다.",
+    note: "실제 기관명이 아닌 화면 구조 확인용 샘플입니다.",
     status: "unknown"
   },
   {
@@ -44,10 +44,10 @@ export const marineCenters: MarineCenter[] = [
     type: "practical-test",
     region: "샘플지역",
     city: "데이터 준비중",
-    address: "공식 자료 확인 후 주소가 반영됩니다.",
+    address: "공식 자료 검증 후 실제 주소가 반영됩니다.",
     phone: "데이터 준비중",
     availableLicenses: ["general", "yacht"],
-    note: "실제 기관명이 아닌 구조 확인용 샘플입니다.",
+    note: "실제 기관명이 아닌 화면 구조 확인용 샘플입니다.",
     status: "unknown"
   },
   {
@@ -56,10 +56,10 @@ export const marineCenters: MarineCenter[] = [
     type: "safety-education",
     region: "샘플지역",
     city: "데이터 준비중",
-    address: "공식 자료 확인 후 주소가 반영됩니다.",
+    address: "공식 자료 검증 후 실제 주소가 반영됩니다.",
     phone: "데이터 준비중",
     availableLicenses: ["general", "yacht"],
-    note: "실제 기관명이 아닌 구조 확인용 샘플입니다.",
+    note: "실제 기관명이 아닌 화면 구조 확인용 샘플입니다.",
     status: "unknown"
   },
   {
@@ -68,10 +68,10 @@ export const marineCenters: MarineCenter[] = [
     type: "exemption-education",
     region: "샘플지역",
     city: "데이터 준비중",
-    address: "공식 자료 확인 후 주소가 반영됩니다.",
+    address: "공식 자료 검증 후 실제 주소가 반영됩니다.",
     phone: "데이터 준비중",
     availableLicenses: ["general", "yacht"],
-    note: "실제 기관명이 아닌 구조 확인용 샘플입니다.",
+    note: "실제 기관명이 아닌 화면 구조 확인용 샘플입니다.",
     status: "unknown"
   }
 ];
