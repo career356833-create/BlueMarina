@@ -1,0 +1,6 @@
+id,name,type,region,city,address,phone,availableLicenses,sourceUrl,sourceCheckedAt,note,status
+seoul-yeongdeungpo-pc-written-test,서울(영등포)PC,written-test,서울,영등포구,서울특별시 영등포구 여의서로 120,02-761-7122,,https://boat.kcg.go.kr/home/custCnter/ntcInfo/infoView4.do,2026-06-19,공식 전국 면허시험장 안내의 필기(상설PC)시험장 목록에서 확인,active
+incheon-cheongna-pc-written-test,인천(청라)PC,written-test,인천,서구,인천광역시 서구 청라루비로 96 인천해양경찰서,032-650-2651,,https://boat.kcg.go.kr/home/custCnter/ntcInfo/infoView4.do,2026-06-19,공식 전국 면허시험장 안내의 필기(상설PC)시험장 목록에서 확인,active
+chungnam-taean-pc-written-test,충남(태안)PC,written-test,충남,태안군,충청남도 태안군 태안읍 동백로 92-13 태안해양경찰서,041-950-2000,,https://boat.kcg.go.kr/home/custCnter/ntcInfo/infoView4.do,2026-06-19,공식 전국 면허시험장 안내의 필기(상설PC)시험장 목록에서 확인,active
+chungnam-boryeong-pc-written-test,충남(보령)PC,written-test,충남,보령시,충청남도 보령시 성주산로 49 보령해양경찰서,041-402-2349,,https://boat.kcg.go.kr/home/custCnter/ntcInfo/infoView4.do,2026-06-19,공식 전국 면허시험장 안내의 필기(상설PC)시험장 목록에서 확인,active
+busan-yeongdo-pc-written-test,부산(영도)PC,written-test,부산,영도구,"부산광역시 영도구 해양로 53, 부산해양경찰서 청학출장소",051-664-2452,,https://boat.kcg.go.kr/home/custCnter/ntcInfo/infoView4.do,2026-06-19,공식 전국 면허시험장 안내의 필기(상설PC)시험장 목록에서 확인,active
