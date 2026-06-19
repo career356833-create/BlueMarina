@@ -1,0 +1,6 @@
+id,name,type,region,city,address,normalizedAddress,lat,lng,geocodingStatus,geocodingSource,sourceUrl,sourceCheckedAt,geocodingCheckedAt,geocodingNote
+practical-test-48,서울(마포) / 서울요트(마포),practical-test,서울,마포구,서울특별시 마포구 마포나루길 256,,,,pending,,https://boat.kcg.go.kr/home/custCnter/ntcInfo/infoView4.do,2026-06-19,,좌표 공식 확인 필요. 추정 입력 금지.
+busan-suyeong-practical-test,부산(수영),practical-test,부산,수영구,부산광역시 수영구 민락수변로 239번길 18,,,,pending,,https://boat.kcg.go.kr/home/custCnter/ntcInfo/infoView4.do,2026-06-19,,좌표 공식 확인 필요. 추정 입력 금지.
+gangwon-donghae-pc-written-test,강원(동해)PC,written-test,강원,동해시,강원도 동해시 임항로 29 동해해양경찰서,,,,pending,,https://boat.kcg.go.kr/home/custCnter/ntcInfo/infoView4.do,2026-06-19,,좌표 공식 확인 필요. 추정 입력 금지.
+gyeonggi-gapyeong-special-written-test,경기(가평),written-test,경기,가평군,경기도 가평군 호반로 162,,,,pending,,https://boat.kcg.go.kr/home/custCnter/ntcInfo/infoView4.do,2026-06-19,,좌표 공식 확인 필요. 추정 입력 금지.
+jeju-jeju-pc-written-test,제주(제주)PC,written-test,제주,제주시,제주특별자치도 제주시 임항로 154번지 제주해양경찰서,,,,pending,,https://boat.kcg.go.kr/home/custCnter/ntcInfo/infoView4.do,2026-06-19,,좌표 공식 확인 필요. 추정 입력 금지.
