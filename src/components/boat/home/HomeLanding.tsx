@@ -107,10 +107,10 @@ const practiceCenter: PortalSection = {
   description: "실기시험 대비 콘텐츠가 들어갈 준비중 영역입니다.",
   icon: Sailboat,
   items: [
-    { title: "실기 코스", description: "코스 안내 준비중", href: comingSoonHref("실기학습", "실기 코스"), icon: Sailboat, status: "soon" },
-    { title: "실격사유", description: "실격 포인트 준비중", href: comingSoonHref("실기학습", "실격사유"), icon: ShieldCheck, status: "soon" },
-    { title: "실기 체크리스트", description: "체크리스트 준비중", href: comingSoonHref("실기학습", "실기 체크리스트"), icon: ClipboardList, status: "soon" },
-    { title: "실기 영상", description: "영상 콘텐츠 준비중", href: comingSoonHref("실기학습", "실기 영상"), icon: Video, status: "soon" }
+    { title: "실기 코스", description: "코스 흐름과 학습 포인트", href: "/practice/course", icon: Sailboat, status: "ready" },
+    { title: "실격사유", description: "주의해야 할 실격 위험 유형", href: "/practice/fail-items", icon: ShieldCheck, status: "ready" },
+    { title: "실기 체크리스트", description: "시험 전날과 당일 준비 항목", href: "/practice/checklist", icon: ClipboardList, status: "ready" },
+    { title: "실기 영상", description: "영상 자료 라이브러리 준비 페이지", href: "/practice/videos", icon: Video, status: "ready" }
   ]
 };
 
