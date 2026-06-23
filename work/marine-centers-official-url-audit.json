@@ -1,0 +1,128 @@
+{
+  "officialSourceRows": 106,
+  "appCenters": 127,
+  "matchedOfficialUrls": 108,
+  "missingOfficialUrls": 19,
+  "missing": [
+    {
+      "id": "practical-test-44",
+      "name": "경북(영덕) / 경북요트(영덕)",
+      "address": "경상북도 영덕군 강구면 강영로 33",
+      "phone": "054-732-8884"
+    },
+    {
+      "id": "practical-test-48",
+      "name": "서울(마포) / 서울요트(마포)",
+      "address": "서울특별시 마포구 마포나루길 256",
+      "phone": "02-304-5900"
+    },
+    {
+      "id": "gyeonggi-gapyeong-safety-education",
+      "name": "경기(가평)",
+      "address": "경기도 가평군 청평면 호반로 162",
+      "phone": "031-584-5700"
+    },
+    {
+      "id": "gyeonggi-siheung-safety-education",
+      "name": "경기(시흥)",
+      "address": "경기도 시흥시 거북섬5길 16 거북섬프라자 201호",
+      "phone": "031-496-9921"
+    },
+    {
+      "id": "gyeongnam-masan-safety-education",
+      "name": "경남(마산)",
+      "address": "경상남도 창원시 마산합포구 진동면 광암회단지길 42",
+      "phone": "055-271-9977"
+    },
+    {
+      "id": "gyeongnam-changwon-safety-education",
+      "name": "경남(창원)",
+      "address": "경남 창원시 진해구 천자로 160",
+      "phone": "055-551-9122"
+    },
+    {
+      "id": "safety-education-75",
+      "name": "경북(영덕) / 경북요트(영덕)",
+      "address": "경상북도 영덕군 강구면 강영로 33",
+      "phone": "054-732-8884"
+    },
+    {
+      "id": "gyeongbuk-pohang-safety-education",
+      "name": "경북(포항)",
+      "address": "경상북도 포항시 남구 희망대로 810",
+      "phone": "054-270-4492"
+    },
+    {
+      "id": "safety-education-79",
+      "name": "서울(마포) / 서울요트(마포)",
+      "address": "서울특별시 마포구 마포나루길 256",
+      "phone": "02-304-5900"
+    },
+    {
+      "id": "ulsan-namgu-safety-education",
+      "name": "울산(남구)",
+      "address": "울산광역시 남구 여천동 187-24",
+      "phone": "052-258-6115"
+    },
+    {
+      "id": "jeonbuk-gimje-safety-education",
+      "name": "전북(김제)",
+      "address": "전라북도 김제시 만경읍 만경리 750",
+      "phone": "063-548-7774"
+    },
+    {
+      "id": "exemption-education-94",
+      "name": "경기(시흥) / 경기요트(시흥)",
+      "address": "경기도 시흥시 거북섬5길 16",
+      "phone": "031-496-0022"
+    },
+    {
+      "id": "exemption-education-95",
+      "name": "경기(안산) / 경기요트(안산)",
+      "address": "경기도 안산시 단원구 선감동 대부황금로 7",
+      "phone": "031-406-3388"
+    },
+    {
+      "id": "exemption-education-98",
+      "name": "경남(거제남부) / 경남요트(거제)",
+      "address": "경상남도 거제시 남부면 남부해안로 1035",
+      "phone": "055-632-2955"
+    },
+    {
+      "id": "exemption-education-113",
+      "name": "부산(수영) / 부산요트(수영)",
+      "address": "부산광역시 수영구 민락수변로 239번길 18",
+      "phone": "051-742-0367"
+    },
+    {
+      "id": "exemption-education-114",
+      "name": "부산(영도) / 부산요트(영도)",
+      "address": "부산광역시 영도구 태종로 727",
+      "phone": "051-410-5250"
+    },
+    {
+      "id": "exemption-education-116",
+      "name": "서울서초(반포) / 서울요트(서초)",
+      "address": "서울특별시 서초구 올림픽대로 2085-18",
+      "phone": "1522-1477"
+    },
+    {
+      "id": "exemption-education-120",
+      "name": "전남(여수) / 전남요트(여수)",
+      "address": "전라남도 여수시 웅천로 189, 웅천부영1차상가 202호",
+      "phone": "061-685-9011"
+    },
+    {
+      "id": "exemption-education-125",
+      "name": "충남(태안) / 충남요트(태안)",
+      "address": "충청남도 태안군 남면 곰섬로 314",
+      "phone": "041-674-8101"
+    }
+  ],
+  "matchedByType": {
+    "written-test": 31,
+    "practical-test": 28,
+    "safety-education": 22,
+    "exemption-education": 27
+  }
+}

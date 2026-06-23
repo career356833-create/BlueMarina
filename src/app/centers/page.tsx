@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Building2, CheckCircle2, Compass, Filter, IdCard, Map, MapPin, Phone, Search, ShieldCheck } from "lucide-react";
+import { Building2, CheckCircle2, Compass, ExternalLink, Filter, IdCard, Map, MapPin, Phone, Search, ShieldCheck } from "lucide-react";
 import { PortalShell } from "@/components/boat/portal/PortalShell";
 import { marineCenters, marineCenterTypeLabels, type MarineCenter, type MarineCenterType } from "@/data/marine-centers";
 
@@ -121,6 +121,21 @@ function CenterCard({ center }: { center: MarineCenter }) {
           <dd className="mt-1 font-semibold leading-6 text-slate-600">{center.sourceCheckedAt ?? "공식 자료 검증 예정"}</dd>
         </div>
       </dl>
+      {center.officialUrl ? (
+        <a
+          href={center.officialUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-2xl border border-sky-200 bg-sky-50 px-4 text-sm font-black text-sky-800 transition hover:bg-sky-100"
+        >
+          공식 위치 보기
+          <ExternalLink size={16} />
+        </a>
+      ) : (
+        <p className="mt-3 rounded-2xl bg-slate-50 px-4 py-3 text-xs font-bold leading-5 text-slate-500">
+          공식 위치 URL 확인 예정
+        </p>
+      )}
     </article>
   );
 }
