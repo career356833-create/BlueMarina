@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-type TideApiErrorCode = "MISSING_STATION" | "MISSING_DATE" | "INVALID_DATE" | "API_KEY_MISSING" | "ENDPOINT_NOT_READY" | "UPSTREAM_ERROR";
+type TideApiErrorCode = "MISSING_STATION" | "MISSING_DATE" | "INVALID_DATE" | "API_KEY_MISSING" | "UPSTREAM_NOT_CONFIGURED" | "UPSTREAM_ERROR";
 
 type TideApiErrorBody = {
   ok: false;
@@ -17,6 +17,8 @@ type TideApiSuccessBody = {
   data: unknown;
 };
 
+// TODO: Confirm the active KHOA tide endpoint and parameter names against the
+// official API documentation before enabling upstream requests.
 const KHOA_TIDE_ENDPOINT = "";
 
 function errorResponse(body: TideApiErrorBody, status: number) {
@@ -87,7 +89,7 @@ export async function GET(request: Request) {
     return errorResponse(
       {
         ok: false,
-        code: "ENDPOINT_NOT_READY",
+        code: "UPSTREAM_NOT_CONFIGURED",
         message: "국립해양조사원 조석 API endpoint 검증 후 연결 예정입니다.",
         stationId,
         date
