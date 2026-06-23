@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { AlertTriangle, Compass, Droplets, LocateFixed, MapPin, Navigation, Sunrise, ThermometerSun, Waves, Wind } from "lucide-react";
 import { AppFrame } from "@/components/boat/AppFrame";
 import { marineObservatories, type MarineObservatoryData } from "@/data/marine-observatories";
+import { fetchTideInfo, type TideInfoResult } from "@/lib/sea-info/api";
 import { findNearestObservatory } from "@/lib/sea-info/distance";
 
 const previewLocation = {
@@ -62,10 +63,26 @@ function SectionTitle({ label, title, description }: { label: string; title: str
   );
 }
 
+function getTodayDate() {
+  return new Date().toISOString().slice(0, 10);
+}
+
 export default function SeaInfoPage() {
   const [message, setMessage] = useState("");
+  const [tideResult, setTideResult] = useState<TideInfoResult | null>(null);
+  const [isCheckingTide, setIsCheckingTide] = useState(false);
 
   const nearestPreview = useMemo(() => findNearestObservatory(previewLocation, marineObservatories), []);
+
+  async function handleTideCheck() {
+    if (!nearestPreview) return;
+
+    setIsCheckingTide(true);
+    setTideResult(null);
+    const result = await fetchTideInfo(nearestPreview.observatory.id, getTodayDate());
+    setTideResult(result);
+    setIsCheckingTide(false);
+  }
 
   return (
     <AppFrame>
@@ -173,6 +190,46 @@ export default function SeaInfoPage() {
                 </article>
               );
             })}
+          </div>
+        </section>
+
+        <section className="rounded-[2rem] border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
+          <SectionTitle
+            label="KHOA API"
+            title="국립해양조사원 API 연결 준비"
+            description="실제 서비스키는 서버 환경변수 KHOA_API_KEY로만 관리합니다. 클라이언트에는 키가 노출되지 않습니다."
+          />
+          <div className="rounded-3xl bg-slate-50 p-4">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p className="text-sm font-black text-slate-950">조석 API 준비상태 확인</p>
+                <p className="mt-1 text-xs font-bold leading-5 text-slate-500">
+                  현재 가까운 관측소 후보와 오늘 날짜로 내부 API 라우트를 호출합니다. API 키가 없으면 안전한 준비중 응답을 표시합니다.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={handleTideCheck}
+                disabled={isCheckingTide || !nearestPreview}
+                className="inline-flex min-h-12 items-center justify-center rounded-2xl bg-[#0F2D52] px-4 text-sm font-black text-white transition hover:bg-slate-950 disabled:cursor-not-allowed disabled:bg-slate-300"
+              >
+                {isCheckingTide ? "확인 중" : "API 준비상태 확인"}
+              </button>
+            </div>
+            {tideResult ? (
+              <div className="mt-4 rounded-2xl bg-white p-4 text-sm font-bold leading-6 text-slate-700">
+                {tideResult.ok ? (
+                  <p>조석 데이터 응답을 확인했습니다.</p>
+                ) : (
+                  <div>
+                    <p className="font-black text-slate-950">{tideResult.message}</p>
+                    <p className="mt-1 text-xs text-slate-500">
+                      상태: {tideResult.status} · 코드: {tideResult.code}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ) : null}
           </div>
         </section>
 
