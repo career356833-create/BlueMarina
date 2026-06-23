@@ -13,14 +13,10 @@ const previewLocation = {
 
 const dataLabels: Record<MarineObservatoryData, string> = {
   tide: "조석",
-  "high-low-tide": "만조/간조",
-  "water-temperature": "수온",
-  "wave-height": "파고",
-  current: "조류",
-  "sunrise-sunset": "일출/일몰",
+  wave: "파고",
+  waterTemperature: "수온",
   wind: "풍속/풍향",
-  precipitation: "강수",
-  "marine-forecast": "해상예보"
+  sunrise: "일출/일몰"
 };
 
 const plannedCards = [
@@ -181,7 +177,7 @@ export default function SeaInfoPage() {
         </section>
 
         <section className="rounded-[2rem] border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
-          <SectionTitle label="Sample Observatories" title="샘플 관측소 5개" description="실제 공식 코드와 좌표는 API 연동 전 별도 검증 후 교체합니다." />
+          <SectionTitle label="Sample Observatories" title={`관측소 데이터 ${marineObservatories.length}개`} description="실제 공식 코드와 좌표는 API 연동 전 별도 검증 후 보정합니다." />
           <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             {marineObservatories.map((observatory) => (
               <article key={observatory.id} className="min-w-0 rounded-2xl border border-sky-100 bg-slate-50 p-4">
