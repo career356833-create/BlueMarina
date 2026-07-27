@@ -7,6 +7,7 @@ import { AnalysisAd } from "@/components/ads/AnalysisAd";
 import { StatCard } from "@/components/boat/StatCard";
 import { getAllQuestions, getQuestionById, getQuestionsByTag, normalizeLicenseType, type LicenseType, type Question } from "@/lib/boat/questions";
 import {
+  hydrateLearningStateFromSupabase,
   readAnswerHistory,
   readExamHistory,
   readProgress,
@@ -115,9 +116,23 @@ export function AnalysisClient({ license }: AnalysisClientProps) {
   const [answerHistory, setAnswerHistory] = useState<AnswerHistoryRecord[]>([]);
 
   useEffect(() => {
-    setProgress(readProgress(licenseType));
-    setExamHistory(readExamHistory(licenseType));
-    setAnswerHistory(readAnswerHistory(licenseType));
+    let mounted = true;
+
+    async function loadLearningState() {
+      await hydrateLearningStateFromSupabase(licenseType);
+
+      if (!mounted) return;
+
+      setProgress(readProgress(licenseType));
+      setExamHistory(readExamHistory(licenseType));
+      setAnswerHistory(readAnswerHistory(licenseType));
+    }
+
+    void loadLearningState();
+
+    return () => {
+      mounted = false;
+    };
   }, [licenseType]);
 
   const recentExamScores = useMemo(() => examHistory.slice(0, 10).map((record) => record.score), [examHistory]);

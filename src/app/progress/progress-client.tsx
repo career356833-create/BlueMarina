@@ -5,6 +5,7 @@ import { BarChart3, CalendarDays, RotateCcw, Target, Trophy } from "lucide-react
 import { StatCard } from "@/components/boat/StatCard";
 import { getAllQuestions, normalizeLicenseType, type LicenseType } from "@/lib/boat/questions";
 import {
+  hydrateLearningStateFromSupabase,
   readAnswerHistory,
   readExamHistory,
   readProgress,
@@ -109,9 +110,23 @@ export function ProgressClient({ license }: ProgressClientProps) {
   const totalQuestions = getAllQuestions(licenseType).length;
 
   useEffect(() => {
-    setProgress(readProgress(licenseType));
-    setExamHistory(readExamHistory(licenseType));
-    setAnswerHistory(readAnswerHistory(licenseType));
+    let mounted = true;
+
+    async function loadLearningState() {
+      await hydrateLearningStateFromSupabase(licenseType);
+
+      if (!mounted) return;
+
+      setProgress(readProgress(licenseType));
+      setExamHistory(readExamHistory(licenseType));
+      setAnswerHistory(readAnswerHistory(licenseType));
+    }
+
+    void loadLearningState();
+
+    return () => {
+      mounted = false;
+    };
   }, [licenseType]);
 
   const categoryProgress = useMemo(() => buildCategoryProgress(progress, answerHistory, licenseType), [answerHistory, licenseType, progress]);

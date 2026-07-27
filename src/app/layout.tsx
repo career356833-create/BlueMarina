@@ -6,8 +6,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Blue Marina - 조종면허 학습앱",
-  description: "수상동력기구 조종면허 700문항, 모의고사, 오답노트, 약점분석을 제공하는 해양레저 학습앱",
+  title: "Blue Marina - 바다낚시 · 해양레저 포털",
+  description: "물때, 해양정보, 어종백과, 보트지식, 조종면허 학습을 제공하는 대한민국 해양레저 포털",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0F2D52",
+  themeColor: "#050F19",
   colorScheme: "light"
 };
 

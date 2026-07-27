@@ -43,7 +43,7 @@ URL 파라미터:
 
 `license` 파라미터가 없으면 기본값은 `yacht`입니다.
 
-localStorage는 면허별로 분리됩니다.
+학습 기록은 면허별 localStorage에 즉시 저장됩니다.
 
 - `blue-marina:yacht:progress`
 - `blue-marina:yacht:wrong`
@@ -53,6 +53,8 @@ localStorage는 면허별로 분리됩니다.
 - `blue-marina:general:wrong`
 - `blue-marina:general:exam-history`
 - `blue-marina:general:answer-history`
+
+Supabase 환경변수와 로그인 세션이 있으면 같은 학습 상태를 `blue_marina_learning_states` 테이블에 비동기 동기화합니다. 자세한 내용은 `docs/blue-marina-supabase-learning-sync.md`를 참고하세요.
 
 개발 단계에서는 기존 localStorage 기록을 마이그레이션하지 않습니다. 화면 확인 중 데이터가 꼬이면 브라우저 개발자 도구에서 사이트 데이터를 초기화하세요.
 
@@ -97,3 +99,15 @@ npm.cmd run build
 ## 환경변수
 
 `.env.example`을 참고하세요. 광고와 PWA 관련 값은 실제 배포 전에 확정합니다.
+
+해양정보 API 준비 변수:
+
+- `KHOA_API_KEY`: 국립해양조사원 해양정보 API 서버 전용 키입니다. 현재 `/api/sea-info/tide` 라우트가 이 값을 읽습니다.
+- `KMA_API_KEY`: 향후 기상청 API 서버 라우트에서 사용할 예정인 서버 전용 키입니다.
+
+주의:
+
+- 실제 API 키 값은 코드, 문서, 커밋에 넣지 않습니다.
+- `KHOA_API_KEY`, `KMA_API_KEY`는 클라이언트에 노출하지 않습니다.
+- `NEXT_PUBLIC_KHOA_API_KEY`, `NEXT_PUBLIC_KMA_API_KEY` 같은 공개 환경변수는 사용하지 않습니다.
+- `KHOA_API_KEY`가 없으면 `/api/sea-info/tide`는 의도적으로 `503 API_KEY_MISSING` JSON 응답을 반환합니다.

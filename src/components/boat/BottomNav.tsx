@@ -1,44 +1,49 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { BarChart3, BookOpenCheck, ClipboardList, Home, RotateCcw, Trophy } from "lucide-react";
-import { normalizeLicenseType, type LicenseType } from "@/lib/boat/questions";
+import { usePathname, useSearchParams } from "next/navigation";
+import { Compass, Home, LayoutGrid, MessageCircle, Ship } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "/", label: "홈", icon: Home },
-  { href: "/study", label: "학습", icon: BookOpenCheck },
-  { href: "/random", label: "랜덤", icon: RotateCcw },
-  { href: "/exam", label: "모의", icon: ClipboardList },
-  { href: "/analysis", label: "분석", icon: BarChart3 },
-  { href: "/progress", label: "진도", icon: Trophy }
+  { href: "/", label: "홈", icon: Home, activePath: "/" },
+  { href: "/sea-info", label: "바다", icon: Compass, activePath: "/sea-info" },
+  { href: "/fish", label: "낚시", icon: MessageCircle, activePath: "/fish" },
+  {
+    href: "/coming-soon?section=%EB%A7%88%EC%BC%93&feature=%EB%A7%88%EC%BC%93",
+    label: "마켓",
+    icon: Ship,
+    activePath: "/coming-soon",
+    activeSection: "마켓"
+  },
+  {
+    href: "/license-guide",
+    label: "MY",
+    icon: LayoutGrid,
+    activePath: "/license-guide"
+  }
 ];
 
 export function BottomNav() {
   const pathname = usePathname();
-  const [licenseType, setLicenseType] = useState<LicenseType>("yacht");
-
-  useEffect(() => {
-    setLicenseType(normalizeLicenseType(new URLSearchParams(window.location.search).get("license")));
-  }, [pathname]);
+  const searchParams = useSearchParams();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 border-t border-sky-100 bg-white/95 shadow-[0_-10px_30px_rgba(15,45,82,0.08)] backdrop-blur lg:hidden">
-      <div className="mx-auto grid h-16 max-w-xl grid-cols-6">
+    <nav className="fixed bottom-0 left-0 right-0 z-40 border-t border-[#1F3A50] bg-[#071827]/96 text-white backdrop-blur lg:hidden">
+      <div className="mx-auto grid h-[64px] max-w-[420px] grid-cols-5 pb-[env(safe-area-inset-bottom)]">
         {navItems.map((item) => {
           const Icon = item.icon;
-          const active = pathname === item.href;
-          const href = item.href === "/" ? "/" : `${item.href}?license=${licenseType}`;
+          const active =
+            pathname === item.activePath &&
+            (item.activePath !== "/coming-soon" || searchParams.get("section") === item.activeSection);
 
           return (
             <Link
               key={item.href}
-              href={href}
+              href={item.href}
               className={cn(
-                "flex min-w-0 flex-col items-center justify-center gap-1 text-[10px] font-bold text-slate-500",
-                active && "text-sky-700"
+                "flex min-w-0 flex-col items-center justify-center gap-1 text-[10px] font-bold text-[#9FB3C8] transition",
+                active && "text-[#2E8BFF]"
               )}
             >
               <Icon size={19} />

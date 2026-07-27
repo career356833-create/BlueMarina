@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Building2, CheckCircle2, Compass, ExternalLink, Filter, IdCard, Map, MapPin, Phone, Search, ShieldCheck } from "lucide-react";
+import { Building2, CheckCircle2, Compass, Database, ExternalLink, Filter, IdCard, LinkIcon, Map, MapPin, Phone, Search, ShieldCheck } from "lucide-react";
 import { PortalShell } from "@/components/boat/portal/PortalShell";
 import { marineCenters, marineCenterTypeLabels, type MarineCenter, type MarineCenterType } from "@/data/marine-centers";
 
@@ -20,6 +20,13 @@ const licenseOptions = [
   { value: "general", label: "일반조종면허" },
   { value: "yacht", label: "요트조종면허" }
 ] as const;
+
+const typeTone: Record<MarineCenterType, string> = {
+  "written-test": "bg-sky-100 text-sky-800",
+  "practical-test": "bg-indigo-100 text-indigo-800",
+  "safety-education": "bg-emerald-100 text-emerald-800",
+  "exemption-education": "bg-amber-100 text-amber-800"
+};
 
 function getLicenseLabel(licenseType: "general" | "yacht") {
   return licenseType === "general" ? "일반조종면허" : "요트조종면허";
@@ -40,6 +47,21 @@ function matchesLicenseFilter(center: MarineCenter, licenseType: "all" | "genera
   }
 
   return licenses.includes(licenseType);
+}
+
+function countByType(centers: MarineCenter[]) {
+  return centers.reduce(
+    (acc, center) => {
+      acc[center.type] += 1;
+      return acc;
+    },
+    {
+      "written-test": 0,
+      "practical-test": 0,
+      "safety-education": 0,
+      "exemption-education": 0
+    } satisfies Record<MarineCenterType, number>
+  );
 }
 
 function CenterCard({ center }: { center: MarineCenter }) {
@@ -172,6 +194,17 @@ export default function CentersPage() {
 
   const visibleCenters = filteredCenters.slice(0, visibleCount);
   const hasMoreCenters = visibleCenters.length < filteredCenters.length;
+  const typeCounts = useMemo(() => countByType(marineCenters), []);
+  const officialUrlCount = useMemo(() => marineCenters.filter((center) => Boolean(center.officialUrl)).length, []);
+  const coordinateCount = useMemo(() => marineCenters.filter((center) => typeof center.lat === "number" && typeof center.lng === "number").length, []);
+  const hasActiveFilter = region !== "all" || centerType !== "all" || licenseType !== "all" || query.trim().length > 0;
+
+  function resetFilters() {
+    setRegion("all");
+    setCenterType("all");
+    setLicenseType("all");
+    setQuery("");
+  }
 
   return (
     <PortalShell
@@ -189,6 +222,17 @@ export default function CentersPage() {
           </div>
           <span className="w-fit rounded-full bg-sky-100 px-3 py-1 text-xs font-black text-sky-800">검색 데이터 {marineCenters.length}개</span>
         </div>
+
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {typeOptions
+            .filter((item): item is { value: MarineCenterType; label: string } => item.value !== "all")
+            .map((item) => (
+              <div key={item.value} className="rounded-2xl border border-slate-100 bg-slate-50 p-4">
+                <p className={`w-fit rounded-full px-2.5 py-1 text-[11px] font-black ${typeTone[item.value]}`}>{item.label}</p>
+                <p className="mt-3 text-2xl font-black text-slate-950">{typeCounts[item.value]}개</p>
+              </div>
+            ))}
+        </div>
       </section>
 
       <section className="rounded-[2rem] border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
@@ -200,7 +244,18 @@ export default function CentersPage() {
             </div>
             <p className="mt-2 text-sm font-semibold text-slate-500">지역, 시설 종류, 면허 종류, 검색어를 조합해 결과를 좁힐 수 있습니다.</p>
           </div>
-          <span className="rounded-full bg-sky-100 px-3 py-1 text-xs font-black text-sky-800">검색 결과 {filteredCenters.length}개</span>
+          <div className="flex flex-wrap gap-2">
+            <span className="rounded-full bg-sky-100 px-3 py-1 text-xs font-black text-sky-800">검색 결과 {filteredCenters.length}개</span>
+            {hasActiveFilter ? (
+              <button
+                type="button"
+                onClick={resetFilters}
+                className="rounded-full bg-slate-100 px-3 py-1 text-xs font-black text-slate-700 transition hover:bg-slate-200"
+              >
+                필터 초기화
+              </button>
+            ) : null}
+          </div>
         </div>
 
         <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
@@ -262,6 +317,19 @@ export default function CentersPage() {
             </div>
           </label>
         </div>
+
+        {hasActiveFilter ? (
+          <div className="mt-4 flex flex-wrap gap-2 rounded-2xl bg-sky-50 p-3">
+            <span className="rounded-full bg-white px-3 py-1 text-xs font-black text-sky-800">지역: {region === "all" ? "전체" : region}</span>
+            <span className="rounded-full bg-white px-3 py-1 text-xs font-black text-sky-800">
+              시설: {centerType === "all" ? "전체" : marineCenterTypeLabels[centerType]}
+            </span>
+            <span className="rounded-full bg-white px-3 py-1 text-xs font-black text-sky-800">
+              면허: {licenseOptions.find((item) => item.value === licenseType)?.label ?? "전체"}
+            </span>
+            {query.trim() ? <span className="rounded-full bg-white px-3 py-1 text-xs font-black text-sky-800">검색어: {query.trim()}</span> : null}
+          </div>
+        ) : null}
       </section>
 
       <section className="grid gap-4 xl:grid-cols-[1fr_22rem]">
@@ -270,6 +338,7 @@ export default function CentersPage() {
             <div>
               <p className="text-xs font-black uppercase tracking-wide text-sky-700">Results</p>
               <h2 className="mt-1 text-xl font-black text-slate-950">검색 결과 {filteredCenters.length}개</h2>
+              <p className="mt-1 text-xs font-bold text-slate-500">처음에는 {INITIAL_VISIBLE_COUNT}개씩 보여주고, 필요할 때 더 볼 수 있습니다.</p>
             </div>
             <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-black text-slate-600">공식 자료 기반</span>
           </div>
@@ -304,15 +373,56 @@ export default function CentersPage() {
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-sky-100">
             <Map size={24} />
           </div>
-          <h2 className="mt-4 text-xl font-black">지도 기능 준비중</h2>
+          <h2 className="mt-4 text-xl font-black">지도 연동 준비 현황</h2>
           <p className="mt-2 text-sm font-semibold leading-7 text-sky-100">
-            좌표 데이터 확보 후 카카오맵 또는 네이버지도 연동을 검토할 예정입니다.
+            공식 위치 링크는 우선 제공하고, 좌표 데이터 확보 후 네이버지도 또는 카카오맵 연동을 검토할 예정입니다.
           </p>
-          <div className="mt-5 rounded-2xl bg-white/10 p-4">
+
+          <div className="mt-5 grid gap-3">
+            <div className="rounded-2xl bg-white/10 p-4">
+              <div className="flex items-start gap-2">
+                <Database size={18} className="mt-0.5 shrink-0 text-sky-100" />
+                <div>
+                  <p className="text-sm font-black text-white">시설 데이터</p>
+                  <p className="mt-1 text-sm font-semibold leading-6 text-sky-50">{marineCenters.length}개 / 공식 자료 확인일 포함</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-2xl bg-white/10 p-4">
+              <div className="flex items-start gap-2">
+                <LinkIcon size={18} className="mt-0.5 shrink-0 text-sky-100" />
+                <div>
+                  <p className="text-sm font-black text-white">공식 위치 링크</p>
+                  <p className="mt-1 text-sm font-semibold leading-6 text-sky-50">{officialUrlCount}개 연결 / {marineCenters.length - officialUrlCount}개 확인 예정</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-2xl bg-white/10 p-4">
+              <div className="flex items-start gap-2">
+                <ShieldCheck size={18} className="mt-0.5 shrink-0 text-sky-100" />
+                <div>
+                  <p className="text-sm font-black text-white">지도 좌표</p>
+                  <p className="mt-1 text-sm font-semibold leading-6 text-sky-50">{coordinateCount}개 입력 / 전체 좌표 수집 전까지 지도는 준비중</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="/centers/map-test"
+            className="mt-5 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-2xl bg-white px-4 text-sm font-black text-[#0F2D52] transition hover:bg-sky-50"
+          >
+            지도 실험실 보기
+            <ExternalLink size={16} />
+          </a>
+
+          <div className="mt-4 rounded-2xl bg-white/10 p-4">
             <div className="flex items-start gap-2">
               <ShieldCheck size={18} className="mt-0.5 shrink-0 text-sky-100" />
               <p className="text-sm font-semibold leading-6 text-sky-50">
-                현재 데이터에는 실제 좌표와 외부 URL 버튼을 연결하지 않았습니다.
+                실제 방문 전에는 공식 홈페이지와 해당 기관 공지를 함께 확인하세요.
               </p>
             </div>
           </div>

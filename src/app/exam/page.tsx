@@ -109,7 +109,6 @@ function ExamContent() {
             questionNumber={index + 1}
             total={examQuestions.length}
             recordProgress={false}
-            debugMode="exam"
           />
           {selected !== null && (
             <button

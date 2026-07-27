@@ -1,0 +1,66 @@
+﻿{
+    "total":  1405,
+    "boat":  329,
+    "rock":  1076,
+    "latMissing":  2,
+    "lngMissing":  977,
+    "duplicateIds":  [
+
+                     ],
+    "regionCounts":  [
+                         {
+                             "region":  "전라남도",
+                             "count":  629
+                         },
+                         {
+                             "region":  "경상남도",
+                             "count":  223
+                         },
+                         {
+                             "region":  "인천광역시",
+                             "count":  136
+                         },
+                         {
+                             "region":  "제주특별자치도",
+                             "count":  118
+                         },
+                         {
+                             "region":  "전라북도",
+                             "count":  94
+                         },
+                         {
+                             "region":  "경상북도",
+                             "count":  74
+                         },
+                         {
+                             "region":  "충청남도",
+                             "count":  61
+                         },
+                         {
+                             "region":  "경기도",
+                             "count":  27
+                         },
+                         {
+                             "region":  "강원도",
+                             "count":  21
+                         },
+                         {
+                             "region":  "부산광역시",
+                             "count":  13
+                         },
+                         {
+                             "region":  "울산광역시",
+                             "count":  9
+                         }
+                     ],
+    "typeCounts":  [
+                       {
+                           "type":  "boat-fishing-point",
+                           "count":  329
+                       },
+                       {
+                           "type":  "rock-fishing-point",
+                           "count":  1076
+                       }
+                   ]
+}

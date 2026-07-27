@@ -5,7 +5,7 @@ import { AppFrame } from "@/components/boat/AppFrame";
 const naverReasons = [
   {
     title: "국내 지도 품질",
-    description: "국내 주소, 도로명, 지역 검색 품질을 기준으로 시험장·교육장 안내에 적합한 후보입니다.",
+    description: "국내 주소, 도로명, 지도 검색 품질을 기준으로 시험장·교육장 안내에 적합한 후보입니다.",
     icon: Map
   },
   {
@@ -15,7 +15,7 @@ const naverReasons = [
   },
   {
     title: "길찾기 연동 가능성",
-    description: "시설 상세 페이지에서 향후 길찾기 링크나 외부 지도 앱 이동을 검토할 수 있습니다.",
+    description: "시설 상세 페이지에서 향후 길찾기 링크를 통해 지도 앱 이동을 검토할 수 있습니다.",
     icon: Navigation
   },
   {
@@ -29,7 +29,7 @@ const roadmap = [
   "시험장·교육장 마커",
   "지역별 필터와 지도 연동",
   "낚시방 추천",
-  "출조점/선상낚시 위치",
+  "출조점·선상낚시 위치",
   "길찾기 링크",
   "내 주변 시설 찾기"
 ];

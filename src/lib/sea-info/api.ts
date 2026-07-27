@@ -1,10 +1,12 @@
+import type { TideForecastResponse } from "@/lib/sea-info/types";
+
 export type TideInfoResult =
   | {
       ok: true;
       status: number;
       stationId: string;
       date: string;
-      data: unknown;
+      data: TideForecastResponse;
     }
   | {
       ok: false;
@@ -43,13 +45,13 @@ export async function fetchTideInfo(stationId: string, date: string): Promise<Ti
     });
     const payload: unknown = await response.json().catch(() => null);
 
-    if (response.ok && isRecord(payload) && payload.ok === true) {
+    if (response.ok && isRecord(payload) && payload.ok === true && isRecord(payload.data)) {
       return {
         ok: true,
         status: response.status,
         stationId: getString(payload.stationId) || stationId,
         date: getString(payload.date) || date,
-        data: payload.data
+        data: payload.data as TideForecastResponse
       };
     }
 

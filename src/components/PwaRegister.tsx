@@ -26,41 +26,14 @@ function describeError(value: unknown) {
 
 export function PwaRegister() {
   useEffect(() => {
-    const handleWindowError = (event: ErrorEvent) => {
-      console.error("[Blue Marina runtime error]", {
-        message: event.message,
-        filename: event.filename,
-        lineno: event.lineno,
-        colno: event.colno,
-        error: describeError(event.error),
-        rawEvent: event
-      });
-    };
-
-    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-      console.error("[Blue Marina unhandled rejection]", {
-        reason: describeError(event.reason),
-        rawEvent: event
-      });
-    };
-
-    window.addEventListener("error", handleWindowError);
-    window.addEventListener("unhandledrejection", handleUnhandledRejection);
-
     if (!("serviceWorker" in navigator)) {
-      console.log("[Blue Marina SW] serviceWorker not supported");
-      return () => {
-        window.removeEventListener("error", handleWindowError);
-        window.removeEventListener("unhandledrejection", handleUnhandledRejection);
-      };
+      return;
     }
 
     if (process.env.NODE_ENV === "development") {
-      console.log("[Blue Marina SW] development cleanup start");
       navigator.serviceWorker
         .getRegistrations()
         .then((registrations) => {
-          console.log("[Blue Marina SW] existing registrations", registrations.length);
           registrations.forEach((registration) => registration.unregister());
         })
         .catch((error: unknown) => {
@@ -77,31 +50,32 @@ export function PwaRegister() {
                 .map((key) => window.caches.delete(key))
             )
           )
-          .then(() => {
-            console.log("[Blue Marina SW] cache cleanup success");
-          })
           .catch((error: unknown) => {
             console.error("[Blue Marina SW] cache cleanup failed", describeError(error));
           });
       }
 
       return () => {
-        window.removeEventListener("error", handleWindowError);
-        window.removeEventListener("unhandledrejection", handleUnhandledRejection);
+        // Development intentionally unregisters service workers to avoid stale UI/CSS.
       };
     }
 
     if (process.env.NODE_ENV === "production") {
       try {
-        console.log("[Blue Marina SW] register start");
         navigator.serviceWorker
           .register("/sw.js")
           .then((registration) => {
-            console.log("[Blue Marina SW] register success", {
-              scope: registration.scope,
-              active: registration.active?.scriptURL,
-              installing: registration.installing?.scriptURL,
-              waiting: registration.waiting?.scriptURL
+            if (registration.waiting) {
+              registration.waiting.postMessage({ type: "SKIP_WAITING" });
+            }
+
+            registration.addEventListener("updatefound", () => {
+              const worker = registration.installing;
+              worker?.addEventListener("statechange", () => {
+                if (worker.state === "installed" && navigator.serviceWorker.controller) {
+                  worker.postMessage({ type: "SKIP_WAITING" });
+                }
+              });
             });
           })
           .catch((error: unknown) => {
@@ -111,11 +85,7 @@ export function PwaRegister() {
         console.error("[Blue Marina SW] register threw", describeError(error));
       }
     }
-
-    return () => {
-      window.removeEventListener("error", handleWindowError);
-      window.removeEventListener("unhandledrejection", handleUnhandledRejection);
-    };
+    return;
   }, []);
 
   return null;

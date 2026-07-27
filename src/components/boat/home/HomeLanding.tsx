@@ -1,341 +1,465 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useState } from "react";
 import type { LucideIcon } from "lucide-react";
 import {
+  Anchor,
   ArrowRight,
-  BarChart3,
   BookOpenCheck,
-  Bot,
-  Building2,
-  CheckCircle2,
-  ClipboardList,
-  CloudSun,
   Compass,
-  FileQuestion,
+  ChevronDown,
+  Fish,
   GraduationCap,
-  Map,
+  HelpCircle,
   MapPin,
-  Megaphone,
-  MessageCircleQuestion,
-  NotebookTabs,
-  Package,
-  Radar,
-  RotateCcw,
-  Sailboat,
-  ShieldCheck,
-  ShipWheel,
+  Mic,
+  Navigation,
+  Radio,
+  Search,
+  Ship,
+  ShoppingBag,
   Sparkles,
-  Video,
-  Waves
+  Trophy,
+  Waves,
+  Clock3,
+  Route
 } from "lucide-react";
 import { BannerAd } from "@/components/ads/BannerAd";
-import { getTotalQuestionCount, type LicenseType } from "@/lib/boat/questions";
-import { predictPass } from "@/lib/boat/prediction";
-import { readExamHistory, readProgress, readWrongIds, type ExamHistoryRecord, type ProgressRecord } from "@/lib/boat/storage";
-import { getTopWeakTags } from "@/lib/boat/weakness";
+import { SeaInterestCard } from "@/components/boat/home/SeaInterestCard";
 
-type PortalStatus = "ready" | "soon" | "premium";
+type CardStatus = "ready" | "soon" | "premium";
 
-type PortalItem = {
+type FeatureCard = {
   title: string;
   description: string;
   href: string;
   icon: LucideIcon;
-  status: PortalStatus;
+  status?: CardStatus;
 };
 
-type PortalSection = {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-  items: PortalItem[];
-};
-
-const defaultLicense: LicenseType = "yacht";
-const yachtTotalQuestions = getTotalQuestionCount("yacht");
-const generalTotalQuestions = getTotalQuestionCount("general");
-const totalQuestions = yachtTotalQuestions + generalTotalQuestions;
+const PREVIEW_COUNT = 3;
 
 function comingSoonHref(section: string, feature: string) {
   return `/coming-soon?section=${encodeURIComponent(section)}&feature=${encodeURIComponent(feature)}`;
 }
 
-const learningCenter: PortalSection = {
-  title: "학습센터",
-  description: "현재 바로 사용할 수 있는 문제은행 학습 기능입니다.",
-  icon: BookOpenCheck,
-  items: [
-    { title: "문제풀이", description: "면허별 카테고리 문제 학습", href: "/study?license=yacht", icon: BookOpenCheck, status: "ready" },
-    { title: "랜덤문제", description: "전체 문제에서 무작위 반복 학습", href: "/random?license=yacht", icon: RotateCcw, status: "ready" },
-    { title: "모의고사", description: "50문항 실전 테스트", href: "/exam?license=yacht", icon: ClipboardList, status: "ready" },
-    { title: "오답노트", description: "틀린 문제 자동 저장과 복습", href: "/wrong?license=yacht", icon: NotebookTabs, status: "ready" },
-    { title: "학습분석", description: "취약 태그와 합격 가능성 확인", href: "/analysis?license=yacht", icon: BarChart3, status: "ready" },
-    { title: "이론학습", description: "핵심 이론 목차와 관련 문제 연결", href: "/theory", icon: GraduationCap, status: "ready" }
-  ]
-};
-
-const licenseCenter: PortalSection = {
-  title: "면허센터",
-  description: "면허 취득 과정과 공식 안내로 이어지는 포털 구조입니다.",
-  icon: ShieldCheck,
-  items: [
-    { title: "면허취득 가이드", description: "전체 취득 흐름 구조", href: "/license-guide", icon: GraduationCap, status: "ready" },
-    { title: "필기시험 안내", description: "필기시험 안내 센터", href: "/exam-guide", icon: FileQuestion, status: "ready" },
-    { title: "실기시험 안내", description: "실기 안내 준비중", href: comingSoonHref("면허센터", "실기시험 안내"), icon: Sailboat, status: "soon" },
-    { title: "수상안전교육", description: "교육 안내 구조", href: "/safety-guide", icon: ShieldCheck, status: "ready" },
-    { title: "면허증 발급", description: "발급 안내 구조", href: "/license-issue", icon: ClipboardList, status: "ready" },
-    { title: "레저활동 신고", description: "신고 안내 구조", href: "/leisure-report", icon: Megaphone, status: "ready" }
-  ]
-};
-
-const facilityCenter: PortalSection = {
-  title: "시설안내",
-  description: "시험장, 교육장, 공식 신청 동선을 묶은 안내 영역입니다.",
-  icon: MapPin,
-  items: [
-    { title: "시험장 안내", description: "시험장 안내 센터", href: "/centers", icon: MapPin, status: "ready" },
-    { title: "교육장 안내", description: "교육장 데이터 준비중", href: comingSoonHref("시설안내", "교육장 안내"), icon: Building2, status: "soon" },
-    { title: "공식 신청센터", description: "공식 신청 링크 구조", href: "/official-links", icon: Compass, status: "ready" },
-    { title: "지도 서비스", description: "지도 연동 준비중", href: comingSoonHref("시설안내", "지도 서비스"), icon: Map, status: "soon" }
-  ]
-};
-
-const practiceCenter: PortalSection = {
-  title: "실기학습",
-  description: "실기시험 대비 콘텐츠가 들어갈 준비중 영역입니다.",
-  icon: Sailboat,
-  items: [
-    { title: "실기 코스", description: "코스 흐름과 학습 포인트", href: "/practice/course", icon: Sailboat, status: "ready" },
-    { title: "실격사유", description: "주의해야 할 실격 위험 유형", href: "/practice/fail-items", icon: ShieldCheck, status: "ready" },
-    { title: "실기 체크리스트", description: "시험 전날과 당일 준비 항목", href: "/practice/checklist", icon: ClipboardList, status: "ready" },
-    { title: "실기 영상", description: "영상 자료 라이브러리 준비 페이지", href: "/practice/videos", icon: Video, status: "ready" }
-  ]
-};
-
-const marineInfo: PortalSection = {
-  title: "해양정보",
-  description: "조석, 날씨, 항로표지 등 해양레저 정보 확장 영역입니다.",
-  icon: Waves,
-  items: [
-    { title: "조석표", description: "지역별 조석표 준비중", href: comingSoonHref("해양정보", "조석표"), icon: Waves, status: "soon" },
-    { title: "물때 정보", description: "물때 정보 준비중", href: comingSoonHref("해양정보", "물때 정보"), icon: Radar, status: "soon" },
-    { title: "해상날씨", description: "해상날씨 준비중", href: comingSoonHref("해양정보", "해상날씨"), icon: CloudSun, status: "soon" },
-    { title: "항로표지 가이드", description: "항로표지 콘텐츠 준비중", href: comingSoonHref("해양정보", "항로표지 가이드"), icon: Compass, status: "soon" }
-  ]
-};
-
-const expansionServices: PortalSection = {
-  title: "확장예정 서비스",
-  description: "프리미엄, 용품, 커뮤니티 기능을 한 영역으로 정리했습니다.",
-  icon: Sparkles,
-  items: [
-    { title: "AI 학습센터", description: "AI 학습코치와 오답분석 준비중", href: comingSoonHref("확장예정 서비스", "AI 학습센터"), icon: Bot, status: "premium" },
-    { title: "해양용품", description: "안전장비와 추천도구 큐레이션 준비중", href: comingSoonHref("확장예정 서비스", "해양용품"), icon: Package, status: "soon" },
-    { title: "커뮤니티", description: "공지사항, 합격후기, 질문답변 준비중", href: comingSoonHref("확장예정 서비스", "커뮤니티"), icon: MessageCircleQuestion, status: "soon" }
-  ]
-};
-
-const roadmap = [
-  { phase: "Phase 1", title: "학습 기능", items: ["문제은행", "모의고사", "오답노트", "이론학습"] },
-  { phase: "Phase 2", title: "포털 골격", items: ["면허센터", "시설안내", "공식 신청센터", "정책 페이지"] },
-  { phase: "Phase 3", title: "해양 정보", items: ["조석표", "물때", "해상날씨", "항로표지"] },
-  { phase: "Phase 4", title: "확장 서비스", items: ["AI 학습센터", "해양용품", "커뮤니티"] }
+const primaryActions: FeatureCard[] = [
+  {
+    title: "오늘 조황",
+    description: "실시간 조황 미리보기",
+    href: comingSoonHref("조황", "오늘 조황"),
+    icon: Fish,
+    status: "soon"
+  },
+  {
+    title: "출조 예약",
+    description: "선사·출항 정보 찾기",
+    href: "/fishing-spots",
+    icon: BookOpenCheck,
+    status: "ready"
+  },
+  {
+    title: "라이트 내비",
+    description: "근거리 항로 안내",
+    href: comingSoonHref("라이트 내비", "라이트 내비"),
+    icon: Navigation,
+    status: "soon"
+  },
+  {
+    title: "방송 시작",
+    description: "라이브 준비중",
+    href: comingSoonHref("방송", "방송 시작"),
+    icon: Radio,
+    status: "soon"
+  }
 ];
 
-function SectionTitle({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="mb-3 flex items-center gap-2">
-      <span className="h-5 w-1 rounded-full bg-sky-600" />
-      <h2 className="text-lg font-black text-slate-950 lg:text-xl">{children}</h2>
-    </div>
-  );
-}
+const catchPreview: FeatureCard[] = [
+  {
+    title: "오늘의 조황",
+    description: "실시간 조황 미리보기",
+    href: comingSoonHref("조황", "오늘의 조황"),
+    icon: Trophy,
+    status: "soon"
+  },
+  {
+    title: "최신 조황",
+    description: "출조 포인트 한눈에",
+    href: comingSoonHref("조황", "최신 조황"),
+    icon: Fish,
+    status: "soon"
+  },
+  {
+    title: "조황 인증",
+    description: "사진 기반 공유",
+    href: comingSoonHref("조황", "조황 인증"),
+    icon: Compass,
+    status: "soon"
+  }
+];
 
-function StatusBadge({ status }: { status: PortalStatus }) {
+const spotPreview: FeatureCard[] = [
+  {
+    title: "선상낚시 거점",
+    description: "공식 출조 지점",
+    href: "/fishing-spots?type=boat-fishing-point",
+    icon: Ship,
+    status: "ready"
+  },
+  {
+    title: "갯바위 거점",
+    description: "지형별 확인",
+    href: "/fishing-spots?type=rock-fishing-point",
+    icon: MapPin,
+    status: "ready"
+  },
+  {
+    title: "출조 안전",
+    description: "출항 전 체크",
+    href: "/fishing-safety",
+    icon: Anchor,
+    status: "ready"
+  }
+];
+
+const allServiceLinks: FeatureCard[] = [
+  {
+    title: "면허·교육 허브",
+    description: "입문자 로드맵",
+    href: "/license-guide",
+    icon: GraduationCap,
+    status: "ready"
+  },
+  {
+    title: "낚시백과",
+    description: "어종·보트·상식",
+    href: "/marine-knowledge",
+    icon: Waves,
+    status: "ready"
+  },
+  {
+    title: "FAQ",
+    description: "자주 묻는 질문",
+    href: "/faq",
+    icon: HelpCircle,
+    status: "ready"
+  },
+  {
+    title: "시험장·교육장",
+    description: "127개 시설",
+    href: "/centers",
+    icon: MapPin,
+    status: "ready"
+  },
+  {
+    title: "어종백과",
+    description: "100종 정리",
+    href: "/fish",
+    icon: Fish,
+    status: "ready"
+  },
+  {
+    title: "낚시용어사전",
+    description: "초보용 용어 안내",
+    href: "/dictionary",
+    icon: Search,
+    status: "ready"
+  }
+];
+
+const partnerLinks: FeatureCard[] = [
+  {
+    title: "용품",
+    description: "준비중",
+    href: comingSoonHref("광고·제휴", "용품"),
+    icon: ShoppingBag,
+    status: "soon"
+  },
+  {
+    title: "광고",
+    description: "제휴 안내",
+    href: comingSoonHref("광고·제휴", "광고"),
+    icon: Compass,
+    status: "soon"
+  },
+  {
+    title: "프리미엄",
+    description: "AI·구독 기능",
+    href: comingSoonHref("광고·제휴", "프리미엄"),
+    icon: Sparkles,
+    status: "premium"
+  }
+];
+
+function StatusBadge({ status = "ready" }: { status?: CardStatus }) {
   if (status === "ready") {
-    return <span className="rounded-full bg-sky-100 px-2 py-1 text-[11px] font-black text-sky-700">사용 가능</span>;
+    return <span className="rounded-full bg-[#2E8BFF]/15 px-2 py-0.5 text-[10px] font-black text-[#2E8BFF]">사용 가능</span>;
   }
 
   if (status === "premium") {
-    return <span className="rounded-full bg-amber-100 px-2 py-1 text-[11px] font-black text-amber-700">Premium</span>;
+    return <span className="rounded-full bg-[#00D3C7]/15 px-2 py-0.5 text-[10px] font-black text-[#00D3C7]">Premium</span>;
   }
 
-  return <span className="rounded-full bg-slate-100 px-2 py-1 text-[11px] font-black text-slate-500">Coming Soon</span>;
+  return <span className="rounded-full bg-white/8 px-2 py-0.5 text-[10px] font-black text-slate-300">준비중</span>;
 }
 
-function PortalCard({ item }: { item: PortalItem }) {
+function ActionCard({ item }: { item: FeatureCard }) {
+  const Icon = item.icon;
+  const isReady = item.status === "ready";
+
+  return (
+    <Link
+      href={item.href}
+      className="group flex min-h-[112px] min-w-0 flex-col justify-between rounded-[24px] border border-[#1F3A50] bg-[#0E2233] p-3 transition hover:border-[#2E8BFF]/50 hover:bg-[#11293C]"
+    >
+      <div className="flex items-start justify-between gap-2">
+        <div
+          className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl ${
+            isReady ? "bg-[#2E8BFF]/15 text-[#2E8BFF]" : "bg-white/6 text-sky-100"
+          }`}
+        >
+          <Icon size={18} />
+        </div>
+        {!isReady && <StatusBadge status={item.status} />}
+      </div>
+
+      <div className="mt-3 min-w-0">
+        <p className="break-words text-[15px] font-black leading-5 text-white">{item.title}</p>
+        <p className="mt-1 text-xs font-semibold text-[#9FB3C8]">{item.description}</p>
+      </div>
+
+      <ArrowRight className="mt-2 self-end text-[#6E8299] transition group-hover:text-[#2E8BFF]" size={15} />
+    </Link>
+  );
+}
+
+function ServiceLinkCard({ item }: { item: FeatureCard }) {
   const Icon = item.icon;
 
   return (
     <Link
       href={item.href}
-      className="group flex min-h-[128px] flex-col rounded-2xl border border-sky-100 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md"
+      className="group flex min-w-0 items-center gap-3 rounded-[22px] border border-[#1F3A50] bg-[#0E2233] p-3 transition hover:border-[#2E8BFF]/40 hover:bg-[#11293C]"
     >
-      <div className="flex items-start justify-between gap-3">
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-sky-50 text-sky-700">
-          <Icon size={22} />
-        </div>
-        <StatusBadge status={item.status} />
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#2E8BFF]/15 text-[#2E8BFF]">
+        <Icon size={18} />
       </div>
-      <p className="mt-4 text-sm font-black text-slate-950">{item.title}</p>
-      <p className="mt-1 text-xs font-semibold leading-5 text-slate-500">{item.description}</p>
-      <span className="mt-auto inline-flex items-center gap-1 pt-3 text-xs font-black text-sky-700">
-        열기 <ArrowRight size={14} className="transition group-hover:translate-x-0.5" />
-      </span>
+      <div className="min-w-0 flex-1">
+        <div className="flex items-center gap-1.5">
+          <p className="truncate text-sm font-black text-white">{item.title}</p>
+          {item.status && item.status !== "ready" && <StatusBadge status={item.status} />}
+        </div>
+        <p className="mt-0.5 truncate text-xs font-semibold text-[#9FB3C8]">{item.description}</p>
+      </div>
+      <ArrowRight className="shrink-0 text-[#6E8299] transition group-hover:text-[#2E8BFF]" size={15} />
     </Link>
   );
 }
 
-function PortalSectionBlock({ section, compact = false }: { section: PortalSection; compact?: boolean }) {
-  const Icon = section.icon;
-
+function SectionTitle({ title, href }: { title: string; href?: string }) {
   return (
-    <section className="rounded-[2rem] border border-sky-100 bg-white/85 p-4 shadow-sm sm:p-5">
-      <div className="mb-4 flex items-start gap-3">
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F2D52] text-white">
-          <Icon size={24} />
-        </div>
-        <div>
-          <h3 className="text-xl font-black text-slate-950">{section.title}</h3>
-          <p className="mt-1 text-sm font-semibold leading-6 text-slate-500">{section.description}</p>
-        </div>
-      </div>
-      <div className={`grid gap-3 sm:grid-cols-2 ${compact ? "xl:grid-cols-3" : "xl:grid-cols-3"}`}>
-        {section.items.map((item) => (
-          <PortalCard key={`${section.title}-${item.title}`} item={item} />
+    <div className="mb-2.5 flex items-center justify-between gap-3">
+      <h2 className="text-lg font-black tracking-tight text-white lg:text-xl">{title}</h2>
+      {href && (
+        <Link href={href} className="text-xs font-black text-[#2E8BFF]">
+          전체 보기
+        </Link>
+      )}
+    </div>
+  );
+}
+
+function PreviewSection({ title, href, items }: { title: string; href: string; items: FeatureCard[] }) {
+  return (
+    <section className="rounded-[26px] border border-[#1F3A50] bg-[#071827] p-3 lg:p-4">
+      <SectionTitle title={title} href={href} />
+      <div className="grid gap-2 lg:grid-cols-3">
+        {items.slice(0, PREVIEW_COUNT).map((item, index) => (
+          <div key={item.title} className={index >= 2 ? "hidden lg:block" : ""}>
+            <ServiceLinkCard item={item} />
+          </div>
         ))}
       </div>
     </section>
   );
 }
 
-function RoadmapPanel() {
+function HomeHeader() {
+  const chips = [
+    { label: "오늘의 바다", icon: Waves },
+    { label: "실시간 조황", icon: Fish },
+    { label: "핵심 4CTA", icon: BookOpenCheck },
+    { label: "빠른 출항", icon: Navigation }
+  ];
+
   return (
-    <section className="rounded-[2rem] border border-sky-100 bg-white p-5 shadow-sm">
-      <SectionTitle>서비스 로드맵</SectionTitle>
-      <div className="grid gap-3 md:grid-cols-4">
-        {roadmap.map((item) => (
-          <div key={item.phase} className="rounded-2xl bg-slate-50 p-4">
-            <p className="text-xs font-black text-sky-700">{item.phase}</p>
-            <p className="mt-1 text-sm font-black text-slate-950">{item.title}</p>
-            <ul className="mt-3 space-y-1 text-xs font-semibold text-slate-600">
-              {item.items.map((text) => (
-                <li key={text} className="flex gap-1">
-                  <CheckCircle2 size={13} className="mt-0.5 shrink-0 text-sky-600" />
-                  {text}
-                </li>
-              ))}
-            </ul>
-          </div>
+    <section className="rounded-[28px] border border-[#1F3A50] bg-[linear-gradient(180deg,#0F3355_0%,#0A1E30_100%)] px-4 py-3 text-white lg:px-5 lg:py-4">
+      <div className="flex items-start justify-between gap-4">
+        <div className="min-w-0">
+          <p className="text-[11px] font-black uppercase tracking-[0.3em] text-[#9FB3C8]">Blue Marina</p>
+          <h1 className="mt-1 text-[22px] font-black leading-tight text-white sm:text-[30px]">오늘 바다, 어디로 갈까요?</h1>
+          <p className="mt-2 max-w-2xl text-xs font-semibold leading-5 text-[#D7E4F6] sm:text-sm sm:leading-6">
+            물때·날씨·실제 조황을 한눈에 확인하고 출조를 준비하세요.
+          </p>
+        </div>
+
+        <div className="hidden grid-cols-2 gap-2 lg:grid">
+          {[
+            { label: "현장형 PWA", icon: Anchor },
+            { label: "스피드 모드", icon: Clock3 },
+            { label: "준비중 최소화", icon: Sparkles },
+            { label: "빠른 진입", icon: ArrowRight }
+          ].map((chip) => {
+            const Icon = chip.icon;
+
+            return (
+              <div
+                key={chip.label}
+                className="flex items-center gap-2 rounded-[18px] border border-white/10 bg-white/5 px-3 py-2 text-xs font-black text-white/90"
+              >
+                <Icon size={14} />
+                <span>{chip.label}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="mt-3 hidden flex-wrap gap-2 sm:mt-4 sm:flex">
+        {chips.map((chip) => {
+          const Icon = chip.icon;
+          return (
+            <span
+              key={chip.label}
+              className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-black text-white/90"
+            >
+              <Icon size={13} />
+              {chip.label}
+            </span>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+function VoiceAssistantCard() {
+  return (
+    <section className="rounded-[28px] border border-[#1F3A50] bg-[#071827] p-4 text-white lg:p-5">
+      <div className="flex items-center gap-3">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#00D3C7]/15 text-[#00D3C7]">
+          <Mic size={24} />
+        </div>
+        <div className="min-w-0 flex-1">
+          <p className="text-[11px] font-black uppercase tracking-wide text-[#00D3C7]">AI Fishing Assistant</p>
+          <h2 className="truncate text-xl font-black text-white">음성비서</h2>
+          <p className="hidden text-sm font-semibold text-[#9FB3C8] sm:block">
+            물때, 기상, 조황, 출조 준비를 한 번에 물어보세요.
+          </p>
+        </div>
+      </div>
+
+      <Link
+        href={comingSoonHref("AI", "음성비서")}
+        className="mt-3 inline-flex min-h-12 w-full items-center justify-center rounded-[18px] bg-[#00D3C7] px-4 text-sm font-black text-[#071827] transition hover:bg-[#6af1e8]"
+      >
+        AI에게 물어보기
+      </Link>
+
+      <div className="mt-3 grid grid-cols-2 gap-2">
+        {[
+          { label: "조황 한눈에", icon: Fish },
+          { label: "출항 확인", icon: Route }
+        ].map((chip) => {
+          const Icon = chip.icon;
+          return (
+            <div
+              key={chip.label}
+              className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] px-3 py-2 text-[11px] font-semibold text-[#D7E4F6]"
+            >
+              <div className="flex items-center gap-1.5">
+                <Icon size={14} className="text-[#00D3C7]" />
+                <span>{chip.label}</span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+function ServicesAccordion({ open, onToggle }: { open: boolean; onToggle: () => void }) {
+  return (
+    <section className="rounded-[26px] border border-[#1F3A50] bg-[#071827] p-3 lg:p-4">
+      <div className="flex items-center justify-between gap-3">
+        <div>
+          <p className="text-[11px] font-black uppercase tracking-wide text-[#9FB3C8]">All Services</p>
+          <h2 className="text-lg font-black text-white">전체 서비스</h2>
+        </div>
+        <button
+          type="button"
+          className="inline-flex min-h-11 items-center justify-center rounded-2xl border border-[#1F3A50] bg-[#0E2233] px-3 text-sm font-black text-white lg:hidden"
+          onClick={onToggle}
+          aria-expanded={open}
+        >
+          <ChevronDown className={`mr-1 transition ${open ? "rotate-180" : ""}`} size={16} />
+          열기
+        </button>
+      </div>
+
+      <div className={`mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3 ${open ? "" : "hidden lg:grid"}`}>
+        {allServiceLinks.map((item) => (
+          <ServiceLinkCard key={item.title} item={item} />
         ))}
+      </div>
+    </section>
+  );
+}
+
+function PartnerAdSlot() {
+  return (
+    <section className="rounded-[26px] border border-[#1F3A50] bg-[#071827] p-3 lg:p-4">
+      <SectionTitle title="광고·제휴" />
+      <div className="grid gap-2 sm:grid-cols-3">
+        {partnerLinks.map((item) => (
+          <ServiceLinkCard key={item.title} item={item} />
+        ))}
+      </div>
+      <div className="mt-3">
+        <BannerAd label="광고·제휴 영역" />
       </div>
     </section>
   );
 }
 
 export function HomeLanding() {
-  const [progress, setProgress] = useState<ProgressRecord | null>(null);
-  const [examHistory, setExamHistory] = useState<ExamHistoryRecord[]>([]);
-  const [wrongCount, setWrongCount] = useState(0);
-  const [weakTags, setWeakTags] = useState<string[]>([]);
-
-  useEffect(() => {
-    setProgress(readProgress(defaultLicense));
-    setExamHistory(readExamHistory(defaultLicense));
-    setWrongCount(readWrongIds(defaultLicense).length);
-    setWeakTags(getTopWeakTags(5, defaultLicense).items.map((item) => item.label));
-  }, []);
-
-  const solved = progress?.solvedIds.length ?? 0;
-  const progressPercent = yachtTotalQuestions === 0 ? 0 : Math.round((solved / yachtTotalQuestions) * 100);
-  const continueHref = wrongCount > 0 ? "/wrong?license=yacht" : solved > 0 ? "/random?license=yacht" : "/study?license=yacht";
-  const prediction = useMemo(() => predictPass(examHistory, weakTags), [examHistory, weakTags]);
+  const [serviceOpen, setServiceOpen] = useState(false);
 
   return (
-    <div className="space-y-5 lg:space-y-7">
-      <section className="relative overflow-hidden rounded-[2rem] border border-sky-100 bg-white shadow-xl shadow-sky-200/40">
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(219,242,255,0.94)_0%,rgba(240,249,255,0.78)_38%,rgba(14,165,233,0.24)_72%,rgba(15,45,82,0.48)_100%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-[linear-gradient(135deg,#0ea5e9_0%,#0369a1_50%,#0f2d52_100%)] opacity-90" />
+    <div className="mx-auto w-full max-w-[1280px] space-y-3 pb-10 lg:space-y-5">
+      <HomeHeader />
 
-        <div className="relative grid gap-6 p-5 sm:p-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:p-10">
-          <div>
-            <p className="text-sm font-black text-sky-700">Blue Marina Portal</p>
-            <h1 className="mt-3 text-5xl font-black leading-none text-[#0F2D52] sm:text-6xl lg:text-7xl">Blue Marina</h1>
-            <p className="mt-3 text-2xl font-black text-sky-700 sm:text-3xl">바다로 가는 가장 쉬운 길</p>
-            <p className="mt-4 max-w-2xl text-base font-bold leading-7 text-slate-700">
-              일반조종면허와 요트조종면허 1,400문항 학습을 중심으로 면허, 시설, 실기, 해양정보까지 이어지는 해양레저 포털입니다.
-            </p>
-
-            <div className="mt-6 grid gap-3 sm:grid-cols-3">
-              <Link href="/study?license=general" className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-blue-700 px-5 py-4 text-sm font-black text-white shadow-lg shadow-blue-700/25 transition hover:bg-blue-800">
-                <ShipWheel size={20} />
-                일반조종면허 시작
-              </Link>
-              <Link href="/study?license=yacht" className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-[#0F2D52] px-5 py-4 text-sm font-black text-white shadow-lg shadow-slate-900/20 transition hover:bg-slate-950">
-                <Sailboat size={20} />
-                요트조종면허 시작
-              </Link>
-              <Link href={continueHref} className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-white px-5 py-4 text-sm font-black text-sky-800 shadow-sm transition hover:bg-sky-50">
-                <ArrowRight size={20} />
-                이어서 학습
-              </Link>
-            </div>
-          </div>
-
-          <div className="rounded-[1.75rem] bg-[#08265a] p-5 text-white shadow-xl">
-            <div className="grid grid-cols-2 gap-3">
-              <div className="rounded-2xl bg-white/10 p-4">
-                <p className="text-xs font-black text-sky-100">문제은행</p>
-                <p className="mt-2 text-2xl font-black">{totalQuestions.toLocaleString()}문항</p>
-              </div>
-              <div className="rounded-2xl bg-white/10 p-4">
-                <p className="text-xs font-black text-sky-100">요트 진도율</p>
-                <p className="mt-2 text-2xl font-black">{progressPercent}%</p>
-              </div>
-              <div className="rounded-2xl bg-white/10 p-4">
-                <p className="text-xs font-black text-sky-100">합격예측</p>
-                <p className="mt-2 text-2xl font-black">{prediction.passRate || "--"}%</p>
-              </div>
-              <div className="rounded-2xl bg-white/10 p-4">
-                <p className="text-xs font-black text-sky-100">홈 IA</p>
-                <p className="mt-2 text-2xl font-black">6섹션</p>
-              </div>
-            </div>
-            <p className="mt-4 text-sm font-semibold leading-6 text-sky-50">
-              학습센터를 가장 앞에 두고, 나머지 포털 기능은 준비중 상태로 정리해 모바일에서도 빠르게 탐색할 수 있게 했습니다.
-            </p>
-          </div>
-        </div>
+      <section className="grid gap-3 lg:grid-cols-[minmax(0,1.35fr)_minmax(280px,0.65fr)]">
+        <SeaInterestCard />
+        <VoiceAssistantCard />
       </section>
 
-      <BannerAd label="Hero 아래 광고 영역" />
-
-      <section>
-        <SectionTitle>Blue Marina 포털</SectionTitle>
-        <PortalSectionBlock section={learningCenter} />
+      <section className="grid grid-cols-2 gap-2 md:grid-cols-4">
+        {primaryActions.map((item) => (
+          <ActionCard key={item.title} item={item} />
+        ))}
       </section>
 
-      <BannerAd label="학습센터 아래 광고 영역" />
+      <div className="grid gap-3 lg:grid-cols-2">
+        <PreviewSection title="최근 조황" href={comingSoonHref("조황", "조황 전체 보기")} items={catchPreview} />
+        <PreviewSection title="가까운 출조거점" href="/fishing-spots" items={spotPreview} />
+      </div>
 
-      <PortalSectionBlock section={licenseCenter} />
+      <ServicesAccordion open={serviceOpen} onToggle={() => setServiceOpen((open) => !open)} />
 
-      <BannerAd label="면허센터 아래 광고 영역" />
-
-      <section className="grid gap-4 xl:grid-cols-2">
-        <PortalSectionBlock section={facilityCenter} />
-        <PortalSectionBlock section={practiceCenter} />
-      </section>
-
-      <PortalSectionBlock section={marineInfo} />
-
-      <BannerAd label="해양정보 아래 광고 영역" />
-      <BannerAd label="확장예정 서비스 위 광고 영역" />
-
-      <PortalSectionBlock section={expansionServices} compact />
-
-      <RoadmapPanel />
+      <PartnerAdSlot />
     </div>
   );
 }

@@ -8,4 +8,7 @@ coverage
 npm-debug.log*
 .npm-cache
 dev-server*.log
+work/*.log
 tsconfig.tsbuildinfo
+
+.vercel

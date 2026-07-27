@@ -12,10 +12,22 @@ type QuestionCardProps = {
   questionNumber?: number;
   total?: number;
   recordProgress?: boolean;
-  debugMode?: "exam";
 };
 
 const choiceLabels = ["갑", "을", "병", "정"];
+
+function splitInlineNumberedText(text: string) {
+  const normalized = text.replace(/\s+/g, " ").trim();
+
+  if (!/[①②③④⑤⑥⑦⑧⑨⑩]/.test(normalized)) {
+    return [normalized];
+  }
+
+  return normalized
+    .split(/(?=[①②③④⑤⑥⑦⑧⑨⑩])/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+}
 
 export function QuestionCard({
   question,
@@ -23,18 +35,15 @@ export function QuestionCard({
   onSelect,
   questionNumber,
   total,
-  recordProgress = true,
-  debugMode
+  recordProgress = true
 }: QuestionCardProps) {
   const answered = selectedIndex !== null;
   const isCorrect = selectedIndex === question.answer;
   const categoryLabel = question.category === DEFAULT_CATEGORY ? DEFAULT_CATEGORY_LABEL : question.category;
+  const questionLines = splitInlineNumberedText(question.question);
+  const explanationLines = question.explanation ? splitInlineNumberedText(question.explanation) : [];
 
   function select(index: number) {
-    console.log("choice clicked", index);
-    if (debugMode === "exam") {
-      console.log("exam choice clicked", question.id, index);
-    }
     if (answered) return;
 
     const correct = index === question.answer;
@@ -44,7 +53,7 @@ export function QuestionCard({
       try {
         recordAnswer(question, correct);
       } catch {
-        // 저장 실패가 문제풀이 흐름을 막지 않도록 둔다.
+        // 저장 실패가 문제 풀이 흐름을 막지 않도록 둔다.
       }
     }
   }
@@ -67,7 +76,13 @@ export function QuestionCard({
 
       <div className="flex gap-3">
         <HelpCircle className="mt-1 shrink-0 text-sky-600" size={22} />
-        <h2 className="text-lg font-black leading-7 text-slate-950">{question.question}</h2>
+        <h2 className="min-w-0 space-y-2 text-lg font-black leading-7 text-slate-950">
+          {questionLines.map((line, index) => (
+            <span key={`${question.id}-question-line-${index}`} className="block break-keep">
+              {line}
+            </span>
+          ))}
+        </h2>
       </div>
 
       <div className="mt-5 space-y-2">
@@ -87,10 +102,12 @@ export function QuestionCard({
                 answered && !correctOption && !wrongSelected && "border-slate-100 bg-slate-50 text-slate-500"
               )}
               onClick={() => select(index)}
+              disabled={answered}
+              aria-pressed={selectedIndex === index}
             >
               <span className="flex min-w-0 gap-2">
                 <span className="shrink-0 font-black text-sky-700">{choiceLabels[index]}</span>
-                <span className="leading-6">{choice}</span>
+                <span className="leading-6 break-keep">{choice}</span>
               </span>
               {correctOption && <CheckCircle2 className="shrink-0" size={18} />}
               {wrongSelected && <XCircle className="shrink-0" size={18} />}
@@ -104,8 +121,14 @@ export function QuestionCard({
           <p className={cn("text-sm font-black", isCorrect ? "text-emerald-700" : "text-rose-700")}>
             {isCorrect ? "정답" : "오답"}
           </p>
-          {question.explanation ? (
-            <p className="mt-2 text-sm font-medium leading-6 text-slate-700">{question.explanation}</p>
+          {explanationLines.length > 0 ? (
+            <div className="mt-2 space-y-1 text-sm font-medium leading-6 text-slate-700">
+              {explanationLines.map((line, index) => (
+                <p key={`${question.id}-explanation-line-${index}`} className="break-keep">
+                  {line}
+                </p>
+              ))}
+            </div>
           ) : (
             <p className="mt-2 text-sm font-medium leading-6 text-slate-500">등록된 해설이 없습니다.</p>
           )}

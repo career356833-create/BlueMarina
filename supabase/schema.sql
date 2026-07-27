@@ -112,6 +112,19 @@ create table public.subscriptions (
   unique (institution_id)
 );
 
+create table public.blue_marina_learning_states (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  license_type text not null check (license_type in ('general', 'yacht')),
+  progress jsonb not null default '{}'::jsonb,
+  wrong_ids jsonb not null default '[]'::jsonb,
+  answer_history jsonb not null default '[]'::jsonb,
+  exam_history jsonb not null default '[]'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  unique (user_id, license_type)
+);
+
 alter table public.profiles enable row level security;
 alter table public.institutions enable row level security;
 alter table public.memberships enable row level security;
@@ -120,6 +133,7 @@ alter table public.generated_contents enable row level security;
 alter table public.generation_records enable row level security;
 alter table public.daily_usage_limits enable row level security;
 alter table public.subscriptions enable row level security;
+alter table public.blue_marina_learning_states enable row level security;
 
 create policy "profiles_read_own" on public.profiles
   for select using (auth.uid() = id);
@@ -195,6 +209,19 @@ create policy "subscriptions_member_read" on public.subscriptions
       where m.institution_id = subscriptions.institution_id and m.user_id = auth.uid()
     )
   );
+
+create policy "blue_marina_learning_states_own_select" on public.blue_marina_learning_states
+  for select using (user_id = auth.uid());
+
+create policy "blue_marina_learning_states_own_insert" on public.blue_marina_learning_states
+  for insert with check (user_id = auth.uid());
+
+create policy "blue_marina_learning_states_own_update" on public.blue_marina_learning_states
+  for update using (user_id = auth.uid())
+  with check (user_id = auth.uid());
+
+create policy "blue_marina_learning_states_own_delete" on public.blue_marina_learning_states
+  for delete using (user_id = auth.uid());
 
 insert into storage.buckets (id, name, public)
 values ('content-images', 'content-images', true)
