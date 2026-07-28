@@ -721,7 +721,7 @@ export function SeaMapView() {
                   </div>
                 </div>
 
-                <div className="mt-3 grid gap-2 sm:grid-cols-[1fr_auto]">
+                <div className="mt-3 hidden gap-2 md:grid md:grid-cols-[1fr_auto]">
                   <div className="rounded-[20px] border border-[#1F3A50] bg-[#0E2233] px-4 py-3">
                     <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">현재 화면의 거점</p>
                     <p className="mt-1 text-sm font-black text-white">
