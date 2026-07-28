@@ -235,6 +235,7 @@ export function SeaMapView() {
   const [showNationalPorts, setShowNationalPorts] = useState(true);
   const [showLocalPorts, setShowLocalPorts] = useState(true);
   const [showFixedPorts, setShowFixedPorts] = useState(true);
+  const [isTopPanelExpanded, setIsTopPanelExpanded] = useState(false);
   const showFishingLayer = showFishingSpots;
   const setShowFishingLayer = setShowFishingSpots;
   const showNationalLayer = showNationalPorts;
@@ -243,6 +244,7 @@ export function SeaMapView() {
   const setShowLocalLayer = setShowLocalPorts;
   const showFixedLayer = showFixedPorts;
   const setShowFixedLayer = setShowFixedPorts;
+  const activeLayerCount = [showFishingLayer, showNationalLayer, showLocalLayer, showFixedLayer].filter(Boolean).length;
   const [statusMessage, setStatusMessage] = useState<string>(
     KAKAO_KEY ? "현재 위치와 거점 정보를 지도로 준비하는 중입니다." : "카카오 지도 키를 설정하면 지도가 표시됩니다.",
   );
@@ -660,73 +662,136 @@ export function SeaMapView() {
               <div className="flex flex-col items-end gap-2">
                 <span className="rounded-full border border-[#1F3A50] bg-[#0E2233] px-3 py-1 text-[11px] font-black text-[#9FB3C8]">{mapStateBadge}</span>
                 <span className="rounded-full border border-[#1F3A50] bg-[#0E2233] px-3 py-1 text-[11px] font-black text-[#9FB3C8]">{formatGpsStatus(gpsStatus)}</span>
+                <button
+                  type="button"
+                  onClick={() => setIsTopPanelExpanded((value) => !value)}
+                  className="rounded-full border border-[#1F3A50] bg-[#0E2233] px-3 py-1 text-[11px] font-black text-[#EAF2FF] transition hover:border-[#2E8BFF] hover:text-white"
+                  aria-expanded={isTopPanelExpanded}
+                >
+                  {isTopPanelExpanded ? "접기" : "펼치기"}
+                </button>
               </div>
             </div>
 
-            <div className="mt-3 rounded-[18px] border border-[#1F3A50] bg-[#0E2233]/85 px-3 py-2">
-              <div className="flex flex-wrap items-center gap-2 text-[11px] font-black text-[#D7E4F6]">
-                <button
-                  type="button"
-                  onClick={() => setShowFishingLayer((value) => !value)}
-                  className={layerChipClass(showFishingLayer)}
-                  aria-pressed={showFishingLayer}
-                >
-                  🎣 낚시포인트
-                  <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{visibleFishingSpots.length.toLocaleString()}</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setShowNationalLayer((value) => !value)}
-                  className={layerChipClass(showNationalLayer)}
-                  aria-pressed={showNationalLayer}
-                >
-                  ⚓ 국가어항
-                  <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{visibleNationalPorts.length.toLocaleString()}</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setShowLocalLayer((value) => !value)}
-                  className={layerChipClass(showLocalLayer)}
-                  aria-pressed={showLocalLayer}
-                >
-                  ⚓ 지방어항
-                  <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{visibleLocalPorts.length.toLocaleString()}</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setShowFixedLayer((value) => !value)}
-                  className={layerChipClass(showFixedLayer)}
-                  aria-pressed={showFixedLayer}
-                >
-                  ⚓ 어촌정주어항
-                  <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{visibleFixedPorts.length.toLocaleString()}</span>
-                </button>
-                <span className="text-[#D7E4F6]">{statusMessage}</span>
-                {visibleMarinePlaceDuplicateGroupCount > 0 ? (
-                  <span className="rounded-full bg-[#2E8BFF]/15 px-2.5 py-1 text-[10px] font-black text-[#2E8BFF]">
-                    동일좌표 그룹 {visibleMarinePlaceDuplicateGroupCount.toLocaleString()}개
-                  </span>
-                ) : null}
-              </div>
-            </div>
+            {isTopPanelExpanded ? (
+              <>
+                <div className="mt-3 rounded-[18px] border border-[#1F3A50] bg-[#0E2233]/85 px-3 py-2">
+                  <div className="flex flex-wrap items-center gap-2 text-[11px] font-black text-[#D7E4F6]">
+                    <button
+                      type="button"
+                      onClick={() => setShowFishingLayer((value) => !value)}
+                      className={layerChipClass(showFishingLayer)}
+                      aria-pressed={showFishingLayer}
+                    >
+                      낚시포인트
+                      <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{visibleFishingSpots.length.toLocaleString()}</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setShowNationalLayer((value) => !value)}
+                      className={layerChipClass(showNationalLayer)}
+                      aria-pressed={showNationalLayer}
+                    >
+                      국가어항
+                      <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{visibleNationalPorts.length.toLocaleString()}</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setShowLocalLayer((value) => !value)}
+                      className={layerChipClass(showLocalLayer)}
+                      aria-pressed={showLocalLayer}
+                    >
+                      지방어항
+                      <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{visibleLocalPorts.length.toLocaleString()}</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setShowFixedLayer((value) => !value)}
+                      className={layerChipClass(showFixedLayer)}
+                      aria-pressed={showFixedLayer}
+                    >
+                      어촌정주어항
+                      <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{visibleFixedPorts.length.toLocaleString()}</span>
+                    </button>
+                    {visibleMarinePlaceDuplicateGroupCount > 0 ? (
+                      <span className="rounded-full bg-[#2E8BFF]/15 px-2.5 py-1 text-[10px] font-black text-[#2E8BFF]">
+                        동일좌표 {visibleMarinePlaceDuplicateGroupCount.toLocaleString()}그룹
+                      </span>
+                    ) : null}
+                  </div>
+                </div>
 
-            <div className="mt-3 grid gap-2 sm:grid-cols-[1fr_auto]">
-              <div className="rounded-[20px] border border-[#1F3A50] bg-[#0E2233] px-4 py-3">
-                <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">현재 화면의 거점</p>
-                <p className="mt-1 text-sm font-black text-white">{visibleFishingSpots.length.toLocaleString()}개 / {visibleNationalPorts.length.toLocaleString()}개 / {visibleLocalPorts.length.toLocaleString()}개 / {visibleFixedPorts.length.toLocaleString()}개 · 총 {visibleMarkerCount.toLocaleString()}개</p>
-                <p className="mt-1 text-[11px] font-semibold leading-4 text-[#9FB3C8]">낚시포인트, 국가어항, 지방어항, 어촌정주어항을 각각 켜고 끌 수 있습니다.</p>
+                <div className="mt-3 grid gap-2 sm:grid-cols-[1fr_auto]">
+                  <div className="rounded-[20px] border border-[#1F3A50] bg-[#0E2233] px-4 py-3">
+                    <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">현재 화면의 거점</p>
+                    <p className="mt-1 text-sm font-black text-white">
+                      낚시포인트 {visibleFishingSpots.length.toLocaleString()}개 · 국가어항 {visibleNationalPorts.length.toLocaleString()}개 · 지방어항 {visibleLocalPorts.length.toLocaleString()}개 · 어촌정주어항 {visibleFixedPorts.length.toLocaleString()}개
+                    </p>
+                    <p className="mt-1 text-[11px] font-semibold leading-5 text-[#9FB3C8]">
+                      총 {visibleMarkerCount.toLocaleString()}개가 현재 화면 범위에 보입니다. 레이어는 접어서 더 작게 볼 수 있습니다.
+                    </p>
+                  </div>
+                  <LocationButton
+                    label="현재 위치 찾기"
+                    statusLabel={formatGpsStatus(gpsStatus)}
+                    onClick={handleRequestCurrentLocation}
+                    disabled={gpsStatus === "locating"}
+                  />
+                </div>
+              </>
+            ) : (
+              <div className="mt-3 rounded-[18px] border border-[#1F3A50] bg-[#0E2233]/85 px-3 py-2">
+                <p className="mb-2 text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">
+                  레이어 {activeLayerCount}개 켜짐
+                </p>
+                <div className="flex flex-wrap items-center gap-2 text-[11px] font-black text-[#D7E4F6]">
+                  <button
+                    type="button"
+                    onClick={() => setShowFishingLayer((value) => !value)}
+                    className={layerChipClass(showFishingLayer)}
+                    aria-pressed={showFishingLayer}
+                  >
+                    낚시포인트
+                    <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{visibleFishingSpots.length.toLocaleString()}</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setShowNationalLayer((value) => !value)}
+                    className={layerChipClass(showNationalLayer)}
+                    aria-pressed={showNationalLayer}
+                  >
+                    국가어항
+                    <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{visibleNationalPorts.length.toLocaleString()}</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setShowLocalLayer((value) => !value)}
+                    className={layerChipClass(showLocalLayer)}
+                    aria-pressed={showLocalLayer}
+                  >
+                    지방어항
+                    <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{visibleLocalPorts.length.toLocaleString()}</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setShowFixedLayer((value) => !value)}
+                    className={layerChipClass(showFixedLayer)}
+                    aria-pressed={showFixedLayer}
+                  >
+                    어촌정주어항
+                    <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{visibleFixedPorts.length.toLocaleString()}</span>
+                  </button>
+                  {visibleMarinePlaceDuplicateGroupCount > 0 ? (
+                    <span className="rounded-full bg-[#2E8BFF]/15 px-2.5 py-1 text-[10px] font-black text-[#2E8BFF]">
+                      동일좌표 {visibleMarinePlaceDuplicateGroupCount.toLocaleString()}그룹
+                    </span>
+                  ) : null}
+                </div>
               </div>
-              <LocationButton
-                label="현재 위치 찾기"
-                statusLabel={formatGpsStatus(gpsStatus)}
-                onClick={handleRequestCurrentLocation}
-                disabled={gpsStatus === "locating"}
-              />
-            </div>
+            )}
           </section>
         </div>
       </div>
-
       <div className="pointer-events-none absolute inset-x-0 bottom-[calc(64px+env(safe-area-inset-bottom)+12px)] z-20 px-3 sm:px-4">
         <div className="pointer-events-auto mx-auto max-w-[1280px]">
           <section
@@ -914,46 +979,46 @@ export function SeaMapView() {
                     onClick={() => setSelectedFeature(null)}
                     className="rounded-full border border-[#1F3A50] bg-[#0E2233] px-3 py-1 text-[11px] font-black text-[#D7E4F6]"
                   >
-                    ??
+                    닫기
                   </button>
                 </div>
 
                 <div className="grid gap-2 sm:grid-cols-2">
                   <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
-                    <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">????</p>
-                    <p className="mt-1 text-sm font-black leading-6 text-white">{selectedLocalPort.region ?? "???"}</p>
+                    <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">지역</p>
+                    <p className="mt-1 text-sm font-black leading-6 text-white">{selectedLocalPort.region ?? "미확인"}</p>
                   </div>
                   <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
-                    <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">??</p>
-                    <p className="mt-1 text-sm font-black leading-6 text-white">{selectedLocalPort.address ?? "???"}</p>
+                    <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">주소</p>
+                    <p className="mt-1 text-sm font-black leading-6 text-white">{selectedLocalPort.address ?? "미확인"}</p>
                   </div>
                 </div>
 
                 <div className="grid gap-2 sm:grid-cols-2">
                   <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
-                    <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">??</p>
+                    <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">좌표</p>
                     <p className="mt-1 text-sm font-black text-white">{formatCoordinate(selectedLocalPort.latNumber)}, {formatCoordinate(selectedLocalPort.lngNumber)}</p>
                   </div>
                   <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
-                    <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">??</p>
+                    <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">출처</p>
                     <p className="mt-1 text-sm font-black leading-6 text-white">{selectedLocalPort.sourceName}<br />{selectedLocalPort.sourceFile}</p>
                   </div>
                 </div>
 
                 <div className="grid gap-2 sm:grid-cols-2">
                   <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
-                    <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">????</p>
-                    <p className="mt-1 text-sm font-black text-white">{selectedLocalPort.managementAuthority ?? "???"}</p>
+                    <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">관리기관</p>
+                    <p className="mt-1 text-sm font-black text-white">{selectedLocalPort.managementAuthority ?? "미확인"}</p>
                   </div>
                   <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
-                    <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">????</p>
-                    <p className="mt-1 text-sm font-black text-white">{selectedLocalPort.designatedAt ?? "???"}</p>
+                    <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">지정일</p>
+                    <p className="mt-1 text-sm font-black text-white">{selectedLocalPort.designatedAt ?? "미확인"}</p>
                   </div>
                 </div>
 
                 <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
-                  <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">??</p>
-                  <p className="mt-1 text-sm font-semibold leading-6 text-white">???? ???? ?? ?? ?? ??? ?? ??? ???? ???? ???.</p>
+                  <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">안내</p>
+                  <p className="mt-1 text-sm font-semibold leading-6 text-white">지방어항 정보이며 실제 낚시 가능 여부와 출입 통제는 현장에서 확인해야 합니다.</p>
                 </div>
               </div>
             ) : selectedMarinePlaceGroup ? (
@@ -1003,20 +1068,9 @@ export function SeaMapView() {
                 </div>
               </div>
             ) : (
-              <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#2E8BFF]/15 text-[#2E8BFF]">
-                  <MapPin size={18} />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <p className="text-sm font-black text-white">마커를 누르면 거점 정보를 확인할 수 있습니다</p>
-                  <p className="mt-1 text-[11px] font-semibold leading-4 text-[#9FB3C8]">낚시포인트와 국가어항, 지방어항, 어촌정주어항은 마커로 개별 선택합니다.</p>
-                  <div className="mt-2 flex flex-wrap gap-1.5 text-[11px] font-black text-[#D7E4F6]">
-                    <span className="rounded-full bg-white/5 px-2.5 py-1">낚시포인트 {visibleFishingSpots.length.toLocaleString()}개</span>
-                    <span className="rounded-full bg-white/5 px-2.5 py-1">국가어항 {visibleNationalPorts.length.toLocaleString()}개</span>
-                    <span className="rounded-full bg-white/5 px-2.5 py-1">지방어항 {visibleLocalPorts.length.toLocaleString()}개</span>
-                    <span className="rounded-full bg-white/5 px-2.5 py-1">어촌정주어항 {visibleFixedPorts.length.toLocaleString()}개</span>
-                  </div>
-                </div>
+              <div className="inline-flex max-w-[220px] items-center gap-2 rounded-full border border-[#1F3A50] bg-[#071827]/90 px-3 py-2 text-[11px] font-black text-[#EAF2FF] shadow-lg backdrop-blur">
+                <MapPin size={14} className="shrink-0 text-[#2E8BFF]" />
+                <p className="leading-4">마커를 눌러 거점 정보를 확인하세요</p>
               </div>
             )}
           </section>
