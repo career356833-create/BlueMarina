@@ -40,6 +40,31 @@ export type SeaWarningInfo = {
   warningName?: string | null;
 };
 
+export type MarinePlaceRegion = {
+  province?: string | null;
+  city?: string | null;
+};
+
+export type MarinePlace = {
+  id: string;
+  name: string;
+  category: string;
+  lat: number;
+  lng: number;
+  address?: string | null;
+  region?: string | null;
+  province?: string | null;
+  city?: string | null;
+  managementAuthority?: string | null;
+  designatedAt?: ISODateTimeString | null;
+  source: string;
+  sourceLabel?: string | null;
+  sourceFile?: string | null;
+  sourceCheckedAt?: ISODateTimeString | null;
+};
+
+export type MarinePlaceCoordinateStatus = "verified" | "suspicious" | "invalid";
+
 export type SeaSummaryMetadata = {
   sourceOrganizations: SeaSourceOrganization[];
   observedAt?: ISODateTimeString | null;
