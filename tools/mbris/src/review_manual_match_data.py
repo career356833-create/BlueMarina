@@ -1,0 +1,53 @@
+"""§2/§5: 갯강구(BM-SPECIES-006084) 수동 매칭 판정. 공식 근거 확보 후 채운다."""
+from __future__ import annotations
+
+VALID_DECISIONS = {"exact_manual_match", "synonym_match", "ambiguous_multiple_candidates",
+                   "not_found", "unresolved"}
+
+INTERNAL_ID = "BM-SPECIES-006084"
+SOURCE_NAME = "갯강구"
+
+# 실제 MBRIS 국명 재검색(CommKorNm=갯강구) 응답에서 나온 후보 2건 그대로.
+CANDIDATES = [
+    {"spcTxnId": "270000009653", "koreanName": "갯강구",
+     "scientificNameFull": "Ligia (Megaligia) exotica Roux, 1828",
+     "scientificNameShort": "Ligia (Megaligia) exotica"},
+    {"spcTxnId": "270000027903", "koreanName": "극동갯강구",
+     "scientificNameFull": "Ligia cinerascens Budde-Lund, 1885",
+     "scientificNameShort": "Ligia cinerascens"},
+]
+
+DECISION: dict | None = {
+    "selectedSpcTxnId": "270000009653",
+    "selectedScientificName": "Ligia (Megaligia) exotica Roux, 1828",
+    "decision": "exact_manual_match",
+    "confidence": "high",
+    "reviewStatus": "approved",
+    "evidence": [
+        {"source": "WoRMS", "title": "Ligia (Megaligia) exotica (AphiaID 955994)",
+         "url": "https://marinespecies.org/aphia.php?id=955994&p=taxdetails",
+         "note": "accepted. WoRMS REST API에 아속 없는 'Ligia exotica'로 조회해도 동일 레코드를 "
+                 "match_type='exact_subgenus'로 반환 — WoRMS 스스로 두 표기를 동일 종으로 처리함"},
+        {"source": "WoRMS", "title": "Ligia (Megaligia) 아속 (AphiaID 955472)",
+         "url": "https://marinespecies.org/aphia.php?id=955472&p=taxdetails",
+         "note": "Verhoeff, 1926 — 유효한 아속으로 등재. 괄호 표기는 선택적 ICZN 관례일 뿐"},
+        {"source": "WoRMS", "title": "Ligia cinerascens (AphiaID 257539)",
+         "url": "https://marinespecies.org/aphia.php?id=257539&p=taxdetails",
+         "note": "accepted — exotica와 별개의 유효종(극동갯강구). 분포(쿠릴열도·홋카이도 중심)와 "
+                 "형태(더 짧은 촉각·미지)가 달라 자동 선택하면 오매칭이 된다"},
+        {"source": "GBIF", "title": "species/match?name=Ligia exotica",
+         "url": "https://api.gbif.org/v1/species/match?name=Ligia%20exotica",
+         "note": "usageKey 5175654, ACCEPTED, matchType EXACT — WoRMS와 일치"},
+    ],
+    "reviewNote": (
+        "후보1(SpcTxnId=270000009653)과 taxonomy-master.json의 canonical 학명 "
+        "'Ligia exotica'의 유일한 차이는 아속 괄호 표기(Megaligia)이며, WoRMS가 "
+        "exact_subgenus로 동일 AphiaID를 반환해 1차 소스에서 동일 종임이 확인됐다. "
+        "동종이명(synonym) 관계가 아니라 표기 형식 차이이므로 synonym_match가 아닌 "
+        "exact_manual_match로 판정한다. 후보2(극동갯강구/Ligia cinerascens)는 WoRMS가 "
+        "명시적으로 별개의 유효종으로 확인해 자동 선택하지 않은 것이 옳았음을 재확인했다. "
+        "국립생물자원관(species.nibr.go.kr ktsn=120000049635)은 JS 렌더링으로 원문을 "
+        "직접 확인하지 못해 간접 정황(검색 스니펫)만 확보했다 — 1순위 소스(MBRIS/WoRMS)의 "
+        "일치만으로 approved 판정에 충분하다고 보았다."
+    ),
+}

@@ -1,0 +1,80 @@
+﻿sourceName,category,normalizedName,matchingBaseName,status,statusReasons,candidateCount,topInternalId,topKoreanName,topScientificName,topMatchMethod,topSimilarityScore,topConfidence
+광어,바다낚시 인기어종,광어,광어,manual_review,multiple_candidates | same_organism_group_restricted(fish),5,BM-SPECIES-000090,연어,Oncorhynchus keta,edit_distance,0.5,low
+오징어,바다낚시 인기어종,오징어,오징어,manual_review,known_collective_name — 다수 종을 가리키는 관용 집합명 | multiple_candidates | same_organism_group_restricted(cephalopod),11,BM-SPECIES-002768,꼬마오징어,Idiosepius paradoxus,substring_match,0.6,medium
+한치,바다낚시 인기어종,한치,한치,manual_review,single_candidate_but_no_explicit_local_alias_evidence,1,BM-SPECIES-003095,한치꼴뚜기,Uroteuthis chinensis,substring_match,0.4,low
+쭈꾸미,바다낚시 인기어종,쭈꾸미,쭈꾸미,manual_review,single_candidate_but_no_explicit_local_alias_evidence,1,BM-SPECIES-003107,주꾸미,Amphioctopus fangsiao,edit_distance,0.667,low
+갑오징어,바다낚시 인기어종,갑오징어,갑오징어,manual_review,multiple_candidates | same_organism_group_restricted(cephalopod),10,BM-SPECIES-003080,바늘갑오징어,Decorisepia madokai,substring_match,0.667,medium
+열기,선상낚시 어종,열기,열기,manual_review,multiple_candidates | same_organism_group_restricted(fish),2,BM-SPECIES-000317,발기,Perccottus glenii,edit_distance,0.5,low
+황열기,선상낚시 어종,황열기,황열기,manual_review,no_candidates_found,0,,,,,,
+참치,선상낚시 어종,참치,참치,manual_review,known_collective_name — 다수 종을 가리키는 관용 집합명,1,BM-SPECIES-000495,참치방어,Elagatis bipinnulata,substring_match,0.5,medium
+대삼치,선상낚시 어종,대삼치,대삼치,manual_review,single_candidate_but_no_explicit_local_alias_evidence,1,BM-SPECIES-000408,삼치,Scomberomorus niphonius,substring_match,0.667,medium
+망둥어,방파제/갯바위 어종,망둥어,망둥어,manual_review,multiple_candidates | same_organism_group_restricted(fish),2,BM-SPECIES-000369,말뚝망둥어,Periophthalmus modestus,substring_match,0.6,medium
+벚꽃망둑,방파제/갯바위 어종,벚꽃망둑,벚꽃망둑,manual_review,no_candidates_found,0,,,,,,
+가오리,계절별 대표어종,가오리,가오리,manual_review,known_collective_name — 다수 종을 가리키는 관용 집합명 | multiple_candidates | same_organism_group_restricted(fish),10,BM-SPECIES-000643,도랑가오리,Dipturus macrocauda,substring_match,0.6,medium
+참소라,계절별 대표어종,참소라,참소라,confirmed,nifs_dialect_explicit_alias — NIFS 방언 목록에 명시된 별칭,1,BM-SPECIES-002324,소라,Turbo sazae,nifs_dialect_reference,0.9,high
+전복,계절별 대표어종,전복,전복,manual_review,multiple_candidates | same_organism_group_restricted(gastropod),4,BM-SPECIES-002416,둥근전복,Haliotis discus,substring_match,0.5,medium
+해삼,계절별 대표어종,해삼,해삼,manual_review,multiple_candidates | same_organism_group_restricted(crustacean),2,BM-SPECIES-005503,납작흰해삼속살이게,Pinnixa penultipedalis,substring_match,0.222,low
+성게,계절별 대표어종,성게,성게,manual_review,multiple_candidates | same_organism_group_restricted(gastropod),4,BM-SPECIES-002507,보라성게살이고둥,Vitreolina langfordi,substring_match,0.25,low
+장어,회/식용 인기어종,장어,장어,manual_review,known_collective_name — 다수 종을 가리키는 관용 집합명 | multiple_candidates | same_organism_group_restricted(fish),10,BM-SPECIES-000445,분장어,Eupleurogrammus muticus,substring_match,0.667,medium
+복어,회/식용 인기어종,복어,복어,manual_review,known_collective_name — 다수 종을 가리키는 관용 집합명 | multiple_candidates | same_organism_group_restricted(fish),5,BM-SPECIES-000090,연어,Oncorhynchus keta,edit_distance,0.5,low
+가자미,회/식용 인기어종,가자미,가자미,manual_review,multiple_candidates | same_organism_group_restricted(fish),10,BM-SPECIES-000468,중설가자미,Plagiopsetta glossa,substring_match,0.6,medium
+쥐치포용 쥐치,회/식용 인기어종,쥐치포용쥐치,쥐치포용 쥐치,manual_review,single_candidate_but_no_explicit_local_alias_evidence,1,BM-SPECIES-000122,쥐치,Stephanolepis cirrhifer,substring_match,0.286,low
+참굴,회/식용 인기어종,참굴,참굴,manual_review,multiple_candidates | cross_taxon_homonym — 후보들의 분류군이 서로 다름,5,BM-SPECIES-000755,참돔,Pagrus major,edit_distance,0.5,low
+임연수,회/식용 인기어종,임연수,임연수,manual_review,multiple_candidates | same_organism_group_restricted(fish),2,BM-SPECIES-001161,임연수어,Pleurogrammus azonus,substring_match,0.75,medium
+노무라입깃해파리,주의가 필요한 어종,노무라입깃해파리,노무라입깃해파리,manual_review,no_candidates_found,0,,,,,,
+보름달물해파리,주의가 필요한 어종,보름달물해파리,보름달물해파리,manual_review,no_candidates_found,0,,,,,,
+입방해파리,주의가 필요한 어종,입방해파리,입방해파리,manual_review,no_candidates_found,0,,,,,,
+쏨뱅이 독가시,주의가 필요한 어종,쏨뱅이독가시,쏨뱅이,manual_review,source_name_quality_issue — 원본 이름에 주의문구가 섞여 있음(fish-data.ts 자체 이슈),1,BM-SPECIES-000019,쏨뱅이,Sebastiscus marmoratus,exact_korean_name,1.0,high
+복섬,주의가 필요한 어종,복섬,복섬,manual_review,no_candidates_found,0,,,,,,
+참복,주의가 필요한 어종,참복,참복,manual_review,multiple_candidates | same_organism_group_restricted(fish),5,BM-SPECIES-000150,별복,Arothron firmamentum,edit_distance,0.5,low
+가오리 꼬리주의,주의가 필요한 어종,가오리꼬리주의,가오리,manual_review,source_name_quality_issue — 원본 이름에 주의문구가 섞여 있음(fish-data.ts 자체 이슈) | multiple_candidates | same_organism_group_restricted(fish),10,BM-SPECIES-000643,도랑가오리,Dipturus macrocauda,substring_match,0.6,medium
+성게가시,주의가 필요한 어종,성게가시,성게,manual_review,source_name_quality_issue — 원본 이름에 주의문구가 섞여 있음(fish-data.ts 자체 이슈) | multiple_candidates | same_organism_group_restricted(gastropod),4,BM-SPECIES-002507,보라성게살이고둥,Vitreolina langfordi,substring_match,0.25,low
+불가사리,주의가 필요한 어종,불가사리,불가사리,manual_review,multiple_candidates | cross_taxon_homonym — 후보들의 분류군이 서로 다름,5,BM-SPECIES-002509,불가사리퉁퉁이고둥,Parvioris fulvescens,substring_match,0.444,low
+파란고리문어,주의가 필요한 어종,파란고리문어,파란고리문어,manual_review,single_candidate_but_no_explicit_local_alias_evidence,1,BM-SPECIES-003111,문어,Enteroctopus dofleini,substring_match,0.333,low
+조기,바다낚시 인기어종,조기,조기,manual_review,multiple_candidates | same_organism_group_restricted(fish),3,BM-SPECIES-000833,흑조기,Atrobucca nibe,substring_match,0.667,medium
+민초리,바다낚시 인기어종,민초리,민초리,manual_review,no_candidates_found,0,,,,,,
+돌가시,바다낚시 인기어종,돌가시,돌가시,manual_review,no_candidates_found,0,,,,,,
+무늬벵에돔,바다낚시 인기어종,무늬벵에돔,무늬벵에돔,manual_review,single_candidate_but_no_explicit_local_alias_evidence,1,BM-SPECIES-000279,벵에돔,Girella punctata,substring_match,0.6,medium
+긴꼬리벵에돔류,바다낚시 인기어종,긴꼬리벵에돔류,긴꼬리벵에돔,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000280,긴꼬리벵에돔,Girella leonina,exact_korean_name,1.0,high
+줄돔,바다낚시 인기어종,줄돔,줄돔,manual_review,multiple_candidates | same_organism_group_restricted(fish),6,BM-SPECIES-000193,황줄돔,Histiopterus typus,substring_match,0.667,medium
+점벵에돔,바다낚시 인기어종,점벵에돔,점벵에돔,manual_review,single_candidate_but_no_explicit_local_alias_evidence,1,BM-SPECIES-000279,벵에돔,Girella punctata,substring_match,0.75,medium
+흑벵에돔,바다낚시 인기어종,흑벵에돔,흑벵에돔,manual_review,single_candidate_but_no_explicit_local_alias_evidence,1,BM-SPECIES-000279,벵에돔,Girella punctata,substring_match,0.75,medium
+돌돔류,바다낚시 인기어종,돌돔류,돌돔,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000278,돌돔,Oplegnathus fasciatus,exact_korean_name,1.0,high
+긴꼬리상어,선상낚시 어종,긴꼬리상어,긴꼬리상어,manual_review,single_candidate_but_no_explicit_local_alias_evidence,1,BM-SPECIES-000906,긴꼬리장어,Dysomma anguillare,edit_distance,0.8,medium
+흑새치,선상낚시 어종,흑새치,흑새치,manual_review,multiple_candidates | same_organism_group_restricted(fish),5,BM-SPECIES-000470,청새치,Kajikia audax,edit_distance,0.667,low
+돛새치류,선상낚시 어종,돛새치류,돛새치,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000473,돛새치,Istiophorus platypterus,exact_korean_name,1.0,high
+청새치류,선상낚시 어종,청새치류,청새치,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000470,청새치,Kajikia audax,exact_korean_name,1.0,high
+황새치류,선상낚시 어종,황새치류,황새치,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000479,황새치,Xiphias gladius,exact_korean_name,1.0,high
+가다랑어류,선상낚시 어종,가다랑어류,가다랑어,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000412,가다랑어,Katsuwonus pelamis,exact_korean_name,1.0,high
+눈다랑어류,선상낚시 어종,눈다랑어류,눈다랑어,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000421,눈다랑어,Thunnus obesus,exact_korean_name,1.0,high
+무늬오징어류,선상낚시 어종,무늬오징어류,무늬오징어,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름 | no_candidates_found,0,,,,,,
+한치류,선상낚시 어종,한치류,한치,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-003095,한치꼴뚜기,Uroteuthis chinensis,substring_match,0.4,low
+주꾸미류,선상낚시 어종,주꾸미류,주꾸미,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-003107,주꾸미,Amphioctopus fangsiao,exact_korean_name,1.0,high
+꼴뚜기,선상낚시 어종,꼴뚜기,꼴뚜기,manual_review,multiple_candidates | same_organism_group_restricted(cephalopod),7,BM-SPECIES-002769,꼬마꼴뚜기,Loliolus sumatrensis,substring_match,0.6,medium
+쭈꾸미류,방파제/갯바위 어종,쭈꾸미류,쭈꾸미,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-003107,주꾸미,Amphioctopus fangsiao,edit_distance,0.667,low
+좁쌀문어,방파제/갯바위 어종,좁쌀문어,좁쌀문어,manual_review,single_candidate_but_no_explicit_local_alias_evidence,1,BM-SPECIES-003111,문어,Enteroctopus dofleini,substring_match,0.5,medium
+갯장어류,방파제/갯바위 어종,갯장어류,갯장어,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000900,갯장어,Muraenesox cinereus,exact_korean_name,1.0,high
+황어류,방파제/갯바위 어종,황어류,황어,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000958,황어,Pseudaspius hakonensis,exact_korean_name,1.0,high
+장대,방파제/갯바위 어종,장대,장대,manual_review,multiple_candidates | same_organism_group_restricted(fish),3,BM-SPECIES-000425,덕대,Pampus argenteus,edit_distance,0.5,low
+조기류,계절별 대표어종,조기류,조기,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름 | multiple_candidates | same_organism_group_restricted(fish),3,BM-SPECIES-000833,흑조기,Atrobucca nibe,substring_match,0.667,medium
+보구치류,계절별 대표어종,보구치류,보구치,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000839,보구치,Pennahia argentata,exact_korean_name,1.0,high
+백조기류,계절별 대표어종,백조기류,백조기,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름 | multiple_candidates | same_organism_group_restricted(fish),4,BM-SPECIES-000833,흑조기,Atrobucca nibe,edit_distance,0.667,low
+대하류,계절별 대표어종,대하류,대하,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-005997,대하,Penaeus chinensis,exact_korean_name,1.0,high
+꽃게류,계절별 대표어종,꽃게류,꽃게,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-005640,꽃게,Portunus trituberculatus,nifs_dialect_reference,0.9,high
+꽃새우류,계절별 대표어종,꽃새우류,꽃새우,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-005994,꽃새우,Trachysalambria curvirostris,exact_korean_name,1.0,high
+전복치류,계절별 대표어종,전복치류,전복치,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000114,개복치,Mola mola,edit_distance,0.667,low
+벤자리류,계절별 대표어종,벤자리류,벤자리,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000792,벤자리,Parapristipoma trilineatum,exact_korean_name,1.0,high
+은갈치,회/식용 인기어종,은갈치,은갈치,confirmed,nifs_dialect_explicit_alias — NIFS 방언 목록에 명시된 별칭,1,BM-SPECIES-000444,갈치,Trichiurus japonicus,nifs_dialect_reference,0.9,high
+실갈치류,회/식용 인기어종,실갈치류,실갈치,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000444,갈치,Trichiurus japonicus,substring_match,0.667,medium
+먹갈치류,회/식용 인기어종,먹갈치류,먹갈치,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-001188,먹갈치,Lycodes nakamurae,exact_korean_name,1.0,high
+부세류,회/식용 인기어종,부세류,부세,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000842,부세,Larimichthys crocea,exact_korean_name,1.0,high
+은대구류,회/식용 인기어종,은대구류,은대구,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름 | multiple_candidates | same_organism_group_restricted(fish),2,BM-SPECIES-001056,대구,Gadus macrocephalus,substring_match,0.667,medium
+삼세기류,회/식용 인기어종,삼세기류,삼세기,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000042,삼세기,Hemitripterus villosus,exact_korean_name,1.0,high
+서대류,회/식용 인기어종,서대류,서대,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름 | multiple_candidates | same_organism_group_restricted(fish),10,BM-SPECIES-000451,그물동서대,Aseraggodes kaianus,substring_match,0.4,low
+왕우럭조개류,회/식용 인기어종,왕우럭조개류,왕우럭조개,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-003294,왕우럭조개,Tresus keenae,exact_korean_name,1.0,high
+피조개류,회/식용 인기어종,피조개류,피조개,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-002807,피조개,Anadara broughtonii,exact_korean_name,1.0,high
+가시복류,주의가 필요한 어종,가시복류,가시복,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000143,가시복,Diodon holocanthus,exact_korean_name,1.0,high
+검복류,주의가 필요한 어종,검복류,검복,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000165,검복,Takifugu porphyreus,exact_korean_name,1.0,high
+까치복류,주의가 필요한 어종,까치복류,까치복,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000163,까치복,Takifugu xanthopterus,exact_korean_name,1.0,high
+전기가오리류,주의가 필요한 어종,전기가오리류,전기가오리,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000684,전기가오리,Narke japonica,exact_korean_name,1.0,high
+귀상어류,주의가 필요한 어종,귀상어류,귀상어,manual_review,collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름,1,BM-SPECIES-000662,귀상어,Sphyrna zygaena,exact_korean_name,1.0,high

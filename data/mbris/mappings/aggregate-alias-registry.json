@@ -1,0 +1,986 @@
+[
+  {
+    "aggregateId": "AGG-000001",
+    "sourceName": "불가사리",
+    "organismGroup": "echinoderm",
+    "taxonomicScope": "Asteroidea",
+    "status": "manual_review",
+    "candidateSpecies": [
+      {
+        "internalId": "BM-SPECIES-007243",
+        "koreanName": "극검은불가사리",
+        "scientificName": "Lethasterias nanimensis chelifera",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007244",
+        "koreanName": "검은불가사리",
+        "scientificName": "Lethasterias fusca",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007245",
+        "koreanName": "일본불가사리",
+        "scientificName": "Distolasterias nipon",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007246",
+        "koreanName": "단단불가사리",
+        "scientificName": "Sclerasterias satsumana",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007247",
+        "koreanName": "아팰불가사리",
+        "scientificName": "Aphelasterias japonica",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007248",
+        "koreanName": "왕관불가사리",
+        "scientificName": "Coronaster volsellatus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007249",
+        "koreanName": "팔손이불가사리",
+        "scientificName": "Coscinasterias acutispina",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007250",
+        "koreanName": "흰뿔관불가사리",
+        "scientificName": "Stephanasterias albula",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007251",
+        "koreanName": "동양차극불가사리",
+        "scientificName": "Pedicellaster orientalis",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007252",
+        "koreanName": "유연불가사리",
+        "scientificName": "Lysastrosoma anthosticta",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007253",
+        "koreanName": "문어다리불가사리",
+        "scientificName": "Plazaster borealis",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007254",
+        "koreanName": "그물불가사리",
+        "scientificName": "Evasterias retifera",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007255",
+        "koreanName": "가시그물불가사리",
+        "scientificName": "Evasterias echinosoma",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007256",
+        "koreanName": "아무르불가사리",
+        "scientificName": "Asterias amurensis",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007257",
+        "koreanName": "잎사귀거위발불가사리",
+        "scientificName": "Anseropoda petaloides",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007258",
+        "koreanName": "별불가사리",
+        "scientificName": "Patiria pectinifera",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007259",
+        "koreanName": "도란물별불가사리",
+        "scientificName": "Aquilonastra doranae",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007260",
+        "koreanName": "작은별불가사리",
+        "scientificName": "Aquilonastra minor",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007261",
+        "koreanName": "볼록별불가사리",
+        "scientificName": "Aquilonastra batheri",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007262",
+        "koreanName": "오각관불가사리",
+        "scientificName": "Pentaceraster regulus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007263",
+        "koreanName": "긴팔불가사리",
+        "scientificName": "Ophidiaster cribrarius",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007264",
+        "koreanName": "푸른불가사리",
+        "scientificName": "Linckia laevigata",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007265",
+        "koreanName": "빨강불가사리",
+        "scientificName": "Certonardoa semiregularis",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007266",
+        "koreanName": "별모양불가사리",
+        "scientificName": "Stellaster childreni",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007267",
+        "koreanName": "장미모양불가사리",
+        "scientificName": "Rosaster symbolicus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007268",
+        "koreanName": "메디불가사리",
+        "scientificName": "Mediaster brachiatus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007269",
+        "koreanName": "부푼불가사리",
+        "scientificName": "Poraniopsis inflata",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007270",
+        "koreanName": "가시가장자리불가사리",
+        "scientificName": "Marginaster paucispinus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007271",
+        "koreanName": "작은불가사리",
+        "scientificName": "Leptychaster arcticus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007272",
+        "koreanName": "울퉁작은불가사리",
+        "scientificName": "Leptychaster anomalus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007273",
+        "koreanName": "마른불가사리",
+        "scientificName": "Dipsacaster pretiosus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007274",
+        "koreanName": "피셀측불가사리",
+        "scientificName": "Ctenopleura fisheri",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007275",
+        "koreanName": "루드윅측불가사리",
+        "scientificName": "Ctenopleura ludwigi",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007276",
+        "koreanName": "모서리불가사리",
+        "scientificName": "Craspidaster hesperus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007277",
+        "koreanName": "가시불가사리",
+        "scientificName": "Astropecten polyacanthus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007278",
+        "koreanName": "전갈가시불가사리",
+        "scientificName": "Astropecten scoparius",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007279",
+        "koreanName": "가고시마가시불가사리",
+        "scientificName": "Astropecten kagoshimensis",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007280",
+        "koreanName": "모본불가사리",
+        "scientificName": "Paragonaster ctenipes",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007281",
+        "koreanName": "헛불가사리",
+        "scientificName": "Pseudarchaster parelii",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007282",
+        "koreanName": "깊은검은띠불가사리",
+        "scientificName": "Luidia sagamina sagamina",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007283",
+        "koreanName": "검은띠불가사리",
+        "scientificName": "Luidia quinaria",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007284",
+        "koreanName": "반점검은띠불가사리",
+        "scientificName": "Luidia maculata",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007285",
+        "koreanName": "거친검은띠불가사리",
+        "scientificName": "Luidia avicularia",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007286",
+        "koreanName": "빗살판불가사리",
+        "scientificName": "Ctenodiscus crispatus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007287",
+        "koreanName": "긴팔애기불가사리",
+        "scientificName": "Henricia reniossa asiatica",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007288",
+        "koreanName": "삼각애기불가사리",
+        "scientificName": "Henricia densispina",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007289",
+        "koreanName": "하야시애기불가사리",
+        "scientificName": "Henricia hayashii",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007290",
+        "koreanName": "적은가시애기불가사리",
+        "scientificName": "Henricia tumida",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007291",
+        "koreanName": "짧은가시애기불가사리",
+        "scientificName": "Henricia exigua",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007292",
+        "koreanName": "초승달애기불가사리",
+        "scientificName": "Henricia kinkasana",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007294",
+        "koreanName": "불규칙애기불가사리",
+        "scientificName": "Henricia irregularis",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007295",
+        "koreanName": "알루샨긴가시애기불가사리",
+        "scientificName": "Henricia longispina aleutica",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007296",
+        "koreanName": "구멍애기불가사리",
+        "scientificName": "Henricia perforata",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007297",
+        "koreanName": "굽은애기불가사리",
+        "scientificName": "Henricia epiphysialis",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007298",
+        "koreanName": "거친애기불가사리",
+        "scientificName": "Henricia oculata",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007299",
+        "koreanName": "빨간애기불가사리",
+        "scientificName": "Henricia sanguinolenta",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007300",
+        "koreanName": "변칙애기불가사리",
+        "scientificName": "Henricia anomala",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007301",
+        "koreanName": "그물애기불가사리",
+        "scientificName": "Henricia reticulata",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007302",
+        "koreanName": "태평양애기불가사리",
+        "scientificName": "Henricia pacifica",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007303",
+        "koreanName": "작은애기불가사리",
+        "scientificName": "Henricia elachys",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007304",
+        "koreanName": "네모애기불가사리",
+        "scientificName": "Henricia regularis",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007305",
+        "koreanName": "육질애기불가사리",
+        "scientificName": "Henricia pachyderma",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007306",
+        "koreanName": "오지마애기불가사리",
+        "scientificName": "Henricia ohshimai",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007307",
+        "koreanName": "애기불가사리",
+        "scientificName": "Henricia nipponica",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007308",
+        "koreanName": "콩팥애기불가사리",
+        "scientificName": "Henricia reniossa",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007309",
+        "koreanName": "미끈애기불가사리",
+        "scientificName": "Henricia leviuscula",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007310",
+        "koreanName": "알루샨애기불가사리",
+        "scientificName": "Aleutihenricia beringiana",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007311",
+        "koreanName": "입방불가사리",
+        "scientificName": "Pteraster tesselatus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007312",
+        "koreanName": "주름입방불가사리",
+        "scientificName": "Pteraster militaris",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007313",
+        "koreanName": "복방석불가사리",
+        "scientificName": "Diplopteraster multipes",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007314",
+        "koreanName": "차극유가시불가사리",
+        "scientificName": "Nearchaster pedicellaris",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007316",
+        "koreanName": "왜주름불가사리",
+        "scientificName": "Crossaster japonicus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007317",
+        "koreanName": "주름불가사리",
+        "scientificName": "Crossaster papposus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007318",
+        "koreanName": "주황햇님불가사리",
+        "scientificName": "Solaster paxillatus",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007319",
+        "koreanName": "넓은햇님불가사리",
+        "scientificName": "Solaster endeca",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007320",
+        "koreanName": "도우손햇님불가사리",
+        "scientificName": "Solaster dawsoni",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007321",
+        "koreanName": "우치다햇님불가사리",
+        "scientificName": "Solaster uchidai",
+        "class": "Asteroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007322",
+        "koreanName": "붉은갈기불가사리",
+        "scientificName": "Lophaster furcilliger",
+        "class": "Asteroidea"
+      }
+    ],
+    "representativeSpecies": null,
+    "evidence": [
+      {
+        "organization": "로컬 분류학 검토",
+        "source": "blue-marina-nonfish-candidates.json",
+        "value": "taxonomy.class == 'Asteroidea' 종 78건을 후보 풀로 확정"
+      },
+      {
+        "organization": "로컬 분류학 검토",
+        "source": "batch3/echinoderm-alias-recheck",
+        "value": "'불가사리' 단독 표제어(exact match) 0건, 후보 풀 중 국명에 '불가사리' 포함 78건/78건 — aggregate_name 판정 근거"
+      }
+    ],
+    "createdAt": "2026-08-02T08:28:23.990995+00:00",
+    "updatedAt": "2026-08-02T08:28:23.990995+00:00"
+  },
+  {
+    "aggregateId": "AGG-000002",
+    "sourceName": "성게",
+    "organismGroup": "echinoderm",
+    "taxonomicScope": "Echinoidea",
+    "status": "manual_review",
+    "candidateSpecies": [
+      {
+        "internalId": "BM-SPECIES-007110",
+        "koreanName": "분지성게",
+        "scientificName": "Temnopleurus toreumaticus",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007111",
+        "koreanName": "하드윅분지성게",
+        "scientificName": "Temnopleurus hardwickii",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007112",
+        "koreanName": "보라성게",
+        "scientificName": "Heliocidaris crassispina",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007113",
+        "koreanName": "만두성게",
+        "scientificName": "Echinometra mathaei",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007114",
+        "koreanName": "흰수염성게",
+        "scientificName": "Tripneustes gratilla",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007115",
+        "koreanName": "주발성게",
+        "scientificName": "Toxopneustes pileolus",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007116",
+        "koreanName": "파동측강성게",
+        "scientificName": "Coelopleurus undulatus",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007117",
+        "koreanName": "가시왕관성게",
+        "scientificName": "Diadema setosum",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007118",
+        "koreanName": "한국만두등성게",
+        "scientificName": "Echinolampas koreana",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007119",
+        "koreanName": "가는관극성게",
+        "scientificName": "Phalacrocidaris japonica",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007120",
+        "koreanName": "톱니관극성게",
+        "scientificName": "Prionocidaris baculosa",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007121",
+        "koreanName": "유연각성게",
+        "scientificName": "Asthenosoma ijimai",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007122",
+        "koreanName": "구멍연잎성게",
+        "scientificName": "Astriclypeus mannii",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007123",
+        "koreanName": "브로지연잎성게",
+        "scientificName": "Peronella japonica",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007124",
+        "koreanName": "연잎성게",
+        "scientificName": "Scaphechinus mirabilis",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007125",
+        "koreanName": "방패연잎성게",
+        "scientificName": "Clypeaster japonicus",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007126",
+        "koreanName": "초록방패연잎성게",
+        "scientificName": "Clypeaster virescens",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007127",
+        "koreanName": "조각관성게",
+        "scientificName": "Glyptocidaris crenularis",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007128",
+        "koreanName": "의염통성게",
+        "scientificName": "Nacospatangus altus",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007129",
+        "koreanName": "모래무치염통성게",
+        "scientificName": "Echinocardium cordatum",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007130",
+        "koreanName": "큰염통성게",
+        "scientificName": "Brissus agassizii",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007131",
+        "koreanName": "낮은염통성게",
+        "scientificName": "Brisaster latifrons",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007132",
+        "koreanName": "염통성게",
+        "scientificName": "Schizaster lacunosus",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007133",
+        "koreanName": "뤼트겐염통성게",
+        "scientificName": "Spatangus luetkeni",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007223",
+        "koreanName": "연약둥근성게",
+        "scientificName": "Strongylocentrotus pallidus",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007224",
+        "koreanName": "둥근성게",
+        "scientificName": "Mesocentrotus nudus",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007315",
+        "koreanName": "모서리관극성게",
+        "scientificName": "Goniocidaris biserialis",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007336",
+        "koreanName": "새치성게",
+        "scientificName": "Strongylocentrotus intermedius",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007337",
+        "koreanName": "분홍성게",
+        "scientificName": "Pseudocentrotus depressus",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007338",
+        "koreanName": "말똥성게",
+        "scientificName": "Hemicentrotus pulcherrimus",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007339",
+        "koreanName": "빨강작은성게",
+        "scientificName": "Temnotrema rubrum",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007340",
+        "koreanName": "작은성게",
+        "scientificName": "Temnotrema sculptum",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007341",
+        "koreanName": "고높은분지성게",
+        "scientificName": "Mespilia globulus",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007342",
+        "koreanName": "올리브분지성게",
+        "scientificName": "Microcyphus olivaceus",
+        "class": "Echinoidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007343",
+        "koreanName": "바늘분지성게",
+        "scientificName": "Temnopleurus reevesii",
+        "class": "Echinoidea"
+      }
+    ],
+    "representativeSpecies": null,
+    "evidence": [
+      {
+        "organization": "로컬 분류학 검토",
+        "source": "blue-marina-nonfish-candidates.json",
+        "value": "taxonomy.class == 'Echinoidea' 종 35건을 후보 풀로 확정"
+      },
+      {
+        "organization": "로컬 분류학 검토",
+        "source": "batch3/echinoderm-alias-recheck",
+        "value": "'성게' 단독 표제어(exact match) 0건, 후보 풀 중 국명에 '성게' 포함 35건/35건 — aggregate_name 판정 근거"
+      }
+    ],
+    "createdAt": "2026-08-02T08:28:23.990995+00:00",
+    "updatedAt": "2026-08-02T08:28:23.990995+00:00"
+  },
+  {
+    "aggregateId": "AGG-000003",
+    "sourceName": "해삼",
+    "organismGroup": "echinoderm",
+    "taxonomicScope": "Holothuroidea",
+    "status": "manual_review",
+    "candidateSpecies": [
+      {
+        "internalId": "BM-SPECIES-007134",
+        "koreanName": "가시닻해삼",
+        "scientificName": "Protankyra bidentata",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007135",
+        "koreanName": "아기닻해삼",
+        "scientificName": "Leptosynapta inhaerens",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007136",
+        "koreanName": "주걱닻해삼",
+        "scientificName": "Oestergrenia dubia",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007137",
+        "koreanName": "둥근닻해삼",
+        "scientificName": "Patinapta ooplax",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007138",
+        "koreanName": "보라바퀴해삼",
+        "scientificName": "Polycheira rufescens",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007139",
+        "koreanName": "돌기해삼",
+        "scientificName": "Apostichopus japonicus",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007140",
+        "koreanName": "검은점돌기해삼",
+        "scientificName": "Parastichopus nigripunctatus",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007141",
+        "koreanName": "중간해삼",
+        "scientificName": "Synallactes nozawai",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007142",
+        "koreanName": "은족민꼬리해삼",
+        "scientificName": "Acaudina molpadioides",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007143",
+        "koreanName": "흰해삼",
+        "scientificName": "Paracaudina chilensis",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007144",
+        "koreanName": "꼬리해삼",
+        "scientificName": "Caudina similis",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007145",
+        "koreanName": "높은탑은족해삼",
+        "scientificName": "Molpadia changi",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007146",
+        "koreanName": "은족해삼",
+        "scientificName": "Molpadia oolitica",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007147",
+        "koreanName": "소광삼",
+        "scientificName": "Cucumaria miniata",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007148",
+        "koreanName": "타원광삼",
+        "scientificName": "Cucumaria frondosa japonica",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007149",
+        "koreanName": "이원촉수해삼",
+        "scientificName": "Amphicyclus japonicus",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007150",
+        "koreanName": "쿠쿠멜라광삼",
+        "scientificName": "Neoamphicyclus problematica",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007151",
+        "koreanName": "헛광삼",
+        "scientificName": "Ocnus capensis",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007152",
+        "koreanName": "오각해삼",
+        "scientificName": "Pentacta doliolum",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007153",
+        "koreanName": "수수해삼",
+        "scientificName": "Plesiocolochirus inornatus",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007154",
+        "koreanName": "성게광삼",
+        "scientificName": "Pseudocnus echinatus",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007155",
+        "koreanName": "파우손모조해삼",
+        "scientificName": "Pseudocnus pawsoni",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007156",
+        "koreanName": "와타세신광삼",
+        "scientificName": "Neocucumis watasei",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007157",
+        "koreanName": "거진꼬리해삼",
+        "scientificName": "Havelockia kojinensis",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007158",
+        "koreanName": "오각광삼",
+        "scientificName": "Eupentacta quinquesemita",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007159",
+        "koreanName": "보라해삼붙이",
+        "scientificName": "Afrocucumis africana",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007160",
+        "koreanName": "다족환꼬리해삼",
+        "scientificName": "Sclerodactyla multipes",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007161",
+        "koreanName": "갈색비늘해삼",
+        "scientificName": "Psolus phantapus",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007162",
+        "koreanName": "비늘해삼",
+        "scientificName": "Psolus squamatus",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007163",
+        "koreanName": "화문해삼",
+        "scientificName": "Lipotrapeza japonica",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007164",
+        "koreanName": "방추티오네해삼",
+        "scientificName": "Thyone fusus chinensis",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007165",
+        "koreanName": "두뿔티오네해삼",
+        "scientificName": "Thyone bicornis",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007166",
+        "koreanName": "작은티오네해삼",
+        "scientificName": "Thyone micra",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007167",
+        "koreanName": "소신해삼",
+        "scientificName": "Neothyonidium minutum",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007330",
+        "koreanName": "가시탑해삼",
+        "scientificName": "Phyllophorus ordinata",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007331",
+        "koreanName": "높은탑해삼",
+        "scientificName": "Phyllophorus hypsipyrga",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007332",
+        "koreanName": "개해삼",
+        "scientificName": "Holothuria hilla",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007333",
+        "koreanName": "점해삼",
+        "scientificName": "Holothuria pardalis",
+        "class": "Holothuroidea"
+      },
+      {
+        "internalId": "BM-SPECIES-007334",
+        "koreanName": "눈해삼",
+        "scientificName": "Holothuria pervicax",
+        "class": "Holothuroidea"
+      }
+    ],
+    "representativeSpecies": null,
+    "evidence": [
+      {
+        "organization": "로컬 분류학 검토",
+        "source": "blue-marina-nonfish-candidates.json",
+        "value": "taxonomy.class == 'Holothuroidea' 종 39건을 후보 풀로 확정"
+      },
+      {
+        "organization": "로컬 분류학 검토",
+        "source": "batch3/echinoderm-alias-recheck",
+        "value": "'해삼' 단독 표제어(exact match) 0건, 후보 풀 중 국명에 '해삼' 포함 32건/39건 — aggregate_name 판정 근거"
+      }
+    ],
+    "createdAt": "2026-08-02T08:28:23.990995+00:00",
+    "updatedAt": "2026-08-02T08:28:23.990995+00:00"
+  }
+]

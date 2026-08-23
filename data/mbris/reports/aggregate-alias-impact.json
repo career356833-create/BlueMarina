@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-08-02T08:31:24.178405+00:00",
+  "simulationOnly": true,
+  "representativeSpeciesActuallyLinked": false,
+  "note": "representativeSpecies는 aggregate-alias-registry.json에서 여전히 null이다. currentServicePriorityScore/currentServiceTier는 '연결됐다고 가정'한 가짜 값이 아니라, 최고점 후보가 지금 이 순간 실제로 받는 점수를 그대로 계산한 것이다 — 아직 fish-data/NIFS 어디에도 연결되지 않았으므로 전부 낮은 점수로 나온다. 공식 priority/*.json 산출물은 이 스크립트로 재생성하지 않았다.",
+  "existingTierACount": 87,
+  "aggregates": [
+    {
+      "aggregateName": "불가사리",
+      "topScoringCandidate": {
+        "internalId": "BM-SPECIES-007244",
+        "koreanName": "검은불가사리",
+        "representativeScore": 15
+      },
+      "currentServicePriorityScore": 10,
+      "currentServiceTier": "C",
+      "alreadyInTierA": false
+    },
+    {
+      "aggregateName": "성게",
+      "topScoringCandidate": {
+        "internalId": "BM-SPECIES-007110",
+        "koreanName": "분지성게",
+        "representativeScore": 15
+      },
+      "currentServicePriorityScore": 10,
+      "currentServiceTier": "C",
+      "alreadyInTierA": false
+    },
+    {
+      "aggregateName": "해삼",
+      "topScoringCandidate": {
+        "internalId": "BM-SPECIES-007134",
+        "koreanName": "가시닻해삼",
+        "representativeScore": 15
+      },
+      "currentServicePriorityScore": 10,
+      "currentServiceTier": "C",
+      "alreadyInTierA": false
+    }
+  ],
+  "tierAChangeIfApplied": 0
+}

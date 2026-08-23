@@ -1,0 +1,601 @@
+[
+  {
+    "sourceName": "임연수",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-001161",
+        "koreanName": "임연수어",
+        "scientificName": "Pleurogrammus azonus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-001162",
+        "koreanName": "단기임연수어",
+        "scientificName": "Pleurogrammus monopterygius",
+        "organismGroup": "fish"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 2건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "갑오징어",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-003080",
+        "koreanName": "바늘갑오징어",
+        "scientificName": "Decorisepia madokai",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003081",
+        "koreanName": "꽃갑오징어",
+        "scientificName": "Ascarosepion tullbergi",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003082",
+        "koreanName": "애기갑오징어",
+        "scientificName": "Doratosepion kobiense",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003083",
+        "koreanName": "넓은붉갑오징어",
+        "scientificName": "Doratosepion tokioense",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003084",
+        "koreanName": "거미다리갑오징어",
+        "scientificName": "Doratosepion tenuipes",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003085",
+        "koreanName": "긴다리갑오징어",
+        "scientificName": "Doratosepion longipes",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003086",
+        "koreanName": "표범갑오징어",
+        "scientificName": "Doratosepion pardex",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003087",
+        "koreanName": "갈색갑오징어",
+        "scientificName": "Doratosepion andreana",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003088",
+        "koreanName": "납작갑오징어",
+        "scientificName": "Doratosepion peterseni",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003089",
+        "koreanName": "참갑오징어",
+        "scientificName": "Acanthosepion esculentum",
+        "organismGroup": "cephalopod"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 10건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "조기",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000833",
+        "koreanName": "흑조기",
+        "scientificName": "Atrobucca nibe",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000837",
+        "koreanName": "수조기",
+        "scientificName": "Nibea albiflora",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000841",
+        "koreanName": "참조기",
+        "scientificName": "Larimichthys polyactis",
+        "organismGroup": "fish"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 3건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "줄돔",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000193",
+        "koreanName": "황줄돔",
+        "scientificName": "Histiopterus typus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000231",
+        "koreanName": "흑줄돔",
+        "scientificName": "Abudefduf bengalensis",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000741",
+        "koreanName": "검은청줄돔",
+        "scientificName": "Chaetodontoplus melanosoma",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000742",
+        "koreanName": "청줄돔",
+        "scientificName": "Chaetodontoplus septentrionalis",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000756",
+        "koreanName": "녹줄돔",
+        "scientificName": "Evynnis cardinalis",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000828",
+        "koreanName": "노랑줄돔",
+        "scientificName": "Pentapodus nagasakiensis",
+        "organismGroup": "fish"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 6건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "흑새치",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000470",
+        "koreanName": "청새치",
+        "scientificName": "Kajikia audax",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000471",
+        "koreanName": "백새치",
+        "scientificName": "Istiompax indica",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000472",
+        "koreanName": "녹새치",
+        "scientificName": "Makaira mazara",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000473",
+        "koreanName": "돛새치",
+        "scientificName": "Istiophorus platypterus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000479",
+        "koreanName": "황새치",
+        "scientificName": "Xiphias gladius",
+        "organismGroup": "fish"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 5건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "가자미",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000468",
+        "koreanName": "중설가자미",
+        "scientificName": "Plagiopsetta glossa",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000469",
+        "koreanName": "신월가자미",
+        "scientificName": "Samariscus japonicus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000477",
+        "koreanName": "좌대가자미",
+        "scientificName": "Poecilopsetta plinthus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000528",
+        "koreanName": "별목탁가자미",
+        "scientificName": "Bothus myriaster",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000530",
+        "koreanName": "목탁가자미",
+        "scientificName": "Arnoglossus japonicus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000531",
+        "koreanName": "노랑반점가자미",
+        "scientificName": "Arnoglossus polyspilus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000533",
+        "koreanName": "동백가자미",
+        "scientificName": "Psettina iijimae",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000535",
+        "koreanName": "긴가자미",
+        "scientificName": "Parabothus kiensis",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000539",
+        "koreanName": "흰비늘가자미",
+        "scientificName": "Laeops parviceps",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000540",
+        "koreanName": "용가자미",
+        "scientificName": "Cleisthenes pinetorum",
+        "organismGroup": "fish"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 10건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "꼴뚜기",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-002769",
+        "koreanName": "꼬마꼴뚜기",
+        "scientificName": "Loliolus sumatrensis",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-002770",
+        "koreanName": "반원니꼴뚜기",
+        "scientificName": "Loliolus japonica",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003070",
+        "koreanName": "참꼴뚜기",
+        "scientificName": "Loliolus beka",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003094",
+        "koreanName": "흰꼴뚜기",
+        "scientificName": "Sepioteuthis lessoniana",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003095",
+        "koreanName": "한치꼴뚜기",
+        "scientificName": "Uroteuthis chinensis",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003096",
+        "koreanName": "창꼴뚜기",
+        "scientificName": "Uroteuthis edulis",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003097",
+        "koreanName": "화살꼴뚜기",
+        "scientificName": "Heterololigo bleekeri",
+        "organismGroup": "cephalopod"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 7건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "망둥어",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000369",
+        "koreanName": "말뚝망둥어",
+        "scientificName": "Periophthalmus modestus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000370",
+        "koreanName": "큰볏말뚝망둥어",
+        "scientificName": "Periophthalmus magnuspinnatus",
+        "organismGroup": "fish"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 2건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "광어",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000090",
+        "koreanName": "연어",
+        "scientificName": "Oncorhynchus keta",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000097",
+        "koreanName": "숭어",
+        "scientificName": "Mugil cephalus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000188",
+        "koreanName": "농어",
+        "scientificName": "Lateolabrax japonicus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000426",
+        "koreanName": "병어",
+        "scientificName": "Pampus punctatissimus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000501",
+        "koreanName": "방어",
+        "scientificName": "Seriola quinqueradiata",
+        "organismGroup": "fish"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 5건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "열기",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000317",
+        "koreanName": "발기",
+        "scientificName": "Perccottus glenii",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-016463",
+        "koreanName": "메기",
+        "scientificName": "Silurus asotus",
+        "organismGroup": "fish"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 2건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "장대",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000425",
+        "koreanName": "덕대",
+        "scientificName": "Pampus argenteus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000566",
+        "koreanName": "박대",
+        "scientificName": "Cynoglossus semilaevis",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-001135",
+        "koreanName": "성대",
+        "scientificName": "Chelidonichthys spinosus",
+        "organismGroup": "fish"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 3건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "전복",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-002416",
+        "koreanName": "둥근전복",
+        "scientificName": "Haliotis discus",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002417",
+        "koreanName": "말전복",
+        "scientificName": "Haliotis gigantea",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002419",
+        "koreanName": "왕전복",
+        "scientificName": "Haliotis madaka",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002420",
+        "koreanName": "북방전복",
+        "scientificName": "Haliotis discus hannai",
+        "organismGroup": "gastropod"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 4건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "참굴",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000755",
+        "koreanName": "참돔",
+        "scientificName": "Pagrus major",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-002962",
+        "koreanName": "토굴",
+        "scientificName": "Ostrea denselamellosa",
+        "organismGroup": "bivalve"
+      },
+      {
+        "internalId": "BM-SPECIES-002965",
+        "koreanName": "굴",
+        "scientificName": "Magallana gigas",
+        "organismGroup": "bivalve"
+      },
+      {
+        "internalId": "BM-SPECIES-002966",
+        "koreanName": "갓굴",
+        "scientificName": "Magallana ariakensis",
+        "organismGroup": "bivalve"
+      },
+      {
+        "internalId": "BM-SPECIES-005895",
+        "koreanName": "참게",
+        "scientificName": "Eriocheir sinensis",
+        "organismGroup": "crustacean"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 5건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "참복",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000150",
+        "koreanName": "별복",
+        "scientificName": "Arothron firmamentum",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000151",
+        "koreanName": "청복",
+        "scientificName": "Canthigaster rivulata",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000155",
+        "koreanName": "황복",
+        "scientificName": "Takifugu obscurus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000159",
+        "koreanName": "망복",
+        "scientificName": "Takifugu reticularis",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000162",
+        "koreanName": "졸복",
+        "scientificName": "Takifugu pardalis",
+        "organismGroup": "fish"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 5건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "불가사리",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-002509",
+        "koreanName": "불가사리퉁퉁이고둥",
+        "scientificName": "Parvioris fulvescens",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002510",
+        "koreanName": "가시불가사리바늘고둥",
+        "scientificName": "Parvioris astropectenicola",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002524",
+        "koreanName": "빨강불가사리속살이고둥",
+        "scientificName": "Stilifer akahitode",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002534",
+        "koreanName": "불가사리기생고둥",
+        "scientificName": "Thyca crystallina",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-003277",
+        "koreanName": "거미불가사리조개",
+        "scientificName": "Nipponomysella oblongata",
+        "organismGroup": "bivalve"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 5건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "성게",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-002507",
+        "koreanName": "보라성게살이고둥",
+        "scientificName": "Vitreolina langfordi",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002508",
+        "koreanName": "성게살이꼬부리고둥",
+        "scientificName": "Vitreobalcis temnopleuricola",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002519",
+        "koreanName": "꼬마투명성게살이고둥",
+        "scientificName": "Hypermastus peronellicola",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002533",
+        "koreanName": "방패연잎성게살이고둥",
+        "scientificName": "Clypeastericola clypeastericola",
+        "organismGroup": "gastropod"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 4건(복수)",
+    "previousDecision": "manual_review"
+  },
+  {
+    "sourceName": "해삼",
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-005503",
+        "koreanName": "납작흰해삼속살이게",
+        "scientificName": "Pinnixa penultipedalis",
+        "organismGroup": "crustacean"
+      },
+      {
+        "internalId": "BM-SPECIES-005504",
+        "koreanName": "흰해삼속살이게",
+        "scientificName": "Pinnixa tumida",
+        "organismGroup": "crustacean"
+      }
+    ],
+    "reason": "registry status=manual_review, 후보 2건(복수)",
+    "previousDecision": "manual_review"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "originalName": "가오리 꼬리주의",
+    "inferredBaseName": "가오리",
+    "relatedFishEvidence": "가오리류는 꼬리와 가시에 주의가 필요합니다.",
+    "issueType": "source_name_contains_non_species_text",
+    "recommendedAction": "fish-data.ts의 name 필드를 실제 종명으로 정정 검토 필요(이번 작업에서는 원본을 수정하지 않음)",
+    "status": "manual_review"
+  },
+  {
+    "originalName": "성게가시",
+    "inferredBaseName": "성게",
+    "relatedFishEvidence": "성게는 가시에 찔리면 통증과 이물감이 생길 수 있습니다.",
+    "issueType": "source_name_contains_non_species_text",
+    "recommendedAction": "fish-data.ts의 name 필드를 실제 종명으로 정정 검토 필요(이번 작업에서는 원본을 수정하지 않음)",
+    "status": "manual_review"
+  },
+  {
+    "originalName": "쏨뱅이 독가시",
+    "inferredBaseName": "쏨뱅이",
+    "relatedFishEvidence": "쏨뱅이는 맛도 좋지만 가시가 위험할 수 있습니다.",
+    "issueType": "source_name_contains_non_species_text",
+    "recommendedAction": "fish-data.ts의 name 필드를 실제 종명으로 정정 검토 필요(이번 작업에서는 원본을 수정하지 않음)",
+    "status": "manual_review"
+  }
+]

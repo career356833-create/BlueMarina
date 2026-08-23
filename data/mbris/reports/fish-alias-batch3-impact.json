@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-08-01T15:08:31.848930+00:00",
+  "reviewedCount": 17,
+  "approvedCount": 3,
+  "rejectedCount": 4,
+  "aggregateNameCount": 7,
+  "marketNameCount": 0,
+  "sourceIssueCount": 0,
+  "keepManualReviewCount": 3,
+  "registryStatusBefore": {
+    "approved": 75,
+    "manual_review": 72,
+    "rejected": 4
+  },
+  "registryStatusIfApplied": {
+    "approved": 78,
+    "manual_review": 69,
+    "rejected": 4
+  },
+  "resolvedMappingCountExisting": 75,
+  "resolvedMappingCountIfApplied": 78,
+  "beforeTierACount": 86,
+  "afterTierACountIfApplied": 87,
+  "tierAChangeIfApplied": 1,
+  "newSpeciesCreated": false,
+  "newlyLinkedExistingSpecies": [
+    "BM-SPECIES-002965"
+  ],
+  "approvedItems": [
+    {
+      "sourceName": "광어",
+      "internalId": "BM-SPECIES-000465",
+      "canonicalName": "넙치",
+      "confidence": "medium"
+    },
+    {
+      "sourceName": "장대",
+      "internalId": "BM-SPECIES-000065",
+      "canonicalName": "양태",
+      "confidence": "high"
+    },
+    {
+      "sourceName": "참굴",
+      "internalId": "BM-SPECIES-002965",
+      "canonicalName": "굴",
+      "confidence": "high"
+    }
+  ],
+  "note": "newSpeciesCreated는 정책상 항상 False다 — internalId가 있는 approved 항목만 반영 대상으로 취급하고, 전부 기존 MBRIS 종 ID를 재사용한다. 새 ID를 만들지 않는다. 실제 Registry/resolved 파일은 이 스크립트로 수정되지 않는다(시뮬레이션 전용)."
+}

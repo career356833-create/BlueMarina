@@ -1,0 +1,20 @@
+[
+  {
+    "sourceName": "불가사리",
+    "aliasType": "aggregate_name",
+    "registryId": "AGG-000001",
+    "status": "manual_review"
+  },
+  {
+    "sourceName": "성게",
+    "aliasType": "aggregate_name",
+    "registryId": "AGG-000002",
+    "status": "manual_review"
+  },
+  {
+    "sourceName": "해삼",
+    "aliasType": "aggregate_name",
+    "registryId": "AGG-000003",
+    "status": "manual_review"
+  }
+]

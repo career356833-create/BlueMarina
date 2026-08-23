@@ -1,0 +1,80 @@
+{
+  "generatedAt": "2026-08-01T05:44:49.874999+00:00",
+  "totalUnmatched": 79,
+  "statusCounts": {
+    "manual_review": 77,
+    "confirmed": 2
+  },
+  "matchMethodCounts": {
+    "edit_distance": 38,
+    "substring_match": 123,
+    "nifs_dialect_reference": 6,
+    "exact_korean_name": 25
+  },
+  "zeroCandidateCount": 9,
+  "confirmedItems": [
+    "참소라",
+    "은갈치"
+  ],
+  "sourceDataQualityIssues": [
+    {
+      "sourceName": "쏨뱅이 독가시",
+      "category": "주의가 필요한 어종",
+      "issue": "이름 필드에 주의문구/기타 텍스트가 섞여 있음",
+      "derivedBaseName": "쏨뱅이"
+    },
+    {
+      "sourceName": "가오리 꼬리주의",
+      "category": "주의가 필요한 어종",
+      "issue": "이름 필드에 주의문구/기타 텍스트가 섞여 있음",
+      "derivedBaseName": "가오리"
+    },
+    {
+      "sourceName": "성게가시",
+      "category": "주의가 필요한 어종",
+      "issue": "이름 필드에 주의문구/기타 텍스트가 섞여 있음",
+      "derivedBaseName": "성게"
+    }
+  ],
+  "collectiveGroupNames": [
+    "오징어",
+    "참치",
+    "가오리",
+    "장어",
+    "복어",
+    "긴꼬리벵에돔류",
+    "돌돔류",
+    "돛새치류",
+    "청새치류",
+    "황새치류",
+    "가다랑어류",
+    "눈다랑어류",
+    "무늬오징어류",
+    "한치류",
+    "주꾸미류",
+    "쭈꾸미류",
+    "갯장어류",
+    "황어류",
+    "조기류",
+    "보구치류",
+    "백조기류",
+    "대하류",
+    "꽃게류",
+    "꽃새우류",
+    "전복치류",
+    "벤자리류",
+    "실갈치류",
+    "먹갈치류",
+    "부세류",
+    "은대구류",
+    "삼세기류",
+    "서대류",
+    "왕우럭조개류",
+    "피조개류",
+    "가시복류",
+    "검복류",
+    "까치복류",
+    "전기가오리류",
+    "귀상어류"
+  ]
+}

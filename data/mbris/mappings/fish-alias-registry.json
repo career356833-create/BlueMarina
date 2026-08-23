@@ -1,0 +1,4997 @@
+[
+  {
+    "sourceName": "가다랑어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000412",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "가다랑어 -> BM-SPECIES-000412 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000001",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "가다랑어류",
+    "canonicalName": "가다랑어",
+    "internalId": "BM-SPECIES-000412",
+    "scientificName": "Katsuwonus pelamis",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "가다랑어(Katsuwonus pelamis) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "가다랑어(Katsuwonus pelamis)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000002",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "가시복류",
+    "canonicalName": "가시복",
+    "internalId": "BM-SPECIES-000143",
+    "scientificName": "Diodon holocanthus",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "가시복(Diodon holocanthus) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "가시복(Diodon holocanthus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000003",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "가오리",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000643",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "도랑가오리(Dipturus macrocauda) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "오동가오리(Okamejei meerdervoortii) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "바닥가오리(Bathyraja bergi) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "금가오리(Bathyraja smirnovi) sim=0.75 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "저자가오리(Bathyraja isotrachys) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "목탁가오리(Platyrhina tangi) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "전기가오리(Narke japonica) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "나비가오리(Gymnura japonica) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "흰가오리(Urolophus aurantiacus) sim=0.75 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "갈색가오리(Hemitrygon sinensis) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "도랑가오리(Dipturus macrocauda)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "오동가오리(Okamejei meerdervoortii)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "바닥가오리(Bathyraja bergi)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "금가오리(Bathyraja smirnovi)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "저자가오리(Bathyraja isotrachys)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "목탁가오리(Platyrhina tangi)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "전기가오리(Narke japonica)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "나비가오리(Gymnura japonica)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "흰가오리(Urolophus aurantiacus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "갈색가오리(Hemitrygon sinensis)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000004",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "가오리 꼬리주의",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000643",
+    "scientificName": null,
+    "aliasType": "source_issue",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "도랑가오리(Dipturus macrocauda) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "오동가오리(Okamejei meerdervoortii) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "바닥가오리(Bathyraja bergi) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "금가오리(Bathyraja smirnovi) sim=0.75 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "저자가오리(Bathyraja isotrachys) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "목탁가오리(Platyrhina tangi) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "전기가오리(Narke japonica) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "나비가오리(Gymnura japonica) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "흰가오리(Urolophus aurantiacus) sim=0.75 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "갈색가오리(Hemitrygon sinensis) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "도랑가오리(Dipturus macrocauda)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "오동가오리(Okamejei meerdervoortii)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "바닥가오리(Bathyraja bergi)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "금가오리(Bathyraja smirnovi)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "저자가오리(Bathyraja isotrachys)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "목탁가오리(Platyrhina tangi)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "전기가오리(Narke japonica)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "나비가오리(Gymnura japonica)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "흰가오리(Urolophus aurantiacus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "갈색가오리(Hemitrygon sinensis)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000005",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "가자미",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000468",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "중설가자미(Plagiopsetta glossa) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "신월가자미(Samariscus japonicus) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "좌대가자미(Poecilopsetta plinthus) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "별목탁가자미(Bothus myriaster) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "목탁가자미(Arnoglossus japonicus) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "노랑반점가자미(Arnoglossus polyspilus) sim=0.429 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "동백가자미(Psettina iijimae) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "긴가자미(Parabothus kiensis) sim=0.75 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "흰비늘가자미(Laeops parviceps) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "용가자미(Cleisthenes pinetorum) sim=0.75 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "중설가자미(Plagiopsetta glossa)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "신월가자미(Samariscus japonicus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "좌대가자미(Poecilopsetta plinthus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "별목탁가자미(Bothus myriaster)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "목탁가자미(Arnoglossus japonicus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "노랑반점가자미(Arnoglossus polyspilus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "동백가자미(Psettina iijimae)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "긴가자미(Parabothus kiensis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "흰비늘가자미(Laeops parviceps)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "용가자미(Cleisthenes pinetorum)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000006",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "갈치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000444",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "NIFS_TRANSITIVE",
+        "type": "synonym",
+        "value": "갈치 -> BM-SPECIES-000444 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000007",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "감성돔",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000751",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "감성돔 -> BM-SPECIES-000751 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000008",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "갑오징어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-003080",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "바늘갑오징어(Decorisepia madokai) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "꽃갑오징어(Ascarosepion tullbergi) sim=0.8 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "애기갑오징어(Doratosepion kobiense) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "넓은붉갑오징어(Doratosepion tokioense) sim=0.571 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "거미다리갑오징어(Doratosepion tenuipes) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "긴다리갑오징어(Doratosepion longipes) sim=0.571 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "표범갑오징어(Doratosepion pardex) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "갈색갑오징어(Doratosepion andreana) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "납작갑오징어(Doratosepion peterseni) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "참갑오징어(Acanthosepion esculentum) sim=0.8 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "바늘갑오징어(Decorisepia madokai)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "꽃갑오징어(Ascarosepion tullbergi)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "애기갑오징어(Doratosepion kobiense)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "넓은붉갑오징어(Doratosepion tokioense)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "거미다리갑오징어(Doratosepion tenuipes)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "긴다리갑오징어(Doratosepion longipes)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "표범갑오징어(Doratosepion pardex)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "갈색갑오징어(Doratosepion andreana)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "납작갑오징어(Doratosepion peterseni)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "참갑오징어(Acanthosepion esculentum)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000009",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "강도다리",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000555",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "강도다리 -> BM-SPECIES-000555 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000010",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "갯강구",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-006084",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "갯강구 -> BM-SPECIES-006084 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000011",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "갯장어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000900",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "NIFS_TRANSITIVE",
+        "type": "scientific_exact",
+        "value": "갯장어 -> BM-SPECIES-000900 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000012",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "갯장어류",
+    "canonicalName": "갯장어",
+    "internalId": "BM-SPECIES-000900",
+    "scientificName": "Muraenesox cinereus",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "갯장어(Muraenesox cinereus) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "갯장어(Muraenesox cinereus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000013",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "검복류",
+    "canonicalName": "검복",
+    "internalId": "BM-SPECIES-000165",
+    "scientificName": "Takifugu porphyreus",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "검복(Takifugu porphyreus) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "검복(Takifugu porphyreus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000014",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "고등어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000417",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "NIFS_TRANSITIVE",
+        "type": "scientific_exact",
+        "value": "고등어 -> BM-SPECIES-000417 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000015",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "곰치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000935",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "곰치 -> BM-SPECIES-000935 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000016",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "광어",
+    "canonicalName": "넙치",
+    "internalId": "BM-SPECIES-000465",
+    "scientificName": "Paralichthys olivaceus",
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "연어(Oncorhynchus keta) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "숭어(Mugil cephalus) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "농어(Lateolabrax japonicus) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "병어(Pampus punctatissimus) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "방어(Seriola quinqueradiata) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "연어(Oncorhynchus keta)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "숭어(Mugil cephalus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "농어(Lateolabrax japonicus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "병어(Pampus punctatissimus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "방어(Seriola quinqueradiata)"
+      },
+      {
+        "source": "국립수산과학원(NIFS)",
+        "type": "batch3_official_evidence",
+        "value": "보도자료 NEWS_SEQ=1765: \"국민 생선회 광어(넙치) 영양성분 알고 드세요\" — 제목에서 '광어(넙치)' 병기"
+      },
+      {
+        "source": "NIFS",
+        "type": "batch3_official_evidence",
+        "value": "contents/actionContentsCons0088.do: 표준 항목명 '넙치', 학명 Paralichthys olivaceus"
+      },
+      {
+        "source": "MBRIS",
+        "type": "batch3_official_evidence",
+        "value": "tsearchDetail.do?spcTxnId=270000012842: 국명 '넙치', 학명 Paralichthys olivaceus"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates,batch3",
+    "aliasId": "ALIAS-000017",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T15:39:27.269161+00:00"
+  },
+  {
+    "sourceName": "귀상어류",
+    "canonicalName": "귀상어",
+    "internalId": "BM-SPECIES-000662",
+    "scientificName": "Sphyrna zygaena",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "귀상어(Sphyrna zygaena) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "귀상어(Sphyrna zygaena)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000018",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "긴꼬리벵에돔류",
+    "canonicalName": "긴꼬리벵에돔",
+    "internalId": "BM-SPECIES-000280",
+    "scientificName": "Girella leonina",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "긴꼬리벵에돔(Girella leonina) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "긴꼬리벵에돔(Girella leonina)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000019",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "긴꼬리상어",
+    "canonicalName": "긴꼬리장어",
+    "internalId": "BM-SPECIES-000906",
+    "scientificName": "Dysomma anguillare",
+    "aliasType": "common_name",
+    "status": "rejected",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "긴꼬리장어(Dysomma anguillare) sim=0.8 note=편집거리 1"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "organismGroup 둘 다 'fish'로 표기됨(단, 이는 어류 대분류일 뿐 상어/뱀장어 구분 아님)"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "원본 설명이 '상어류'라고 명시하는데 후보 'Anguilliformes'(뱀장어목)는 상어(연골어류)가 아니다"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "relatedFish가 전부 상어류(청새리상어, 까치상어)인데 후보는 심해뱀장어과"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "이름이 '긴꼬리상어'↔'긴꼬리장어'로 '상어'/'장어' 한 글자 차이(편집거리 1)에서만 나온 매칭 — 형태학적 근거 없음"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "긴꼬리장어(Dysomma anguillare)"
+      }
+    ],
+    "reviewBatch": "batch1,current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000020",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "까치복류",
+    "canonicalName": "까치복",
+    "internalId": "BM-SPECIES-000163",
+    "scientificName": "Takifugu xanthopterus",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "까치복(Takifugu xanthopterus) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "까치복(Takifugu xanthopterus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000021",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "꼬치고기",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000459",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "꼬치고기 -> BM-SPECIES-000459 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000022",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "꼴뚜기",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-002769",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "꼬마꼴뚜기(Loliolus sumatrensis) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "반원니꼴뚜기(Loliolus japonica) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "참꼴뚜기(Loliolus beka) sim=0.75 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "흰꼴뚜기(Sepioteuthis lessoniana) sim=0.75 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "한치꼴뚜기(Uroteuthis chinensis) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "창꼴뚜기(Uroteuthis edulis) sim=0.75 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "화살꼴뚜기(Heterololigo bleekeri) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "꼬마꼴뚜기(Loliolus sumatrensis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "반원니꼴뚜기(Loliolus japonica)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "참꼴뚜기(Loliolus beka)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "흰꼴뚜기(Sepioteuthis lessoniana)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "한치꼴뚜기(Uroteuthis chinensis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "창꼴뚜기(Uroteuthis edulis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "화살꼴뚜기(Heterololigo bleekeri)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000023",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "꼼치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000057",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "꼼치 -> BM-SPECIES-000057 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000024",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "꽁치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000881",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "꽁치 -> BM-SPECIES-000881 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000025",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "꽃게류",
+    "canonicalName": "꽃게",
+    "internalId": "BM-SPECIES-005640",
+    "scientificName": "Portunus trituberculatus",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "nifs_dialect_reference",
+        "value": "꽃게(Portunus trituberculatus) sim=0.9 note=NIFS '꽃게' 방언 목록에 '꽃게'로 등재됨"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "꽃게(Portunus trituberculatus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000026",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "꽃새우류",
+    "canonicalName": "꽃새우",
+    "internalId": "BM-SPECIES-005994",
+    "scientificName": "Trachysalambria curvirostris",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "꽃새우(Trachysalambria curvirostris) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "꽃새우(Trachysalambria curvirostris)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000027",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "넙치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000465",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "넙치 -> BM-SPECIES-000465 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000028",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "노래미",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001164",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "노래미 -> BM-SPECIES-001164 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000029",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "노무라입깃해파리",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "no_candidates_found",
+        "value": "MBRIS 후보 탐색 결과 0건"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "no_candidates_found",
+        "value": "reviewBucket=no_candidates — MBRIS 후보 탐색 결과 0건"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000030",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "놀래기",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000594",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "놀래기 -> BM-SPECIES-000594 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000031",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "농어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000188",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "농어 -> BM-SPECIES-000188 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000032",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "눈다랑어류",
+    "canonicalName": "눈다랑어",
+    "internalId": "BM-SPECIES-000421",
+    "scientificName": "Thunnus obesus",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "눈다랑어(Thunnus obesus) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "눈다랑어(Thunnus obesus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000033",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "능성어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001215",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "능성어 -> BM-SPECIES-001215 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000034",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "다금바리",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001227",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "다금바리 -> BM-SPECIES-001227 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000035",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "달고기",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000095",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "달고기 -> BM-SPECIES-000095 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000036",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "대구",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001056",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "NIFS_TRANSITIVE",
+        "type": "scientific_exact",
+        "value": "대구 -> BM-SPECIES-001056 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000037",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "대삼치",
+    "canonicalName": "삼치",
+    "internalId": "BM-SPECIES-000408",
+    "scientificName": "Scomberomorus niphonius",
+    "aliasType": "market_name",
+    "status": "manual_review",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "삼치(Scomberomorus niphonius) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "relatedFish 첫 항목이 '삼치' 자신"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "분류군(fish) 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "학명 Scombridae과 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "원본 설명이 '삼치보다 큰 크기'라고 명시적으로 비교 — 동일종이면 부자연스러운 서술"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "크기 비교 표현이 성장단계 차이인지 별종인지 로컬 데이터로 판별 불가"
+      },
+      {
+        "source": "국립수산과학원(NIFS)",
+        "type": "official_evidence",
+        "value": "주요생물 생태와 생활사 — 삼치: 삼치는 학명 Scomberomorus niphonius 단일종으로만 표준화돼 있고 '대삼치'라는 별도 어종 언급이 없음."
+      },
+      {
+        "source": "국립해양생물자원관(MBRIS)",
+        "type": "official_evidence",
+        "value": "site 검색(mbris.kr): '대삼치'로 직접 등재된 종 없음. 삼치과 다른 종(줄삼치 등)만 확인됨."
+      },
+      {
+        "source": "BATCH2_OFFICIAL_RESEARCH",
+        "type": "conflict",
+        "value": "공식 출처 어디에도 '대삼치'가 별도 학명을 가진 등재종으로 확인되지 않음"
+      },
+      {
+        "source": "BATCH2_OFFICIAL_RESEARCH",
+        "type": "conflict",
+        "value": "원본 설명 '삼치보다 큰 크기'가 크기 등급 표현과 부합 — 동일종 단순 별칭으로 보기에는 정체성 진술이 아니라 비교 진술이라는 점에서 성장단계/상품등급 해석에 무게"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "삼치(Scomberomorus niphonius)"
+      }
+    ],
+    "reviewBatch": "batch1,batch2,current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000038",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "대하류",
+    "canonicalName": "대하",
+    "internalId": "BM-SPECIES-005997",
+    "scientificName": "Penaeus chinensis",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "대하(Penaeus chinensis) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "대하(Penaeus chinensis)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000039",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "덕대",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000425",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "덕대 -> BM-SPECIES-000425 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000040",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "도다리",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000548",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "도다리 -> BM-SPECIES-000548 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000041",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "독가시치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000800",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "독가시치 -> BM-SPECIES-000800 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000042",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "돌가시",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "no_candidates_found",
+        "value": "MBRIS 후보 탐색 결과 0건"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "no_candidates_found",
+        "value": "reviewBucket=no_candidates — MBRIS 후보 탐색 결과 0건"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000043",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "돌가자미",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000554",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "돌가자미 -> BM-SPECIES-000554 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000044",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "돌돔",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000278",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "돌돔 -> BM-SPECIES-000278 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000045",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "돌돔류",
+    "canonicalName": "돌돔",
+    "internalId": "BM-SPECIES-000278",
+    "scientificName": "Oplegnathus fasciatus",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "돌돔(Oplegnathus fasciatus) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "돌돔(Oplegnathus fasciatus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000046",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "돛새치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000473",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "돛새치 -> BM-SPECIES-000473 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000047",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "돛새치류",
+    "canonicalName": "돛새치",
+    "internalId": "BM-SPECIES-000473",
+    "scientificName": "Istiophorus platypterus",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "돛새치(Istiophorus platypterus) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "돛새치(Istiophorus platypterus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000048",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "말쥐치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000129",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "NIFS_TRANSITIVE",
+        "type": "scientific_exact",
+        "value": "말쥐치 -> BM-SPECIES-000129 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000049",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "망둥어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000369",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "말뚝망둥어(Periophthalmus modestus) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "큰볏말뚝망둥어(Periophthalmus magnuspinnatus) sim=0.429 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "말뚝망둥어(Periophthalmus modestus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "큰볏말뚝망둥어(Periophthalmus magnuspinnatus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000050",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "망상어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000223",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "망상어 -> BM-SPECIES-000223 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000051",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "먹갈치류",
+    "canonicalName": "먹갈치",
+    "internalId": "BM-SPECIES-001188",
+    "scientificName": "Lycodes nakamurae",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "먹갈치(Lycodes nakamurae) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "먹갈치(Lycodes nakamurae)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000052",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "먹장어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000710",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "먹장어 -> BM-SPECIES-000710 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000053",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "멸치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001029",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "멸치 -> BM-SPECIES-001029 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000054",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "명태",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001057",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "NIFS_TRANSITIVE",
+        "type": "synonym",
+        "value": "명태 -> BM-SPECIES-001057 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000055",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "무늬벵에돔",
+    "canonicalName": "벵에돔",
+    "internalId": "BM-SPECIES-000279",
+    "scientificName": "Girella punctata",
+    "aliasType": "common_name",
+    "status": "rejected",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "벵에돔(Girella punctata) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "분류군(fish) 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "relatedFish 첫 항목이 '벵에돔'"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "원본 설명이 '벵에돔과 비슷하지만 무늬와 수심층이 다른 어종입니다'라고 **명시적으로 다른 종**이라고 서술함"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "벵에돔(Girella punctata)"
+      }
+    ],
+    "reviewBatch": "batch1,current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000056",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "무늬오징어류",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "no_candidates_found",
+        "value": "MBRIS 후보 탐색 결과 0건"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "no_candidates_found",
+        "value": "reviewBucket=no_candidates — MBRIS 후보 탐색 결과 0건"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000057",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "문어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-003111",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "문어 -> BM-SPECIES-003111 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000058",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "물메기",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000060",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "물메기 -> BM-SPECIES-000060 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000059",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "미역치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001157",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "미역치 -> BM-SPECIES-001157 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000060",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "민어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000840",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "민어 -> BM-SPECIES-000840 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000061",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "민초리",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "no_candidates_found",
+        "value": "MBRIS 후보 탐색 결과 0건"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "no_candidates_found",
+        "value": "reviewBucket=no_candidates — MBRIS 후보 탐색 결과 0건"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000062",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "방어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000501",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "방어 -> BM-SPECIES-000501 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000063",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "백조기류",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000833",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "흑조기(Atrobucca nibe) sim=0.667 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "수조기(Nibea albiflora) sim=0.667 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "참조기(Larimichthys polyactis) sim=0.667 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "백조어(Chanodichthys erythropterus) sim=0.667 note=편집거리 1"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "흑조기(Atrobucca nibe)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "수조기(Nibea albiflora)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "참조기(Larimichthys polyactis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "백조어(Chanodichthys erythropterus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000064",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "벚꽃망둑",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "no_candidates_found",
+        "value": "MBRIS 후보 탐색 결과 0건"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "no_candidates_found",
+        "value": "reviewBucket=no_candidates — MBRIS 후보 탐색 결과 0건"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000065",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "벤자리류",
+    "canonicalName": "벤자리",
+    "internalId": "BM-SPECIES-000792",
+    "scientificName": "Parapristipoma trilineatum",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "벤자리(Parapristipoma trilineatum) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "벤자리(Parapristipoma trilineatum)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000066",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "벵에돔",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000279",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "벵에돔 -> BM-SPECIES-000279 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000067",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "병어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000426",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "병어 -> BM-SPECIES-000426 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000068",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "보구치류",
+    "canonicalName": "보구치",
+    "internalId": "BM-SPECIES-000839",
+    "scientificName": "Pennahia argentata",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "보구치(Pennahia argentata) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "보구치(Pennahia argentata)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000069",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "보름달물해파리",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "no_candidates_found",
+        "value": "MBRIS 후보 탐색 결과 0건"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "no_candidates_found",
+        "value": "reviewBucket=no_candidates — MBRIS 후보 탐색 결과 0건"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000070",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "보리멸",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000818",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "보리멸 -> BM-SPECIES-000818 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000071",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "복섬",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "no_candidates_found",
+        "value": "MBRIS 후보 탐색 결과 0건"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "no_candidates_found",
+        "value": "reviewBucket=no_candidates — MBRIS 후보 탐색 결과 0건"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000072",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "복어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000090",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "연어(Oncorhynchus keta) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "숭어(Mugil cephalus) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "농어(Lateolabrax japonicus) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "병어(Pampus punctatissimus) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "방어(Seriola quinqueradiata) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "연어(Oncorhynchus keta)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "숭어(Mugil cephalus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "농어(Lateolabrax japonicus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "병어(Pampus punctatissimus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "방어(Seriola quinqueradiata)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000073",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "볼락",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000002",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "볼락 -> BM-SPECIES-000002 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000074",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "부세류",
+    "canonicalName": "부세",
+    "internalId": "BM-SPECIES-000842",
+    "scientificName": "Larimichthys crocea",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "부세(Larimichthys crocea) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "부세(Larimichthys crocea)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000075",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "부시리",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000500",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "부시리 -> BM-SPECIES-000500 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000076",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "불가사리",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-002509",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "불가사리퉁퉁이고둥(Parvioris fulvescens) sim=0.444 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "가시불가사리바늘고둥(Parvioris astropectenicola) sim=0.4 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "빨강불가사리속살이고둥(Stilifer akahitode) sim=0.364 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "불가사리기생고둥(Thyca crystallina) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "거미불가사리조개(Nipponomysella oblongata) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "불가사리퉁퉁이고둥(Parvioris fulvescens)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "가시불가사리바늘고둥(Parvioris astropectenicola)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "빨강불가사리속살이고둥(Stilifer akahitode)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "불가사리기생고둥(Thyca crystallina)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "거미불가사리조개(Nipponomysella oblongata)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000077",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "붕장어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000908",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "붕장어 -> BM-SPECIES-000908 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000078",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "살오징어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-003117",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "NIFS_TRANSITIVE",
+        "type": "scientific_exact",
+        "value": "살오징어 -> BM-SPECIES-003117 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000079",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "삼세기류",
+    "canonicalName": "삼세기",
+    "internalId": "BM-SPECIES-000042",
+    "scientificName": "Hemitripterus villosus",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "삼세기(Hemitripterus villosus) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "삼세기(Hemitripterus villosus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000080",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "삼치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000408",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "NIFS_TRANSITIVE",
+        "type": "scientific_exact",
+        "value": "삼치 -> BM-SPECIES-000408 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000081",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "서대류",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000451",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "그물동서대(Aseraggodes kaianus) sim=0.4 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "동서대(Aseraggodes kobensis) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "얼룩서대(Brachirus annularis) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "궁제기서대(Zebrias zebrinus) sim=0.4 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "각시서대(Zebrias japonicus) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "납서대(Heteromycteris japonicus) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "뿔서대(Aesopia cornuta) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "물서대(Cynoglossus gracilis) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "용서대(Cynoglossus abbreviatus) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "칠서대(Cynoglossus interruptus) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "그물동서대(Aseraggodes kaianus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "동서대(Aseraggodes kobensis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "얼룩서대(Brachirus annularis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "궁제기서대(Zebrias zebrinus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "각시서대(Zebrias japonicus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "납서대(Heteromycteris japonicus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "뿔서대(Aesopia cornuta)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "물서대(Cynoglossus gracilis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "용서대(Cynoglossus abbreviatus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "칠서대(Cynoglossus interruptus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000082",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "성게",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-002507",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "보라성게살이고둥(Vitreolina langfordi) sim=0.25 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "성게살이꼬부리고둥(Vitreobalcis temnopleuricola) sim=0.222 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "꼬마투명성게살이고둥(Hypermastus peronellicola) sim=0.2 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "방패연잎성게살이고둥(Clypeastericola clypeastericola) sim=0.2 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "보라성게살이고둥(Vitreolina langfordi)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "성게살이꼬부리고둥(Vitreobalcis temnopleuricola)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "꼬마투명성게살이고둥(Hypermastus peronellicola)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "방패연잎성게살이고둥(Clypeastericola clypeastericola)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000083",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "성게가시",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-002507",
+    "scientificName": null,
+    "aliasType": "source_issue",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "보라성게살이고둥(Vitreolina langfordi) sim=0.25 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "성게살이꼬부리고둥(Vitreobalcis temnopleuricola) sim=0.222 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "꼬마투명성게살이고둥(Hypermastus peronellicola) sim=0.2 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "방패연잎성게살이고둥(Clypeastericola clypeastericola) sim=0.2 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "보라성게살이고둥(Vitreolina langfordi)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "성게살이꼬부리고둥(Vitreobalcis temnopleuricola)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "꼬마투명성게살이고둥(Hypermastus peronellicola)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "방패연잎성게살이고둥(Clypeastericola clypeastericola)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000084",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "성대",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001135",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "성대 -> BM-SPECIES-001135 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000085",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "숭어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000097",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "숭어 -> BM-SPECIES-000097 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000086",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "실갈치류",
+    "canonicalName": "갈치",
+    "internalId": "BM-SPECIES-000444",
+    "scientificName": "Trichiurus japonicus",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "갈치(Trichiurus japonicus) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "갈치(Trichiurus japonicus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000087",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "쏠종개",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001012",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "쏠종개 -> BM-SPECIES-001012 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000088",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "쏨뱅이",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000019",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "쏨뱅이 -> BM-SPECIES-000019 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000089",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "쏨뱅이 독가시",
+    "canonicalName": "쏨뱅이",
+    "internalId": "BM-SPECIES-000019",
+    "scientificName": "Sebastiscus marmoratus",
+    "aliasType": "source_issue",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "쏨뱅이(Sebastiscus marmoratus) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "쏨뱅이(Sebastiscus marmoratus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000090",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "쑤기미",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001153",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "쑤기미 -> BM-SPECIES-001153 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000091",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "아귀",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000080",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "아귀 -> BM-SPECIES-000080 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000092",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "양태",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000065",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "양태 -> BM-SPECIES-000065 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000093",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "열기",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000317",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "발기(Perccottus glenii) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "메기(Silurus asotus) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "발기(Perccottus glenii)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "메기(Silurus asotus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000094",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "오징어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-002768",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "꼬마오징어(Idiosepius paradoxus) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "좀귀오징어(Lusepiola birostrata) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "귀오징어(Euprymna morsei) sim=0.75 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "주머니귀오징어(Rossia pacifica) sim=0.429 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "투구귀오징어(Sepiolina nipponensis) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "바늘갑오징어(Decorisepia madokai) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "꽃갑오징어(Ascarosepion tullbergi) sim=0.6 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "애기갑오징어(Doratosepion kobiense) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "넓은붉갑오징어(Doratosepion tokioense) sim=0.429 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "거미다리갑오징어(Doratosepion tenuipes) sim=0.375 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "nifs_dialect_reference",
+        "value": "살오징어(Todarodes pacificus) sim=0.9 note=NIFS '살오징어' 방언 목록에 '오징어'로 등재됨"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "꼬마오징어(Idiosepius paradoxus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "좀귀오징어(Lusepiola birostrata)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "귀오징어(Euprymna morsei)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "주머니귀오징어(Rossia pacifica)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "투구귀오징어(Sepiolina nipponensis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "바늘갑오징어(Decorisepia madokai)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "꽃갑오징어(Ascarosepion tullbergi)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "애기갑오징어(Doratosepion kobiense)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "넓은붉갑오징어(Doratosepion tokioense)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "거미다리갑오징어(Doratosepion tenuipes)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "살오징어(Todarodes pacificus)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000095",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "옥돔",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000825",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "NIFS_TRANSITIVE",
+        "type": "scientific_exact",
+        "value": "옥돔 -> BM-SPECIES-000825 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000096",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "왕우럭조개류",
+    "canonicalName": "왕우럭조개",
+    "internalId": "BM-SPECIES-003294",
+    "scientificName": "Tresus keenae",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "왕우럭조개(Tresus keenae) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "왕우럭조개(Tresus keenae)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000097",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "우럭",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-002852",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "우럭 -> BM-SPECIES-002852 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000098",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "은갈치",
+    "canonicalName": "갈치",
+    "internalId": "BM-SPECIES-000444",
+    "scientificName": "Trichiurus japonicus",
+    "aliasType": "dialect",
+    "status": "approved",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "nifs_dialect_reference",
+        "value": "갈치(Trichiurus japonicus) sim=0.9 note=NIFS '갈치' 방언 목록에 '은갈치(제주)'로 등재됨"
+      },
+      {
+        "source": "NIFS_DIALECT",
+        "type": "approval",
+        "value": "NIFS '갈치' 방언 목록에 '은갈치(제주)'로 등재됨"
+      }
+    ],
+    "reviewBatch": "approval_round,phase1_candidates",
+    "aliasId": "ALIAS-000099",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "은대구류",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001056",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "대구(Gadus macrocephalus) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "큰은대구(Erilepis zonifer) sim=0.75 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "대구(Gadus macrocephalus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "큰은대구(Erilepis zonifer)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000100",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "임연수",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001161",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "임연수어(Pleurogrammus azonus) sim=0.75 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "단기임연수어(Pleurogrammus monopterygius) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "임연수어(Pleurogrammus azonus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "단기임연수어(Pleurogrammus monopterygius)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000101",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "임연수어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001161",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "임연수어 -> BM-SPECIES-001161 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000102",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "입방해파리",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "no_candidates_found",
+        "value": "MBRIS 후보 탐색 결과 0건"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "no_candidates_found",
+        "value": "reviewBucket=no_candidates — MBRIS 후보 탐색 결과 0건"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000103",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "자리돔",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000226",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "자리돔 -> BM-SPECIES-000226 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000104",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "자바리",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001204",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "자바리 -> BM-SPECIES-001204 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000105",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "장대",
+    "canonicalName": "양태",
+    "internalId": "BM-SPECIES-000065",
+    "scientificName": "Platycephalus indicus",
+    "aliasType": "dialect",
+    "status": "approved",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "덕대(Pampus argenteus) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "박대(Cynoglossus semilaevis) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "성대(Chelidonichthys spinosus) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "덕대(Pampus argenteus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "박대(Cynoglossus semilaevis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "성대(Chelidonichthys spinosus)"
+      },
+      {
+        "source": "국립생물자원관(NIBR)",
+        "type": "batch3_official_evidence",
+        "value": "species.nibr.go.kr ktsn=120000058156 (검색 스니펫): \"…서해안과 남해안… 장대, 장태, 낭태라고도 부른다\" — 양태(Platycephalus indicus) 공식 상세페이지에 '장대'가 지방명으로 명시"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates,batch3",
+    "aliasId": "ALIAS-000106",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T15:39:27.269161+00:00"
+  },
+  {
+    "sourceName": "장어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000445",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "분장어(Eupleurogrammus muticus) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "먹장어(Eptatretus burgeri) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "묵꾀장어(Eptatretus walkeri) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "흰줄왜먹장어(Eptatretus wandoensis) sim=0.333 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "칠성장어(Lethenteron camtschaticum) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "걸장어(Macrognathus aculeatus) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "갯장어(Muraenesox cinereus) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "갈창갯장어(Muraenesox bagio) sim=0.4 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "물붕장어(Oxyconger leptognathus) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "오리주둥이장어(Nettenchelys gephyra) sim=0.286 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "분장어(Eupleurogrammus muticus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "먹장어(Eptatretus burgeri)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "묵꾀장어(Eptatretus walkeri)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "흰줄왜먹장어(Eptatretus wandoensis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "칠성장어(Lethenteron camtschaticum)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "걸장어(Macrognathus aculeatus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "갯장어(Muraenesox cinereus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "갈창갯장어(Muraenesox bagio)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "물붕장어(Oxyconger leptognathus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "오리주둥이장어(Nettenchelys gephyra)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000107",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "전갱이",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000488",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "NIFS_TRANSITIVE",
+        "type": "scientific_exact",
+        "value": "전갱이 -> BM-SPECIES-000488 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000108",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "전기가오리류",
+    "canonicalName": "전기가오리",
+    "internalId": "BM-SPECIES-000684",
+    "scientificName": "Narke japonica",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "전기가오리(Narke japonica) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "전기가오리(Narke japonica)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000109",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "전복",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-002416",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "둥근전복(Haliotis discus) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "말전복(Haliotis gigantea) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "왕전복(Haliotis madaka) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "북방전복(Haliotis discus hannai) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "둥근전복(Haliotis discus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "말전복(Haliotis gigantea)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "왕전복(Haliotis madaka)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "북방전복(Haliotis discus hannai)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000110",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "전복치류",
+    "canonicalName": "개복치",
+    "internalId": "BM-SPECIES-000114",
+    "scientificName": "Mola mola",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "개복치(Mola mola) sim=0.667 note=편집거리 1"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "개복치(Mola mola)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000111",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "전어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001037",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "전어 -> BM-SPECIES-001037 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000112",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "점벵에돔",
+    "canonicalName": "벵에돔",
+    "internalId": "BM-SPECIES-000279",
+    "scientificName": "Girella punctata",
+    "aliasType": "common_name",
+    "status": "manual_review",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "벵에돔(Girella punctata) sim=0.75 note=부분 문자열 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "설명이 '벵에돔류'로 벵에돔과의 소속을 명시"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "relatedFish 첫 항목이 '벵에돔' 자신"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "분류군(fish) 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "설명이 '벵에돔류'(그룹 소속 표현)일 뿐 '벵에돔과 동일하다'는 명시적 진술이 아님"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "점(반점)이라는 구분 형질이 별도로 언급돼 있어 변종/근연종일 가능성을 배제할 수 없음"
+      },
+      {
+        "source": "FishBase",
+        "type": "official_evidence",
+        "value": "Girella punctata Common Names List: 한국어 통용명으로 '벵에돔', '긴꼬리벵에돔'(로마자 Peng-e-dom)만 등재됨. '점벵에돔'은 없음."
+      },
+      {
+        "source": "국립수산과학원(NIFS)",
+        "type": "official_evidence",
+        "value": "site 검색(nifs.go.kr): '점벵에돔' 명칭이 등장하는 페이지를 찾지 못함(확인 안 됨)."
+      },
+      {
+        "source": "BATCH2_OFFICIAL_RESEARCH",
+        "type": "conflict",
+        "value": "6개 공식 출처 어디에도 '점벵에돔'이라는 명칭 자체가 등재돼 있지 않음"
+      },
+      {
+        "source": "BATCH2_OFFICIAL_RESEARCH",
+        "type": "conflict",
+        "value": "벵에돔과 동일종인지 반점을 가진 근연/변종인지 판별할 공식 근거 없음"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "벵에돔(Girella punctata)"
+      }
+    ],
+    "reviewBatch": "batch1,batch2,current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000113",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "정어리",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001040",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "정어리 -> BM-SPECIES-001040 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000114",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "조기",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000833",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "흑조기(Atrobucca nibe) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "수조기(Nibea albiflora) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "nifs_dialect_reference",
+        "value": "참조기(Larimichthys polyactis) sim=0.9 note=NIFS '참조기' 방언 목록에 '조기'로 등재됨"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "흑조기(Atrobucca nibe)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "수조기(Nibea albiflora)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "참조기(Larimichthys polyactis)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000115",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "조기류",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000833",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "흑조기(Atrobucca nibe) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "수조기(Nibea albiflora) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "nifs_dialect_reference",
+        "value": "참조기(Larimichthys polyactis) sim=0.9 note=NIFS '참조기' 방언 목록에 '조기'로 등재됨"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "흑조기(Atrobucca nibe)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "수조기(Nibea albiflora)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "참조기(Larimichthys polyactis)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000116",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "좁쌀문어",
+    "canonicalName": "문어",
+    "internalId": "BM-SPECIES-003111",
+    "scientificName": "Enteroctopus dofleini",
+    "aliasType": "common_name",
+    "status": "rejected",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "문어(Enteroctopus dofleini) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "분류군(cephalopod) 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "relatedFish 첫 항목이 '문어'"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "원본 설명이 '작은 몸의 문어류'라고 명시하는데, 후보 Enteroctopus dofleini는 세계 최대급 대형 문어종이다 — 크기 특징이 정반대로 모순됨"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "문어(Enteroctopus dofleini)"
+      }
+    ],
+    "reviewBatch": "batch1,current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000117",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "주꾸미류",
+    "canonicalName": "주꾸미",
+    "internalId": "BM-SPECIES-003107",
+    "scientificName": "Amphioctopus fangsiao",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "주꾸미(Amphioctopus fangsiao) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "주꾸미(Amphioctopus fangsiao)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000118",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "준치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001030",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "준치 -> BM-SPECIES-001030 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000119",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "줄가자미",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000541",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "줄가자미 -> BM-SPECIES-000541 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000120",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "줄돔",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000193",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "황줄돔(Histiopterus typus) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "흑줄돔(Abudefduf bengalensis) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "검은청줄돔(Chaetodontoplus melanosoma) sim=0.4 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "청줄돔(Chaetodontoplus septentrionalis) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "녹줄돔(Evynnis cardinalis) sim=0.667 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "노랑줄돔(Pentapodus nagasakiensis) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "황줄돔(Histiopterus typus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "흑줄돔(Abudefduf bengalensis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "검은청줄돔(Chaetodontoplus melanosoma)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "청줄돔(Chaetodontoplus septentrionalis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "녹줄돔(Evynnis cardinalis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "노랑줄돔(Pentapodus nagasakiensis)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000121",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "줄삼치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000415",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "줄삼치 -> BM-SPECIES-000415 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000122",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "쥐노래미",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001165",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "쥐노래미 -> BM-SPECIES-001165 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000123",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "쥐치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000122",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "쥐치 -> BM-SPECIES-000122 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000124",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "쥐치포용 쥐치",
+    "canonicalName": "쥐치",
+    "internalId": "BM-SPECIES-000122",
+    "scientificName": "Stephanolepis cirrhifer",
+    "aliasType": "source_issue",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "쥐치(Stephanolepis cirrhifer) sim=0.286 note=부분 문자열 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "relatedFish 첫 항목이 '쥐치' 자신"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "분류군(fish) 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "sourceName 자체에 공백과 '포용'이라는 이례적 단어가 섞여 있어 이름이 온전하지 않다"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "이 항목은 '주의가 필요한 어종' 카테고리가 아니라서 기존 이름오염 탐지 로직이 잡아내지 못하고 이 배치에 잘못 편입됐다"
+      },
+      {
+        "source": "국립국어원 표준국어대사전(stdict.korean.go.kr)",
+        "type": "official_evidence",
+        "value": "'포용' 표제어 검색: '포용'은 오직 '包容'(너그럽게 감싸 받아들임)으로만 등재됨. '포(脯)+용(用)' 조합의 한자어는 어떤 사전에도 없음 — '쥐치포용'은 문법적으로 성립하지 않는 조어."
+      },
+      {
+        "source": "국립국어원 표준국어대사전 / 한국민족문화대백과사전",
+        "type": "official_evidence",
+        "value": "'쥐치포'·'쥐포' 관련어: '쥐치포'는 표준국어대사전 미등재이나 한국민족문화대백과사전 등에서 '쥐치를 포 떠서 조미·건조한 식품'을 가리키는 정착된 실생활 용어로 확인됨."
+      },
+      {
+        "source": "국립해양생물자원관(MBRIS)/국립수산과학원(NIFS)",
+        "type": "official_evidence",
+        "value": "site 검색: '쥐치포용' 또는 '쥐치포용 쥐치'가 어종명·상품명으로 등재된 사례 없음."
+      },
+      {
+        "source": "BATCH2_OFFICIAL_RESEARCH",
+        "type": "conflict",
+        "value": "sourceName 자체가 국어 문법상 성립하지 않는 조어"
+      },
+      {
+        "source": "BATCH2_OFFICIAL_RESEARCH",
+        "type": "conflict",
+        "value": "원본 설명('건어물과 식용으로 친숙한 쥐치류입니다')이 '쥐치포 용도'라는 설명 문구이지 종명이 아님을 뒷받침"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "쥐치(Stephanolepis cirrhifer)"
+      }
+    ],
+    "reviewBatch": "batch1,batch2,current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000125",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "쭈꾸미",
+    "canonicalName": "주꾸미",
+    "internalId": "BM-SPECIES-003107",
+    "scientificName": null,
+    "aliasType": "spelling_variant",
+    "status": "approved",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "주꾸미(Amphioctopus fangsiao) sim=0.667 note=편집거리 1"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "편집거리 1(ㅈ/ㅉ 경음 표기 차이) — 형태상 강한 철자 변형 패턴"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "분류군(cephalopod) 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "relatedFish(갑오징어/문어/오징어)에 모순 없음"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "원본 설명('가벼운 장비로 즐기는 가을철 인기 두족류')이 일반적이라 후보 종 특징을 명백히 특정하지 못함 — 근거가 사실상 이름 유사도뿐"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "NIFS 방언 목록(주꾸미: 쭈게미·쭈깨미·쭉지미 등)에 '쭈꾸미' 표기 자체는 없음"
+      },
+      {
+        "source": "국립국어원 우리말샘(opendict.korean.go.kr)",
+        "type": "official_evidence",
+        "value": "'쭈꾸미' 표제어: 품사 명사, 분류 방언(전남), 뜻풀이 \"'주꾸미'의 방언(전남)\". 관련어 '쭈꾸미-집'의 규범 표기는 '주꾸밋집'이라고 명시."
+      },
+      {
+        "source": "국립국어원 표준국어대사전(stdict.korean.go.kr)",
+        "type": "official_evidence",
+        "value": "'주꾸미' 표제어: '주꾸미'만 표준어 표제어로 등재(\"문어과의 연체동물...\"). '쭈꾸미'는 0건."
+      },
+      {
+        "source": "BATCH2_OFFICIAL_RESEARCH",
+        "type": "conflict",
+        "value": "학술 어종 DB(MBRIS/NIFS/species.nibr.go.kr/WoRMS/FishBase)에서 '쭈꾸미'를 이명으로 직접 등재한 근거는 확인하지 못함 — 근거는 국어 규범기관 소스뿐"
+      },
+      {
+        "source": "KOREAN_LANGUAGE_AUTHORITY",
+        "type": "approval",
+        "value": "국립국어원 우리말샘(opendict.korean.go.kr): 품사 명사, 분류 방언(전남), 뜻풀이 \"'주꾸미'의 방언(전남)\". 관련어 '쭈꾸미-집'의 규범 표기는 '주꾸밋집'이라고 명시. / 국립국어원 표준국어대사전(stdict.korean.go.kr): '주꾸미'만 표준어 표제어로 등재(\"문어과의 연체동물...\"). '쭈꾸미'는 0건."
+      }
+    ],
+    "reviewBatch": "approval_round,batch1,batch2,phase1_candidates",
+    "aliasId": "ALIAS-000126",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "쭈꾸미류",
+    "canonicalName": "주꾸미",
+    "internalId": "BM-SPECIES-003107",
+    "scientificName": "Amphioctopus fangsiao",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "주꾸미(Amphioctopus fangsiao) sim=0.667 note=편집거리 1"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "주꾸미(Amphioctopus fangsiao)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000127",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "참가자미",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000544",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "참가자미 -> BM-SPECIES-000544 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000128",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "참굴",
+    "canonicalName": "굴",
+    "internalId": "BM-SPECIES-002965",
+    "scientificName": "Magallana gigas",
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "참돔(Pagrus major) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "토굴(Ostrea denselamellosa) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "굴(Magallana gigas) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "갓굴(Magallana ariakensis) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "참게(Eriocheir sinensis) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "참돔(Pagrus major)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "토굴(Ostrea denselamellosa)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "굴(Magallana gigas)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "갓굴(Magallana ariakensis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "참게(Eriocheir sinensis)"
+      },
+      {
+        "source": "MBRIS",
+        "type": "batch3_official_evidence",
+        "value": "tsearchDetail.do?spcTxnId=270000010173: 등재된 국명은 '굴'(참굴 아님), 학명 Magallana gigas"
+      },
+      {
+        "source": "국립생물자원관(NIBR)",
+        "type": "batch3_official_evidence",
+        "value": "species.nibr.go.kr ktsn=120000043692: 페이지 제목 '굴(긴굴, 참굴)' — 참굴을 굴의 이명/통칭으로 병기"
+      },
+      {
+        "source": "NIFS",
+        "type": "batch3_official_evidence",
+        "value": "공공누리 자료 '개체굴(참굴) 양식기술': '참굴'을 관용명으로 사용(학명 병기 없음)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates,batch3",
+    "aliasId": "ALIAS-000129",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T15:39:27.269161+00:00"
+  },
+  {
+    "sourceName": "참돔",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000755",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "참돔 -> BM-SPECIES-000755 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000130",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "참복",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000150",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "별복(Arothron firmamentum) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "청복(Canthigaster rivulata) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "황복(Takifugu obscurus) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "망복(Takifugu reticularis) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "졸복(Takifugu pardalis) sim=0.5 note=편집거리 1"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "별복(Arothron firmamentum)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "청복(Canthigaster rivulata)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "황복(Takifugu obscurus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "망복(Takifugu reticularis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "졸복(Takifugu pardalis)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000131",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "참소라",
+    "canonicalName": "소라",
+    "internalId": "BM-SPECIES-002324",
+    "scientificName": "Turbo sazae",
+    "aliasType": "dialect",
+    "status": "approved",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "nifs_dialect_reference",
+        "value": "소라(Turbo sazae) sim=0.9 note=NIFS '제주소라' 방언 목록에 '참소라'로 등재됨"
+      },
+      {
+        "source": "NIFS_DIALECT",
+        "type": "approval",
+        "value": "NIFS '제주소라' 방언 목록에 '참소라'로 등재됨"
+      }
+    ],
+    "reviewBatch": "approval_round,phase1_candidates",
+    "aliasId": "ALIAS-000132",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "참치",
+    "canonicalName": "참치방어",
+    "internalId": "BM-SPECIES-000495",
+    "scientificName": "Elagatis bipinnulata",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "참치방어(Elagatis bipinnulata) sim=0.5 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "참치방어(Elagatis bipinnulata)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000133",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "청새치류",
+    "canonicalName": "청새치",
+    "internalId": "BM-SPECIES-000470",
+    "scientificName": "Kajikia audax",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "청새치(Kajikia audax) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "청새치(Kajikia audax)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000134",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "청어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-001022",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "청어 -> BM-SPECIES-001022 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000135",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "파란고리문어",
+    "canonicalName": "문어",
+    "internalId": "BM-SPECIES-003111",
+    "scientificName": "Enteroctopus dofleini",
+    "aliasType": "common_name",
+    "status": "rejected",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "문어(Enteroctopus dofleini) sim=0.333 note=부분 문자열 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "분류군(cephalopod) 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "카테고리('주의가 필요한 어종')가 독성과 일관됨"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "원본 설명이 '작지만 강한 독성'이라고 명시하는데, 후보 Enteroctopus dofleini는 대형종이며 사람에게 위험한 독성으로 알려진 종이 아니다 — 크기·독성 특징 모두 모순"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "안전 관련 정보이므로 오분류 시 실질적 위해 가능성이 있다"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "문어(Enteroctopus dofleini)"
+      }
+    ],
+    "reviewBatch": "batch1,current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000136",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "피조개류",
+    "canonicalName": "피조개",
+    "internalId": "BM-SPECIES-002807",
+    "scientificName": "Anadara broughtonii",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "피조개(Anadara broughtonii) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "피조개(Anadara broughtonii)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000137",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "학공치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000884",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "학공치 -> BM-SPECIES-000884 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000138",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "한치",
+    "canonicalName": "한치꼴뚜기",
+    "internalId": "BM-SPECIES-003095",
+    "scientificName": "Uroteuthis chinensis",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "한치꼴뚜기(Uroteuthis chinensis) sim=0.4 note=부분 문자열 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "'한치'가 후보명 '한치꼴뚜기'의 앞부분과 문자 그대로 일치(포함 관계)"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "분류군(cephalopod) 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "relatedFish(오징어/갑오징어/갈치)에 모순 없음"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "원본 설명('부드러운 식감, 여름철 두족류')이 일반적이라 종을 특정할 만한 구체적 형질 서술이 없음 — 근거가 이름 포함 관계뿐"
+      },
+      {
+        "source": "국립수산물품질관리원(해양수산부 산하, fsis.go.kr)",
+        "type": "official_evidence",
+        "value": "오징어보다 한 수 위 '한치': \"한치는 표준명이 아니다. 한치의 실제 이름은 창꼴뚜기 또는 화살꼴뚜기이다.\" 제주한치=창꼴뚜기(여름 산란), 동해한치=화살꼴뚜기(봄 산란)로 지역별로 다른 종을 가리킨다고 명시."
+      },
+      {
+        "source": "WoRMS",
+        "type": "official_evidence",
+        "value": "Uroteuthis chinensis / Loligo edulis / Loligo bleekeri: Uroteuthis chinensis는 accepted name. Loligo edulis는 Uroteuthis edulis의, Loligo bleekeri는 Heterololigo bleekeri의 unaccepted synonym — '한치'로 통칭되는 종들이 서로 다른 속(屬)에 걸쳐 있음을 뒷받침."
+      },
+      {
+        "source": "BATCH2_OFFICIAL_RESEARCH",
+        "type": "conflict",
+        "value": "해양수산부 산하 공식기관이 '표준명이 아니다'라고 명시적으로 부정"
+      },
+      {
+        "source": "BATCH2_OFFICIAL_RESEARCH",
+        "type": "conflict",
+        "value": "지역에 따라 최소 2개의 서로 다른 학명(창꼴뚜기/화살꼴뚜기)을 가리킴 — 단일 종으로 확정하면 지역에 따라 오분류가 발생함"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "한치꼴뚜기(Uroteuthis chinensis)"
+      }
+    ],
+    "reviewBatch": "batch1,batch2,current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000139",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "한치류",
+    "canonicalName": "한치꼴뚜기",
+    "internalId": "BM-SPECIES-003095",
+    "scientificName": "Uroteuthis chinensis",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "한치꼴뚜기(Uroteuthis chinensis) sim=0.4 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "한치꼴뚜기(Uroteuthis chinensis)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000140",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "해삼",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-005503",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "납작흰해삼속살이게(Pinnixa penultipedalis) sim=0.222 note=부분 문자열 일치"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "흰해삼속살이게(Pinnixa tumida) sim=0.286 note=부분 문자열 일치"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "납작흰해삼속살이게(Pinnixa penultipedalis)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "흰해삼속살이게(Pinnixa tumida)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000141",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "홍가자미",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000553",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "홍가자미 -> BM-SPECIES-000553 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000142",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "홍어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000649",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "홍어 -> BM-SPECIES-000649 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000143",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "홍합",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-003025",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "홍합 -> BM-SPECIES-003025 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000144",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "황새치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000479",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "황새치 -> BM-SPECIES-000479 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000145",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "황새치류",
+    "canonicalName": "황새치",
+    "internalId": "BM-SPECIES-000479",
+    "scientificName": "Xiphias gladius",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "황새치(Xiphias gladius) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "황새치(Xiphias gladius)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000146",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "황어",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000958",
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "approved",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "MBRIS_KOREAN_NAME_MATCH",
+        "type": "korean_candidate",
+        "value": "황어 -> BM-SPECIES-000958 (candidateCount=1)"
+      }
+    ],
+    "reviewBatch": "original_link",
+    "aliasId": "ALIAS-000147",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "황어류",
+    "canonicalName": "황어",
+    "internalId": "BM-SPECIES-000958",
+    "scientificName": "Pseudaspius hakonensis",
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "exact_korean_name",
+        "value": "황어(Pseudaspius hakonensis) sim=1.0 note="
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "황어(Pseudaspius hakonensis)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000148",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "황열기",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "aliasType": "common_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "no_candidates_found",
+        "value": "MBRIS 후보 탐색 결과 0건"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "no_candidates_found",
+        "value": "reviewBucket=no_candidates — MBRIS 후보 탐색 결과 0건"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000149",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "흑벵에돔",
+    "canonicalName": "벵에돔",
+    "internalId": "BM-SPECIES-000279",
+    "scientificName": "Girella punctata",
+    "aliasType": "common_name",
+    "status": "manual_review",
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "substring_match",
+        "value": "벵에돔(Girella punctata) sim=0.75 note=부분 문자열 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "설명이 '벵에돔류'로 벵에돔과의 소속을 명시"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "relatedFish 첫 항목이 '벵에돔' 자신"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "human_judgment",
+        "value": "분류군(fish) 일치"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "설명이 그룹 소속 표현일 뿐 동일종 진술이 아님"
+      },
+      {
+        "source": "BATCH1_MANUAL_REVIEW",
+        "type": "conflict",
+        "value": "'어두운 빛'이라는 구분 형질이 별도로 언급됨"
+      },
+      {
+        "source": "FishBase",
+        "type": "official_evidence",
+        "value": "Girella punctata Common Names List: 한국어 통용명 '벵에돔', '긴꼬리벵에돔'만 등재. '흑벵에돔'은 없음."
+      },
+      {
+        "source": "BATCH2_OFFICIAL_RESEARCH",
+        "type": "conflict",
+        "value": "6개 공식 출처 어디에도 '흑벵에돔'이라는 명칭 자체가 등재돼 있지 않음"
+      },
+      {
+        "source": "BATCH2_OFFICIAL_RESEARCH",
+        "type": "conflict",
+        "value": "점벵에돔과 동일한 패턴 — 벵에돔과 동일종인지 색형 변이인지 판별 불가"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "벵에돔(Girella punctata)"
+      }
+    ],
+    "reviewBatch": "batch1,batch2,current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000150",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  },
+  {
+    "sourceName": "흑새치",
+    "canonicalName": null,
+    "internalId": "BM-SPECIES-000470",
+    "scientificName": null,
+    "aliasType": "aggregate_name",
+    "status": "manual_review",
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "청새치(Kajikia audax) sim=0.667 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "백새치(Istiompax indica) sim=0.667 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "녹새치(Makaira mazara) sim=0.667 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "돛새치(Istiophorus platypterus) sim=0.667 note=편집거리 1"
+      },
+      {
+        "source": "PHASE1_CANDIDATE_SEARCH",
+        "type": "edit_distance",
+        "value": "황새치(Xiphias gladius) sim=0.667 note=편집거리 1"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "청새치(Kajikia audax)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "백새치(Istiompax indica)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "녹새치(Makaira mazara)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "돛새치(Istiophorus platypterus)"
+      },
+      {
+        "source": "MANUAL_REVIEW_QUEUE",
+        "type": "candidate",
+        "value": "황새치(Xiphias gladius)"
+      }
+    ],
+    "reviewBatch": "current_queue,phase1_candidates",
+    "aliasId": "ALIAS-000151",
+    "createdAt": "2026-08-01T14:39:17.715204+00:00",
+    "updatedAt": "2026-08-01T14:39:17.715204+00:00"
+  }
+]

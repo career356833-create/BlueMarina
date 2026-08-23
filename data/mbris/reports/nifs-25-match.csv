@@ -1,0 +1,26 @@
+﻿nifsFishId,nifsKoreanName,nifsScientificName,matchStatus,candidateCount,mbrisCandidates,detailGroups,note
+fish_1571806850754,갈치,Trichiurus lepturus,exact_korean,1,척추동물#446:Trichiurus japonicus(갈치),어류,"국명 일치, 학명 불일치 — 학명 개정 가능성"
+fish_1575521941711,개조개,Saxidomus purpuratus,exact_korean,1,무척추동물#1763:Saxidomus purpurata(개조개),연체동물,"국명 일치, 학명 불일치 — 학명 개정 가능성"
+fish_1575529825083,갯장어,Muraenesox cinereus,exact_scientific,1,척추동물#902:Muraenesox cinereus(갯장어),어류,
+fish_1571803943319,고등어,Scomber japonicus,exact_scientific,1,척추동물#419:Scomber japonicus(고등어),어류,
+fish_1576639605223,기름가자미,Glyptocephalus stelleri,exact_scientific,1,척추동물#559:Glyptocephalus stelleri(기름가자미),어류,
+fish_1576045793538,꽃게,Portunus trituberculatus,exact_scientific,1,무척추동물#4088:Portunus trituberculatus(꽃게),절지동물,
+fish_1575596889118,낙지,Octopus minor,exact_scientific,1,무척추동물#1554:Octopus minor(낙지),연체동물,
+fish_1576639605222,대게,Chionoecetes opilio,exact_scientific,1,무척추동물#3990:Chionoecetes opilio(대게),절지동물,
+fish_1575613737728,대구,Gadus macrocephalus,exact_scientific,1,척추동물#1058:Gadus macrocephalus(대구),어류,
+fish_1576639605224,대문어,Enteroctopus dofleini,exact_scientific,1,무척추동물#1559:Enteroctopus dofleini(문어),연체동물,
+fish_1575858517048,도루묵,Arctoscopus japonicus,exact_scientific,1,척추동물#1168:Arctoscopus japonicus(도루묵),어류,
+fish_1575867824021,말쥐치,Thamnaconus modestus,exact_scientific,1,척추동물#131:Thamnaconus modestus(말쥐치),어류,
+fish_1575868769703,명태,Theragra chalcogramma,exact_korean,1,척추동물#1059:Gadus chalcogrammus(명태),어류,"국명 일치, 학명 불일치 — 학명 개정 가능성"
+fish_1575870984736,바지락,Ruditapes philippinarum,exact_scientific,1,무척추동물#1761:Ruditapes philippinarum(바지락),연체동물,
+fish_1573537097812,붉은대게,Chionoecetes japonicus,exact_scientific,1,무척추동물#3989:Chionoecetes japonicus(홍게),절지동물,
+fish_1575875139974,살오징어,Todarodes pacificus,exact_scientific,1,무척추동물#1565:Todarodes pacificus(살오징어),연체동물,
+fish_1576639605225,삼치,Scomberomorus niphonius,exact_scientific,1,척추동물#410:Scomberomorus niphonius(삼치),어류,
+fish_1575873437839,오분자기,Sulculus diversicolor,exact_korean,1,무척추동물#866:Haliotis supertexta(오분자기),연체동물,"국명 일치, 학명 불일치 — 학명 개정 가능성"
+fish_1575532529343,옥돔,Branchiostegus japonicus,exact_scientific,1,척추동물#827:Branchiostegus japonicus(옥돔),어류,
+fish_1576639605226,전갱이,Trachurus japonicus,exact_scientific,1,척추동물#490:Trachurus japonicus(전갱이),어류,
+fish_1575880014320,제주소라,"Turbo cornutus, Batillus cornutus",manual_review,3,무척추동물#772:Turbo sazae(소라) | 무척추동물#773:Turbo stenogyrus(민소라) | 무척추동물#774:Turbo excellens(예쁜눈알고둥),연체동물,"속(Turbo) 단위 후보만 존재 — 학명 개정 추정, 수동 확인 필요"
+fish_1576639605227,주꾸미,Amphioctopus fangsiao,exact_scientific,1,무척추동물#1555:Amphioctopus fangsiao(주꾸미),연체동물,
+fish_1575880791880,참조기,Larimichthys polyactis,exact_scientific,1,척추동물#843:Larimichthys polyactis(참조기),어류,
+fish_1575881532404,참홍어,Raja pulchra,exact_korean,1,척추동물#644:Beringraja pulchra(참홍어),어류,"국명 일치, 학명 불일치 — 학명 개정 가능성"
+fish_1575882272758,키조개,Atrina pectinata,exact_scientific,1,무척추동물#1397:Atrina pectinata(키조개),연체동물,

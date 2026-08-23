@@ -1,0 +1,152 @@
+﻿aliasId,sourceName,canonicalName,internalId,scientificName,aliasType,status,confidence,evidenceCount,reviewBatch,createdAt,updatedAt
+ALIAS-000001,가다랑어,,BM-SPECIES-000412,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000002,가다랑어류,가다랑어,BM-SPECIES-000412,Katsuwonus pelamis,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000003,가시복류,가시복,BM-SPECIES-000143,Diodon holocanthus,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000004,가오리,,BM-SPECIES-000643,,aggregate_name,manual_review,low,20,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000005,가오리 꼬리주의,,BM-SPECIES-000643,,source_issue,manual_review,low,20,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000006,가자미,,BM-SPECIES-000468,,aggregate_name,manual_review,low,20,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000007,갈치,,BM-SPECIES-000444,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000008,감성돔,,BM-SPECIES-000751,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000009,갑오징어,,BM-SPECIES-003080,,aggregate_name,manual_review,low,20,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000010,강도다리,,BM-SPECIES-000555,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000011,갯강구,,BM-SPECIES-006084,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000012,갯장어,,BM-SPECIES-000900,,common_name,approved,high,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000013,갯장어류,갯장어,BM-SPECIES-000900,Muraenesox cinereus,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000014,검복류,검복,BM-SPECIES-000165,Takifugu porphyreus,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000015,고등어,,BM-SPECIES-000417,,common_name,approved,high,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000016,곰치,,BM-SPECIES-000935,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000017,광어,넙치,BM-SPECIES-000465,Paralichthys olivaceus,common_name,approved,medium,13,"current_queue,phase1_candidates,batch3",2026-08-01T14:39:17.715204+00:00,2026-08-01T15:39:27.269161+00:00
+ALIAS-000018,귀상어류,귀상어,BM-SPECIES-000662,Sphyrna zygaena,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000019,긴꼬리벵에돔류,긴꼬리벵에돔,BM-SPECIES-000280,Girella leonina,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000020,긴꼬리상어,긴꼬리장어,BM-SPECIES-000906,Dysomma anguillare,common_name,rejected,high,6,"batch1,current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000021,까치복류,까치복,BM-SPECIES-000163,Takifugu xanthopterus,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000022,꼬치고기,,BM-SPECIES-000459,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000023,꼴뚜기,,BM-SPECIES-002769,,aggregate_name,manual_review,low,14,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000024,꼼치,,BM-SPECIES-000057,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000025,꽁치,,BM-SPECIES-000881,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000026,꽃게류,꽃게,BM-SPECIES-005640,Portunus trituberculatus,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000027,꽃새우류,꽃새우,BM-SPECIES-005994,Trachysalambria curvirostris,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000028,넙치,,BM-SPECIES-000465,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000029,노래미,,BM-SPECIES-001164,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000030,노무라입깃해파리,,,,common_name,manual_review,low,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000031,놀래기,,BM-SPECIES-000594,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000032,농어,,BM-SPECIES-000188,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000033,눈다랑어류,눈다랑어,BM-SPECIES-000421,Thunnus obesus,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000034,능성어,,BM-SPECIES-001215,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000035,다금바리,,BM-SPECIES-001227,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000036,달고기,,BM-SPECIES-000095,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000037,대구,,BM-SPECIES-001056,,common_name,approved,high,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000038,대삼치,삼치,BM-SPECIES-000408,Scomberomorus niphonius,market_name,manual_review,medium,11,"batch1,batch2,current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000039,대하류,대하,BM-SPECIES-005997,Penaeus chinensis,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000040,덕대,,BM-SPECIES-000425,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000041,도다리,,BM-SPECIES-000548,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000042,독가시치,,BM-SPECIES-000800,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000043,돌가시,,,,common_name,manual_review,low,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000044,돌가자미,,BM-SPECIES-000554,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000045,돌돔,,BM-SPECIES-000278,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000046,돌돔류,돌돔,BM-SPECIES-000278,Oplegnathus fasciatus,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000047,돛새치,,BM-SPECIES-000473,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000048,돛새치류,돛새치,BM-SPECIES-000473,Istiophorus platypterus,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000049,말쥐치,,BM-SPECIES-000129,,common_name,approved,high,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000050,망둥어,,BM-SPECIES-000369,,aggregate_name,manual_review,low,4,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000051,망상어,,BM-SPECIES-000223,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000052,먹갈치류,먹갈치,BM-SPECIES-001188,Lycodes nakamurae,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000053,먹장어,,BM-SPECIES-000710,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000054,멸치,,BM-SPECIES-001029,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000055,명태,,BM-SPECIES-001057,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000056,무늬벵에돔,벵에돔,BM-SPECIES-000279,Girella punctata,common_name,rejected,high,5,"batch1,current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000057,무늬오징어류,,,,common_name,manual_review,low,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000058,문어,,BM-SPECIES-003111,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000059,물메기,,BM-SPECIES-000060,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000060,미역치,,BM-SPECIES-001157,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000061,민어,,BM-SPECIES-000840,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000062,민초리,,,,common_name,manual_review,low,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000063,방어,,BM-SPECIES-000501,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000064,백조기류,,BM-SPECIES-000833,,aggregate_name,manual_review,low,8,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000065,벚꽃망둑,,,,common_name,manual_review,low,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000066,벤자리류,벤자리,BM-SPECIES-000792,Parapristipoma trilineatum,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000067,벵에돔,,BM-SPECIES-000279,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000068,병어,,BM-SPECIES-000426,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000069,보구치류,보구치,BM-SPECIES-000839,Pennahia argentata,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000070,보름달물해파리,,,,common_name,manual_review,low,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000071,보리멸,,BM-SPECIES-000818,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000072,복섬,,,,common_name,manual_review,low,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000073,복어,,BM-SPECIES-000090,,aggregate_name,manual_review,low,10,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000074,볼락,,BM-SPECIES-000002,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000075,부세류,부세,BM-SPECIES-000842,Larimichthys crocea,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000076,부시리,,BM-SPECIES-000500,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000077,불가사리,,BM-SPECIES-002509,,aggregate_name,manual_review,low,10,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000078,붕장어,,BM-SPECIES-000908,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000079,살오징어,,BM-SPECIES-003117,,common_name,approved,high,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000080,삼세기류,삼세기,BM-SPECIES-000042,Hemitripterus villosus,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000081,삼치,,BM-SPECIES-000408,,common_name,approved,high,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000082,서대류,,BM-SPECIES-000451,,aggregate_name,manual_review,low,20,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000083,성게,,BM-SPECIES-002507,,aggregate_name,manual_review,low,8,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000084,성게가시,,BM-SPECIES-002507,,source_issue,manual_review,low,8,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000085,성대,,BM-SPECIES-001135,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000086,숭어,,BM-SPECIES-000097,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000087,실갈치류,갈치,BM-SPECIES-000444,Trichiurus japonicus,aggregate_name,manual_review,medium,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000088,쏠종개,,BM-SPECIES-001012,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000089,쏨뱅이,,BM-SPECIES-000019,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000090,쏨뱅이 독가시,쏨뱅이,BM-SPECIES-000019,Sebastiscus marmoratus,source_issue,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000091,쑤기미,,BM-SPECIES-001153,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000092,아귀,,BM-SPECIES-000080,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000093,양태,,BM-SPECIES-000065,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000094,열기,,BM-SPECIES-000317,,aggregate_name,manual_review,low,4,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000095,오징어,,BM-SPECIES-002768,,aggregate_name,manual_review,low,22,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000096,옥돔,,BM-SPECIES-000825,,common_name,approved,high,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000097,왕우럭조개류,왕우럭조개,BM-SPECIES-003294,Tresus keenae,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000098,우럭,,BM-SPECIES-002852,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000099,은갈치,갈치,BM-SPECIES-000444,Trichiurus japonicus,dialect,approved,high,2,"approval_round,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000100,은대구류,,BM-SPECIES-001056,,aggregate_name,manual_review,low,4,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000101,임연수,,BM-SPECIES-001161,,aggregate_name,manual_review,low,4,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000102,임연수어,,BM-SPECIES-001161,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000103,입방해파리,,,,common_name,manual_review,low,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000104,자리돔,,BM-SPECIES-000226,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000105,자바리,,BM-SPECIES-001204,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000106,장대,양태,BM-SPECIES-000065,Platycephalus indicus,dialect,approved,high,7,"current_queue,phase1_candidates,batch3",2026-08-01T14:39:17.715204+00:00,2026-08-01T15:39:27.269161+00:00
+ALIAS-000107,장어,,BM-SPECIES-000445,,aggregate_name,manual_review,low,20,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000108,전갱이,,BM-SPECIES-000488,,common_name,approved,high,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000109,전기가오리류,전기가오리,BM-SPECIES-000684,Narke japonica,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000110,전복,,BM-SPECIES-002416,,aggregate_name,manual_review,low,8,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000111,전복치류,개복치,BM-SPECIES-000114,Mola mola,aggregate_name,manual_review,low,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000112,전어,,BM-SPECIES-001037,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000113,점벵에돔,벵에돔,BM-SPECIES-000279,Girella punctata,common_name,manual_review,medium,11,"batch1,batch2,current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000114,정어리,,BM-SPECIES-001040,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000115,조기,,BM-SPECIES-000833,,aggregate_name,manual_review,low,6,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000116,조기류,,BM-SPECIES-000833,,aggregate_name,manual_review,low,6,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000117,좁쌀문어,문어,BM-SPECIES-003111,Enteroctopus dofleini,common_name,rejected,high,5,"batch1,current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000118,주꾸미류,주꾸미,BM-SPECIES-003107,Amphioctopus fangsiao,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000119,준치,,BM-SPECIES-001030,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000120,줄가자미,,BM-SPECIES-000541,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000121,줄돔,,BM-SPECIES-000193,,aggregate_name,manual_review,low,12,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000122,줄삼치,,BM-SPECIES-000415,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000123,쥐노래미,,BM-SPECIES-001165,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000124,쥐치,,BM-SPECIES-000122,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000125,쥐치포용 쥐치,쥐치,BM-SPECIES-000122,Stephanolepis cirrhifer,source_issue,manual_review,high,11,"batch1,batch2,current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000126,쭈꾸미,주꾸미,BM-SPECIES-003107,,spelling_variant,approved,high,10,"approval_round,batch1,batch2,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000127,쭈꾸미류,주꾸미,BM-SPECIES-003107,Amphioctopus fangsiao,aggregate_name,manual_review,low,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000128,참가자미,,BM-SPECIES-000544,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000129,참굴,굴,BM-SPECIES-002965,Magallana gigas,common_name,approved,high,13,"current_queue,phase1_candidates,batch3",2026-08-01T14:39:17.715204+00:00,2026-08-01T15:39:27.269161+00:00
+ALIAS-000130,참돔,,BM-SPECIES-000755,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000131,참복,,BM-SPECIES-000150,,aggregate_name,manual_review,low,10,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000132,참소라,소라,BM-SPECIES-002324,Turbo sazae,dialect,approved,high,2,"approval_round,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000133,참치,참치방어,BM-SPECIES-000495,Elagatis bipinnulata,aggregate_name,manual_review,medium,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000134,청새치류,청새치,BM-SPECIES-000470,Kajikia audax,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000135,청어,,BM-SPECIES-001022,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000136,파란고리문어,문어,BM-SPECIES-003111,Enteroctopus dofleini,common_name,rejected,high,6,"batch1,current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000137,피조개류,피조개,BM-SPECIES-002807,Anadara broughtonii,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000138,학공치,,BM-SPECIES-000884,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000139,한치,한치꼴뚜기,BM-SPECIES-003095,Uroteuthis chinensis,aggregate_name,manual_review,high,10,"batch1,batch2,current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000140,한치류,한치꼴뚜기,BM-SPECIES-003095,Uroteuthis chinensis,aggregate_name,manual_review,low,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000141,해삼,,BM-SPECIES-005503,,aggregate_name,manual_review,low,4,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000142,홍가자미,,BM-SPECIES-000553,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000143,홍어,,BM-SPECIES-000649,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000144,홍합,,BM-SPECIES-003025,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000145,황새치,,BM-SPECIES-000479,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000146,황새치류,황새치,BM-SPECIES-000479,Xiphias gladius,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000147,황어,,BM-SPECIES-000958,,common_name,approved,medium,1,original_link,2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000148,황어류,황어,BM-SPECIES-000958,Pseudaspius hakonensis,aggregate_name,manual_review,high,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000149,황열기,,,,common_name,manual_review,low,2,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000150,흑벵에돔,벵에돔,BM-SPECIES-000279,Girella punctata,common_name,manual_review,medium,10,"batch1,batch2,current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00
+ALIAS-000151,흑새치,,BM-SPECIES-000470,,aggregate_name,manual_review,low,10,"current_queue,phase1_candidates",2026-08-01T14:39:17.715204+00:00,2026-08-01T14:39:17.715204+00:00

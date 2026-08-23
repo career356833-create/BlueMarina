@@ -1,0 +1,27 @@
+{
+  "sourceProvider": "MBRIS",
+  "downloadPageUrl": "https://www.mbris.kr/pub/marine/natilist/nationalist.do",
+  "fileRequestUrl": "https://www.mbris.kr/pub/marine/natilist/selectNationalBoardExcel.ajax",
+  "requestMethod": "GET",
+  "requestContentType": null,
+  "requestParams": {
+    "pageIndex": "1",
+    "pageUnit": "10",
+    "searchWrd": ""
+  },
+  "loginRequired": false,
+  "sessionCookieUsed": [
+    "JSESSIONID",
+    "fileDownloadToken"
+  ],
+  "redirects": [],
+  "httpStatus": 200,
+  "responseContentType": "application/vnd.ms-excel;charset=euc-kr",
+  "contentDisposition": "attachment;filename=\"국가해양수산생물종목록_20260731.xlsx\"",
+  "serverFileName": "국가해양수산생물종목록_20260731.xlsx",
+  "localFileName": "mbris-national-species-catalog.xlsx",
+  "fileSizeBytes": 1926712,
+  "sha256": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+  "downloadedAt": "2026-07-30T19:11:12.821647+00:00",
+  "publicDataPortal": "https://www.data.go.kr/data/15063771/fileData.do"
+}

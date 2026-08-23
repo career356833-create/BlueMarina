@@ -1,0 +1,561 @@
+[
+  {
+    "nifsSourceId": "fish_1571806850754",
+    "koreanName": "갈치",
+    "nifsScientificNameRaw": "Trichiurus lepturus",
+    "mbrisInternalId": "BM-SPECIES-000444",
+    "mbrisScientificNameCanonical": "Trichiurus japonicus",
+    "relationshipType": "taxonomic_revision",
+    "sameSpecies": true,
+    "confidence": "medium",
+    "evidence": [
+      {
+        "source": "WoRMS",
+        "title": "Trichiurus lepturus (AphiaID 127089)",
+        "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=127089",
+        "note": "accepted — 원기재는 아종(T. lepturus japonicus)이었으나 이후 독립종으로 승격"
+      },
+      {
+        "source": "WoRMS",
+        "title": "Trichiurus japonicus (AphiaID 305414)",
+        "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=305414",
+        "note": "accepted — WoRMS는 lepturus의 synonym이 아니라 별개의 accepted 종으로 등재"
+      },
+      {
+        "source": "FishBase",
+        "title": "Trichiurus japonicus 분포",
+        "url": "https://www.fishbase.se/summary/Trichiurus-japonicus.html",
+        "note": "분포를 '한국·중국·일본·대만 북서태평양'으로 한정 기재 — 지리적으로 분리된 개체군"
+      },
+      {
+        "source": "GBIF",
+        "title": "species/match",
+        "url": "https://api.gbif.org/v1/species/match",
+        "note": "WoRMS와 상반됨 — GBIF는 T. japonicus를 T. lepturus의 synonym으로 취급"
+      }
+    ],
+    "reviewStatus": "manual_review"
+  },
+  {
+    "nifsSourceId": "fish_1575521941711",
+    "koreanName": "개조개",
+    "nifsScientificNameRaw": "Saxidomus purpuratus",
+    "mbrisInternalId": "BM-SPECIES-003315",
+    "mbrisScientificNameCanonical": "Saxidomus purpurata",
+    "relationshipType": "gender_ending_variant",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "WoRMS/MolluscaBase",
+        "title": "Saxidomus purpurata (AphiaID 582808)",
+        "url": "https://www.molluscabase.org/aphia.php?p=taxdetails&id=582808",
+        "note": "accepted"
+      },
+      {
+        "source": "WoRMS/MolluscaBase",
+        "title": "Saxidomus purpuratus [sic] (AphiaID 367780)",
+        "url": "https://www.molluscabase.org/aphia.php?p=taxdetails&id=367780",
+        "note": "unaccepted — unacceptreason='incorrect gender ending; Saxidomus is feminine', valid_AphiaID=582808(purpurata)를 가리킴"
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1575529825083",
+    "koreanName": "갯장어",
+    "nifsScientificNameRaw": "Muraenesox cinereus",
+    "mbrisInternalId": "BM-SPECIES-000900",
+    "mbrisScientificNameCanonical": "Muraenesox cinereus",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1571803943319",
+    "koreanName": "고등어",
+    "nifsScientificNameRaw": "Scomber japonicus",
+    "mbrisInternalId": "BM-SPECIES-000417",
+    "mbrisScientificNameCanonical": "Scomber japonicus",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1576639605223",
+    "koreanName": "기름가자미",
+    "nifsScientificNameRaw": "Glyptocephalus stelleri",
+    "mbrisInternalId": "BM-SPECIES-000557",
+    "mbrisScientificNameCanonical": "Glyptocephalus stelleri",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1576045793538",
+    "koreanName": "꽃게",
+    "nifsScientificNameRaw": "Portunus trituberculatus",
+    "mbrisInternalId": "BM-SPECIES-005640",
+    "mbrisScientificNameCanonical": "Portunus trituberculatus",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1575596889118",
+    "koreanName": "낙지",
+    "nifsScientificNameRaw": "Octopus minor",
+    "mbrisInternalId": "BM-SPECIES-003106",
+    "mbrisScientificNameCanonical": "Octopus minor",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1576639605222",
+    "koreanName": "대게",
+    "nifsScientificNameRaw": "Chionoecetes opilio",
+    "mbrisInternalId": "BM-SPECIES-005542",
+    "mbrisScientificNameCanonical": "Chionoecetes opilio",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1575613737728",
+    "koreanName": "대구",
+    "nifsScientificNameRaw": "Gadus macrocephalus",
+    "mbrisInternalId": "BM-SPECIES-001056",
+    "mbrisScientificNameCanonical": "Gadus macrocephalus",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1576639605224",
+    "koreanName": "대문어",
+    "nifsScientificNameRaw": "Enteroctopus dofleini",
+    "mbrisInternalId": "BM-SPECIES-003111",
+    "mbrisScientificNameCanonical": "Enteroctopus dofleini",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1575858517048",
+    "koreanName": "도루묵",
+    "nifsScientificNameRaw": "Arctoscopus japonicus",
+    "mbrisInternalId": "BM-SPECIES-001166",
+    "mbrisScientificNameCanonical": "Arctoscopus japonicus",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1575867824021",
+    "koreanName": "말쥐치",
+    "nifsScientificNameRaw": "Thamnaconus modestus",
+    "mbrisInternalId": "BM-SPECIES-000129",
+    "mbrisScientificNameCanonical": "Thamnaconus modestus",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1575868769703",
+    "koreanName": "명태",
+    "nifsScientificNameRaw": "Theragra chalcogramma",
+    "mbrisInternalId": "BM-SPECIES-001057",
+    "mbrisScientificNameCanonical": "Gadus chalcogrammus",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "WoRMS",
+        "title": "Theragra chalcogramma (AphiaID 254539)",
+        "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=254539",
+        "note": "unaccepted — valid_AphiaID 300735(Gadus chalcogrammus)를 가리킴"
+      },
+      {
+        "source": "WoRMS",
+        "title": "Gadus chalcogrammus (AphiaID 300735)",
+        "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=300735",
+        "note": "accepted — Theragra chalcogramma 등을 synonym으로 등재"
+      },
+      {
+        "source": "GBIF",
+        "title": "species/match",
+        "url": "https://api.gbif.org/v1/species/match",
+        "note": "WoRMS와 일치 — Theragra chalcogramma(2415762)를 Gadus chalcogrammus(2415769)의 synonym으로 처리"
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1575870984736",
+    "koreanName": "바지락",
+    "nifsScientificNameRaw": "Ruditapes philippinarum",
+    "mbrisInternalId": "BM-SPECIES-003313",
+    "mbrisScientificNameCanonical": "Ruditapes philippinarum",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1573537097812",
+    "koreanName": "붉은대게",
+    "nifsScientificNameRaw": "Chionoecetes japonicus",
+    "mbrisInternalId": "BM-SPECIES-005541",
+    "mbrisScientificNameCanonical": "Chionoecetes japonicus",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1575875139974",
+    "koreanName": "살오징어",
+    "nifsScientificNameRaw": "Todarodes pacificus",
+    "mbrisInternalId": "BM-SPECIES-003117",
+    "mbrisScientificNameCanonical": "Todarodes pacificus",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1576639605225",
+    "koreanName": "삼치",
+    "nifsScientificNameRaw": "Scomberomorus niphonius",
+    "mbrisInternalId": "BM-SPECIES-000408",
+    "mbrisScientificNameCanonical": "Scomberomorus niphonius",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1575873437839",
+    "koreanName": "오분자기",
+    "nifsScientificNameRaw": "Sulculus diversicolor",
+    "mbrisInternalId": "BM-SPECIES-002418",
+    "mbrisScientificNameCanonical": "Haliotis supertexta",
+    "relationshipType": "unresolved_conflict",
+    "sameSpecies": false,
+    "confidence": "low",
+    "evidence": [
+      {
+        "source": "WoRMS/MolluscaBase",
+        "title": "Haliotis diversicolor (AphiaID 445319)",
+        "url": "https://www.molluscabase.org/aphia.php?p=taxdetails&id=445319",
+        "note": "accepted, 별개의 유효종. synonym은 'Sulculus diversicolor'/'Haliotis (Sulculus) diversicolor'뿐 — supertexta는 이 종의 이명이 아니다"
+      },
+      {
+        "source": "WoRMS/MolluscaBase",
+        "title": "Haliotis supertexta (AphiaID 445364)",
+        "url": "https://www.molluscabase.org/aphia.php?p=taxdetails&id=445364",
+        "note": "accepted, diversicolor와 별개. Owen(2004) 'Of Sea and Shore' 26(2):99-105이 과거 아종(H. diversicolor supertexta)이던 것을 독립종으로 승격시킨 근거 문헌"
+      },
+      {
+        "source": "국립생물자원관(NIBR)",
+        "title": "국가생물종목록 무척추동물-V(연체동물-I 복족류) PDF",
+        "url": "https://www.nibr.go.kr/aiibook/catImage/30/Invertebrates-V.pdf",
+        "note": "국내 공식 목록: 'Sulculus diversicolor diversicolor(마대오분자기)'와 'Sulculus diversicolor supertexta(오분자기)'를 서로 다른 국명의 별개 아종으로 등재"
+      },
+      {
+        "source": "GBIF",
+        "title": "species/match?name=Haliotis supertexta",
+        "url": "https://api.gbif.org/v1/species/match?name=Haliotis%20supertexta",
+        "note": "ACCEPTED, synonym=null — WoRMS와 일치, diversicolor의 이명 아님"
+      }
+    ],
+    "reviewStatus": "unresolved"
+  },
+  {
+    "nifsSourceId": "fish_1575532529343",
+    "koreanName": "옥돔",
+    "nifsScientificNameRaw": "Branchiostegus japonicus",
+    "mbrisInternalId": "BM-SPECIES-000825",
+    "mbrisScientificNameCanonical": "Branchiostegus japonicus",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1576639605226",
+    "koreanName": "전갱이",
+    "nifsScientificNameRaw": "Trachurus japonicus",
+    "mbrisInternalId": "BM-SPECIES-000488",
+    "mbrisScientificNameCanonical": "Trachurus japonicus",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1575880014320",
+    "koreanName": "제주소라",
+    "nifsScientificNameRaw": "Turbo cornutus, Batillus cornutus",
+    "mbrisInternalId": "BM-SPECIES-002324",
+    "mbrisScientificNameCanonical": "Turbo sazae",
+    "relationshipType": "taxonomic_revision",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "WoRMS/MolluscaBase",
+        "title": "Turbo sazae (AphiaID 994353)",
+        "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=994353",
+        "note": "accepted — H. Fukuda, 2017"
+      },
+      {
+        "source": "WoRMS/MolluscaBase",
+        "title": "Turbo cornutus (AphiaID 413379)",
+        "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=413379",
+        "note": "accepted이지만 별개 유효종 — 중국 남부·대만 고유종으로 분포 한정"
+      },
+      {
+        "source": "WoRMS/MolluscaBase",
+        "title": "Batillus cornutus (AphiaID 1600422)",
+        "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=1600422",
+        "note": "superseded combination — valid_name은 Turbo cornutus(별도 종이 아니라 Batillus아속의 구식 속명 승격 표기)"
+      },
+      {
+        "source": "Molluscan Research",
+        "title": "Fukuda H. (2017) 37(4):268-281",
+        "url": "",
+        "note": "일본·한국 개체군에 적용되던 'Turbo cornutus'가 실제로는 오적용명(misapplied name)이며 진짜 T. cornutus는 중국·대만 고유종임을 밝히고 T. sazae를 신학명으로 부여"
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1576639605227",
+    "koreanName": "주꾸미",
+    "nifsScientificNameRaw": "Amphioctopus fangsiao",
+    "mbrisInternalId": "BM-SPECIES-003107",
+    "mbrisScientificNameCanonical": "Amphioctopus fangsiao",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1575880791880",
+    "koreanName": "참조기",
+    "nifsScientificNameRaw": "Larimichthys polyactis",
+    "mbrisInternalId": "BM-SPECIES-000841",
+    "mbrisScientificNameCanonical": "Larimichthys polyactis",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1575881532404",
+    "koreanName": "참홍어",
+    "nifsScientificNameRaw": "Raja pulchra",
+    "mbrisInternalId": "BM-SPECIES-000642",
+    "mbrisScientificNameCanonical": "Beringraja pulchra",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "WoRMS",
+        "title": "Raja pulchra (AphiaID 271580)",
+        "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=271580",
+        "note": "junior objective synonym — valid_AphiaID 1015739(Beringraja pulchra)를 가리킴"
+      },
+      {
+        "source": "WoRMS",
+        "title": "Beringraja pulchra (AphiaID 1015739)",
+        "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=1015739",
+        "note": "accepted, Rajidae"
+      },
+      {
+        "source": "WoRMS",
+        "title": "Beringraja (genus, AphiaID 826814)",
+        "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=826814",
+        "note": "Ishihara, Treloar, Bor, Senou & Jeong, 2012 신설 — 알집 산란 전략·clasper 형태 + 분자계통 분석(North Pacific assemblage 단계통) 근거로 Raja에서 분리"
+      }
+    ],
+    "reviewStatus": "approved"
+  },
+  {
+    "nifsSourceId": "fish_1575882272758",
+    "koreanName": "키조개",
+    "nifsScientificNameRaw": "Atrina pectinata",
+    "mbrisInternalId": "BM-SPECIES-002949",
+    "mbrisScientificNameCanonical": "Atrina pectinata",
+    "relationshipType": "accepted_name_update",
+    "sameSpecies": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "source": "nifs-mbris-link.json",
+        "title": "기존 자동 매칭 결과",
+        "url": "",
+        "note": ""
+      }
+    ],
+    "reviewStatus": "approved"
+  }
+]

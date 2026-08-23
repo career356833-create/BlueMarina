@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-08-01T08:36:15.798303+00:00",
+  "reviewedCount": 6,
+  "approvableHighConfidenceCount": 0,
+  "aggregateNameCount": 1,
+  "marketNameCount": 1,
+  "sourceNameIssueCount": 1,
+  "keepManualReviewCount": 2,
+  "rejectedCount": 0,
+  "spellingVariantNotReflectedCount": 1,
+  "resolvedMappingCountExisting": 74,
+  "resolvedMappingCountIfApplied": 74,
+  "beforeTierACount": 86,
+  "afterTierACountIfApplied": 86,
+  "tierAChangeIfApplied": 0,
+  "newSpeciesCreated": false,
+  "newlyLinkedExistingSpecies": [],
+  "reflectableItems": [],
+  "note": "newSpeciesCreated는 정책상 항상 False다 — candidateInternalId가 있는 항목만 reflectable로 취급하고, 전부 기존 MBRIS 종 ID를 재사용한다. 새 ID를 만들지 않는다."
+}

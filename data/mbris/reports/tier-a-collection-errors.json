@@ -1,0 +1,43 @@
+{
+  "totalCandidates": 86,
+  "totalFailures": 1,
+  "categories": [
+    "auth_error",
+    "rate_limit",
+    "timeout",
+    "empty_response",
+    "no_item",
+    "multiple_candidates",
+    "scientific_name_mismatch",
+    "korean_name_mismatch",
+    "parse_error",
+    "normalization_error"
+  ],
+  "categoryCounts": {
+    "auth_error": 0,
+    "rate_limit": 0,
+    "timeout": 0,
+    "empty_response": 0,
+    "no_item": 0,
+    "multiple_candidates": 1,
+    "scientific_name_mismatch": 0,
+    "korean_name_mismatch": 0,
+    "parse_error": 0,
+    "normalization_error": 0
+  },
+  "failures": [
+    {
+      "internalId": "BM-SPECIES-006084",
+      "koreanName": "갯강구",
+      "scientificName": "Ligia exotica",
+      "attemptCount": 3,
+      "lastError": "매칭 실패: 학명검색(검색 결과 0건) → 국명재검색도 실패(검색결과 2건, 학명 정확 일치 없음 — 수동 검토 필요)",
+      "lastAttemptAt": "2026-08-03T10:16:13.408945+00:00",
+      "category": "multiple_candidates"
+    }
+  ],
+  "apiCallLevelErrorCounts": {
+    "auth_error": 2
+  },
+  "note": "apiCallLevelErrorCounts는 HTTP/네트워크 단의 에러(auth_error 등)이고, categoryCounts는 최종 종별 실패 사유(매칭 실패 포함)다 — 겹칠 수 있다. 실패 0건이어도 이 리포트와 tier-a-manual-review.csv는 항상 생성한다."
+}

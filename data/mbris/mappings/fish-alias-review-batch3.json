@@ -1,0 +1,908 @@
+[
+  {
+    "sourceName": "임연수",
+    "decision": "keep_manual_review",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "confidence": "low",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-001161",
+        "koreanName": "임연수어",
+        "scientificName": "Pleurogrammus azonus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-001162",
+        "koreanName": "단기임연수어",
+        "scientificName": "Pleurogrammus monopterygius",
+        "organismGroup": "fish"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "FishBase",
+        "source": "CommonNamesList.php?ID=510",
+        "value": "South Korea 공식 공통명은 '임연수어'만 등재. '임연수'(어 없는 형태) 없음"
+      },
+      {
+        "organization": "WoRMS",
+        "source": "aphia.php?p=taxdetails&id=282288",
+        "value": "Vernacular names에 한국어 이름 자체가 없음(영/일/러만 등재)"
+      },
+      {
+        "organization": "MBRIS",
+        "source": "pub/info/traditionalN (검색 스니펫)",
+        "value": "강원도 방언 '새치'(큰 것)/'간이재'(작은 것)는 확인되나 '임연수' 단독 항목은 없음"
+      }
+    ],
+    "conflicts": [
+      "후보 2건(임연수어 Pleurogrammus azonus / 단기임연수어 P. monopterygius)이 서로 다른 종이고, 단기임연수어(북태평양산 아부라가리)가 국내에서 '임연수어'로 혼용·대체 유통되는 사례가 알려져 있어 이름만으로는 둘 중 하나를 특정할 수 없음"
+    ],
+    "reviewNote": "지정 6개 공식 출처 중 어디에서도 '임연수'가 '임연수어'의 공식 방언·축약형이라는 근거를 확인하지 못했다(대부분 JS 렌더링으로 원문 직접 인용 실패). 이름 유사도만으로 임연수어 쪽을 승인하는 것은 근거 부족 원칙에 위배되고, 설상가상 후보 2종은 실제로 다른 종(수입 대체어종 이슈 있음)이라 오승인 위험이 크다. manual_review 유지."
+  },
+  {
+    "sourceName": "갑오징어",
+    "decision": "aggregate_name",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "confidence": "high",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-003080",
+        "koreanName": "바늘갑오징어",
+        "scientificName": "Decorisepia madokai",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003081",
+        "koreanName": "꽃갑오징어",
+        "scientificName": "Ascarosepion tullbergi",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003082",
+        "koreanName": "애기갑오징어",
+        "scientificName": "Doratosepion kobiense",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003083",
+        "koreanName": "넓은붉갑오징어",
+        "scientificName": "Doratosepion tokioense",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003084",
+        "koreanName": "거미다리갑오징어",
+        "scientificName": "Doratosepion tenuipes",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003085",
+        "koreanName": "긴다리갑오징어",
+        "scientificName": "Doratosepion longipes",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003086",
+        "koreanName": "표범갑오징어",
+        "scientificName": "Doratosepion pardex",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003087",
+        "koreanName": "갈색갑오징어",
+        "scientificName": "Doratosepion andreana",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003088",
+        "koreanName": "납작갑오징어",
+        "scientificName": "Doratosepion peterseni",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003089",
+        "koreanName": "참갑오징어",
+        "scientificName": "Acanthosepion esculentum",
+        "organismGroup": "cephalopod"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "MBRIS",
+        "source": "tsearchDetail.do?spcTxnId=270000016305",
+        "value": "분류체계에 'Sepiida 갑오징어목 > Sepiidae 갑오징어과'로 명기 — 목/과 수준 명칭"
+      },
+      {
+        "organization": "NIFS",
+        "source": "contents/actionContentsCons0088.do",
+        "value": "상업적으로 중요한 종은 '갑오징어'가 아닌 '참갑오징어'(Sepia esculenta)라는 완전한 표준명으로 등재"
+      }
+    ],
+    "conflicts": [
+      "후보 10건이 전부 갑오징어과(Sepiidae) 소속이지만 서로 다른 속(Doratosepion/Acanthosepion 등)의 별개 종이라 하나로 확정할 수 없음"
+    ],
+    "reviewNote": "MBRIS가 '갑오징어'를 목/과 명칭으로 사용하는 것이 공식 확인됨 — 집합명. 시중에서 흔히 말하는 그 종을 특정하려면 '참갑오징어'(Acanthosepion esculentum, BM-SPECIES-003089)를 별도로 검토해야 하며, 이번 판정은 '갑오징어' 표제어 자체에 한한다."
+  },
+  {
+    "sourceName": "조기",
+    "decision": "aggregate_name",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "confidence": "medium",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-000833",
+        "koreanName": "흑조기",
+        "scientificName": "Atrobucca nibe",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000837",
+        "koreanName": "수조기",
+        "scientificName": "Nibea albiflora",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000841",
+        "koreanName": "참조기",
+        "scientificName": "Larimichthys polyactis",
+        "organismGroup": "fish"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "국립생물자원관(NIBR)",
+        "source": "species.nibr.go.kr 국가생물종목록",
+        "value": "Larimichthys polyactis의 국명은 '참조기'로 등재 — '조기'는 정식 국명 아님"
+      },
+      {
+        "organization": "FishBase",
+        "source": "CommonNamesList.php?ID=416",
+        "value": "한국 공식 공통명은 '참조기'만 등재, '조기' 단독 항목 없음"
+      }
+    ],
+    "conflicts": [
+      "후보 3건(흑조기 Atrobucca nibe / 수조기 Nibea albiflora / 참조기 Larimichthys polyactis)이 민어과 내 서로 다른 속의 별개 종"
+    ],
+    "reviewNote": "'조기'가 참조기·부세·수조기·흑조기 등을 아우르는 시장 통칭이라는 정황은 강하나 이를 명시한 NIFS/NIBR 공식 문서는 확인하지 못했다('확인 안 됨'). 다만 공식 표준명 체계가 '참조기'만 개별 종으로 등재하고 '조기'는 등재하지 않는 점, 후보가 서로 다른 3개 종으로 갈리는 점을 근거로 이름 유사도만으로 단일종 승인은 하지 않고 aggregate_name 으로 분류한다. 필요 시 '참조기' 단독 건으로 별도 재검토 권장."
+  },
+  {
+    "sourceName": "줄돔",
+    "decision": "aggregate_name",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "confidence": "high",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-000193",
+        "koreanName": "황줄돔",
+        "scientificName": "Histiopterus typus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000231",
+        "koreanName": "흑줄돔",
+        "scientificName": "Abudefduf bengalensis",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000741",
+        "koreanName": "검은청줄돔",
+        "scientificName": "Chaetodontoplus melanosoma",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000742",
+        "koreanName": "청줄돔",
+        "scientificName": "Chaetodontoplus septentrionalis",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000756",
+        "koreanName": "녹줄돔",
+        "scientificName": "Evynnis cardinalis",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000828",
+        "koreanName": "노랑줄돔",
+        "scientificName": "Pentapodus nagasakiensis",
+        "organismGroup": "fish"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "국립생물자원관(NIBR)/NIFS",
+        "source": "종 검색(청줄돔 ktsn=120000058683 등)",
+        "value": "'줄돔'이라는 표준국명 항목 자체가 없고, 청줄돔(청줄돔과)·황줄돔(Pentacerotidae)·흑줄돔(Pomacentridae) 등 서로 다른 과의 개별 종명만 존재"
+      }
+    ],
+    "conflicts": [
+      "후보 6건이 최소 4개 이상의 서로 다른 과(Pentacerotidae/Pomacentridae/Pomacanthidae/Sparidae/Nemipteridae)에 걸쳐 있어 '줄돔'이라는 이름의 유사성 외에 생물학적 연관성이 없음",
+      "낚시 현장에서 '줄돔'이 돌돔(Oplegnathus fasciatus)의 통칭으로도 쓰인다는 자료(비공식)도 확인됨"
+    ],
+    "reviewNote": "'줄돔'은 세로줄무늬가 있는 여러 이종(異種) 돔류를 통칭하는 비표준 낚시 용어로, 특별주의 대상인 '돔' 집합명 캐치에 정확히 해당한다. 공식 표준국명 목록에 '줄돔' 단독 항목이 없음이 확인되어 aggregate_name으로 판정한다."
+  },
+  {
+    "sourceName": "흑새치",
+    "decision": "keep_manual_review",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "confidence": "low",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-000470",
+        "koreanName": "청새치",
+        "scientificName": "Kajikia audax",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000471",
+        "koreanName": "백새치",
+        "scientificName": "Istiompax indica",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000472",
+        "koreanName": "녹새치",
+        "scientificName": "Makaira mazara",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000473",
+        "koreanName": "돛새치",
+        "scientificName": "Istiophorus platypterus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000479",
+        "koreanName": "황새치",
+        "scientificName": "Xiphias gladius",
+        "organismGroup": "fish"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "국립수산과학원(NIFS)",
+        "source": "frcenter/species/?mf_tax_id=MF0011977 (검색엔진 캐시)",
+        "value": "'흑새치(Black Marlin)', 학명 Makaira indica로 등재(검색 스니펫 기반, 직접 렌더링 대조는 실패)"
+      },
+      {
+        "organization": "WoRMS",
+        "source": "aphia.php?id=712905",
+        "value": "Istiompax indica (Cuvier, 1832)가 valid name이고 Makaira indica는 그 이명 — NIFS 학명은 동일 종(black marlin)을 가리킴"
+      }
+    ],
+    "conflicts": [
+      "NIFS가 흑새치=Istiompax indica(Makaira indica)로 확인되지만, 현재 후보 풀에서 동일 학명(Istiompax indica)을 가진 항목은 BM-SPECIES-000471이며 그 koreanName이 '흑새치'가 아니라 '백새치'로 등록되어 있음 — 학명은 일치하나 국명 라벨이 어긋남"
+    ],
+    "reviewNote": "학명 기준으로는 흑새치=Istiompax indica(=Makaira indica)가 검색엔진 캐시로 간접 확인되었으나, NIFS/NIBR 원문을 직접 렌더링해 대조하지 못했고 결정적으로 우리 후보 풀 자체가 같은 학명을 '백새치'로 라벨링하고 있어 국명 대응에 충돌이 있다. 이 상태로 승인하면 백새치/흑새치 두 이름이 뒤섞일 위험이 있으므로 manual_review 유지. MBRIS 후보 풀의 BM-SPECIES-000471 한국어명 표기 자체를 별도로 재확인할 필요가 있다."
+  },
+  {
+    "sourceName": "가자미",
+    "decision": "aggregate_name",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "confidence": "high",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-000468",
+        "koreanName": "중설가자미",
+        "scientificName": "Plagiopsetta glossa",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000469",
+        "koreanName": "신월가자미",
+        "scientificName": "Samariscus japonicus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000477",
+        "koreanName": "좌대가자미",
+        "scientificName": "Poecilopsetta plinthus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000528",
+        "koreanName": "별목탁가자미",
+        "scientificName": "Bothus myriaster",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000530",
+        "koreanName": "목탁가자미",
+        "scientificName": "Arnoglossus japonicus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000531",
+        "koreanName": "노랑반점가자미",
+        "scientificName": "Arnoglossus polyspilus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000533",
+        "koreanName": "동백가자미",
+        "scientificName": "Psettina iijimae",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000535",
+        "koreanName": "긴가자미",
+        "scientificName": "Parabothus kiensis",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000539",
+        "koreanName": "흰비늘가자미",
+        "scientificName": "Laeops parviceps",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000540",
+        "koreanName": "용가자미",
+        "scientificName": "Cleisthenes pinetorum",
+        "organismGroup": "fish"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "국립수산과학원(NIFS)",
+        "source": "board/actionBoard0008View.do?BBS_ID=20201228031156330DQD ('가자미와 납세미 차이')",
+        "value": "\"'가자미'는 가자미목 가자미과에 속하는 100여종의 어류를 지칭하며, 우리나라에서는 가자미과 어류 중 약 30종 내외가 출현\""
+      },
+      {
+        "organization": "FishBase",
+        "source": "Pleuronectidae family page",
+        "value": "전세계 41속 101종 등재 — 단일 종 아님"
+      }
+    ],
+    "conflicts": [],
+    "reviewNote": "NIFS가 직접 '가자미'는 단일 종이 아니라 가자미과 전체를 가리키는 집합 명칭임을 명시했다. 가장 명확한 aggregate_name 사례."
+  },
+  {
+    "sourceName": "꼴뚜기",
+    "decision": "aggregate_name",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "confidence": "medium",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-002769",
+        "koreanName": "꼬마꼴뚜기",
+        "scientificName": "Loliolus sumatrensis",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-002770",
+        "koreanName": "반원니꼴뚜기",
+        "scientificName": "Loliolus japonica",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003070",
+        "koreanName": "참꼴뚜기",
+        "scientificName": "Loliolus beka",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003094",
+        "koreanName": "흰꼴뚜기",
+        "scientificName": "Sepioteuthis lessoniana",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003095",
+        "koreanName": "한치꼴뚜기",
+        "scientificName": "Uroteuthis chinensis",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003096",
+        "koreanName": "창꼴뚜기",
+        "scientificName": "Uroteuthis edulis",
+        "organismGroup": "cephalopod"
+      },
+      {
+        "internalId": "BM-SPECIES-003097",
+        "koreanName": "화살꼴뚜기",
+        "scientificName": "Heterololigo bleekeri",
+        "organismGroup": "cephalopod"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "species.nibr.go.kr",
+        "source": "검색 결과 (ktsn=120000214798)",
+        "value": "'참꼴뚜기' 개별 상세페이지 존재가 검색으로 확인됨(본문은 JS 렌더링으로 직접 인용 실패, '확인 안 됨')"
+      }
+    ],
+    "conflicts": [
+      "후보 7건이 서로 다른 속(Loliolus/Sepioteuthis/Uroteuthis/Heterololigo)에 걸쳐 있음"
+    ],
+    "reviewNote": "이번 조사에서 '꼴뚜기과' 공식 집합명 여부를 원문으로 직접 확정하지 못했다(확인 안 됨). 다만 갑오징어·가자미와 동일한 구조(참OO 개별종 + 여러 속을 아우르는 일반명)가 후보 목록 자체에서 재확인되고, 특별주의 대상인 '오징어류' 집합명과 같은 범주로 취급하는 것이 안전하므로 aggregate_name으로 판정한다. 확정 근거 문서는 추가 조사 필요."
+  },
+  {
+    "sourceName": "망둥어",
+    "decision": "aggregate_name",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "confidence": "medium",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-000369",
+        "koreanName": "말뚝망둥어",
+        "scientificName": "Periophthalmus modestus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000370",
+        "koreanName": "큰볏말뚝망둥어",
+        "scientificName": "Periophthalmus magnuspinnatus",
+        "organismGroup": "fish"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "국립국어원",
+        "source": "korean.go.kr (표준국어대사전 질의응답)",
+        "value": "표준어는 '망둥이/망둑어'이며 '망둥어'는 방언/속칭"
+      },
+      {
+        "organization": "국립생물자원관(NIBR)",
+        "source": "문절망둑 종 페이지",
+        "value": "'문절망둑'이 표준명이고 '망둥어/망둥이'는 별칭으로 처리 — 망둑어과(국내 50여 종)를 뭉뚱그려 부르는 집합적 속칭"
+      }
+    ],
+    "conflicts": [
+      "후보 2건(말뚝망둥어/큰볏말뚝망둥어, 둘 다 Periophthalmus속 짱뚱어류)은 망둑어과 전체 중 극히 일부(갯벌 짱뚱어류)만 대표하며, '망둥어'가 가장 흔히 가리키는 문절망둑(Acanthogobius flavimanus)과는 다른 속이라 이름의 일반적 용법과 어긋남"
+    ],
+    "reviewNote": "'망둥어'는 망둑어과 전체 또는 문절망둑을 가리키는 비표준 통칭이며 단일 표준학명으로 확정할 수 없다. 특히 현재 후보 2건은 통칭이 실제로 가장 흔히 가리키는 대상(문절망둑)과 다른 속이라 그대로 승인하면 오히려 잘못된 종으로 좁혀버리는 결과가 되므로 aggregate_name으로 판정한다."
+  },
+  {
+    "sourceName": "광어",
+    "decision": "approved",
+    "canonicalName": "넙치",
+    "internalId": "BM-SPECIES-000465",
+    "scientificName": "Paralichthys olivaceus",
+    "confidence": "medium",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-000090",
+        "koreanName": "연어",
+        "scientificName": "Oncorhynchus keta",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000097",
+        "koreanName": "숭어",
+        "scientificName": "Mugil cephalus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000188",
+        "koreanName": "농어",
+        "scientificName": "Lateolabrax japonicus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000426",
+        "koreanName": "병어",
+        "scientificName": "Pampus punctatissimus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000501",
+        "koreanName": "방어",
+        "scientificName": "Seriola quinqueradiata",
+        "organismGroup": "fish"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "국립수산과학원(NIFS)",
+        "source": "보도자료 NEWS_SEQ=1765",
+        "value": "\"국민 생선회 광어(넙치) 영양성분 알고 드세요\" — 제목에서 '광어(넙치)' 병기"
+      },
+      {
+        "organization": "NIFS",
+        "source": "contents/actionContentsCons0088.do",
+        "value": "표준 항목명 '넙치', 학명 Paralichthys olivaceus"
+      },
+      {
+        "organization": "MBRIS",
+        "source": "tsearchDetail.do?spcTxnId=270000012842",
+        "value": "국명 '넙치', 학명 Paralichthys olivaceus"
+      }
+    ],
+    "conflicts": [
+      "자동매칭 후보 5건(연어/숭어/농어/병어/방어)은 전부 편집거리 오탐 — 넙치와 무관한 별개 어종이므로 전부 기각"
+    ],
+    "reviewNote": "NIFS 보도자료가 '광어(넙치)'로 명시적으로 병기한 정부 공식 자료를 근거로 승인한다. 다만 이는 생물종 표준명 문서상의 정식 이명 등재가 아니라 보도자료 차원의 통칭 병기이므로 신뢰도는 medium으로 둔다. candidateBefore(연어/숭어/농어/병어/방어)는 이름 유사도 오탐이며 넙치 자체는 원래 자동매칭 후보 목록에 없었으나 공식 근거로 별도 확정함."
+  },
+  {
+    "sourceName": "열기",
+    "decision": "keep_manual_review",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "confidence": "low",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-000317",
+        "koreanName": "발기",
+        "scientificName": "Perccottus glenii",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-016463",
+        "koreanName": "메기",
+        "scientificName": "Silurus asotus",
+        "organismGroup": "fish"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "국립생물자원관(NIBR)",
+        "source": "species.nibr.go.kr ktsn=120000058094 (볼락 페이지, 검색 스니펫)",
+        "value": "볼락(Sebastes inermis) 페이지에 '보라볼락' 등 옛 방언만 확인되고 '열기'는 없음 — 공식 DB에서 '열기=불볼락' 직접 등재를 확인하지 못함"
+      }
+    ],
+    "conflicts": [
+      "fish-data.ts 설명(relatedFish=[볼락,우럭,쏨뱅이], '붉은빛을 띠는 선상낚시 대상어')은 명백히 해수 볼락류(Sebastes)를 가리키는데, 현재 후보 2건(발기=Perccottus glenii, 메기=Silurus asotus)은 둘 다 민물고기라 서식 환경 자체가 모순됨 — 명백한 오탐"
+    ],
+    "reviewNote": "공식 출처로 '열기=불볼락(Sebastes thompsoni)'을 직접 확인하지 못했다(간접 근거만 불볼락 쪽에 수렴). 다만 현재 후보 2건은 담수어라 fish-data.ts 설명과 서식 환경이 정면으로 모순되므로 이 두 후보는 근거 없이도 명백한 오탐으로 판단해 기각 대상으로 기록하고, 전체 상태는 정확한 대체 후보(불볼락 등 Sebastes 속)를 후보 풀에서 다시 찾을 때까지 manual_review로 유지한다."
+  },
+  {
+    "sourceName": "장대",
+    "decision": "approved",
+    "canonicalName": "양태",
+    "internalId": "BM-SPECIES-000065",
+    "scientificName": "Platycephalus indicus",
+    "confidence": "high",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-000425",
+        "koreanName": "덕대",
+        "scientificName": "Pampus argenteus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000566",
+        "koreanName": "박대",
+        "scientificName": "Cynoglossus semilaevis",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-001135",
+        "koreanName": "성대",
+        "scientificName": "Chelidonichthys spinosus",
+        "organismGroup": "fish"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "국립생물자원관(NIBR)",
+        "source": "species.nibr.go.kr ktsn=120000058156 (검색 스니펫)",
+        "value": "\"…서해안과 남해안… 장대, 장태, 낭태라고도 부른다\" — 양태(Platycephalus indicus) 공식 상세페이지에 '장대'가 지방명으로 명시"
+      }
+    ],
+    "conflicts": [
+      "candidateBefore 3건(덕대 Pampus argenteus/박대 Cynoglossus semilaevis/성대 Chelidonichthys spinosus)은 전부 양태와 다른 과(科)의 별개 어종이므로 기각"
+    ],
+    "reviewNote": "NIBR 공식 종 상세페이지가 '장대'를 양태의 지방명으로 직접 명시했다. 양태(BM-SPECIES-000065)는 candidateBefore 목록에는 없었으나 공식 근거로 별도 확정했다."
+  },
+  {
+    "sourceName": "전복",
+    "decision": "aggregate_name",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "confidence": "high",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-002416",
+        "koreanName": "둥근전복",
+        "scientificName": "Haliotis discus",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002417",
+        "koreanName": "말전복",
+        "scientificName": "Haliotis gigantea",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002419",
+        "koreanName": "왕전복",
+        "scientificName": "Haliotis madaka",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002420",
+        "koreanName": "북방전복",
+        "scientificName": "Haliotis discus hannai",
+        "organismGroup": "gastropod"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "NIFS",
+        "source": "board (수산정보 지원방 Q&A, BBS_ID=20201228031218614KLK)",
+        "value": "식품의 기준 및 규격상 '참전복' 학명은 Nordotis discus hannai(=Haliotis discus hannai)로 인용됨"
+      }
+    ],
+    "conflicts": [
+      "후보 4건(둥근전복 H. discus / 말전복 H. gigantea / 왕전복 H. madaka / 북방전복 H. discus hannai)이 서로 다른 종이며, '참전복=둥근전복'이라는 동일성은 지정 출처로 확인되지 않음(오히려 참전복=북방전복 쪽 근거가 더 강함)"
+    ],
+    "reviewNote": "'전복'은 여러 전복과(Haliotidae) 종을 아우르는 집합명이다. 시중 '참전복'이 정확히 어느 후보와 동일한지(둥근전복 vs 북방전복)조차 지정 출처 간 엇갈려 확정할 수 없으므로 '전복' 자체는 aggregate_name으로 판정하고 개별종 확정은 보류한다."
+  },
+  {
+    "sourceName": "참굴",
+    "decision": "approved",
+    "canonicalName": "굴",
+    "internalId": "BM-SPECIES-002965",
+    "scientificName": "Magallana gigas",
+    "confidence": "high",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-000755",
+        "koreanName": "참돔",
+        "scientificName": "Pagrus major",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-002962",
+        "koreanName": "토굴",
+        "scientificName": "Ostrea denselamellosa",
+        "organismGroup": "bivalve"
+      },
+      {
+        "internalId": "BM-SPECIES-002965",
+        "koreanName": "굴",
+        "scientificName": "Magallana gigas",
+        "organismGroup": "bivalve"
+      },
+      {
+        "internalId": "BM-SPECIES-002966",
+        "koreanName": "갓굴",
+        "scientificName": "Magallana ariakensis",
+        "organismGroup": "bivalve"
+      },
+      {
+        "internalId": "BM-SPECIES-005895",
+        "koreanName": "참게",
+        "scientificName": "Eriocheir sinensis",
+        "organismGroup": "crustacean"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "MBRIS",
+        "source": "tsearchDetail.do?spcTxnId=270000010173",
+        "value": "등재된 국명은 '굴'(참굴 아님), 학명 Magallana gigas"
+      },
+      {
+        "organization": "국립생물자원관(NIBR)",
+        "source": "species.nibr.go.kr ktsn=120000043692",
+        "value": "페이지 제목 '굴(긴굴, 참굴)' — 참굴을 굴의 이명/통칭으로 병기"
+      },
+      {
+        "organization": "NIFS",
+        "source": "공공누리 자료 '개체굴(참굴) 양식기술'",
+        "value": "'참굴'을 관용명으로 사용(학명 병기 없음)"
+      }
+    ],
+    "conflicts": [
+      "candidateBefore 5건 중 참돔(어류)·참게(갑각류)는 완전히 다른 생물군이라 기각, 토굴(Ostrea denselamellosa)·갓굴(Magallana ariakensis)은 진짜 굴과(Ostreidae) 종이지만 '참굴'이 가리키는 표준 양식종(Magallana gigas)과는 별개 종이라 기각"
+    ],
+    "reviewNote": "NIBR가 '굴(긴굴, 참굴)'로 병기한 것을 근거로 '참굴'을 '굴'(Magallana gigas)의 관용적 동의어로 승인한다. 표준명으로 별도 등재된 근거는 없어 aliasType은 common_name (관용명) 성격에 가깝다."
+  },
+  {
+    "sourceName": "참복",
+    "decision": "rejected",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": "Takifugu chinensis",
+    "confidence": "high",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-000150",
+        "koreanName": "별복",
+        "scientificName": "Arothron firmamentum",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000151",
+        "koreanName": "청복",
+        "scientificName": "Canthigaster rivulata",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000155",
+        "koreanName": "황복",
+        "scientificName": "Takifugu obscurus",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000159",
+        "koreanName": "망복",
+        "scientificName": "Takifugu reticularis",
+        "organismGroup": "fish"
+      },
+      {
+        "internalId": "BM-SPECIES-000162",
+        "koreanName": "졸복",
+        "scientificName": "Takifugu pardalis",
+        "organismGroup": "fish"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "국립생물자원관(NIBR)/GBIF",
+        "source": "species.nibr.go.kr ktsn=120000059406; gbif.org/species/2407567",
+        "value": "'참복'은 Takifugu chinensis (Abe, 1949)로 국가생물종목록에 등재된 독립 종"
+      },
+      {
+        "organization": "NIFS",
+        "source": "백정익 외(2018) 한국수산과학회 발표",
+        "value": "자주복(T. rubripes)·참복(T. chinensis)·흰점참복(T. pseudommus)을 유전적으로 비교 — 참복을 자주복과 별개 분류군으로 취급"
+      },
+      {
+        "organization": "식품의약품안전처(MFDS)",
+        "source": "식품공전(간접 인용, 식품위생학회지 경유)",
+        "value": "식용 허용 복어 목록에 '참복(Takifugu Chinensis)'이 '자주복'과 별도 항목으로 등재"
+      },
+      {
+        "organization": "WoRMS",
+        "source": "aphia.php?p=taxdetails&id=278414",
+        "value": "Takifugu chinensis (Abe, 1949), accepted"
+      }
+    ],
+    "conflicts": [
+      "후보 5건(별복 Arothron firmamentum/청복 Canthigaster rivulata/황복 Takifugu obscurus/망복 Takifugu reticularis/졸복 Takifugu pardalis) 전부 Takifugu chinensis와 다른 종 — 안전 관련종이므로 이름 유사도만으로 대체 연결 금지"
+    ],
+    "reviewNote": "SAFETY-CRITICAL: '참복'의 공식 표준학명은 Takifugu chinensis이며 5개 후보 중 일치하는 것이 없다. 부산 등지에서 무늬 없는 자주복을 '참복'이라 부르는 것은 국립수산물품질검사원이 지적한 지역 속명(시장 유통명)일 뿐 공식 표준명과 다르다. 독성이 종마다 다른 복어류 특성상 후보 중 하나로 임의 연결하면 안전 오분류 위험이 있으므로 제시된 5건은 전부 rejected(현재 후보 풀 안에서는 연결 불가)로 판정한다. 다만 이는 '참복'이라는 이름 자체를 무효화하는 것이 아니라 이 5개 후보와의 연결을 거절하는 것이다 — 정확한 종(Takifugu chinensis)이 Blue Marina 후보 풀에 별도로 등록되면 그때 재검토해 승인할 수 있다. (2024년 유전학 논문은 T. rubripes/chinensis/pseudommus 동종 가능성을 제기해 분류학적 논쟁이 진행 중임도 참고할 것.)"
+  },
+  {
+    "sourceName": "불가사리",
+    "decision": "rejected",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "confidence": "high",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-002509",
+        "koreanName": "불가사리퉁퉁이고둥",
+        "scientificName": "Parvioris fulvescens",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002510",
+        "koreanName": "가시불가사리바늘고둥",
+        "scientificName": "Parvioris astropectenicola",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002524",
+        "koreanName": "빨강불가사리속살이고둥",
+        "scientificName": "Stilifer akahitode",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002534",
+        "koreanName": "불가사리기생고둥",
+        "scientificName": "Thyca crystallina",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-003277",
+        "koreanName": "거미불가사리조개",
+        "scientificName": "Nipponomysella oblongata",
+        "organismGroup": "bivalve"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "로컬 분류학 검토",
+        "source": "blue-marina-nonfish-candidates.json",
+        "value": "MBRIS Blue Marina 후보 풀은 fish/cephalopod/crustacean/gastropod/bivalve 5개 organismGroup만 다룬다 — 극피동물문(Echinodermata) 자체가 후보 풀에 없다. 매칭된 후보는 전부 '그 생물의 이름을 딴' 또는 '그 생물에 기생/공생하는' 전혀 다른 분류군(고둥·조개·게)이다. 웹 조사로 해결할 문제가 아니라 후보 풀에 극피동물 그룹을 추가해야 해결되는 구조적 공백이다."
+      }
+    ],
+    "conflicts": [
+      "후보 5건 전부 불가사리(불가사리강, Asteroidea)가 아니라 불가사리에 기생/공생하는 복족류(고둥) 또는 이매패류(조개) — 이름에 '불가사리'가 들어갈 뿐 대상 생물 자체가 아님"
+    ],
+    "reviewNote": "제시된 후보 5건은 전부 wrong-organism 매칭이므로 rejected로 판정한다(이 5개 후보와의 연결을 거절하는 것이지 '불가사리'라는 이름 자체를 무효화하는 것이 아니다). 근본 원인은 MBRIS Blue Marina 후보 풀에 극피동물문(Echinodermata) 카테고리 자체가 없다는 구조적 공백이며, 이는 웹 조사로 해결될 사안이 아니다. 후보 풀에 극피동물 그룹이 추가되면 그때 정확한 종으로 재검토·승인할 수 있다."
+  },
+  {
+    "sourceName": "성게",
+    "decision": "rejected",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "confidence": "high",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-002507",
+        "koreanName": "보라성게살이고둥",
+        "scientificName": "Vitreolina langfordi",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002508",
+        "koreanName": "성게살이꼬부리고둥",
+        "scientificName": "Vitreobalcis temnopleuricola",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002519",
+        "koreanName": "꼬마투명성게살이고둥",
+        "scientificName": "Hypermastus peronellicola",
+        "organismGroup": "gastropod"
+      },
+      {
+        "internalId": "BM-SPECIES-002533",
+        "koreanName": "방패연잎성게살이고둥",
+        "scientificName": "Clypeastericola clypeastericola",
+        "organismGroup": "gastropod"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "로컬 분류학 검토",
+        "source": "blue-marina-nonfish-candidates.json",
+        "value": "MBRIS Blue Marina 후보 풀은 fish/cephalopod/crustacean/gastropod/bivalve 5개 organismGroup만 다룬다 — 극피동물문(Echinodermata) 자체가 후보 풀에 없다. 매칭된 후보는 전부 '그 생물의 이름을 딴' 또는 '그 생물에 기생/공생하는' 전혀 다른 분류군(고둥·조개·게)이다. 웹 조사로 해결할 문제가 아니라 후보 풀에 극피동물 그룹을 추가해야 해결되는 구조적 공백이다."
+      }
+    ],
+    "conflicts": [
+      "후보 4건 전부 성게(성게강, Echinoidea)가 아니라 성게에 기생/공생하는 복족류(고둥) — 이름에 '성게'가 들어갈 뿐 대상 생물 자체가 아님"
+    ],
+    "reviewNote": "제시된 후보 4건은 전부 wrong-organism 매칭이므로 rejected로 판정한다(이 4개 후보와의 연결을 거절하는 것이지 '성게'라는 이름 자체를 무효화하는 것이 아니다). 불가사리·해삼과 동일한 극피동물문 후보 풀 공백 문제([[불가사리]] 참조) — 후보 풀에 극피동물 그룹이 추가되면 그때 정확한 종으로 재검토·승인할 수 있다."
+  },
+  {
+    "sourceName": "해삼",
+    "decision": "rejected",
+    "canonicalName": null,
+    "internalId": null,
+    "scientificName": null,
+    "confidence": "high",
+    "candidateBefore": [
+      {
+        "internalId": "BM-SPECIES-005503",
+        "koreanName": "납작흰해삼속살이게",
+        "scientificName": "Pinnixa penultipedalis",
+        "organismGroup": "crustacean"
+      },
+      {
+        "internalId": "BM-SPECIES-005504",
+        "koreanName": "흰해삼속살이게",
+        "scientificName": "Pinnixa tumida",
+        "organismGroup": "crustacean"
+      }
+    ],
+    "evidence": [
+      {
+        "organization": "로컬 분류학 검토",
+        "source": "blue-marina-nonfish-candidates.json",
+        "value": "MBRIS Blue Marina 후보 풀은 fish/cephalopod/crustacean/gastropod/bivalve 5개 organismGroup만 다룬다 — 극피동물문(Echinodermata) 자체가 후보 풀에 없다. 매칭된 후보는 전부 '그 생물의 이름을 딴' 또는 '그 생물에 기생/공생하는' 전혀 다른 분류군(고둥·조개·게)이다. 웹 조사로 해결할 문제가 아니라 후보 풀에 극피동물 그룹을 추가해야 해결되는 구조적 공백이다."
+      }
+    ],
+    "conflicts": [
+      "후보 2건 전부 해삼(해삼강, Holothuroidea)이 아니라 해삼 체내에 공생하는 갑각류(게) — 이름에 '해삼'이 들어갈 뿐 대상 생물 자체가 아님"
+    ],
+    "reviewNote": "제시된 후보 2건은 전부 wrong-organism 매칭이므로 rejected로 판정한다(이 2개 후보와의 연결을 거절하는 것이지 '해삼'이라는 이름 자체를 무효화하는 것이 아니다). 불가사리·성게와 동일한 극피동물문 후보 풀 공백 문제([[불가사리]] 참조) — 후보 풀에 극피동물 그룹이 추가되면 그때 정확한 종으로 재검토·승인할 수 있다."
+  }
+]

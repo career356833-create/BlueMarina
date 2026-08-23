@@ -1,0 +1,36 @@
+{
+  "totalRecords": 151,
+  "errorCount": 0,
+  "conflictCount": 3,
+  "errors": [],
+  "conflicts": [
+    {
+      "type": "approved_alias_multiple_species_link",
+      "internalId": "BM-SPECIES-000444",
+      "sourceNames": [
+        "갈치",
+        "은갈치"
+      ],
+      "note": "여러 sourceName이 한 종을 가리키는 건 정상(동의어 허용)"
+    },
+    {
+      "type": "approved_alias_multiple_species_link",
+      "internalId": "BM-SPECIES-000465",
+      "sourceNames": [
+        "광어",
+        "넙치"
+      ],
+      "note": "여러 sourceName이 한 종을 가리키는 건 정상(동의어 허용)"
+    },
+    {
+      "type": "approved_alias_multiple_species_link",
+      "internalId": "BM-SPECIES-000065",
+      "sourceNames": [
+        "양태",
+        "장대"
+      ],
+      "note": "여러 sourceName이 한 종을 가리키는 건 정상(동의어 허용)"
+    }
+  ],
+  "valid": true
+}

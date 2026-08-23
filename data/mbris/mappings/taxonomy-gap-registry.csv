@@ -1,0 +1,4 @@
+﻿gapId,group,koreanName,issueType,reason,status,relatedCandidateCount,relatedCandidateNames,sourceReviewBatch,sourceDecision,createdAt,updatedAt
+GAP-000001,Echinodermata,불가사리,taxonomy_missing,현재 Blue Marina 후보 분류 범위에 없음,planned,5,불가사리퉁퉁이고둥 / 가시불가사리바늘고둥 / 빨강불가사리속살이고둥 / 불가사리기생고둥 / 거미불가사리조개,batch3,rejected,2026-08-01T15:40:55.598902+00:00,2026-08-01T15:40:55.598902+00:00
+GAP-000002,Echinodermata,성게,taxonomy_missing,현재 Blue Marina 후보 분류 범위에 없음,planned,4,보라성게살이고둥 / 성게살이꼬부리고둥 / 꼬마투명성게살이고둥 / 방패연잎성게살이고둥,batch3,rejected,2026-08-01T15:40:55.598902+00:00,2026-08-01T15:40:55.598902+00:00
+GAP-000003,Echinodermata,해삼,taxonomy_missing,현재 Blue Marina 후보 분류 범위에 없음,planned,2,납작흰해삼속살이게 / 흰해삼속살이게,batch3,rejected,2026-08-01T15:40:55.598902+00:00,2026-08-01T15:40:55.598902+00:00

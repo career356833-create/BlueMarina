@@ -1,0 +1,177 @@
+"""Batch2(보류 6건) 공식 출처 조사 결과.
+
+조사 순서(허용 출처만): MBRIS → NIFS → 국가생물종지식정보시스템 → 공공데이터포털
+→ WoRMS → FishBase/SeaLifeBase. 블로그·쇼핑몰·낚시카페·유튜브는 근거로 쓰지 않았다.
+
+신뢰도 규칙:
+  high   = 국내 공식기관에서 국명·학명 관계가 직접 확인됨 → 향후 자동 반영 후보 가능
+  medium = 국제 분류 DB와 국내 설명이 일치하지만 국내 별칭 근거가 약함
+  low    = 정황만 있고 직접 근거 없음
+"""
+from __future__ import annotations
+
+TARGET_NAMES = ["점벵에돔", "흑벵에돔", "대삼치", "쭈꾸미", "한치", "쥐치포용 쥐치"]
+
+APPROVED_ALIAS = "approved_alias"
+APPROVED_SPECIES = "approved_species"
+AGGREGATE_NAME = "aggregate_name"
+MARKET_NAME = "market_name"
+SPELLING_VARIANT = "spelling_variant"
+SOURCE_NAME_ISSUE = "source_name_issue"
+KEEP_MANUAL_REVIEW = "keep_manual_review"
+REJECTED_CANDIDATE = "rejected_candidate"
+
+VALID_DECISIONS = {APPROVED_ALIAS, APPROVED_SPECIES, AGGREGATE_NAME, MARKET_NAME,
+                   SPELLING_VARIANT, SOURCE_NAME_ISSUE, KEEP_MANUAL_REVIEW, REJECTED_CANDIDATE}
+VALID_CONFIDENCE = {"high", "medium", "low"}
+
+# 이 세 판정 유형은 정의상 단일 종으로 확정할 수 없다 — 항상 candidateInternalId=None이어야 한다.
+NO_SINGLE_SPECIES_DECISIONS = {AGGREGATE_NAME, MARKET_NAME}
+
+DECISIONS: dict[str, dict] = {
+    "점벵에돔": {
+        "decision": KEEP_MANUAL_REVIEW,
+        "canonicalKoreanName": None,
+        "acceptedScientificName": None,
+        "candidateInternalId": None,
+        "nameType": "unknown_possibly_colloquial",
+        "confidence": "low",
+        "officialEvidence": [
+            {"organization": "FishBase", "title": "Girella punctata Common Names List",
+             "url": "https://www.fishbase.se/",
+             "evidence": ("한국어 통용명으로 '벵에돔', '긴꼬리벵에돔'(로마자 Peng-e-dom)만 등재됨. "
+                         "'점벵에돔'은 없음.")},
+            {"organization": "국립수산과학원(NIFS)", "title": "site 검색(nifs.go.kr)",
+             "url": "https://www.nifs.go.kr/",
+             "evidence": "'점벵에돔' 명칭이 등장하는 페이지를 찾지 못함(확인 안 됨)."},
+        ],
+        "conflicts": ["6개 공식 출처 어디에도 '점벵에돔'이라는 명칭 자체가 등재돼 있지 않음",
+                     "벵에돔과 동일종인지 반점을 가진 근연/변종인지 판별할 공식 근거 없음"],
+        "recommendedAction": ("공식 등재 근거가 없어 자동 반영 불가. 국립생물자원관 벵에돔 "
+                              "상세페이지(species.nibr.go.kr, ktsn=120000058656)의 이명 항목을 "
+                              "사람이 직접 브라우저로 열람해 재확인 필요(자동 접근이 SPA 구조로 막힘)."),
+    },
+    "흑벵에돔": {
+        "decision": KEEP_MANUAL_REVIEW,
+        "canonicalKoreanName": None,
+        "acceptedScientificName": None,
+        "candidateInternalId": None,
+        "nameType": "unknown_possibly_colloquial",
+        "confidence": "low",
+        "officialEvidence": [
+            {"organization": "FishBase", "title": "Girella punctata Common Names List",
+             "url": "https://www.fishbase.se/",
+             "evidence": "한국어 통용명 '벵에돔', '긴꼬리벵에돔'만 등재. '흑벵에돔'은 없음."},
+        ],
+        "conflicts": ["6개 공식 출처 어디에도 '흑벵에돔'이라는 명칭 자체가 등재돼 있지 않음",
+                     "점벵에돔과 동일한 패턴 — 벵에돔과 동일종인지 색형 변이인지 판별 불가"],
+        "recommendedAction": "점벵에돔과 동일 — 국립생물자원관 이명 항목 사람 직접 확인 필요.",
+    },
+    "대삼치": {
+        "decision": MARKET_NAME,
+        "canonicalKoreanName": None,
+        "acceptedScientificName": None,
+        "candidateInternalId": None,
+        "nameType": "size_grade_market_term",
+        "confidence": "medium",
+        "officialEvidence": [
+            {"organization": "국립수산과학원(NIFS)",
+             "title": "주요생물 생태와 생활사 — 삼치",
+             "url": "https://www.nifs.go.kr/contents/actionContentsCons0088.do",
+             "evidence": ("삼치는 학명 Scomberomorus niphonius 단일종으로만 표준화돼 있고 "
+                         "'대삼치'라는 별도 어종 언급이 없음.")},
+            {"organization": "국립해양생물자원관(MBRIS)", "title": "site 검색(mbris.kr)",
+             "url": "https://www.mbris.kr/",
+             "evidence": "'대삼치'로 직접 등재된 종 없음. 삼치과 다른 종(줄삼치 등)만 확인됨."},
+        ],
+        "conflicts": ["공식 출처 어디에도 '대삼치'가 별도 학명을 가진 등재종으로 확인되지 않음",
+                     "원본 설명 '삼치보다 큰 크기'가 크기 등급 표현과 부합 — 동일종 단순 별칭으로 "
+                     "보기에는 정체성 진술이 아니라 비교 진술이라는 점에서 성장단계/상품등급 해석에 무게"],
+        "recommendedAction": ("표준 국명이 아니라 상품·크기 구분 속칭으로 판단. 삼치(BM-SPECIES-000408)의 "
+                              "별칭으로 단순 승인하지 않는다 — 시장명을 표준 국명으로 덮어쓰지 않는다는 "
+                              "안전규칙에 따라 candidateInternalId를 비워둔다."),
+    },
+    "쭈꾸미": {
+        "decision": SPELLING_VARIANT,
+        "canonicalKoreanName": "주꾸미",
+        "acceptedScientificName": "Amphioctopus fangsiao",
+        "candidateInternalId": "BM-SPECIES-003107",
+        "nameType": "regional_dialect_spelling",
+        "confidence": "high",
+        "officialEvidence": [
+            {"organization": "국립국어원 우리말샘(opendict.korean.go.kr)",
+             "title": "'쭈꾸미' 표제어",
+             "url": "https://opendict.korean.go.kr/",
+             "evidence": ("품사 명사, 분류 방언(전남), 뜻풀이 \"'주꾸미'의 방언(전남)\". "
+                         "관련어 '쭈꾸미-집'의 규범 표기는 '주꾸밋집'이라고 명시.")},
+            {"organization": "국립국어원 표준국어대사전(stdict.korean.go.kr)",
+             "title": "'주꾸미' 표제어",
+             "url": "https://stdict.korean.go.kr/",
+             "evidence": "'주꾸미'만 표준어 표제어로 등재(\"문어과의 연체동물...\"). '쭈꾸미'는 0건."},
+        ],
+        "conflicts": ["학술 어종 DB(MBRIS/NIFS/species.nibr.go.kr/WoRMS/FishBase)에서 '쭈꾸미'를 "
+                     "이명으로 직접 등재한 근거는 확인하지 못함 — 근거는 국어 규범기관 소스뿐"],
+        "recommendedAction": ("국립국어원(국가 공식 언어 규범기관)이 방언 관계를 명시적으로 확인했다. "
+                              "생물분류학적 이명 등재는 아니지만 표기 변형 판정 근거로는 충분히 강하다. "
+                              "다만 이번 시뮬레이션은 지시대로 approved_alias/approved_species만 "
+                              "반영 대상으로 삼아 spelling_variant는 포함하지 않는다 — 별도 승인 "
+                              "라운드에서 approved_alias로 재상정 검토 권장."),
+    },
+    "한치": {
+        "decision": AGGREGATE_NAME,
+        "canonicalKoreanName": None,
+        "acceptedScientificName": None,
+        "candidateInternalId": None,
+        "nameType": "regional_market_aggregate",
+        "confidence": "high",
+        "officialEvidence": [
+            {"organization": "국립수산물품질관리원(해양수산부 산하, fsis.go.kr)",
+             "title": "오징어보다 한 수 위 '한치'",
+             "url": "https://www.fsis.go.kr/front/contents/cmsView.do?cate_id=0301&cnts_id=18408",
+             "evidence": ("\"한치는 표준명이 아니다. 한치의 실제 이름은 창꼴뚜기 또는 화살꼴뚜기이다.\" "
+                         "제주한치=창꼴뚜기(여름 산란), 동해한치=화살꼴뚜기(봄 산란)로 지역별로 다른 "
+                         "종을 가리킨다고 명시.")},
+            {"organization": "WoRMS", "title": "Uroteuthis chinensis / Loligo edulis / Loligo bleekeri",
+             "url": "https://www.marinespecies.org/",
+             "evidence": ("Uroteuthis chinensis는 accepted name. Loligo edulis는 Uroteuthis edulis의, "
+                         "Loligo bleekeri는 Heterololigo bleekeri의 unaccepted synonym — "
+                         "'한치'로 통칭되는 종들이 서로 다른 속(屬)에 걸쳐 있음을 뒷받침.")},
+        ],
+        "conflicts": ["해양수산부 산하 공식기관이 '표준명이 아니다'라고 명시적으로 부정",
+                     "지역에 따라 최소 2개의 서로 다른 학명(창꼴뚜기/화살꼴뚜기)을 가리킴 — "
+                     "단일 종으로 확정하면 지역에 따라 오분류가 발생함"],
+        "recommendedAction": ("정부 공식기관이 집합명임을 직접 확인했다. 어떤 단일 MBRIS 종에도 "
+                              "매핑하지 않는다 — candidateInternalId를 비워두는 것이 안전규칙에 "
+                              "부합한다."),
+    },
+    "쥐치포용 쥐치": {
+        "decision": SOURCE_NAME_ISSUE,
+        "canonicalKoreanName": None,
+        "acceptedScientificName": None,
+        "candidateInternalId": None,
+        "nameType": "malformed_source_name",
+        "confidence": "high",
+        "officialEvidence": [
+            {"organization": "국립국어원 표준국어대사전(stdict.korean.go.kr)",
+             "title": "'포용' 표제어 검색",
+             "url": "https://stdict.korean.go.kr/",
+             "evidence": ("'포용'은 오직 '包容'(너그럽게 감싸 받아들임)으로만 등재됨. "
+                         "'포(脯)+용(用)' 조합의 한자어는 어떤 사전에도 없음 — '쥐치포용'은 "
+                         "문법적으로 성립하지 않는 조어.")},
+            {"organization": "국립국어원 표준국어대사전 / 한국민족문화대백과사전",
+             "title": "'쥐치포'·'쥐포' 관련어",
+             "url": "https://stdict.korean.go.kr/ , https://encykorea.aks.ac.kr/",
+             "evidence": ("'쥐치포'는 표준국어대사전 미등재이나 한국민족문화대백과사전 등에서 "
+                         "'쥐치를 포 떠서 조미·건조한 식품'을 가리키는 정착된 실생활 용어로 확인됨.")},
+            {"organization": "국립해양생물자원관(MBRIS)/국립수산과학원(NIFS)",
+             "title": "site 검색", "url": "https://www.mbris.kr/ , https://www.nifs.go.kr/",
+             "evidence": "'쥐치포용' 또는 '쥐치포용 쥐치'가 어종명·상품명으로 등재된 사례 없음."},
+        ],
+        "conflicts": ["sourceName 자체가 국어 문법상 성립하지 않는 조어",
+                     "원본 설명('건어물과 식용으로 친숙한 쥐치류입니다')이 '쥐치포 용도'라는 "
+                     "설명 문구이지 종명이 아님을 뒷받침"],
+        "recommendedAction": ("Batch1에서 발견한 이름오염 사례가 공식 사전 근거로 확정됐다. "
+                              "'쥐치'로 자동 축약하지 않는다 — fish-data.ts 원본 name 필드 정정 여부를 "
+                              "사람이 별도로 결정해야 한다(이번 작업 범위 밖, 원본 미수정)."),
+    },
+}

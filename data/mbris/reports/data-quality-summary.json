@@ -1,0 +1,131 @@
+{
+  "generatedAt": "2026-07-30T19:16:48.105390+00:00",
+  "totalDataRows": 16587,
+  "perSheet": {
+    "척추동물": {
+      "dataRows": 1554,
+      "missingKoreanName": 1,
+      "missingScientificName": 0,
+      "missingBoth": 0,
+      "exactDuplicateRows": 0,
+      "duplicateScientificNames": 0,
+      "missingHoldingInfo": 599,
+      "missingClass": 0,
+      "missingOrder": 0,
+      "missingFamily": 0,
+      "uncertainTaxa": 0
+    },
+    "무척추동물": {
+      "dataRows": 6355,
+      "missingKoreanName": 505,
+      "missingScientificName": 0,
+      "missingBoth": 0,
+      "exactDuplicateRows": 0,
+      "duplicateScientificNames": 0,
+      "missingHoldingInfo": 2121,
+      "missingClass": 0,
+      "missingOrder": 0,
+      "missingFamily": 0,
+      "uncertainTaxa": 3
+    },
+    "식물": {
+      "dataRows": 1124,
+      "missingKoreanName": 67,
+      "missingScientificName": 0,
+      "missingBoth": 0,
+      "exactDuplicateRows": 0,
+      "duplicateScientificNames": 0,
+      "missingHoldingInfo": 206,
+      "missingClass": 0,
+      "missingOrder": 0,
+      "missingFamily": 0,
+      "uncertainTaxa": 30
+    },
+    "원생생물": {
+      "dataRows": 3337,
+      "missingKoreanName": 3102,
+      "missingScientificName": 0,
+      "missingBoth": 0,
+      "exactDuplicateRows": 0,
+      "duplicateScientificNames": 0,
+      "missingHoldingInfo": 2144,
+      "missingClass": 0,
+      "missingOrder": 0,
+      "missingFamily": 0,
+      "uncertainTaxa": 46
+    },
+    "미생물": {
+      "dataRows": 3958,
+      "missingKoreanName": 3958,
+      "missingScientificName": 0,
+      "missingBoth": 0,
+      "exactDuplicateRows": 0,
+      "duplicateScientificNames": 0,
+      "missingHoldingInfo": 700,
+      "missingClass": 0,
+      "missingOrder": 0,
+      "missingFamily": 0,
+      "uncertainTaxa": 41
+    },
+    "육상담수종": {
+      "dataRows": 259,
+      "missingKoreanName": 36,
+      "missingScientificName": 0,
+      "missingBoth": 0,
+      "exactDuplicateRows": 0,
+      "duplicateScientificNames": 0,
+      "missingHoldingInfo": 141,
+      "missingClass": 0,
+      "missingOrder": 0,
+      "missingFamily": 0,
+      "uncertainTaxa": 2
+    }
+  },
+  "crossSheet": {
+    "sameScientificNameMultipleKorean": 0,
+    "sameKoreanNameMultipleScientific": 21,
+    "sampleMultipleKorean": {},
+    "sampleMultipleScientific": {
+      "놀래기": [
+        "Dermonema pulvinatum",
+        "Halichoeres tenuispinis"
+      ],
+      "뜸부기": [
+        "Gallicrex cinerea",
+        "Silvetia siliquosa"
+      ],
+      "등줄조개": [
+        "Astarte alaskensis",
+        "Tridonta elliptica"
+      ],
+      "장식도롱이갯민숭이": [
+        "Tenellia ornata",
+        "Trinchesia ornata"
+      ],
+      "흰점박이도롱이갯민숭이": [
+        "Coryphella athadona",
+        "Occidenthella athadona"
+      ],
+      "민무늬흰점박이도롱이갯민숭이": [
+        "Coryphella amabilis",
+        "Microchlamylla amabilis"
+      ],
+      "분홍무늬팥알고둥": [
+        "Argalista glareosa",
+        "Collonista glareosa"
+      ],
+      "붉은흰반점문어": [
+        "Callistoctopus macropus",
+        "Pinnoctopus macropus"
+      ],
+      "둥근달떡조개": [
+        "Dosinella angulosa",
+        "Dosinia angulosa"
+      ],
+      "바다선인장": [
+        "Cavernularia obesa",
+        "Cryptonemia tuniformis"
+      ]
+    }
+  }
+}

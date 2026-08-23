@@ -1,0 +1,32 @@
+[
+  {
+    "sourceName": "은갈치",
+    "canonicalKoreanName": "갈치",
+    "internalId": "BM-SPECIES-000444",
+    "evidenceSource": "NIFS_DIALECT",
+    "evidenceValue": "NIFS '갈치' 방언 목록에 '은갈치(제주)'로 등재됨",
+    "approvalStatus": "approved",
+    "approvedAt": "2026-08-01T06:07:23.748054+00:00",
+    "matchConfidence": "high"
+  },
+  {
+    "sourceName": "참소라",
+    "canonicalKoreanName": "소라",
+    "internalId": "BM-SPECIES-002324",
+    "evidenceSource": "NIFS_DIALECT",
+    "evidenceValue": "NIFS '제주소라' 방언 목록에 '참소라'로 등재됨",
+    "approvalStatus": "approved",
+    "approvedAt": "2026-08-01T06:07:23.748054+00:00",
+    "matchConfidence": "high"
+  },
+  {
+    "sourceName": "쭈꾸미",
+    "canonicalKoreanName": "주꾸미",
+    "internalId": "BM-SPECIES-003107",
+    "evidenceSource": "KOREAN_LANGUAGE_AUTHORITY",
+    "evidenceValue": "국립국어원 우리말샘(opendict.korean.go.kr): 품사 명사, 분류 방언(전남), 뜻풀이 \"'주꾸미'의 방언(전남)\". 관련어 '쭈꾸미-집'의 규범 표기는 '주꾸밋집'이라고 명시. / 국립국어원 표준국어대사전(stdict.korean.go.kr): '주꾸미'만 표준어 표제어로 등재(\"문어과의 연체동물...\"). '쭈꾸미'는 0건.",
+    "approvalStatus": "approved",
+    "approvedAt": "2026-08-01T10:20:08.042929+00:00",
+    "matchConfidence": "high"
+  }
+]

@@ -1,0 +1,626 @@
+[
+  {
+    "sourceName": "가다랑어",
+    "internalId": "BM-SPECIES-000412",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "갈치",
+    "internalId": "BM-SPECIES-000444",
+    "matchType": "synonym",
+    "confidence": "medium",
+    "evidenceSource": "NIFS_TRANSITIVE",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "감성돔",
+    "internalId": "BM-SPECIES-000751",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "강도다리",
+    "internalId": "BM-SPECIES-000555",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "갯강구",
+    "internalId": "BM-SPECIES-006084",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "갯장어",
+    "internalId": "BM-SPECIES-000900",
+    "matchType": "scientific_exact",
+    "confidence": "high",
+    "evidenceSource": "NIFS_TRANSITIVE",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "고등어",
+    "internalId": "BM-SPECIES-000417",
+    "matchType": "scientific_exact",
+    "confidence": "high",
+    "evidenceSource": "NIFS_TRANSITIVE",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "곰치",
+    "internalId": "BM-SPECIES-000935",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "광어",
+    "internalId": "BM-SPECIES-000465",
+    "matchType": "approved_alias",
+    "confidence": "medium",
+    "evidenceSource": "REGISTRY_APPROVAL",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "꼬치고기",
+    "internalId": "BM-SPECIES-000459",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "꼼치",
+    "internalId": "BM-SPECIES-000057",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "꽁치",
+    "internalId": "BM-SPECIES-000881",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "넙치",
+    "internalId": "BM-SPECIES-000465",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "노래미",
+    "internalId": "BM-SPECIES-001164",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "놀래기",
+    "internalId": "BM-SPECIES-000594",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "농어",
+    "internalId": "BM-SPECIES-000188",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "능성어",
+    "internalId": "BM-SPECIES-001215",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "다금바리",
+    "internalId": "BM-SPECIES-001227",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "달고기",
+    "internalId": "BM-SPECIES-000095",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "대구",
+    "internalId": "BM-SPECIES-001056",
+    "matchType": "scientific_exact",
+    "confidence": "high",
+    "evidenceSource": "NIFS_TRANSITIVE",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "덕대",
+    "internalId": "BM-SPECIES-000425",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "도다리",
+    "internalId": "BM-SPECIES-000548",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "독가시치",
+    "internalId": "BM-SPECIES-000800",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "돌가자미",
+    "internalId": "BM-SPECIES-000554",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "돌돔",
+    "internalId": "BM-SPECIES-000278",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "돛새치",
+    "internalId": "BM-SPECIES-000473",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "말쥐치",
+    "internalId": "BM-SPECIES-000129",
+    "matchType": "scientific_exact",
+    "confidence": "high",
+    "evidenceSource": "NIFS_TRANSITIVE",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "망상어",
+    "internalId": "BM-SPECIES-000223",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "먹장어",
+    "internalId": "BM-SPECIES-000710",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "멸치",
+    "internalId": "BM-SPECIES-001029",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "명태",
+    "internalId": "BM-SPECIES-001057",
+    "matchType": "synonym",
+    "confidence": "medium",
+    "evidenceSource": "NIFS_TRANSITIVE",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "문어",
+    "internalId": "BM-SPECIES-003111",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "물메기",
+    "internalId": "BM-SPECIES-000060",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "미역치",
+    "internalId": "BM-SPECIES-001157",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "민어",
+    "internalId": "BM-SPECIES-000840",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "방어",
+    "internalId": "BM-SPECIES-000501",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "벵에돔",
+    "internalId": "BM-SPECIES-000279",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "병어",
+    "internalId": "BM-SPECIES-000426",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "보리멸",
+    "internalId": "BM-SPECIES-000818",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "볼락",
+    "internalId": "BM-SPECIES-000002",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "부시리",
+    "internalId": "BM-SPECIES-000500",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "붕장어",
+    "internalId": "BM-SPECIES-000908",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "살오징어",
+    "internalId": "BM-SPECIES-003117",
+    "matchType": "scientific_exact",
+    "confidence": "high",
+    "evidenceSource": "NIFS_TRANSITIVE",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "삼치",
+    "internalId": "BM-SPECIES-000408",
+    "matchType": "scientific_exact",
+    "confidence": "high",
+    "evidenceSource": "NIFS_TRANSITIVE",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "성대",
+    "internalId": "BM-SPECIES-001135",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "숭어",
+    "internalId": "BM-SPECIES-000097",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "쏠종개",
+    "internalId": "BM-SPECIES-001012",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "쏨뱅이",
+    "internalId": "BM-SPECIES-000019",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "쑤기미",
+    "internalId": "BM-SPECIES-001153",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "아귀",
+    "internalId": "BM-SPECIES-000080",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "양태",
+    "internalId": "BM-SPECIES-000065",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "옥돔",
+    "internalId": "BM-SPECIES-000825",
+    "matchType": "scientific_exact",
+    "confidence": "high",
+    "evidenceSource": "NIFS_TRANSITIVE",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "우럭",
+    "internalId": "BM-SPECIES-002852",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "은갈치",
+    "internalId": "BM-SPECIES-000444",
+    "matchType": "approved_alias",
+    "confidence": "high",
+    "evidenceSource": "NIFS_DIALECT",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "임연수어",
+    "internalId": "BM-SPECIES-001161",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "자리돔",
+    "internalId": "BM-SPECIES-000226",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "자바리",
+    "internalId": "BM-SPECIES-001204",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "장대",
+    "internalId": "BM-SPECIES-000065",
+    "matchType": "approved_alias",
+    "confidence": "high",
+    "evidenceSource": "REGISTRY_APPROVAL",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "전갱이",
+    "internalId": "BM-SPECIES-000488",
+    "matchType": "scientific_exact",
+    "confidence": "high",
+    "evidenceSource": "NIFS_TRANSITIVE",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "전어",
+    "internalId": "BM-SPECIES-001037",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "정어리",
+    "internalId": "BM-SPECIES-001040",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "준치",
+    "internalId": "BM-SPECIES-001030",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "줄가자미",
+    "internalId": "BM-SPECIES-000541",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "줄삼치",
+    "internalId": "BM-SPECIES-000415",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "쥐노래미",
+    "internalId": "BM-SPECIES-001165",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "쥐치",
+    "internalId": "BM-SPECIES-000122",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "쭈꾸미",
+    "internalId": "BM-SPECIES-003107",
+    "matchType": "approved_alias",
+    "confidence": "high",
+    "evidenceSource": "KOREAN_LANGUAGE_AUTHORITY",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "참가자미",
+    "internalId": "BM-SPECIES-000544",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "참굴",
+    "internalId": "BM-SPECIES-002965",
+    "matchType": "approved_alias",
+    "confidence": "high",
+    "evidenceSource": "REGISTRY_APPROVAL",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "참돔",
+    "internalId": "BM-SPECIES-000755",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "참소라",
+    "internalId": "BM-SPECIES-002324",
+    "matchType": "approved_alias",
+    "confidence": "high",
+    "evidenceSource": "NIFS_DIALECT",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "청어",
+    "internalId": "BM-SPECIES-001022",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "학공치",
+    "internalId": "BM-SPECIES-000884",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "홍가자미",
+    "internalId": "BM-SPECIES-000553",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "홍어",
+    "internalId": "BM-SPECIES-000649",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "홍합",
+    "internalId": "BM-SPECIES-003025",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "황새치",
+    "internalId": "BM-SPECIES-000479",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  },
+  {
+    "sourceName": "황어",
+    "internalId": "BM-SPECIES-000958",
+    "matchType": "korean_candidate",
+    "confidence": "medium",
+    "evidenceSource": "MBRIS_KOREAN_NAME_MATCH",
+    "resolutionStatus": "resolved"
+  }
+]

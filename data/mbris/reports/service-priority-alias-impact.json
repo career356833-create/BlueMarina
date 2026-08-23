@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-08-01T15:39:54.031527+00:00",
+  "existingMatchedCount": 72,
+  "resolvedMatchedCount": 75,
+  "approvedAliasCount": 3,
+  "beforeTierACount": 86,
+  "afterTierACount": 87,
+  "tierAChange": 1,
+  "newlyEnteredTierA": [
+    {
+      "internalId": "BM-SPECIES-002965",
+      "koreanName": "굴",
+      "servicePriorityScore": 78,
+      "fishDataSourceNames": [
+        "참굴"
+      ]
+    }
+  ],
+  "leftTierA": [],
+  "scoreIncreasedTierUnchanged": [
+    {
+      "internalId": "BM-SPECIES-002324",
+      "koreanName": "소라",
+      "scoreBefore": 63,
+      "scoreAfter": 100,
+      "tier": "A",
+      "fishDataSourceNamesAfter": [
+        "참소라"
+      ]
+    },
+    {
+      "internalId": "BM-SPECIES-003107",
+      "koreanName": "주꾸미",
+      "scoreBefore": 67,
+      "scoreAfter": 100,
+      "tier": "A",
+      "fishDataSourceNamesAfter": [
+        "쭈꾸미"
+      ]
+    }
+  ],
+  "speciesWithMultipleSourceNames": [
+    {
+      "internalId": "BM-SPECIES-000444",
+      "sourceNames": [
+        "갈치",
+        "은갈치"
+      ]
+    },
+    {
+      "internalId": "BM-SPECIES-000465",
+      "sourceNames": [
+        "광어",
+        "넙치"
+      ]
+    },
+    {
+      "internalId": "BM-SPECIES-000065",
+      "sourceNames": [
+        "양태",
+        "장대"
+      ]
+    }
+  ],
+  "note": "Tier A 증가분이 승인 건수(2)와 다를 수 있다 — 이미 다른 신호(NIFS 등)로 Tier A였던 종에 별칭만 추가되면 티어 변화 없이 점수만 오른다."
+}

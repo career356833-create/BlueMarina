@@ -1,0 +1,4683 @@
+[
+  {
+    "sourceName": "광어",
+    "category": "바다낚시 인기어종",
+    "existingDescription": "바닥에 숨어 먹이를 노리는 대표적인 납작한 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "광어",
+    "matchingBaseName": "광어",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000090",
+        "koreanName": "연어",
+        "scientificName": "Oncorhynchus keta",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Salmoniformes",
+          "family": "Salmonidae Jarocki or Schinz, 1822"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000097",
+        "koreanName": "숭어",
+        "scientificName": "Mugil cephalus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Mugiliformes",
+          "family": "Mugilidae Jarocki, 1822"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000188",
+        "koreanName": "농어",
+        "scientificName": "Lateolabrax japonicus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acropomatiformes",
+          "family": "Lateolabracidae Ghedotti, Davis & Smith, 2018"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000426",
+        "koreanName": "병어",
+        "scientificName": "Pampus punctatissimus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Scombriformes",
+          "family": "Stromateidae Rafinesque, 1810"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000501",
+        "koreanName": "방어",
+        "scientificName": "Seriola quinqueradiata",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Carangidae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      }
+    ]
+  },
+  {
+    "sourceName": "오징어",
+    "category": "바다낚시 인기어종",
+    "existingDescription": "에기낚시와 야간낚시의 대표 두족류입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "오징어",
+    "matchingBaseName": "오징어",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "known_collective_name — 다수 종을 가리키는 관용 집합명",
+      "multiple_candidates",
+      "same_organism_group_restricted(cephalopod)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-002768",
+        "koreanName": "꼬마오징어",
+        "scientificName": "Idiosepius paradoxus",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Idiosepida Appellöf, 1898",
+          "family": "Idiosepiidae"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003076",
+        "koreanName": "좀귀오징어",
+        "scientificName": "Lusepiola birostrata",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiolida Fioroni, 1981",
+          "family": "Sepiolidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003077",
+        "koreanName": "귀오징어",
+        "scientificName": "Euprymna morsei",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiolida Fioroni, 1981",
+          "family": "Sepiolidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.75,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003078",
+        "koreanName": "주머니귀오징어",
+        "scientificName": "Rossia pacifica",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiolida Fioroni, 1981",
+          "family": "Sepiolidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.429,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003079",
+        "koreanName": "투구귀오징어",
+        "scientificName": "Sepiolina nipponensis",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiolida Fioroni, 1981",
+          "family": "Sepiolidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003080",
+        "koreanName": "바늘갑오징어",
+        "scientificName": "Decorisepia madokai",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003081",
+        "koreanName": "꽃갑오징어",
+        "scientificName": "Ascarosepion tullbergi",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003082",
+        "koreanName": "애기갑오징어",
+        "scientificName": "Doratosepion kobiense",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003083",
+        "koreanName": "넓은붉갑오징어",
+        "scientificName": "Doratosepion tokioense",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.429,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003084",
+        "koreanName": "거미다리갑오징어",
+        "scientificName": "Doratosepion tenuipes",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.375,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003117",
+        "koreanName": "살오징어",
+        "scientificName": "Todarodes pacificus",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Oegopsida A. d'Orbigny, 1845",
+          "family": "Ommastrephidae Steenstrup, 1857"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "nifs_dialect_reference",
+        "similarityScore": 0.9,
+        "confidence": "high",
+        "ambiguityReason": "multiple_candidates",
+        "note": "NIFS '살오징어' 방언 목록에 '오징어'로 등재됨"
+      }
+    ]
+  },
+  {
+    "sourceName": "한치",
+    "category": "바다낚시 인기어종",
+    "existingDescription": "부드러운 식감으로 인기가 높은 여름철 두족류입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "한치",
+    "matchingBaseName": "한치",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "single_candidate_but_no_explicit_local_alias_evidence"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-003095",
+        "koreanName": "한치꼴뚜기",
+        "scientificName": "Uroteuthis chinensis",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Myopsida",
+          "family": "Loliginidae Lesueur, 1821"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.4,
+        "confidence": "low",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "쭈꾸미",
+    "category": "바다낚시 인기어종",
+    "existingDescription": "가벼운 장비로 즐기는 가을철 인기 두족류입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "쭈꾸미",
+    "matchingBaseName": "쭈꾸미",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "single_candidate_but_no_explicit_local_alias_evidence"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-003107",
+        "koreanName": "주꾸미",
+        "scientificName": "Amphioctopus fangsiao",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Octopoda Leach, 1818",
+          "family": "Octopodidae A. d'Orbigny, 1839"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.667,
+        "confidence": "low",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "편집거리 1"
+      }
+    ]
+  },
+  {
+    "sourceName": "갑오징어",
+    "category": "바다낚시 인기어종",
+    "existingDescription": "쭈꾸미 시즌에 함께 노리는 두족류입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "갑오징어",
+    "matchingBaseName": "갑오징어",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(cephalopod)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-003080",
+        "koreanName": "바늘갑오징어",
+        "scientificName": "Decorisepia madokai",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003081",
+        "koreanName": "꽃갑오징어",
+        "scientificName": "Ascarosepion tullbergi",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.8,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003082",
+        "koreanName": "애기갑오징어",
+        "scientificName": "Doratosepion kobiense",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003083",
+        "koreanName": "넓은붉갑오징어",
+        "scientificName": "Doratosepion tokioense",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.571,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003084",
+        "koreanName": "거미다리갑오징어",
+        "scientificName": "Doratosepion tenuipes",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003085",
+        "koreanName": "긴다리갑오징어",
+        "scientificName": "Doratosepion longipes",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.571,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003086",
+        "koreanName": "표범갑오징어",
+        "scientificName": "Doratosepion pardex",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003087",
+        "koreanName": "갈색갑오징어",
+        "scientificName": "Doratosepion andreana",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003088",
+        "koreanName": "납작갑오징어",
+        "scientificName": "Doratosepion peterseni",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003089",
+        "koreanName": "참갑오징어",
+        "scientificName": "Acanthosepion esculentum",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Sepiida Gray, 1849",
+          "family": "Sepiidae Leach, 1817"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.8,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "열기",
+    "category": "선상낚시 어종",
+    "existingDescription": "붉은빛을 띠는 선상낚시 대상어입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "열기",
+    "matchingBaseName": "열기",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000317",
+        "koreanName": "발기",
+        "scientificName": "Perccottus glenii",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Gobiiformes 망둑어목",
+          "family": "Odontobutidae Hoese & Gill, 1993"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-016463",
+        "koreanName": "메기",
+        "scientificName": "Silurus asotus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Siluriformes",
+          "family": "Siluridae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      }
+    ]
+  },
+  {
+    "sourceName": "황열기",
+    "category": "선상낚시 어종",
+    "existingDescription": "열기류 중 선상낚시에서 자주 언급되는 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "황열기",
+    "matchingBaseName": "황열기",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "no_candidates_found"
+    ],
+    "candidates": []
+  },
+  {
+    "sourceName": "참치",
+    "category": "선상낚시 어종",
+    "existingDescription": "강한 회유성과 대형화로 스포츠피싱의 상징 같은 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "참치",
+    "matchingBaseName": "참치",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "known_collective_name — 다수 종을 가리키는 관용 집합명"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000495",
+        "koreanName": "참치방어",
+        "scientificName": "Elagatis bipinnulata",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Carangidae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "대삼치",
+    "category": "선상낚시 어종",
+    "existingDescription": "삼치보다 큰 크기로 강한 손맛을 주는 대상어입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "대삼치",
+    "matchingBaseName": "대삼치",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "single_candidate_but_no_explicit_local_alias_evidence"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000408",
+        "koreanName": "삼치",
+        "scientificName": "Scomberomorus niphonius",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Scombriformes",
+          "family": "Scombridae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "망둥어",
+    "category": "방파제/갯바위 어종",
+    "existingDescription": "갯벌과 하구에서 쉽게 만나는 친숙한 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "망둥어",
+    "matchingBaseName": "망둥어",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000369",
+        "koreanName": "말뚝망둥어",
+        "scientificName": "Periophthalmus modestus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Gobiiformes 망둑어목",
+          "family": "Oxudercidae Günther, 1861"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000370",
+        "koreanName": "큰볏말뚝망둥어",
+        "scientificName": "Periophthalmus magnuspinnatus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Gobiiformes 망둑어목",
+          "family": "Oxudercidae Günther, 1861"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.429,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "벚꽃망둑",
+    "category": "방파제/갯바위 어종",
+    "existingDescription": "작은 크기의 망둑어류로 관찰과 생활낚시에 친숙합니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "벚꽃망둑",
+    "matchingBaseName": "벚꽃망둑",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "no_candidates_found"
+    ],
+    "candidates": []
+  },
+  {
+    "sourceName": "가오리",
+    "category": "계절별 대표어종",
+    "existingDescription": "넓은 몸과 긴 꼬리를 가진 연골어류입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "가오리",
+    "matchingBaseName": "가오리",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "known_collective_name — 다수 종을 가리키는 관용 집합명",
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000643",
+        "koreanName": "도랑가오리",
+        "scientificName": "Dipturus macrocauda",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Rajiformes",
+          "family": "Rajidae de Blainville, 1816"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000646",
+        "koreanName": "오동가오리",
+        "scientificName": "Okamejei meerdervoortii",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Rajiformes",
+          "family": "Rajidae de Blainville, 1816"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000651",
+        "koreanName": "바닥가오리",
+        "scientificName": "Bathyraja bergi",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Rajiformes",
+          "family": "Arhynchobatidae Fowler, 1934"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000652",
+        "koreanName": "금가오리",
+        "scientificName": "Bathyraja smirnovi",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Rajiformes",
+          "family": "Arhynchobatidae Fowler, 1934"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.75,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000653",
+        "koreanName": "저자가오리",
+        "scientificName": "Bathyraja isotrachys",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Rajiformes",
+          "family": "Arhynchobatidae Fowler, 1934"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000683",
+        "koreanName": "목탁가오리",
+        "scientificName": "Platyrhina tangi",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Torpediniformes",
+          "family": "Platyrhinidae Jordan, 1923"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000684",
+        "koreanName": "전기가오리",
+        "scientificName": "Narke japonica",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Torpediniformes",
+          "family": "Narcinidae Gill, 1862"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000691",
+        "koreanName": "나비가오리",
+        "scientificName": "Gymnura japonica",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Myliobatiformes",
+          "family": "Gymnuridae Fowler, 1934"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000692",
+        "koreanName": "흰가오리",
+        "scientificName": "Urolophus aurantiacus",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Myliobatiformes",
+          "family": "Urolophidae Müller & Henle, 1841"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.75,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000693",
+        "koreanName": "갈색가오리",
+        "scientificName": "Hemitrygon sinensis",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Myliobatiformes",
+          "family": "Dasyatidae Jordan & Gilbert, 1879"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "참소라",
+    "category": "계절별 대표어종",
+    "existingDescription": "낚시 대상어라기보다 해루질과 식용으로 친숙한 해산물입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "참소라",
+    "matchingBaseName": "참소라",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "confirmed",
+    "statusReasons": [
+      "nifs_dialect_explicit_alias — NIFS 방언 목록에 명시된 별칭"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-002324",
+        "koreanName": "소라",
+        "scientificName": "Turbo sazae",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Trochida",
+          "family": "Turbinidae"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "nifs_dialect_reference",
+        "similarityScore": 0.9,
+        "confidence": "high",
+        "ambiguityReason": null,
+        "note": "NIFS '제주소라' 방언 목록에 '참소라'로 등재됨"
+      }
+    ]
+  },
+  {
+    "sourceName": "전복",
+    "category": "계절별 대표어종",
+    "existingDescription": "고급 식재료로 유명한 패류입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "전복",
+    "matchingBaseName": "전복",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(gastropod)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-002416",
+        "koreanName": "둥근전복",
+        "scientificName": "Haliotis discus",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Lepetellida Moskalev, 1971",
+          "family": "Haliotidae Rafinesque, 1815"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-002417",
+        "koreanName": "말전복",
+        "scientificName": "Haliotis gigantea",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Lepetellida Moskalev, 1971",
+          "family": "Haliotidae Rafinesque, 1815"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-002419",
+        "koreanName": "왕전복",
+        "scientificName": "Haliotis madaka",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Lepetellida Moskalev, 1971",
+          "family": "Haliotidae Rafinesque, 1815"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-002420",
+        "koreanName": "북방전복",
+        "scientificName": "Haliotis discus hannai",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Lepetellida Moskalev, 1971",
+          "family": "Haliotidae Rafinesque, 1815"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "해삼",
+    "category": "계절별 대표어종",
+    "existingDescription": "겨울철 식용으로 친숙한 해산물입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "해삼",
+    "matchingBaseName": "해삼",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(crustacean)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-005503",
+        "koreanName": "납작흰해삼속살이게",
+        "scientificName": "Pinnixa penultipedalis",
+        "taxonomy": {
+          "class": "Malacostraca",
+          "order": "Decapoda Latreille, 1802",
+          "family": "Pinnotheridae De Haan, 1833"
+        },
+        "organismGroup": "crustacean",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.222,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-005504",
+        "koreanName": "흰해삼속살이게",
+        "scientificName": "Pinnixa tumida",
+        "taxonomy": {
+          "class": "Malacostraca",
+          "order": "Decapoda Latreille, 1802",
+          "family": "Pinnotheridae De Haan, 1833"
+        },
+        "organismGroup": "crustacean",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.286,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "성게",
+    "category": "계절별 대표어종",
+    "existingDescription": "알이 식용으로 쓰이는 극피동물입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "성게",
+    "matchingBaseName": "성게",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(gastropod)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-002507",
+        "koreanName": "보라성게살이고둥",
+        "scientificName": "Vitreolina langfordi",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Littorinimorpha A. N. Golikov & Starobogatov, 1975",
+          "family": "Eulimidae R. A. Philippi, 1853"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.25,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-002508",
+        "koreanName": "성게살이꼬부리고둥",
+        "scientificName": "Vitreobalcis temnopleuricola",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Littorinimorpha A. N. Golikov & Starobogatov, 1975",
+          "family": "Eulimidae R. A. Philippi, 1853"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.222,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-002519",
+        "koreanName": "꼬마투명성게살이고둥",
+        "scientificName": "Hypermastus peronellicola",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Littorinimorpha A. N. Golikov & Starobogatov, 1975",
+          "family": "Eulimidae R. A. Philippi, 1853"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.2,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-002533",
+        "koreanName": "방패연잎성게살이고둥",
+        "scientificName": "Clypeastericola clypeastericola",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Littorinimorpha A. N. Golikov & Starobogatov, 1975",
+          "family": "Eulimidae R. A. Philippi, 1853"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.2,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "장어",
+    "category": "회/식용 인기어종",
+    "existingDescription": "보양식 이미지가 강한 식용 인기 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "장어",
+    "matchingBaseName": "장어",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "known_collective_name — 다수 종을 가리키는 관용 집합명",
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000445",
+        "koreanName": "분장어",
+        "scientificName": "Eupleurogrammus muticus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Scombriformes",
+          "family": "Trichiuridae Rafinesque, 1810"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000710",
+        "koreanName": "먹장어",
+        "scientificName": "Eptatretus burgeri",
+        "taxonomy": {
+          "class": "Myxini",
+          "order": "Myxiniformes",
+          "family": "Myxinidae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000711",
+        "koreanName": "묵꾀장어",
+        "scientificName": "Eptatretus walkeri",
+        "taxonomy": {
+          "class": "Myxini",
+          "order": "Myxiniformes",
+          "family": "Myxinidae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000712",
+        "koreanName": "흰줄왜먹장어",
+        "scientificName": "Eptatretus wandoensis",
+        "taxonomy": {
+          "class": "Myxini",
+          "order": "Myxiniformes",
+          "family": "Myxinidae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.333,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000713",
+        "koreanName": "칠성장어",
+        "scientificName": "Lethenteron camtschaticum",
+        "taxonomy": {
+          "class": "Petromyzonti",
+          "order": "Petromyzontiformes",
+          "family": "Petromyzontidae Bonaparte, 1831"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000714",
+        "koreanName": "걸장어",
+        "scientificName": "Macrognathus aculeatus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Synbranchiformes",
+          "family": "Mastacembelidae Swainson, 1839"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000900",
+        "koreanName": "갯장어",
+        "scientificName": "Muraenesox cinereus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Anguilliformes",
+          "family": "Muraenesocidae Kaup, 1859"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000901",
+        "koreanName": "갈창갯장어",
+        "scientificName": "Muraenesox bagio",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Anguilliformes",
+          "family": "Muraenesocidae Kaup, 1859"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.4,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000902",
+        "koreanName": "물붕장어",
+        "scientificName": "Oxyconger leptognathus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Anguilliformes",
+          "family": "Muraenesocidae Kaup, 1859"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000903",
+        "koreanName": "오리주둥이장어",
+        "scientificName": "Nettenchelys gephyra",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Anguilliformes",
+          "family": "Nettastomatidae Kaup, 1859"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.286,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "복어",
+    "category": "회/식용 인기어종",
+    "existingDescription": "독을 가진 종류가 있어 전문 조리가 필요한 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "복어",
+    "matchingBaseName": "복어",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "known_collective_name — 다수 종을 가리키는 관용 집합명",
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000090",
+        "koreanName": "연어",
+        "scientificName": "Oncorhynchus keta",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Salmoniformes",
+          "family": "Salmonidae Jarocki or Schinz, 1822"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000097",
+        "koreanName": "숭어",
+        "scientificName": "Mugil cephalus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Mugiliformes",
+          "family": "Mugilidae Jarocki, 1822"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000188",
+        "koreanName": "농어",
+        "scientificName": "Lateolabrax japonicus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acropomatiformes",
+          "family": "Lateolabracidae Ghedotti, Davis & Smith, 2018"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000426",
+        "koreanName": "병어",
+        "scientificName": "Pampus punctatissimus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Scombriformes",
+          "family": "Stromateidae Rafinesque, 1810"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000501",
+        "koreanName": "방어",
+        "scientificName": "Seriola quinqueradiata",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Carangidae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      }
+    ]
+  },
+  {
+    "sourceName": "가자미",
+    "category": "회/식용 인기어종",
+    "existingDescription": "다양한 종류가 식용으로 유통되는 납작한 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "가자미",
+    "matchingBaseName": "가자미",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000468",
+        "koreanName": "중설가자미",
+        "scientificName": "Plagiopsetta glossa",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Samaridae Jordan & Goss, 1889"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000469",
+        "koreanName": "신월가자미",
+        "scientificName": "Samariscus japonicus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Samaridae Jordan & Goss, 1889"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000477",
+        "koreanName": "좌대가자미",
+        "scientificName": "Poecilopsetta plinthus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Poecilopsettidae Norman, 1934"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000528",
+        "koreanName": "별목탁가자미",
+        "scientificName": "Bothus myriaster",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Bothidae Smitt, 1892"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000530",
+        "koreanName": "목탁가자미",
+        "scientificName": "Arnoglossus japonicus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Bothidae Smitt, 1892"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000531",
+        "koreanName": "노랑반점가자미",
+        "scientificName": "Arnoglossus polyspilus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Bothidae Smitt, 1892"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.429,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000533",
+        "koreanName": "동백가자미",
+        "scientificName": "Psettina iijimae",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Bothidae Smitt, 1892"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000535",
+        "koreanName": "긴가자미",
+        "scientificName": "Parabothus kiensis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Bothidae Smitt, 1892"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.75,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000539",
+        "koreanName": "흰비늘가자미",
+        "scientificName": "Laeops parviceps",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Bothidae Smitt, 1892"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000540",
+        "koreanName": "용가자미",
+        "scientificName": "Cleisthenes pinetorum",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Pleuronectidae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.75,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "쥐치포용 쥐치",
+    "category": "회/식용 인기어종",
+    "existingDescription": "건어물과 식용으로 친숙한 쥐치류입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "쥐치포용쥐치",
+    "matchingBaseName": "쥐치포용 쥐치",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "single_candidate_but_no_explicit_local_alias_evidence"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000122",
+        "koreanName": "쥐치",
+        "scientificName": "Stephanolepis cirrhifer",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Tetraodontiformes",
+          "family": "Monacanthidae Nardo, 1843"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.286,
+        "confidence": "low",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "참굴",
+    "category": "회/식용 인기어종",
+    "existingDescription": "겨울철 식용으로 널리 알려진 패류입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "참굴",
+    "matchingBaseName": "참굴",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "cross_taxon_homonym — 후보들의 분류군이 서로 다름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000755",
+        "koreanName": "참돔",
+        "scientificName": "Pagrus major",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Sparidae Rafinesque, 1818"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-002962",
+        "koreanName": "토굴",
+        "scientificName": "Ostrea denselamellosa",
+        "taxonomy": {
+          "class": "Bivalvia Linnaeus, 1758",
+          "order": "Ostreida A. Férussac, 1822",
+          "family": "Ostreidae Rafinesque, 1815"
+        },
+        "organismGroup": "bivalve",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-002965",
+        "koreanName": "굴",
+        "scientificName": "Magallana gigas",
+        "taxonomy": {
+          "class": "Bivalvia Linnaeus, 1758",
+          "order": "Ostreida A. Férussac, 1822",
+          "family": "Ostreidae Rafinesque, 1815"
+        },
+        "organismGroup": "bivalve",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-002966",
+        "koreanName": "갓굴",
+        "scientificName": "Magallana ariakensis",
+        "taxonomy": {
+          "class": "Bivalvia Linnaeus, 1758",
+          "order": "Ostreida A. Férussac, 1822",
+          "family": "Ostreidae Rafinesque, 1815"
+        },
+        "organismGroup": "bivalve",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-005895",
+        "koreanName": "참게",
+        "scientificName": "Eriocheir sinensis",
+        "taxonomy": {
+          "class": "Malacostraca",
+          "order": "Decapoda Latreille, 1802",
+          "family": "Varunidae H. Milne Edwards, 1853"
+        },
+        "organismGroup": "crustacean",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      }
+    ]
+  },
+  {
+    "sourceName": "임연수",
+    "category": "회/식용 인기어종",
+    "existingDescription": "구이용으로 대중적인 식용 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "임연수",
+    "matchingBaseName": "임연수",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-001161",
+        "koreanName": "임연수어",
+        "scientificName": "Pleurogrammus azonus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Perciformes",
+          "family": "Hexagrammidae Jordan, 1888"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.75,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-001162",
+        "koreanName": "단기임연수어",
+        "scientificName": "Pleurogrammus monopterygius",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Perciformes",
+          "family": "Hexagrammidae Jordan, 1888"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "노무라입깃해파리",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "대형 해파리로 접촉 시 통증을 유발할 수 있습니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "노무라입깃해파리",
+    "matchingBaseName": "노무라입깃해파리",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "no_candidates_found"
+    ],
+    "candidates": []
+  },
+  {
+    "sourceName": "보름달물해파리",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "흔히 보이는 해파리류로 대량 출현할 수 있습니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "보름달물해파리",
+    "matchingBaseName": "보름달물해파리",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "no_candidates_found"
+    ],
+    "candidates": []
+  },
+  {
+    "sourceName": "입방해파리",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "강한 독성으로 알려진 해파리류입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "입방해파리",
+    "matchingBaseName": "입방해파리",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "no_candidates_found"
+    ],
+    "candidates": []
+  },
+  {
+    "sourceName": "쏨뱅이 독가시",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "쏨뱅이는 맛도 좋지만 가시가 위험할 수 있습니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "쏨뱅이독가시",
+    "matchingBaseName": "쏨뱅이",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": true,
+      "trailingEoStrippable": null,
+      "extractionMethod": "caution_label_related_species_or_split"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "source_name_quality_issue — 원본 이름에 주의문구가 섞여 있음(fish-data.ts 자체 이슈)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000019",
+        "koreanName": "쏨뱅이",
+        "scientificName": "Sebastiscus marmoratus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Perciformes",
+          "family": "Scorpaenidae Risso, 1827"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "복섬",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "복어류로 독성 위험이 있어 임의 섭취하면 안 됩니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "복섬",
+    "matchingBaseName": "복섬",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "no_candidates_found"
+    ],
+    "candidates": []
+  },
+  {
+    "sourceName": "참복",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "식용으로 알려져도 독성 관리가 필요한 복어류입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "참복",
+    "matchingBaseName": "참복",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000150",
+        "koreanName": "별복",
+        "scientificName": "Arothron firmamentum",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Tetraodontiformes",
+          "family": "Tetraodontidae Bonaparte, 1831"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000151",
+        "koreanName": "청복",
+        "scientificName": "Canthigaster rivulata",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Tetraodontiformes",
+          "family": "Tetraodontidae Bonaparte, 1831"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000155",
+        "koreanName": "황복",
+        "scientificName": "Takifugu obscurus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Tetraodontiformes",
+          "family": "Tetraodontidae Bonaparte, 1831"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000159",
+        "koreanName": "망복",
+        "scientificName": "Takifugu reticularis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Tetraodontiformes",
+          "family": "Tetraodontidae Bonaparte, 1831"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000162",
+        "koreanName": "졸복",
+        "scientificName": "Takifugu pardalis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Tetraodontiformes",
+          "family": "Tetraodontidae Bonaparte, 1831"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      }
+    ]
+  },
+  {
+    "sourceName": "가오리 꼬리주의",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "가오리류는 꼬리와 가시에 주의가 필요합니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "가오리꼬리주의",
+    "matchingBaseName": "가오리",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": true,
+      "trailingEoStrippable": null,
+      "extractionMethod": "caution_label_related_species_or_split"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "source_name_quality_issue — 원본 이름에 주의문구가 섞여 있음(fish-data.ts 자체 이슈)",
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000643",
+        "koreanName": "도랑가오리",
+        "scientificName": "Dipturus macrocauda",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Rajiformes",
+          "family": "Rajidae de Blainville, 1816"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000646",
+        "koreanName": "오동가오리",
+        "scientificName": "Okamejei meerdervoortii",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Rajiformes",
+          "family": "Rajidae de Blainville, 1816"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000651",
+        "koreanName": "바닥가오리",
+        "scientificName": "Bathyraja bergi",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Rajiformes",
+          "family": "Arhynchobatidae Fowler, 1934"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000652",
+        "koreanName": "금가오리",
+        "scientificName": "Bathyraja smirnovi",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Rajiformes",
+          "family": "Arhynchobatidae Fowler, 1934"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.75,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000653",
+        "koreanName": "저자가오리",
+        "scientificName": "Bathyraja isotrachys",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Rajiformes",
+          "family": "Arhynchobatidae Fowler, 1934"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000683",
+        "koreanName": "목탁가오리",
+        "scientificName": "Platyrhina tangi",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Torpediniformes",
+          "family": "Platyrhinidae Jordan, 1923"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000684",
+        "koreanName": "전기가오리",
+        "scientificName": "Narke japonica",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Torpediniformes",
+          "family": "Narcinidae Gill, 1862"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000691",
+        "koreanName": "나비가오리",
+        "scientificName": "Gymnura japonica",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Myliobatiformes",
+          "family": "Gymnuridae Fowler, 1934"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000692",
+        "koreanName": "흰가오리",
+        "scientificName": "Urolophus aurantiacus",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Myliobatiformes",
+          "family": "Urolophidae Müller & Henle, 1841"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.75,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000693",
+        "koreanName": "갈색가오리",
+        "scientificName": "Hemitrygon sinensis",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Myliobatiformes",
+          "family": "Dasyatidae Jordan & Gilbert, 1879"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "성게가시",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "성게는 가시에 찔리면 통증과 이물감이 생길 수 있습니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "성게가시",
+    "matchingBaseName": "성게",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": true,
+      "trailingEoStrippable": null,
+      "extractionMethod": "caution_label_related_species_or_split"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "source_name_quality_issue — 원본 이름에 주의문구가 섞여 있음(fish-data.ts 자체 이슈)",
+      "multiple_candidates",
+      "same_organism_group_restricted(gastropod)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-002507",
+        "koreanName": "보라성게살이고둥",
+        "scientificName": "Vitreolina langfordi",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Littorinimorpha A. N. Golikov & Starobogatov, 1975",
+          "family": "Eulimidae R. A. Philippi, 1853"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.25,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-002508",
+        "koreanName": "성게살이꼬부리고둥",
+        "scientificName": "Vitreobalcis temnopleuricola",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Littorinimorpha A. N. Golikov & Starobogatov, 1975",
+          "family": "Eulimidae R. A. Philippi, 1853"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.222,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-002519",
+        "koreanName": "꼬마투명성게살이고둥",
+        "scientificName": "Hypermastus peronellicola",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Littorinimorpha A. N. Golikov & Starobogatov, 1975",
+          "family": "Eulimidae R. A. Philippi, 1853"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.2,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-002533",
+        "koreanName": "방패연잎성게살이고둥",
+        "scientificName": "Clypeastericola clypeastericola",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Littorinimorpha A. N. Golikov & Starobogatov, 1975",
+          "family": "Eulimidae R. A. Philippi, 1853"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.2,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "불가사리",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "어패류를 먹어 양식장에 피해를 줄 수 있는 해양 생물입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "불가사리",
+    "matchingBaseName": "불가사리",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "cross_taxon_homonym — 후보들의 분류군이 서로 다름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-002509",
+        "koreanName": "불가사리퉁퉁이고둥",
+        "scientificName": "Parvioris fulvescens",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Littorinimorpha A. N. Golikov & Starobogatov, 1975",
+          "family": "Eulimidae R. A. Philippi, 1853"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.444,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-002510",
+        "koreanName": "가시불가사리바늘고둥",
+        "scientificName": "Parvioris astropectenicola",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Littorinimorpha A. N. Golikov & Starobogatov, 1975",
+          "family": "Eulimidae R. A. Philippi, 1853"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.4,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-002524",
+        "koreanName": "빨강불가사리속살이고둥",
+        "scientificName": "Stilifer akahitode",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Littorinimorpha A. N. Golikov & Starobogatov, 1975",
+          "family": "Eulimidae R. A. Philippi, 1853"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.364,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-002534",
+        "koreanName": "불가사리기생고둥",
+        "scientificName": "Thyca crystallina",
+        "taxonomy": {
+          "class": "Gastropoda Cuvier, 1795",
+          "order": "Littorinimorpha A. N. Golikov & Starobogatov, 1975",
+          "family": "Eulimidae R. A. Philippi, 1853"
+        },
+        "organismGroup": "gastropod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003277",
+        "koreanName": "거미불가사리조개",
+        "scientificName": "Nipponomysella oblongata",
+        "taxonomy": {
+          "class": "Bivalvia Linnaeus, 1758",
+          "order": "Galeommatida Lemer, Bieler & Giribet, 2019",
+          "family": "Lasaeidae J. E. Gray, 1842"
+        },
+        "organismGroup": "bivalve",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "파란고리문어",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "작지만 강한 독성으로 알려진 문어류입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "파란고리문어",
+    "matchingBaseName": "파란고리문어",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "single_candidate_but_no_explicit_local_alias_evidence"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-003111",
+        "koreanName": "문어",
+        "scientificName": "Enteroctopus dofleini",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Octopoda Leach, 1818",
+          "family": "Enteroctopodidae Strugnell, Norman, Vecchione, Guzik & Allcock, 2014"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.333,
+        "confidence": "low",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "조기",
+    "category": "바다낚시 인기어종",
+    "existingDescription": "서해 연안 낚시에서 대표적인 대상어로 꼽히는 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "조기",
+    "matchingBaseName": "조기",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000833",
+        "koreanName": "흑조기",
+        "scientificName": "Atrobucca nibe",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Sciaenidae Cuvier, 1829"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000837",
+        "koreanName": "수조기",
+        "scientificName": "Nibea albiflora",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Sciaenidae Cuvier, 1829"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000841",
+        "koreanName": "참조기",
+        "scientificName": "Larimichthys polyactis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Sciaenidae Cuvier, 1829"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "nifs_dialect_reference",
+        "similarityScore": 0.9,
+        "confidence": "high",
+        "ambiguityReason": "multiple_candidates",
+        "note": "NIFS '참조기' 방언 목록에 '조기'로 등재됨"
+      }
+    ]
+  },
+  {
+    "sourceName": "민초리",
+    "category": "바다낚시 인기어종",
+    "existingDescription": "서해권 감성돔 낚시에서 곁들여 만날 수 있는 소형 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "민초리",
+    "matchingBaseName": "민초리",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "no_candidates_found"
+    ],
+    "candidates": []
+  },
+  {
+    "sourceName": "돌가시",
+    "category": "바다낚시 인기어종",
+    "existingDescription": "갯바위 낚시에서 손맛과 식용으로 관심받는 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "돌가시",
+    "matchingBaseName": "돌가시",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "no_candidates_found"
+    ],
+    "candidates": []
+  },
+  {
+    "sourceName": "무늬벵에돔",
+    "category": "바다낚시 인기어종",
+    "existingDescription": "벵에돔과 비슷하지만 무늬와 수심층이 다른 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "무늬벵에돔",
+    "matchingBaseName": "무늬벵에돔",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "single_candidate_but_no_explicit_local_alias_evidence"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000279",
+        "koreanName": "벵에돔",
+        "scientificName": "Girella punctata",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Centrarchiformes",
+          "family": "Girellidae Gill, 1862"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "긴꼬리벵에돔류",
+    "category": "바다낚시 인기어종",
+    "existingDescription": "긴 꼬리가 특징인 벵에돔류로 먼 바다 낚시 대상입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "긴꼬리벵에돔류",
+    "matchingBaseName": "긴꼬리벵에돔",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000280",
+        "koreanName": "긴꼬리벵에돔",
+        "scientificName": "Girella leonina",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Centrarchiformes",
+          "family": "Girellidae Gill, 1862"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "줄돔",
+    "category": "바다낚시 인기어종",
+    "existingDescription": "몸에 줄무늬가 있는 돔류로 연안 낚시에서 만납니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "줄돔",
+    "matchingBaseName": "줄돔",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000193",
+        "koreanName": "황줄돔",
+        "scientificName": "Histiopterus typus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acropomatiformes",
+          "family": "Pentacerotidae Bleeker, 1859"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000231",
+        "koreanName": "흑줄돔",
+        "scientificName": "Abudefduf bengalensis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Blenniiformes",
+          "family": "Pomacentridae Bonaparte, 1831"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000741",
+        "koreanName": "검은청줄돔",
+        "scientificName": "Chaetodontoplus melanosoma",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Pomacanthidae Jordan & Evermann, 1898"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.4,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000742",
+        "koreanName": "청줄돔",
+        "scientificName": "Chaetodontoplus septentrionalis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Pomacanthidae Jordan & Evermann, 1898"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000756",
+        "koreanName": "녹줄돔",
+        "scientificName": "Evynnis cardinalis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Sparidae Rafinesque, 1818"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000828",
+        "koreanName": "노랑줄돔",
+        "scientificName": "Pentapodus nagasakiensis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Nemipteridae Regan, 1913"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "점벵에돔",
+    "category": "바다낚시 인기어종",
+    "existingDescription": "몸에 점이 있는 벵에돔류로 맑은 물을 좋아합니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "점벵에돔",
+    "matchingBaseName": "점벵에돔",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "single_candidate_but_no_explicit_local_alias_evidence"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000279",
+        "koreanName": "벵에돔",
+        "scientificName": "Girella punctata",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Centrarchiformes",
+          "family": "Girellidae Gill, 1862"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.75,
+        "confidence": "medium",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "흑벵에돔",
+    "category": "바다낚시 인기어종",
+    "existingDescription": "어두운 빛을 띤 벵에돔류로 먼 바다 낚시 대상입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "흑벵에돔",
+    "matchingBaseName": "흑벵에돔",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "single_candidate_but_no_explicit_local_alias_evidence"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000279",
+        "koreanName": "벵에돔",
+        "scientificName": "Girella punctata",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Centrarchiformes",
+          "family": "Girellidae Gill, 1862"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.75,
+        "confidence": "medium",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "돌돔류",
+    "category": "바다낚시 인기어종",
+    "existingDescription": "돌돔과 비슷한 바리류를 통틀어 이르는 말입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "돌돔류",
+    "matchingBaseName": "돌돔",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000278",
+        "koreanName": "돌돔",
+        "scientificName": "Oplegnathus fasciatus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Centrarchiformes",
+          "family": "Oplegnathidae Bleeker, 1853"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "긴꼬리상어",
+    "category": "선상낚시 어종",
+    "existingDescription": "긴 꼬리가 특징인 상어류로 선상에서 만날 수 있습니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "긴꼬리상어",
+    "matchingBaseName": "긴꼬리상어",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "single_candidate_but_no_explicit_local_alias_evidence"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000906",
+        "koreanName": "긴꼬리장어",
+        "scientificName": "Dysomma anguillare",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Anguilliformes",
+          "family": "Synaphobranchidae Johnson, 1862"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.8,
+        "confidence": "medium",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "편집거리 1"
+      }
+    ]
+  },
+  {
+    "sourceName": "흑새치",
+    "category": "선상낚시 어종",
+    "existingDescription": "새치류 중 하나로 표층 회유성을 보이는 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "흑새치",
+    "matchingBaseName": "흑새치",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000470",
+        "koreanName": "청새치",
+        "scientificName": "Kajikia audax",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Istiophoridae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.667,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000471",
+        "koreanName": "백새치",
+        "scientificName": "Istiompax indica",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Istiophoridae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.667,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000472",
+        "koreanName": "녹새치",
+        "scientificName": "Makaira mazara",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Istiophoridae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.667,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000473",
+        "koreanName": "돛새치",
+        "scientificName": "Istiophorus platypterus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Istiophoridae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.667,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000479",
+        "koreanName": "황새치",
+        "scientificName": "Xiphias gladius",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Xiphiidae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.667,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      }
+    ]
+  },
+  {
+    "sourceName": "돛새치류",
+    "category": "선상낚시 어종",
+    "existingDescription": "돛 모양 등지느러미가 특징인 대형 표층 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "돛새치류",
+    "matchingBaseName": "돛새치",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000473",
+        "koreanName": "돛새치",
+        "scientificName": "Istiophorus platypterus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Istiophoridae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "청새치류",
+    "category": "선상낚시 어종",
+    "existingDescription": "빠른 속도로 회유하는 대형 표층 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "청새치류",
+    "matchingBaseName": "청새치",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000470",
+        "koreanName": "청새치",
+        "scientificName": "Kajikia audax",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Istiophoridae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "황새치류",
+    "category": "선상낚시 어종",
+    "existingDescription": "큰 몸과 긴 부리를 가진 심해 회유성 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "황새치류",
+    "matchingBaseName": "황새치",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000479",
+        "koreanName": "황새치",
+        "scientificName": "Xiphias gladius",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Xiphiidae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "가다랑어류",
+    "category": "선상낚시 어종",
+    "existingDescription": "참치류와 비슷한 회유성 어종으로 선상에서 만납니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "가다랑어류",
+    "matchingBaseName": "가다랑어",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000412",
+        "koreanName": "가다랑어",
+        "scientificName": "Katsuwonus pelamis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Scombriformes",
+          "family": "Scombridae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "눈다랑어류",
+    "category": "선상낚시 어종",
+    "existingDescription": "참치류의 일종으로 중층 회유성을 보이는 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "눈다랑어류",
+    "matchingBaseName": "눈다랑어",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000421",
+        "koreanName": "눈다랑어",
+        "scientificName": "Thunnus obesus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Scombriformes",
+          "family": "Scombridae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "무늬오징어류",
+    "category": "선상낚시 어종",
+    "existingDescription": "무늬가 있는 오징어류로 에깅 낚시 대상입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "무늬오징어류",
+    "matchingBaseName": "무늬오징어",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름",
+      "no_candidates_found"
+    ],
+    "candidates": []
+  },
+  {
+    "sourceName": "한치류",
+    "category": "선상낚시 어종",
+    "existingDescription": "한치와 비슷한 심해성 두족류를 통틀어 이릅니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "한치류",
+    "matchingBaseName": "한치",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-003095",
+        "koreanName": "한치꼴뚜기",
+        "scientificName": "Uroteuthis chinensis",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Myopsida",
+          "family": "Loliginidae Lesueur, 1821"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.4,
+        "confidence": "low",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "주꾸미류",
+    "category": "선상낚시 어종",
+    "existingDescription": "쭈꾸미와 비슷한 소형 두족류를 통틀어 이르는 말입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "주꾸미류",
+    "matchingBaseName": "주꾸미",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-003107",
+        "koreanName": "주꾸미",
+        "scientificName": "Amphioctopus fangsiao",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Octopoda Leach, 1818",
+          "family": "Octopodidae A. d'Orbigny, 1839"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "꼴뚜기",
+    "category": "선상낚시 어종",
+    "existingDescription": "작은 두족류로 에깅과 생미끼 낚시 대상입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "꼴뚜기",
+    "matchingBaseName": "꼴뚜기",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(cephalopod)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-002769",
+        "koreanName": "꼬마꼴뚜기",
+        "scientificName": "Loliolus sumatrensis",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Myopsida",
+          "family": "Loliginidae Lesueur, 1821"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-002770",
+        "koreanName": "반원니꼴뚜기",
+        "scientificName": "Loliolus japonica",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Myopsida",
+          "family": "Loliginidae Lesueur, 1821"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003070",
+        "koreanName": "참꼴뚜기",
+        "scientificName": "Loliolus beka",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Myopsida",
+          "family": "Loliginidae Lesueur, 1821"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.75,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003094",
+        "koreanName": "흰꼴뚜기",
+        "scientificName": "Sepioteuthis lessoniana",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Myopsida",
+          "family": "Loliginidae Lesueur, 1821"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.75,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003095",
+        "koreanName": "한치꼴뚜기",
+        "scientificName": "Uroteuthis chinensis",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Myopsida",
+          "family": "Loliginidae Lesueur, 1821"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003096",
+        "koreanName": "창꼴뚜기",
+        "scientificName": "Uroteuthis edulis",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Myopsida",
+          "family": "Loliginidae Lesueur, 1821"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.75,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-003097",
+        "koreanName": "화살꼴뚜기",
+        "scientificName": "Heterololigo bleekeri",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Myopsida",
+          "family": "Loliginidae Lesueur, 1821"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.6,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "쭈꾸미류",
+    "category": "방파제/갯바위 어종",
+    "existingDescription": "쭈꾸미와 비슷한 소형 두족류를 통틀어 이르는 말입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "쭈꾸미류",
+    "matchingBaseName": "쭈꾸미",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-003107",
+        "koreanName": "주꾸미",
+        "scientificName": "Amphioctopus fangsiao",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Octopoda Leach, 1818",
+          "family": "Octopodidae A. d'Orbigny, 1839"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.667,
+        "confidence": "low",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "편집거리 1"
+      }
+    ]
+  },
+  {
+    "sourceName": "좁쌀문어",
+    "category": "방파제/갯바위 어종",
+    "existingDescription": "작은 몸의 문어류로 갯바위 낚시에서 만납니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "좁쌀문어",
+    "matchingBaseName": "좁쌀문어",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "single_candidate_but_no_explicit_local_alias_evidence"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-003111",
+        "koreanName": "문어",
+        "scientificName": "Enteroctopus dofleini",
+        "taxonomy": {
+          "class": "Cephalopoda Cuvier, 1795",
+          "order": "Octopoda Leach, 1818",
+          "family": "Enteroctopodidae Strugnell, Norman, Vecchione, Guzik & Allcock, 2014"
+        },
+        "organismGroup": "cephalopod",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "갯장어류",
+    "category": "방파제/갯바위 어종",
+    "existingDescription": "갯장어와 비슷한 장어류를 통틀어 이르는 말입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "갯장어류",
+    "matchingBaseName": "갯장어",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000900",
+        "koreanName": "갯장어",
+        "scientificName": "Muraenesox cinereus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Anguilliformes",
+          "family": "Muraenesocidae Kaup, 1859"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "황어류",
+    "category": "방파제/갯바위 어종",
+    "existingDescription": "황어와 비슷한 연안 어종을 통틀어 이르는 말입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "황어류",
+    "matchingBaseName": "황어",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000958",
+        "koreanName": "황어",
+        "scientificName": "Pseudaspius hakonensis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Cypriniformes",
+          "family": "Leuciscidae Bonaparte, 1835"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "장대",
+    "category": "방파제/갯바위 어종",
+    "existingDescription": "긴 몸의 연안 어종으로 낚시에서 가끔 만납니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "장대",
+    "matchingBaseName": "장대",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000425",
+        "koreanName": "덕대",
+        "scientificName": "Pampus argenteus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Scombriformes",
+          "family": "Stromateidae Rafinesque, 1810"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000566",
+        "koreanName": "박대",
+        "scientificName": "Cynoglossus semilaevis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Cynoglossidae Jordan, 1888"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-001135",
+        "koreanName": "성대",
+        "scientificName": "Chelidonichthys spinosus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Perciformes",
+          "family": "Triglidae Rafinesque, 1815"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.5,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      }
+    ]
+  },
+  {
+    "sourceName": "조기류",
+    "category": "계절별 대표어종",
+    "existingDescription": "조기와 비슷한 어종을 통틀어 이르는 대표적인 연안 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "조기류",
+    "matchingBaseName": "조기",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름",
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000833",
+        "koreanName": "흑조기",
+        "scientificName": "Atrobucca nibe",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Sciaenidae Cuvier, 1829"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000837",
+        "koreanName": "수조기",
+        "scientificName": "Nibea albiflora",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Sciaenidae Cuvier, 1829"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000841",
+        "koreanName": "참조기",
+        "scientificName": "Larimichthys polyactis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Sciaenidae Cuvier, 1829"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "nifs_dialect_reference",
+        "similarityScore": 0.9,
+        "confidence": "high",
+        "ambiguityReason": "multiple_candidates",
+        "note": "NIFS '참조기' 방언 목록에 '조기'로 등재됨"
+      }
+    ]
+  },
+  {
+    "sourceName": "보구치류",
+    "category": "계절별 대표어종",
+    "existingDescription": "조기류의 하나로 서해 연안 낚시에서 만납니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "보구치류",
+    "matchingBaseName": "보구치",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000839",
+        "koreanName": "보구치",
+        "scientificName": "Pennahia argentata",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Sciaenidae Cuvier, 1829"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "백조기류",
+    "category": "계절별 대표어종",
+    "existingDescription": "조기류의 하나로 은빛 몸이 특징인 연안 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "백조기류",
+    "matchingBaseName": "백조기",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름",
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000833",
+        "koreanName": "흑조기",
+        "scientificName": "Atrobucca nibe",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Sciaenidae Cuvier, 1829"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.667,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000837",
+        "koreanName": "수조기",
+        "scientificName": "Nibea albiflora",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Sciaenidae Cuvier, 1829"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.667,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000841",
+        "koreanName": "참조기",
+        "scientificName": "Larimichthys polyactis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Sciaenidae Cuvier, 1829"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.667,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      },
+      {
+        "internalId": "BM-SPECIES-000956",
+        "koreanName": "백조어",
+        "scientificName": "Chanodichthys erythropterus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Cypriniformes",
+          "family": "Xenocyprididae Günther, 1868"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.667,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "편집거리 1"
+      }
+    ]
+  },
+  {
+    "sourceName": "대하류",
+    "category": "계절별 대표어종",
+    "existingDescription": "대하와 비슷한 새우류를 통틀어 이르는 해산물입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "대하류",
+    "matchingBaseName": "대하",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-005997",
+        "koreanName": "대하",
+        "scientificName": "Penaeus chinensis",
+        "taxonomy": {
+          "class": "Malacostraca",
+          "order": "Decapoda Latreille, 1802",
+          "family": "Penaeidae Rafinesque, 1815"
+        },
+        "organismGroup": "crustacean",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "꽃게류",
+    "category": "계절별 대표어종",
+    "existingDescription": "꽃게와 비슷한 게류를 통틀어 이르는 해산물입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "꽃게류",
+    "matchingBaseName": "꽃게",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-005640",
+        "koreanName": "꽃게",
+        "scientificName": "Portunus trituberculatus",
+        "taxonomy": {
+          "class": "Malacostraca",
+          "order": "Decapoda Latreille, 1802",
+          "family": "Portunidae Rafinesque, 1815"
+        },
+        "organismGroup": "crustacean",
+        "matchMethod": "nifs_dialect_reference",
+        "similarityScore": 0.9,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": "NIFS '꽃게' 방언 목록에 '꽃게'로 등재됨"
+      }
+    ]
+  },
+  {
+    "sourceName": "꽃새우류",
+    "category": "계절별 대표어종",
+    "existingDescription": "꽃새우와 비슷한 새우류를 통틀어 이르는 해산물입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "꽃새우류",
+    "matchingBaseName": "꽃새우",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-005994",
+        "koreanName": "꽃새우",
+        "scientificName": "Trachysalambria curvirostris",
+        "taxonomy": {
+          "class": "Malacostraca",
+          "order": "Decapoda Latreille, 1802",
+          "family": "Penaeidae Rafinesque, 1815"
+        },
+        "organismGroup": "crustacean",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "전복치류",
+    "category": "계절별 대표어종",
+    "existingDescription": "전복과 비슷한 패류를 통틀어 이르는 해산물입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "전복치류",
+    "matchingBaseName": "전복치",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000114",
+        "koreanName": "개복치",
+        "scientificName": "Mola mola",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Tetraodontiformes",
+          "family": "Molidae Bonaparte, 1835"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "edit_distance",
+        "similarityScore": 0.667,
+        "confidence": "low",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "편집거리 1"
+      }
+    ]
+  },
+  {
+    "sourceName": "벤자리류",
+    "category": "계절별 대표어종",
+    "existingDescription": "벤자리와 비슷한 어종을 통틀어 이르는 대상입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "벤자리류",
+    "matchingBaseName": "벤자리",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000792",
+        "koreanName": "벤자리",
+        "scientificName": "Parapristipoma trilineatum",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Haemulidae Gill, 1885"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "은갈치",
+    "category": "회/식용 인기어종",
+    "existingDescription": "갈치 중에서도 은빛이 맑고 식용으로 인기 있는 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "은갈치",
+    "matchingBaseName": "은갈치",
+    "aliasCandidates": {
+      "hasGroupSuffix": false,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "none"
+    },
+    "status": "confirmed",
+    "statusReasons": [
+      "nifs_dialect_explicit_alias — NIFS 방언 목록에 명시된 별칭"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000444",
+        "koreanName": "갈치",
+        "scientificName": "Trichiurus japonicus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Scombriformes",
+          "family": "Trichiuridae Rafinesque, 1810"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "nifs_dialect_reference",
+        "similarityScore": 0.9,
+        "confidence": "high",
+        "ambiguityReason": null,
+        "note": "NIFS '갈치' 방언 목록에 '은갈치(제주)'로 등재됨"
+      }
+    ]
+  },
+  {
+    "sourceName": "실갈치류",
+    "category": "회/식용 인기어종",
+    "existingDescription": "가늘고 긴 몸의 갈치류로 선상 낚시 대상입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "실갈치류",
+    "matchingBaseName": "실갈치",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000444",
+        "koreanName": "갈치",
+        "scientificName": "Trichiurus japonicus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Scombriformes",
+          "family": "Trichiuridae Rafinesque, 1810"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "inferential_match_not_confirmed",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "먹갈치류",
+    "category": "회/식용 인기어종",
+    "existingDescription": "검은빛이 도는 갈치류로 식용과 낚시 모두에서 관심받습니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "먹갈치류",
+    "matchingBaseName": "먹갈치",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-001188",
+        "koreanName": "먹갈치",
+        "scientificName": "Lycodes nakamurae",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Perciformes",
+          "family": "Zoarcidae Swainson, 1839"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "부세류",
+    "category": "회/식용 인기어종",
+    "existingDescription": "명태류와 비슷한 심해 어종으로 식용으로 유통됩니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "부세류",
+    "matchingBaseName": "부세",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000842",
+        "koreanName": "부세",
+        "scientificName": "Larimichthys crocea",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Acanthuriformes",
+          "family": "Sciaenidae Cuvier, 1829"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "은대구류",
+    "category": "회/식용 인기어종",
+    "existingDescription": "대구와 비슷하지만 은빛이 도는 심해 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "은대구류",
+    "matchingBaseName": "은대구",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름",
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-001056",
+        "koreanName": "대구",
+        "scientificName": "Gadus macrocephalus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Gadiformes",
+          "family": "Gadidae Rafinesque, 1810"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-001196",
+        "koreanName": "큰은대구",
+        "scientificName": "Erilepis zonifer",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Perciformes",
+          "family": "Anoplopomatidae Jordan & Gilbert, 1883"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.75,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "삼세기류",
+    "category": "회/식용 인기어종",
+    "existingDescription": "대구류의 하나로 식용 가치가 높은 심해 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "삼세기류",
+    "matchingBaseName": "삼세기",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000042",
+        "koreanName": "삼세기",
+        "scientificName": "Hemitripterus villosus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Perciformes",
+          "family": "Agonidae Swainson, 1839"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "서대류",
+    "category": "회/식용 인기어종",
+    "existingDescription": "서대와 비슷한 어종을 통틀어 이르는 식용 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "서대류",
+    "matchingBaseName": "서대",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름",
+      "multiple_candidates",
+      "same_organism_group_restricted(fish)"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000451",
+        "koreanName": "그물동서대",
+        "scientificName": "Aseraggodes kaianus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Soleidae Bonaparte, 1833"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.4,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000452",
+        "koreanName": "동서대",
+        "scientificName": "Aseraggodes kobensis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Soleidae Bonaparte, 1833"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000453",
+        "koreanName": "얼룩서대",
+        "scientificName": "Brachirus annularis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Soleidae Bonaparte, 1833"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000454",
+        "koreanName": "궁제기서대",
+        "scientificName": "Zebrias zebrinus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Soleidae Bonaparte, 1833"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.4,
+        "confidence": "low",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000455",
+        "koreanName": "각시서대",
+        "scientificName": "Zebrias japonicus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Soleidae Bonaparte, 1833"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.5,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000456",
+        "koreanName": "납서대",
+        "scientificName": "Heteromycteris japonicus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Soleidae Bonaparte, 1833"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000457",
+        "koreanName": "뿔서대",
+        "scientificName": "Aesopia cornuta",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Soleidae Bonaparte, 1833"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000567",
+        "koreanName": "물서대",
+        "scientificName": "Cynoglossus gracilis",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Cynoglossidae Jordan, 1888"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000568",
+        "koreanName": "용서대",
+        "scientificName": "Cynoglossus abbreviatus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Cynoglossidae Jordan, 1888"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      },
+      {
+        "internalId": "BM-SPECIES-000569",
+        "koreanName": "칠서대",
+        "scientificName": "Cynoglossus interruptus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Carangiformes",
+          "family": "Cynoglossidae Jordan, 1888"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "substring_match",
+        "similarityScore": 0.667,
+        "confidence": "medium",
+        "ambiguityReason": "multiple_candidates",
+        "note": "부분 문자열 일치"
+      }
+    ]
+  },
+  {
+    "sourceName": "왕우럭조개류",
+    "category": "회/식용 인기어종",
+    "existingDescription": "왕우럭조개와 비슷한 패류를 통틀어 이르는 해산물입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "왕우럭조개류",
+    "matchingBaseName": "왕우럭조개",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-003294",
+        "koreanName": "왕우럭조개",
+        "scientificName": "Tresus keenae",
+        "taxonomy": {
+          "class": "Bivalvia Linnaeus, 1758",
+          "order": "Venerida Gray, 1854",
+          "family": "Mactridae Lamarck, 1809"
+        },
+        "organismGroup": "bivalve",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "피조개류",
+    "category": "회/식용 인기어종",
+    "existingDescription": "피조개와 비슷한 패류를 통틀어 이르는 해산물입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "피조개류",
+    "matchingBaseName": "피조개",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-002807",
+        "koreanName": "피조개",
+        "scientificName": "Anadara broughtonii",
+        "taxonomy": {
+          "class": "Bivalvia Linnaeus, 1758",
+          "order": "Arcida Stoliczka, 1871",
+          "family": "Arcidae Lamarck, 1809"
+        },
+        "organismGroup": "bivalve",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "가시복류",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "가시가 있는 복어류로 독성 위험이 있어 주의가 필요합니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "가시복류",
+    "matchingBaseName": "가시복",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000143",
+        "koreanName": "가시복",
+        "scientificName": "Diodon holocanthus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Tetraodontiformes",
+          "family": "Diodontidae Bonaparte, 1835"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "검복류",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "검은빛 복어류로 독성 관리가 필요한 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "검복류",
+    "matchingBaseName": "검복",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000165",
+        "koreanName": "검복",
+        "scientificName": "Takifugu porphyreus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Tetraodontiformes",
+          "family": "Tetraodontidae Bonaparte, 1831"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "까치복류",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "까치무늬 복어류로 독성 위험이 있는 어종입니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "까치복류",
+    "matchingBaseName": "까치복",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000163",
+        "koreanName": "까치복",
+        "scientificName": "Takifugu xanthopterus",
+        "taxonomy": {
+          "class": "Teleostei",
+          "order": "Tetraodontiformes",
+          "family": "Tetraodontidae Bonaparte, 1831"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "전기가오리류",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "전기를 방전할 수 있는 가오리류로 접근에 주의가 필요합니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "전기가오리류",
+    "matchingBaseName": "전기가오리",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000684",
+        "koreanName": "전기가오리",
+        "scientificName": "Narke japonica",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Torpediniformes",
+          "family": "Narcinidae Gill, 1862"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "sourceName": "귀상어류",
+    "category": "주의가 필요한 어종",
+    "existingDescription": "머리가 망치 모양인 상어류로 대형 개체가 있습니다.",
+    "hasExistingScientificOrEnglishName": false,
+    "normalizedName": "귀상어류",
+    "matchingBaseName": "귀상어",
+    "aliasCandidates": {
+      "hasGroupSuffix": true,
+      "cautionLabelDetected": false,
+      "trailingEoStrippable": null,
+      "extractionMethod": "group_suffix_strip(류)"
+    },
+    "status": "manual_review",
+    "statusReasons": [
+      "collective_group_suffix(류) — 여러 종을 포함할 수 있는 이름"
+    ],
+    "candidates": [
+      {
+        "internalId": "BM-SPECIES-000662",
+        "koreanName": "귀상어",
+        "scientificName": "Sphyrna zygaena",
+        "taxonomy": {
+          "class": "Elasmobranchii",
+          "order": "Carcharhiniformes",
+          "family": "Sphyrnidae Bonaparte, 1840"
+        },
+        "organismGroup": "fish",
+        "matchMethod": "exact_korean_name",
+        "similarityScore": 1.0,
+        "confidence": "high",
+        "ambiguityReason": "collective_group_suffix",
+        "note": ""
+      }
+    ]
+  }
+]

@@ -1,0 +1,121 @@
+[
+  {
+    "gapId": "GAP-000001",
+    "group": "Echinodermata",
+    "koreanName": "불가사리",
+    "issueType": "taxonomy_missing",
+    "reason": "현재 Blue Marina 후보 분류 범위에 없음",
+    "status": "planned",
+    "relatedCandidates": [
+      {
+        "internalId": "BM-SPECIES-002509",
+        "koreanName": "불가사리퉁퉁이고둥",
+        "scientificName": "Parvioris fulvescens",
+        "organismGroup": "gastropod",
+        "note": "wrong-organism — 대상 생물이 아니라 이름을 딴/기생·공생하는 별개 분류군"
+      },
+      {
+        "internalId": "BM-SPECIES-002510",
+        "koreanName": "가시불가사리바늘고둥",
+        "scientificName": "Parvioris astropectenicola",
+        "organismGroup": "gastropod",
+        "note": "wrong-organism — 대상 생물이 아니라 이름을 딴/기생·공생하는 별개 분류군"
+      },
+      {
+        "internalId": "BM-SPECIES-002524",
+        "koreanName": "빨강불가사리속살이고둥",
+        "scientificName": "Stilifer akahitode",
+        "organismGroup": "gastropod",
+        "note": "wrong-organism — 대상 생물이 아니라 이름을 딴/기생·공생하는 별개 분류군"
+      },
+      {
+        "internalId": "BM-SPECIES-002534",
+        "koreanName": "불가사리기생고둥",
+        "scientificName": "Thyca crystallina",
+        "organismGroup": "gastropod",
+        "note": "wrong-organism — 대상 생물이 아니라 이름을 딴/기생·공생하는 별개 분류군"
+      },
+      {
+        "internalId": "BM-SPECIES-003277",
+        "koreanName": "거미불가사리조개",
+        "scientificName": "Nipponomysella oblongata",
+        "organismGroup": "bivalve",
+        "note": "wrong-organism — 대상 생물이 아니라 이름을 딴/기생·공생하는 별개 분류군"
+      }
+    ],
+    "sourceReviewBatch": "batch3",
+    "sourceDecision": "rejected",
+    "createdAt": "2026-08-01T15:40:55.598902+00:00",
+    "updatedAt": "2026-08-01T15:40:55.598902+00:00"
+  },
+  {
+    "gapId": "GAP-000002",
+    "group": "Echinodermata",
+    "koreanName": "성게",
+    "issueType": "taxonomy_missing",
+    "reason": "현재 Blue Marina 후보 분류 범위에 없음",
+    "status": "planned",
+    "relatedCandidates": [
+      {
+        "internalId": "BM-SPECIES-002507",
+        "koreanName": "보라성게살이고둥",
+        "scientificName": "Vitreolina langfordi",
+        "organismGroup": "gastropod",
+        "note": "wrong-organism — 대상 생물이 아니라 이름을 딴/기생·공생하는 별개 분류군"
+      },
+      {
+        "internalId": "BM-SPECIES-002508",
+        "koreanName": "성게살이꼬부리고둥",
+        "scientificName": "Vitreobalcis temnopleuricola",
+        "organismGroup": "gastropod",
+        "note": "wrong-organism — 대상 생물이 아니라 이름을 딴/기생·공생하는 별개 분류군"
+      },
+      {
+        "internalId": "BM-SPECIES-002519",
+        "koreanName": "꼬마투명성게살이고둥",
+        "scientificName": "Hypermastus peronellicola",
+        "organismGroup": "gastropod",
+        "note": "wrong-organism — 대상 생물이 아니라 이름을 딴/기생·공생하는 별개 분류군"
+      },
+      {
+        "internalId": "BM-SPECIES-002533",
+        "koreanName": "방패연잎성게살이고둥",
+        "scientificName": "Clypeastericola clypeastericola",
+        "organismGroup": "gastropod",
+        "note": "wrong-organism — 대상 생물이 아니라 이름을 딴/기생·공생하는 별개 분류군"
+      }
+    ],
+    "sourceReviewBatch": "batch3",
+    "sourceDecision": "rejected",
+    "createdAt": "2026-08-01T15:40:55.598902+00:00",
+    "updatedAt": "2026-08-01T15:40:55.598902+00:00"
+  },
+  {
+    "gapId": "GAP-000003",
+    "group": "Echinodermata",
+    "koreanName": "해삼",
+    "issueType": "taxonomy_missing",
+    "reason": "현재 Blue Marina 후보 분류 범위에 없음",
+    "status": "planned",
+    "relatedCandidates": [
+      {
+        "internalId": "BM-SPECIES-005503",
+        "koreanName": "납작흰해삼속살이게",
+        "scientificName": "Pinnixa penultipedalis",
+        "organismGroup": "crustacean",
+        "note": "wrong-organism — 대상 생물이 아니라 이름을 딴/기생·공생하는 별개 분류군"
+      },
+      {
+        "internalId": "BM-SPECIES-005504",
+        "koreanName": "흰해삼속살이게",
+        "scientificName": "Pinnixa tumida",
+        "organismGroup": "crustacean",
+        "note": "wrong-organism — 대상 생물이 아니라 이름을 딴/기생·공생하는 별개 분류군"
+      }
+    ],
+    "sourceReviewBatch": "batch3",
+    "sourceDecision": "rejected",
+    "createdAt": "2026-08-01T15:40:55.598902+00:00",
+    "updatedAt": "2026-08-01T15:40:55.598902+00:00"
+  }
+]

@@ -1,0 +1,182 @@
+{
+  "generatedAt": "2026-08-03T15:15:31.420541+00:00",
+  "gapGroup": "Echinodermata",
+  "resolved": true,
+  "candidateCount": 234,
+  "classDistribution": {
+    "Echinoidea": 35,
+    "Holothuroidea": 39,
+    "Ophiuroidea": 64,
+    "Crinoidea": 18,
+    "Asteroidea": 78
+  },
+  "examples": [
+    {
+      "koreanName": "분지성게",
+      "scientificName": "Temnopleurus toreumaticus",
+      "internalId": "BM-SPECIES-007110"
+    },
+    {
+      "koreanName": "하드윅분지성게",
+      "scientificName": "Temnopleurus hardwickii",
+      "internalId": "BM-SPECIES-007111"
+    },
+    {
+      "koreanName": "보라성게",
+      "scientificName": "Heliocidaris crassispina",
+      "internalId": "BM-SPECIES-007112"
+    },
+    {
+      "koreanName": "만두성게",
+      "scientificName": "Echinometra mathaei",
+      "internalId": "BM-SPECIES-007113"
+    },
+    {
+      "koreanName": "흰수염성게",
+      "scientificName": "Tripneustes gratilla",
+      "internalId": "BM-SPECIES-007114"
+    },
+    {
+      "koreanName": "주발성게",
+      "scientificName": "Toxopneustes pileolus",
+      "internalId": "BM-SPECIES-007115"
+    },
+    {
+      "koreanName": "파동측강성게",
+      "scientificName": "Coelopleurus undulatus",
+      "internalId": "BM-SPECIES-007116"
+    },
+    {
+      "koreanName": "가시왕관성게",
+      "scientificName": "Diadema setosum",
+      "internalId": "BM-SPECIES-007117"
+    },
+    {
+      "koreanName": "한국만두등성게",
+      "scientificName": "Echinolampas koreana",
+      "internalId": "BM-SPECIES-007118"
+    },
+    {
+      "koreanName": "가는관극성게",
+      "scientificName": "Phalacrocidaris japonica",
+      "internalId": "BM-SPECIES-007119"
+    }
+  ],
+  "byGapTarget": [
+    {
+      "gapId": "GAP-000001",
+      "koreanName": "불가사리",
+      "exactMatchCount": 0,
+      "substringMatchCount": 138,
+      "sampleSubstringMatches": [
+        {
+          "koreanName": "잔가시지붕거미불가사리",
+          "scientificName": "Amphiophiura sculpta",
+          "internalId": "BM-SPECIES-007168",
+          "class": "Ophiuroidea"
+        },
+        {
+          "koreanName": "큰뚜껑양편빗살거미불가사리",
+          "scientificName": "Amphiophiura megapoma",
+          "internalId": "BM-SPECIES-007169",
+          "class": "Ophiuroidea"
+        },
+        {
+          "koreanName": "빗살거미불가사리",
+          "scientificName": "Ophiuroglypha kinbergi",
+          "internalId": "BM-SPECIES-007170",
+          "class": "Ophiuroidea"
+        },
+        {
+          "koreanName": "지붕거미불가사리",
+          "scientificName": "Stegophiura sterea",
+          "internalId": "BM-SPECIES-007171",
+          "class": "Ophiuroidea"
+        },
+        {
+          "koreanName": "슬라덴지붕거미불가사리",
+          "scientificName": "Stegophiura sladeni",
+          "internalId": "BM-SPECIES-007172",
+          "class": "Ophiuroidea"
+        }
+      ]
+    },
+    {
+      "gapId": "GAP-000002",
+      "koreanName": "성게",
+      "exactMatchCount": 0,
+      "substringMatchCount": 36,
+      "sampleSubstringMatches": [
+        {
+          "koreanName": "분지성게",
+          "scientificName": "Temnopleurus toreumaticus",
+          "internalId": "BM-SPECIES-007110",
+          "class": "Echinoidea"
+        },
+        {
+          "koreanName": "하드윅분지성게",
+          "scientificName": "Temnopleurus hardwickii",
+          "internalId": "BM-SPECIES-007111",
+          "class": "Echinoidea"
+        },
+        {
+          "koreanName": "보라성게",
+          "scientificName": "Heliocidaris crassispina",
+          "internalId": "BM-SPECIES-007112",
+          "class": "Echinoidea"
+        },
+        {
+          "koreanName": "만두성게",
+          "scientificName": "Echinometra mathaei",
+          "internalId": "BM-SPECIES-007113",
+          "class": "Echinoidea"
+        },
+        {
+          "koreanName": "흰수염성게",
+          "scientificName": "Tripneustes gratilla",
+          "internalId": "BM-SPECIES-007114",
+          "class": "Echinoidea"
+        }
+      ]
+    },
+    {
+      "gapId": "GAP-000003",
+      "koreanName": "해삼",
+      "exactMatchCount": 0,
+      "substringMatchCount": 32,
+      "sampleSubstringMatches": [
+        {
+          "koreanName": "가시닻해삼",
+          "scientificName": "Protankyra bidentata",
+          "internalId": "BM-SPECIES-007134",
+          "class": "Holothuroidea"
+        },
+        {
+          "koreanName": "아기닻해삼",
+          "scientificName": "Leptosynapta inhaerens",
+          "internalId": "BM-SPECIES-007135",
+          "class": "Holothuroidea"
+        },
+        {
+          "koreanName": "주걱닻해삼",
+          "scientificName": "Oestergrenia dubia",
+          "internalId": "BM-SPECIES-007136",
+          "class": "Holothuroidea"
+        },
+        {
+          "koreanName": "둥근닻해삼",
+          "scientificName": "Patinapta ooplax",
+          "internalId": "BM-SPECIES-007137",
+          "class": "Holothuroidea"
+        },
+        {
+          "koreanName": "보라바퀴해삼",
+          "scientificName": "Polycheira rufescens",
+          "internalId": "BM-SPECIES-007138",
+          "class": "Holothuroidea"
+        }
+      ]
+    }
+  ],
+  "note": "resolved=true는 '분류 공백 자체가 후보 풀 확장으로 채워졌다'는 뜻일 뿐, 불가사리/성게/해삼 각각을 특정 단일 종으로 확정했다는 뜻이 아니다. exactMatchCount가 전부 0인 것에서 보듯 이 3개 이름은 MBRIS에 단독 표제어로 존재하지 않고 접두어가 붙은 개별 종명(예: 아무르불가사리, 돌기해삼, 보라성게)으로만 존재한다 — Alias 판정(§5)은 이 사실을 반영해야 한다."
+}

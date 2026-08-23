@@ -1,0 +1,161 @@
+{
+  "sampleSize": 85,
+  "note": "성공 수집분(85종) 기준 — 실패 1건(갯강구, BM-SPECIES-006084)은 원본이 없어 제외",
+  "fields": {
+    "CommKorNm": {
+      "field": "CommKorNm",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 0,
+      "populatedCount": 85,
+      "populatedRate": 1.0
+    },
+    "SpcScitfNm": {
+      "field": "SpcScitfNm",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 0,
+      "populatedCount": 85,
+      "populatedRate": 1.0
+    },
+    "SpcScitfNmShort": {
+      "field": "SpcScitfNmShort",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 0,
+      "populatedCount": 85,
+      "populatedRate": 1.0
+    },
+    "KingdomKR": {
+      "field": "KingdomKR",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 0,
+      "populatedCount": 85,
+      "populatedRate": 1.0
+    },
+    "PhylumDivisionKR": {
+      "field": "PhylumDivisionKR",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 0,
+      "populatedCount": 85,
+      "populatedRate": 1.0
+    },
+    "ClassKR": {
+      "field": "ClassKR",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 70,
+      "populatedCount": 15,
+      "populatedRate": 0.1765
+    },
+    "OrderKR": {
+      "field": "OrderKR",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 6,
+      "populatedCount": 79,
+      "populatedRate": 0.9294
+    },
+    "FamilyKR": {
+      "field": "FamilyKR",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 3,
+      "populatedCount": 82,
+      "populatedRate": 0.9647
+    },
+    "FORM": {
+      "field": "FORM",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 21,
+      "populatedCount": 64,
+      "populatedRate": 0.7529
+    },
+    "ECOL": {
+      "field": "ECOL",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 28,
+      "populatedCount": 57,
+      "populatedRate": 0.6706
+    },
+    "HABI": {
+      "field": "HABI",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 80,
+      "populatedCount": 5,
+      "populatedRate": 0.0588
+    },
+    "NADI": {
+      "field": "NADI",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 8,
+      "populatedCount": 77,
+      "populatedRate": 0.9059
+    },
+    "INDI": {
+      "field": "INDI",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 10,
+      "populatedCount": 75,
+      "populatedRate": 0.8824
+    },
+    "CorrNmTyp": {
+      "field": "CorrNmTyp",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 0,
+      "populatedCount": 85,
+      "populatedRate": 1.0
+    },
+    "CorrSpcScitfNm": {
+      "field": "CorrSpcScitfNm",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 0,
+      "populatedCount": 85,
+      "populatedRate": 1.0
+    },
+    "SpcTyp": {
+      "field": "SpcTyp",
+      "sampleSize": 85,
+      "tagPresentCount": 85,
+      "tagMissingCount": 0,
+      "emptyValueCount": 0,
+      "populatedCount": 85,
+      "populatedRate": 1.0
+    }
+  },
+  "classKRBlankRate": 0.8235,
+  "habiBlankRate": 0.9412,
+  "ecolProvidedRate": 0.6706,
+  "nadiProvidedCount": 77,
+  "indiProvidedCount": 75,
+  "spcTypDistribution": {
+    "기타": 85
+  },
+  "corrNmTypDistribution": {
+    "정명": 85
+  }
+}

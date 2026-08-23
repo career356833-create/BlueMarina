@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-08-03T15:15:31.566970+00:00",
+  "simulationOnly": true,
+  "note": "기존 priority/*.json 산출물은 이 스크립트로 재생성하지 않았다 — echinoderm 234건만 떼어 동일한 점수식으로 계산해본 결과다. echinoderm은 NIFS/fish-data 연결이 전무하고 GROUP_BONUS·NONFISH_TARGET_GROUP 대상에도 포함되지 않으므로(priority_engine.py/service_priority.py 원본 그대로) 국명·학명 신뢰도 점수만 남아 구조적으로 Tier A/B에 도달할 수 없다.",
+  "echinodermCandidateCount": 234,
+  "serviceTierDistribution": {
+    "C": 234
+  },
+  "dataPriorityTierDistribution": {
+    "tier3": 234
+  },
+  "fishingTargetStatusDistribution": {
+    "unknown": 234
+  },
+  "existingApprovedTierAOverlapCount": 0,
+  "existingApprovedTierAOverlap": [],
+  "maxServicePriorityScore": 10,
+  "maxDataPriorityScore": 15
+}
