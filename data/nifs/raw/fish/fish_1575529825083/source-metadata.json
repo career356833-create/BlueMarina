@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575529825083",
+  "koreanName": "갯장어",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575529825083",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1575529825083"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 2294,
+  "contentHash": "b8762317396338f81c04cecf9bade8a842ba3e1354064d3ce54254de716de987",
+  "collectedAt": "2026-07-30T18:51:31.873400+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1575529825083",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1575529825083",
+      "fishName": "갯장어",
+      "scName": "Muraenesox cinereus",
+      "prohibitSize": "40",
+      "recommendSize": "64",
+      "infoDistribution": "우리나라 남해 및 서해, 동중국해",
+      "infoGrowth": "암컷이 수컷보다 성장이 빠르다. 만 2년이면 전장 34cm, 4년이면 61cm, 6년이면 82cm정도 자란다. 산란기는 4~7월이며, 주산란기는 7월이고 성숙체장은 64cm 이다.",
+      "infoShape": "등지느러미는 가슴지느러미 보다 앞쪽에서 시작하며, 항문 앞쪽으로 옆줄에 40~47개의 감각공(감각을 느낄수 있는 구멍)이 있다. 억세고 큰 송곳니를 가졌으며, 입이 크다. 위턱이 아래턱보다 돌출하였고 몸에 가슴지느러미는 있으나 배지느러미와 비늘이 없다.",
+      "infoDialect": "하모, 이장어, 참장어, 갯짱어, 개장어, 놋장어, 뱀장어(부산, 김천), 갯붕장어(다대포), 노장(포항)",
+      "infoCatch": "연승어업",
+      "infoCookCal": "167",
+      "infoCookHow": "167 Kcal/100g\n탄수화물: 0.4g\n단백질: 17.9 g\n지방 : 9.9 g",
+      "infoEat": "겁나 맛있어요!",
+      "display": "Y",
+      "graphComment": "",
+      "fishNameEn": "Daggertooth pike conger"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

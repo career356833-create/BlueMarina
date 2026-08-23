@@ -1,0 +1,268 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575881532404",
+  "koreanName": "참홍어",
+  "englishName": "Mottled skate",
+  "scientificName": "Raja pulchra",
+  "feature": "등쪽 가장자리에 원형모양의 2개의 파져있는 부위가 있으며, 등쪽은 짙은 갈색이며, 배쪽은 짙은 회색을 띈다.",
+  "distribution": "북서태평양(한국, 일본, 오호츠크해 및 동중국해)",
+  "lifecycle": "주 산란기는 연2회로, 5~6월과 11~12월",
+  "dialect": "간재미, 가부리, 홍해, 홍에",
+  "catchMethod": "근해연승, 자망, 저인망",
+  "nutrition": "※ 100g 기준\n○ 단백질: 18.82~21.34g\n○ 칼슘 : 252.7~288.3mg\n○ 인 : 248.2-269.3mg\n○ 칼륨 : 345.9-389.5 mg",
+  "prohibitSize": 79.0,
+  "recommendSize": 89.3,
+  "eatingNote": null,
+  "eatingNoteMissing": {
+    "value": null,
+    "sourceValue": "NA",
+    "missingReason": "source_na"
+  },
+  "listColorLevel": "2",
+  "listDisplayStatus": "Y",
+  "recommendPeriod": [
+    {
+      "month": 5,
+      "sourceValue": "1",
+      "recommendationLevel": "1",
+      "displayLabel": "자제"
+    },
+    {
+      "month": 6,
+      "sourceValue": "2",
+      "recommendationLevel": "2",
+      "displayLabel": "지양"
+    },
+    {
+      "month": 7,
+      "sourceValue": "2",
+      "recommendationLevel": "2",
+      "displayLabel": "지양"
+    },
+    {
+      "month": 8,
+      "sourceValue": "1",
+      "recommendationLevel": "1",
+      "displayLabel": "자제"
+    }
+  ],
+  "recommendPeriodOmittedMonths": [
+    1,
+    2,
+    3,
+    4,
+    9,
+    10,
+    11,
+    12
+  ],
+  "recommendPeriodOmittedMeaning": "권장",
+  "recommendPeriodNote": "periodList는 자제·지양 월만 반환한다. 응답에 없는 월은 화면에서 권장(green)으로 표시된다. 데이터 누락이 아니라 출처의 표현 방식이다.",
+  "catchHistory": [
+    {
+      "year": 2010,
+      "catchAmount": 723.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2010",
+        "catchAverage": "723"
+      }
+    },
+    {
+      "year": 2011,
+      "catchAmount": 358.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2011",
+        "catchAverage": "358"
+      }
+    },
+    {
+      "year": 2012,
+      "catchAmount": 320.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2012",
+        "catchAverage": "320"
+      }
+    },
+    {
+      "year": 2013,
+      "catchAmount": 398.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2013",
+        "catchAverage": "398"
+      }
+    },
+    {
+      "year": 2014,
+      "catchAmount": 540.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2014",
+        "catchAverage": "540"
+      }
+    },
+    {
+      "year": 2015,
+      "catchAmount": 358.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2015",
+        "catchAverage": "358"
+      }
+    },
+    {
+      "year": 2016,
+      "catchAmount": 514.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2016",
+        "catchAverage": "514"
+      }
+    },
+    {
+      "year": 2017,
+      "catchAmount": 509.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2017",
+        "catchAverage": "509"
+      }
+    },
+    {
+      "year": 2018,
+      "catchAmount": 700.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2018",
+        "catchAverage": "700"
+      }
+    },
+    {
+      "year": 2019,
+      "catchAmount": 1287.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2019",
+        "catchAverage": "1287"
+      }
+    },
+    {
+      "year": 2020,
+      "catchAmount": 2054.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2020",
+        "catchAverage": "2054"
+      }
+    },
+    {
+      "year": 2021,
+      "catchAmount": 3121.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2021",
+        "catchAverage": "3121"
+      }
+    },
+    {
+      "year": 2022,
+      "catchAmount": 3182.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2022",
+        "catchAverage": "3182"
+      }
+    },
+    {
+      "year": 2023,
+      "catchAmount": 3597.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2023",
+        "catchAverage": "3597"
+      }
+    },
+    {
+      "year": 2024,
+      "catchAmount": 5144.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2024",
+        "catchAverage": "5144"
+      }
+    }
+  ],
+  "sourceImages": [
+    {
+      "sourceId": "fish_1575881532404",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575881532404_157674663915403.jpg",
+      "sourceRole": "list_thumbnail",
+      "sourceFileName": "fish_1575881532404_157674663915403.jpg",
+      "localPath": "fish\\fish_1575881532404\\images\\original\\image-001.jpg",
+      "httpStatus": 200,
+      "mimeType": "image/jpeg",
+      "detectedFormat": "JPEG",
+      "width": 1282,
+      "height": 768,
+      "fileSize": 159647,
+      "sha256": "d089878864a5ae88c44748fadd4a09c0393dc0a6e94de9bb9184bbc4b808c3ed",
+      "isWatermarked": false,
+      "isPlaceholder": false,
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "isValid": true,
+      "error": null,
+      "collectedAt": "2026-07-30T18:54:27.668394+00:00"
+    },
+    {
+      "sourceId": "fish_1575881532404",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575881532404_157674663915403.jpg",
+      "sourceRole": "detail_primary",
+      "sourceFileName": "fish_1575881532404_157674663915403.jpg",
+      "localPath": "fish\\fish_1575881532404\\images\\original\\image-002.jpg",
+      "httpStatus": 200,
+      "mimeType": "image/jpeg",
+      "detectedFormat": "JPEG",
+      "width": 1282,
+      "height": 768,
+      "fileSize": 159647,
+      "sha256": "d089878864a5ae88c44748fadd4a09c0393dc0a6e94de9bb9184bbc4b808c3ed",
+      "isWatermarked": false,
+      "isPlaceholder": false,
+      "isDuplicate": true,
+      "duplicateOf": "fish_1575881532404_157674663915403.jpg",
+      "isValid": true,
+      "error": null,
+      "collectedAt": "2026-07-30T18:54:29.744877+00:00"
+    },
+    {
+      "sourceId": "fish_1575881532404",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575881532404_157674663905604.jpg",
+      "sourceRole": "detail_secondary",
+      "sourceFileName": "fish_1575881532404_157674663905604.jpg",
+      "localPath": "fish\\fish_1575881532404\\images\\original\\image-003.jpg",
+      "httpStatus": 200,
+      "mimeType": "image/jpeg",
+      "detectedFormat": "JPEG",
+      "width": 502,
+      "height": 302,
+      "fileSize": 37233,
+      "sha256": "d6469e4b20145f7ba53d1d5efc31ba0168de155d30b9774413a0171eda1568d4",
+      "isWatermarked": false,
+      "isPlaceholder": false,
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "isValid": true,
+      "error": null,
+      "collectedAt": "2026-07-30T18:54:31.799012+00:00"
+    }
+  ],
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575881532404",
+  "sourceCollectedAt": "2026-07-30T18:57:49.606979+00:00",
+  "sourceContentHash": "ada00c029508f616914e2cfc3ff6824fe1fabf070e51576e16cb4d0ee7fbf8ab",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "factReviewStatus": "pending"
+}

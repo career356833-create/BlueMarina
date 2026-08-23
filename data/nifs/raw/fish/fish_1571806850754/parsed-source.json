@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1571806850754",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1571806850754",
+      "fishName": "갈치",
+      "scName": "Trichiurus lepturus",
+      "prohibitSize": "18",
+      "recommendSize": "25",
+      "infoDistribution": "우리나라 남해 및 서해, 동중국해",
+      "infoGrowth": "갈치의 산란장은 우리나라의 서·남해연안과 중국 연안이며, 우리나라 연안에서는 5~9월이 주 산란이다. 크기가 약 82 cm 이면, 이 중 50%가 산란에 참여하고, 크기가 약 83~141 cm이면 약 14.000~76,000개의 알을 낳는다. 갈치는 약 80 cm이하(2~3년생)에서는 수컷이 많지만, 이 이상의 크기에서는 암컷이 많다. 산란기는 4~10월 주 산란기는 5~9월이며, 남, 서해안, 제주 북서 및 남동 방, 온주 등 중국 대륙 연안 등에서 산란한다. 성숙체장은 2.2~27.2cm, 수명은 15세이다.",
+      "infoShape": "갈치는 몸 빛깔은 은백색이며, 두 눈 사이의 머리부분이 편평하다. 입은 크고 양 턱에는 크고 억센 이빨이 있다. 몸은 아주 길고 납작하며, 꼬리는 띠 모양으로 쉽게 잘린다. 다른 물고기들과 달리, 배지느러미와 꼬리지느러미 및 비늘이 없다.",
+      "infoDialect": "깔치, 풀치(전남에서 새끼를 말함), 빈쟁이(통영), 은갈치(제주)",
+      "infoCatch": "근해연승, 대형선망, 근해안강망, 쌍끌이대형저인망, 연안복합",
+      "infoCookCal": "149",
+      "infoCookHow": "149 Kcal/100g \n○ 단백질: 18.5%\n     -  필수아미노산: 7,666mg\n○ 지방: 7.5%\n     -  포화지방산: 35.3%\n     -  불포화지방산: 64.7%",
+      "infoEat": "NA",
+      "display": "N",
+      "graphComment": "갈치의 연간 어획량은 지난 20년간 증감을 반복하였지만, 지속적으로 감소추세를 보인다.",
+      "fishNameEn": "Largehead hairtail"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

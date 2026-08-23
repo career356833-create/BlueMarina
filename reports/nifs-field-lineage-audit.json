@@ -1,0 +1,1191 @@
+{
+  "generatedAt": "2026-08-01T06:59:34.803Z",
+  "summary": {
+    "totalCandidates": 8,
+    "detailResponsePresentCount": 8,
+    "detailApiResponseMissingCount": 8,
+    "ready": 8,
+    "partial": 0,
+    "blocked": 0,
+    "seasonPreservedCount": 7,
+    "seasonSourceMissingCount": 1,
+    "spawningPreservedCount": 8,
+    "taxonomySourceMissingCount": 8,
+    "feedingSourceMissingCount": 8,
+    "movementSourceMissingCount": 8,
+    "mappingLossCount": 0,
+    "schemaNotSupportedCount": 0,
+    "morphologyPreservedCount": 8,
+    "featureSourceMissingCount": 8
+  },
+  "sourceFiles": {
+    "candidates": "reports/nifs-fish-species-candidates.json",
+    "preview": "reports/nifs-fish-detail-read-model-preview.json",
+    "rawRoot": "data/nifs/raw/fish/<sourceId>",
+    "manifestRoot": "data-import/nifs/manifest/<sourceId>.json"
+  },
+  "fieldMatrix": [
+    {
+      "field": "taxonomy",
+      "classification": "source_missing"
+    },
+    {
+      "field": "morphology",
+      "classification": "preserved",
+      "note": "infoShape is preserved end-to-end in morphology slots."
+    },
+    {
+      "field": "feature",
+      "classification": "source_missing",
+      "note": "No infoFeature exists in the raw source for this dataset."
+    },
+    {
+      "field": "habitat / distribution",
+      "classification": "preserved"
+    },
+    {
+      "field": "ecology / lifecycle / growth",
+      "classification": "preserved"
+    },
+    {
+      "field": "season",
+      "classification": "preserved_or_source_missing",
+      "note": "7 preserved, 1 source_missing (fish_1576639605223)"
+    },
+    {
+      "field": "spawning",
+      "classification": "preserved"
+    },
+    {
+      "field": "feeding",
+      "classification": "source_missing"
+    },
+    {
+      "field": "movement",
+      "classification": "source_missing"
+    },
+    {
+      "field": "media / image",
+      "classification": "preserved"
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "fish-species-candidate-fish_1573537097812",
+      "sourceId": "fish_1573537097812",
+      "koreanName": "붉은대게",
+      "scientificName": "Chionoecetes japonicus",
+      "detailApiResponsePresent": false,
+      "raw": {
+        "hasTaxonomy": false,
+        "hasFeeding": false,
+        "hasMovement": false,
+        "hasPeriodList": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "parsed": {
+        "rawApiKeys": [
+          "fishId",
+          "fishName",
+          "scName",
+          "prohibitSize",
+          "recommendSize",
+          "infoDistribution",
+          "infoGrowth",
+          "infoShape",
+          "infoDialect",
+          "infoCatch",
+          "infoCookCal",
+          "infoCookHow",
+          "infoEat",
+          "display",
+          "graphComment",
+          "fishNameEn"
+        ]
+      },
+      "manifest": {
+        "hasPeriodList": true,
+        "hasGrowthText": true,
+        "hasSpawning": true,
+        "hasMorphologyText": true,
+        "hasFeatureText": false
+      },
+      "candidate": {
+        "hasSeason": true,
+        "hasSpawning": true,
+        "taxonomy": null,
+        "officialFactsShape": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "preview": {
+        "readiness": "ready",
+        "hasSeason": true,
+        "hasSpawning": true,
+        "missingFields": [
+          "taxonomy",
+          "quickFacts.summary",
+          "feeding",
+          "regulations",
+          "generatedContents"
+        ],
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "lineage": {
+        "taxonomy": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured taxonomy exists in the raw source or downstream builders."
+        },
+        "morphology": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "preserved",
+          "preview": "preserved",
+          "note": "infoShape is preserved into manifest, candidate, and preview morphology slots."
+        },
+        "habitat": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoDistribution survives into candidate and preview."
+        },
+        "ecology": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoGrowth survives into candidate and preview."
+        },
+        "season": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "periodList is preserved into manifest/candidate/preview."
+        },
+        "spawning": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "The growth text contains an explicit ?? phrase and is promoted to spawning."
+        },
+        "feeding": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured feeding field exists in the raw source."
+        },
+        "movement": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No movement field exists in the raw source."
+        },
+        "feature": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No infoFeature field exists in the raw source for this dataset."
+        }
+      }
+    },
+    {
+      "candidateId": "fish-species-candidate-fish_1575873437839",
+      "sourceId": "fish_1575873437839",
+      "koreanName": "오분자기",
+      "scientificName": "Sulculus diversicolor",
+      "detailApiResponsePresent": false,
+      "raw": {
+        "hasTaxonomy": false,
+        "hasFeeding": false,
+        "hasMovement": false,
+        "hasPeriodList": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "parsed": {
+        "rawApiKeys": [
+          "fishId",
+          "fishName",
+          "scName",
+          "prohibitSize",
+          "recommendSize",
+          "infoDistribution",
+          "infoGrowth",
+          "infoShape",
+          "infoDialect",
+          "infoCatch",
+          "infoCookCal",
+          "infoCookHow",
+          "infoEat",
+          "display",
+          "graphComment",
+          "fishNameEn"
+        ]
+      },
+      "manifest": {
+        "hasPeriodList": true,
+        "hasGrowthText": true,
+        "hasSpawning": true,
+        "hasMorphologyText": true,
+        "hasFeatureText": false
+      },
+      "candidate": {
+        "hasSeason": true,
+        "hasSpawning": true,
+        "taxonomy": null,
+        "officialFactsShape": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "preview": {
+        "readiness": "ready",
+        "hasSeason": true,
+        "hasSpawning": true,
+        "missingFields": [
+          "taxonomy",
+          "quickFacts.summary",
+          "feeding",
+          "regulations",
+          "generatedContents"
+        ],
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "lineage": {
+        "taxonomy": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured taxonomy exists in the raw source or downstream builders."
+        },
+        "morphology": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "preserved",
+          "preview": "preserved",
+          "note": "infoShape is preserved into manifest, candidate, and preview morphology slots."
+        },
+        "habitat": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoDistribution survives into candidate and preview."
+        },
+        "ecology": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoGrowth survives into candidate and preview."
+        },
+        "season": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "periodList is preserved into manifest/candidate/preview."
+        },
+        "spawning": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "The growth text contains an explicit ?? phrase and is promoted to spawning."
+        },
+        "feeding": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured feeding field exists in the raw source."
+        },
+        "movement": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No movement field exists in the raw source."
+        },
+        "feature": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No infoFeature field exists in the raw source for this dataset."
+        }
+      }
+    },
+    {
+      "candidateId": "fish-species-candidate-fish_1575880014320",
+      "sourceId": "fish_1575880014320",
+      "koreanName": "제주소라",
+      "scientificName": "Turbo cornutus, Batillus cornutus",
+      "detailApiResponsePresent": false,
+      "raw": {
+        "hasTaxonomy": false,
+        "hasFeeding": false,
+        "hasMovement": false,
+        "hasPeriodList": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "parsed": {
+        "rawApiKeys": [
+          "fishId",
+          "fishName",
+          "scName",
+          "prohibitSize",
+          "recommendSize",
+          "infoDistribution",
+          "infoGrowth",
+          "infoShape",
+          "infoDialect",
+          "infoCatch",
+          "infoCookCal",
+          "infoCookHow",
+          "infoEat",
+          "display",
+          "graphComment",
+          "fishNameEn"
+        ]
+      },
+      "manifest": {
+        "hasPeriodList": true,
+        "hasGrowthText": true,
+        "hasSpawning": true,
+        "hasMorphologyText": true,
+        "hasFeatureText": false
+      },
+      "candidate": {
+        "hasSeason": true,
+        "hasSpawning": true,
+        "taxonomy": null,
+        "officialFactsShape": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "preview": {
+        "readiness": "ready",
+        "hasSeason": true,
+        "hasSpawning": true,
+        "missingFields": [
+          "taxonomy",
+          "quickFacts.summary",
+          "feeding",
+          "regulations",
+          "generatedContents"
+        ],
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "lineage": {
+        "taxonomy": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured taxonomy exists in the raw source or downstream builders."
+        },
+        "morphology": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "preserved",
+          "preview": "preserved",
+          "note": "infoShape is preserved into manifest, candidate, and preview morphology slots."
+        },
+        "habitat": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoDistribution survives into candidate and preview."
+        },
+        "ecology": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoGrowth survives into candidate and preview."
+        },
+        "season": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "periodList is preserved into manifest/candidate/preview."
+        },
+        "spawning": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "The growth text contains an explicit ?? phrase and is promoted to spawning."
+        },
+        "feeding": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured feeding field exists in the raw source."
+        },
+        "movement": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No movement field exists in the raw source."
+        },
+        "feature": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No infoFeature field exists in the raw source for this dataset."
+        }
+      }
+    },
+    {
+      "candidateId": "fish-species-candidate-fish_1575880791880",
+      "sourceId": "fish_1575880791880",
+      "koreanName": "참조기",
+      "scientificName": "Larimichthys polyactis",
+      "detailApiResponsePresent": false,
+      "raw": {
+        "hasTaxonomy": false,
+        "hasFeeding": false,
+        "hasMovement": false,
+        "hasPeriodList": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "parsed": {
+        "rawApiKeys": [
+          "fishId",
+          "fishName",
+          "scName",
+          "prohibitSize",
+          "recommendSize",
+          "infoDistribution",
+          "infoGrowth",
+          "infoShape",
+          "infoDialect",
+          "infoCatch",
+          "infoCookCal",
+          "infoCookHow",
+          "infoEat",
+          "display",
+          "graphComment",
+          "fishNameEn"
+        ]
+      },
+      "manifest": {
+        "hasPeriodList": true,
+        "hasGrowthText": true,
+        "hasSpawning": true,
+        "hasMorphologyText": true,
+        "hasFeatureText": false
+      },
+      "candidate": {
+        "hasSeason": true,
+        "hasSpawning": true,
+        "taxonomy": null,
+        "officialFactsShape": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "preview": {
+        "readiness": "ready",
+        "hasSeason": true,
+        "hasSpawning": true,
+        "missingFields": [
+          "taxonomy",
+          "quickFacts.summary",
+          "feeding",
+          "regulations",
+          "generatedContents"
+        ],
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "lineage": {
+        "taxonomy": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured taxonomy exists in the raw source or downstream builders."
+        },
+        "morphology": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "preserved",
+          "preview": "preserved",
+          "note": "infoShape is preserved into manifest, candidate, and preview morphology slots."
+        },
+        "habitat": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoDistribution survives into candidate and preview."
+        },
+        "ecology": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoGrowth survives into candidate and preview."
+        },
+        "season": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "periodList is preserved into manifest/candidate/preview."
+        },
+        "spawning": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "The growth text contains an explicit ?? phrase and is promoted to spawning."
+        },
+        "feeding": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured feeding field exists in the raw source."
+        },
+        "movement": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No movement field exists in the raw source."
+        },
+        "feature": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No infoFeature field exists in the raw source for this dataset."
+        }
+      }
+    },
+    {
+      "candidateId": "fish-species-candidate-fish_1575881532404",
+      "sourceId": "fish_1575881532404",
+      "koreanName": "참홍어",
+      "scientificName": "Raja pulchra",
+      "detailApiResponsePresent": false,
+      "raw": {
+        "hasTaxonomy": false,
+        "hasFeeding": false,
+        "hasMovement": false,
+        "hasPeriodList": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "parsed": {
+        "rawApiKeys": [
+          "fishId",
+          "fishName",
+          "scName",
+          "prohibitSize",
+          "recommendSize",
+          "infoDistribution",
+          "infoGrowth",
+          "infoShape",
+          "infoDialect",
+          "infoCatch",
+          "infoCookCal",
+          "infoCookHow",
+          "infoEat",
+          "display",
+          "graphComment",
+          "fishNameEn"
+        ]
+      },
+      "manifest": {
+        "hasPeriodList": true,
+        "hasGrowthText": true,
+        "hasSpawning": true,
+        "hasMorphologyText": true,
+        "hasFeatureText": false
+      },
+      "candidate": {
+        "hasSeason": true,
+        "hasSpawning": true,
+        "taxonomy": null,
+        "officialFactsShape": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "preview": {
+        "readiness": "ready",
+        "hasSeason": true,
+        "hasSpawning": true,
+        "missingFields": [
+          "taxonomy",
+          "quickFacts.summary",
+          "feeding",
+          "regulations",
+          "generatedContents"
+        ],
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "lineage": {
+        "taxonomy": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured taxonomy exists in the raw source or downstream builders."
+        },
+        "morphology": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "preserved",
+          "preview": "preserved",
+          "note": "infoShape is preserved into manifest, candidate, and preview morphology slots."
+        },
+        "habitat": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoDistribution survives into candidate and preview."
+        },
+        "ecology": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoGrowth survives into candidate and preview."
+        },
+        "season": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "periodList is preserved into manifest/candidate/preview."
+        },
+        "spawning": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "The growth text contains an explicit ?? phrase and is promoted to spawning."
+        },
+        "feeding": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured feeding field exists in the raw source."
+        },
+        "movement": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No movement field exists in the raw source."
+        },
+        "feature": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No infoFeature field exists in the raw source for this dataset."
+        }
+      }
+    },
+    {
+      "candidateId": "fish-species-candidate-fish_1576639605222",
+      "sourceId": "fish_1576639605222",
+      "koreanName": "대게",
+      "scientificName": "Chionoecetes opilio",
+      "detailApiResponsePresent": false,
+      "raw": {
+        "hasTaxonomy": false,
+        "hasFeeding": false,
+        "hasMovement": false,
+        "hasPeriodList": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "parsed": {
+        "rawApiKeys": [
+          "fishId",
+          "fishName",
+          "scName",
+          "prohibitSize",
+          "recommendSize",
+          "infoDistribution",
+          "infoGrowth",
+          "infoShape",
+          "infoDialect",
+          "infoCatch",
+          "infoCookCal",
+          "infoCookHow",
+          "infoEat",
+          "display",
+          "graphComment",
+          "fishNameEn"
+        ]
+      },
+      "manifest": {
+        "hasPeriodList": true,
+        "hasGrowthText": true,
+        "hasSpawning": true,
+        "hasMorphologyText": true,
+        "hasFeatureText": false
+      },
+      "candidate": {
+        "hasSeason": true,
+        "hasSpawning": true,
+        "taxonomy": null,
+        "officialFactsShape": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "preview": {
+        "readiness": "ready",
+        "hasSeason": true,
+        "hasSpawning": true,
+        "missingFields": [
+          "taxonomy",
+          "quickFacts.summary",
+          "feeding",
+          "regulations",
+          "generatedContents"
+        ],
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "lineage": {
+        "taxonomy": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured taxonomy exists in the raw source or downstream builders."
+        },
+        "morphology": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "preserved",
+          "preview": "preserved",
+          "note": "infoShape is preserved into manifest, candidate, and preview morphology slots."
+        },
+        "habitat": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoDistribution survives into candidate and preview."
+        },
+        "ecology": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoGrowth survives into candidate and preview."
+        },
+        "season": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "periodList is preserved into manifest/candidate/preview."
+        },
+        "spawning": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "The growth text contains an explicit ?? phrase and is promoted to spawning."
+        },
+        "feeding": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured feeding field exists in the raw source."
+        },
+        "movement": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No movement field exists in the raw source."
+        },
+        "feature": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No infoFeature field exists in the raw source for this dataset."
+        }
+      }
+    },
+    {
+      "candidateId": "fish-species-candidate-fish_1576639605223",
+      "sourceId": "fish_1576639605223",
+      "koreanName": "기름가자미",
+      "scientificName": "Glyptocephalus stelleri",
+      "detailApiResponsePresent": false,
+      "raw": {
+        "hasTaxonomy": false,
+        "hasFeeding": false,
+        "hasMovement": false,
+        "hasPeriodList": false,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "parsed": {
+        "rawApiKeys": [
+          "fishId",
+          "fishName",
+          "scName",
+          "prohibitSize",
+          "recommendSize",
+          "infoDistribution",
+          "infoGrowth",
+          "infoShape",
+          "infoDialect",
+          "infoCatch",
+          "infoCookCal",
+          "infoCookHow",
+          "infoEat",
+          "display",
+          "graphComment",
+          "fishNameEn"
+        ]
+      },
+      "manifest": {
+        "hasPeriodList": false,
+        "hasGrowthText": true,
+        "hasSpawning": true,
+        "hasMorphologyText": true,
+        "hasFeatureText": false
+      },
+      "candidate": {
+        "hasSeason": false,
+        "hasSpawning": true,
+        "taxonomy": null,
+        "officialFactsShape": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "preview": {
+        "readiness": "ready",
+        "hasSeason": false,
+        "hasSpawning": true,
+        "missingFields": [
+          "taxonomy",
+          "quickFacts.summary",
+          "feeding",
+          "regulations",
+          "generatedContents"
+        ],
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "lineage": {
+        "taxonomy": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured taxonomy exists in the raw source or downstream builders."
+        },
+        "morphology": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "preserved",
+          "preview": "preserved",
+          "note": "infoShape is preserved into manifest, candidate, and preview morphology slots."
+        },
+        "habitat": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoDistribution survives into candidate and preview."
+        },
+        "ecology": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoGrowth survives into candidate and preview."
+        },
+        "season": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "This source has no raw periodList, so season remains source_missing for this one candidate."
+        },
+        "spawning": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "The growth text contains an explicit ?? phrase and is promoted to spawning."
+        },
+        "feeding": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured feeding field exists in the raw source."
+        },
+        "movement": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No movement field exists in the raw source."
+        },
+        "feature": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No infoFeature field exists in the raw source for this dataset."
+        }
+      }
+    },
+    {
+      "candidateId": "fish-species-candidate-fish_1576639605227",
+      "sourceId": "fish_1576639605227",
+      "koreanName": "주꾸미",
+      "scientificName": "Amphioctopus fangsiao",
+      "detailApiResponsePresent": false,
+      "raw": {
+        "hasTaxonomy": false,
+        "hasFeeding": false,
+        "hasMovement": false,
+        "hasPeriodList": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "parsed": {
+        "rawApiKeys": [
+          "fishId",
+          "fishName",
+          "scName",
+          "prohibitSize",
+          "recommendSize",
+          "infoDistribution",
+          "infoGrowth",
+          "infoShape",
+          "infoDialect",
+          "infoCatch",
+          "infoCookCal",
+          "infoCookHow",
+          "infoEat",
+          "display",
+          "graphComment",
+          "fishNameEn"
+        ]
+      },
+      "manifest": {
+        "hasPeriodList": true,
+        "hasGrowthText": true,
+        "hasSpawning": true,
+        "hasMorphologyText": true,
+        "hasFeatureText": false
+      },
+      "candidate": {
+        "hasSeason": true,
+        "hasSpawning": true,
+        "taxonomy": null,
+        "officialFactsShape": true,
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "preview": {
+        "readiness": "ready",
+        "hasSeason": true,
+        "hasSpawning": true,
+        "missingFields": [
+          "taxonomy",
+          "quickFacts.summary",
+          "feeding",
+          "regulations",
+          "generatedContents"
+        ],
+        "hasMorphology": true,
+        "hasFeature": false
+      },
+      "lineage": {
+        "taxonomy": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured taxonomy exists in the raw source or downstream builders."
+        },
+        "morphology": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "preserved",
+          "preview": "preserved",
+          "note": "infoShape is preserved into manifest, candidate, and preview morphology slots."
+        },
+        "habitat": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoDistribution survives into candidate and preview."
+        },
+        "ecology": {
+          "raw": "preserved",
+          "parsed": "renamed",
+          "manifest": "mapping_loss",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "infoGrowth survives into candidate and preview."
+        },
+        "season": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "periodList is preserved into manifest/candidate/preview."
+        },
+        "spawning": {
+          "raw": "preserved",
+          "parsed": "preserved",
+          "manifest": "preserved",
+          "candidate": "recovered",
+          "preview": "preserved",
+          "note": "The growth text contains an explicit ?? phrase and is promoted to spawning."
+        },
+        "feeding": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No structured feeding field exists in the raw source."
+        },
+        "movement": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No movement field exists in the raw source."
+        },
+        "feature": {
+          "raw": "source_missing",
+          "parsed": "source_missing",
+          "manifest": "source_missing",
+          "candidate": "source_missing",
+          "preview": "source_missing",
+          "note": "No infoFeature field exists in the raw source for this dataset."
+        }
+      }
+    }
+  ],
+  "recommendedFixFiles": [
+    "tools/nifs-importer/build-manifest.cjs",
+    "tools/nifs-importer/build-species-candidates.cjs",
+    "tools/nifs-importer/build-detail-read-model-preview.cjs"
+  ]
+}

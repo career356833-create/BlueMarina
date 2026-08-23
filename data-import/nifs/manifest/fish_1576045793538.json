@@ -1,0 +1,70 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576045793538",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576045793538",
+  "fetchedAt": "2026-07-30T18:51:38.036728+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:38.036728+00:00",
+  "contentHash": "3a0140e8800a196028ea2d3f2e46e3f1fc31881f420adebab2e9a71035ea28d5",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "5",
+      "colorLevel": "1"
+    },
+    {
+      "month": "6",
+      "colorLevel": "2"
+    },
+    {
+      "month": "7",
+      "colorLevel": "2"
+    },
+    {
+      "month": "8",
+      "colorLevel": "2"
+    },
+    {
+      "month": "9",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "갑각은 옆으로 퍼진 마름모꼴이고, 이마에 돌기가 있으며, 가운데 돌기는 아래쪽으로 휘어져 있다. 갑각의 어깨에는 9개의 톱니모양 이가 있는데 끝에 난 이는 크고 날카로우며 옆으로 튀어나왔다. 집게다리는 크고 억세다. 긴 마디 앞 모서리에 4개의 날카로운 가시가 있다. 마지막 다리 끝부분은 넓적해서 헤엄치기 알맞다. 다리 수는 5쌍이다",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "꽃게의 수명은 대략 3년으로 추정된다. 산란기는 5~9월(주산란기 6~7월)이며, 한마리당 1년에 2~3회 산란한다. 성숙체장은 두흉갑장 기준 6.4cm, 수명은 3년으로 추정된다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 5~9월(주산란기 6~7월)이며",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1576045793538/detail-api-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1576045793538_157673904399103.jpg",
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1576045793538_157673904409204.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1576045793538/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1576045793538/images/original/image-002.jpg",
+    "data/nifs/raw/fish/fish_1576045793538/images/original/image-003.jpg",
+    "fish/fish_1576045793538/images/original/image-001.jpg",
+    "fish/fish_1576045793538/images/original/image-002.jpg",
+    "fish/fish_1576045793538/images/original/image-003.jpg",
+    "fish_1576045793538_157673904399103.jpg",
+    "fish_1576045793538_157673904409204.jpg"
+  ],
+  "byteSize": 4319,
+  "mimeType": "application/json",
+  "title": "꽃게",
+  "koreanName": "꽃게",
+  "scientificName": "Portunus trituberculatus"
+}

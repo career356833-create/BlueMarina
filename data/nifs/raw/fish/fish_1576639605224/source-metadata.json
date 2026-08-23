@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576639605224",
+  "koreanName": "대문어",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605224",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1576639605224"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 3141,
+  "contentHash": "0d1315a0f807fdb16b40df895f0b90fa8920f5663e0e740868cf7948fc119d6a",
+  "collectedAt": "2026-07-30T18:51:46.261258+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

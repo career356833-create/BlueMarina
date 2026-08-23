@@ -1,0 +1,289 @@
+{
+  "generatedAt": "2026-07-30T19:25:17.931Z",
+  "mode": "dry-run",
+  "databaseTouched": false,
+  "supabaseCalled": false,
+  "totals": {
+    "stagingRecords": 25,
+    "validRecords": 25,
+    "newSourceRecords": 25,
+    "sameHashSkips": 0,
+    "changedHashVersions": 0,
+    "sourceMissingCandidates": 0,
+    "schemaErrors": 0,
+    "duplicateSourceKeys": 0,
+    "scientificNameDuplicateCandidates": 0,
+    "slugCollisionCandidates": 0,
+    "normalizationCandidateDiffs": 0,
+    "manualReviewOverwriteRisks": 0
+  },
+  "schemaErrors": [],
+  "duplicateSourceKeys": [],
+  "scientificNameDuplicateCandidates": [],
+  "slugCollisionCandidates": [],
+  "normalizationCandidateDiffs": [],
+  "manualReviewOverwriteRisks": [],
+  "sourcePlans": [
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1571803943319",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1571806850754",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1573537097812",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575521941711",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575529825083",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575532529343",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575596889118",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575613737728",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575858517048",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575867824021",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575868769703",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575870984736",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575873437839",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575875139974",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575880014320",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575880791880",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575881532404",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1575882272758",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1576045793538",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1576639605222",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1576639605223",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1576639605224",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1576639605225",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1576639605226",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "fish_1576639605227",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    }
+  ],
+  "sourceMissingCandidates": [],
+  "transactionPolicy": {
+    "newHash": [
+      "insert_source_version",
+      "unset_previous_current_version",
+      "set_new_current_version",
+      "create_change_log",
+      "queue_normalization_review"
+    ],
+    "failure": "rollback_all_and_keep_existing_current_and_published_data"
+  }
+}

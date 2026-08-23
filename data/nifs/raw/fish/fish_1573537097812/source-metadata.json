@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1573537097812",
+  "koreanName": "붉은대게",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1573537097812",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1573537097812"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 2121,
+  "contentHash": "d6c9ee93f6bde031f5bb2650d86a703c1f96c47b0c665c027c3a5a998d319d79",
+  "collectedAt": "2026-07-30T18:51:56.537084+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

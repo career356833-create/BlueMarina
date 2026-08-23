@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-08-17T20:05:21.3976292+09:00",
+  "total": 8,
+  "pass": 8,
+  "blocked": 0,
+  "records": [
+    { "sourceId": "fish_1573537097812", "koreanName": "붉은대게", "sourceScientificName": "Chionoecetes japonicus", "canonicalScientificName": "Chionoecetes japonicus", "status": "PASS" },
+    { "sourceId": "fish_1575873437839", "koreanName": "오분자기", "sourceScientificName": "Sulculus diversicolor", "canonicalScientificName": "Sulculus diversicolor", "status": "PASS" },
+    {
+      "sourceId": "fish_1575880014320",
+      "koreanName": "제주소라",
+      "sourceScientificName": "Turbo cornutus, Batillus cornutus",
+      "canonicalScientificName": "Turbo cornutus",
+      "scientificNameAliases": ["Batillus cornutus"],
+      "status": "APPROVED",
+      "approvedAt": "2026-08-17T19:42:00+09:00",
+      "normalizationType": "taxonomy_verified",
+      "verificationSource": "WoRMS",
+      "verificationSourceUrl": "https://www.marinespecies.org/aphia.php?id=413379&p=taxdetails",
+      "verificationSourceId": "AphiaID:413379",
+      "alternateVerificationUrl": "https://www.marinespecies.org/aphia.php?id=536059&p=taxdetails",
+      "reason": "WoRMS represents Turbo (Batillus) cornutus as the accepted species Turbo cornutus [Lightfoot], 1786. The NIFS raw scName remains unchanged."
+    },
+    { "sourceId": "fish_1575880791880", "koreanName": "참조기", "sourceScientificName": "Larimichthys polyactis", "canonicalScientificName": "Larimichthys polyactis", "status": "PASS" },
+    { "sourceId": "fish_1575881532404", "koreanName": "참홍어", "sourceScientificName": "Raja pulchra", "canonicalScientificName": "Raja pulchra", "status": "PASS" },
+    { "sourceId": "fish_1576639605222", "koreanName": "대게", "sourceScientificName": "Chionoecetes opilio", "canonicalScientificName": "Chionoecetes opilio", "status": "PASS" },
+    { "sourceId": "fish_1576639605223", "koreanName": "기름가자미", "sourceScientificName": "Glyptocephalus stelleri", "canonicalScientificName": "Glyptocephalus stelleri", "status": "PASS" },
+    { "sourceId": "fish_1576639605227", "koreanName": "주꾸미", "sourceScientificName": "Amphioctopus fangsiao", "canonicalScientificName": "Amphioctopus fangsiao", "status": "PASS" }
+  ],
+  "candidateChanged": true,
+  "databaseChanged": false
+}

@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575867824021",
+  "koreanName": "말쥐치",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575867824021",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1575867824021"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 3065,
+  "contentHash": "6ee600f8b346ba8855ad312857f9306e24980b7f8e24d7931b6b3fecb35fb3cd",
+  "collectedAt": "2026-07-30T18:51:50.376588+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

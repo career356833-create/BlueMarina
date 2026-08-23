@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1575880791880",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1575880791880",
+      "fishName": "참조기",
+      "scName": "Larimichthys polyactis",
+      "prohibitSize": "15",
+      "recommendSize": "17.1",
+      "infoDistribution": "우리나라 서·남해, 발해만, 동중국해 등 \r\n수심40~160m인 바닥이 모래나 펄인 곳\r\n",
+      "infoGrowth": "1년이면 전장 15cm, 2년이면 24cm,3년이면 29cm,4년이면 33cm, 5년이면 35cm까지 성장한다. 체장 40cm. 산란기는 3~6월로서 남쪽일수록 빠르고 북쪽일수록 늦으며, 산란장은 우리나라 서해안 일대와 중국 연안해역이다.전장 30cm 정도면 3만~7만 개의 알을 산란한다.",
+      "infoShape": "몸의 형태는 가슴지느러미에서 뒷지느러미에 이르는 몸통 높이가 큰 차이없이 밋밋한 길다란 사각형에 가깝다. 등·뒷지느러미 연조부의 지느러미막에는 기저에서 약 2/3 이상이 작은 둥근비늘로 덮여 있으며, 꼬리지느러미에도 작은 비늘이 덮여있다. 뒷지느러미 2번째 가시의 길이는 눈지름보다도 짧다. 비늘은 다소 큰 편이며, 등지느러미 기부에서 옆줄 사이에는 5∼6줄의 비늘이 있다. 입은 크고 윗턱 뒤끝부분은 눈 뒷부분의 아래까지 도달하며, 아래턱은 윗턱보다도 약간 길다. 옆줄 구멍은 부세보다 크며 꼬리자루 높이도 두툼한 편이다.",
+      "infoDialect": "황조기, 노랑조기, 조구, 조기, 참조구",
+      "infoCatch": "근해자망, 근해안강망, 쌍끌이대형저인망, 외끌이대형저인망",
+      "infoCookCal": "82",
+      "infoCookHow": "82 Kcal/100g\n○ 단백질: 17.1%\n     -  필수아미노산: 8,264mg\n○ 지방: 0.2%\r\n",
+      "infoEat": "NA",
+      "display": "Y",
+      "graphComment": "",
+      "fishNameEn": "Yellow croaker"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

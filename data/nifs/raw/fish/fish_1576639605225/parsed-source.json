@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1576639605225",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1576639605225",
+      "fishName": "삼치",
+      "scName": "Scomberomorus niphonius",
+      "prohibitSize": "0",
+      "recommendSize": "0",
+      "infoDistribution": "우리나라 서, 남해, 중국 일본에서 하와이, 호주에 이르기까지 널리 분포하며 표층~중층(0~80m) 사이에 주로 서식한다.",
+      "infoGrowth": "산란기는 4~6월경으로서 서, 남해의 연안에 몰려와 새벽녘에 산란하며, 부화후 만 2년부터 산란에 참가한다. 체장 78cm 크기면 약 85만 개의 알을 포란한다. 성장속도는 매우 빨라 부화 후 6개월이면 가랑이 체장 33~45cm로 자라고 만 1년이면 약 57cm, 2년이면 69cm, 3년이면 78cm, 4년이면 86cm, 7년이면 103cm까지 자란다. ",
+      "infoShape": "몸의 형태는 가늘고 길게 측편하며, 매우 작은 비늘로 덮여있다. 양 턱의 이빨은 창모양으로 구부러져 날카롭고 서골과 구개골에는 융털모양의 이가 있고 혀에도 이빨이 있다. 제1등지느러미 기저는 매우 길며, 그 지느러미의 가장자리는 뒤쪽으로 갈수록 천천히 경사져 있다. 부레가 없다. 옆줄은 1개로서 물결모양이며, 옆줄 아래 위의 직각방향으로 가느다란 가시가 많이 나 있다.",
+      "infoDialect": "고시, 망에, 야내기, 마어, 망어, 망에",
+      "infoCatch": "쌍끌이 대형저인망",
+      "infoCookCal": "452",
+      "infoCookHow": "452Kcal/100g\r\n단백질: 19 g\r\n지방: 2.7 g\r\n",
+      "infoEat": "NA",
+      "display": "",
+      "graphComment": "",
+      "fishNameEn": "Japanese Spanish mackerel"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

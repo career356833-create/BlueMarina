@@ -1,0 +1,69 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576639605227",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605227",
+  "fetchedAt": "2026-07-30T18:52:10.940136+00:00",
+  "sourceCheckedAt": "2026-07-30T18:52:10.940136+00:00",
+  "contentHash": "fb560ca66e3f94e2967935cc52fa852ff37b31680b489a5d1bf4dd49bf15514a",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "4",
+      "colorLevel": "1"
+    },
+    {
+      "month": "5",
+      "colorLevel": "2"
+    },
+    {
+      "month": "6",
+      "colorLevel": "2"
+    },
+    {
+      "month": "7",
+      "colorLevel": "2"
+    },
+    {
+      "month": "8",
+      "colorLevel": "2"
+    },
+    {
+      "month": "9",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "몸통은 주머니모양으로 길며, 두부와 팔 사이에 조그마하게 조각한 듯한 원형의 무늬가 있다. 두 눈위에 각각 2개의 육질돌기가 있다. 팔은 적당히 길고 단단하며, 수컷 오른쪽 3번째 팔이 교접기화되어 있다. 교접혀는 가늘고 긴데 팔 길이의 4~6%정도이다. 아가미에는 7~8개의 아가미판이 있다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "산란기는 3~6월. 해저의 오목한 장소에 포도모양의 난을 낳으며, 난은 장경 약 1cm에 달하는 대형이다. \r\n성장은 최대 외투장 8cm, 최대 중량 200g이다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 3~6월",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1576639605227/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/1538547831758_watermark.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1576639605227/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1576639605227/images/original/image-002.jpg",
+    "fish/fish_1576639605227/images/original/image-001.jpg",
+    "fish/fish_1576639605227/images/original/image-002.jpg"
+  ],
+  "byteSize": 2375,
+  "mimeType": "application/json",
+  "title": "주꾸미",
+  "koreanName": "주꾸미",
+  "scientificName": "Amphioctopus fangsiao"
+}

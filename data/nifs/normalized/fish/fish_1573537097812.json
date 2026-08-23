@@ -1,0 +1,333 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1573537097812",
+  "koreanName": "붉은대게",
+  "englishName": "Red snow crab",
+  "scientificName": "Chionoecetes japonicus",
+  "feature": "전체적으로 짙은 적색이며, 갑각의 뒷아가미구역이 부풀어올라 있으며 뒷부분의 경사가 급하고, 옆 가장자리 뒷부분에 예리한 가시가 있다(한국해양무척추동물도감).",
+  "distribution": "동해",
+  "lifecycle": "산란기 2~3월, 최소성숙갑폭 암컷 55~75mm, 수컷 70~100mm",
+  "dialect": "홍게",
+  "catchMethod": "연안통발, 근해통발",
+  "nutrition": "48 Kcal/100g\n○ 단백질: 10.5%\n- 필수아미노산: 5,034mg\n○ 지방: 0.3%",
+  "prohibitSize": null,
+  "recommendSize": null,
+  "eatingNote": "홍게와 붉은대게의 차이\n홍게와 대게의 차이인가요?(홍게는 배표면이 붉은데 반해 대게는 배표면이 하얗다.)",
+  "eatingNoteMissing": null,
+  "listColorLevel": "2",
+  "listDisplayStatus": "Y",
+  "recommendPeriod": [
+    {
+      "month": 6,
+      "sourceValue": "1",
+      "recommendationLevel": "1",
+      "displayLabel": "자제"
+    },
+    {
+      "month": 7,
+      "sourceValue": "2",
+      "recommendationLevel": "2",
+      "displayLabel": "지양"
+    },
+    {
+      "month": 8,
+      "sourceValue": "2",
+      "recommendationLevel": "2",
+      "displayLabel": "지양"
+    },
+    {
+      "month": 9,
+      "sourceValue": "1",
+      "recommendationLevel": "1",
+      "displayLabel": "자제"
+    }
+  ],
+  "recommendPeriodOmittedMonths": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    10,
+    11,
+    12
+  ],
+  "recommendPeriodOmittedMeaning": "권장",
+  "recommendPeriodNote": "periodList는 자제·지양 월만 반환한다. 응답에 없는 월은 화면에서 권장(green)으로 표시된다. 데이터 누락이 아니라 출처의 표현 방식이다.",
+  "catchHistory": [
+    {
+      "year": 2000,
+      "catchAmount": 16281.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2000",
+        "catchAverage": "16281"
+      }
+    },
+    {
+      "year": 2001,
+      "catchAmount": 12973.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2001",
+        "catchAverage": "12973"
+      }
+    },
+    {
+      "year": 2002,
+      "catchAmount": 9166.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2002",
+        "catchAverage": "9166"
+      }
+    },
+    {
+      "year": 2003,
+      "catchAmount": 19262.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2003",
+        "catchAverage": "19262"
+      }
+    },
+    {
+      "year": 2004,
+      "catchAmount": 23113.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2004",
+        "catchAverage": "23113"
+      }
+    },
+    {
+      "year": 2005,
+      "catchAmount": 21926.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2005",
+        "catchAverage": "21926"
+      }
+    },
+    {
+      "year": 2006,
+      "catchAmount": 23890.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2006",
+        "catchAverage": "23890"
+      }
+    },
+    {
+      "year": 2007,
+      "catchAmount": 25388.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2007",
+        "catchAverage": "25388"
+      }
+    },
+    {
+      "year": 2008,
+      "catchAmount": 28293.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2008",
+        "catchAverage": "28293"
+      }
+    },
+    {
+      "year": 2009,
+      "catchAmount": 29993.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2009",
+        "catchAverage": "29993"
+      }
+    },
+    {
+      "year": 2010,
+      "catchAmount": 30749.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2010",
+        "catchAverage": "30749"
+      }
+    },
+    {
+      "year": 2011,
+      "catchAmount": 32520.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2011",
+        "catchAverage": "32520"
+      }
+    },
+    {
+      "year": 2012,
+      "catchAmount": 36973.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2012",
+        "catchAverage": "36973"
+      }
+    },
+    {
+      "year": 2013,
+      "catchAmount": 38013.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2013",
+        "catchAverage": "38013"
+      }
+    },
+    {
+      "year": 2014,
+      "catchAmount": 38189.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2014",
+        "catchAverage": "38189"
+      }
+    },
+    {
+      "year": 2015,
+      "catchAmount": 41647.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2015",
+        "catchAverage": "41647"
+      }
+    },
+    {
+      "year": 2016,
+      "catchAmount": 36180.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2016",
+        "catchAverage": "36180"
+      }
+    },
+    {
+      "year": 2017,
+      "catchAmount": 29686.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2017",
+        "catchAverage": "29686"
+      }
+    },
+    {
+      "year": 2018,
+      "catchAmount": 20344.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2018",
+        "catchAverage": "20344"
+      }
+    },
+    {
+      "year": 2019,
+      "catchAmount": 15874.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2019",
+        "catchAverage": "15874"
+      }
+    },
+    {
+      "year": 2020,
+      "catchAmount": 15548.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2020",
+        "catchAverage": "15548"
+      }
+    },
+    {
+      "year": 2021,
+      "catchAmount": 19540.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2021",
+        "catchAverage": "19540"
+      }
+    },
+    {
+      "year": 2022,
+      "catchAmount": 24663.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2022",
+        "catchAverage": "24663"
+      }
+    },
+    {
+      "year": 2023,
+      "catchAmount": 31584.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2023",
+        "catchAverage": "31584"
+      }
+    },
+    {
+      "year": 2024,
+      "catchAmount": 28454.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2024",
+        "catchAverage": "28454"
+      }
+    }
+  ],
+  "sourceImages": [
+    {
+      "sourceId": "fish_1573537097812",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1573537097812_157674010419302.jpg",
+      "sourceRole": "list_thumbnail",
+      "sourceFileName": "fish_1573537097812_157674010419302.jpg",
+      "localPath": "fish\\fish_1573537097812\\images\\original\\image-001.jpg",
+      "httpStatus": 200,
+      "mimeType": "image/jpeg",
+      "detectedFormat": "JPEG",
+      "width": 502,
+      "height": 304,
+      "fileSize": 30876,
+      "sha256": "3aa8ba028e787fecf012488226533dd6e8c32d49a4ea85cf76b7930e0d5b41c6",
+      "isWatermarked": false,
+      "isPlaceholder": false,
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "isValid": true,
+      "error": null,
+      "collectedAt": "2026-07-30T18:53:41.568884+00:00"
+    },
+    {
+      "sourceId": "fish_1573537097812",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1573537097812_157674010419302.jpg",
+      "sourceRole": "detail_primary",
+      "sourceFileName": "fish_1573537097812_157674010419302.jpg",
+      "localPath": "fish\\fish_1573537097812\\images\\original\\image-002.jpg",
+      "httpStatus": 200,
+      "mimeType": "image/jpeg",
+      "detectedFormat": "JPEG",
+      "width": 502,
+      "height": 304,
+      "fileSize": 30876,
+      "sha256": "3aa8ba028e787fecf012488226533dd6e8c32d49a4ea85cf76b7930e0d5b41c6",
+      "isWatermarked": false,
+      "isPlaceholder": false,
+      "isDuplicate": true,
+      "duplicateOf": "fish_1573537097812_157674010419302.jpg",
+      "isValid": true,
+      "error": null,
+      "collectedAt": "2026-07-30T18:53:43.632548+00:00"
+    }
+  ],
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1573537097812",
+  "sourceCollectedAt": "2026-07-30T18:57:49.594536+00:00",
+  "sourceContentHash": "d6c9ee93f6bde031f5bb2650d86a703c1f96c47b0c665c027c3a5a998d319d79",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "factReviewStatus": "pending"
+}

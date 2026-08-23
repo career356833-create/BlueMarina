@@ -1,0 +1,342 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575873437839",
+  "koreanName": "오분자기",
+  "englishName": "Ear shell",
+  "scientificName": "Sulculus diversicolor",
+  "feature": "패각은 타원형, 나탑은 3층으로 낮다. 각정은 각장의 뒤쪽 1/5 거리에서 우측으로 치우쳐 있다. 패각은 평평하며, 체층은 갑자기 커져서 패각의 대부분을 차지한다. 패각은 적갈색 바탕에 녹갈색 띠가 각정으로부터 방사상으로 퍼져 있고 사이사이에 약한 황색무늬가 섞여 있다. 공열은 올라오지 않아 구멍만 뚫려 있고 앞에서부터 7~9개가 열려 있다. 나선맥은 어린 개체에서는 조밀한 융기선이 뚜렷하고 성장맥은 굵어서 굴곡을 이루고 있으나 성숙한 개체에서는 나선맥이나 성장맥이 모두 약해져서 거의 편평해지고 부분적으로 흔적만 남는 것도 있다. 각구는 타원형으로 내순은 폭이 거의 일정하며 외순은 약간 밖으로 굽어 있다. 패각의 내면은 회은색 바탕에 약간의 진주광택이 비친다. 공열은 7~8개가 열려 있고 성장맥이 없어 나선맥이 거칠지 않다.",
+  "distribution": "한국, 일본(나가사키, 오하라)",
+  "lifecycle": "외양에 면한 조간대의 바위에 붙어산다. 연평균 2.48cm(인공종묘) 성장하고 산란기는 7~10월이며 산란수 약190만개(각장 6.8cm), 산란수온 25℃ 전후, 생물학적 최소형 3.5cm이다.",
+  "dialect": "오분재기, 조개, 조고지",
+  "catchMethod": "마을어업",
+  "nutrition": "95 Kcal/100g\n○ 단백질: 13.3%\n- 필수아미노산: 5,034mg\n○ 지방: 2.1%\n- 포화지방산: 37.5%\n- 불포화지방산: 62.5%",
+  "prohibitSize": 4.0,
+  "recommendSize": null,
+  "eatingNote": null,
+  "eatingNoteMissing": {
+    "value": null,
+    "sourceValue": "NA",
+    "missingReason": "source_na"
+  },
+  "listColorLevel": "2",
+  "listDisplayStatus": "Y",
+  "recommendPeriod": [
+    {
+      "month": 6,
+      "sourceValue": "1",
+      "recommendationLevel": "1",
+      "displayLabel": "자제"
+    },
+    {
+      "month": 7,
+      "sourceValue": "2",
+      "recommendationLevel": "2",
+      "displayLabel": "지양"
+    },
+    {
+      "month": 8,
+      "sourceValue": "2",
+      "recommendationLevel": "2",
+      "displayLabel": "지양"
+    },
+    {
+      "month": 9,
+      "sourceValue": "1",
+      "recommendationLevel": "1",
+      "displayLabel": "자제"
+    },
+    {
+      "month": 10,
+      "sourceValue": "1",
+      "recommendationLevel": "1",
+      "displayLabel": "자제"
+    }
+  ],
+  "recommendPeriodOmittedMonths": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    11,
+    12
+  ],
+  "recommendPeriodOmittedMeaning": "권장",
+  "recommendPeriodNote": "periodList는 자제·지양 월만 반환한다. 응답에 없는 월은 화면에서 권장(green)으로 표시된다. 데이터 누락이 아니라 출처의 표현 방식이다.",
+  "catchHistory": [
+    {
+      "year": 2000,
+      "catchAmount": 37.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2000",
+        "catchAverage": "37"
+      }
+    },
+    {
+      "year": 2001,
+      "catchAmount": 38.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2001",
+        "catchAverage": "38"
+      }
+    },
+    {
+      "year": 2002,
+      "catchAmount": 26.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2002",
+        "catchAverage": "26"
+      }
+    },
+    {
+      "year": 2003,
+      "catchAmount": 21.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2003",
+        "catchAverage": "21"
+      }
+    },
+    {
+      "year": 2004,
+      "catchAmount": 19.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2004",
+        "catchAverage": "19"
+      }
+    },
+    {
+      "year": 2005,
+      "catchAmount": 66.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2005",
+        "catchAverage": "66"
+      }
+    },
+    {
+      "year": 2006,
+      "catchAmount": 54.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2006",
+        "catchAverage": "54"
+      }
+    },
+    {
+      "year": 2007,
+      "catchAmount": 62.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2007",
+        "catchAverage": "62"
+      }
+    },
+    {
+      "year": 2008,
+      "catchAmount": 102.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2008",
+        "catchAverage": "102"
+      }
+    },
+    {
+      "year": 2009,
+      "catchAmount": 34.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2009",
+        "catchAverage": "34"
+      }
+    },
+    {
+      "year": 2010,
+      "catchAmount": 27.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2010",
+        "catchAverage": "27"
+      }
+    },
+    {
+      "year": 2011,
+      "catchAmount": 3.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2011",
+        "catchAverage": "3"
+      }
+    },
+    {
+      "year": 2012,
+      "catchAmount": 5.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2012",
+        "catchAverage": "5"
+      }
+    },
+    {
+      "year": 2013,
+      "catchAmount": 5.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2013",
+        "catchAverage": "5"
+      }
+    },
+    {
+      "year": 2014,
+      "catchAmount": 10.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2014",
+        "catchAverage": "10"
+      }
+    },
+    {
+      "year": 2015,
+      "catchAmount": 4.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2015",
+        "catchAverage": "4"
+      }
+    },
+    {
+      "year": 2016,
+      "catchAmount": 5.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2016",
+        "catchAverage": "5"
+      }
+    },
+    {
+      "year": 2017,
+      "catchAmount": 5.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2017",
+        "catchAverage": "5"
+      }
+    },
+    {
+      "year": 2018,
+      "catchAmount": 1.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2018",
+        "catchAverage": "1"
+      }
+    },
+    {
+      "year": 2019,
+      "catchAmount": 4.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2019",
+        "catchAverage": "4"
+      }
+    },
+    {
+      "year": 2020,
+      "catchAmount": 4.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2020",
+        "catchAverage": "4"
+      }
+    },
+    {
+      "year": 2021,
+      "catchAmount": 3.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2021",
+        "catchAverage": "3"
+      }
+    },
+    {
+      "year": 2022,
+      "catchAmount": 1.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2022",
+        "catchAverage": "1"
+      }
+    },
+    {
+      "year": 2023,
+      "catchAmount": 3.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2023",
+        "catchAverage": "3"
+      }
+    },
+    {
+      "year": 2024,
+      "catchAmount": 3.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2024",
+        "catchAverage": "3"
+      }
+    }
+  ],
+  "sourceImages": [
+    {
+      "sourceId": "fish_1575873437839",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575873437839_157674075188002.jpg",
+      "sourceRole": "list_thumbnail",
+      "sourceFileName": "fish_1575873437839_157674075188002.jpg",
+      "localPath": "fish\\fish_1575873437839\\images\\original\\image-001.jpg",
+      "httpStatus": 200,
+      "mimeType": "image/jpeg",
+      "detectedFormat": "JPEG",
+      "width": 500,
+      "height": 300,
+      "fileSize": 28997,
+      "sha256": "6ad269d762cf492e915ec4a60eb28390a05a8bd8a1d7901cdbd3f2f5c082ee4a",
+      "isWatermarked": false,
+      "isPlaceholder": false,
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "isValid": true,
+      "error": null,
+      "collectedAt": "2026-07-30T18:53:56.089874+00:00"
+    },
+    {
+      "sourceId": "fish_1575873437839",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575873437839_157674075188002.jpg",
+      "sourceRole": "detail_primary",
+      "sourceFileName": "fish_1575873437839_157674075188002.jpg",
+      "localPath": "fish\\fish_1575873437839\\images\\original\\image-002.jpg",
+      "httpStatus": 200,
+      "mimeType": "image/jpeg",
+      "detectedFormat": "JPEG",
+      "width": 500,
+      "height": 300,
+      "fileSize": 28997,
+      "sha256": "6ad269d762cf492e915ec4a60eb28390a05a8bd8a1d7901cdbd3f2f5c082ee4a",
+      "isWatermarked": false,
+      "isPlaceholder": false,
+      "isDuplicate": true,
+      "duplicateOf": "fish_1575873437839_157674075188002.jpg",
+      "isValid": true,
+      "error": null,
+      "collectedAt": "2026-07-30T18:53:58.149556+00:00"
+    }
+  ],
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575873437839",
+  "sourceCollectedAt": "2026-07-30T18:57:49.598438+00:00",
+  "sourceContentHash": "326caf55685de8d6bcb2b404f1bc247f2218a5ce2129fb5a3ab77ade574d1092",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "factReviewStatus": "pending"
+}

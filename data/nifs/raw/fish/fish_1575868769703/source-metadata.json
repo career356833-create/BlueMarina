@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575868769703",
+  "koreanName": "명태",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575868769703",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1575868769703"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 3008,
+  "contentHash": "272df36ae3631e5c96bdf5610f4023054909fc63238e872da08e427bf9935edd",
+  "collectedAt": "2026-07-30T18:51:52.432922+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

@@ -1,0 +1,57 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576639605225",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605225",
+  "fetchedAt": "2026-07-30T18:52:00.657173+00:00",
+  "sourceCheckedAt": "2026-07-30T18:52:00.657173+00:00",
+  "contentHash": "cabf380edc22955ca4b9ea82ac0c6ae84671e6e8efa6f276d67adf4fb28eddd2",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "4",
+      "colorLevel": "1"
+    },
+    {
+      "month": "5",
+      "colorLevel": "2"
+    },
+    {
+      "month": "6",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "몸의 형태는 가늘고 길게 측편하며, 매우 작은 비늘로 덮여있다. 양 턱의 이빨은 창모양으로 구부러져 날카롭고 서골과 구개골에는 융털모양의 이가 있고 혀에도 이빨이 있다. 제1등지느러미 기저는 매우 길며, 그 지느러미의 가장자리는 뒤쪽으로 갈수록 천천히 경사져 있다. 부레가 없다. 옆줄은 1개로서 물결모양이며, 옆줄 아래 위의 직각방향으로 가느다란 가시가 많이 나 있다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "산란기는 4~6월경으로서 서, 남해의 연안에 몰려와 새벽녘에 산란하며, 부화후 만 2년부터 산란에 참가한다. 체장 78cm 크기면 약 85만 개의 알을 포란한다. 성장속도는 매우 빨라 부화 후 6개월이면 가랑이 체장 33~45cm로 자라고 만 1년이면 약 57cm, 2년이면 69cm, 3년이면 78cm, 4년이면 86cm, 7년이면 103cm까지 자란다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 4~6월경으로서 서",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1576639605225/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/MF0001614_DG0102_watermark.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1576639605225/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1576639605225/images/original/image-002.jpg",
+    "fish/fish_1576639605225/images/original/image-001.jpg",
+    "fish/fish_1576639605225/images/original/image-002.jpg"
+  ],
+  "byteSize": 2712,
+  "mimeType": "application/json",
+  "title": "삼치",
+  "koreanName": "삼치",
+  "scientificName": "Scomberomorus niphonius"
+}

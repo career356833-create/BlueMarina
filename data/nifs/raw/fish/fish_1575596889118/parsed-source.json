@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1575596889118",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1575596889118",
+      "fishName": "낙지",
+      "scName": "Octopus minor",
+      "prohibitSize": "70",
+      "recommendSize": "116",
+      "infoDistribution": "한국 전연안, 진흙 갯벌 조간대 하부에서부터 수심 100m 전후의 수심까지 다양한 저질 중국, 일본, 사할린 연안의 펄에 주로 분포한다.",
+      "infoGrowth": "낙지는 총길이 약 70 cm까지 성장하고, 약 50 cm가 되면 성숙하여 알을 낳는다. \n산란시기는 지역에 따라 차이를 보이며 전남 득량만은 7~9월, 서해 가로림만 4~5월, 탄도만은 6~7월이 주 산란기로 팔의 내부에 난을 낳는다. 최대 70cm 까지 성장한다.",
+      "infoShape": "몸은 가늘고 길며 완은 몸에 비하여 매우 가늘고 길다. 외투장이 외투폭보다 길며, 몸통은 난원형으로 이루며 뒤끝은 약간 뾰족하나 끝은 예리하지 않고 둥글다. 살아있을 때 몸통이 전체적으로 짙거나 옅은 회색을 띠지만 자극을 받게 되면 검붉은색 등 다양한 색깔로 위장하거나 위협색을 나타낸다.\r\n",
+      "infoDialect": "낙자(여수, 고흥, 장흥, 보성, 무안, 영광, 함평, 신안, 목포), 낙주(통영, 남해, 하동, 거제), 석어, 소팔초어, 세발낙지, 꽃낙지, 돌낙지",
+      "infoCatch": "연안통발, 주낙",
+      "infoCookCal": "75",
+      "infoCookHow": "75 Kcal/100g\n○ 단백질: 16.3%\n     -  필수아미노산: 3,654mg\n○ 지방: 0.5%\n     -  포화지방산: 20.7%\n     -  불포화지방산: 79.3%",
+      "infoEat": "NA",
+      "display": "Y",
+      "graphComment": "지난 20년간 낙지의 연간 어획량은 최근 큰 변동은 없으나, 미세하게 감소추세를 보인다.",
+      "fishNameEn": "Whiparm octopus"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

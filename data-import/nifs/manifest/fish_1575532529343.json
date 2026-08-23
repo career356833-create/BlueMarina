@@ -1,0 +1,59 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575532529343",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575532529343",
+  "fetchedAt": "2026-07-30T18:52:04.772506+00:00",
+  "sourceCheckedAt": "2026-07-30T18:52:04.772506+00:00",
+  "contentHash": "8e5681a00a106b1f945aaafbb4f2bd61e3d24d0b12524e0285c3d4bcb60df2f4",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "6",
+      "colorLevel": "1"
+    },
+    {
+      "month": "7",
+      "colorLevel": "2"
+    },
+    {
+      "month": "8",
+      "colorLevel": "2"
+    },
+    {
+      "month": "9",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "몸은 약간 길고 측편하며, 머리의 앞쪽은 매우 경사져 거의 수직형에 가깝다. 입은 작고, 위턱 이빨은 바깥쪽이 크고 안쪽은 작지만 여러 줄로 배열되어 있다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "암컷보다 수컷이 성장이 좋아 암컷은 31cm, 수컷은 35cm까지 자란다. 수명은 모두 8∼9년, 수컷은 만1년이면 12cm, 2년이면 18cm, 3년이면 22cm, 4년이면 26cm, 5년이면 28cm, 6년이면 30cm, 7년이면 31cm, 8년이면 32cm로 자란다.",
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1575532529343/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575532529343_157674505185704.jpg",
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575532529343_157674505187903.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1575532529343/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1575532529343/images/original/image-002.jpg",
+    "data/nifs/raw/fish/fish_1575532529343/images/original/image-003.jpg",
+    "fish/fish_1575532529343/images/original/image-001.jpg",
+    "fish/fish_1575532529343/images/original/image-002.jpg",
+    "fish/fish_1575532529343/images/original/image-003.jpg"
+  ],
+  "byteSize": 2381,
+  "mimeType": "application/json",
+  "title": "옥돔",
+  "koreanName": "옥돔",
+  "scientificName": "Branchiostegus japonicus"
+}

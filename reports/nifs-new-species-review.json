@@ -1,0 +1,180 @@
+{
+  "generatedAt": "2026-07-31T07:24:03.392Z",
+  "sourceDiffFile": "reports/nifs-staging-schema-diff.json",
+  "totalCandidates": 8,
+  "confirmedCount": 8,
+  "legacyMissingCount": 0,
+  "renamedCount": 0,
+  "taxonomyUpdateCount": 0,
+  "manualReviewCount": 0,
+  "records": [
+    {
+      "sourceId": "fish_1573537097812",
+      "koreanName": "붉은대게",
+      "englishName": "Red snow crab",
+      "scientificName": "Chionoecetes japonicus",
+      "taxonomy": null,
+      "decision": "new_species_confirmed",
+      "confidence": "high",
+      "evidence": {
+        "manifestMatchStatus": "unmatched",
+        "legacyFishNameMatches": [],
+        "legacyAliasMatches": [],
+        "legacyRelatedFishMatches": [],
+        "scientificNameOverlapWithLegacy": false,
+        "legacyFishIdsConsidered": [],
+        "taxonomyStatus": "not_provided_in_manifest_or_raw_payload",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1573537097812"
+      },
+      "matchedLegacyFishId": null,
+      "recommendedAction": "create_species_draft"
+    },
+    {
+      "sourceId": "fish_1575873437839",
+      "koreanName": "오분자기",
+      "englishName": "Ear shell",
+      "scientificName": "Sulculus diversicolor",
+      "taxonomy": null,
+      "decision": "new_species_confirmed",
+      "confidence": "high",
+      "evidence": {
+        "manifestMatchStatus": "unmatched",
+        "legacyFishNameMatches": [],
+        "legacyAliasMatches": [],
+        "legacyRelatedFishMatches": [],
+        "scientificNameOverlapWithLegacy": false,
+        "legacyFishIdsConsidered": [],
+        "taxonomyStatus": "not_provided_in_manifest_or_raw_payload",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575873437839"
+      },
+      "matchedLegacyFishId": null,
+      "recommendedAction": "create_species_draft"
+    },
+    {
+      "sourceId": "fish_1575880014320",
+      "koreanName": "제주소라",
+      "englishName": "Spiny top shell",
+      "scientificName": "Turbo cornutus, Batillus cornutus",
+      "taxonomy": null,
+      "decision": "new_species_confirmed",
+      "confidence": "high",
+      "evidence": {
+        "manifestMatchStatus": "unmatched",
+        "legacyFishNameMatches": [],
+        "legacyAliasMatches": [],
+        "legacyRelatedFishMatches": [],
+        "scientificNameOverlapWithLegacy": false,
+        "legacyFishIdsConsidered": [],
+        "taxonomyStatus": "not_provided_in_manifest_or_raw_payload",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575880014320"
+      },
+      "matchedLegacyFishId": null,
+      "recommendedAction": "create_species_draft"
+    },
+    {
+      "sourceId": "fish_1575880791880",
+      "koreanName": "참조기",
+      "englishName": "Yellow croaker",
+      "scientificName": "Larimichthys polyactis",
+      "taxonomy": null,
+      "decision": "new_species_confirmed",
+      "confidence": "high",
+      "evidence": {
+        "manifestMatchStatus": "unmatched",
+        "legacyFishNameMatches": [],
+        "legacyAliasMatches": [],
+        "legacyRelatedFishMatches": [],
+        "scientificNameOverlapWithLegacy": false,
+        "legacyFishIdsConsidered": [],
+        "taxonomyStatus": "not_provided_in_manifest_or_raw_payload",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575880791880"
+      },
+      "matchedLegacyFishId": null,
+      "recommendedAction": "create_species_draft"
+    },
+    {
+      "sourceId": "fish_1575881532404",
+      "koreanName": "참홍어",
+      "englishName": "Mottled skate",
+      "scientificName": "Raja pulchra",
+      "taxonomy": null,
+      "decision": "new_species_confirmed",
+      "confidence": "high",
+      "evidence": {
+        "manifestMatchStatus": "unmatched",
+        "legacyFishNameMatches": [],
+        "legacyAliasMatches": [],
+        "legacyRelatedFishMatches": [],
+        "scientificNameOverlapWithLegacy": false,
+        "legacyFishIdsConsidered": [],
+        "taxonomyStatus": "not_provided_in_manifest_or_raw_payload",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575881532404"
+      },
+      "matchedLegacyFishId": null,
+      "recommendedAction": "create_species_draft"
+    },
+    {
+      "sourceId": "fish_1576639605222",
+      "koreanName": "대게",
+      "englishName": "Tanner crab",
+      "scientificName": "Chionoecetes opilio",
+      "taxonomy": null,
+      "decision": "new_species_confirmed",
+      "confidence": "high",
+      "evidence": {
+        "manifestMatchStatus": "unmatched",
+        "legacyFishNameMatches": [],
+        "legacyAliasMatches": [],
+        "legacyRelatedFishMatches": [],
+        "scientificNameOverlapWithLegacy": false,
+        "legacyFishIdsConsidered": [],
+        "taxonomyStatus": "not_provided_in_manifest_or_raw_payload",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605222"
+      },
+      "matchedLegacyFishId": null,
+      "recommendedAction": "create_species_draft"
+    },
+    {
+      "sourceId": "fish_1576639605223",
+      "koreanName": "기름가자미",
+      "englishName": "Blackfin flounder",
+      "scientificName": "Glyptocephalus stelleri",
+      "taxonomy": null,
+      "decision": "new_species_confirmed",
+      "confidence": "high",
+      "evidence": {
+        "manifestMatchStatus": "unmatched",
+        "legacyFishNameMatches": [],
+        "legacyAliasMatches": [],
+        "legacyRelatedFishMatches": [],
+        "scientificNameOverlapWithLegacy": false,
+        "legacyFishIdsConsidered": [],
+        "taxonomyStatus": "not_provided_in_manifest_or_raw_payload",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605223"
+      },
+      "matchedLegacyFishId": null,
+      "recommendedAction": "create_species_draft"
+    },
+    {
+      "sourceId": "fish_1576639605227",
+      "koreanName": "주꾸미",
+      "englishName": "Webfoot octopus",
+      "scientificName": "Amphioctopus fangsiao",
+      "taxonomy": null,
+      "decision": "new_species_confirmed",
+      "confidence": "high",
+      "evidence": {
+        "manifestMatchStatus": "unmatched",
+        "legacyFishNameMatches": [],
+        "legacyAliasMatches": [],
+        "legacyRelatedFishMatches": [],
+        "scientificNameOverlapWithLegacy": false,
+        "legacyFishIdsConsidered": [],
+        "taxonomyStatus": "not_provided_in_manifest_or_raw_payload",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605227"
+      },
+      "matchedLegacyFishId": null,
+      "recommendedAction": "create_species_draft"
+    }
+  ]
+}

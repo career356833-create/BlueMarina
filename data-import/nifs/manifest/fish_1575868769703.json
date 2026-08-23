@@ -1,0 +1,93 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575868769703",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575868769703",
+  "fetchedAt": "2026-07-30T18:51:52.432922+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:52.432922+00:00",
+  "contentHash": "272df36ae3631e5c96bdf5610f4023054909fc63238e872da08e427bf9935edd",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "1",
+      "colorLevel": "2"
+    },
+    {
+      "month": "2",
+      "colorLevel": "2"
+    },
+    {
+      "month": "3",
+      "colorLevel": "2"
+    },
+    {
+      "month": "4",
+      "colorLevel": "2"
+    },
+    {
+      "month": "5",
+      "colorLevel": "2"
+    },
+    {
+      "month": "6",
+      "colorLevel": "2"
+    },
+    {
+      "month": "7",
+      "colorLevel": "2"
+    },
+    {
+      "month": "8",
+      "colorLevel": "2"
+    },
+    {
+      "month": "9",
+      "colorLevel": "2"
+    },
+    {
+      "month": "10",
+      "colorLevel": "2"
+    },
+    {
+      "month": "11",
+      "colorLevel": "2"
+    },
+    {
+      "month": "12",
+      "colorLevel": "2"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "몸은 가늘고 길며, 측편되어 있다. 입은 크고 위턱은 아래턱보다 짧으며, 양 턱의 이빨은 거의 같은 크기이다. 아래턱에는 1개의 짧은 수염이 있다. 항문은 제 1등지느러미와 제 2등지느러미 사이에 있다. 등지느러미는 3개, 뒷지느러미는 2개이며, 꼬리지느러미 뒤 끝 가장자리는 수직형이다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "부화 후 만 1년이면 체장 10~16cm. 2년이면 14~30cm. 3년이면 20~30cm. 4년이면 26~42cm. 5년이면 30~42cm로 자란다. 체장 60cm. 산란기는 12월~익년 2월. 산란시기가 되면 연안으로 이동하여 수심 50~100m인 바닥이 평탄하고 모래와 진흙이 섞인 지대에 산란하며, 산란수는 체장 40~60cm 이면 약 25만~100만개 정도이다. 생물학적 최소형은 34cm(가랑이 체장)이다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 12월~익년 2월",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1575868769703/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575868769703_157586995711901.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1575868769703/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1575868769703/images/original/image-002.jpg",
+    "fish/fish_1575868769703/images/original/image-001.jpg",
+    "fish/fish_1575868769703/images/original/image-002.jpg"
+  ],
+  "byteSize": 3008,
+  "mimeType": "application/json",
+  "title": "명태",
+  "koreanName": "명태",
+  "scientificName": "Theragra chalcogramma"
+}

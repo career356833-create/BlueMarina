@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-08-17T20:05:21.3976292+09:00",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "NIFS_8_IMPORT_READY",
+  "slugApproval": { "approved": 8, "regexValid": 8, "internalDuplicates": 0 },
+  "scientificNameReview": { "pass": 8, "blocked": 0 },
+  "databaseDryRun": {
+    "readOnly": true,
+    "matchingSlugs": 0,
+    "matchingSourceIdentities": 0,
+    "matchingScientificNames": 0,
+    "INSERT": 8,
+    "SKIP_EXISTING": 0,
+    "CONFLICT": 0,
+    "BLOCKED": 0
+  },
+  "records": [
+    { "sourceId": "fish_1573537097812", "koreanName": "붉은대게", "canonicalSlug": "red-snow-crab", "scientificName": "Chionoecetes japonicus", "action": "INSERT" },
+    { "sourceId": "fish_1575873437839", "koreanName": "오분자기", "canonicalSlug": "ear-shell", "scientificName": "Sulculus diversicolor", "action": "INSERT" },
+    { "sourceId": "fish_1575880014320", "koreanName": "제주소라", "canonicalSlug": "spiny-top-shell", "scientificName": "Turbo cornutus", "rawScientificName": "Turbo cornutus, Batillus cornutus", "scientificNameAliases": ["Batillus cornutus"], "normalizationType": "taxonomy_verified", "verificationSource": "WoRMS", "verificationSourceUrl": "https://www.marinespecies.org/aphia.php?id=413379&p=taxdetails", "action": "INSERT" },
+    { "sourceId": "fish_1575880791880", "koreanName": "참조기", "canonicalSlug": "yellow-croaker", "scientificName": "Larimichthys polyactis", "action": "INSERT" },
+    { "sourceId": "fish_1575881532404", "koreanName": "참홍어", "canonicalSlug": "mottled-skate", "scientificName": "Raja pulchra", "action": "INSERT" },
+    { "sourceId": "fish_1576639605222", "koreanName": "대게", "canonicalSlug": "tanner-crab", "scientificName": "Chionoecetes opilio", "action": "INSERT" },
+    { "sourceId": "fish_1576639605223", "koreanName": "기름가자미", "canonicalSlug": "blackfin-flounder", "scientificName": "Glyptocephalus stelleri", "season": null, "seasonSourceStatus": "source_missing", "action": "INSERT" },
+    { "sourceId": "fish_1576639605227", "koreanName": "주꾸미", "canonicalSlug": "webfoot-octopus", "scientificName": "Amphioctopus fangsiao", "action": "INSERT" }
+  ],
+  "constraintChecks": {
+    "fishSourceRecords": "PASS",
+    "fishSpecies": "PASS",
+    "fishSpeciesSources": "PASS",
+    "slugRegex": "PASS_8_OF_8",
+    "sourceVersionUnique": "PASS",
+    "scientificNameUniquePolicy": "NOT_UNIQUE_INDEX_ONLY",
+    "reviewStatus": "pending",
+    "publishStatus": "draft",
+    "sourceMissingNullable": "PASS"
+  },
+  "transactionPlan": [
+    "BEGIN",
+    "Assert all eight approved sourceId-to-slug bindings and zero staging conflicts",
+    "Insert immutable fish_source_records versions",
+    "Insert fish_species drafts with pending fact review",
+    "Link fish_species_sources with linked_by=import_review and primary source",
+    "Insert only reviewed aliases/categories/relations; none are currently approved for this batch",
+    "Verify eight source identities, eight species, and eight source links",
+    "COMMIT"
+  ],
+  "rollbackPolicy": "Any blocked record or statement failure prevents execution or rolls back the complete eight-record transaction.",
+  "databaseChanged": false,
+  "importExecuted": false
+}

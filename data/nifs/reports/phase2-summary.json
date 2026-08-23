@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-07-30T18:21:34.929478",
+  "phase": 2,
+  "title": "NIFS �������� ũ�Ѹ� 2�ܰ� - ��ü ��� �� �� ���� Ȯ��",
+  "listApi": {
+    "url": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishList.do",
+    "method": "POST",
+    "status": 200,
+    "itemCount": 25
+  },
+  "listValidation": {
+    "totalCount": 25,
+    "duplicateFishIds": 0,
+    "duplicateFishNames": 0,
+    "emptyIds": 0,
+    "emptyNames": 0,
+    "displayStatusDistribution": {
+      "N": 4,
+      "Y": 16,
+      "": 5
+    },
+    "colorLevelDistribution": {
+      "2": 15,
+      "0": 7,
+      "1": 3
+    }
+  },
+  "detailNavigation": {
+    "samplesInspected": 0,
+    "successCount": 0,
+    "detailUrlPattern": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFish.do?fishId={fishId}"
+  },
+  "detailFields": {
+    "samplesAnalyzed": 0,
+    "commonFields": [
+      "pageTitle",
+      "h1Title"
+    ]
+  },
+  "imageValidation": {
+    "totalDownloaded": 5,
+    "successful": 5,
+    "avgFileSize": 239203
+  },
+  "conclusions": {
+    "listApiConfirmed": true,
+    "totalSpeciesCount": 25,
+    "detailUrlPattern": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFish.do?fishId={fishId}",
+    "imageDownloadPossible": true,
+    "playwrightRequired": false,
+    "nextPhase": "bulk collection"
+  }
+}

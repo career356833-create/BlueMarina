@@ -1,0 +1,118 @@
+{
+  "testedValues": [
+    "",
+    "ko",
+    "kor",
+    "en",
+    "eng"
+  ],
+  "results": {
+    "(빈값)": {
+      "language": "",
+      "httpStatus": 200,
+      "count": 25,
+      "idSetHash": -1769490404604547191,
+      "firstNames": [
+        "갈치",
+        "개조개",
+        "갯장어",
+        "고등어",
+        "기름가자미"
+      ],
+      "fieldKeys": [
+        "colorLevel",
+        "display",
+        "fileName",
+        "fishId",
+        "fishName"
+      ],
+      "sameAsBaseline": true
+    },
+    "ko": {
+      "language": "ko",
+      "httpStatus": 200,
+      "count": 25,
+      "idSetHash": -1769490404604547191,
+      "firstNames": [
+        "갈치",
+        "개조개",
+        "갯장어",
+        "고등어",
+        "기름가자미"
+      ],
+      "fieldKeys": [
+        "colorLevel",
+        "display",
+        "fileName",
+        "fishId",
+        "fishName"
+      ],
+      "sameAsBaseline": true
+    },
+    "kor": {
+      "language": "kor",
+      "httpStatus": 200,
+      "count": 25,
+      "idSetHash": -1769490404604547191,
+      "firstNames": [
+        "갈치",
+        "개조개",
+        "갯장어",
+        "고등어",
+        "기름가자미"
+      ],
+      "fieldKeys": [
+        "colorLevel",
+        "display",
+        "fileName",
+        "fishId",
+        "fishName"
+      ],
+      "sameAsBaseline": true
+    },
+    "en": {
+      "language": "en",
+      "httpStatus": 200,
+      "count": 25,
+      "idSetHash": -1769490404604547191,
+      "firstNames": [
+        "갈치",
+        "개조개",
+        "갯장어",
+        "고등어",
+        "기름가자미"
+      ],
+      "fieldKeys": [
+        "colorLevel",
+        "display",
+        "fileName",
+        "fishId",
+        "fishName"
+      ],
+      "sameAsBaseline": true
+    },
+    "eng": {
+      "language": "eng",
+      "httpStatus": 200,
+      "count": 25,
+      "idSetHash": -1769490404604547191,
+      "firstNames": [
+        "갈치",
+        "개조개",
+        "갯장어",
+        "고등어",
+        "기름가자미"
+      ],
+      "fieldKeys": [
+        "colorLevel",
+        "display",
+        "fileName",
+        "fishId",
+        "fishName"
+      ],
+      "sameAsBaseline": true
+    }
+  },
+  "differingValues": [],
+  "conclusion": "의미 있는 차이 없음 — 기본값 공백으로 전체 수집한다."
+}

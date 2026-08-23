@@ -1,0 +1,65 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575521941711",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575521941711",
+  "fetchedAt": "2026-07-30T18:51:29.811545+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:29.811545+00:00",
+  "contentHash": "bc21ab4725bfa074e04d90ecc063d1cf7e08119e9f598d6a9d8ad7213244c5fc",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "6",
+      "colorLevel": "1"
+    },
+    {
+      "month": "7",
+      "colorLevel": "2"
+    },
+    {
+      "month": "8",
+      "colorLevel": "2"
+    },
+    {
+      "month": "9",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "패각은 타원형으로 껍질이 두껍고 무겁다. 각피는 성장맥이 가늘고 거칠게 나 있다. 껍질 안쪽은 진한 보라색이다. 그러나 어릴 때는 안쪽은 흰색이 많고 인대는 흑색으로 굵고 짧다. 안쪽은 외투선이 뚜렷하고 만입한다. 교치는 4개 이다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "산란기는 5~10월 주 산란기는 6~7월 이며, 우리나라 남해 및 서해연안에서 산란한다. 성숙체장은 암컷은 54.5mm 수컷은 45.5mm이다. 수명은 9세이다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 5~10월 주 산란기는 6~7월 이며",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1575521941711/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575521941711_157559580209902.jpg",
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575521941711_157559598687302.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1575521941711/images/original/fish_1575521941711_157559580209902.jpg",
+    "data/nifs/raw/fish/fish_1575521941711/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1575521941711/images/original/image-002.jpg",
+    "data/nifs/raw/fish/fish_1575521941711/images/original/image-003.jpg",
+    "fish/fish_1575521941711/images/original/image-001.jpg",
+    "fish/fish_1575521941711/images/original/image-002.jpg",
+    "fish/fish_1575521941711/images/original/image-003.jpg"
+  ],
+  "byteSize": 2219,
+  "mimeType": "application/json",
+  "title": "개조개",
+  "koreanName": "개조개",
+  "scientificName": "Saxidomus purpuratus"
+}

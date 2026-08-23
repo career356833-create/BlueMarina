@@ -1,0 +1,63 @@
+[
+  {
+    "sourceProvider": "NIFS",
+    "sourceId": "nifs-001",
+    "sourceUrl": "https://example.invalid/nifs/nifs-001",
+    "fetchedAt": "2026-07-31T00:00:00.000Z",
+    "sourceCheckedAt": "2026-07-31T00:00:00.000Z",
+    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "parserVersion": "fixture-v1",
+    "crawlStatus": "complete",
+    "rawHtmlPath": "nifs/raw/nifs-001/aaaaaaaa/page.html",
+    "imageUrls": [],
+    "normalizedCandidate": {
+      "koreanName": "가상어 A",
+      "scientificName": "Testus alpha",
+      "habitat": "연안"
+    }
+  },
+  {
+    "sourceProvider": "NIFS",
+    "sourceId": "nifs-002",
+    "sourceUrl": "https://example.invalid/nifs/nifs-002",
+    "fetchedAt": "2026-07-31T00:00:00.000Z",
+    "sourceCheckedAt": "2026-07-31T00:00:00.000Z",
+    "contentHash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "parserVersion": "fixture-v1",
+    "crawlStatus": "complete",
+    "rawPayloadPath": "nifs/raw/nifs-002/cccccccc/payload.json",
+    "imageUrls": ["https://example.invalid/nifs/nifs-002.jpg"],
+    "normalizedCandidate": {
+      "koreanName": "가상어 B",
+      "scientificName": "Testus beta",
+      "habitat": "암초 연안"
+    }
+  },
+  {
+    "sourceProvider": "NIFS",
+    "sourceId": "nifs-003",
+    "sourceUrl": "https://example.invalid/nifs/nifs-003",
+    "fetchedAt": "2026-07-31T00:00:00.000Z",
+    "sourceCheckedAt": "2026-07-31T00:00:00.000Z",
+    "contentHash": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "parserVersion": "fixture-v1",
+    "crawlStatus": "missing",
+    "rawHtmlPath": "nifs/raw/nifs-003/dddddddd/page.html",
+    "imageUrls": [],
+    "normalizedCandidate": {
+      "koreanName": "가상어 A",
+      "scientificName": "Testus alpha"
+    }
+  },
+  {
+    "sourceProvider": "NIFS",
+    "sourceId": "nifs-invalid",
+    "sourceUrl": "https://example.invalid/nifs/nifs-invalid",
+    "fetchedAt": "2026-07-31T00:00:00.000Z",
+    "contentHash": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+    "parserVersion": "fixture-v1",
+    "crawlStatus": "complete",
+    "rawHtmlPath": "nifs/raw/nifs-invalid/eeeeeeee/page.html",
+    "imageUrls": []
+  }
+]

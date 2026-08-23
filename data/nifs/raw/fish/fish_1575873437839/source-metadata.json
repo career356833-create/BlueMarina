@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575873437839",
+  "koreanName": "오분자기",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575873437839",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1575873437839"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 2963,
+  "contentHash": "326caf55685de8d6bcb2b404f1bc247f2218a5ce2129fb5a3ab77ade574d1092",
+  "collectedAt": "2026-07-30T18:52:02.717248+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

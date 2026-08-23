@@ -1,0 +1,67 @@
+{
+  "actionChrpFish.do?fishId=": {
+    "label": "actionChrpFish.do?fishId=",
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFish.do?fishId=fish_1571806850754",
+    "status": 404,
+    "contentType": "text/html;charset=utf-8",
+    "length": 1018,
+    "location": null,
+    "sha256": "ff5da9b552bdb6a7",
+    "hasFishId": false,
+    "hasFishNameUtf8": false,
+    "hasFishNameEuc": false
+  },
+  "actionChrpFishList.do?fishId=": {
+    "label": "actionChrpFishList.do?fishId=",
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishList.do?fishId=fish_1571806850754",
+    "status": 200,
+    "contentType": "text/html;charset=utf-8",
+    "length": 118857,
+    "location": null,
+    "sha256": "09b801644623997a",
+    "hasFishId": false,
+    "hasFishNameUtf8": false,
+    "hasFishNameEuc": false
+  },
+  "selectChrpFish.do POST": {
+    "label": "selectChrpFish.do POST",
+    "method": "POST",
+    "url": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFish.do",
+    "status": 404,
+    "contentType": "text/html;charset=utf-8",
+    "length": 1018,
+    "location": null,
+    "sha256": "ff5da9b552bdb6a7",
+    "hasFishId": false,
+    "hasFishNameUtf8": false,
+    "hasFishNameEuc": false
+  },
+  "selectChrpFishInfo.do POST": {
+    "label": "selectChrpFishInfo.do POST",
+    "method": "POST",
+    "url": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishInfo.do",
+    "status": 404,
+    "contentType": "text/html;charset=utf-8",
+    "length": 1018,
+    "location": null,
+    "sha256": "ff5da9b552bdb6a7",
+    "hasFishId": false,
+    "hasFishNameUtf8": false,
+    "hasFishNameEuc": false
+  },
+  "selectChrpFishDetail.do POST": {
+    "label": "selectChrpFishDetail.do POST",
+    "method": "POST",
+    "url": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishDetail.do",
+    "status": 404,
+    "contentType": "text/html;charset=utf-8",
+    "length": 1018,
+    "location": null,
+    "sha256": "ff5da9b552bdb6a7",
+    "hasFishId": false,
+    "hasFishNameUtf8": false,
+    "hasFishNameEuc": false
+  }
+}

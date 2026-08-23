@@ -1,0 +1,44 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576639605223",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605223",
+  "fetchedAt": "2026-07-30T18:51:35.990622+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:35.990622+00:00",
+  "contentHash": "c2421a91a0e483f651c1b2987ad900e9507773bf1f4dd13e9b8131a2c43ae733",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "몸은 긴 타원형이다. 주둥이가 짧고, 입이 작으며 입의 앞부분만 열린다. 두 눈 사이의 간격은 좁다. 무안측에는 다수의 점액공이 있어서 몸 표면이 미끄럽다. 꼬리지느러미 뒤 가장자리는 둥글다. 측선은 몸의 중앙 부분에 있고, 가슴지느러미 부근에서 매우 낮게 솟아오른다. 유안측은 암갈색을 띠고 윤곽이 뚜렷하지 않은 어두운 무늬가 있다. 무안측은 회백색, 등지느러미의 가장자리는 검은색을 띈다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "산란기는 1~6월이며 주산란기는 3~5월",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 1~6월이며 주산란기는 3~5월",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1576639605223/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/MF0004253_DG0102_watermark.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1576639605223/images/original/MF0004253_DG0102_watermark.jpg",
+    "data/nifs/raw/fish/fish_1576639605223/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1576639605223/images/original/image-002.jpg",
+    "fish/fish_1576639605223/images/original/image-001.jpg",
+    "fish/fish_1576639605223/images/original/image-002.jpg"
+  ],
+  "byteSize": 1847,
+  "mimeType": "application/json",
+  "title": "기름가자미",
+  "koreanName": "기름가자미",
+  "scientificName": "Glyptocephalus stelleri"
+}

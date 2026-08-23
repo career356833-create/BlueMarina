@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576639605227",
+  "koreanName": "주꾸미",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605227",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1576639605227"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 2375,
+  "contentHash": "fb560ca66e3f94e2967935cc52fa852ff37b31680b489a5d1bf4dd49bf15514a",
+  "collectedAt": "2026-07-30T18:52:10.940136+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

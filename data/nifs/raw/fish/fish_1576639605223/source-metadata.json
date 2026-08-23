@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576639605223",
+  "koreanName": "기름가자미",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605223",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1576639605223"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 1847,
+  "contentHash": "c2421a91a0e483f651c1b2987ad900e9507773bf1f4dd13e9b8131a2c43ae733",
+  "collectedAt": "2026-07-30T18:51:35.990622+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

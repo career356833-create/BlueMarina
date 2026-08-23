@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-07-31T01:54:26.110041",
+  "target_url": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishList.do",
+  "status": "completed",
+  "list_page": {
+    "list_items": {
+      "sample_items": [],
+      "selectors": {
+        "item_container": null,
+        "fish_name": null,
+        "detail_link": null,
+        "thumbnail": null
+      }
+    },
+    "http_vs_rendered": {
+      "http_size_bytes": 118857,
+      "rendered_size_bytes": 129308,
+      "http_detected_items": 265,
+      "rendered_detected_items": 290,
+      "size_difference_percent": 8.79,
+      "items_loaded_dynamically": true
+    }
+  },
+  "pagination": {
+    "detected_method": null,
+    "page_param_name": null,
+    "current_page": null,
+    "total_pages": null,
+    "items_per_page": 25
+  },
+  "detail_pages": {},
+  "network": {},
+  "errors": []
+}

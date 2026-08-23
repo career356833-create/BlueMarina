@@ -1,0 +1,149 @@
+{
+  "title": "e-연구바다>수산자원>수산자원정보>어종 목록>어종 목록",
+  "scripts": [
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/js/jquery-3.6.0.min.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/css/jquery-ui/jquery-ui.min.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/js/jquery.form.min.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/js/jquery.validate.min.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/js/jquery-clockpicker.min.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/js/jquery.mtz.monthpicker.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/js/chosen.jquery.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/js/xlsx.bundle.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/js/common.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/js/sub_common.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/js/left_menu.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/js/lpCom.js?ver=",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": null,
+      "inline": true,
+      "length": 2136
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/js/jquery.mask.min.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/js/jquery.bpopup.min.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/amcharts4/core.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/amcharts4/charts.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/amcharts4/themes/animated.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": "/portal/cmmn/js/newSfidComJsSet.js",
+      "inline": false,
+      "length": 0
+    },
+    {
+      "type": "text/javascript",
+      "src": null,
+      "inline": true,
+      "length": 1
+    },
+    {
+      "type": "text/javascript",
+      "src": null,
+      "inline": true,
+      "length": 2828
+    }
+  ],
+  "forms": [],
+  "page_info": {},
+  "list_items": {
+    "sample_items": [],
+    "selectors": {
+      "item_container": null,
+      "fish_name": null,
+      "detail_link": null,
+      "thumbnail": null
+    }
+  },
+  "pagination": {
+    "detected_method": null,
+    "page_param_name": null,
+    "current_page": null,
+    "total_pages": null,
+    "items_per_page": 25
+  }
+}

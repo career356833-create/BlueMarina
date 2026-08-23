@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1576639605227",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1576639605227",
+      "fishName": "주꾸미",
+      "scName": "Amphioctopus fangsiao",
+      "prohibitSize": "0",
+      "recommendSize": "0",
+      "infoDistribution": "중국, 한국, 일본(홋카이도 이남)",
+      "infoGrowth": "산란기는 3~6월. 해저의 오목한 장소에 포도모양의 난을 낳으며, 난은 장경 약 1cm에 달하는 대형이다. \r\n성장은 최대 외투장 8cm, 최대 중량 200g이다.",
+      "infoShape": "몸통은 주머니모양으로 길며, 두부와 팔 사이에 조그마하게 조각한 듯한 원형의 무늬가 있다. 두 눈위에 각각 2개의 육질돌기가 있다. 팔은 적당히 길고 단단하며, 수컷 오른쪽 3번째 팔이 교접기화되어 있다. 교접혀는 가늘고 긴데 팔 길이의 4~6%정도이다. 아가미에는 7~8개의 아가미판이 있다.",
+      "infoDialect": "쭈게미, 쭈깨미, 쭉지미, 호래기, 금테문어, 죽거미, 쯔그미",
+      "infoCatch": "연안복합, 안강망, 연안자망, 연안통발",
+      "infoCookCal": "52",
+      "infoCookHow": "52 Kcal/100g\r\n단백질: 10.8g\r\n지방: 0.5g",
+      "infoEat": "",
+      "display": "",
+      "graphComment": "",
+      "fishNameEn": "Webfoot octopus"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

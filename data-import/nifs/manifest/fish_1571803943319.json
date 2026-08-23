@@ -1,0 +1,71 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1571803943319",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1571803943319",
+  "fetchedAt": "2026-07-30T18:51:33.931509+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:33.931509+00:00",
+  "contentHash": "ff23a1671fda75294b35b7b4d48ab6d058de186ee456676f904356102901be6a",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "3",
+      "colorLevel": "1"
+    },
+    {
+      "month": "4",
+      "colorLevel": "2"
+    },
+    {
+      "month": "5",
+      "colorLevel": "2"
+    },
+    {
+      "month": "6",
+      "colorLevel": "2"
+    },
+    {
+      "month": "7",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "몸의 형태는 전형적인 방추(타원)형이며, 등쪽은 암청색, 배쪽은 은백색을 띈다. 주둥이는 뾰족한 편이다. 등지느러미는 극조부와 연조부로 잘 분리되어 있으며, 꼬리부분 좌우에 강한 근육이 있어 꼬리를 좌우로 강하게 움직일 수 있다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "고등어는 비교적 성장속도가 빠르며, 만 1세에 26.8∼32.2 cm, 만 2세에 34.4∼37.6 cm로 자란다. 만 1세 고등어의 약 50%가 알을 낳을 수 있으며, 만 2세가 되면 대부분 산란에 참여하고, 1회 산란시에 약 3만 개의 알을 낳으며, 산란기간 중 여러번에 걸쳐서 산란한다. 산란기는 주로 3~7월이며, 주 산란기는 4~5월이고, 제주도 주변 해역 및 동중국해에서 산란한다. 성숙체장은 28.7cm(가랑이체장)이다. 수명은 6세이다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란에 참여하고",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1571803943319/detail-api-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1571803943319_157674659122903.jpg",
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1571803943319_157674659125704.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1571803943319/images/original/fish_1571803943319_157674659122903.jpg",
+    "data/nifs/raw/fish/fish_1571803943319/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1571803943319/images/original/image-002.jpg",
+    "data/nifs/raw/fish/fish_1571803943319/images/original/image-003.jpg",
+    "fish/fish_1571803943319/images/original/image-001.jpg",
+    "fish/fish_1571803943319/images/original/image-002.jpg",
+    "fish/fish_1571803943319/images/original/image-003.jpg",
+    "fish_1571803943319_157674659122903.jpg",
+    "fish_1571803943319_157674659125704.jpg"
+  ],
+  "byteSize": 5266,
+  "mimeType": "application/json",
+  "title": "고등어",
+  "koreanName": "고등어",
+  "scientificName": "Scomber japonicus"
+}

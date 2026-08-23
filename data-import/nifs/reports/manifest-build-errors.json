@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-08-01T06:58:16.777Z",
+  "errors": [
+    {
+      "sourceCandidate": "fish_1571803943319",
+      "path": "data/nifs/raw/fish/fish_1571803943319/source-metadata.json",
+      "errorCode": "METADATA_HASH_MISMATCH",
+      "message": "source-metadata.json contentHash differs from the primary raw payload hash",
+      "recoverable": true
+    },
+    {
+      "sourceCandidate": "fish_1571806850754",
+      "path": "data/nifs/raw/fish/fish_1571806850754/source-metadata.json",
+      "errorCode": "METADATA_HASH_MISMATCH",
+      "message": "source-metadata.json contentHash differs from the primary raw payload hash",
+      "recoverable": true
+    },
+    {
+      "sourceCandidate": "fish_1575596889118",
+      "path": "data/nifs/raw/fish/fish_1575596889118/source-metadata.json",
+      "errorCode": "METADATA_HASH_MISMATCH",
+      "message": "source-metadata.json contentHash differs from the primary raw payload hash",
+      "recoverable": true
+    },
+    {
+      "sourceCandidate": "fish_1575613737728",
+      "path": "data/nifs/raw/fish/fish_1575613737728/source-metadata.json",
+      "errorCode": "METADATA_HASH_MISMATCH",
+      "message": "source-metadata.json contentHash differs from the primary raw payload hash",
+      "recoverable": true
+    },
+    {
+      "sourceCandidate": "fish_1576045793538",
+      "path": "data/nifs/raw/fish/fish_1576045793538/source-metadata.json",
+      "errorCode": "METADATA_HASH_MISMATCH",
+      "message": "source-metadata.json contentHash differs from the primary raw payload hash",
+      "recoverable": true
+    }
+  ]
+}

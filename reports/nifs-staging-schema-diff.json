@@ -1,0 +1,1098 @@
+{
+  "generatedAt": "2026-07-30T20:40:56.650Z",
+  "mode": "staging-schema-diff",
+  "inputDir": "data-import/nifs/manifest",
+  "legacyFishDataPath": "src/data/fish-data.ts",
+  "summary": {
+    "inputDir": "data-import/nifs/manifest",
+    "totalRecords": 25,
+    "matchedCount": 17,
+    "unmatchedCount": 8,
+    "ambiguousCount": 0,
+    "newSpeciesCandidateCount": 8,
+    "existingSpeciesCandidateCount": 17,
+    "possibleDuplicateCount": 0,
+    "scientificNameConflictCount": 0,
+    "koreanNameConflictCount": 0,
+    "slugCollisionCount": 17,
+    "reviewQueueCount": 0,
+    "reviewQueueTypes": {
+      "name_conflict": 0,
+      "taxonomy_conflict": 0,
+      "duplicate_candidate": 0,
+      "missing_required_field": 0
+    }
+  },
+  "records": [
+    {
+      "sourceId": "fish_1571803943319",
+      "koreanName": "고등어",
+      "scientificName": "Scomber japonicus",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "고등어",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "고등어"
+      ],
+      "legacyMatchCategories": [
+        "바다낚시 인기어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "고등어",
+          "targetSpeciesId": "전갱이",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "전갱이"
+        },
+        {
+          "sourceSpeciesId": "고등어",
+          "targetSpeciesId": "삼치",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "삼치"
+        },
+        {
+          "sourceSpeciesId": "고등어",
+          "targetSpeciesId": "청어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "청어"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1571806850754",
+      "koreanName": "갈치",
+      "scientificName": "Trichiurus lepturus",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "갈치",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "갈치"
+      ],
+      "legacyMatchCategories": [
+        "바다낚시 인기어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "갈치",
+          "targetSpeciesId": "고등어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "고등어"
+        },
+        {
+          "sourceSpeciesId": "갈치",
+          "targetSpeciesId": "삼치",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "삼치"
+        },
+        {
+          "sourceSpeciesId": "갈치",
+          "targetSpeciesId": "오징어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "오징어"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1573537097812",
+      "koreanName": "붉은대게",
+      "scientificName": "Chionoecetes japonicus",
+      "action": "new_species_candidate",
+      "confidence": "medium",
+      "conflicts": [],
+      "suggestedAction": "create_species_draft",
+      "matchStatus": "unmatched",
+      "candidateSlug": "붉은대게",
+      "candidateSlugCollision": false,
+      "legacyMatchIds": [],
+      "legacyMatchCategories": [],
+      "relationCandidates": [],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 0
+    },
+    {
+      "sourceId": "fish_1575521941711",
+      "koreanName": "개조개",
+      "scientificName": "Saxidomus purpuratus",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "개조개",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "개조개"
+      ],
+      "legacyMatchCategories": [
+        "회/식용 인기어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "개조개",
+          "targetSpeciesId": "참굴",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "참굴"
+        },
+        {
+          "sourceSpeciesId": "개조개",
+          "targetSpeciesId": "바지락",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "바지락"
+        },
+        {
+          "sourceSpeciesId": "개조개",
+          "targetSpeciesId": "대하",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "대하"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1575529825083",
+      "koreanName": "갯장어",
+      "scientificName": "Muraenesox cinereus",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "갯장어",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "갯장어"
+      ],
+      "legacyMatchCategories": [
+        "선상낚시 어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "갯장어",
+          "targetSpeciesId": "붕장어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "붕장어"
+        },
+        {
+          "sourceSpeciesId": "갯장어",
+          "targetSpeciesId": "장어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "장어"
+        },
+        {
+          "sourceSpeciesId": "갯장어",
+          "targetSpeciesId": "민어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "민어"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1575532529343",
+      "koreanName": "옥돔",
+      "scientificName": "Branchiostegus japonicus",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "옥돔",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "옥돔"
+      ],
+      "legacyMatchCategories": [
+        "계절별 대표어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "옥돔",
+          "targetSpeciesId": "자리돔",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "자리돔"
+        },
+        {
+          "sourceSpeciesId": "옥돔",
+          "targetSpeciesId": "참돔",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "참돔"
+        },
+        {
+          "sourceSpeciesId": "옥돔",
+          "targetSpeciesId": "달고기",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "달고기"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1575596889118",
+      "koreanName": "낙지",
+      "scientificName": "Octopus minor",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "낙지",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "낙지"
+      ],
+      "legacyMatchCategories": [
+        "회/식용 인기어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "낙지",
+          "targetSpeciesId": "가리비",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "가리비"
+        },
+        {
+          "sourceSpeciesId": "낙지",
+          "targetSpeciesId": "문어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "문어"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1575613737728",
+      "koreanName": "대구",
+      "scientificName": "Gadus macrocephalus",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "대구",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "대구"
+      ],
+      "legacyMatchCategories": [
+        "선상낚시 어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "대구",
+          "targetSpeciesId": "명태",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "명태"
+        },
+        {
+          "sourceSpeciesId": "대구",
+          "targetSpeciesId": "아귀",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "아귀"
+        },
+        {
+          "sourceSpeciesId": "대구",
+          "targetSpeciesId": "열기",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "열기"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1575858517048",
+      "koreanName": "도루묵",
+      "scientificName": "Arctoscopus japonicus",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "도루묵",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "도루묵"
+      ],
+      "legacyMatchCategories": [
+        "계절별 대표어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "도루묵",
+          "targetSpeciesId": "전어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "전어"
+        },
+        {
+          "sourceSpeciesId": "도루묵",
+          "targetSpeciesId": "대구",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "대구"
+        },
+        {
+          "sourceSpeciesId": "도루묵",
+          "targetSpeciesId": "참굴",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "참굴"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1575867824021",
+      "koreanName": "말쥐치",
+      "scientificName": "Thamnaconus modestus",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "말쥐치",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "말쥐치"
+      ],
+      "legacyMatchCategories": [
+        "방파제/갯바위 어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "말쥐치",
+          "targetSpeciesId": "쥐치",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "쥐치"
+        },
+        {
+          "sourceSpeciesId": "말쥐치",
+          "targetSpeciesId": "노래미",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "노래미"
+        },
+        {
+          "sourceSpeciesId": "말쥐치",
+          "targetSpeciesId": "망상어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "망상어"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1575868769703",
+      "koreanName": "명태",
+      "scientificName": "Theragra chalcogramma",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "명태",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "명태"
+      ],
+      "legacyMatchCategories": [
+        "계절별 대표어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "명태",
+          "targetSpeciesId": "대구",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "대구"
+        },
+        {
+          "sourceSpeciesId": "명태",
+          "targetSpeciesId": "임연수어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "임연수어"
+        },
+        {
+          "sourceSpeciesId": "명태",
+          "targetSpeciesId": "청어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "청어"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1575870984736",
+      "koreanName": "바지락",
+      "scientificName": "Ruditapes philippinarum",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "바지락",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "바지락"
+      ],
+      "legacyMatchCategories": [
+        "회/식용 인기어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "바지락",
+          "targetSpeciesId": "참굴",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "참굴"
+        },
+        {
+          "sourceSpeciesId": "바지락",
+          "targetSpeciesId": "전복",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "전복"
+        },
+        {
+          "sourceSpeciesId": "바지락",
+          "targetSpeciesId": "해삼",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "해삼"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1575873437839",
+      "koreanName": "오분자기",
+      "scientificName": "Sulculus diversicolor",
+      "action": "new_species_candidate",
+      "confidence": "medium",
+      "conflicts": [],
+      "suggestedAction": "create_species_draft",
+      "matchStatus": "unmatched",
+      "candidateSlug": "오분자기",
+      "candidateSlugCollision": false,
+      "legacyMatchIds": [],
+      "legacyMatchCategories": [],
+      "relationCandidates": [],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 0
+    },
+    {
+      "sourceId": "fish_1575875139974",
+      "koreanName": "살오징어",
+      "scientificName": "Todarodes pacificus",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "살오징어",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "살오징어"
+      ],
+      "legacyMatchCategories": [
+        "선상낚시 어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "살오징어",
+          "targetSpeciesId": "오징어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "오징어"
+        },
+        {
+          "sourceSpeciesId": "살오징어",
+          "targetSpeciesId": "무늬오징어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "무늬오징어"
+        },
+        {
+          "sourceSpeciesId": "살오징어",
+          "targetSpeciesId": "한치",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "한치"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1575880014320",
+      "koreanName": "제주소라",
+      "scientificName": "Turbo cornutus, Batillus cornutus",
+      "action": "new_species_candidate",
+      "confidence": "medium",
+      "conflicts": [],
+      "suggestedAction": "create_species_draft",
+      "matchStatus": "unmatched",
+      "candidateSlug": "제주소라",
+      "candidateSlugCollision": false,
+      "legacyMatchIds": [],
+      "legacyMatchCategories": [],
+      "relationCandidates": [],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 0
+    },
+    {
+      "sourceId": "fish_1575880791880",
+      "koreanName": "참조기",
+      "scientificName": "Larimichthys polyactis",
+      "action": "new_species_candidate",
+      "confidence": "medium",
+      "conflicts": [],
+      "suggestedAction": "create_species_draft",
+      "matchStatus": "unmatched",
+      "candidateSlug": "참조기",
+      "candidateSlugCollision": false,
+      "legacyMatchIds": [],
+      "legacyMatchCategories": [],
+      "relationCandidates": [],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 0
+    },
+    {
+      "sourceId": "fish_1575881532404",
+      "koreanName": "참홍어",
+      "scientificName": "Raja pulchra",
+      "action": "new_species_candidate",
+      "confidence": "medium",
+      "conflicts": [],
+      "suggestedAction": "create_species_draft",
+      "matchStatus": "unmatched",
+      "candidateSlug": "참홍어",
+      "candidateSlugCollision": false,
+      "legacyMatchIds": [],
+      "legacyMatchCategories": [],
+      "relationCandidates": [],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 0
+    },
+    {
+      "sourceId": "fish_1575882272758",
+      "koreanName": "키조개",
+      "scientificName": "Atrina pectinata",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "키조개",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "키조개"
+      ],
+      "legacyMatchCategories": [
+        "회/식용 인기어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "키조개",
+          "targetSpeciesId": "참굴",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "참굴"
+        },
+        {
+          "sourceSpeciesId": "키조개",
+          "targetSpeciesId": "전복",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "전복"
+        },
+        {
+          "sourceSpeciesId": "키조개",
+          "targetSpeciesId": "해삼",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "해삼"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1576045793538",
+      "koreanName": "꽃게",
+      "scientificName": "Portunus trituberculatus",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "꽃게",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "꽃게"
+      ],
+      "legacyMatchCategories": [
+        "계절별 대표어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "꽃게",
+          "targetSpeciesId": "전어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "전어"
+        },
+        {
+          "sourceSpeciesId": "꽃게",
+          "targetSpeciesId": "대구",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "대구"
+        },
+        {
+          "sourceSpeciesId": "꽃게",
+          "targetSpeciesId": "참굴",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "참굴"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1576639605222",
+      "koreanName": "대게",
+      "scientificName": "Chionoecetes opilio",
+      "action": "new_species_candidate",
+      "confidence": "medium",
+      "conflicts": [],
+      "suggestedAction": "create_species_draft",
+      "matchStatus": "unmatched",
+      "candidateSlug": "대게",
+      "candidateSlugCollision": false,
+      "legacyMatchIds": [],
+      "legacyMatchCategories": [],
+      "relationCandidates": [],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 0
+    },
+    {
+      "sourceId": "fish_1576639605223",
+      "koreanName": "기름가자미",
+      "scientificName": "Glyptocephalus stelleri",
+      "action": "new_species_candidate",
+      "confidence": "medium",
+      "conflicts": [],
+      "suggestedAction": "create_species_draft",
+      "matchStatus": "unmatched",
+      "candidateSlug": "기름가자미",
+      "candidateSlugCollision": false,
+      "legacyMatchIds": [],
+      "legacyMatchCategories": [],
+      "relationCandidates": [],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 0
+    },
+    {
+      "sourceId": "fish_1576639605224",
+      "koreanName": "대문어",
+      "scientificName": "Enteroctopus dofleini",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "대문어",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "대문어"
+      ],
+      "legacyMatchCategories": [
+        "선상낚시 어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "대문어",
+          "targetSpeciesId": "참돔",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "참돔"
+        },
+        {
+          "sourceSpeciesId": "대문어",
+          "targetSpeciesId": "우럭",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "우럭"
+        },
+        {
+          "sourceSpeciesId": "대문어",
+          "targetSpeciesId": "갈치",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "갈치"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1576639605225",
+      "koreanName": "삼치",
+      "scientificName": "Scomberomorus niphonius",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "삼치",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "삼치"
+      ],
+      "legacyMatchCategories": [
+        "바다낚시 인기어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "삼치",
+          "targetSpeciesId": "고등어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "고등어"
+        },
+        {
+          "sourceSpeciesId": "삼치",
+          "targetSpeciesId": "농어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "농어"
+        },
+        {
+          "sourceSpeciesId": "삼치",
+          "targetSpeciesId": "방어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "방어"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1576639605226",
+      "koreanName": "전갱이",
+      "scientificName": "Trachurus japonicus",
+      "action": "existing_species_candidate",
+      "confidence": "high",
+      "conflicts": [
+        "slug_collision"
+      ],
+      "suggestedAction": "link_existing_species",
+      "matchStatus": "matched",
+      "candidateSlug": "전갱이",
+      "candidateSlugCollision": true,
+      "legacyMatchIds": [
+        "전갱이"
+      ],
+      "legacyMatchCategories": [
+        "바다낚시 인기어종"
+      ],
+      "relationCandidates": [
+        {
+          "sourceSpeciesId": "전갱이",
+          "targetSpeciesId": "고등어",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "고등어"
+        },
+        {
+          "sourceSpeciesId": "전갱이",
+          "targetSpeciesId": "학공치",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "학공치"
+        },
+        {
+          "sourceSpeciesId": "전갱이",
+          "targetSpeciesId": "정어리",
+          "relationType": "co_search",
+          "reason": "legacy_relatedFish_reference",
+          "sourceType": "official",
+          "reviewStatus": "approved",
+          "displayOrder": 0,
+          "targetDisplayName": "정어리"
+        }
+      ],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 1
+    },
+    {
+      "sourceId": "fish_1576639605227",
+      "koreanName": "주꾸미",
+      "scientificName": "Amphioctopus fangsiao",
+      "action": "new_species_candidate",
+      "confidence": "medium",
+      "conflicts": [],
+      "suggestedAction": "create_species_draft",
+      "matchStatus": "unmatched",
+      "candidateSlug": "주꾸미",
+      "candidateSlugCollision": false,
+      "legacyMatchIds": [],
+      "legacyMatchCategories": [],
+      "relationCandidates": [],
+      "reviewQueueTypes": [],
+      "missingRequiredFields": [],
+      "legacyMatchCount": 0
+    }
+  ],
+  "reviewQueue": []
+}

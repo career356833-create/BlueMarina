@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1575613737728",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1575613737728",
+      "fishName": "대구",
+      "scName": "Gadus macrocephalus",
+      "prohibitSize": "35",
+      "recommendSize": "58.3",
+      "infoDistribution": "우리나라 동·서해 및 오호츠크해, 베링해",
+      "infoGrowth": "동해산의 경우, 부화 후 만 1년이면 크기가 20∼27 cm, 2년이면 30∼48 cm 내외로 자라고, 최대 100 cm까지 자란다. 경남 및 경북에서 산란하고, 산란기는 12∼4월이며, 크기 65 cm가 되면 약 200만 개의 알을 경남진해만과 경북 영일만에서 산란한다. 최대 100cm 까지 성장한다.",
+      "infoShape": "몸의 형태는 앞쪽부분이 두툼하고, 뒤쪽으로 갈수록 가늘어지며, 약간 옆으로 납작하게 되어 있다. 머리와 입이 크며, 위턱이 아래턱보다 더 앞쪽으로 튀어나와 입을 다물면 아래턱을 감싼다. 비늘은 둥근비늘이며 작다.",
+      "infoDialect": "대구어, 대두어(통영), 대기(함남)",
+      "infoCatch": "근해자망, 연안자망",
+      "infoCookCal": "86",
+      "infoCookHow": "86 Kcal/100g\n○ 단백질: 19.5%\n     -  필수아미노산: 6,734mg\n○ 지방: 0.3%",
+      "infoEat": "NA",
+      "display": "Y",
+      "graphComment": "대구의 연간 어획량은 2014년에 많은 어획량을 기록하고, 꾸준히 늘어나는 추세이다. ",
+      "fishNameEn": "Pacific cod"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

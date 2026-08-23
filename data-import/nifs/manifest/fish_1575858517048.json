@@ -1,0 +1,64 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575858517048",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575858517048",
+  "fetchedAt": "2026-07-30T18:51:48.315016+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:48.315016+00:00",
+  "contentHash": "58bfbb6332e1f132c391483eb8d57a64ebb5641f88e151cf7c974c8c9119697f",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "1",
+      "colorLevel": "1"
+    },
+    {
+      "month": "10",
+      "colorLevel": "1"
+    },
+    {
+      "month": "11",
+      "colorLevel": "2"
+    },
+    {
+      "month": "12",
+      "colorLevel": "2"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "몸은 약간 길고 납작하며, 입은 크고 비스듬히 찢어져 있다. 등쪽은 갈색이며, 배쪽은 은색을 띈다.\r\n몸은 약간길며, 매우 측편하다. 입은 크고 비스듬히 찢어져 있고 양턱에는 작으나 날카로운 2~3줄의 이빨이 있다. 아가미 뚜껑 중앙의 가장자리에는 5개의 가시가 있다. 제1등지느러미는 높고 삼각형이며, 제2등지느러미와 매우 떨어져 있다. 뒷지느러미 기저길이는 매우 길며, 꼬리지느러미의 뒤끝 가장자리는 수직형이다. 몸에는 비늘과 옆줄이 없다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "수컷이 암컷보다 성장이 좋으며, 수컷의 경우 만 1년이면 크기 12.4 cm, 4년이면 26 cm까지 자란다. 산란기는 11~12월이다. 산란장은 동해안의 삼척~속초에 이르는 해역이다. 도루묵은 한 번에 약 860~1600개의 알을 낳는다. \r\n산란기는 11~12월로 주 산란기는 12월이다. 수심2~10m되는 해조류가 많이 번성한 동해안의 삼척~ 속초에 이르는 해역에서 산란한다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 11~12월이다",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1575858517048/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575858517048_157674685437204.jpg",
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575858517048_157674685442003.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1575858517048/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1575858517048/images/original/image-002.jpg",
+    "data/nifs/raw/fish/fish_1575858517048/images/original/image-003.jpg",
+    "fish/fish_1575858517048/images/original/image-001.jpg",
+    "fish/fish_1575858517048/images/original/image-002.jpg",
+    "fish/fish_1575858517048/images/original/image-003.jpg"
+  ],
+  "byteSize": 3492,
+  "mimeType": "application/json",
+  "title": "도루묵",
+  "koreanName": "도루묵",
+  "scientificName": "Arctoscopus japonicus"
+}

@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1575858517048",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1575858517048",
+      "fishName": "도루묵",
+      "scName": "Arctoscopus japonicus",
+      "prohibitSize": "11",
+      "recommendSize": "17",
+      "infoDistribution": "우리나라 동해 및 일본, 캄차카, 사할린, 알라스카",
+      "infoGrowth": "수컷이 암컷보다 성장이 좋으며, 수컷의 경우 만 1년이면 크기 12.4 cm, 4년이면 26 cm까지 자란다. 산란기는 11~12월이다. 산란장은 동해안의 삼척~속초에 이르는 해역이다. 도루묵은 한 번에 약 860~1600개의 알을 낳는다. \r\n산란기는 11~12월로 주 산란기는 12월이다. 수심2~10m되는 해조류가 많이 번성한 동해안의 삼척~ 속초에 이르는 해역에서 산란한다.",
+      "infoShape": "몸은 약간 길고 납작하며, 입은 크고 비스듬히 찢어져 있다. 등쪽은 갈색이며, 배쪽은 은색을 띈다.\r\n몸은 약간길며, 매우 측편하다. 입은 크고 비스듬히 찢어져 있고 양턱에는 작으나 날카로운 2~3줄의 이빨이 있다. 아가미 뚜껑 중앙의 가장자리에는 5개의 가시가 있다. 제1등지느러미는 높고 삼각형이며, 제2등지느러미와 매우 떨어져 있다. 뒷지느러미 기저길이는 매우 길며, 꼬리지느러미의 뒤끝 가장자리는 수직형이다. 몸에는 비늘과 옆줄이 없다.",
+      "infoDialect": "도루묵이, 도루매이, 은어, 도루맥이(함남)",
+      "infoCatch": "동해구외끌이중형저인망, 연안자망, 정치",
+      "infoCookCal": "113",
+      "infoCookHow": "113 Kcal/100g\n○ 단백질: 16.0%\n     -  필수아미노산: 5,973mg\n○ 지방: 4.6%\n     -  포화지방산: 23.4%\n     -  불포화지방산: 76.6%",
+      "infoEat": "자원회복 성공한 도루묵, ‘말짱 도루묵’될까 걱정\n- 유어(遊漁)통발을 이용한 포획량 증가로 산란자원 감소 우려 -\n\n ■ 해양수산부 국립수산과학원은 겨울철 산란을 위해 항구 주변에 들어온 도루묵이 유어통발 등에 의해 대량 포획되고 있어 자원감소가 우려된다며 자제를 당부한다고 밝혔다.",
+      "display": "Y",
+      "graphComment": "도루묵의 연간 어획량은 꾸준히 증가하는 추세를 보이나, 최근 다소 감소하였다.",
+      "fishNameEn": "Sailfin sandfish"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576639605222",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605222",
+  "fetchedAt": "2026-07-30T18:51:42.150979+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:42.150979+00:00",
+  "contentHash": "bf6ee021e5b8b423412db99efe8a39f6ac8b9d03f25cf92d8c103489871d1f34",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "5",
+      "colorLevel": "1"
+    },
+    {
+      "month": "6",
+      "colorLevel": "2"
+    },
+    {
+      "month": "7",
+      "colorLevel": "2"
+    },
+    {
+      "month": "8",
+      "colorLevel": "2"
+    },
+    {
+      "month": "9",
+      "colorLevel": "2"
+    },
+    {
+      "month": "10",
+      "colorLevel": "2"
+    },
+    {
+      "month": "11",
+      "colorLevel": "2"
+    },
+    {
+      "month": "12",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "갑각의 등면은 대체로 편평하며, 옆 가장자리 뒷부분에 작은 과립들로 뭉처진 사마귀모양의 돌기가 있다(한국해양무척추동물도감)",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "산란기는 1~3월이며 한국 동해연안 200~400m 부근 해역에서 주로 산란한다. 성숙체장은 갑폭 63.9mm이다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 1~3월이며 한국 동해연안 200~400m 부근 해역에서 주로 산란한다",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1576639605222/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1576639605222_157674675113404.jpg",
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1576639605222_157674675122403.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1576639605222/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1576639605222/images/original/image-002.jpg",
+    "data/nifs/raw/fish/fish_1576639605222/images/original/image-003.jpg",
+    "fish/fish_1576639605222/images/original/image-001.jpg",
+    "fish/fish_1576639605222/images/original/image-002.jpg",
+    "fish/fish_1576639605222/images/original/image-003.jpg"
+  ],
+  "byteSize": 2560,
+  "mimeType": "application/json",
+  "title": "대게",
+  "koreanName": "대게",
+  "scientificName": "Chionoecetes opilio"
+}

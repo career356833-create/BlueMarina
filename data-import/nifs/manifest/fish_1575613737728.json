@@ -1,0 +1,66 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575613737728",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575613737728",
+  "fetchedAt": "2026-07-30T18:51:44.207940+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:44.207940+00:00",
+  "contentHash": "06c37dbca4e71e5e1a8c34aa15c8ebf1b914ea1adfb3d5955e002073e8f3a242",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "1",
+      "colorLevel": "2"
+    },
+    {
+      "month": "2",
+      "colorLevel": "2"
+    },
+    {
+      "month": "3",
+      "colorLevel": "1"
+    },
+    {
+      "month": "12",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "몸의 형태는 앞쪽부분이 두툼하고, 뒤쪽으로 갈수록 가늘어지며, 약간 옆으로 납작하게 되어 있다. 머리와 입이 크며, 위턱이 아래턱보다 더 앞쪽으로 튀어나와 입을 다물면 아래턱을 감싼다. 비늘은 둥근비늘이며 작다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "동해산의 경우, 부화 후 만 1년이면 크기가 20∼27 cm, 2년이면 30∼48 cm 내외로 자라고, 최대 100 cm까지 자란다. 경남 및 경북에서 산란하고, 산란기는 12∼4월이며, 크기 65 cm가 되면 약 200만 개의 알을 경남진해만과 경북 영일만에서 산란한다. 최대 100cm 까지 성장한다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란하고",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1575613737728/detail-api-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575613737728_157674679263604.jpg",
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575613737728_157674679290203.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1575613737728/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1575613737728/images/original/image-002.jpg",
+    "data/nifs/raw/fish/fish_1575613737728/images/original/image-003.jpg",
+    "fish/fish_1575613737728/images/original/image-001.jpg",
+    "fish/fish_1575613737728/images/original/image-002.jpg",
+    "fish/fish_1575613737728/images/original/image-003.jpg",
+    "fish_1575613737728_157674679263604.jpg",
+    "fish_1575613737728_157674679290203.jpg"
+  ],
+  "byteSize": 3640,
+  "mimeType": "application/json",
+  "title": "대구",
+  "koreanName": "대구",
+  "scientificName": "Gadus macrocephalus"
+}

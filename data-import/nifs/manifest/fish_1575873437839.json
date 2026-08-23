@@ -1,0 +1,65 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575873437839",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575873437839",
+  "fetchedAt": "2026-07-30T18:52:02.717248+00:00",
+  "sourceCheckedAt": "2026-07-30T18:52:02.717248+00:00",
+  "contentHash": "326caf55685de8d6bcb2b404f1bc247f2218a5ce2129fb5a3ab77ade574d1092",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "6",
+      "colorLevel": "1"
+    },
+    {
+      "month": "7",
+      "colorLevel": "2"
+    },
+    {
+      "month": "8",
+      "colorLevel": "2"
+    },
+    {
+      "month": "9",
+      "colorLevel": "1"
+    },
+    {
+      "month": "10",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "패각은 타원형, 나탑은 3층으로 낮다. 각정은 각장의 뒤쪽 1/5 거리에서 우측으로 치우쳐 있다. 패각은 평평하며, 체층은 갑자기 커져서 패각의 대부분을 차지한다. 패각은 적갈색 바탕에 녹갈색 띠가 각정으로부터 방사상으로 퍼져 있고 사이사이에 약한 황색무늬가 섞여 있다. 공열은 올라오지 않아 구멍만 뚫려 있고 앞에서부터 7~9개가 열려 있다. 나선맥은 어린 개체에서는 조밀한 융기선이 뚜렷하고 성장맥은 굵어서 굴곡을 이루고 있으나 성숙한 개체에서는 나선맥이나 성장맥이 모두 약해져서 거의 편평해지고 부분적으로 흔적만 남는 것도 있다. 각구는 타원형으로 내순은 폭이 거의 일정하며 외순은 약간 밖으로 굽어 있다. 패각의 내면은 회은색 바탕에 약간의 진주광택이 비친다. 공열은 7~8개가 열려 있고 성장맥이 없어 나선맥이 거칠지 않다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "외양에 면한 조간대의 바위에 붙어산다. 연평균 2.48cm(인공종묘) 성장하고 산란기는 7~10월이며 산란수 약190만개(각장 6.8cm), 산란수온 25℃ 전후, 생물학적 최소형 3.5cm이다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 7~10월이며 산란수 약190만개(각장 6",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1575873437839/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575873437839_157674075188002.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1575873437839/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1575873437839/images/original/image-002.jpg",
+    "fish/fish_1575873437839/images/original/image-001.jpg",
+    "fish/fish_1575873437839/images/original/image-002.jpg"
+  ],
+  "byteSize": 2963,
+  "mimeType": "application/json",
+  "title": "오분자기",
+  "koreanName": "오분자기",
+  "scientificName": "Sulculus diversicolor"
+}

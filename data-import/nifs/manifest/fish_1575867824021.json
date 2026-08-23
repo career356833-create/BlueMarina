@@ -1,0 +1,68 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575867824021",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575867824021",
+  "fetchedAt": "2026-07-30T18:51:50.376588+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:50.376588+00:00",
+  "contentHash": "6ee600f8b346ba8855ad312857f9306e24980b7f8e24d7931b6b3fecb35fb3cd",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "4",
+      "colorLevel": "1"
+    },
+    {
+      "month": "5",
+      "colorLevel": "2"
+    },
+    {
+      "month": "6",
+      "colorLevel": "2"
+    },
+    {
+      "month": "7",
+      "colorLevel": "2"
+    },
+    {
+      "month": "8",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "몸은 긴 타원형에 납작하며, 주둥이가 길다. 비늘은 미세한 융털모양으로 손으로 만지면 꺼칠꺼칠 하다. 등쪽은  회색을 띈 청색, 배쪽은 담색을 띈다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "말쥐치는 최대 35 cm까지 자라며, 치어시기에 떠다니다가 성장할수록  중하층으로 내려가며, 성어는 수직이동(낮에는 중층, 밤에는 하층)을 한다. 산란기는 4~6월이며,  주로 연안이나 암초지대에서 산란한다.군성숙체장은 24.1cm이고, 다회산란한다.\n산란기는 4~6월로 연안의 얕은 바다나 외양수의 영향을 많이 받는 내만의 암초지대에서 저녁~이른 아침에 산란한다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 4~6월이며",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1575867824021/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575867824021_157673990274904.jpg",
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575867824021_157673990294203.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1575867824021/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1575867824021/images/original/image-002.jpg",
+    "data/nifs/raw/fish/fish_1575867824021/images/original/image-003.jpg",
+    "fish/fish_1575867824021/images/original/image-001.jpg",
+    "fish/fish_1575867824021/images/original/image-002.jpg",
+    "fish/fish_1575867824021/images/original/image-003.jpg"
+  ],
+  "byteSize": 3065,
+  "mimeType": "application/json",
+  "title": "말쥐치",
+  "koreanName": "말쥐치",
+  "scientificName": "Thamnaconus modestus"
+}

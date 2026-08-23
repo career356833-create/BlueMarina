@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575875139974",
+  "koreanName": "살오징어",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575875139974",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1575875139974"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 3371,
+  "contentHash": "74c74062a40b01ba1f1f0a7292dd9acede7d128e3594aa395857e04d758b3530",
+  "collectedAt": "2026-07-30T18:51:58.599398+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

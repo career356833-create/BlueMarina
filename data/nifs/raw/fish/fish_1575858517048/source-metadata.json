@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575858517048",
+  "koreanName": "도루묵",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575858517048",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1575858517048"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 3492,
+  "contentHash": "58bfbb6332e1f132c391483eb8d57a64ebb5641f88e151cf7c974c8c9119697f",
+  "collectedAt": "2026-07-30T18:51:48.315016+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

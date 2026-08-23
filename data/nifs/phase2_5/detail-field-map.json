@@ -1,0 +1,277 @@
+{
+  "sampleCount": 5,
+  "parserVersion": "nifs-detail-v0.3.0",
+  "generatedAt": "2026-07-30T18:37:28.944219+00:00",
+  "listRequest": {
+    "url": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishList.do",
+    "method": "POST",
+    "contentType": "application/json",
+    "body": {
+      "language": null
+    },
+    "requiresSession": false
+  },
+  "detailRequest": {
+    "shellUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId={fishId}",
+    "url": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+    "method": "POST",
+    "contentType": "application/json",
+    "parameterName": "fishId",
+    "requiresSession": false,
+    "note": "shell 페이지(actionChrpFishView.do)는 데이터를 포함하지 않는다. 실제 콘텐츠는 이 API가 반환한다."
+  },
+  "fields": [
+    {
+      "sourceLabel": "어종이름",
+      "sourceKey": "fishName",
+      "selector": "retMap.fishName",
+      "sourceType": "text",
+      "normalizedField": "koreanName",
+      "presentInSamples": 5,
+      "required": true
+    },
+    {
+      "sourceLabel": "영문이름",
+      "sourceKey": "fishNameEn",
+      "selector": "retMap.fishNameEn",
+      "sourceType": "text",
+      "normalizedField": "englishName",
+      "presentInSamples": 5,
+      "required": true
+    },
+    {
+      "sourceLabel": "학명",
+      "sourceKey": "scName",
+      "selector": "retMap.scName",
+      "sourceType": "text",
+      "normalizedField": "scientificName",
+      "presentInSamples": 5,
+      "required": true
+    },
+    {
+      "sourceLabel": "특징",
+      "sourceKey": "infoShape",
+      "selector": "retMap.infoShape",
+      "sourceType": "html",
+      "normalizedField": "feature",
+      "presentInSamples": 5,
+      "required": true
+    },
+    {
+      "sourceLabel": "분포",
+      "sourceKey": "infoDistribution",
+      "selector": "retMap.infoDistribution",
+      "sourceType": "html",
+      "normalizedField": "distribution",
+      "presentInSamples": 5,
+      "required": true
+    },
+    {
+      "sourceLabel": "생애주기",
+      "sourceKey": "infoGrowth",
+      "selector": "retMap.infoGrowth",
+      "sourceType": "html",
+      "normalizedField": "lifecycle",
+      "presentInSamples": 5,
+      "required": true
+    },
+    {
+      "sourceLabel": "방언",
+      "sourceKey": "infoDialect",
+      "selector": "retMap.infoDialect",
+      "sourceType": "html",
+      "normalizedField": "dialect",
+      "presentInSamples": 5,
+      "required": true
+    },
+    {
+      "sourceLabel": "어획 방법",
+      "sourceKey": "infoCatch",
+      "selector": "retMap.infoCatch",
+      "sourceType": "html",
+      "normalizedField": "catchMethod",
+      "presentInSamples": 5,
+      "required": true
+    },
+    {
+      "sourceLabel": "영양 정보",
+      "sourceKey": "infoCookHow",
+      "selector": "retMap.infoCookHow",
+      "sourceType": "html",
+      "normalizedField": "nutrition",
+      "presentInSamples": 5,
+      "required": true
+    },
+    {
+      "sourceLabel": "알고 먹읍시다!",
+      "sourceKey": "infoEat",
+      "selector": "retMap.infoEat",
+      "sourceType": "html",
+      "normalizedField": "eatingNote",
+      "presentInSamples": 2,
+      "required": false
+    },
+    {
+      "sourceLabel": "소비 지양 크기",
+      "sourceKey": "prohibitSize",
+      "selector": "retMap.prohibitSize",
+      "sourceType": "text",
+      "normalizedField": "prohibitSize",
+      "presentInSamples": 5,
+      "required": true
+    },
+    {
+      "sourceLabel": "소비 권장 크기",
+      "sourceKey": "recommendSize",
+      "selector": "retMap.recommendSize",
+      "sourceType": "text",
+      "normalizedField": "recommendSize",
+      "presentInSamples": 5,
+      "required": true
+    },
+    {
+      "sourceLabel": "어종 이미지",
+      "sourceKey": "images",
+      "selector": "imgList[].fileName",
+      "sourceType": "array",
+      "normalizedField": "images",
+      "presentInSamples": 5,
+      "required": true
+    },
+    {
+      "sourceLabel": "소비 권장 시기",
+      "sourceKey": "recommendPeriod",
+      "selector": "periodList[].{month,colorLevel}",
+      "sourceType": "array",
+      "normalizedField": "recommendPeriod",
+      "presentInSamples": 5,
+      "required": true
+    },
+    {
+      "sourceLabel": "어획량 추이",
+      "sourceKey": "catchHistory",
+      "selector": "historyList[].{year,catchAverage}",
+      "sourceType": "array",
+      "normalizedField": "catchHistory",
+      "presentInSamples": 5,
+      "required": true
+    }
+  ],
+  "sampleResults": {
+    "fish_1571806850754": {
+      "fishName": "갈치",
+      "fieldCount": 11,
+      "imageCount": 2,
+      "periodCount": 3,
+      "historyCount": 25,
+      "ok": true,
+      "errors": [],
+      "parsed": {
+        "koreanName": "갈치",
+        "englishName": "Largehead hairtail",
+        "scientificName": "Trichiurus lepturus",
+        "feature": "갈치는 몸 빛깔은 은백색이며, 두 눈 사이의 머리부분이 편평하다. 입은 크고 양 턱에는 크고 억센 이빨이 있다. 몸은 아주 길고 납작하며, 꼬리는 띠 모양으로 쉽게 잘린다. 다른 물고기들과 달리, 배지느러미와 꼬리지느러미 및 비늘이 없다.",
+        "distribution": "우리나라 남해 및 서해, 동중국해",
+        "lifecycle": "갈치의 산란장은 우리나라의 서·남해연안과 중국 연안이며, 우리나라 연안에서는 5~9월이 주 산란이다. 크기가 약 82 cm 이면, 이 중 50%가 산란에 참여하고, 크기가 약 83~141 cm이면 약 14.000~76,000개의 알을 낳는다. 갈치는 약 80 cm이하(2~3년생)에서는 수컷이 많지만, 이 이상의 크기에서는 암컷이 많다. 산란기는 4~10월 주 산란기는 5~9월이며, 남, 서해안, 제주 북서 및 남동 방, 온주 등 중국 대륙 연안 등에서 산란한다. 성숙체장은 2.2~27.2cm, 수명은 15세이다.",
+        "dialect": "깔치, 풀치(전남에서 새끼를 말함), 빈쟁이(통영), 은갈치(제주)",
+        "catchMethod": "근해연승, 대형선망, 근해안강망, 쌍끌이대형저인망, 연안복합",
+        "nutrition": "149 Kcal/100g\n○ 단백질: 18.5%\n- 필수아미노산: 7,666mg\n○ 지방: 7.5%\n- 포화지방산: 35.3%\n- 불포화지방산: 64.7%",
+        "eatingNote": null,
+        "prohibitSize": "18",
+        "recommendSize": "25"
+      }
+    },
+    "fish_1571803943319": {
+      "fishName": "고등어",
+      "fieldCount": 12,
+      "imageCount": 2,
+      "periodCount": 5,
+      "historyCount": 25,
+      "ok": true,
+      "errors": [],
+      "parsed": {
+        "koreanName": "고등어",
+        "englishName": "Chub mackerel",
+        "scientificName": "Scomber japonicus",
+        "feature": "몸의 형태는 전형적인 방추(타원)형이며, 등쪽은 암청색, 배쪽은 은백색을 띈다. 주둥이는 뾰족한 편이다. 등지느러미는 극조부와 연조부로 잘 분리되어 있으며, 꼬리부분 좌우에 강한 근육이 있어 꼬리를 좌우로 강하게 움직일 수 있다.",
+        "distribution": "우리나라 전 연·근해, 발해, 동중국해, 일본 전 연근해, 동부 태평양(생태와 어장)",
+        "lifecycle": "고등어는 비교적 성장속도가 빠르며, 만 1세에 26.8∼32.2 cm, 만 2세에 34.4∼37.6 cm로 자란다. 만 1세 고등어의 약 50%가 알을 낳을 수 있으며, 만 2세가 되면 대부분 산란에 참여하고, 1회 산란시에 약 3만 개의 알을 낳으며, 산란기간 중 여러번에 걸쳐서 산란한다. 산란기는 주로 3~7월이며, 주 산란기는 4~5월이고, 제주도 주변 해역 및 동중국해에서 산란한다. 성숙체장은 28.7cm(가랑이체장)이다. 수명은 6세이다.",
+        "dialect": "고도어(한자식 표현), 고도리(고등어의 새끼: 갈고등어, 열소고도리, 소고도리, 통소고도리), 고딩애(강원), 고마어(평북, 함경), 고동무치(경남), 고망어(경기, 함경, 황해), 꼬도리(경남), 고덩(경북), 고뎅이(경남), 고데이(경남), 고도예(함경, 중국 길림성), 고도이(함경), 고동아(경기), 고동어(함남), 고동에(경남), 고동오(경남), 고두어 (강원, 경상, 전북, 충청, 함북, 중국 길림성), 고두이(함경), 고둥시(충북), 고둥어(경상, 충청, 평북, 함남, 중국 길림성, 중국 흑룡강성), 고둥우(경남), 고드아(경기, 황해), 고디어(경남, 충북), 고마에(경기, 평북, 황해), 꼬두리(경남), 꼬둥어(경상), 꼬드레(경상, 중국 흑룡강성), 꼬드리(경남), 꼬드어(경상, 충북), 꼬등어(경상, 충북), 고드어(경북), 꼬등에(전라), 고등에(경상, 제주), 고드애(강원), 고데(경북), 고덩(경북), 고덩에(평안), 고디(경남), 고디이(경북)",
+        "catchMethod": "대형선망",
+        "nutrition": "183 Kcal/100g\n○ 단백질: 20.3%\n- 필수아미노산: 5,014mg\n○ 지방: 10.4%\n- 포화지방산: 20.9%\n- 불포화지방산: 59.1%",
+        "eatingNote": "새로운 대형선망 어구 개발: 고등어 치어의 혼획을 줄이면서, 선상에서 작업이 쉽고, 연료절감 효과 - 국립수산과학원",
+        "prohibitSize": "21",
+        "recommendSize": "29"
+      }
+    },
+    "fish_1576045793538": {
+      "fishName": "꽃게",
+      "fieldCount": 12,
+      "imageCount": 2,
+      "periodCount": 5,
+      "historyCount": 25,
+      "ok": true,
+      "errors": [],
+      "parsed": {
+        "koreanName": "꽃게",
+        "englishName": "Swimming crab, Blue crab",
+        "scientificName": "Portunus trituberculatus",
+        "feature": "갑각은 옆으로 퍼진 마름모꼴이고, 이마에 돌기가 있으며, 가운데 돌기는 아래쪽으로 휘어져 있다. 갑각의 어깨에는 9개의 톱니모양 이가 있는데 끝에 난 이는 크고 날카로우며 옆으로 튀어나왔다. 집게다리는 크고 억세다. 긴 마디 앞 모서리에 4개의 날카로운 가시가 있다. 마지막 다리 끝부분은 넓적해서 헤엄치기 알맞다. 다리 수는 5쌍이다",
+        "distribution": "우리나라 서해 및 남해, 중국, 대만, 일본 연근해 수심 2~110m 해역의 모래나 모래진흙에서 서식한다.",
+        "lifecycle": "꽃게의 수명은 대략 3년으로 추정된다. 산란기는 5~9월(주산란기 6~7월)이며, 한마리당 1년에 2~3회 산란한다. 성숙체장은 두흉갑장 기준 6.4cm, 수명은 3년으로 추정된다.",
+        "dialect": "꽃게, 꽃그이, 날개꽃게, 사시랭이, 바시락게",
+        "catchMethod": "최근 5년간 꽃게 어업별 주요 어업은 연안자망(50%), 연안통발(16%), 근해자망(15%) 등의 순으로 점유비율을 차지하고 있다.",
+        "nutrition": "74 Kcal/100g\n○ 단백질: 13.6%\n- 필수아미노산: 7,381mg\n○ 지방: 0.8%\n- 포화지방산: 25.7%\n- 불포화지방산: 74.3%",
+        "eatingNote": "꽃게 자원관리 차원에서 어린 꽃게를 보호하기 위해 어업현장에서 포획금지크기를 측정할 수 있는 목걸이 형태의 꽃게모양의 측정자를 제작 및 배포하고 있습니다.\n(국립수산과학원 서해수산연구소)",
+        "prohibitSize": "6.4",
+        "recommendSize": "10"
+      }
+    },
+    "fish_1575596889118": {
+      "fishName": "낙지",
+      "fieldCount": 11,
+      "imageCount": 2,
+      "periodCount": 3,
+      "historyCount": 25,
+      "ok": true,
+      "errors": [],
+      "parsed": {
+        "koreanName": "낙지",
+        "englishName": "Whiparm octopus",
+        "scientificName": "Octopus minor",
+        "feature": "몸은 가늘고 길며 완은 몸에 비하여 매우 가늘고 길다. 외투장이 외투폭보다 길며, 몸통은 난원형으로 이루며 뒤끝은 약간 뾰족하나 끝은 예리하지 않고 둥글다. 살아있을 때 몸통이 전체적으로 짙거나 옅은 회색을 띠지만 자극을 받게 되면 검붉은색 등 다양한 색깔로 위장하거나 위협색을 나타낸다.",
+        "distribution": "한국 전연안, 진흙 갯벌 조간대 하부에서부터 수심 100m 전후의 수심까지 다양한 저질 중국, 일본, 사할린 연안의 펄에 주로 분포한다.",
+        "lifecycle": "낙지는 총길이 약 70 cm까지 성장하고, 약 50 cm가 되면 성숙하여 알을 낳는다.\n산란시기는 지역에 따라 차이를 보이며 전남 득량만은 7~9월, 서해 가로림만 4~5월, 탄도만은 6~7월이 주 산란기로 팔의 내부에 난을 낳는다. 최대 70cm 까지 성장한다.",
+        "dialect": "낙자(여수, 고흥, 장흥, 보성, 무안, 영광, 함평, 신안, 목포), 낙주(통영, 남해, 하동, 거제), 석어, 소팔초어, 세발낙지, 꽃낙지, 돌낙지",
+        "catchMethod": "연안통발, 주낙",
+        "nutrition": "75 Kcal/100g\n○ 단백질: 16.3%\n- 필수아미노산: 3,654mg\n○ 지방: 0.5%\n- 포화지방산: 20.7%\n- 불포화지방산: 79.3%",
+        "eatingNote": null,
+        "prohibitSize": "70",
+        "recommendSize": "116"
+      }
+    },
+    "fish_1575613737728": {
+      "fishName": "대구",
+      "fieldCount": 11,
+      "imageCount": 2,
+      "periodCount": 4,
+      "historyCount": 25,
+      "ok": true,
+      "errors": [],
+      "parsed": {
+        "koreanName": "대구",
+        "englishName": "Pacific cod",
+        "scientificName": "Gadus macrocephalus",
+        "feature": "몸의 형태는 앞쪽부분이 두툼하고, 뒤쪽으로 갈수록 가늘어지며, 약간 옆으로 납작하게 되어 있다. 머리와 입이 크며, 위턱이 아래턱보다 더 앞쪽으로 튀어나와 입을 다물면 아래턱을 감싼다. 비늘은 둥근비늘이며 작다.",
+        "distribution": "우리나라 동·서해 및 오호츠크해, 베링해",
+        "lifecycle": "동해산의 경우, 부화 후 만 1년이면 크기가 20∼27 cm, 2년이면 30∼48 cm 내외로 자라고, 최대 100 cm까지 자란다. 경남 및 경북에서 산란하고, 산란기는 12∼4월이며, 크기 65 cm가 되면 약 200만 개의 알을 경남진해만과 경북 영일만에서 산란한다. 최대 100cm 까지 성장한다.",
+        "dialect": "대구어, 대두어(통영), 대기(함남)",
+        "catchMethod": "근해자망, 연안자망",
+        "nutrition": "86 Kcal/100g\n○ 단백질: 19.5%\n- 필수아미노산: 6,734mg\n○ 지방: 0.3%",
+        "eatingNote": null,
+        "prohibitSize": "35",
+        "recommendSize": "58.3"
+      }
+    }
+  }
+}

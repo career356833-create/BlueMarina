@@ -1,0 +1,154 @@
+{
+  "sourceId": "fish_1575613737728",
+  "koreanName": "대구",
+  "fields": {
+    "koreanName": "대구",
+    "englishName": "Pacific cod",
+    "scientificName": "Gadus macrocephalus",
+    "feature": "몸의 형태는 앞쪽부분이 두툼하고, 뒤쪽으로 갈수록 가늘어지며, 약간 옆으로 납작하게 되어 있다. 머리와 입이 크며, 위턱이 아래턱보다 더 앞쪽으로 튀어나와 입을 다물면 아래턱을 감싼다. 비늘은 둥근비늘이며 작다.",
+    "distribution": "우리나라 동·서해 및 오호츠크해, 베링해",
+    "lifecycle": "동해산의 경우, 부화 후 만 1년이면 크기가 20∼27 cm, 2년이면 30∼48 cm 내외로 자라고, 최대 100 cm까지 자란다. 경남 및 경북에서 산란하고, 산란기는 12∼4월이며, 크기 65 cm가 되면 약 200만 개의 알을 경남진해만과 경북 영일만에서 산란한다. 최대 100cm 까지 성장한다.",
+    "dialect": "대구어, 대두어(통영), 대기(함남)",
+    "catchMethod": "근해자망, 연안자망",
+    "nutrition": "86 Kcal/100g\n○ 단백질: 19.5%\n- 필수아미노산: 6,734mg\n○ 지방: 0.3%",
+    "eatingNote": null,
+    "prohibitSize": "35",
+    "recommendSize": "58.3"
+  },
+  "images": [
+    {
+      "fileName": "fish_1575613737728_157674679290203.jpg",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575613737728_157674679290203.jpg"
+    },
+    {
+      "fileName": "fish_1575613737728_157674679263604.jpg",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575613737728_157674679263604.jpg"
+    }
+  ],
+  "recommendPeriod": [
+    {
+      "month": 1,
+      "colorLevel": "2",
+      "label": "지양"
+    },
+    {
+      "month": 2,
+      "colorLevel": "2",
+      "label": "지양"
+    },
+    {
+      "month": 3,
+      "colorLevel": "1",
+      "label": "자제"
+    },
+    {
+      "month": 12,
+      "colorLevel": "1",
+      "label": "자제"
+    }
+  ],
+  "catchHistory": [
+    {
+      "year": "2000",
+      "catchAverage": "1766"
+    },
+    {
+      "year": "2001",
+      "catchAverage": "2458"
+    },
+    {
+      "year": "2002",
+      "catchAverage": "1968"
+    },
+    {
+      "year": "2003",
+      "catchAverage": "1826"
+    },
+    {
+      "year": "2004",
+      "catchAverage": "2641"
+    },
+    {
+      "year": "2005",
+      "catchAverage": "4272"
+    },
+    {
+      "year": "2006",
+      "catchAverage": "6810"
+    },
+    {
+      "year": "2007",
+      "catchAverage": "7533"
+    },
+    {
+      "year": "2008",
+      "catchAverage": "5395"
+    },
+    {
+      "year": "2009",
+      "catchAverage": "6870"
+    },
+    {
+      "year": "2010",
+      "catchAverage": "7289"
+    },
+    {
+      "year": "2011",
+      "catchAverage": "8585"
+    },
+    {
+      "year": "2012",
+      "catchAverage": "8682"
+    },
+    {
+      "year": "2013",
+      "catchAverage": "9133"
+    },
+    {
+      "year": "2014",
+      "catchAverage": "13402"
+    },
+    {
+      "year": "2015",
+      "catchAverage": "7820"
+    },
+    {
+      "year": "2016",
+      "catchAverage": "4975"
+    },
+    {
+      "year": "2017",
+      "catchAverage": "6479"
+    },
+    {
+      "year": "2018",
+      "catchAverage": "7511"
+    },
+    {
+      "year": "2019",
+      "catchAverage": "9520"
+    },
+    {
+      "year": "2020",
+      "catchAverage": "5507"
+    },
+    {
+      "year": "2021",
+      "catchAverage": "5629"
+    },
+    {
+      "year": "2022",
+      "catchAverage": "5678"
+    },
+    {
+      "year": "2023",
+      "catchAverage": "6300"
+    },
+    {
+      "year": "2024",
+      "catchAverage": "6733"
+    }
+  ],
+  "parserVersion": "nifs-detail-v0.3.0",
+  "collectedAt": "2026-07-30T18:37:28.944219+00:00"
+}

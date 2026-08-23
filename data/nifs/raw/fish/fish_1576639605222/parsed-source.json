@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1576639605222",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1576639605222",
+      "fishName": "대게",
+      "scName": "Chionoecetes opilio",
+      "prohibitSize": "9",
+      "recommendSize": "",
+      "infoDistribution": "우리나라 동해연안, 일본서해안 베링해 및 알라스카 연안",
+      "infoGrowth": "산란기는 1~3월이며 한국 동해연안 200~400m 부근 해역에서 주로 산란한다. 성숙체장은 갑폭 63.9mm이다.",
+      "infoShape": "갑각의 등면은 대체로 편평하며, 옆 가장자리 뒷부분에 작은 과립들로 뭉처진 사마귀모양의 돌기가 있다(한국해양무척추동물도감)",
+      "infoDialect": "기, 왕게",
+      "infoCatch": "연안자망, 연안통발, 근해자망, 근해통발",
+      "infoCookCal": "85",
+      "infoCookHow": "85 Kcal/100g\r\n○ 단백질: 17.4% \r\n○ 지방: 1.0%\r\n     -  포화지방산: 20.2%\r\n     -  불포화지방산: 79.8%\r\n",
+      "infoEat": "어린 대게 잡으면 다시 바다로 보내주세요\n- 어린대게 방류 조사 결과 생존율 97% 이상으로 나타나 -",
+      "display": "Y",
+      "graphComment": "대게의 연간 어획량은 2000년대 중후반에 비해서는 낮은 어획량을 보이지만, 최근에 증가추세를 보인다.",
+      "fishNameEn": "Tanner crab"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

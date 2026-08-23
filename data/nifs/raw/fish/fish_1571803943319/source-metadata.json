@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1571803943319",
+  "koreanName": "고등어",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1571803943319",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1571803943319"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 4156,
+  "contentHash": "262d1cdd15aa5b4e12b7fc862364c590cff92280023419daa2dc2059c8a5bb4d",
+  "collectedAt": "2026-07-30T18:51:33.931509+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

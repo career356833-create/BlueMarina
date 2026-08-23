@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1575532529343",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1575532529343",
+      "fishName": "옥돔",
+      "scName": "Branchiostegus japonicus",
+      "prohibitSize": "",
+      "recommendSize": "25",
+      "infoDistribution": "우리나라 중부이남, 제주도, 일본 중부이남, 동중국해, 남중국해",
+      "infoGrowth": "암컷보다 수컷이 성장이 좋아 암컷은 31cm, 수컷은 35cm까지 자란다. 수명은 모두 8∼9년, 수컷은 만1년이면 12cm, 2년이면 18cm, 3년이면 22cm, 4년이면 26cm, 5년이면 28cm, 6년이면 30cm, 7년이면 31cm, 8년이면 32cm로 자란다.",
+      "infoShape": "몸은 약간 길고 측편하며, 머리의 앞쪽은 매우 경사져 거의 수직형에 가깝다. 입은 작고, 위턱 이빨은 바깥쪽이 크고 안쪽은 작지만 여러 줄로 배열되어 있다.",
+      "infoDialect": "",
+      "infoCatch": "연안복합(연안연승), 근해자망, 근해연승",
+      "infoCookCal": "82",
+      "infoCookHow": "82 Kcal/100g\n○ 단백질: 18.1%\r\n     -  필수아미노산: 7,900mg\n○ 지방: 0.2%\n     -  포화지방산: 35.5%\r\n     -  불포화지방산: 64.5%",
+      "infoEat": "NA",
+      "display": "Y",
+      "graphComment": "",
+      "fishNameEn": "Horse head fish"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

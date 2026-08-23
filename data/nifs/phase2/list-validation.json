@@ -1,0 +1,17 @@
+{
+  "totalCount": 25,
+  "duplicateFishIds": 0,
+  "duplicateFishNames": 0,
+  "emptyIds": 0,
+  "emptyNames": 0,
+  "displayStatusDistribution": {
+    "N": 4,
+    "Y": 16,
+    "": 5
+  },
+  "colorLevelDistribution": {
+    "2": 15,
+    "0": 7,
+    "1": 3
+  }
+}

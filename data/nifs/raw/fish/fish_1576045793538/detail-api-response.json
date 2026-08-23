@@ -1,0 +1,154 @@
+{
+  "historyList": [
+    {
+      "year": "2000",
+      "catchAverage": "12842"
+    },
+    {
+      "year": "2001",
+      "catchAverage": "13016"
+    },
+    {
+      "year": "2002",
+      "catchAverage": "18659"
+    },
+    {
+      "year": "2003",
+      "catchAverage": "9478"
+    },
+    {
+      "year": "2004",
+      "catchAverage": "2683"
+    },
+    {
+      "year": "2005",
+      "catchAverage": "3714"
+    },
+    {
+      "year": "2006",
+      "catchAverage": "6894"
+    },
+    {
+      "year": "2007",
+      "catchAverage": "13606"
+    },
+    {
+      "year": "2008",
+      "catchAverage": "17596"
+    },
+    {
+      "year": "2009",
+      "catchAverage": "31302"
+    },
+    {
+      "year": "2010",
+      "catchAverage": "33193"
+    },
+    {
+      "year": "2011",
+      "catchAverage": "26608"
+    },
+    {
+      "year": "2012",
+      "catchAverage": "26861"
+    },
+    {
+      "year": "2013",
+      "catchAverage": "30448"
+    },
+    {
+      "year": "2014",
+      "catchAverage": "25242"
+    },
+    {
+      "year": "2015",
+      "catchAverage": "16374"
+    },
+    {
+      "year": "2016",
+      "catchAverage": "11751"
+    },
+    {
+      "year": "2017",
+      "catchAverage": "12941"
+    },
+    {
+      "year": "2018",
+      "catchAverage": "11770"
+    },
+    {
+      "year": "2019",
+      "catchAverage": "12306"
+    },
+    {
+      "year": "2020",
+      "catchAverage": "15417"
+    },
+    {
+      "year": "2021",
+      "catchAverage": "19713"
+    },
+    {
+      "year": "2022",
+      "catchAverage": "21808"
+    },
+    {
+      "year": "2023",
+      "catchAverage": "27150"
+    },
+    {
+      "year": "2024",
+      "catchAverage": "20817"
+    }
+  ],
+  "retMap": {
+    "fishId": "fish_1576045793538",
+    "fishName": "꽃게",
+    "scName": "Portunus trituberculatus",
+    "prohibitSize": "6.4",
+    "recommendSize": "10",
+    "infoDistribution": "우리나라 서해 및 남해, 중국, 대만, 일본 연근해 수심 2~110m 해역의 모래나 모래진흙에서 서식한다.",
+    "infoGrowth": "꽃게의 수명은 대략 3년으로 추정된다. 산란기는 5~9월(주산란기 6~7월)이며, 한마리당 1년에 2~3회 산란한다. 성숙체장은 두흉갑장 기준 6.4cm, 수명은 3년으로 추정된다.",
+    "infoShape": "갑각은 옆으로 퍼진 마름모꼴이고, 이마에 돌기가 있으며, 가운데 돌기는 아래쪽으로 휘어져 있다. 갑각의 어깨에는 9개의 톱니모양 이가 있는데 끝에 난 이는 크고 날카로우며 옆으로 튀어나왔다. 집게다리는 크고 억세다. 긴 마디 앞 모서리에 4개의 날카로운 가시가 있다. 마지막 다리 끝부분은 넓적해서 헤엄치기 알맞다. 다리 수는 5쌍이다",
+    "infoDialect": "꽃게, 꽃그이, 날개꽃게, 사시랭이, 바시락게",
+    "infoCatch": "최근 5년간 꽃게 어업별 주요 어업은 연안자망(50%), 연안통발(16%), 근해자망(15%) 등의 순으로 점유비율을 차지하고 있다.",
+    "infoCookCal": "74",
+    "infoCookHow": "74 Kcal/100g\n○ 단백질: 13.6%\n     -  필수아미노산: 7,381mg\n○ 지방: 0.8%\n     -  포화지방산: 25.7%\n     -  불포화지방산: 74.3%",
+    "infoEat": "꽃게 자원관리 차원에서 어린 꽃게를 보호하기 위해 어업현장에서 포획금지크기를 측정할 수 있는 목걸이 형태의 꽃게모양의 측정자를 제작 및 배포하고 있습니다. \r\n(국립수산과학원 서해수산연구소)",
+    "display": "Y",
+    "graphComment": "꽃게의 연간 어획량은 매년 증감을 반복하나, 점진적으로 증가 추세를 보인다.",
+    "fishNameEn": "Swimming crab, Blue crab"
+  },
+  "periodList": [
+    {
+      "month": "5",
+      "colorLevel": "1"
+    },
+    {
+      "month": "6",
+      "colorLevel": "2"
+    },
+    {
+      "month": "7",
+      "colorLevel": "2"
+    },
+    {
+      "month": "8",
+      "colorLevel": "2"
+    },
+    {
+      "month": "9",
+      "colorLevel": "1"
+    }
+  ],
+  "imgList": [
+    {
+      "fileName": "fish_1576045793538_157673904399103.jpg",
+      "displayOrder": "3"
+    },
+    {
+      "fileName": "fish_1576045793538_157673904409204.jpg",
+      "displayOrder": "4"
+    }
+  ]
+}

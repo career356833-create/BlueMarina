@@ -1,0 +1,137 @@
+{
+  "generatedAt": "2026-07-30T19:25:11.385Z",
+  "mode": "dry-run",
+  "databaseTouched": false,
+  "supabaseCalled": false,
+  "totals": {
+    "stagingRecords": 4,
+    "validRecords": 3,
+    "newSourceRecords": 1,
+    "sameHashSkips": 1,
+    "changedHashVersions": 1,
+    "sourceMissingCandidates": 1,
+    "schemaErrors": 1,
+    "duplicateSourceKeys": 0,
+    "scientificNameDuplicateCandidates": 1,
+    "slugCollisionCandidates": 1,
+    "normalizationCandidateDiffs": 2,
+    "manualReviewOverwriteRisks": 1
+  },
+  "schemaErrors": [
+    {
+      "file": "tools\\nifs-importer\\fixtures\\manifests\\sample-manifests.json",
+      "sourceProvider": "NIFS",
+      "sourceId": "nifs-invalid",
+      "errors": [
+        "MISSING_sourceCheckedAt"
+      ]
+    }
+  ],
+  "duplicateSourceKeys": [],
+  "scientificNameDuplicateCandidates": [
+    {
+      "scientificName": "testus alpha",
+      "records": [
+        {
+          "sourceProvider": "NIFS",
+          "sourceId": "nifs-001"
+        },
+        {
+          "sourceProvider": "NIFS",
+          "sourceId": "nifs-003"
+        }
+      ]
+    }
+  ],
+  "slugCollisionCandidates": [
+    {
+      "reason": "same_display_name_requires_admin_slug_resolution",
+      "records": [
+        {
+          "sourceProvider": "NIFS",
+          "sourceId": "nifs-001"
+        },
+        {
+          "sourceProvider": "NIFS",
+          "sourceId": "nifs-003"
+        }
+      ]
+    }
+  ],
+  "normalizationCandidateDiffs": [
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "nifs-002",
+      "fields": [
+        "habitat"
+      ],
+      "status": "new_version"
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "nifs-003",
+      "fields": [
+        "koreanName",
+        "scientificName"
+      ],
+      "status": "new"
+    }
+  ],
+  "manualReviewOverwriteRisks": [
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "nifs-002",
+      "field": "habitat",
+      "action": "manual_review_required"
+    }
+  ],
+  "sourcePlans": [
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "nifs-001",
+      "status": "same_hash_skip",
+      "transactionPlan": [
+        "update_last_seen_only"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "nifs-002",
+      "status": "new_version",
+      "transactionPlan": [
+        "insert_source_version",
+        "unset_previous_current_version",
+        "set_new_current_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    },
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "nifs-003",
+      "status": "new",
+      "transactionPlan": [
+        "insert_source_version",
+        "create_change_log",
+        "queue_normalization_review"
+      ]
+    }
+  ],
+  "sourceMissingCandidates": [
+    {
+      "sourceProvider": "NIFS",
+      "sourceId": "nifs-003",
+      "file": "tools\\nifs-importer\\fixtures\\manifests\\sample-manifests.json"
+    }
+  ],
+  "transactionPolicy": {
+    "newHash": [
+      "insert_source_version",
+      "unset_previous_current_version",
+      "set_new_current_version",
+      "create_change_log",
+      "queue_normalization_review"
+    ],
+    "failure": "rollback_all_and_keep_existing_current_and_published_data"
+  }
+}

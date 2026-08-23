@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575881532404",
+  "koreanName": "참홍어",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575881532404",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1575881532404"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 1711,
+  "contentHash": "ada00c029508f616914e2cfc3ff6824fe1fabf070e51576e16cb4d0ee7fbf8ab",
+  "collectedAt": "2026-07-30T18:52:15.057470+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

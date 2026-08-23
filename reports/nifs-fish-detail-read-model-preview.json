@@ -1,0 +1,1735 @@
+{
+  "generatedAt": "2026-08-01T06:58:27.530Z",
+  "sourceFile": "reports/nifs-fish-species-candidates.json",
+  "totalCandidates": 8,
+  "readinessCounts": {
+    "ready": 8,
+    "partial": 0,
+    "blocked": 0
+  },
+  "mappingCounts": {
+    "identity": 8,
+    "officialFacts": 8,
+    "media": 8,
+    "taxonomyMissing": 8,
+    "regulationsEmpty": 8,
+    "generatedContentsEmpty": 8,
+    "seasonPresent": 7,
+    "seasonSourceMissing": 1,
+    "morphologyPresent": 8,
+    "featurePresent": 0,
+    "spawningPresent": 8
+  },
+  "previewRecords": [
+    {
+      "speciesCandidateId": "fish-species-candidate-fish_1573537097812",
+      "sourceId": "fish_1573537097812",
+      "identity": {
+        "id": "fish-species-candidate-fish_1573537097812",
+        "slug": "붉은대게",
+        "slugPolicy": {
+          "strategy": "immutable-readable-short-id",
+          "stemSource": "koreanName",
+          "immutable": true,
+          "collisionSuffixStrategy": "short-id",
+          "redirectFromSlugs": [],
+          "note": "dry-run candidate preview"
+        },
+        "slugAliases": [],
+        "displayName": "붉은대게",
+        "koreanName": "붉은대게",
+        "commonName": "Red snow crab",
+        "englishName": "Red snow crab",
+        "scientificName": "Chionoecetes japonicus"
+      },
+      "taxonomy": null,
+      "officialFacts": {
+        "factReviewStatus": "pending",
+        "publishStatus": "draft",
+        "version": 1,
+        "sourceRefs": [
+          {
+            "sourceProvider": "NIFS",
+            "sourceId": "fish_1573537097812",
+            "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1573537097812"
+          }
+        ],
+        "lastReviewedAt": null,
+        "reviewNote": null
+      },
+      "quickFacts": {
+        "summary": null,
+        "season": {
+          "source": "NIFS",
+          "rawKey": "periodList",
+          "periods": [
+            {
+              "month": 6,
+              "sourceValue": "6",
+              "level": "1"
+            },
+            {
+              "month": 7,
+              "sourceValue": "7",
+              "level": "2"
+            },
+            {
+              "month": 8,
+              "sourceValue": "8",
+              "level": "2"
+            },
+            {
+              "month": 9,
+              "sourceValue": "9",
+              "level": "1"
+            }
+          ],
+          "sourceStatus": "present"
+        },
+        "seasonSourceStatus": "present",
+        "seasonDisplayText": null,
+        "seasonFallbackText": null,
+        "habitat": "동해",
+        "size": "금지 체장 0cm / 권장 크기 0cm",
+        "fishingMethods": [
+          "연안통발",
+          "근해통발"
+        ]
+      },
+      "morphology": "전체적으로 짙은 적색이며, 갑각의 뒷아가미구역이 부풀어올라 있으며 뒷부분의 경사가 급하고, 옆 가장자리 뒷부분에 예리한 가시가 있다(한국해양무척추동물도감).",
+      "morphologySummary": {
+        "source": "NIFS",
+        "rawKey": "infoShape",
+        "sourceText": "전체적으로 짙은 적색이며, 갑각의 뒷아가미구역이 부풀어올라 있으며 뒷부분의 경사가 급하고, 옆 가장자리 뒷부분에 예리한 가시가 있다(한국해양무척추동물도감).",
+        "sourceStatus": "present"
+      },
+      "morphologySourceStatus": "present",
+      "morphologySourceText": "전체적으로 짙은 적색이며, 갑각의 뒷아가미구역이 부풀어올라 있으며 뒷부분의 경사가 급하고, 옆 가장자리 뒷부분에 예리한 가시가 있다(한국해양무척추동물도감).",
+      "distinguishingFeatures": null,
+      "featureSummary": {
+        "source": "NIFS",
+        "rawKey": "infoFeature",
+        "sourceText": null,
+        "sourceStatus": "source_missing"
+      },
+      "featureSourceStatus": "source_missing",
+      "featureSourceText": null,
+      "habitat": "동해",
+      "distribution": "동해",
+      "ecology": "산란기 2~3월, 최소성숙갑폭 암컷 55~75mm, 수컷 70~100mm",
+      "spawning": {
+        "source": "NIFS",
+        "text": "산란기 2~3월",
+        "derivedFrom": "infoGrowth"
+      },
+      "feeding": null,
+      "size": "금지 체장 0cm / 권장 크기 0cm",
+      "season": {
+        "source": "NIFS",
+        "rawKey": "periodList",
+        "periods": [
+          {
+            "month": 6,
+            "sourceValue": "6",
+            "level": "1"
+          },
+          {
+            "month": 7,
+            "sourceValue": "7",
+            "level": "2"
+          },
+          {
+            "month": 8,
+            "sourceValue": "8",
+            "level": "2"
+          },
+          {
+            "month": 9,
+            "sourceValue": "9",
+            "level": "1"
+          }
+        ],
+        "sourceStatus": "present"
+      },
+      "fishingGuide": {
+        "methods": [
+          "연안통발",
+          "근해통발"
+        ],
+        "tips": [],
+        "cautions": []
+      },
+      "foodNutrition": "48\n48 Kcal/100g\n○ 단백질: 10.5%\n     -  필수아미노산: 5,034mg\n○ 지방: 0.3%\n홍게와 붉은대게의 차이\n홍게와 대게의 차이인가요?(홍게는 배표면이 붉은데 반해 대게는 배표면이 하얗다.)",
+      "aliases": [
+        "홍게"
+      ],
+      "regulations": [],
+      "media": [
+        {
+          "id": null,
+          "fishSpeciesId": null,
+          "mediaType": "image",
+          "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1573537097812_157674010419302.jpg",
+          "storagePath": null,
+          "referencedSourceMediaId": "data/nifs/raw/fish/fish_1573537097812/images/original/image-001.jpg",
+          "copyrightStatus": "unknown",
+          "usageStatus": "pending",
+          "reviewStatus": "pending"
+        }
+      ],
+      "relatedSpecies": [],
+      "generatedContents": [],
+      "officialSources": [
+        {
+          "sourceProvider": "NIFS",
+          "sourceId": "fish_1573537097812",
+          "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1573537097812",
+          "title": "붉은대게",
+          "checkedAt": "2026-07-30T18:51:56.537084+00:00",
+          "excerpt": "동해"
+        }
+      ],
+      "missingFields": [
+        "taxonomy",
+        "quickFacts.summary",
+        "feeding",
+        "regulations",
+        "generatedContents"
+      ],
+      "readiness": "ready",
+      "readinessReason": "taxonomy and dependent detail layers are not yet sourced for this candidate",
+      "evidence": {
+        "sourceProvider": "NIFS",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1573537097812",
+        "sourceCheckedAt": "2026-07-30T18:51:56.537084+00:00",
+        "imageCount": 1,
+        "rawMediaCount": 4,
+        "hasDistribution": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false,
+        "hasCatch": true,
+        "hasCookHow": true,
+        "hasDialect": true,
+        "hasSeason": true,
+        "seasonSourceStatus": "present",
+        "seasonDisplayText": null,
+        "seasonFallbackText": null,
+        "hasSpawning": true,
+        "hasTaxonomy": false
+      }
+    },
+    {
+      "speciesCandidateId": "fish-species-candidate-fish_1575873437839",
+      "sourceId": "fish_1575873437839",
+      "identity": {
+        "id": "fish-species-candidate-fish_1575873437839",
+        "slug": "오분자기",
+        "slugPolicy": {
+          "strategy": "immutable-readable-short-id",
+          "stemSource": "koreanName",
+          "immutable": true,
+          "collisionSuffixStrategy": "short-id",
+          "redirectFromSlugs": [],
+          "note": "dry-run candidate preview"
+        },
+        "slugAliases": [],
+        "displayName": "오분자기",
+        "koreanName": "오분자기",
+        "commonName": "Ear shell",
+        "englishName": "Ear shell",
+        "scientificName": "Sulculus diversicolor"
+      },
+      "taxonomy": null,
+      "officialFacts": {
+        "factReviewStatus": "pending",
+        "publishStatus": "draft",
+        "version": 1,
+        "sourceRefs": [
+          {
+            "sourceProvider": "NIFS",
+            "sourceId": "fish_1575873437839",
+            "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575873437839"
+          }
+        ],
+        "lastReviewedAt": null,
+        "reviewNote": null
+      },
+      "quickFacts": {
+        "summary": null,
+        "season": {
+          "source": "NIFS",
+          "rawKey": "periodList",
+          "periods": [
+            {
+              "month": 6,
+              "sourceValue": "6",
+              "level": "1"
+            },
+            {
+              "month": 7,
+              "sourceValue": "7",
+              "level": "2"
+            },
+            {
+              "month": 8,
+              "sourceValue": "8",
+              "level": "2"
+            },
+            {
+              "month": 9,
+              "sourceValue": "9",
+              "level": "1"
+            },
+            {
+              "month": 10,
+              "sourceValue": "10",
+              "level": "1"
+            }
+          ],
+          "sourceStatus": "present"
+        },
+        "seasonSourceStatus": "present",
+        "seasonDisplayText": null,
+        "seasonFallbackText": null,
+        "habitat": "한국, 일본(나가사키, 오하라)",
+        "size": "금지 체장 4cm",
+        "fishingMethods": [
+          "마을어업"
+        ]
+      },
+      "morphology": "패각은 타원형, 나탑은 3층으로 낮다. 각정은 각장의 뒤쪽 1/5 거리에서 우측으로 치우쳐 있다. 패각은 평평하며, 체층은 갑자기 커져서 패각의 대부분을 차지한다. 패각은 적갈색 바탕에 녹갈색 띠가 각정으로부터 방사상으로 퍼져 있고 사이사이에 약한 황색무늬가 섞여 있다. 공열은 올라오지 않아 구멍만 뚫려 있고 앞에서부터 7~9개가 열려 있다. 나선맥은 어린 개체에서는 조밀한 융기선이 뚜렷하고 성장맥은 굵어서 굴곡을 이루고 있으나 성숙한 개체에서는 나선맥이나 성장맥이 모두 약해져서 거의 편평해지고 부분적으로 흔적만 남는 것도 있다. 각구는 타원형으로 내순은 폭이 거의 일정하며 외순은 약간 밖으로 굽어 있다. 패각의 내면은 회은색 바탕에 약간의 진주광택이 비친다. 공열은 7~8개가 열려 있고 성장맥이 없어 나선맥이 거칠지 않다.",
+      "morphologySummary": {
+        "source": "NIFS",
+        "rawKey": "infoShape",
+        "sourceText": "패각은 타원형, 나탑은 3층으로 낮다. 각정은 각장의 뒤쪽 1/5 거리에서 우측으로 치우쳐 있다. 패각은 평평하며, 체층은 갑자기 커져서 패각의 대부분을 차지한다. 패각은 적갈색 바탕에 녹갈색 띠가 각정으로부터 방사상으로 퍼져 있고 사이사이에 약한 황색무늬가 섞여 있다. 공열은 올라오지 않아 구멍만 뚫려 있고 앞에서부터 7~9개가 열려 있다. 나선맥은 어린 개체에서는 조밀한 융기선이 뚜렷하고 성장맥은 굵어서 굴곡을 이루고 있으나 성숙한 개체에서는 나선맥이나 성장맥이 모두 약해져서 거의 편평해지고 부분적으로 흔적만 남는 것도 있다. 각구는 타원형으로 내순은 폭이 거의 일정하며 외순은 약간 밖으로 굽어 있다. 패각의 내면은 회은색 바탕에 약간의 진주광택이 비친다. 공열은 7~8개가 열려 있고 성장맥이 없어 나선맥이 거칠지 않다.",
+        "sourceStatus": "present"
+      },
+      "morphologySourceStatus": "present",
+      "morphologySourceText": "패각은 타원형, 나탑은 3층으로 낮다. 각정은 각장의 뒤쪽 1/5 거리에서 우측으로 치우쳐 있다. 패각은 평평하며, 체층은 갑자기 커져서 패각의 대부분을 차지한다. 패각은 적갈색 바탕에 녹갈색 띠가 각정으로부터 방사상으로 퍼져 있고 사이사이에 약한 황색무늬가 섞여 있다. 공열은 올라오지 않아 구멍만 뚫려 있고 앞에서부터 7~9개가 열려 있다. 나선맥은 어린 개체에서는 조밀한 융기선이 뚜렷하고 성장맥은 굵어서 굴곡을 이루고 있으나 성숙한 개체에서는 나선맥이나 성장맥이 모두 약해져서 거의 편평해지고 부분적으로 흔적만 남는 것도 있다. 각구는 타원형으로 내순은 폭이 거의 일정하며 외순은 약간 밖으로 굽어 있다. 패각의 내면은 회은색 바탕에 약간의 진주광택이 비친다. 공열은 7~8개가 열려 있고 성장맥이 없어 나선맥이 거칠지 않다.",
+      "distinguishingFeatures": null,
+      "featureSummary": {
+        "source": "NIFS",
+        "rawKey": "infoFeature",
+        "sourceText": null,
+        "sourceStatus": "source_missing"
+      },
+      "featureSourceStatus": "source_missing",
+      "featureSourceText": null,
+      "habitat": "한국, 일본(나가사키, 오하라)",
+      "distribution": "한국, 일본(나가사키, 오하라)",
+      "ecology": "외양에 면한 조간대의 바위에 붙어산다. 연평균 2.48cm(인공종묘) 성장하고 산란기는 7~10월이며 산란수 약190만개(각장 6.8cm), 산란수온 25℃ 전후, 생물학적 최소형 3.5cm이다.",
+      "spawning": {
+        "source": "NIFS",
+        "text": "산란기는 7~10월이며 산란수 약190만개(각장 6",
+        "derivedFrom": "infoGrowth"
+      },
+      "feeding": null,
+      "size": "금지 체장 4cm",
+      "season": {
+        "source": "NIFS",
+        "rawKey": "periodList",
+        "periods": [
+          {
+            "month": 6,
+            "sourceValue": "6",
+            "level": "1"
+          },
+          {
+            "month": 7,
+            "sourceValue": "7",
+            "level": "2"
+          },
+          {
+            "month": 8,
+            "sourceValue": "8",
+            "level": "2"
+          },
+          {
+            "month": 9,
+            "sourceValue": "9",
+            "level": "1"
+          },
+          {
+            "month": 10,
+            "sourceValue": "10",
+            "level": "1"
+          }
+        ],
+        "sourceStatus": "present"
+      },
+      "fishingGuide": {
+        "methods": [
+          "마을어업"
+        ],
+        "tips": [],
+        "cautions": []
+      },
+      "foodNutrition": "95\n95 Kcal/100g\r\n○ 단백질: 13.3%\r\n     -  필수아미노산: 5,034mg\r\n○ 지방: 2.1%\r\n     -  포화지방산: 37.5%\r\n     -  불포화지방산: 62.5%",
+      "aliases": [
+        "오분재기",
+        "조개",
+        "조고지"
+      ],
+      "regulations": [],
+      "media": [
+        {
+          "id": null,
+          "fishSpeciesId": null,
+          "mediaType": "image",
+          "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575873437839_157674075188002.jpg",
+          "storagePath": null,
+          "referencedSourceMediaId": "data/nifs/raw/fish/fish_1575873437839/images/original/image-001.jpg",
+          "copyrightStatus": "unknown",
+          "usageStatus": "pending",
+          "reviewStatus": "pending"
+        }
+      ],
+      "relatedSpecies": [],
+      "generatedContents": [],
+      "officialSources": [
+        {
+          "sourceProvider": "NIFS",
+          "sourceId": "fish_1575873437839",
+          "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575873437839",
+          "title": "오분자기",
+          "checkedAt": "2026-07-30T18:52:02.717248+00:00",
+          "excerpt": "한국, 일본(나가사키, 오하라)"
+        }
+      ],
+      "missingFields": [
+        "taxonomy",
+        "quickFacts.summary",
+        "feeding",
+        "regulations",
+        "generatedContents"
+      ],
+      "readiness": "ready",
+      "readinessReason": "taxonomy and dependent detail layers are not yet sourced for this candidate",
+      "evidence": {
+        "sourceProvider": "NIFS",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575873437839",
+        "sourceCheckedAt": "2026-07-30T18:52:02.717248+00:00",
+        "imageCount": 1,
+        "rawMediaCount": 4,
+        "hasDistribution": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false,
+        "hasCatch": true,
+        "hasCookHow": true,
+        "hasDialect": true,
+        "hasSeason": true,
+        "seasonSourceStatus": "present",
+        "seasonDisplayText": null,
+        "seasonFallbackText": null,
+        "hasSpawning": true,
+        "hasTaxonomy": false
+      }
+    },
+    {
+      "speciesCandidateId": "fish-species-candidate-fish_1575880014320",
+      "sourceId": "fish_1575880014320",
+      "identity": {
+        "id": "fish-species-candidate-fish_1575880014320",
+        "slug": "제주소라",
+        "slugPolicy": {
+          "strategy": "immutable-readable-short-id",
+          "stemSource": "koreanName",
+          "immutable": true,
+          "collisionSuffixStrategy": "short-id",
+          "redirectFromSlugs": [],
+          "note": "dry-run candidate preview"
+        },
+        "slugAliases": [],
+        "displayName": "제주소라",
+        "koreanName": "제주소라",
+        "commonName": "Spiny top shell",
+        "englishName": "Spiny top shell",
+        "scientificName": "Turbo cornutus, Batillus cornutus"
+      },
+      "taxonomy": null,
+      "officialFacts": {
+        "factReviewStatus": "pending",
+        "publishStatus": "draft",
+        "version": 1,
+        "sourceRefs": [
+          {
+            "sourceProvider": "NIFS",
+            "sourceId": "fish_1575880014320",
+            "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575880014320"
+          }
+        ],
+        "lastReviewedAt": null,
+        "reviewNote": null
+      },
+      "quickFacts": {
+        "summary": null,
+        "season": {
+          "source": "NIFS",
+          "rawKey": "periodList",
+          "periods": [
+            {
+              "month": 5,
+              "sourceValue": "5",
+              "level": "1"
+            },
+            {
+              "month": 6,
+              "sourceValue": "6",
+              "level": "2"
+            },
+            {
+              "month": 7,
+              "sourceValue": "7",
+              "level": "2"
+            },
+            {
+              "month": 8,
+              "sourceValue": "8",
+              "level": "2"
+            },
+            {
+              "month": 9,
+              "sourceValue": "9",
+              "level": "2"
+            },
+            {
+              "month": 10,
+              "sourceValue": "10",
+              "level": "1"
+            }
+          ],
+          "sourceStatus": "present"
+        },
+        "seasonSourceStatus": "present",
+        "seasonDisplayText": null,
+        "seasonFallbackText": null,
+        "habitat": "한국, 일본(홋카이도 남부, 혼슈우, 시코쿠, 큐우슈우, 카메키쇼, 이주오오시마, 쿠모미, 칸토, 세토 내해, 토오시마, 쵸시), 중국, 대만, 홍콩",
+        "size": "금지 체장 3.4cm / 권장 크기 7cm",
+        "fishingMethods": [
+          "마을어업"
+        ]
+      },
+      "morphology": "패각은 방추형, 나탑은 높은 원추형, 나층은 7층, 각 층은 둥글게 부풀고 봉합은 매우 깊고 명확하다. 체층에는 5줄 내외의 굵고 낮은 나륵이 있는데 이 중 견각과 주연을 이루는 나륵에는 대단히 크고 긴 가시모양의 관상돌기가 있다. 각저는 약간 팽윤되어 있고 2~3줄의 나륵이 있으나 융기선이 낮아서 명확치 않다. 패각 전면에는 낮고 세밀한 판상의 성장맥이 있어 표면은 거칠고 광택이 없다. 패각 표면은 갈색 또는 녹갈색을 띈다. 각구는 둥글고 외순은 얇으며 내면은 백색으로 진주광택이 난다. 뚜껑은 석회질로 둥글고 소선형으로 표면에는 돌기가 밀생하는데 어떤 돌기는 짧고 얕으나 중낭에 있는 돌기는 길고 분지되어 있다. 우리나라에 서식하는 소라는 관상돌기의 줄 수가 2줄이다.",
+      "morphologySummary": {
+        "source": "NIFS",
+        "rawKey": "infoShape",
+        "sourceText": "패각은 방추형, 나탑은 높은 원추형, 나층은 7층, 각 층은 둥글게 부풀고 봉합은 매우 깊고 명확하다. 체층에는 5줄 내외의 굵고 낮은 나륵이 있는데 이 중 견각과 주연을 이루는 나륵에는 대단히 크고 긴 가시모양의 관상돌기가 있다. 각저는 약간 팽윤되어 있고 2~3줄의 나륵이 있으나 융기선이 낮아서 명확치 않다. 패각 전면에는 낮고 세밀한 판상의 성장맥이 있어 표면은 거칠고 광택이 없다. 패각 표면은 갈색 또는 녹갈색을 띈다. 각구는 둥글고 외순은 얇으며 내면은 백색으로 진주광택이 난다. 뚜껑은 석회질로 둥글고 소선형으로 표면에는 돌기가 밀생하는데 어떤 돌기는 짧고 얕으나 중낭에 있는 돌기는 길고 분지되어 있다. 우리나라에 서식하는 소라는 관상돌기의 줄 수가 2줄이다.",
+        "sourceStatus": "present"
+      },
+      "morphologySourceStatus": "present",
+      "morphologySourceText": "패각은 방추형, 나탑은 높은 원추형, 나층은 7층, 각 층은 둥글게 부풀고 봉합은 매우 깊고 명확하다. 체층에는 5줄 내외의 굵고 낮은 나륵이 있는데 이 중 견각과 주연을 이루는 나륵에는 대단히 크고 긴 가시모양의 관상돌기가 있다. 각저는 약간 팽윤되어 있고 2~3줄의 나륵이 있으나 융기선이 낮아서 명확치 않다. 패각 전면에는 낮고 세밀한 판상의 성장맥이 있어 표면은 거칠고 광택이 없다. 패각 표면은 갈색 또는 녹갈색을 띈다. 각구는 둥글고 외순은 얇으며 내면은 백색으로 진주광택이 난다. 뚜껑은 석회질로 둥글고 소선형으로 표면에는 돌기가 밀생하는데 어떤 돌기는 짧고 얕으나 중낭에 있는 돌기는 길고 분지되어 있다. 우리나라에 서식하는 소라는 관상돌기의 줄 수가 2줄이다.",
+      "distinguishingFeatures": null,
+      "featureSummary": {
+        "source": "NIFS",
+        "rawKey": "infoFeature",
+        "sourceText": null,
+        "sourceStatus": "source_missing"
+      },
+      "featureSourceStatus": "source_missing",
+      "featureSourceText": null,
+      "habitat": "한국, 일본(홋카이도 남부, 혼슈우, 시코쿠, 큐우슈우, 카메키쇼, 이주오오시마, 쿠모미, 칸토, 세토 내해, 토오시마, 쵸시), 중국, 대만, 홍콩",
+      "distribution": "한국, 일본(홋카이도 남부, 혼슈우, 시코쿠, 큐우슈우, 카메키쇼, 이주오오시마, 쿠모미, 칸토, 세토 내해, 토오시마, 쵸시), 중국, 대만, 홍콩",
+      "ecology": "산란기 6~9월, 산란수온 23~24℃, 난경 0.22~0.23mm, 생물학적 최소형 각고 4cm",
+      "spawning": {
+        "source": "NIFS",
+        "text": "산란기 6~9월",
+        "derivedFrom": "infoGrowth"
+      },
+      "feeding": null,
+      "size": "금지 체장 3.4cm / 권장 크기 7cm",
+      "season": {
+        "source": "NIFS",
+        "rawKey": "periodList",
+        "periods": [
+          {
+            "month": 5,
+            "sourceValue": "5",
+            "level": "1"
+          },
+          {
+            "month": 6,
+            "sourceValue": "6",
+            "level": "2"
+          },
+          {
+            "month": 7,
+            "sourceValue": "7",
+            "level": "2"
+          },
+          {
+            "month": 8,
+            "sourceValue": "8",
+            "level": "2"
+          },
+          {
+            "month": 9,
+            "sourceValue": "9",
+            "level": "2"
+          },
+          {
+            "month": 10,
+            "sourceValue": "10",
+            "level": "1"
+          }
+        ],
+        "sourceStatus": "present"
+      },
+      "fishingGuide": {
+        "methods": [
+          "마을어업"
+        ],
+        "tips": [],
+        "cautions": []
+      },
+      "foodNutrition": "107\n107 Kcal/100g\r\n○ 단백질: 20.7%\r\n     -  필수아미노산:  7,900mg\r\n○ 지방: 0.2%\r\n     -  포화지방산: 35.5%\r\n     -  불포화지방산: 64.5%",
+      "aliases": [
+        "구쟁기",
+        "꾸죽",
+        "참소라",
+        "살고둥",
+        "뿔소라"
+      ],
+      "regulations": [],
+      "media": [
+        {
+          "id": null,
+          "fishSpeciesId": null,
+          "mediaType": "image",
+          "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575880014320_157674058088204.jpg",
+          "storagePath": null,
+          "referencedSourceMediaId": "data/nifs/raw/fish/fish_1575880014320/images/original/image-001.jpg",
+          "copyrightStatus": "unknown",
+          "usageStatus": "pending",
+          "reviewStatus": "pending"
+        },
+        {
+          "id": null,
+          "fishSpeciesId": null,
+          "mediaType": "image",
+          "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575880014320_157674058170703.jpg",
+          "storagePath": null,
+          "referencedSourceMediaId": "data/nifs/raw/fish/fish_1575880014320/images/original/image-002.jpg",
+          "copyrightStatus": "unknown",
+          "usageStatus": "pending",
+          "reviewStatus": "pending"
+        }
+      ],
+      "relatedSpecies": [],
+      "generatedContents": [],
+      "officialSources": [
+        {
+          "sourceProvider": "NIFS",
+          "sourceId": "fish_1575880014320",
+          "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575880014320",
+          "title": "제주소라",
+          "checkedAt": "2026-07-30T18:52:08.875399+00:00",
+          "excerpt": "한국, 일본(홋카이도 남부, 혼슈우, 시코쿠, 큐우슈우, 카메키쇼, 이주오오시마, 쿠모미, 칸토, 세토 내해, 토오시마, 쵸시), 중국, 대만, 홍콩"
+        }
+      ],
+      "missingFields": [
+        "taxonomy",
+        "quickFacts.summary",
+        "feeding",
+        "regulations",
+        "generatedContents"
+      ],
+      "readiness": "ready",
+      "readinessReason": "taxonomy and dependent detail layers are not yet sourced for this candidate",
+      "evidence": {
+        "sourceProvider": "NIFS",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575880014320",
+        "sourceCheckedAt": "2026-07-30T18:52:08.875399+00:00",
+        "imageCount": 2,
+        "rawMediaCount": 6,
+        "hasDistribution": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false,
+        "hasCatch": true,
+        "hasCookHow": true,
+        "hasDialect": true,
+        "hasSeason": true,
+        "seasonSourceStatus": "present",
+        "seasonDisplayText": null,
+        "seasonFallbackText": null,
+        "hasSpawning": true,
+        "hasTaxonomy": false
+      }
+    },
+    {
+      "speciesCandidateId": "fish-species-candidate-fish_1575880791880",
+      "sourceId": "fish_1575880791880",
+      "identity": {
+        "id": "fish-species-candidate-fish_1575880791880",
+        "slug": "참조기",
+        "slugPolicy": {
+          "strategy": "immutable-readable-short-id",
+          "stemSource": "koreanName",
+          "immutable": true,
+          "collisionSuffixStrategy": "short-id",
+          "redirectFromSlugs": [],
+          "note": "dry-run candidate preview"
+        },
+        "slugAliases": [],
+        "displayName": "참조기",
+        "koreanName": "참조기",
+        "commonName": "Yellow croaker",
+        "englishName": "Yellow croaker",
+        "scientificName": "Larimichthys polyactis"
+      },
+      "taxonomy": null,
+      "officialFacts": {
+        "factReviewStatus": "pending",
+        "publishStatus": "draft",
+        "version": 1,
+        "sourceRefs": [
+          {
+            "sourceProvider": "NIFS",
+            "sourceId": "fish_1575880791880",
+            "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575880791880"
+          }
+        ],
+        "lastReviewedAt": null,
+        "reviewNote": null
+      },
+      "quickFacts": {
+        "summary": null,
+        "season": {
+          "source": "NIFS",
+          "rawKey": "periodList",
+          "periods": [
+            {
+              "month": 4,
+              "sourceValue": "4",
+              "level": "1"
+            },
+            {
+              "month": 5,
+              "sourceValue": "5",
+              "level": "1"
+            },
+            {
+              "month": 6,
+              "sourceValue": "6",
+              "level": "1"
+            },
+            {
+              "month": 7,
+              "sourceValue": "7",
+              "level": "2"
+            },
+            {
+              "month": 8,
+              "sourceValue": "8",
+              "level": "1"
+            }
+          ],
+          "sourceStatus": "present"
+        },
+        "seasonSourceStatus": "present",
+        "seasonDisplayText": null,
+        "seasonFallbackText": null,
+        "habitat": "우리나라 서·남해, 발해만, 동중국해 등 \r\n수심40~160m인 바닥이 모래나 펄인 곳",
+        "size": "금지 체장 15cm / 권장 크기 17.1cm",
+        "fishingMethods": [
+          "근해자망",
+          "근해안강망",
+          "쌍끌이대형저인망",
+          "외끌이대형저인망"
+        ]
+      },
+      "morphology": "몸의 형태는 가슴지느러미에서 뒷지느러미에 이르는 몸통 높이가 큰 차이없이 밋밋한 길다란 사각형에 가깝다. 등·뒷지느러미 연조부의 지느러미막에는 기저에서 약 2/3 이상이 작은 둥근비늘로 덮여 있으며, 꼬리지느러미에도 작은 비늘이 덮여있다. 뒷지느러미 2번째 가시의 길이는 눈지름보다도 짧다. 비늘은 다소 큰 편이며, 등지느러미 기부에서 옆줄 사이에는 5∼6줄의 비늘이 있다. 입은 크고 윗턱 뒤끝부분은 눈 뒷부분의 아래까지 도달하며, 아래턱은 윗턱보다도 약간 길다. 옆줄 구멍은 부세보다 크며 꼬리자루 높이도 두툼한 편이다.",
+      "morphologySummary": {
+        "source": "NIFS",
+        "rawKey": "infoShape",
+        "sourceText": "몸의 형태는 가슴지느러미에서 뒷지느러미에 이르는 몸통 높이가 큰 차이없이 밋밋한 길다란 사각형에 가깝다. 등·뒷지느러미 연조부의 지느러미막에는 기저에서 약 2/3 이상이 작은 둥근비늘로 덮여 있으며, 꼬리지느러미에도 작은 비늘이 덮여있다. 뒷지느러미 2번째 가시의 길이는 눈지름보다도 짧다. 비늘은 다소 큰 편이며, 등지느러미 기부에서 옆줄 사이에는 5∼6줄의 비늘이 있다. 입은 크고 윗턱 뒤끝부분은 눈 뒷부분의 아래까지 도달하며, 아래턱은 윗턱보다도 약간 길다. 옆줄 구멍은 부세보다 크며 꼬리자루 높이도 두툼한 편이다.",
+        "sourceStatus": "present"
+      },
+      "morphologySourceStatus": "present",
+      "morphologySourceText": "몸의 형태는 가슴지느러미에서 뒷지느러미에 이르는 몸통 높이가 큰 차이없이 밋밋한 길다란 사각형에 가깝다. 등·뒷지느러미 연조부의 지느러미막에는 기저에서 약 2/3 이상이 작은 둥근비늘로 덮여 있으며, 꼬리지느러미에도 작은 비늘이 덮여있다. 뒷지느러미 2번째 가시의 길이는 눈지름보다도 짧다. 비늘은 다소 큰 편이며, 등지느러미 기부에서 옆줄 사이에는 5∼6줄의 비늘이 있다. 입은 크고 윗턱 뒤끝부분은 눈 뒷부분의 아래까지 도달하며, 아래턱은 윗턱보다도 약간 길다. 옆줄 구멍은 부세보다 크며 꼬리자루 높이도 두툼한 편이다.",
+      "distinguishingFeatures": null,
+      "featureSummary": {
+        "source": "NIFS",
+        "rawKey": "infoFeature",
+        "sourceText": null,
+        "sourceStatus": "source_missing"
+      },
+      "featureSourceStatus": "source_missing",
+      "featureSourceText": null,
+      "habitat": "우리나라 서·남해, 발해만, 동중국해 등 \r\n수심40~160m인 바닥이 모래나 펄인 곳",
+      "distribution": "우리나라 서·남해, 발해만, 동중국해 등 \r\n수심40~160m인 바닥이 모래나 펄인 곳",
+      "ecology": "1년이면 전장 15cm, 2년이면 24cm,3년이면 29cm,4년이면 33cm, 5년이면 35cm까지 성장한다. 체장 40cm. 산란기는 3~6월로서 남쪽일수록 빠르고 북쪽일수록 늦으며, 산란장은 우리나라 서해안 일대와 중국 연안해역이다.전장 30cm 정도면 3만~7만 개의 알을 산란한다.",
+      "spawning": {
+        "source": "NIFS",
+        "text": "산란기는 3~6월로서 남쪽일수록 빠르고 북쪽일수록 늦으며",
+        "derivedFrom": "infoGrowth"
+      },
+      "feeding": null,
+      "size": "금지 체장 15cm / 권장 크기 17.1cm",
+      "season": {
+        "source": "NIFS",
+        "rawKey": "periodList",
+        "periods": [
+          {
+            "month": 4,
+            "sourceValue": "4",
+            "level": "1"
+          },
+          {
+            "month": 5,
+            "sourceValue": "5",
+            "level": "1"
+          },
+          {
+            "month": 6,
+            "sourceValue": "6",
+            "level": "1"
+          },
+          {
+            "month": 7,
+            "sourceValue": "7",
+            "level": "2"
+          },
+          {
+            "month": 8,
+            "sourceValue": "8",
+            "level": "1"
+          }
+        ],
+        "sourceStatus": "present"
+      },
+      "fishingGuide": {
+        "methods": [
+          "근해자망",
+          "근해안강망",
+          "쌍끌이대형저인망",
+          "외끌이대형저인망"
+        ],
+        "tips": [],
+        "cautions": []
+      },
+      "foodNutrition": "82\n82 Kcal/100g\n○ 단백질: 17.1%\n     -  필수아미노산: 8,264mg\n○ 지방: 0.2%",
+      "aliases": [
+        "황조기",
+        "노랑조기",
+        "조구",
+        "조기",
+        "참조구"
+      ],
+      "regulations": [],
+      "media": [
+        {
+          "id": null,
+          "fishSpeciesId": null,
+          "mediaType": "image",
+          "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575880791880_157674638524003.jpg",
+          "storagePath": null,
+          "referencedSourceMediaId": "data/nifs/raw/fish/fish_1575880791880/images/original/image-001.jpg",
+          "copyrightStatus": "unknown",
+          "usageStatus": "pending",
+          "reviewStatus": "pending"
+        },
+        {
+          "id": null,
+          "fishSpeciesId": null,
+          "mediaType": "image",
+          "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575880791880_157674645629004.jpg",
+          "storagePath": null,
+          "referencedSourceMediaId": "data/nifs/raw/fish/fish_1575880791880/images/original/image-002.jpg",
+          "copyrightStatus": "unknown",
+          "usageStatus": "pending",
+          "reviewStatus": "pending"
+        }
+      ],
+      "relatedSpecies": [],
+      "generatedContents": [],
+      "officialSources": [
+        {
+          "sourceProvider": "NIFS",
+          "sourceId": "fish_1575880791880",
+          "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575880791880",
+          "title": "참조기",
+          "checkedAt": "2026-07-30T18:52:13.003047+00:00",
+          "excerpt": "우리나라 서·남해, 발해만, 동중국해 등 \r\n수심40~160m인 바닥이 모래나 펄인 곳"
+        }
+      ],
+      "missingFields": [
+        "taxonomy",
+        "quickFacts.summary",
+        "feeding",
+        "regulations",
+        "generatedContents"
+      ],
+      "readiness": "ready",
+      "readinessReason": "taxonomy and dependent detail layers are not yet sourced for this candidate",
+      "evidence": {
+        "sourceProvider": "NIFS",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575880791880",
+        "sourceCheckedAt": "2026-07-30T18:52:13.003047+00:00",
+        "imageCount": 2,
+        "rawMediaCount": 6,
+        "hasDistribution": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false,
+        "hasCatch": true,
+        "hasCookHow": true,
+        "hasDialect": true,
+        "hasSeason": true,
+        "seasonSourceStatus": "present",
+        "seasonDisplayText": null,
+        "seasonFallbackText": null,
+        "hasSpawning": true,
+        "hasTaxonomy": false
+      }
+    },
+    {
+      "speciesCandidateId": "fish-species-candidate-fish_1575881532404",
+      "sourceId": "fish_1575881532404",
+      "identity": {
+        "id": "fish-species-candidate-fish_1575881532404",
+        "slug": "참홍어",
+        "slugPolicy": {
+          "strategy": "immutable-readable-short-id",
+          "stemSource": "koreanName",
+          "immutable": true,
+          "collisionSuffixStrategy": "short-id",
+          "redirectFromSlugs": [],
+          "note": "dry-run candidate preview"
+        },
+        "slugAliases": [],
+        "displayName": "참홍어",
+        "koreanName": "참홍어",
+        "commonName": "Mottled skate",
+        "englishName": "Mottled skate",
+        "scientificName": "Raja pulchra"
+      },
+      "taxonomy": null,
+      "officialFacts": {
+        "factReviewStatus": "pending",
+        "publishStatus": "draft",
+        "version": 1,
+        "sourceRefs": [
+          {
+            "sourceProvider": "NIFS",
+            "sourceId": "fish_1575881532404",
+            "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575881532404"
+          }
+        ],
+        "lastReviewedAt": null,
+        "reviewNote": null
+      },
+      "quickFacts": {
+        "summary": null,
+        "season": {
+          "source": "NIFS",
+          "rawKey": "periodList",
+          "periods": [
+            {
+              "month": 5,
+              "sourceValue": "5",
+              "level": "1"
+            },
+            {
+              "month": 6,
+              "sourceValue": "6",
+              "level": "2"
+            },
+            {
+              "month": 7,
+              "sourceValue": "7",
+              "level": "2"
+            },
+            {
+              "month": 8,
+              "sourceValue": "8",
+              "level": "1"
+            }
+          ],
+          "sourceStatus": "present"
+        },
+        "seasonSourceStatus": "present",
+        "seasonDisplayText": null,
+        "seasonFallbackText": null,
+        "habitat": "북서태평양(한국, 일본, 오호츠크해 및 동중국해)",
+        "size": "금지 체장 79cm / 권장 크기 89.3cm",
+        "fishingMethods": [
+          "근해연승",
+          "자망",
+          "저인망"
+        ]
+      },
+      "morphology": "등쪽 가장자리에 원형모양의 2개의 파져있는 부위가 있으며, 등쪽은 짙은 갈색이며, 배쪽은 짙은 회색을 띈다.",
+      "morphologySummary": {
+        "source": "NIFS",
+        "rawKey": "infoShape",
+        "sourceText": "등쪽 가장자리에 원형모양의 2개의 파져있는 부위가 있으며, 등쪽은 짙은 갈색이며, 배쪽은 짙은 회색을 띈다.",
+        "sourceStatus": "present"
+      },
+      "morphologySourceStatus": "present",
+      "morphologySourceText": "등쪽 가장자리에 원형모양의 2개의 파져있는 부위가 있으며, 등쪽은 짙은 갈색이며, 배쪽은 짙은 회색을 띈다.",
+      "distinguishingFeatures": null,
+      "featureSummary": {
+        "source": "NIFS",
+        "rawKey": "infoFeature",
+        "sourceText": null,
+        "sourceStatus": "source_missing"
+      },
+      "featureSourceStatus": "source_missing",
+      "featureSourceText": null,
+      "habitat": "북서태평양(한국, 일본, 오호츠크해 및 동중국해)",
+      "distribution": "북서태평양(한국, 일본, 오호츠크해 및 동중국해)",
+      "ecology": "주 산란기는 연2회로, 5~6월과 11~12월",
+      "spawning": {
+        "source": "NIFS",
+        "text": "산란기는 연2회로",
+        "derivedFrom": "infoGrowth"
+      },
+      "feeding": null,
+      "size": "금지 체장 79cm / 권장 크기 89.3cm",
+      "season": {
+        "source": "NIFS",
+        "rawKey": "periodList",
+        "periods": [
+          {
+            "month": 5,
+            "sourceValue": "5",
+            "level": "1"
+          },
+          {
+            "month": 6,
+            "sourceValue": "6",
+            "level": "2"
+          },
+          {
+            "month": 7,
+            "sourceValue": "7",
+            "level": "2"
+          },
+          {
+            "month": 8,
+            "sourceValue": "8",
+            "level": "1"
+          }
+        ],
+        "sourceStatus": "present"
+      },
+      "fishingGuide": {
+        "methods": [
+          "근해연승",
+          "자망",
+          "저인망"
+        ],
+        "tips": [],
+        "cautions": []
+      },
+      "foodNutrition": "0\n※ 100g 기준\n○ 단백질: 18.82~21.34g\n ○ 칼슘 : 252.7~288.3mg\n○ 인 : 248.2-269.3mg\n○ 칼륨 :  345.9-389.5 mg",
+      "aliases": [
+        "간재미",
+        "가부리",
+        "홍해",
+        "홍에"
+      ],
+      "regulations": [],
+      "media": [
+        {
+          "id": null,
+          "fishSpeciesId": null,
+          "mediaType": "image",
+          "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575881532404_157674663905604.jpg",
+          "storagePath": null,
+          "referencedSourceMediaId": "data/nifs/raw/fish/fish_1575881532404/images/original/image-001.jpg",
+          "copyrightStatus": "unknown",
+          "usageStatus": "pending",
+          "reviewStatus": "pending"
+        },
+        {
+          "id": null,
+          "fishSpeciesId": null,
+          "mediaType": "image",
+          "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575881532404_157674663915403.jpg",
+          "storagePath": null,
+          "referencedSourceMediaId": "data/nifs/raw/fish/fish_1575881532404/images/original/image-002.jpg",
+          "copyrightStatus": "unknown",
+          "usageStatus": "pending",
+          "reviewStatus": "pending"
+        }
+      ],
+      "relatedSpecies": [],
+      "generatedContents": [],
+      "officialSources": [
+        {
+          "sourceProvider": "NIFS",
+          "sourceId": "fish_1575881532404",
+          "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575881532404",
+          "title": "참홍어",
+          "checkedAt": "2026-07-30T18:52:15.057470+00:00",
+          "excerpt": "북서태평양(한국, 일본, 오호츠크해 및 동중국해)"
+        }
+      ],
+      "missingFields": [
+        "taxonomy",
+        "quickFacts.summary",
+        "feeding",
+        "regulations",
+        "generatedContents"
+      ],
+      "readiness": "ready",
+      "readinessReason": "taxonomy and dependent detail layers are not yet sourced for this candidate",
+      "evidence": {
+        "sourceProvider": "NIFS",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575881532404",
+        "sourceCheckedAt": "2026-07-30T18:52:15.057470+00:00",
+        "imageCount": 2,
+        "rawMediaCount": 6,
+        "hasDistribution": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false,
+        "hasCatch": true,
+        "hasCookHow": true,
+        "hasDialect": true,
+        "hasSeason": true,
+        "seasonSourceStatus": "present",
+        "seasonDisplayText": null,
+        "seasonFallbackText": null,
+        "hasSpawning": true,
+        "hasTaxonomy": false
+      }
+    },
+    {
+      "speciesCandidateId": "fish-species-candidate-fish_1576639605222",
+      "sourceId": "fish_1576639605222",
+      "identity": {
+        "id": "fish-species-candidate-fish_1576639605222",
+        "slug": "대게",
+        "slugPolicy": {
+          "strategy": "immutable-readable-short-id",
+          "stemSource": "koreanName",
+          "immutable": true,
+          "collisionSuffixStrategy": "short-id",
+          "redirectFromSlugs": [],
+          "note": "dry-run candidate preview"
+        },
+        "slugAliases": [],
+        "displayName": "대게",
+        "koreanName": "대게",
+        "commonName": "Tanner crab",
+        "englishName": "Tanner crab",
+        "scientificName": "Chionoecetes opilio"
+      },
+      "taxonomy": null,
+      "officialFacts": {
+        "factReviewStatus": "pending",
+        "publishStatus": "draft",
+        "version": 1,
+        "sourceRefs": [
+          {
+            "sourceProvider": "NIFS",
+            "sourceId": "fish_1576639605222",
+            "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605222"
+          }
+        ],
+        "lastReviewedAt": null,
+        "reviewNote": null
+      },
+      "quickFacts": {
+        "summary": null,
+        "season": {
+          "source": "NIFS",
+          "rawKey": "periodList",
+          "periods": [
+            {
+              "month": 5,
+              "sourceValue": "5",
+              "level": "1"
+            },
+            {
+              "month": 6,
+              "sourceValue": "6",
+              "level": "2"
+            },
+            {
+              "month": 7,
+              "sourceValue": "7",
+              "level": "2"
+            },
+            {
+              "month": 8,
+              "sourceValue": "8",
+              "level": "2"
+            },
+            {
+              "month": 9,
+              "sourceValue": "9",
+              "level": "2"
+            },
+            {
+              "month": 10,
+              "sourceValue": "10",
+              "level": "2"
+            },
+            {
+              "month": 11,
+              "sourceValue": "11",
+              "level": "2"
+            },
+            {
+              "month": 12,
+              "sourceValue": "12",
+              "level": "1"
+            }
+          ],
+          "sourceStatus": "present"
+        },
+        "seasonSourceStatus": "present",
+        "seasonDisplayText": null,
+        "seasonFallbackText": null,
+        "habitat": "우리나라 동해연안, 일본서해안 베링해 및 알라스카 연안",
+        "size": "금지 체장 9cm",
+        "fishingMethods": [
+          "연안자망",
+          "연안통발",
+          "근해자망",
+          "근해통발"
+        ]
+      },
+      "morphology": "갑각의 등면은 대체로 편평하며, 옆 가장자리 뒷부분에 작은 과립들로 뭉처진 사마귀모양의 돌기가 있다(한국해양무척추동물도감)",
+      "morphologySummary": {
+        "source": "NIFS",
+        "rawKey": "infoShape",
+        "sourceText": "갑각의 등면은 대체로 편평하며, 옆 가장자리 뒷부분에 작은 과립들로 뭉처진 사마귀모양의 돌기가 있다(한국해양무척추동물도감)",
+        "sourceStatus": "present"
+      },
+      "morphologySourceStatus": "present",
+      "morphologySourceText": "갑각의 등면은 대체로 편평하며, 옆 가장자리 뒷부분에 작은 과립들로 뭉처진 사마귀모양의 돌기가 있다(한국해양무척추동물도감)",
+      "distinguishingFeatures": null,
+      "featureSummary": {
+        "source": "NIFS",
+        "rawKey": "infoFeature",
+        "sourceText": null,
+        "sourceStatus": "source_missing"
+      },
+      "featureSourceStatus": "source_missing",
+      "featureSourceText": null,
+      "habitat": "우리나라 동해연안, 일본서해안 베링해 및 알라스카 연안",
+      "distribution": "우리나라 동해연안, 일본서해안 베링해 및 알라스카 연안",
+      "ecology": "산란기는 1~3월이며 한국 동해연안 200~400m 부근 해역에서 주로 산란한다. 성숙체장은 갑폭 63.9mm이다.",
+      "spawning": {
+        "source": "NIFS",
+        "text": "산란기는 1~3월이며 한국 동해연안 200~400m 부근 해역에서 주로 산란한다",
+        "derivedFrom": "infoGrowth"
+      },
+      "feeding": null,
+      "size": "금지 체장 9cm",
+      "season": {
+        "source": "NIFS",
+        "rawKey": "periodList",
+        "periods": [
+          {
+            "month": 5,
+            "sourceValue": "5",
+            "level": "1"
+          },
+          {
+            "month": 6,
+            "sourceValue": "6",
+            "level": "2"
+          },
+          {
+            "month": 7,
+            "sourceValue": "7",
+            "level": "2"
+          },
+          {
+            "month": 8,
+            "sourceValue": "8",
+            "level": "2"
+          },
+          {
+            "month": 9,
+            "sourceValue": "9",
+            "level": "2"
+          },
+          {
+            "month": 10,
+            "sourceValue": "10",
+            "level": "2"
+          },
+          {
+            "month": 11,
+            "sourceValue": "11",
+            "level": "2"
+          },
+          {
+            "month": 12,
+            "sourceValue": "12",
+            "level": "1"
+          }
+        ],
+        "sourceStatus": "present"
+      },
+      "fishingGuide": {
+        "methods": [
+          "연안자망",
+          "연안통발",
+          "근해자망",
+          "근해통발"
+        ],
+        "tips": [],
+        "cautions": []
+      },
+      "foodNutrition": "85\n85 Kcal/100g\r\n○ 단백질: 17.4% \r\n○ 지방: 1.0%\r\n     -  포화지방산: 20.2%\r\n     -  불포화지방산: 79.8%\n어린 대게 잡으면 다시 바다로 보내주세요\n- 어린대게 방류 조사 결과 생존율 97% 이상으로 나타나 -",
+      "aliases": [
+        "기",
+        "왕게"
+      ],
+      "regulations": [],
+      "media": [
+        {
+          "id": null,
+          "fishSpeciesId": null,
+          "mediaType": "image",
+          "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1576639605222_157674675113404.jpg",
+          "storagePath": null,
+          "referencedSourceMediaId": "data/nifs/raw/fish/fish_1576639605222/images/original/image-001.jpg",
+          "copyrightStatus": "unknown",
+          "usageStatus": "pending",
+          "reviewStatus": "pending"
+        },
+        {
+          "id": null,
+          "fishSpeciesId": null,
+          "mediaType": "image",
+          "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1576639605222_157674675122403.jpg",
+          "storagePath": null,
+          "referencedSourceMediaId": "data/nifs/raw/fish/fish_1576639605222/images/original/image-002.jpg",
+          "copyrightStatus": "unknown",
+          "usageStatus": "pending",
+          "reviewStatus": "pending"
+        }
+      ],
+      "relatedSpecies": [],
+      "generatedContents": [],
+      "officialSources": [
+        {
+          "sourceProvider": "NIFS",
+          "sourceId": "fish_1576639605222",
+          "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605222",
+          "title": "대게",
+          "checkedAt": "2026-07-30T18:51:42.150979+00:00",
+          "excerpt": "우리나라 동해연안, 일본서해안 베링해 및 알라스카 연안"
+        }
+      ],
+      "missingFields": [
+        "taxonomy",
+        "quickFacts.summary",
+        "feeding",
+        "regulations",
+        "generatedContents"
+      ],
+      "readiness": "ready",
+      "readinessReason": "taxonomy and dependent detail layers are not yet sourced for this candidate",
+      "evidence": {
+        "sourceProvider": "NIFS",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605222",
+        "sourceCheckedAt": "2026-07-30T18:51:42.150979+00:00",
+        "imageCount": 2,
+        "rawMediaCount": 6,
+        "hasDistribution": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false,
+        "hasCatch": true,
+        "hasCookHow": true,
+        "hasDialect": true,
+        "hasSeason": true,
+        "seasonSourceStatus": "present",
+        "seasonDisplayText": null,
+        "seasonFallbackText": null,
+        "hasSpawning": true,
+        "hasTaxonomy": false
+      }
+    },
+    {
+      "speciesCandidateId": "fish-species-candidate-fish_1576639605223",
+      "sourceId": "fish_1576639605223",
+      "identity": {
+        "id": "fish-species-candidate-fish_1576639605223",
+        "slug": "기름가자미",
+        "slugPolicy": {
+          "strategy": "immutable-readable-short-id",
+          "stemSource": "koreanName",
+          "immutable": true,
+          "collisionSuffixStrategy": "short-id",
+          "redirectFromSlugs": [],
+          "note": "dry-run candidate preview"
+        },
+        "slugAliases": [],
+        "displayName": "기름가자미",
+        "koreanName": "기름가자미",
+        "commonName": "Blackfin flounder",
+        "englishName": "Blackfin flounder",
+        "scientificName": "Glyptocephalus stelleri"
+      },
+      "taxonomy": null,
+      "officialFacts": {
+        "factReviewStatus": "pending",
+        "publishStatus": "draft",
+        "version": 1,
+        "sourceRefs": [
+          {
+            "sourceProvider": "NIFS",
+            "sourceId": "fish_1576639605223",
+            "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605223"
+          }
+        ],
+        "lastReviewedAt": null,
+        "reviewNote": null
+      },
+      "quickFacts": {
+        "summary": null,
+        "season": null,
+        "seasonSourceStatus": "source_missing",
+        "seasonDisplayText": "공식 제철 정보 없음",
+        "seasonFallbackText": "공식 제철 정보 없음",
+        "habitat": "우리나라 동해, 남해 일본, 동중국해 \r\n수심 200~400m 펄이나 모래 바닥에 주로 서식한다.",
+        "size": "금지 체장 20cm / 권장 크기 27cm",
+        "fishingMethods": [
+          "동해구외끌이중형저인망",
+          "연안자망"
+        ]
+      },
+      "morphology": "몸은 긴 타원형이다. 주둥이가 짧고, 입이 작으며 입의 앞부분만 열린다. 두 눈 사이의 간격은 좁다. 무안측에는 다수의 점액공이 있어서 몸 표면이 미끄럽다. 꼬리지느러미 뒤 가장자리는 둥글다. 측선은 몸의 중앙 부분에 있고, 가슴지느러미 부근에서 매우 낮게 솟아오른다. 유안측은 암갈색을 띠고 윤곽이 뚜렷하지 않은 어두운 무늬가 있다. 무안측은 회백색, 등지느러미의 가장자리는 검은색을 띈다.",
+      "morphologySummary": {
+        "source": "NIFS",
+        "rawKey": "infoShape",
+        "sourceText": "몸은 긴 타원형이다. 주둥이가 짧고, 입이 작으며 입의 앞부분만 열린다. 두 눈 사이의 간격은 좁다. 무안측에는 다수의 점액공이 있어서 몸 표면이 미끄럽다. 꼬리지느러미 뒤 가장자리는 둥글다. 측선은 몸의 중앙 부분에 있고, 가슴지느러미 부근에서 매우 낮게 솟아오른다. 유안측은 암갈색을 띠고 윤곽이 뚜렷하지 않은 어두운 무늬가 있다. 무안측은 회백색, 등지느러미의 가장자리는 검은색을 띈다.",
+        "sourceStatus": "present"
+      },
+      "morphologySourceStatus": "present",
+      "morphologySourceText": "몸은 긴 타원형이다. 주둥이가 짧고, 입이 작으며 입의 앞부분만 열린다. 두 눈 사이의 간격은 좁다. 무안측에는 다수의 점액공이 있어서 몸 표면이 미끄럽다. 꼬리지느러미 뒤 가장자리는 둥글다. 측선은 몸의 중앙 부분에 있고, 가슴지느러미 부근에서 매우 낮게 솟아오른다. 유안측은 암갈색을 띠고 윤곽이 뚜렷하지 않은 어두운 무늬가 있다. 무안측은 회백색, 등지느러미의 가장자리는 검은색을 띈다.",
+      "distinguishingFeatures": null,
+      "featureSummary": {
+        "source": "NIFS",
+        "rawKey": "infoFeature",
+        "sourceText": null,
+        "sourceStatus": "source_missing"
+      },
+      "featureSourceStatus": "source_missing",
+      "featureSourceText": null,
+      "habitat": "우리나라 동해, 남해 일본, 동중국해 \r\n수심 200~400m 펄이나 모래 바닥에 주로 서식한다.",
+      "distribution": "우리나라 동해, 남해 일본, 동중국해 \r\n수심 200~400m 펄이나 모래 바닥에 주로 서식한다.",
+      "ecology": "산란기는 1~6월이며 주산란기는 3~5월",
+      "spawning": {
+        "source": "NIFS",
+        "text": "산란기는 1~6월이며 주산란기는 3~5월",
+        "derivedFrom": "infoGrowth"
+      },
+      "feeding": null,
+      "size": "금지 체장 20cm / 권장 크기 27cm",
+      "season": null,
+      "fishingGuide": {
+        "methods": [
+          "동해구외끌이중형저인망",
+          "연안자망"
+        ],
+        "tips": [],
+        "cautions": []
+      },
+      "foodNutrition": "83\n83 Kcal/100g\r\n불포화지방산: 26.1g\r\n단백질: 18.2g\r\n지방: 0.4g\n'기름가자미'라 불러주세요(물가자미로 잘못 불리는 경우가 많은데 물가자미는 다른 종 입니다.)",
+      "aliases": [
+        "물가자미",
+        "미주구리",
+        "물가삼",
+        "수가자미",
+        "수가잠"
+      ],
+      "regulations": [],
+      "media": [
+        {
+          "id": null,
+          "fishSpeciesId": null,
+          "mediaType": "image",
+          "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/MF0004253_DG0102_watermark.jpg",
+          "storagePath": null,
+          "referencedSourceMediaId": "data/nifs/raw/fish/fish_1576639605223/images/original/MF0004253_DG0102_watermark.jpg",
+          "copyrightStatus": "unknown",
+          "usageStatus": "pending",
+          "reviewStatus": "pending"
+        }
+      ],
+      "relatedSpecies": [],
+      "generatedContents": [],
+      "officialSources": [
+        {
+          "sourceProvider": "NIFS",
+          "sourceId": "fish_1576639605223",
+          "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605223",
+          "title": "기름가자미",
+          "checkedAt": "2026-07-30T18:51:35.990622+00:00",
+          "excerpt": "우리나라 동해, 남해 일본, 동중국해 \r\n수심 200~400m 펄이나 모래 바닥에 주로 서식한다."
+        }
+      ],
+      "missingFields": [
+        "taxonomy",
+        "quickFacts.summary",
+        "feeding",
+        "regulations",
+        "generatedContents"
+      ],
+      "readiness": "ready",
+      "readinessReason": "taxonomy and dependent detail layers are not yet sourced for this candidate",
+      "evidence": {
+        "sourceProvider": "NIFS",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605223",
+        "sourceCheckedAt": "2026-07-30T18:51:35.990622+00:00",
+        "imageCount": 1,
+        "rawMediaCount": 5,
+        "hasDistribution": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false,
+        "hasCatch": true,
+        "hasCookHow": true,
+        "hasDialect": true,
+        "hasSeason": false,
+        "seasonSourceStatus": "source_missing",
+        "seasonDisplayText": "공식 제철 정보 없음",
+        "seasonFallbackText": "공식 제철 정보 없음",
+        "hasSpawning": true,
+        "hasTaxonomy": false
+      }
+    },
+    {
+      "speciesCandidateId": "fish-species-candidate-fish_1576639605227",
+      "sourceId": "fish_1576639605227",
+      "identity": {
+        "id": "fish-species-candidate-fish_1576639605227",
+        "slug": "주꾸미",
+        "slugPolicy": {
+          "strategy": "immutable-readable-short-id",
+          "stemSource": "koreanName",
+          "immutable": true,
+          "collisionSuffixStrategy": "short-id",
+          "redirectFromSlugs": [],
+          "note": "dry-run candidate preview"
+        },
+        "slugAliases": [],
+        "displayName": "주꾸미",
+        "koreanName": "주꾸미",
+        "commonName": "Webfoot octopus",
+        "englishName": "Webfoot octopus",
+        "scientificName": "Amphioctopus fangsiao"
+      },
+      "taxonomy": null,
+      "officialFacts": {
+        "factReviewStatus": "pending",
+        "publishStatus": "draft",
+        "version": 1,
+        "sourceRefs": [
+          {
+            "sourceProvider": "NIFS",
+            "sourceId": "fish_1576639605227",
+            "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605227"
+          }
+        ],
+        "lastReviewedAt": null,
+        "reviewNote": null
+      },
+      "quickFacts": {
+        "summary": null,
+        "season": {
+          "source": "NIFS",
+          "rawKey": "periodList",
+          "periods": [
+            {
+              "month": 4,
+              "sourceValue": "4",
+              "level": "1"
+            },
+            {
+              "month": 5,
+              "sourceValue": "5",
+              "level": "2"
+            },
+            {
+              "month": 6,
+              "sourceValue": "6",
+              "level": "2"
+            },
+            {
+              "month": 7,
+              "sourceValue": "7",
+              "level": "2"
+            },
+            {
+              "month": 8,
+              "sourceValue": "8",
+              "level": "2"
+            },
+            {
+              "month": 9,
+              "sourceValue": "9",
+              "level": "1"
+            }
+          ],
+          "sourceStatus": "present"
+        },
+        "seasonSourceStatus": "present",
+        "seasonDisplayText": null,
+        "seasonFallbackText": null,
+        "habitat": "중국, 한국, 일본(홋카이도 이남)",
+        "size": "금지 체장 0cm / 권장 크기 0cm",
+        "fishingMethods": [
+          "연안복합",
+          "안강망",
+          "연안자망",
+          "연안통발"
+        ]
+      },
+      "morphology": "몸통은 주머니모양으로 길며, 두부와 팔 사이에 조그마하게 조각한 듯한 원형의 무늬가 있다. 두 눈위에 각각 2개의 육질돌기가 있다. 팔은 적당히 길고 단단하며, 수컷 오른쪽 3번째 팔이 교접기화되어 있다. 교접혀는 가늘고 긴데 팔 길이의 4~6%정도이다. 아가미에는 7~8개의 아가미판이 있다.",
+      "morphologySummary": {
+        "source": "NIFS",
+        "rawKey": "infoShape",
+        "sourceText": "몸통은 주머니모양으로 길며, 두부와 팔 사이에 조그마하게 조각한 듯한 원형의 무늬가 있다. 두 눈위에 각각 2개의 육질돌기가 있다. 팔은 적당히 길고 단단하며, 수컷 오른쪽 3번째 팔이 교접기화되어 있다. 교접혀는 가늘고 긴데 팔 길이의 4~6%정도이다. 아가미에는 7~8개의 아가미판이 있다.",
+        "sourceStatus": "present"
+      },
+      "morphologySourceStatus": "present",
+      "morphologySourceText": "몸통은 주머니모양으로 길며, 두부와 팔 사이에 조그마하게 조각한 듯한 원형의 무늬가 있다. 두 눈위에 각각 2개의 육질돌기가 있다. 팔은 적당히 길고 단단하며, 수컷 오른쪽 3번째 팔이 교접기화되어 있다. 교접혀는 가늘고 긴데 팔 길이의 4~6%정도이다. 아가미에는 7~8개의 아가미판이 있다.",
+      "distinguishingFeatures": null,
+      "featureSummary": {
+        "source": "NIFS",
+        "rawKey": "infoFeature",
+        "sourceText": null,
+        "sourceStatus": "source_missing"
+      },
+      "featureSourceStatus": "source_missing",
+      "featureSourceText": null,
+      "habitat": "중국, 한국, 일본(홋카이도 이남)",
+      "distribution": "중국, 한국, 일본(홋카이도 이남)",
+      "ecology": "산란기는 3~6월. 해저의 오목한 장소에 포도모양의 난을 낳으며, 난은 장경 약 1cm에 달하는 대형이다. \r\n성장은 최대 외투장 8cm, 최대 중량 200g이다.",
+      "spawning": {
+        "source": "NIFS",
+        "text": "산란기는 3~6월",
+        "derivedFrom": "infoGrowth"
+      },
+      "feeding": null,
+      "size": "금지 체장 0cm / 권장 크기 0cm",
+      "season": {
+        "source": "NIFS",
+        "rawKey": "periodList",
+        "periods": [
+          {
+            "month": 4,
+            "sourceValue": "4",
+            "level": "1"
+          },
+          {
+            "month": 5,
+            "sourceValue": "5",
+            "level": "2"
+          },
+          {
+            "month": 6,
+            "sourceValue": "6",
+            "level": "2"
+          },
+          {
+            "month": 7,
+            "sourceValue": "7",
+            "level": "2"
+          },
+          {
+            "month": 8,
+            "sourceValue": "8",
+            "level": "2"
+          },
+          {
+            "month": 9,
+            "sourceValue": "9",
+            "level": "1"
+          }
+        ],
+        "sourceStatus": "present"
+      },
+      "fishingGuide": {
+        "methods": [
+          "연안복합",
+          "안강망",
+          "연안자망",
+          "연안통발"
+        ],
+        "tips": [],
+        "cautions": []
+      },
+      "foodNutrition": "52\n52 Kcal/100g\r\n단백질: 10.8g\r\n지방: 0.5g",
+      "aliases": [
+        "쭈게미",
+        "쭈깨미",
+        "쭉지미",
+        "호래기",
+        "금테문어",
+        "죽거미",
+        "쯔그미"
+      ],
+      "regulations": [],
+      "media": [
+        {
+          "id": null,
+          "fishSpeciesId": null,
+          "mediaType": "image",
+          "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/1538547831758_watermark.jpg",
+          "storagePath": null,
+          "referencedSourceMediaId": "data/nifs/raw/fish/fish_1576639605227/images/original/image-001.jpg",
+          "copyrightStatus": "unknown",
+          "usageStatus": "pending",
+          "reviewStatus": "pending"
+        }
+      ],
+      "relatedSpecies": [],
+      "generatedContents": [],
+      "officialSources": [
+        {
+          "sourceProvider": "NIFS",
+          "sourceId": "fish_1576639605227",
+          "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605227",
+          "title": "주꾸미",
+          "checkedAt": "2026-07-30T18:52:10.940136+00:00",
+          "excerpt": "중국, 한국, 일본(홋카이도 이남)"
+        }
+      ],
+      "missingFields": [
+        "taxonomy",
+        "quickFacts.summary",
+        "feeding",
+        "regulations",
+        "generatedContents"
+      ],
+      "readiness": "ready",
+      "readinessReason": "taxonomy and dependent detail layers are not yet sourced for this candidate",
+      "evidence": {
+        "sourceProvider": "NIFS",
+        "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605227",
+        "sourceCheckedAt": "2026-07-30T18:52:10.940136+00:00",
+        "imageCount": 1,
+        "rawMediaCount": 4,
+        "hasDistribution": true,
+        "hasGrowth": true,
+        "hasMorphology": true,
+        "hasFeature": false,
+        "hasCatch": true,
+        "hasCookHow": true,
+        "hasDialect": true,
+        "hasSeason": true,
+        "seasonSourceStatus": "present",
+        "seasonDisplayText": null,
+        "seasonFallbackText": null,
+        "hasSpawning": true,
+        "hasTaxonomy": false
+      }
+    }
+  ]
+}

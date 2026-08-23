@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1575881532404",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1575881532404",
+      "fishName": "참홍어",
+      "scName": "Raja pulchra",
+      "prohibitSize": "79",
+      "recommendSize": "89.3",
+      "infoDistribution": "북서태평양(한국, 일본, 오호츠크해 및 동중국해)",
+      "infoGrowth": "주 산란기는 연2회로, 5~6월과 11~12월",
+      "infoShape": "등쪽 가장자리에 원형모양의 2개의 파져있는 부위가 있으며, 등쪽은 짙은 갈색이며, 배쪽은 짙은 회색을 띈다.",
+      "infoDialect": "간재미, 가부리, 홍해, 홍에",
+      "infoCatch": "근해연승, 자망, 저인망",
+      "infoCookCal": "0",
+      "infoCookHow": "※ 100g 기준\n○ 단백질: 18.82~21.34g\n ○ 칼슘 : 252.7~288.3mg\n○ 인 : 248.2-269.3mg\n○ 칼륨 :  345.9-389.5 mg",
+      "infoEat": "NA",
+      "display": "Y",
+      "graphComment": "참홍어는 300에서 700 MT 사이에서 어획된다.",
+      "fishNameEn": "Mottled skate"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

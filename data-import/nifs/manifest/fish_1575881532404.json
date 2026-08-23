@@ -1,0 +1,64 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575881532404",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575881532404",
+  "fetchedAt": "2026-07-30T18:52:15.057470+00:00",
+  "sourceCheckedAt": "2026-07-30T18:52:15.057470+00:00",
+  "contentHash": "ada00c029508f616914e2cfc3ff6824fe1fabf070e51576e16cb4d0ee7fbf8ab",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "5",
+      "colorLevel": "1"
+    },
+    {
+      "month": "6",
+      "colorLevel": "2"
+    },
+    {
+      "month": "7",
+      "colorLevel": "2"
+    },
+    {
+      "month": "8",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "등쪽 가장자리에 원형모양의 2개의 파져있는 부위가 있으며, 등쪽은 짙은 갈색이며, 배쪽은 짙은 회색을 띈다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "주 산란기는 연2회로, 5~6월과 11~12월",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 연2회로",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1575881532404/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575881532404_157674663905604.jpg",
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575881532404_157674663915403.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1575881532404/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1575881532404/images/original/image-002.jpg",
+    "data/nifs/raw/fish/fish_1575881532404/images/original/image-003.jpg",
+    "fish/fish_1575881532404/images/original/image-001.jpg",
+    "fish/fish_1575881532404/images/original/image-002.jpg",
+    "fish/fish_1575881532404/images/original/image-003.jpg"
+  ],
+  "byteSize": 1711,
+  "mimeType": "application/json",
+  "title": "참홍어",
+  "koreanName": "참홍어",
+  "scientificName": "Raja pulchra"
+}

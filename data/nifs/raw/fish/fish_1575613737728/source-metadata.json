@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575613737728",
+  "koreanName": "대구",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575613737728",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1575613737728"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 2560,
+  "contentHash": "c1492e84c9eba2de99b260116b163de2e39c0bf80036f08433075ddea4568857",
+  "collectedAt": "2026-07-30T18:51:44.207940+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

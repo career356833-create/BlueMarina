@@ -1,0 +1,63 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1571806850754",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1571806850754",
+  "fetchedAt": "2026-07-30T18:51:27.752383+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:27.752383+00:00",
+  "contentHash": "c4719cb9091bed2e2558b9ce21330b05f39dfa75710499c0cd5a6c6c78600980",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "6",
+      "colorLevel": "1"
+    },
+    {
+      "month": "7",
+      "colorLevel": "2"
+    },
+    {
+      "month": "8",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "갈치는 몸 빛깔은 은백색이며, 두 눈 사이의 머리부분이 편평하다. 입은 크고 양 턱에는 크고 억센 이빨이 있다. 몸은 아주 길고 납작하며, 꼬리는 띠 모양으로 쉽게 잘린다. 다른 물고기들과 달리, 배지느러미와 꼬리지느러미 및 비늘이 없다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "갈치의 산란장은 우리나라의 서·남해연안과 중국 연안이며, 우리나라 연안에서는 5~9월이 주 산란이다. 크기가 약 82 cm 이면, 이 중 50%가 산란에 참여하고, 크기가 약 83~141 cm이면 약 14.000~76,000개의 알을 낳는다. 갈치는 약 80 cm이하(2~3년생)에서는 수컷이 많지만, 이 이상의 크기에서는 암컷이 많다. 산란기는 4~10월 주 산란기는 5~9월이며, 남, 서해안, 제주 북서 및 남동 방, 온주 등 중국 대륙 연안 등에서 산란한다. 성숙체장은 2.2~27.2cm, 수명은 15세이다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란장은 우리나라의 서·남해연안과 중국 연안이며",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1571806850754/detail-api-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1571806850754_157674597952904.jpg",
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1571806850754_157674598002903.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1571806850754/images/original/fish_1571806850754_157674598002903.jpg",
+    "data/nifs/raw/fish/fish_1571806850754/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1571806850754/images/original/image-002.jpg",
+    "data/nifs/raw/fish/fish_1571806850754/images/original/image-003.jpg",
+    "fish/fish_1571806850754/images/original/image-001.jpg",
+    "fish/fish_1571806850754/images/original/image-002.jpg",
+    "fish/fish_1571806850754/images/original/image-003.jpg",
+    "fish_1571806850754_157674597952904.jpg",
+    "fish_1571806850754_157674598002903.jpg"
+  ],
+  "byteSize": 4045,
+  "mimeType": "application/json",
+  "title": "갈치",
+  "koreanName": "갈치",
+  "scientificName": "Trichiurus lepturus"
+}

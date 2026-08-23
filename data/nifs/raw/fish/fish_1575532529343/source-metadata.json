@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575532529343",
+  "koreanName": "옥돔",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575532529343",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1575532529343"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 2381,
+  "contentHash": "8e5681a00a106b1f945aaafbb4f2bd61e3d24d0b12524e0285c3d4bcb60df2f4",
+  "collectedAt": "2026-07-30T18:52:04.772506+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576639605222",
+  "koreanName": "대게",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605222",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1576639605222"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 2560,
+  "contentHash": "bf6ee021e5b8b423412db99efe8a39f6ac8b9d03f25cf92d8c103489871d1f34",
+  "collectedAt": "2026-07-30T18:51:42.150979+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

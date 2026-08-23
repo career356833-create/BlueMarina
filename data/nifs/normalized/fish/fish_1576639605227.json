@@ -1,0 +1,347 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576639605227",
+  "koreanName": "주꾸미",
+  "englishName": "Webfoot octopus",
+  "scientificName": "Amphioctopus fangsiao",
+  "feature": "몸통은 주머니모양으로 길며, 두부와 팔 사이에 조그마하게 조각한 듯한 원형의 무늬가 있다. 두 눈위에 각각 2개의 육질돌기가 있다. 팔은 적당히 길고 단단하며, 수컷 오른쪽 3번째 팔이 교접기화되어 있다. 교접혀는 가늘고 긴데 팔 길이의 4~6%정도이다. 아가미에는 7~8개의 아가미판이 있다.",
+  "distribution": "중국, 한국, 일본(홋카이도 이남)",
+  "lifecycle": "산란기는 3~6월. 해저의 오목한 장소에 포도모양의 난을 낳으며, 난은 장경 약 1cm에 달하는 대형이다.\n성장은 최대 외투장 8cm, 최대 중량 200g이다.",
+  "dialect": "쭈게미, 쭈깨미, 쭉지미, 호래기, 금테문어, 죽거미, 쯔그미",
+  "catchMethod": "연안복합, 안강망, 연안자망, 연안통발",
+  "nutrition": "52 Kcal/100g\n단백질: 10.8g\n지방: 0.5g",
+  "prohibitSize": null,
+  "recommendSize": null,
+  "eatingNote": null,
+  "eatingNoteMissing": {
+    "value": null,
+    "sourceValue": "",
+    "missingReason": "source_empty"
+  },
+  "listColorLevel": "2",
+  "listDisplayStatus": "",
+  "recommendPeriod": [
+    {
+      "month": 4,
+      "sourceValue": "1",
+      "recommendationLevel": "1",
+      "displayLabel": "자제"
+    },
+    {
+      "month": 5,
+      "sourceValue": "2",
+      "recommendationLevel": "2",
+      "displayLabel": "지양"
+    },
+    {
+      "month": 6,
+      "sourceValue": "2",
+      "recommendationLevel": "2",
+      "displayLabel": "지양"
+    },
+    {
+      "month": 7,
+      "sourceValue": "2",
+      "recommendationLevel": "2",
+      "displayLabel": "지양"
+    },
+    {
+      "month": 8,
+      "sourceValue": "2",
+      "recommendationLevel": "2",
+      "displayLabel": "지양"
+    },
+    {
+      "month": 9,
+      "sourceValue": "1",
+      "recommendationLevel": "1",
+      "displayLabel": "자제"
+    }
+  ],
+  "recommendPeriodOmittedMonths": [
+    1,
+    2,
+    3,
+    10,
+    11,
+    12
+  ],
+  "recommendPeriodOmittedMeaning": "권장",
+  "recommendPeriodNote": "periodList는 자제·지양 월만 반환한다. 응답에 없는 월은 화면에서 권장(green)으로 표시된다. 데이터 누락이 아니라 출처의 표현 방식이다.",
+  "catchHistory": [
+    {
+      "year": 2000,
+      "catchAmount": 4569.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2000",
+        "catchAverage": "4569"
+      }
+    },
+    {
+      "year": 2001,
+      "catchAmount": 4294.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2001",
+        "catchAverage": "4294"
+      }
+    },
+    {
+      "year": 2002,
+      "catchAmount": 3911.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2002",
+        "catchAverage": "3911"
+      }
+    },
+    {
+      "year": 2003,
+      "catchAmount": 5200.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2003",
+        "catchAverage": "5200"
+      }
+    },
+    {
+      "year": 2004,
+      "catchAmount": 5048.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2004",
+        "catchAverage": "5048"
+      }
+    },
+    {
+      "year": 2005,
+      "catchAmount": 4390.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2005",
+        "catchAverage": "4390"
+      }
+    },
+    {
+      "year": 2006,
+      "catchAmount": 4032.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2006",
+        "catchAverage": "4032"
+      }
+    },
+    {
+      "year": 2007,
+      "catchAmount": 6828.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2007",
+        "catchAverage": "6828"
+      }
+    },
+    {
+      "year": 2008,
+      "catchAmount": 4052.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2008",
+        "catchAverage": "4052"
+      }
+    },
+    {
+      "year": 2009,
+      "catchAmount": 4285.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2009",
+        "catchAverage": "4285"
+      }
+    },
+    {
+      "year": 2010,
+      "catchAmount": 2977.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2010",
+        "catchAverage": "2977"
+      }
+    },
+    {
+      "year": 2011,
+      "catchAmount": 2596.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2011",
+        "catchAverage": "2596"
+      }
+    },
+    {
+      "year": 2012,
+      "catchAmount": 3415.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2012",
+        "catchAverage": "3415"
+      }
+    },
+    {
+      "year": 2013,
+      "catchAmount": 2340.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2013",
+        "catchAverage": "2340"
+      }
+    },
+    {
+      "year": 2014,
+      "catchAmount": 2486.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2014",
+        "catchAverage": "2486"
+      }
+    },
+    {
+      "year": 2015,
+      "catchAmount": 2232.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2015",
+        "catchAverage": "2232"
+      }
+    },
+    {
+      "year": 2016,
+      "catchAmount": 2278.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2016",
+        "catchAverage": "2278"
+      }
+    },
+    {
+      "year": 2017,
+      "catchAmount": 3460.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2017",
+        "catchAverage": "3460"
+      }
+    },
+    {
+      "year": 2018,
+      "catchAmount": 3773.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2018",
+        "catchAverage": "3773"
+      }
+    },
+    {
+      "year": 2019,
+      "catchAmount": 3828.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2019",
+        "catchAverage": "3828"
+      }
+    },
+    {
+      "year": 2020,
+      "catchAmount": 4306.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2020",
+        "catchAverage": "4306"
+      }
+    },
+    {
+      "year": 2021,
+      "catchAmount": 3338.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2021",
+        "catchAverage": "3338"
+      }
+    },
+    {
+      "year": 2022,
+      "catchAmount": 2956.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2022",
+        "catchAverage": "2956"
+      }
+    },
+    {
+      "year": 2023,
+      "catchAmount": 2204.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2023",
+        "catchAverage": "2204"
+      }
+    },
+    {
+      "year": 2024,
+      "catchAmount": 2375.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2024",
+        "catchAverage": "2375"
+      }
+    }
+  ],
+  "sourceImages": [
+    {
+      "sourceId": "fish_1576639605227",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/1538547831758_watermark.jpg",
+      "sourceRole": "list_thumbnail",
+      "sourceFileName": "1538547831758_watermark.jpg",
+      "localPath": "fish\\fish_1576639605227\\images\\original\\image-001.jpg",
+      "httpStatus": 200,
+      "mimeType": "image/jpeg",
+      "detectedFormat": "JPEG",
+      "width": 4032,
+      "height": 3024,
+      "fileSize": 1003524,
+      "sha256": "130e4ef2777e928756f3ff1fb905033a1f9579ca8219c9b20b72ddca58abe204",
+      "isWatermarked": true,
+      "isPlaceholder": false,
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "isValid": true,
+      "error": null,
+      "collectedAt": "2026-07-30T18:54:16.812485+00:00"
+    },
+    {
+      "sourceId": "fish_1576639605227",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/1538547831758_watermark.jpg",
+      "sourceRole": "detail_primary",
+      "sourceFileName": "1538547831758_watermark.jpg",
+      "localPath": "fish\\fish_1576639605227\\images\\original\\image-002.jpg",
+      "httpStatus": 200,
+      "mimeType": "image/jpeg",
+      "detectedFormat": "JPEG",
+      "width": 4032,
+      "height": 3024,
+      "fileSize": 1003524,
+      "sha256": "130e4ef2777e928756f3ff1fb905033a1f9579ca8219c9b20b72ddca58abe204",
+      "isWatermarked": true,
+      "isPlaceholder": false,
+      "isDuplicate": true,
+      "duplicateOf": "1538547831758_watermark.jpg",
+      "isValid": true,
+      "error": null,
+      "collectedAt": "2026-07-30T18:54:19.133525+00:00"
+    }
+  ],
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605227",
+  "sourceCollectedAt": "2026-07-30T18:57:49.603695+00:00",
+  "sourceContentHash": "fb560ca66e3f94e2967935cc52fa852ff37b31680b489a5d1bf4dd49bf15514a",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "factReviewStatus": "pending"
+}

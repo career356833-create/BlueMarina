@@ -1,0 +1,62 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575596889118",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575596889118",
+  "fetchedAt": "2026-07-30T18:51:40.092482+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:40.092482+00:00",
+  "contentHash": "f2cfd499658d4934acbfa85990e2340fbcb96a5b2856f7e7880306f559d8e7c9",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "5",
+      "colorLevel": "1"
+    },
+    {
+      "month": "6",
+      "colorLevel": "2"
+    },
+    {
+      "month": "7",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "몸은 가늘고 길며 완은 몸에 비하여 매우 가늘고 길다. 외투장이 외투폭보다 길며, 몸통은 난원형으로 이루며 뒤끝은 약간 뾰족하나 끝은 예리하지 않고 둥글다. 살아있을 때 몸통이 전체적으로 짙거나 옅은 회색을 띠지만 자극을 받게 되면 검붉은색 등 다양한 색깔로 위장하거나 위협색을 나타낸다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "낙지는 총길이 약 70 cm까지 성장하고, 약 50 cm가 되면 성숙하여 알을 낳는다. \n산란시기는 지역에 따라 차이를 보이며 전남 득량만은 7~9월, 서해 가로림만 4~5월, 탄도만은 6~7월이 주 산란기로 팔의 내부에 난을 낳는다. 최대 70cm 까지 성장한다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란시기는 지역에 따라 차이를 보이며 전남 득량만은 7~9월",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1575596889118/detail-api-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575596889118_157674589028103.jpg",
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575596889118_157674589031504.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1575596889118/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1575596889118/images/original/image-002.jpg",
+    "data/nifs/raw/fish/fish_1575596889118/images/original/image-003.jpg",
+    "fish/fish_1575596889118/images/original/image-001.jpg",
+    "fish/fish_1575596889118/images/original/image-002.jpg",
+    "fish/fish_1575596889118/images/original/image-003.jpg",
+    "fish_1575596889118_157674589028103.jpg",
+    "fish_1575596889118_157674589031504.jpg"
+  ],
+  "byteSize": 3975,
+  "mimeType": "application/json",
+  "title": "낙지",
+  "koreanName": "낙지",
+  "scientificName": "Octopus minor"
+}

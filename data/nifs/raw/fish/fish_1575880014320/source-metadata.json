@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575880014320",
+  "koreanName": "제주소라",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575880014320",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1575880014320"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 3103,
+  "contentHash": "6030cdf33606921fc37353b27b61533b3a4766d3585414653894e7c9f54befcb",
+  "collectedAt": "2026-07-30T18:52:08.875399+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

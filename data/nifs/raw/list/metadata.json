@@ -1,0 +1,13 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishList.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "language": ""
+  },
+  "itemCount": 25,
+  "collectedAt": "2026-07-30T18:51:27.701685+00:00",
+  "contentHash": "9a1b30edf2bcf56fc66da2782dbaacd2b892b8fa66731ffe61a1ee2cf37eca8c",
+  "parserVersion": "nifs-list-v1.0.0"
+}

@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1575870984736",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1575870984736",
+      "fishName": "바지락",
+      "scName": "Ruditapes philippinarum",
+      "prohibitSize": "0",
+      "recommendSize": "0",
+      "infoDistribution": "남동 중국해 및 홍콩, 황해, 발해, 한국, 일본, 사할린\r\n",
+      "infoGrowth": "바지락의 수명은 8~9년이고,  1세에서 3세까지 빠르게 성장하며, 산란기는 6~9월(주산란기는 7~8월)이다.",
+      "infoShape": "바지락 껍데기는 타원형으로 앞끝은 좁고 얇으며, 뒷부분은 넓고 두껍다. 껍데기 표면에는 나이테와 같은 골인 방사륵이 있으며, 색은 변이가 심하다. 내면은 백색이나 뒤쪽은 자주색이다.",
+      "infoDialect": "반지락, 반지래기, 빤지락, 모시조개, 바스레기, 입조개",
+      "infoCatch": "잠수기",
+      "infoCookCal": "73",
+      "infoCookHow": "73 Kcal/100g\n○ 단백질: 12.5%\n     -  필수아미노산: 2,938mg\n○ 지방: 1.2%\n     -  포화지방산: 41.7%\n     -  불포화지방산: 58.3%",
+      "infoEat": "NA",
+      "display": "N",
+      "graphComment": "바지락 연간 어획량은 20000 MT내외를 머물다가, 2018년에 약 30000 MT으로  높은 어획량을 기록하였다. ",
+      "fishNameEn": "Little neck clam, Japanese carpet shell"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "sourceProvider": "NIFS",
+    "sourceId": "nifs-001",
+    "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "normalizedCandidate": {
+      "koreanName": "가상어 A",
+      "scientificName": "Testus alpha",
+      "habitat": "연안"
+    },
+    "manualProtectedFields": []
+  },
+  {
+    "sourceProvider": "NIFS",
+    "sourceId": "nifs-002",
+    "contentHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "normalizedCandidate": {
+      "koreanName": "가상어 B",
+      "scientificName": "Testus beta",
+      "habitat": "외해"
+    },
+    "manualProtectedFields": ["habitat"]
+  }
+]

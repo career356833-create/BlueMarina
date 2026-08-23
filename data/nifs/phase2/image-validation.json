@@ -1,0 +1,67 @@
+{
+  "fish_1571806850754": {
+    "fishName": "��ġ",
+    "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1571806850754_157674598002903.jpg",
+    "fileName": "fish_1571806850754_157674598002903.jpg",
+    "httpStatus": 200,
+    "contentType": "image/jpeg",
+    "fileSize": 376330,
+    "sha256": "2dd366786452b1f1448c0893981b7a7840aa37c77a439af0e38f2624ef061dbc",
+    "width": 3840,
+    "height": 2304,
+    "format": "JPEG",
+    "isValid": true
+  },
+  "fish_1575521941711": {
+    "fishName": "������",
+    "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575521941711_157559580209902.jpg",
+    "fileName": "fish_1575521941711_157559580209902.jpg",
+    "httpStatus": 200,
+    "contentType": "image/jpeg",
+    "fileSize": 46524,
+    "sha256": "eaf76d7bfb363f4eb30f6d3435206f6c899c30fe9d2d4cc8c21474f4183af190",
+    "width": 719,
+    "height": 432,
+    "format": "JPEG",
+    "isValid": true
+  },
+  "fish_1575529825083": {
+    "fishName": "�����",
+    "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575529825083_157559555830402.jpg",
+    "fileName": "fish_1575529825083_157559555830402.jpg",
+    "httpStatus": 200,
+    "contentType": "image/jpeg",
+    "fileSize": 69001,
+    "sha256": "feef9710e62219faf72000e145ee4d27fb1b425ee1f63efc4a1dae38487fefab",
+    "width": 1090,
+    "height": 677,
+    "format": "JPEG",
+    "isValid": true
+  },
+  "fish_1571803943319": {
+    "fishName": "�����",
+    "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1571803943319_157674659122903.jpg",
+    "fileName": "fish_1571803943319_157674659122903.jpg",
+    "httpStatus": 200,
+    "contentType": "image/jpeg",
+    "fileSize": 324552,
+    "sha256": "3ef342839d23f7a3525ebb0fc7ca10a4a48968a98aa64659dbd2a343c036a779",
+    "width": 2856,
+    "height": 1712,
+    "format": "JPEG",
+    "isValid": true
+  },
+  "fish_1576639605223": {
+    "fishName": "�⸧���ڹ�",
+    "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/MF0004253_DG0102_watermark.jpg",
+    "fileName": "MF0004253_DG0102_watermark.jpg",
+    "httpStatus": 200,
+    "contentType": "image/jpeg",
+    "fileSize": 379612,
+    "sha256": "399723918a74d0ab34cdb16aa3439cbae1634dd7382f8ab825bb1eec6d407c9c",
+    "width": 1000,
+    "height": 600,
+    "format": "JPEG",
+    "isValid": true
+  }
+}

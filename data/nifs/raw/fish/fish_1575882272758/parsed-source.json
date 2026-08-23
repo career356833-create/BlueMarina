@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1575882272758",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1575882272758",
+      "fishName": "키조개",
+      "scName": "Atrina pectinata",
+      "prohibitSize": "18",
+      "recommendSize": "21",
+      "infoDistribution": "인도, 태평양, 동인도, 필리핀, 남동 중국해, 홍콩, 하이난, 대만, 황해, 발해, 한국, 일본(혼슈)",
+      "infoGrowth": "산란기는 6~8월(보령연안), 6~9월(여자만 및 진해만)으로서 보령연안, 여자만 및 진해만, 득량만, 제주도 연안에서 주로 산란하며, 성숙체장은 각고 23.9cm(암컷), 23.3cm(수컷) 임",
+      "infoShape": "패각은 각정이 뾰족하고 전배연은 직선, 후배연은 원호를 그리나 후연과 거의 직각을 이루고, 후연은 직선이다. 전연은 직선이나 안으로 약간 휘어들어가 각정이 앞쪽으로 굽어 있다. 표면은 회갈색으로 광택이 있고, 패각은 매우 얇다. 성장맥은 약하고 불규칙하며, 방사륵은 각정으로부터 약한 굴곡을 이루며 직선으로 뻗어 있다. 어린 개체에서는 방사륵에 가시모양의 약한 돌기가 있는 것도 있으나 성체에서는 방사륵도 약해져서 후연에서는 거의 없어진다. 이 종의 패주는 식용으로 애용하고 있다.",
+      "infoDialect": "개두, 게이지, 게지, 채이조개, 챙이조개, 치조개, 가시개두키조개, 치조개",
+      "infoCatch": "잠수기, 형망",
+      "infoCookCal": "57",
+      "infoCookHow": "57 Kcal/100g\r\n단백질: 10.3%\r\n지방: 1.1%",
+      "infoEat": "NA",
+      "display": "Y",
+      "graphComment": "",
+      "fishNameEn": "Comb pen shell"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575529825083",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575529825083",
+  "fetchedAt": "2026-07-30T18:51:31.873400+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:31.873400+00:00",
+  "contentHash": "b8762317396338f81c04cecf9bade8a842ba3e1354064d3ce54254de716de987",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "등지느러미는 가슴지느러미 보다 앞쪽에서 시작하며, 항문 앞쪽으로 옆줄에 40~47개의 감각공(감각을 느낄수 있는 구멍)이 있다. 억세고 큰 송곳니를 가졌으며, 입이 크다. 위턱이 아래턱보다 돌출하였고 몸에 가슴지느러미는 있으나 배지느러미와 비늘이 없다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "암컷이 수컷보다 성장이 빠르다. 만 2년이면 전장 34cm, 4년이면 61cm, 6년이면 82cm정도 자란다. 산란기는 4~7월이며, 주산란기는 7월이고 성숙체장은 64cm 이다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 4~7월이며",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1575529825083/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575529825083_157559555830402.jpg",
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575529825083_157596492463902.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1575529825083/images/original/fish_1575529825083_157559555830402.jpg",
+    "data/nifs/raw/fish/fish_1575529825083/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1575529825083/images/original/image-002.jpg",
+    "data/nifs/raw/fish/fish_1575529825083/images/original/image-003.jpg",
+    "fish/fish_1575529825083/images/original/image-001.jpg",
+    "fish/fish_1575529825083/images/original/image-002.jpg",
+    "fish/fish_1575529825083/images/original/image-003.jpg"
+  ],
+  "byteSize": 2294,
+  "mimeType": "application/json",
+  "title": "갯장어",
+  "koreanName": "갯장어",
+  "scientificName": "Muraenesox cinereus"
+}

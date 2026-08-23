@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1576639605223",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1576639605223",
+      "fishName": "기름가자미",
+      "scName": "Glyptocephalus stelleri",
+      "prohibitSize": "20",
+      "recommendSize": "27",
+      "infoDistribution": "우리나라 동해, 남해 일본, 동중국해 \r\n수심 200~400m 펄이나 모래 바닥에 주로 서식한다.",
+      "infoGrowth": "산란기는 1~6월이며 주산란기는 3~5월",
+      "infoShape": "몸은 긴 타원형이다. 주둥이가 짧고, 입이 작으며 입의 앞부분만 열린다. 두 눈 사이의 간격은 좁다. 무안측에는 다수의 점액공이 있어서 몸 표면이 미끄럽다. 꼬리지느러미 뒤 가장자리는 둥글다. 측선은 몸의 중앙 부분에 있고, 가슴지느러미 부근에서 매우 낮게 솟아오른다. 유안측은 암갈색을 띠고 윤곽이 뚜렷하지 않은 어두운 무늬가 있다. 무안측은 회백색, 등지느러미의 가장자리는 검은색을 띈다.",
+      "infoDialect": "물가자미, 미주구리, 물가삼, 수가자미, 수가잠",
+      "infoCatch": "동해구외끌이중형저인망, 연안자망",
+      "infoCookCal": "83",
+      "infoCookHow": "83 Kcal/100g\r\n불포화지방산: 26.1g\r\n단백질: 18.2g\r\n지방: 0.4g",
+      "infoEat": "'기름가자미'라 불러주세요(물가자미로 잘못 불리는 경우가 많은데 물가자미는 다른 종 입니다.)",
+      "display": "",
+      "graphComment": "",
+      "fishNameEn": "Blackfin flounder"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

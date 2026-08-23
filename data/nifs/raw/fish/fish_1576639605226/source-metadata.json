@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576639605226",
+  "koreanName": "전갱이",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605226",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1576639605226"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 2473,
+  "contentHash": "6e0ac9c732aa13d26f5561d48229c05f227ce037b9205b22869b982a1b2b1a74",
+  "collectedAt": "2026-07-30T18:52:06.824368+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

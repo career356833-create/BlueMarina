@@ -1,0 +1,177 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576639605223",
+  "koreanName": "기름가자미",
+  "englishName": "Blackfin flounder",
+  "scientificName": "Glyptocephalus stelleri",
+  "feature": "몸은 긴 타원형이다. 주둥이가 짧고, 입이 작으며 입의 앞부분만 열린다. 두 눈 사이의 간격은 좁다. 무안측에는 다수의 점액공이 있어서 몸 표면이 미끄럽다. 꼬리지느러미 뒤 가장자리는 둥글다. 측선은 몸의 중앙 부분에 있고, 가슴지느러미 부근에서 매우 낮게 솟아오른다. 유안측은 암갈색을 띠고 윤곽이 뚜렷하지 않은 어두운 무늬가 있다. 무안측은 회백색, 등지느러미의 가장자리는 검은색을 띈다.",
+  "distribution": "우리나라 동해, 남해 일본, 동중국해\n수심 200~400m 펄이나 모래 바닥에 주로 서식한다.",
+  "lifecycle": "산란기는 1~6월이며 주산란기는 3~5월",
+  "dialect": "물가자미, 미주구리, 물가삼, 수가자미, 수가잠",
+  "catchMethod": "동해구외끌이중형저인망, 연안자망",
+  "nutrition": "83 Kcal/100g\n불포화지방산: 26.1g\n단백질: 18.2g\n지방: 0.4g",
+  "prohibitSize": 20.0,
+  "recommendSize": 27.0,
+  "eatingNote": "'기름가자미'라 불러주세요(물가자미로 잘못 불리는 경우가 많은데 물가자미는 다른 종 입니다.)",
+  "eatingNoteMissing": null,
+  "listColorLevel": "0",
+  "listDisplayStatus": "",
+  "recommendPeriod": [],
+  "recommendPeriodOmittedMonths": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "recommendPeriodOmittedMeaning": "권장",
+  "recommendPeriodNote": "periodList는 자제·지양 월만 반환한다. 응답에 없는 월은 화면에서 권장(green)으로 표시된다. 데이터 누락이 아니라 출처의 표현 방식이다.",
+  "catchHistory": [
+    {
+      "year": 2015,
+      "catchAmount": 2828.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2015",
+        "catchAverage": "2828"
+      }
+    },
+    {
+      "year": 2016,
+      "catchAmount": 3021.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2016",
+        "catchAverage": "3021"
+      }
+    },
+    {
+      "year": 2017,
+      "catchAmount": 2870.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2017",
+        "catchAverage": "2870"
+      }
+    },
+    {
+      "year": 2018,
+      "catchAmount": 3009.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2018",
+        "catchAverage": "3009"
+      }
+    },
+    {
+      "year": 2019,
+      "catchAmount": 3497.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2019",
+        "catchAverage": "3497"
+      }
+    },
+    {
+      "year": 2020,
+      "catchAmount": 5561.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2020",
+        "catchAverage": "5561"
+      }
+    },
+    {
+      "year": 2021,
+      "catchAmount": 5010.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2021",
+        "catchAverage": "5010"
+      }
+    },
+    {
+      "year": 2022,
+      "catchAmount": 5154.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2022",
+        "catchAverage": "5154"
+      }
+    },
+    {
+      "year": 2023,
+      "catchAmount": 4806.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2023",
+        "catchAverage": "4806"
+      }
+    },
+    {
+      "year": 2024,
+      "catchAmount": 4868.0,
+      "unit": null,
+      "sourceValue": {
+        "year": "2024",
+        "catchAverage": "4868"
+      }
+    }
+  ],
+  "sourceImages": [
+    {
+      "sourceId": "fish_1576639605223",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/MF0004253_DG0102_watermark.jpg",
+      "sourceRole": "list_thumbnail",
+      "sourceFileName": "MF0004253_DG0102_watermark.jpg",
+      "localPath": "fish\\fish_1576639605223\\images\\original\\image-001.jpg",
+      "httpStatus": 200,
+      "mimeType": "image/jpeg",
+      "detectedFormat": "JPEG",
+      "width": 1000,
+      "height": 600,
+      "fileSize": 379612,
+      "sha256": "399723918a74d0ab34cdb16aa3439cbae1634dd7382f8ab825bb1eec6d407c9c",
+      "isWatermarked": true,
+      "isPlaceholder": false,
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "isValid": true,
+      "error": null,
+      "collectedAt": "2026-07-30T18:52:44.417140+00:00"
+    },
+    {
+      "sourceId": "fish_1576639605223",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/MF0004253_DG0102_watermark.jpg",
+      "sourceRole": "detail_primary",
+      "sourceFileName": "MF0004253_DG0102_watermark.jpg",
+      "localPath": "fish\\fish_1576639605223\\images\\original\\image-002.jpg",
+      "httpStatus": 200,
+      "mimeType": "image/jpeg",
+      "detectedFormat": "JPEG",
+      "width": 1000,
+      "height": 600,
+      "fileSize": 379612,
+      "sha256": "399723918a74d0ab34cdb16aa3439cbae1634dd7382f8ab825bb1eec6d407c9c",
+      "isWatermarked": true,
+      "isPlaceholder": false,
+      "isDuplicate": true,
+      "duplicateOf": "MF0004253_DG0102_watermark.jpg",
+      "isValid": true,
+      "error": null,
+      "collectedAt": "2026-07-30T18:52:46.586750+00:00"
+    }
+  ],
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605223",
+  "sourceCollectedAt": "2026-07-30T18:57:49.579503+00:00",
+  "sourceContentHash": "c2421a91a0e483f651c1b2987ad900e9507773bf1f4dd13e9b8131a2c43ae733",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "factReviewStatus": "pending"
+}

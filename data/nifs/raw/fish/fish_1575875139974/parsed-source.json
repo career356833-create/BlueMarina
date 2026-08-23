@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1575875139974",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1575875139974",
+      "fishName": "살오징어",
+      "scName": "Todarodes pacificus",
+      "prohibitSize": "15",
+      "recommendSize": "20",
+      "infoDistribution": "우리나라와 일본 연·근해, 동중국해 ",
+      "infoGrowth": "부화후 6개월은 매월 약 3~4cm 성장한다. 이후 매월 약 2cm씩 성장하고 만 1년에 산란 후 사망한다. 만 1세의 외투장 크기는 겨울발생군 24cm, 여름발생군 24cm, 가을발생군 27cm이다. 겨울 1~3월, 여름 6~8월, 가을 9~11월에 걸쳐 산란하고, 산란장은 동중국해 중·북부~동해 남부지역의 수심 100~500m의 대륙붕과 대륙사면 지역이다. 산란수온은 15~23℃, 포란수 50만개, 산란수 3~50만개, 난경 1.0×0.7mm, 성숙체장은 20cm(외투장)이다.",
+      "infoShape": "외투장은 30cm이상, 외투막은 가는 원통형, 미부는 원추형이다. 지느러미는 옆으로 긴 마름모꼴이고 뒤끝에 붙어 있으며, 길이는 외투장의 30% 정도이나 뒤끝으로 갈수록 안으로 패여 좁아진다. 전배연 돌기는 돌출하지 않아 둥글게 보이며, 전복연 돌기는 약간 돌출하였으나 매우 약하여 고정된 표본에서는 둥글게 보인다. 완장식은 2>3>1>4이며, 최장 완은 외투장의 40% 정도이고 전완에는 넓은 보호막이 있다. 흡반열은 2열이다. 촉완은 외투장의 1/2, 흡반은 4줄이며, 중앙부의 2줄은 특히 크다. 외투 등쪽 중앙에 넓고 검은 띠가 있으며, 복벽에는 융기선이 없다.",
+      "infoDialect": "오징어, 피둥어꼴뚜기, 물오징어",
+      "infoCatch": "근해채낚기, 동해구중형트롤, 대형선망, 대형트롤, 쌍끌이대형저인망",
+      "infoCookCal": "72",
+      "infoCookHow": "72 Kcal/100g\n○ 단백질: 15.7%\n○ 지방: 0.3%\n     -  포화지방산: 30%\n     -  불포화지방산: 70%",
+      "infoEat": "金징어 된 오징어, 자원회복방안 마련한다\n- 해수부, 살오징어?주꾸미도 회복대상종으로 추가 -",
+      "display": "Y",
+      "graphComment": "",
+      "fishNameEn": "Japanese flying squid, Common squid"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575882272758",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575882272758",
+  "fetchedAt": "2026-07-30T18:52:17.109241+00:00",
+  "sourceCheckedAt": "2026-07-30T18:52:17.109241+00:00",
+  "contentHash": "f58fa3fc89f8050d8ba1aa1ddd06ce2b4f8ed969e3e8823649ff2ed69b25f7a6",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "6",
+      "colorLevel": "1"
+    },
+    {
+      "month": "7",
+      "colorLevel": "2"
+    },
+    {
+      "month": "8",
+      "colorLevel": "2"
+    },
+    {
+      "month": "9",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "패각은 각정이 뾰족하고 전배연은 직선, 후배연은 원호를 그리나 후연과 거의 직각을 이루고, 후연은 직선이다. 전연은 직선이나 안으로 약간 휘어들어가 각정이 앞쪽으로 굽어 있다. 표면은 회갈색으로 광택이 있고, 패각은 매우 얇다. 성장맥은 약하고 불규칙하며, 방사륵은 각정으로부터 약한 굴곡을 이루며 직선으로 뻗어 있다. 어린 개체에서는 방사륵에 가시모양의 약한 돌기가 있는 것도 있으나 성체에서는 방사륵도 약해져서 후연에서는 거의 없어진다. 이 종의 패주는 식용으로 애용하고 있다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "산란기는 6~8월(보령연안), 6~9월(여자만 및 진해만)으로서 보령연안, 여자만 및 진해만, 득량만, 제주도 연안에서 주로 산란하며, 성숙체장은 각고 23.9cm(암컷), 23.3cm(수컷) 임",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 6~8월(보령연안)",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1575882272758/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575882272758_157674118312502.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1575882272758/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1575882272758/images/original/image-002.jpg",
+    "fish/fish_1575882272758/images/original/image-001.jpg",
+    "fish/fish_1575882272758/images/original/image-002.jpg"
+  ],
+  "byteSize": 2702,
+  "mimeType": "application/json",
+  "title": "키조개",
+  "koreanName": "키조개",
+  "scientificName": "Atrina pectinata"
+}

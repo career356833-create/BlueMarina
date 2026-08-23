@@ -1,0 +1,64 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575870984736",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575870984736",
+  "fetchedAt": "2026-07-30T18:51:54.486831+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:54.486831+00:00",
+  "contentHash": "8cef56f70d276c27d8cb348cfa724eac5b3cd1652fdb5d9c1ff5bd70e191aeef",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "6",
+      "colorLevel": "1"
+    },
+    {
+      "month": "7",
+      "colorLevel": "2"
+    },
+    {
+      "month": "8",
+      "colorLevel": "2"
+    },
+    {
+      "month": "9",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "바지락 껍데기는 타원형으로 앞끝은 좁고 얇으며, 뒷부분은 넓고 두껍다. 껍데기 표면에는 나이테와 같은 골인 방사륵이 있으며, 색은 변이가 심하다. 내면은 백색이나 뒤쪽은 자주색이다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "바지락의 수명은 8~9년이고,  1세에서 3세까지 빠르게 성장하며, 산란기는 6~9월(주산란기는 7~8월)이다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 6~9월(주산란기는 7~8월)이다",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1575870984736/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575870984736_157674004767503.jpg",
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575870984736_157674004767504.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1575870984736/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1575870984736/images/original/image-002.jpg",
+    "data/nifs/raw/fish/fish_1575870984736/images/original/image-003.jpg",
+    "fish/fish_1575870984736/images/original/image-001.jpg",
+    "fish/fish_1575870984736/images/original/image-002.jpg",
+    "fish/fish_1575870984736/images/original/image-003.jpg"
+  ],
+  "byteSize": 2473,
+  "mimeType": "application/json",
+  "title": "바지락",
+  "koreanName": "바지락",
+  "scientificName": "Ruditapes philippinarum"
+}

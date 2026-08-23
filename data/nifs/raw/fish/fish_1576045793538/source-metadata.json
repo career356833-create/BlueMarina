@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576045793538",
+  "koreanName": "꽃게",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576045793538",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1576045793538"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 3209,
+  "contentHash": "a48836e5a13e00a717dad6a31db82ac49a6d09fd0553aa6a3a8142357f454d49",
+  "collectedAt": "2026-07-30T18:51:38.036728+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

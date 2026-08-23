@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575880791880",
+  "koreanName": "참조기",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575880791880",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1575880791880"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 3042,
+  "contentHash": "68ba1cab48b7aaad70730ce694072ae9a15e1e58c65ac120d8be45a55edfb73a",
+  "collectedAt": "2026-07-30T18:52:13.003047+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

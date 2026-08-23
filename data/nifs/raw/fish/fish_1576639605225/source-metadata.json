@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576639605225",
+  "koreanName": "삼치",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605225",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1576639605225"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 2712,
+  "contentHash": "cabf380edc22955ca4b9ea82ac0c6ae84671e6e8efa6f276d67adf4fb28eddd2",
+  "collectedAt": "2026-07-30T18:52:00.657173+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

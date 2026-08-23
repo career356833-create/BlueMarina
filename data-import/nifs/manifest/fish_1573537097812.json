@@ -1,0 +1,61 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1573537097812",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1573537097812",
+  "fetchedAt": "2026-07-30T18:51:56.537084+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:56.537084+00:00",
+  "contentHash": "d6c9ee93f6bde031f5bb2650d86a703c1f96c47b0c665c027c3a5a998d319d79",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "6",
+      "colorLevel": "1"
+    },
+    {
+      "month": "7",
+      "colorLevel": "2"
+    },
+    {
+      "month": "8",
+      "colorLevel": "2"
+    },
+    {
+      "month": "9",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "전체적으로 짙은 적색이며, 갑각의 뒷아가미구역이 부풀어올라 있으며 뒷부분의 경사가 급하고, 옆 가장자리 뒷부분에 예리한 가시가 있다(한국해양무척추동물도감).",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "산란기 2~3월, 최소성숙갑폭 암컷 55~75mm, 수컷 70~100mm",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기 2~3월",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1573537097812/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1573537097812_157674010419302.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1573537097812/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1573537097812/images/original/image-002.jpg",
+    "fish/fish_1573537097812/images/original/image-001.jpg",
+    "fish/fish_1573537097812/images/original/image-002.jpg"
+  ],
+  "byteSize": 2121,
+  "mimeType": "application/json",
+  "title": "붉은대게",
+  "koreanName": "붉은대게",
+  "scientificName": "Chionoecetes japonicus"
+}

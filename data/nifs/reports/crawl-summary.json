@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-07-30T18:57:50.066520+00:00",
+  "elapsedSeconds": 0.8,
+  "totalBytes": 17728436,
+  "totalMB": 16.9,
+  "listStatus": "complete",
+  "detailStatus": {
+    "complete": 25
+  },
+  "imageStatus": {
+    "complete": 25
+  },
+  "normalizationStatus": {
+    "complete": 25
+  },
+  "requestPolicy": {
+    "concurrency": 1,
+    "intervalSeconds": 2.0,
+    "timeoutSeconds": 30.0,
+    "maxRetries": 3,
+    "backoffSeconds": [
+      10,
+      30,
+      90
+    ]
+  }
+}

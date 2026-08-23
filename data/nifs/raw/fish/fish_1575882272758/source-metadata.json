@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575882272758",
+  "koreanName": "키조개",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575882272758",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1575882272758"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 2702,
+  "contentHash": "f58fa3fc89f8050d8ba1aa1ddd06ce2b4f8ed969e3e8823649ff2ed69b25f7a6",
+  "collectedAt": "2026-07-30T18:52:17.109241+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

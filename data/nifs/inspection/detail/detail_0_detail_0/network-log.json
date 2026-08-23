@@ -1,0 +1,513 @@
+[
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/me/meinA/actionFishingEnvAreaBbs.do",
+    "resourceType": "document",
+    "status": "unknown",
+    "hasResponse": true
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/css/jquery-ui.min.css",
+    "resourceType": "stylesheet",
+    "status": "unknown",
+    "hasResponse": true
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/css/bootstrap-clockpicker.css",
+    "resourceType": "stylesheet",
+    "status": "unknown",
+    "hasResponse": true
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/css/chosen.css",
+    "resourceType": "stylesheet",
+    "status": "unknown",
+    "hasResponse": true
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/css/common.css?ver=",
+    "resourceType": "stylesheet",
+    "status": "unknown",
+    "hasResponse": true
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/css/developer_style.css?ver=",
+    "resourceType": "stylesheet",
+    "status": "unknown",
+    "hasResponse": true
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/css/sub.css?ver=",
+    "resourceType": "stylesheet",
+    "status": "unknown",
+    "hasResponse": true
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/ic_nw.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/ic_home_white.png",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/mein/envi_step.png",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/copy_logo.png",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/js/jquery-3.6.0.min.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/css/jquery-ui/jquery-ui.min.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/js/jquery.form.min.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/js/jquery.validate.min.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/js/jquery-clockpicker.min.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/js/jquery.mtz.monthpicker.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/js/chosen.jquery.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/js/xlsx.bundle.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/js/common.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/js/sub_common.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/js/left_menu.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/js/lpCom.js?ver=",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/js/jquery.mask.min.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/js/jquery.bpopup.min.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/amcharts4/core.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/amcharts4/charts.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/amcharts4/themes/animated.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/js/newSfidComJsSet.js",
+    "resourceType": "script",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/css/GmarketSans.css",
+    "resourceType": "stylesheet",
+    "status": "unknown",
+    "hasResponse": true
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/logo_a.png",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/btn_tsearch.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/btn_sitemap_a.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/bg_tsub_01.png",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/ic_arrow_white.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/ic_nw_gray.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/ic_share.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/ic_print.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/bull_h4.png",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/btn_search2_white.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/ico_radio_after.png",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/ico_radio_before.png",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/sati_01.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/sati_02.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/roboto-v27-latin-regular.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/roboto-v27-latin-700.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/GmarketSansMedium/GmarketSansMedium_118.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/GmarketSansBold/GmarketSansBold_118.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/roboto-v27-latin-500.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/GmarketSansBold/GmarketSansBold_119.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/roboto-v27-latin-300.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/GmarketSansBold/GmarketSansBold_117.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/GmarketSansBold/GmarketSansBold_116.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/GmarketSansBold/GmarketSansBold_115.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/GmarketSansBold/GmarketSansBold_114.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/GmarketSansBold/GmarketSansBold_112.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/GmarketSansMedium/GmarketSansMedium_117.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/GmarketSansMedium/GmarketSansMedium_116.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/GmarketSansMedium/GmarketSansMedium_119.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/GmarketSansMedium/GmarketSansMedium_115.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/Pretendard-Regular.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/Pretendard-SemiBold.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/Pretendard-Bold.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/Pretendard-Medium.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/font/Pretendard-Light.woff2",
+    "resourceType": "font",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/ic_arrow3.png",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/ic_arrow3_on.png",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "POST",
+    "url": "https://nifs.go.kr/portal/me/meinA/selectFishingEnvAreaBbsList.do",
+    "resourceType": "xhr",
+    "status": "unknown",
+    "hasResponse": true
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/paging_first.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/paging_prev.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/close_white.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/btn_minus.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  },
+  {
+    "method": "GET",
+    "url": "https://nifs.go.kr/portal/cmmn/images/btn_plus.svg",
+    "resourceType": "image",
+    "status": "unknown",
+    "hasResponse": false
+  }
+]

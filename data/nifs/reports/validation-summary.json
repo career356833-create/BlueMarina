@@ -1,0 +1,710 @@
+{
+  "generatedAt": "2026-07-30T18:57:50.030421+00:00",
+  "list": {
+    "totalCount": 25,
+    "expectedCount": 25,
+    "countMatches": true,
+    "duplicateIds": [],
+    "duplicateNames": [],
+    "emptyIds": 0,
+    "emptyNames": 0,
+    "colorLevelDistribution": {
+      "2": 15,
+      "0": 7,
+      "1": 3
+    },
+    "displayDistribution": {
+      "N": 4,
+      "Y": 16,
+      "": 5
+    }
+  },
+  "aggregate": {
+    "detailTotal": 25,
+    "detailPassed": 25,
+    "detailFailed": [],
+    "fieldPresence": {
+      "koreanName": 25,
+      "englishName": 25,
+      "scientificName": 25,
+      "feature": 25,
+      "distribution": 25,
+      "lifecycle": 25,
+      "dialect": 23,
+      "catchMethod": 25,
+      "nutrition": 25,
+      "eatingNote": 11,
+      "prohibitSize": 19,
+      "recommendSize": 17
+    },
+    "fieldsPresentInAll": [
+      "koreanName",
+      "englishName",
+      "scientificName",
+      "feature",
+      "distribution",
+      "lifecycle",
+      "catchMethod",
+      "nutrition"
+    ],
+    "fieldsPartial": {
+      "dialect": 23,
+      "eatingNote": 11,
+      "prohibitSize": 19,
+      "recommendSize": 17
+    },
+    "fieldsAbsent": [],
+    "images": {
+      "total": 66,
+      "valid": 66,
+      "invalid": 0,
+      "watermarked": 10,
+      "duplicateHashGroups": {
+        "2dd366786452b1f1448c0893981b7a7840aa37c77a439af0e38f2624ef061dbc": 2,
+        "eaf76d7bfb363f4eb30f6d3435206f6c899c30fe9d2d4cc8c21474f4183af190": 3,
+        "feef9710e62219faf72000e145ee4d27fb1b425ee1f63efc4a1dae38487fefab": 2,
+        "3ef342839d23f7a3525ebb0fc7ca10a4a48968a98aa64659dbd2a343c036a779": 2,
+        "399723918a74d0ab34cdb16aa3439cbae1634dd7382f8ab825bb1eec6d407c9c": 2,
+        "9d906c87526000a9f12095016e68a9fa075be29c050fbd661406b821fc65ba19": 2,
+        "888037c96dda806d744340a3d275d6970c4cc53cd0d422258b11acf66df3f9cf": 2,
+        "67d93f636cd6f11a474a19634200db1f72adb72fe5f5e3e57b66b4c8118bb0a0": 2,
+        "7e08fa461a412de28c0d881918b6513f19d2a3aca8723bee06224977ec5472d1": 2,
+        "a4a38e92673c549898f612470f8bfeb51b2dd48a0313b5f7c9d3e8a41aaa7a0b": 2,
+        "d1f6354ce0e979ec8e4036e3008d3bad5e625cdb2152688759b949cbe27c0bb2": 2,
+        "9eb764d4a8ea34d40d5dc22fcce8e5d86bb919ba98b200b173473be5abffa26d": 2,
+        "cbd7c1f7f7f8e45321339774597c264684db707cc3892d1206862d7c09df9c51": 2,
+        "45e7b169534ba8d8157c9f40e04fe9584d6e8bfb2bcd2e78b532bd6de5649f5a": 2,
+        "3aa8ba028e787fecf012488226533dd6e8c32d49a4ea85cf76b7930e0d5b41c6": 2,
+        "53168dfcc34506cfb8db00f37d4b200704b416a8eadab69e4c921b8ec4b2f46a": 2,
+        "78286067531641fe448093b0e25ff8d9f1578f81501b763d3a19fa01df2d044e": 2,
+        "6ad269d762cf492e915ec4a60eb28390a05a8bd8a1d7901cdbd3f2f5c082ee4a": 2,
+        "9373cf8b21e6eeeaf35e913bb90c29b9b800073e807b937d541848d13bc40948": 2,
+        "a345639d07e2036a10b65692c878ede670509fbb9997460052a36dcc373e090a": 2,
+        "0fda0441e68884c6249a4a765dcea9edf2edec233198635ebd76bb726606aa23": 2,
+        "130e4ef2777e928756f3ff1fb905033a1f9579ca8219c9b20b72ddca58abe204": 2,
+        "5fd6376a954e17a72c5eb36466a22636b7303e71a11929daf3f9ab72c4aea78a": 2,
+        "d089878864a5ae88c44748fadd4a09c0393dc0a6e94de9bb9184bbc4b808c3ed": 2,
+        "ae1f399293ceb25b54174aeb4666f59590bfd5f5bd3fb8070666c60f2f87016d": 2
+      },
+      "totalBytes": 9632452
+    },
+    "catchHistory": {
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "perFishYearCounts": {
+        "25": 21,
+        "22": 1,
+        "10": 1,
+        "17": 1,
+        "15": 1
+      },
+      "unit": null,
+      "unitNote": "historyList 응답과 화면 모두 단위 필드가 없다. 차트 축 라벨은 MT로 표기된다."
+    },
+    "recommendPeriod": {
+      "levelDistribution": {
+        "1": 55,
+        "2": 59
+      },
+      "perFishMonthCounts": {
+        "3": 3,
+        "4": 9,
+        "0": 3,
+        "5": 5,
+        "8": 1,
+        "12": 2,
+        "6": 2
+      }
+    }
+  },
+  "details": [
+    {
+      "sourceId": "fish_1571806850754",
+      "koreanName": "갈치",
+      "filledTextFields": 9,
+      "monthCount": 3,
+      "monthsCovered": [
+        6,
+        7,
+        8
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575521941711",
+      "koreanName": "개조개",
+      "filledTextFields": 9,
+      "monthCount": 4,
+      "monthsCovered": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "yearCount": 22,
+      "yearRange": [
+        2003,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 2,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575529825083",
+      "koreanName": "갯장어",
+      "filledTextFields": 9,
+      "monthCount": 0,
+      "monthsCovered": [],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1571803943319",
+      "koreanName": "고등어",
+      "filledTextFields": 9,
+      "monthCount": 5,
+      "monthsCovered": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1576639605223",
+      "koreanName": "기름가자미",
+      "filledTextFields": 9,
+      "monthCount": 0,
+      "monthsCovered": [],
+      "yearCount": 10,
+      "yearRange": [
+        2015,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 2,
+      "validImageCount": 2,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1576045793538",
+      "koreanName": "꽃게",
+      "filledTextFields": 9,
+      "monthCount": 5,
+      "monthsCovered": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575596889118",
+      "koreanName": "낙지",
+      "filledTextFields": 9,
+      "monthCount": 3,
+      "monthsCovered": [
+        5,
+        6,
+        7
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1576639605222",
+      "koreanName": "대게",
+      "filledTextFields": 9,
+      "monthCount": 8,
+      "monthsCovered": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575613737728",
+      "koreanName": "대구",
+      "filledTextFields": 9,
+      "monthCount": 4,
+      "monthsCovered": [
+        1,
+        2,
+        3,
+        12
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1576639605224",
+      "koreanName": "대문어",
+      "filledTextFields": 9,
+      "monthCount": 12,
+      "monthsCovered": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 2,
+      "validImageCount": 2,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575858517048",
+      "koreanName": "도루묵",
+      "filledTextFields": 9,
+      "monthCount": 4,
+      "monthsCovered": [
+        1,
+        10,
+        11,
+        12
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575867824021",
+      "koreanName": "말쥐치",
+      "filledTextFields": 8,
+      "monthCount": 5,
+      "monthsCovered": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575868769703",
+      "koreanName": "명태",
+      "filledTextFields": 9,
+      "monthCount": 12,
+      "monthsCovered": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "yearCount": 17,
+      "yearRange": [
+        2000,
+        2018
+      ],
+      "yearsSorted": true,
+      "imageCount": 2,
+      "validImageCount": 2,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575870984736",
+      "koreanName": "바지락",
+      "filledTextFields": 9,
+      "monthCount": 4,
+      "monthsCovered": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1573537097812",
+      "koreanName": "붉은대게",
+      "filledTextFields": 9,
+      "monthCount": 4,
+      "monthsCovered": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 2,
+      "validImageCount": 2,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575875139974",
+      "koreanName": "살오징어",
+      "filledTextFields": 9,
+      "monthCount": 4,
+      "monthsCovered": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1576639605225",
+      "koreanName": "삼치",
+      "filledTextFields": 9,
+      "monthCount": 3,
+      "monthsCovered": [
+        4,
+        5,
+        6
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 2,
+      "validImageCount": 2,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575873437839",
+      "koreanName": "오분자기",
+      "filledTextFields": 9,
+      "monthCount": 5,
+      "monthsCovered": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 2,
+      "validImageCount": 2,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575532529343",
+      "koreanName": "옥돔",
+      "filledTextFields": 8,
+      "monthCount": 4,
+      "monthsCovered": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1576639605226",
+      "koreanName": "전갱이",
+      "filledTextFields": 9,
+      "monthCount": 0,
+      "monthsCovered": [],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 2,
+      "validImageCount": 2,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575880014320",
+      "koreanName": "제주소라",
+      "filledTextFields": 9,
+      "monthCount": 6,
+      "monthsCovered": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1576639605227",
+      "koreanName": "주꾸미",
+      "filledTextFields": 9,
+      "monthCount": 6,
+      "monthsCovered": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 2,
+      "validImageCount": 2,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575880791880",
+      "koreanName": "참조기",
+      "filledTextFields": 9,
+      "monthCount": 5,
+      "monthsCovered": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575881532404",
+      "koreanName": "참홍어",
+      "filledTextFields": 9,
+      "monthCount": 4,
+      "monthsCovered": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "yearCount": 15,
+      "yearRange": [
+        2010,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 3,
+      "validImageCount": 3,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "sourceId": "fish_1575882272758",
+      "koreanName": "키조개",
+      "filledTextFields": 9,
+      "monthCount": 4,
+      "monthsCovered": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "yearCount": 25,
+      "yearRange": [
+        2000,
+        2024
+      ],
+      "yearsSorted": true,
+      "imageCount": 2,
+      "validImageCount": 2,
+      "duplicateImageCount": 1,
+      "issues": [],
+      "passed": true
+    }
+  ]
+}

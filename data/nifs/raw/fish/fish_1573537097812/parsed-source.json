@@ -1,0 +1,73 @@
+{
+  "sourceId": "fish_1573537097812",
+  "sourceFields": {
+    "rawApiKeys": {
+      "fishId": "fish_1573537097812",
+      "fishName": "붉은대게",
+      "scName": "Chionoecetes japonicus",
+      "prohibitSize": "0",
+      "recommendSize": "0",
+      "infoDistribution": "동해",
+      "infoGrowth": "산란기 2~3월, 최소성숙갑폭 암컷 55~75mm, 수컷 70~100mm",
+      "infoShape": "전체적으로 짙은 적색이며, 갑각의 뒷아가미구역이 부풀어올라 있으며 뒷부분의 경사가 급하고, 옆 가장자리 뒷부분에 예리한 가시가 있다(한국해양무척추동물도감).",
+      "infoDialect": "홍게",
+      "infoCatch": "연안통발, 근해통발",
+      "infoCookCal": "48",
+      "infoCookHow": "48 Kcal/100g\n○ 단백질: 10.5%\n     -  필수아미노산: 5,034mg\n○ 지방: 0.3%",
+      "infoEat": "홍게와 붉은대게의 차이\n홍게와 대게의 차이인가요?(홍게는 배표면이 붉은데 반해 대게는 배표면이 하얗다.)",
+      "display": "Y",
+      "graphComment": "TAC 준수",
+      "fishNameEn": "Red snow crab"
+    },
+    "mappedFields": {
+      "fishName": {
+        "screenLabel": "어종이름",
+        "normalizedField": "koreanName"
+      },
+      "fishNameEn": {
+        "screenLabel": "영문이름",
+        "normalizedField": "englishName"
+      },
+      "scName": {
+        "screenLabel": "학명",
+        "normalizedField": "scientificName"
+      },
+      "infoShape": {
+        "screenLabel": "특징",
+        "normalizedField": "feature"
+      },
+      "infoDistribution": {
+        "screenLabel": "분포",
+        "normalizedField": "distribution"
+      },
+      "infoGrowth": {
+        "screenLabel": "생애주기",
+        "normalizedField": "lifecycle"
+      },
+      "infoDialect": {
+        "screenLabel": "방언",
+        "normalizedField": "dialect"
+      },
+      "infoCatch": {
+        "screenLabel": "어획 방법",
+        "normalizedField": "catchMethod"
+      },
+      "infoCookHow": {
+        "screenLabel": "영양 정보",
+        "normalizedField": "nutrition"
+      },
+      "infoEat": {
+        "screenLabel": "알고 먹읍시다!",
+        "normalizedField": "eatingNote"
+      },
+      "prohibitSize": {
+        "screenLabel": "소비 지양 크기",
+        "normalizedField": "prohibitSize"
+      },
+      "recommendSize": {
+        "screenLabel": "소비 권장 크기",
+        "normalizedField": "recommendSize"
+      }
+    }
+  }
+}

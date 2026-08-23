@@ -1,0 +1,149 @@
+{
+  "sourceId": "fish_1575596889118",
+  "koreanName": "낙지",
+  "fields": {
+    "koreanName": "낙지",
+    "englishName": "Whiparm octopus",
+    "scientificName": "Octopus minor",
+    "feature": "몸은 가늘고 길며 완은 몸에 비하여 매우 가늘고 길다. 외투장이 외투폭보다 길며, 몸통은 난원형으로 이루며 뒤끝은 약간 뾰족하나 끝은 예리하지 않고 둥글다. 살아있을 때 몸통이 전체적으로 짙거나 옅은 회색을 띠지만 자극을 받게 되면 검붉은색 등 다양한 색깔로 위장하거나 위협색을 나타낸다.",
+    "distribution": "한국 전연안, 진흙 갯벌 조간대 하부에서부터 수심 100m 전후의 수심까지 다양한 저질 중국, 일본, 사할린 연안의 펄에 주로 분포한다.",
+    "lifecycle": "낙지는 총길이 약 70 cm까지 성장하고, 약 50 cm가 되면 성숙하여 알을 낳는다.\n산란시기는 지역에 따라 차이를 보이며 전남 득량만은 7~9월, 서해 가로림만 4~5월, 탄도만은 6~7월이 주 산란기로 팔의 내부에 난을 낳는다. 최대 70cm 까지 성장한다.",
+    "dialect": "낙자(여수, 고흥, 장흥, 보성, 무안, 영광, 함평, 신안, 목포), 낙주(통영, 남해, 하동, 거제), 석어, 소팔초어, 세발낙지, 꽃낙지, 돌낙지",
+    "catchMethod": "연안통발, 주낙",
+    "nutrition": "75 Kcal/100g\n○ 단백질: 16.3%\n- 필수아미노산: 3,654mg\n○ 지방: 0.5%\n- 포화지방산: 20.7%\n- 불포화지방산: 79.3%",
+    "eatingNote": null,
+    "prohibitSize": "70",
+    "recommendSize": "116"
+  },
+  "images": [
+    {
+      "fileName": "fish_1575596889118_157674589028103.jpg",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575596889118_157674589028103.jpg"
+    },
+    {
+      "fileName": "fish_1575596889118_157674589031504.jpg",
+      "sourceUrl": "https://download.nifs.go.kr/portal/ofiris/ME/sosf/fish_1575596889118_157674589031504.jpg"
+    }
+  ],
+  "recommendPeriod": [
+    {
+      "month": 5,
+      "colorLevel": "1",
+      "label": "자제"
+    },
+    {
+      "month": 6,
+      "colorLevel": "2",
+      "label": "지양"
+    },
+    {
+      "month": 7,
+      "colorLevel": "1",
+      "label": "자제"
+    }
+  ],
+  "catchHistory": [
+    {
+      "year": "2000",
+      "catchAverage": "5861"
+    },
+    {
+      "year": "2001",
+      "catchAverage": "5911"
+    },
+    {
+      "year": "2002",
+      "catchAverage": "5297"
+    },
+    {
+      "year": "2003",
+      "catchAverage": "7248"
+    },
+    {
+      "year": "2004",
+      "catchAverage": "7023"
+    },
+    {
+      "year": "2005",
+      "catchAverage": "7658"
+    },
+    {
+      "year": "2006",
+      "catchAverage": "7397"
+    },
+    {
+      "year": "2007",
+      "catchAverage": "8625"
+    },
+    {
+      "year": "2008",
+      "catchAverage": "7879"
+    },
+    {
+      "year": "2009",
+      "catchAverage": "7013"
+    },
+    {
+      "year": "2010",
+      "catchAverage": "6954"
+    },
+    {
+      "year": "2011",
+      "catchAverage": "6445"
+    },
+    {
+      "year": "2012",
+      "catchAverage": "5799"
+    },
+    {
+      "year": "2013",
+      "catchAverage": "5061"
+    },
+    {
+      "year": "2014",
+      "catchAverage": "5274"
+    },
+    {
+      "year": "2015",
+      "catchAverage": "6690"
+    },
+    {
+      "year": "2016",
+      "catchAverage": "6399"
+    },
+    {
+      "year": "2017",
+      "catchAverage": "6067"
+    },
+    {
+      "year": "2018",
+      "catchAverage": "5725"
+    },
+    {
+      "year": "2019",
+      "catchAverage": "5918"
+    },
+    {
+      "year": "2020",
+      "catchAverage": "6071"
+    },
+    {
+      "year": "2021",
+      "catchAverage": "6472"
+    },
+    {
+      "year": "2022",
+      "catchAverage": "5393"
+    },
+    {
+      "year": "2023",
+      "catchAverage": "5677"
+    },
+    {
+      "year": "2024",
+      "catchAverage": "5899"
+    }
+  ],
+  "parserVersion": "nifs-detail-v0.3.0",
+  "collectedAt": "2026-07-30T18:37:28.944219+00:00"
+}

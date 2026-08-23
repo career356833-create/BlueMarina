@@ -1,0 +1,93 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576639605224",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605224",
+  "fetchedAt": "2026-07-30T18:51:46.261258+00:00",
+  "sourceCheckedAt": "2026-07-30T18:51:46.261258+00:00",
+  "contentHash": "0d1315a0f807fdb16b40df895f0b90fa8920f5663e0e740868cf7948fc119d6a",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "periodList": [
+    {
+      "month": "1",
+      "colorLevel": "1"
+    },
+    {
+      "month": "2",
+      "colorLevel": "1"
+    },
+    {
+      "month": "3",
+      "colorLevel": "1"
+    },
+    {
+      "month": "4",
+      "colorLevel": "1"
+    },
+    {
+      "month": "5",
+      "colorLevel": "1"
+    },
+    {
+      "month": "6",
+      "colorLevel": "1"
+    },
+    {
+      "month": "7",
+      "colorLevel": "1"
+    },
+    {
+      "month": "8",
+      "colorLevel": "1"
+    },
+    {
+      "month": "9",
+      "colorLevel": "1"
+    },
+    {
+      "month": "10",
+      "colorLevel": "1"
+    },
+    {
+      "month": "11",
+      "colorLevel": "1"
+    },
+    {
+      "month": "12",
+      "colorLevel": "1"
+    }
+  ],
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "체색은 피와 같은 붉은색이다. 외투장에는 세로 줄무늬가 있으며, 신선한 상태에서는 외투장의 등쪽에 한쌍의 흰색 반점이 확인된다. 팔길이식은 2>3=1>4이다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "산란기는 3~5월로 추정된다. 산란 후 암컷이 알을 보호하며, 약 6~8개월 후에 유생이 부화한다. 부화된 유생은 약 3개월간 부유 유생기를 가지며, 이후 바닥에 착저한다. 1년이 지나면 40~100g 정도로 성장하며, 2년이 되면 1~2kg, 3년이 지나면 10~15kg으로 성장한다. 최대 크기는 약 50kg으로 보고된 바 있다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 3~5월로 추정된다",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1576639605224/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/1509003134918_watermark.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1576639605224/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1576639605224/images/original/image-002.jpg",
+    "fish/fish_1576639605224/images/original/image-001.jpg",
+    "fish/fish_1576639605224/images/original/image-002.jpg"
+  ],
+  "byteSize": 3141,
+  "mimeType": "application/json",
+  "title": "대문어",
+  "koreanName": "대문어",
+  "scientificName": "Enteroctopus dofleini"
+}

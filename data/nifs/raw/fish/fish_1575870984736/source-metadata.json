@@ -1,0 +1,20 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1575870984736",
+  "koreanName": "바지락",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1575870984736",
+  "apiUrl": "https://nifs.go.kr/portal/fr/chrpA/selectChrpFishViewData.do",
+  "requestMethod": "POST",
+  "requestContentType": "application/x-www-form-urlencoded",
+  "requestBody": {
+    "fishId": "fish_1575870984736"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json",
+  "contentLength": 2473,
+  "contentHash": "8cef56f70d276c27d8cb348cfa724eac5b3cd1652fdb5d9c1ff5bd70e191aeef",
+  "collectedAt": "2026-07-30T18:51:54.486831+00:00",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlMethod": "http",
+  "crawlStatus": "complete"
+}

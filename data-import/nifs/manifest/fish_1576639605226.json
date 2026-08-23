@@ -1,0 +1,43 @@
+{
+  "sourceProvider": "NIFS",
+  "sourceId": "fish_1576639605226",
+  "sourceUrl": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605226",
+  "fetchedAt": "2026-07-30T18:52:06.824368+00:00",
+  "sourceCheckedAt": "2026-07-30T18:52:06.824368+00:00",
+  "contentHash": "6e0ac9c732aa13d26f5561d48229c05f227ce037b9205b22869b982a1b2b1a74",
+  "parserVersion": "nifs-detail-v1.0.0",
+  "crawlStatus": "success",
+  "morphology": {
+    "source": "NIFS",
+    "rawKey": "infoShape",
+    "sourceText": "몸은 방추형이며, 머리길이가 몸 높이 보다 길다.  눈지름은 주둥이 길보다 길며, 아래턱이 약간 돌출하고 양턱에는 작은 이빨이 있다. 눈에 기름눈까풀이 발달해 있다. 등지느러미와 뒷지느러미 뒤쪽에는 작은 토막지느러미가 없다. 뒷지느러미 앞쪽에는 2개의 분리된 가시가 있다. 꼬리자루는 가늘고 꼬리지느러미는 크게 갈라져 있다.",
+    "sourceStatus": "present"
+  },
+  "feature": {
+    "source": "NIFS",
+    "rawKey": "infoFeature",
+    "sourceText": null,
+    "sourceStatus": "source_missing"
+  },
+  "growthText": "산란기는 북쪽으로 갈수록 늦어지며, 큐슈서부해역은 4~5월, 동중국해 중부해역은 2~3월, 그리고 제주도 근해는 6~8월로 알려져 있다. 체장 24cm이상이면 산란에 참여한다. 부화 후 1년이면 가랑이체장 약 17cm, 2년이면 23cm, 3년이면 27cm, 4년이면 30cm로 자란다. 체장은 약 40cm, 수명은 7세 이상으로 추정된다.",
+  "spawning": {
+    "source": "NIFS",
+    "text": "산란기는 북쪽으로 갈수록 늦어지며",
+    "derivedFrom": "infoGrowth"
+  },
+  "rawPayloadPath": "data/nifs/raw/fish/fish_1576639605226/detail-response.json",
+  "imageUrls": [
+    "https://download.nifs.go.kr/portal/ofiris/ME/sosf/MF0009707_DG0102_watermark.jpg"
+  ],
+  "rawMediaPaths": [
+    "data/nifs/raw/fish/fish_1576639605226/images/original/image-001.jpg",
+    "data/nifs/raw/fish/fish_1576639605226/images/original/image-002.jpg",
+    "fish/fish_1576639605226/images/original/image-001.jpg",
+    "fish/fish_1576639605226/images/original/image-002.jpg"
+  ],
+  "byteSize": 2473,
+  "mimeType": "application/json",
+  "title": "전갱이",
+  "koreanName": "전갱이",
+  "scientificName": "Trachurus japonicus"
+}
