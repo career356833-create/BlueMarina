@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
+import { DevAuditFloatingButton } from "@/components/dev-audit/DevAuditFloatingButton";
 import { PwaRegister } from "@/components/PwaRegister";
+import { devAuditEnabled } from "@/lib/dev-audit/audit-data";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -36,8 +39,22 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={inter.className}>
+        {process.env.NODE_ENV === "development" ? (
+          <Script id="blue-marina-dev-sw-reset" strategy="beforeInteractive">
+            {`if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.getRegistrations().then(function (registrations) {
+    if (!registrations.length) return;
+    var wasControlled = Boolean(navigator.serviceWorker.controller);
+    Promise.all(registrations.map(function (registration) { return registration.unregister(); }))
+      .then(function () { if (wasControlled) window.location.reload(); })
+      .catch(function () {});
+  }).catch(function () {});
+}`}
+          </Script>
+        ) : null}
         <PwaRegister />
         {children}
+        {devAuditEnabled ? <DevAuditFloatingButton /> : null}
       </body>
     </html>
   );

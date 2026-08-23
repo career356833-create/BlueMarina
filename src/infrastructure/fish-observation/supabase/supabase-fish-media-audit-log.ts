@@ -1,0 +1,2 @@
+import type { FishMediaAuditLog } from "../../../domain/fish-observation/storage/ports/fish-media-audit-log"; import type { FishSupabaseClient } from "./types";
+export class SupabaseFishMediaAuditLog implements FishMediaAuditLog { constructor(private readonly client: FishSupabaseClient) {} async append(input: Parameters<FishMediaAuditLog["append"]>[0]) { await this.client.insert("fish_change_logs", { entity_type: "fish_media", entity_id: input.mediaId ?? input.observationId, change_type: input.event, actor_type: "system", after_payload: input.context ?? {} }); } }

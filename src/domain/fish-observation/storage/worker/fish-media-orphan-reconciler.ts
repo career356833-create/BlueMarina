@@ -1,0 +1,2 @@
+import type { FishMediaCleanupJob } from "../drafts/fish-media-cleanup-contract";
+export function planOrphanCleanup(input: { bucket: FishMediaCleanupJob["bucket"]; storagePath: string; hasMediaRow: boolean; olderThanGrace: boolean; now: string }) { return !input.hasMediaRow && input.olderThanGrace ? { bucket: input.bucket, storagePath: input.storagePath, cleanupType: "orphan_storage_cleanup" as const, nextAttemptAt: input.now } : null; }

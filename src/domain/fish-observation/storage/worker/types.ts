@@ -1,0 +1,4 @@
+import type { FishMediaCleanupJob } from "../drafts/fish-media-cleanup-contract";
+export type ClaimedCleanupJob = FishMediaCleanupJob & { leaseToken: string; leaseExpiresAt: string; expectedVersion: number };
+export interface FishMediaCleanupStore { preview(limit: number, now: string): Promise<FishMediaCleanupJob[]>; claimBatch(input: { limit: number; workerId: string; now: string }): Promise<ClaimedCleanupJob[]>; complete(job: ClaimedCleanupJob): Promise<boolean>; retry(job: ClaimedCleanupJob, nextAttemptAt: string, code: string): Promise<boolean>; deadLetter(job: ClaimedCleanupJob, code: string): Promise<boolean>; }
+export type FishMediaCleanupSummary = { claimed: number; completed: number; retried: number; deadLettered: number; skipped: number; durationMs: number; dryRun: boolean; aborted: boolean };

@@ -1,0 +1,3 @@
+import type { FishRoleApprovalRepository } from "../ports/fish-role-approval-repository";
+import type { FishRoleClock } from "../ports/fish-role-clock";
+export class FishRoleApprovalReconciler { constructor(private readonly repository: FishRoleApprovalRepository, private readonly clock: FishRoleClock) {} async findManualReviewCandidates(maxAgeMs = 30 * 60_000) { return this.repository.findStaleConsumptionPending(new Date(this.clock.now().getTime() - maxAgeMs)); } async releaseFailedOperation(approvalId: string, operationId: string) { await this.repository.releaseConsumption(approvalId, operationId); } }

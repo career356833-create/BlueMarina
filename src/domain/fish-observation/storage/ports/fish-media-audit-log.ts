@@ -1,0 +1,2 @@
+export type FishMediaAuditEvent = "upload_requested" | "upload_url_issued" | "upload_expired" | "upload_finalized" | "media_processing_started" | "media_ready_private" | "media_ready_for_ai" | "media_delete_requested" | "media_publication_requested" | "media_published" | "access_denied" | "idempotency_conflict";
+export interface FishMediaAuditLog { append(input: { event: FishMediaAuditEvent; actorUserId: string; mediaId?: string; observationId: string; context?: Record<string, string> }): Promise<void>; }

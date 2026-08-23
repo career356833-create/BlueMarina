@@ -1,0 +1,2 @@
+import { FishMediaGatewayService } from "../../../domain/fish-observation/storage/application/fish-media-gateway-service"; import type { FishMediaServerDependencies } from "./fish-media-server-dependencies"; import { getFishMediaServerConfig } from "./fish-media-server-config";
+export function createFishMediaGateway(deps: FishMediaServerDependencies, env?: NodeJS.ProcessEnv) { const config = getFishMediaServerConfig(env); if (!config.enabled || config.mode === "disabled") throw new Error("FISH_MEDIA_GATEWAY_DISABLED"); return new FishMediaGatewayService(deps); }

@@ -1,0 +1,4 @@
+const fs = require("node:fs"); const path = require("node:path"); const ts = require("typescript"); const Module = require("node:module");
+const root = path.resolve(__dirname, "../../.."); const cache = new Map();
+function load(relative) { const file = path.join(root, relative); if (cache.has(file)) return cache.get(file).exports; const output = ts.transpileModule(fs.readFileSync(file, "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020, esModuleInterop: true } }).outputText; const mod = new Module(file, module); cache.set(file, mod); mod.filename = file; mod.paths = Module._nodeModulePaths(path.dirname(file)); const base = mod.require.bind(mod); mod.require = (request) => request === "server-only" ? {} : request.startsWith(".") ? load(path.relative(root, `${path.resolve(path.dirname(file), request)}.ts`)) : base(request); mod._compile(output, file); return mod.exports; }
+module.exports = { load };

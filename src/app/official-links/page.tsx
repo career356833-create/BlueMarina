@@ -43,48 +43,70 @@ const officialGroups: OfficialGroup[] = [
     icon: FileQuestion,
     items: [
       { title: "시험 일정 조회", icon: CalendarDays, url: "https://boat.kcg.go.kr/home/lcnsExpr/exprSchdulRcpt/exprRcpt1.do", status: "verified" },
-      { title: "필기시험 접수", icon: FileText, url: "https://boat.kcg.go.kr/home/lcnsExpr/exprSchdulRcpt/exprRcpt3.do", status: "identity-required" },
-      { title: "실기시험 접수", icon: Sailboat, url: "https://boat.kcg.go.kr/home/lcnsExpr/exprSchdulRcpt/exprRcpt3.do", status: "identity-required" },
-      { title: "시험 접수 확인/취소", icon: ClipboardCheck, url: "https://boat.kcg.go.kr/home/lcnsExpr/exprSchdulRcpt/exprChgRtrcn1.do", status: "identity-required" }
+      { title: "필기시험 접수", icon: FileText, url: "https://boat.kcg.go.kr/home/common/cert_info.do", status: "identity-required" },
+      { title: "실기시험 접수", icon: Sailboat, url: "https://boat.kcg.go.kr/home/common/cert_info.do", status: "identity-required" },
+      { title: "시험 접수 확인/취소", icon: ClipboardCheck, url: "https://boat.kcg.go.kr/home/common/cert_info.do", status: "identity-required" },
+      { title: "시험면제신청", icon: BadgeCheck, url: "https://boat.kcg.go.kr/home/common/cert_info.do", status: "identity-required" },
+      { title: "응시표 출력", icon: FileText, url: "https://boat.kcg.go.kr/home/common/cert_info.do", status: "identity-required" }
     ]
   },
   {
     title: "수상안전교육",
-    description: "교육 신청, 일정 확인, 온라인 교육, 이수 확인으로 이어질 공식 메뉴입니다.",
+    description: "교육 안내, 일정 확인, 접수, 이수 확인으로 이어질 공식 메뉴입니다.",
     guideHref: "/safety-guide",
     guideLabel: "수상안전교육 안내 보기",
     icon: ShieldCheck,
     items: [
-      { title: "수상안전교육 신청", icon: ShieldCheck, url: "https://boat.kcg.go.kr/home/wtrcSafeEdu/eduSchdulRcpt/eduRcpt3.do", status: "verified" },
+      { title: "교육 안내/준비물", icon: HelpCircle, url: "https://boat.kcg.go.kr/home/lcnsExpr/lcnsExprGdnc/infoView15.do", status: "verified" },
+      { title: "수상안전교육 신청", icon: ShieldCheck, url: "https://boat.kcg.go.kr/home/common/cert_info.do", status: "identity-required" },
       { title: "교육 일정 조회", icon: CalendarDays, url: "https://boat.kcg.go.kr/home/wtrcSafeEdu/eduSchdulRcpt/eduRcpt1.do", status: "verified" },
+      { title: "교육 접수 확인/변경/취소", icon: ClipboardCheck, url: "https://boat.kcg.go.kr/home/common/cert_info.do", status: "identity-required" },
       { title: "온라인 안전교육", icon: MonitorPlay, status: "checking" },
-      { title: "교육 수료증 출력/이수 확인", icon: BadgeCheck, url: "https://boat.kcg.go.kr/home/wtrcSafeEdu/eduSchdulRcpt/infoView1.do", status: "verified" }
+      { title: "교육 수료증 출력/이수 확인", icon: BadgeCheck, url: "https://boat.kcg.go.kr/home/common/cert_info.do", status: "identity-required" }
     ]
   },
   {
     title: "면허증",
-    description: "신규발급, 갱신, 재발급, 진위여부 조회로 이어질 공식 메뉴입니다.",
+    description: "면허발급 신청, 정보조회, 발급안내로 이어질 공식 메뉴입니다.",
     guideHref: "/license-issue",
     guideLabel: "면허증 발급 안내 보기",
     icon: IdCard,
     items: [
-      { title: "면허증 신규발급", icon: IdCard, url: "https://boat.kcg.go.kr/home/lcnsIssu/lcnseIssuInfo/infoView1.do", status: "verified" },
+      { title: "면허증 발급 안내", icon: IdCard, url: "https://boat.kcg.go.kr/home/lcnsIssu/lcnseIssuInfo/infoView1.do", status: "verified" },
       { title: "면허증 갱신", icon: BadgeCheck, url: "https://boat.kcg.go.kr/home/lcnsIssu/lcnsIssuAply/lcnsUpdt1.do", status: "identity-required" },
       { title: "면허증 재발급", icon: ClipboardCheck, url: "https://boat.kcg.go.kr/home/lcnsIssu/lcnsIssuAply/lcnsIsgn2.do", status: "identity-required" },
-      { title: "면허증 진위여부 조회", icon: CheckCircle2, url: "https://boat.kcg.go.kr/home/lcnsIssu/lcnsIssuAply/infoView1.do", status: "verified" }
+      { title: "조종면허 증명서 발급", icon: FileText, url: "https://boat.kcg.go.kr/home/lcnsIssu/lcnsIssuAply/lcnsIssuance.do", status: "identity-required" },
+      { title: "면허증 갱신 연기·사전", icon: CalendarDays, url: "https://boat.kcg.go.kr/home/lcnsIssu/lcnsIssuAply/updtPstpmnMvup1.do", status: "identity-required" },
+      { title: "면허증 진위여부 조회", icon: CheckCircle2, url: "https://boat.kcg.go.kr/home/lcnsIssu/lcnsIssuAply/infoView1.do", status: "verified" },
+      { title: "면허갱신 안내", icon: BadgeCheck, url: "https://boat.kcg.go.kr/home/lcnsIssu/lcnseIssuInfo/infoView2.do", status: "verified" },
+      { title: "분실 등 면허증 재발급 안내", icon: HelpCircle, url: "https://boat.kcg.go.kr/home/lcnsIssu/lcnseIssuInfo/infoView4.do", status: "verified" }
     ]
   },
   {
     title: "레저활동 신고",
-    description: "활동 신고 필요 여부와 공식 신고 메뉴로 이어질 영역입니다.",
+    description: "수상레저활동 신고, 확인/변경/취소, 다이버 신고, 종사자 교육, 활동 안내로 이어질 공식 메뉴입니다.",
     guideHref: "/leisure-report",
     guideLabel: "레저활동 신고 안내 보기",
     icon: Megaphone,
     items: [
       { title: "원거리 수상레저활동 신고", icon: Megaphone, url: "https://boat.kcg.go.kr/home/wtrlsrActInfo/ldstcWtrlsrActDclr/infoIns2.do", status: "identity-required" },
+      { title: "원거리 신고 확인/변경/취소", icon: ClipboardCheck, url: "https://boat.kcg.go.kr/home/wtrlsrActInfo/ldstcWtrlsrActDclr/infoChg1.do", status: "identity-required" },
       { title: "근거리 수상레저활동 자율신고", icon: Sailboat, url: "https://boat.kcg.go.kr/home/wtrlsrActInfo/sdstcWtrlsrActDclr/infoIns2.do", status: "identity-required" },
+      { title: "근거리 자율신고 확인/변경/취소", icon: ClipboardCheck, url: "https://boat.kcg.go.kr/home/wtrlsrActInfo/sdstcWtrlsrActDclr/infoChg1.do", status: "identity-required" },
       { title: "기상특보 시 활동신고", icon: ShieldCheck, url: "https://boat.kcg.go.kr/home/wtrlsrActInfo/weathrSpcnwsDclr/infoIns2.do", status: "identity-required" },
-      { title: "운항신고", icon: ClipboardCheck, url: "https://boat.kcg.go.kr/home/wtrlsrActInfo/wtrlsrNvgtDclr/infoIns2.do", status: "identity-required" }
+      { title: "기상특보신고 확인/변경/취소", icon: ClipboardCheck, url: "https://boat.kcg.go.kr/home/wtrlsrActInfo/weathrSpcnwsDclr/infoChg1.do", status: "identity-required" },
+      { title: "운항신고", icon: ClipboardCheck, url: "https://boat.kcg.go.kr/home/wtrlsrActInfo/wtrlsrNvgtDclr/infoIns2.do", status: "identity-required" },
+      { title: "운항신고 확인/변경/취소", icon: ClipboardCheck, url: "https://boat.kcg.go.kr/home/wtrlsrActInfo/wtrlsrNvgtDclr/infoChg1.do", status: "identity-required" },
+      { title: "원거리 수중레저활동(다이버) 신고", icon: Megaphone, url: "https://boat.kcg.go.kr/home/urms/ldstcUnderWtrlsrActDclr/infoIns2.do", status: "identity-required" },
+      { title: "다이버 신고 확인/변경/취소", icon: ClipboardCheck, url: "https://boat.kcg.go.kr/home/urms/ldstcUnderWtrlsrActDclr/infoChg1.do", status: "identity-required" },
+      { title: "종사자 교육 신청 확인", icon: ShieldCheck, url: "https://boat.kcg.go.kr/home/grdr/grdrEdu/eduChgRtrcn1.do", status: "identity-required" },
+      { title: "종사자 교육 수료증 출력", icon: BadgeCheck, url: "https://boat.kcg.go.kr/home/grdr/grdrEdu/infoView2.do", status: "verified" },
+      { title: "원거리 수상레저활동 안내", icon: HelpCircle, url: "https://boat.kcg.go.kr/home/wtrlsrActInfo/ldstcWtrlsrActDclr/infoView1.do", status: "verified" },
+      { title: "원거리 수중레저활동(다이버) 안내", icon: HelpCircle, url: "https://boat.kcg.go.kr/home/urms/ldstcUnderWtrlsrActDclr/infoView1.do", status: "verified" },
+      { title: "근거리 수상레저활동 안내", icon: HelpCircle, url: "https://boat.kcg.go.kr/home/wtrlsrActInfo/sdstcWtrlsrActDclr/infoView1.do", status: "verified" },
+      { title: "기상특보중 수상레저활동 안내", icon: ShieldCheck, url: "https://boat.kcg.go.kr/home/wtrlsrActInfo/weathrSpcnwsDclr/infoView1.do", status: "verified" },
+      { title: "수상레저활동 금지구역", icon: ShieldCheck, url: "https://boat.kcg.go.kr/home/wtrlsrActInfo/ldstcWtrlsrActDclr/infoView2.do", status: "verified" },
+      { title: "기구별 안전가이드", icon: HelpCircle, url: "https://boat.kcg.go.kr/home/lcnsExpr/lcnsExprGdnc/infoView21.do", status: "verified" }
     ]
   },
   {
@@ -137,7 +159,7 @@ function OfficialActionItem({ item }: { item: OfficialItem }) {
         href={item.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex min-h-[96px] w-full items-start gap-3 rounded-2xl border border-sky-100 bg-slate-50 p-4 text-left transition hover:border-sky-200 hover:bg-sky-50"
+        className="flex min-h-[76px] w-full items-center gap-3 rounded-2xl border border-sky-100 bg-slate-50 p-3 text-left transition hover:border-sky-200 hover:bg-sky-50 sm:min-h-[84px] sm:p-4"
         aria-label={`${item.title} 공식 사이트에서 새창으로 열기`}
       >
         {content}
@@ -148,7 +170,7 @@ function OfficialActionItem({ item }: { item: OfficialItem }) {
   return (
     <button
       type="button"
-      className="flex min-h-[96px] w-full cursor-not-allowed items-start gap-3 rounded-2xl border border-amber-100 bg-amber-50/60 p-4 text-left"
+      className="flex min-h-[76px] w-full cursor-not-allowed items-center gap-3 rounded-2xl border border-amber-100 bg-amber-50/60 p-3 text-left sm:min-h-[84px] sm:p-4"
       aria-label={`${item.title} URL 확인중`}
     >
       {content}
@@ -158,6 +180,8 @@ function OfficialActionItem({ item }: { item: OfficialItem }) {
 
 function OfficialGroupCard({ group }: { group: OfficialGroup }) {
   const Icon = group.icon;
+  const visibleItems = group.items.slice(0, 6);
+  const hiddenItems = group.items.slice(6);
 
   return (
     <section className="rounded-[2rem] border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
@@ -183,11 +207,24 @@ function OfficialGroupCard({ group }: { group: OfficialGroup }) {
         ) : null}
       </div>
 
-      <div className="mt-5 grid gap-3 sm:grid-cols-2">
-        {group.items.map((item) => (
+      <div className="mt-5 grid gap-2 sm:grid-cols-2 sm:gap-3">
+        {visibleItems.map((item) => (
           <OfficialActionItem key={`${group.title}-${item.title}`} item={item} />
         ))}
       </div>
+
+      {hiddenItems.length > 0 ? (
+        <details className="mt-3 rounded-2xl border border-sky-100 bg-sky-50/50 p-3">
+          <summary className="cursor-pointer list-none text-sm font-black text-sky-800">
+            추가 공식 메뉴 {hiddenItems.length}개 보기
+          </summary>
+          <div className="mt-3 grid gap-2 sm:grid-cols-2 sm:gap-3">
+            {hiddenItems.map((item) => (
+              <OfficialActionItem key={`${group.title}-${item.title}`} item={item} />
+            ))}
+          </div>
+        </details>
+      ) : null}
     </section>
   );
 }
@@ -205,6 +242,9 @@ export default function OfficialLinksPage() {
             <h2 className="text-lg font-black text-slate-950">실제 신청은 공식 사이트에서만 가능합니다</h2>
             <p className="mt-1 text-sm font-semibold leading-6 text-slate-500">
               공식 URL이 확인된 신청/조회 항목은 새창으로 연결됩니다. 실명인증이 필요한 메뉴는 공식 사이트 이동 후 본인확인 절차가 진행될 수 있습니다.
+            </p>
+            <p className="mt-2 text-sm font-semibold leading-6 text-slate-500">
+              시험 접수, 접수 확인/변경/취소, 시험면제신청, 응시표 출력은 같은 본인확인 페이지로 연결될 수 있으며 인증 후 공식 메뉴에서 진행합니다.
             </p>
           </div>
           <span className="w-fit rounded-full bg-sky-100 px-3 py-1 text-xs font-black text-sky-700">공식 URL 1차 연결</span>

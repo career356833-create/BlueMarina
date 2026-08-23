@@ -5,6 +5,7 @@ import Link from "next/link";
 import { LocateFixed, MapPin, Navigation2, Satellite } from "lucide-react";
 import { BottomNav } from "@/components/boat/BottomNav";
 import { fishingSpots, getFishingSpotTypeLabel, type FishingSpot } from "@/data/fishing-spots";
+import { fishingVillageRevitalizationProjects, type RevitalizationProject } from "@/data/fishing-village-revitalization-projects";
 import { nationalPorts, getNationalPortCoastLabel, type NationalPort } from "@/data/national-ports";
 import { localPorts, type LocalPort } from "@/data/local-ports";
 import { fixedPorts, type FixedPort } from "@/data/fixed-ports";
@@ -31,6 +32,7 @@ type MarinePlaceSelectionItem = {
   latNumber: number;
   lngNumber: number;
   coordinateGroupId: string;
+  revitalizationProjects: RevitalizationProjectSummary[];
 };
 
 type MarinePlaceCoordinateGroup = {
@@ -38,6 +40,24 @@ type MarinePlaceCoordinateGroup = {
   latNumber: number;
   lngNumber: number;
   items: MarinePlaceSelectionItem[];
+};
+
+type RevitalizationProjectSummary = {
+  id: string;
+  projectType: RevitalizationProject["projectType"];
+  projectTypeName: string;
+  selectedYear?: number;
+  sourceName: string;
+  sourceUrl: string;
+  sourceCheckedAt: string;
+  matchMethod?: string;
+  matchNote?: string;
+};
+
+type MarkerBadge = {
+  label: string;
+  fill: string;
+  text: string;
 };
 
 type ParsedFishingSpot = FishingSpot & {
@@ -153,6 +173,32 @@ function groupMarinePlaces(items: MarinePlaceSelectionItem[]) {
   });
 }
 
+function getRevitalizationTypeShortLabel(projectType: RevitalizationProject["projectType"]) {
+  switch (projectType) {
+    case "type_1":
+      return "경";
+    case "type_2":
+      return "생";
+    case "type_3":
+      return "안";
+    default:
+      return "신";
+  }
+}
+
+function getRevitalizationBadgeMeta(projectType: RevitalizationProject["projectType"]): MarkerBadge {
+  switch (projectType) {
+    case "type_1":
+      return { label: "경", fill: "#FFB020", text: "#062B5C" };
+    case "type_2":
+      return { label: "생", fill: "#35D07F", text: "#062B5C" };
+    case "type_3":
+      return { label: "안", fill: "#00D3C7", text: "#062B5C" };
+    default:
+      return { label: "신", fill: "#2E8BFF", text: "#FFFFFF" };
+  }
+}
+
 function layerChipClass(active: boolean) {
   return [
     "inline-flex min-h-10 items-center gap-2 rounded-full border px-3.5 py-2 text-[11px] font-black transition",
@@ -235,6 +281,7 @@ export function SeaMapView() {
   const [showNationalPorts, setShowNationalPorts] = useState(true);
   const [showLocalPorts, setShowLocalPorts] = useState(true);
   const [showFixedPorts, setShowFixedPorts] = useState(true);
+  const [showRevitalizationProjects, setShowRevitalizationProjects] = useState(true);
   const [isTopPanelExpanded, setIsTopPanelExpanded] = useState(false);
   const showFishingLayer = showFishingSpots;
   const setShowFishingLayer = setShowFishingSpots;
@@ -244,6 +291,44 @@ export function SeaMapView() {
   const setShowLocalLayer = setShowLocalPorts;
   const showFixedLayer = showFixedPorts;
   const setShowFixedLayer = setShowFixedPorts;
+  const activeRevitalizationProjects = useMemo(
+    () =>
+      fishingVillageRevitalizationProjects.filter(
+        (project) =>
+          (project.matchStatus === "exact_matched" || project.matchStatus === "matched") && Boolean(project.marinePlaceId)
+      ),
+    []
+  );
+  const revitalizationProjectsByMarinePlaceId = useMemo(() => {
+    const grouped = new Map<string, RevitalizationProjectSummary[]>();
+
+    activeRevitalizationProjects.forEach((project) => {
+      if (!project.marinePlaceId) {
+        return;
+      }
+
+      const nextProject: RevitalizationProjectSummary = {
+        id: project.id,
+        projectType: project.projectType,
+        projectTypeName: project.projectTypeName,
+        selectedYear: project.selectedYear,
+        sourceName: project.sourceName,
+        sourceUrl: project.sourceUrl,
+        sourceCheckedAt: project.sourceCheckedAt,
+        matchMethod: project.matchMethod,
+        matchNote: project.matchNote
+      };
+
+      const existing = grouped.get(project.marinePlaceId);
+      if (existing) {
+        existing.push(nextProject);
+      } else {
+        grouped.set(project.marinePlaceId, [nextProject]);
+      }
+    });
+
+    return grouped;
+  }, [activeRevitalizationProjects]);
   const [statusMessage, setStatusMessage] = useState<string>(
     KAKAO_KEY ? "현재 위치와 거점 정보를 지도로 준비하는 중입니다." : "카카오 지도 키를 설정하면 지도가 표시됩니다.",
   );
@@ -289,7 +374,8 @@ export function SeaMapView() {
         summary: buildPortSummary(port),
         latNumber: port.latNumber,
         lngNumber: port.lngNumber,
-        coordinateGroupId: getCoordinateGroupId(port.latNumber, port.lngNumber)
+        coordinateGroupId: getCoordinateGroupId(port.latNumber, port.lngNumber),
+        revitalizationProjects: revitalizationProjectsByMarinePlaceId.get(port.id) ?? []
       })),
       ...visibleLocalPorts.map((port) => ({
         kind: "local-port" as const,
@@ -298,7 +384,8 @@ export function SeaMapView() {
         summary: buildLocalPortSummary(port),
         latNumber: port.latNumber,
         lngNumber: port.lngNumber,
-        coordinateGroupId: getCoordinateGroupId(port.latNumber, port.lngNumber)
+        coordinateGroupId: getCoordinateGroupId(port.latNumber, port.lngNumber),
+        revitalizationProjects: revitalizationProjectsByMarinePlaceId.get(port.id) ?? []
       })),
       ...visibleFixedPorts.map((port) => ({
         kind: "fixed-port" as const,
@@ -307,10 +394,11 @@ export function SeaMapView() {
         summary: buildFixedPortSummary(port),
         latNumber: port.latNumber,
         lngNumber: port.lngNumber,
-        coordinateGroupId: getCoordinateGroupId(port.latNumber, port.lngNumber)
+        coordinateGroupId: getCoordinateGroupId(port.latNumber, port.lngNumber),
+        revitalizationProjects: revitalizationProjectsByMarinePlaceId.get(port.id) ?? []
       }))
     ],
-    [visibleFixedPorts, visibleLocalPorts, visibleNationalPorts]
+    [revitalizationProjectsByMarinePlaceId, visibleFixedPorts, visibleLocalPorts, visibleNationalPorts]
   );
 
   const visibleMarinePlaceGroups = useMemo(
@@ -469,10 +557,8 @@ export function SeaMapView() {
     const kakao = window.kakao.maps;
     const map = mapRef.current;
     const fishingMarkerImage = createSpotMarkerImage(kakao);
-    const marinePlaceGroupMarkerImage = (count: number) => createMarinePlaceGroupMarkerImage(kakao, count);
+    const marinePlaceGroupMarkerImage = (count: number, badge?: MarkerBadge) => createMarinePlaceGroupMarkerImage(kakao, count, badge);
     const nationalPortMarkerImage = createNationalPortMarkerImage(kakao);
-    const localPortMarkerImage = createLocalPortMarkerImage(kakao);
-    const fixedPortMarkerImage = createFixedPortMarkerImage(kakao);
     const currentLocationMarkerImage = createCurrentLocationMarkerImage(kakao);
 
     fishingMarkerRefs.current.forEach((marker) => marker.setMap(null));
@@ -506,15 +592,18 @@ export function SeaMapView() {
         const item = group.items[0];
         let markerImage = nationalPortMarkerImage;
         let zIndex = 5;
+        const revitalizationBadge = showRevitalizationProjects && item.revitalizationProjects.length > 0
+          ? getRevitalizationBadgeMeta(item.revitalizationProjects[0].projectType)
+          : undefined;
 
         if (item.kind === "local-port") {
-          markerImage = localPortMarkerImage;
+          markerImage = createLocalPortMarkerImage(kakao, revitalizationBadge);
           zIndex = 4;
-        }
-
-        if (item.kind === "fixed-port") {
-          markerImage = fixedPortMarkerImage;
+        } else if (item.kind === "fixed-port") {
+          markerImage = createFixedPortMarkerImage(kakao, revitalizationBadge);
           zIndex = 3;
+        } else {
+          markerImage = createNationalPortMarkerImage(kakao, revitalizationBadge);
         }
 
         const marker = new kakao.Marker({
@@ -535,10 +624,16 @@ export function SeaMapView() {
         return;
       }
 
+      const groupRevitalizationProjects = group.items.flatMap((item) => item.revitalizationProjects);
+      const groupBadge =
+        showRevitalizationProjects && groupRevitalizationProjects.length > 0
+          ? getRevitalizationBadgeMeta(groupRevitalizationProjects[0].projectType)
+          : undefined;
+
       const marker = new kakao.Marker({
         map,
         position: new kakao.LatLng(group.latNumber, group.lngNumber),
-        image: marinePlaceGroupMarkerImage(group.items.length),
+        image: marinePlaceGroupMarkerImage(group.items.length, groupBadge),
         title: `이 위치의 해양 거점 ${group.items.length}개`,
         clickable: true,
         zIndex: 7
@@ -568,7 +663,7 @@ export function SeaMapView() {
       marinePlaceMarkerRefs.current.forEach((marker) => marker.setMap(null));
       currentMarkerRef.current?.setMap(null);
     };
-  }, [currentLocation, showFishingLayer, sdkStatus, visibleFishingSpots, visibleMarinePlaceGroups]);
+  }, [currentLocation, showFishingLayer, sdkStatus, showRevitalizationProjects, visibleFishingSpots, visibleMarinePlaceGroups]);
 
   function handleRequestCurrentLocation() {
     if (!navigator.geolocation) {
@@ -610,6 +705,53 @@ export function SeaMapView() {
   }
 
   const visibleMarkerCount = (showFishingLayer ? visibleFishingSpots.length : 0) + visibleMarinePlaceGroups.length;
+
+  function renderRevitalizationProjects(projects: RevitalizationProjectSummary[]) {
+    if (projects.length === 0) {
+      return null;
+    }
+
+    return (
+      <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
+        <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">어촌신활력증진사업 대상지</p>
+        <div className="mt-2 space-y-2">
+          {projects.map((project) => (
+            <div key={project.id} className="rounded-[14px] border border-[#1F3A50] bg-[#071827] p-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded-full bg-[#2E8BFF]/15 px-2.5 py-1 text-[10px] font-black text-[#2E8BFF]">
+                  {getRevitalizationTypeShortLabel(project.projectType)}
+                </span>
+                <span className="rounded-full bg-[#00D3C7]/15 px-2.5 py-1 text-[10px] font-black text-[#00D3C7]">
+                  {project.projectTypeName}
+                </span>
+                {project.selectedYear ? (
+                  <span className="rounded-full bg-white/5 px-2.5 py-1 text-[10px] font-black text-[#D7E4F6]">
+                    {project.selectedYear}년
+                  </span>
+                ) : null}
+              </div>
+              <p className="mt-2 text-sm font-black text-white">{project.projectTypeName}</p>
+              {project.matchMethod || project.matchNote ? (
+                <p className="mt-1 text-[11px] font-semibold leading-5 text-[#9FB3C8]">
+                  {project.matchMethod}
+                  {project.matchNote ? ` · ${project.matchNote}` : ""}
+                </p>
+              ) : null}
+              <div className="mt-2 flex flex-wrap items-center gap-2 text-[11px] font-semibold leading-5 text-[#9FB3C8]">
+                <span>{project.sourceName}</span>
+                <span>·</span>
+                <a href={project.sourceUrl} target="_blank" rel="noreferrer" className="text-[#2E8BFF] underline decoration-[#2E8BFF]/40 underline-offset-2">
+                  공식 출처
+                </a>
+                <span>·</span>
+                <span>{project.sourceCheckedAt.slice(0, 10)}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative h-[100dvh] overflow-hidden bg-[#050F19] text-white">
@@ -669,6 +811,15 @@ export function SeaMapView() {
                 </button>
                 <button
                   type="button"
+                  onClick={handleRequestCurrentLocation}
+                  disabled={gpsStatus === "locating"}
+                  className="hidden min-h-9 items-center gap-1.5 rounded-full bg-[#2E8BFF] px-3 text-[11px] font-black text-white transition hover:bg-[#5aa4ff] disabled:cursor-not-allowed disabled:bg-[#2E8BFF]/55 md:inline-flex"
+                >
+                  <LocateFixed size={15} />
+                  현재 위치
+                </button>
+                <button
+                  type="button"
                   onClick={() => setIsTopPanelExpanded((value) => !value)}
                   className="min-h-9 rounded-full border border-[#1F3A50] bg-[#0E2233] px-3 text-[11px] font-black text-[#EAF2FF] transition hover:border-[#2E8BFF] hover:text-white md:min-h-0 md:py-1"
                   aria-expanded={isTopPanelExpanded}
@@ -718,6 +869,15 @@ export function SeaMapView() {
                     >
                       어촌정주어항
                       <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{visibleFixedPorts.length.toLocaleString()}</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setShowRevitalizationProjects((value) => !value)}
+                      className={layerChipClass(showRevitalizationProjects)}
+                      aria-pressed={showRevitalizationProjects}
+                    >
+                      신활력 사업지
+                      <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{activeRevitalizationProjects.length.toLocaleString()}</span>
                     </button>
                     {visibleMarinePlaceDuplicateGroupCount > 0 ? (
                       <span className="rounded-full bg-[#2E8BFF]/15 px-2.5 py-1 text-[10px] font-black text-[#2E8BFF]">
@@ -783,6 +943,15 @@ export function SeaMapView() {
                   >
                     <span className="md:hidden">정주</span><span className="hidden md:inline">어촌정주어항</span>
                     <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{visibleFixedPorts.length.toLocaleString()}</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setShowRevitalizationProjects((value) => !value)}
+                    className={`${layerChipClass(showRevitalizationProjects)} min-h-9 shrink-0 px-2.5 py-1.5 md:min-h-0 md:px-3 md:py-2`}
+                    aria-pressed={showRevitalizationProjects}
+                  >
+                    <span className="md:hidden">신활력</span><span className="hidden md:inline">신활력 사업지</span>
+                    <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-black">{activeRevitalizationProjects.length.toLocaleString()}</span>
                   </button>
                   {visibleMarinePlaceDuplicateGroupCount > 0 ? (
                     <span className="rounded-full bg-[#2E8BFF]/15 px-2.5 py-1 text-[10px] font-black text-[#2E8BFF]">
@@ -903,6 +1072,8 @@ export function SeaMapView() {
                   </div>
                 </div>
 
+                {renderRevitalizationProjects(revitalizationProjectsByMarinePlaceId.get(selectedNationalPort.id) ?? [])}
+
                 <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
                   <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">안내</p>
                   <p className="mt-1 text-sm font-semibold leading-6 text-white">국가어항 정보이며 실제 낚시 가능 여부와 출입 통제는 현장에서 확인해야 합니다.</p>
@@ -960,6 +1131,8 @@ export function SeaMapView() {
                     <p className="mt-1 text-sm font-black text-white">{selectedFixedPort.designatedAt ?? "미확인"}</p>
                   </div>
                 </div>
+
+                {renderRevitalizationProjects(revitalizationProjectsByMarinePlaceId.get(selectedFixedPort.id) ?? [])}
 
                 <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
                   <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">안내</p>
@@ -1019,6 +1192,8 @@ export function SeaMapView() {
                   </div>
                 </div>
 
+                {renderRevitalizationProjects(revitalizationProjectsByMarinePlaceId.get(selectedLocalPort.id) ?? [])}
+
                 <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
                   <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">안내</p>
                   <p className="mt-1 text-sm font-semibold leading-6 text-white">지방어항 정보이며 실제 낚시 가능 여부와 출입 통제는 현장에서 확인해야 합니다.</p>
@@ -1031,6 +1206,11 @@ export function SeaMapView() {
                     <div className="flex flex-wrap gap-2">
                       <span className="rounded-full bg-[#2E8BFF]/15 px-3 py-1 text-[11px] font-black text-[#2E8BFF]">동일 좌표 그룹</span>
                       <span className="rounded-full bg-[#00D3C7]/15 px-3 py-1 text-[11px] font-black text-[#00D3C7]">{selectedMarinePlaceGroup.items.length.toLocaleString()}곳</span>
+                      {selectedMarinePlaceGroup.items.some((item) => item.revitalizationProjects.length > 0) ? (
+                        <span className="rounded-full bg-[#FFB020]/15 px-3 py-1 text-[11px] font-black text-[#FFB020]">
+                          신활력 포함
+                        </span>
+                      ) : null}
                     </div>
                     <h2 className="mt-2 break-words text-lg font-black text-white">이 위치의 해양 거점 {selectedMarinePlaceGroup.items.length.toLocaleString()}개</h2>
                     <p className="mt-1 text-xs font-semibold leading-5 text-[#9FB3C8]">
@@ -1052,6 +1232,19 @@ export function SeaMapView() {
                       <div className="min-w-0">
                         <p className="truncate text-sm font-black text-white">{item.name}</p>
                         <p className="mt-1 break-words text-[11px] font-semibold leading-5 text-[#9FB3C8]">{item.summary}</p>
+                        {item.revitalizationProjects.length > 0 ? (
+                          <div className="mt-2 flex flex-wrap gap-1.5">
+                            {item.revitalizationProjects.map((project) => (
+                              <span
+                                key={project.id}
+                                className="rounded-full border border-[#FFB020]/30 bg-[#FFB020]/12 px-2.5 py-1 text-[10px] font-black text-[#FFB020]"
+                              >
+                                {project.projectTypeName}
+                                {project.selectedYear ? ` · ${project.selectedYear}년` : ""}
+                              </span>
+                            ))}
+                          </div>
+                        ) : null}
                         <span className="mt-2 inline-flex rounded-full bg-white/5 px-2.5 py-1 text-[10px] font-black text-[#D7E4F6]">
                           {getMarinePlaceLayerLabel(item.kind)}
                         </span>

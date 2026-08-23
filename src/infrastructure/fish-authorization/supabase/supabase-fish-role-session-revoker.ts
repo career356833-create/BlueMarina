@@ -1,0 +1,6 @@
+import { randomUUID } from "node:crypto";
+import type { FishRoleSessionRevoker } from "../../../domain/fish-authorization/ports/fish-role-session-revoker";
+import type { FishAuthAdminTransport } from "./types";
+import { SupabaseFishRoleError } from "./supabase-fish-role-errors";
+import { SupabaseFishRoleRevocationQueue } from "./supabase-fish-role-revocation-queue";
+export class SupabaseFishRoleSessionRevoker implements FishRoleSessionRevoker { constructor(private readonly transport: FishAuthAdminTransport, private readonly queue: SupabaseFishRoleRevocationQueue) {} async revokeAllSessions(userId: string) { try { await this.transport.signOutUser(userId, "global"); } catch { throw new SupabaseFishRoleError("FISH_ROLE_SESSION_REVOCATION_FAILED"); } } async markRevocationPending(userId: string) { const createdAt = new Date().toISOString(); await this.queue.enqueue({ jobId: randomUUID(), targetUserId: userId, operationId: `pending:${userId}`, revocationType: "role_revoked", priority: "normal", attemptCount: 0, status: "queued", leaseToken: null, leaseExpiresAt: null, nextAttemptAt: createdAt, lastErrorCode: null, expectedVersion: 1, providerRevocationCompleted: false, createdAt, completedAt: null, deadLetteredAt: null }); } }

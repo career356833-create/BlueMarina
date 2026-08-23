@@ -1,0 +1,1 @@
+import type { FishMediaGatewayDependencies } from "../../../domain/fish-observation/storage/application/fish-media-gateway-service"; export type FishMediaServerDependencies = FishMediaGatewayDependencies;

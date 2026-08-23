@@ -1,0 +1,2 @@
+export type FishImageProcessingErrorCode = "INVALID_MIME" | "MAGIC_BYTE_MISMATCH" | "IMAGE_DECODE_FAILED" | "IMAGE_TOO_LARGE" | "PIXEL_LIMIT_EXCEEDED" | "EXIF_PROCESSING_FAILED" | "HASH_MISMATCH" | "UNSUPPORTED_IMAGE_FORMAT" | "ANIMATED_IMAGE_NOT_ALLOWED" | "IMAGE_DIMENSION_TOO_SMALL";
+export class FishImageProcessingError extends Error { constructor(public readonly code: FishImageProcessingErrorCode, public readonly retryable: boolean, public readonly publicMessageKey: string, public readonly internalReason?: string) { super(code); } }

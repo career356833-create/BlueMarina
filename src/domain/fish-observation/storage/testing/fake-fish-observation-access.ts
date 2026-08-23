@@ -1,0 +1,2 @@
+import type { FishObservationAccess } from "../ports/fish-observation-access";
+export class FakeFishObservationAccess implements FishObservationAccess { observations = new Map<string, { ownerUserId: string; deletionStatus: "active" | "requested" | "deleted"; visibility: "private" | "shared" | "public" }>(); async getObservation(input: { observationId: string }) { return this.observations.get(input.observationId) ?? null; } }

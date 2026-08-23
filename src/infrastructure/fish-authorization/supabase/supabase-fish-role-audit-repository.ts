@@ -1,0 +1,5 @@
+import type { FishRoleAuditRepository } from "../../../domain/fish-authorization/ports/fish-role-audit-repository";
+import type { FishRoleAuditEvent } from "../../../domain/fish-authorization/application/types";
+import type { FishRoleDatabaseClient } from "./types";
+import { SupabaseFishRoleError } from "./supabase-fish-role-errors";
+export class SupabaseFishRoleAuditRepository implements FishRoleAuditRepository { constructor(private readonly client: FishRoleDatabaseClient) {} async append(event: FishRoleAuditEvent) { try { await this.client.insert("fish_role_operation_audit_logs", { event_id: event.eventId, operation_id: event.requestId, actor_user_id: event.actorUserId, target_user_id: event.targetUserId, action: event.action, previous_role: event.previousRole, new_role: event.newRole, approval_id: event.approvalId, reason_hash: event.reasonCodeOrHash, idempotency_key_hash: event.idempotencyKeyHash, result: event.result, session_revocation_status: event.sessionRevocationStatus, created_at: event.createdAt }); return event.eventId; } catch { throw new SupabaseFishRoleError("FISH_ROLE_AUDIT_WRITE_FAILED"); } } }

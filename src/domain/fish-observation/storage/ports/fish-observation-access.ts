@@ -1,0 +1,1 @@
+export interface FishObservationAccess { getObservation(input: { observationId: string }): Promise<{ ownerUserId: string; deletionStatus: "active" | "requested" | "deleted"; visibility: "private" | "shared" | "public" } | null>; }

@@ -26,8 +26,19 @@ function describeError(value: unknown) {
 
 export function PwaRegister() {
   useEffect(() => {
+    const handleDevelopmentRejection = (event: PromiseRejectionEvent) => {
+      if (process.env.NODE_ENV === "development" && event.reason instanceof Event) {
+        console.warn("[Blue Marina dev] ignored non-error browser event rejection", describeError(event.reason));
+        event.preventDefault();
+      }
+    };
+
+    window.addEventListener("unhandledrejection", handleDevelopmentRejection);
+
     if (!("serviceWorker" in navigator)) {
-      return;
+      return () => {
+        window.removeEventListener("unhandledrejection", handleDevelopmentRejection);
+      };
     }
 
     if (process.env.NODE_ENV === "development") {
@@ -56,6 +67,7 @@ export function PwaRegister() {
       }
 
       return () => {
+        window.removeEventListener("unhandledrejection", handleDevelopmentRejection);
         // Development intentionally unregisters service workers to avoid stale UI/CSS.
       };
     }
@@ -85,7 +97,9 @@ export function PwaRegister() {
         console.error("[Blue Marina SW] register threw", describeError(error));
       }
     }
-    return;
+    return () => {
+      window.removeEventListener("unhandledrejection", handleDevelopmentRejection);
+    };
   }, []);
 
   return null;

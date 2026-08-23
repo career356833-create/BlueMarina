@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/", label: "홈", icon: Home, activePath: "/" },
-  { href: "/sea-info", label: "바다", icon: Compass, activePath: "/sea-info" },
+  { href: "/sea", label: "바다", icon: Compass, activePath: "/sea" },
   { href: "/fish", label: "낚시", icon: MessageCircle, activePath: "/fish" },
   {
     href: "/coming-soon?section=%EB%A7%88%EC%BC%93&feature=%EB%A7%88%EC%BC%93",

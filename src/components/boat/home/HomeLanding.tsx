@@ -287,10 +287,10 @@ function PreviewSection({ title, href, items }: { title: string; href: string; i
 
 function HomeHeader() {
   const chips = [
-    { label: "오늘의 바다", icon: Waves },
-    { label: "실시간 조황", icon: Fish },
-    { label: "핵심 4CTA", icon: BookOpenCheck },
-    { label: "빠른 출항", icon: Navigation }
+    { label: "오늘의 바다", href: "/sea", icon: Waves },
+    { label: "실시간 조황", href: comingSoonHref("조황", "실시간 조황"), icon: Fish },
+    { label: "주요 기능", href: "#primary-actions", icon: BookOpenCheck },
+    { label: "빠른 출항", href: "/fishing-spots", icon: Navigation }
   ];
 
   return (
@@ -330,13 +330,14 @@ function HomeHeader() {
         {chips.map((chip) => {
           const Icon = chip.icon;
           return (
-            <span
+            <Link
               key={chip.label}
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-black text-white/90"
+              href={chip.href}
+              className="inline-flex min-h-9 items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-black text-white/90 transition hover:border-[#2E8BFF]/50 hover:bg-[#2E8BFF]/15"
             >
               <Icon size={13} />
               {chip.label}
-            </span>
+            </Link>
           );
         })}
       </div>
@@ -446,7 +447,7 @@ export function HomeLanding() {
         <VoiceAssistantCard />
       </section>
 
-      <section className="grid grid-cols-2 gap-2 md:grid-cols-4">
+      <section id="primary-actions" className="scroll-mt-4 grid grid-cols-2 gap-2 md:grid-cols-4">
         {primaryActions.map((item) => (
           <ActionCard key={item.title} item={item} />
         ))}

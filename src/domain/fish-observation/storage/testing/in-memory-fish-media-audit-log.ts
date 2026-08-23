@@ -1,0 +1,2 @@
+import type { FishMediaAuditLog, FishMediaAuditEvent } from "../ports/fish-media-audit-log";
+export class InMemoryFishMediaAuditLog implements FishMediaAuditLog { events: Array<{ event: FishMediaAuditEvent; actorUserId: string; mediaId?: string; observationId: string; context?: Record<string, string> }> = []; async append(event: { event: FishMediaAuditEvent; actorUserId: string; mediaId?: string; observationId: string; context?: Record<string, string> }) { this.events.push(event); } }

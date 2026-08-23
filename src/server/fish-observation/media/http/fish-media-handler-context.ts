@@ -1,0 +1,6 @@
+import type { FishMediaRequestContext } from "../fish-media-request-context";
+export type FishMediaHttpRequest = { method: string; headers: Record<string, string | undefined>; pathParams: Record<string, string>; body?: unknown; origin?: string | null };
+export type FishMediaHttpResponse = { status: number; headers?: Record<string, string>; body: Record<string, unknown> };
+export interface FishMediaAuthProvider { authenticate(request: FishMediaHttpRequest): Promise<FishMediaRequestContext | null>; }
+export interface FishMediaRateLimiter { consume(input: { actorUserId: string; action: "upload_request" | "finalize" | "delete" | "publish"; observationId: string }): Promise<{ allowed: boolean; retryAfterSeconds?: number }>; }
+export type FishMediaHandlerContext = { enabled: boolean; allowedOrigins: string[]; auth: FishMediaAuthProvider; limiter: FishMediaRateLimiter; gateway: { createObservationUpload(input: Record<string, unknown>): Promise<Record<string, unknown>>; finalizeObservationUpload(input: Record<string, unknown>): Promise<Record<string, unknown>>; requestMediaDeletion(input: Record<string, unknown>): Promise<Record<string, unknown>>; publishObservationMedia(input: Record<string, unknown>): Promise<Record<string, unknown>>; }; };

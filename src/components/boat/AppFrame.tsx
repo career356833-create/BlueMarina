@@ -5,7 +5,7 @@ import { BottomNav } from "@/components/boat/BottomNav";
 
 const desktopNav = [
   { href: "/", label: "홈" },
-  { href: "/sea-info", label: "바다" },
+  { href: "/sea", label: "바다" },
   { href: "/fish", label: "낚시" },
   { href: "/coming-soon?section=%EB%A7%88%EC%BC%93&feature=%EB%A7%88%EC%BC%93", label: "마켓" },
   { href: "/license-guide", label: "MY" }
