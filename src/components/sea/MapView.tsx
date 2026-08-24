@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { LocateFixed, MapPin, Navigation2, Satellite } from "lucide-react";
+import { ArrowRight, LocateFixed, MapPin, Navigation2, Satellite } from "lucide-react";
 import { BottomNav } from "@/components/boat/BottomNav";
 import { fishingSpots, getFishingSpotTypeLabel, type FishingSpot } from "@/data/fishing-spots";
 import { fishingVillageRevitalizationProjects, type RevitalizationProject } from "@/data/fishing-village-revitalization-projects";
@@ -795,7 +795,16 @@ export function SeaMapView() {
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
                 <p className="hidden text-[11px] font-black uppercase tracking-[0.26em] text-[#9FB3C8] md:block">Blue Marina Sea</p>
-                <h1 className="text-[18px] font-black tracking-tight md:mt-1 md:text-[26px]">바다 지도</h1>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 md:mt-1">
+                  <h1 className="text-[18px] font-black tracking-tight md:text-[26px]">바다 지도</h1>
+                  <Link
+                    href="/today-sea"
+                    className="inline-flex min-h-8 items-center gap-1.5 rounded-full border border-[#1F3A50] bg-[#0E2233] px-3 text-[10px] font-black text-[#D7E4F6] transition hover:border-[#2E8BFF] hover:text-white md:text-[11px]"
+                  >
+                    오늘의 바다
+                    <ArrowRight size={13} aria-hidden="true" />
+                  </Link>
+                </div>
                 <p className="mt-1 hidden text-xs font-semibold leading-5 text-[#D7E4F6] md:block">현재 위치와 거점을 지도에서 바로 확인하세요.</p>
               </div>
               <div className="flex items-center gap-1.5 md:flex-col md:items-end md:gap-2">
