@@ -4,11 +4,12 @@ import { Anchor, Bell, Menu } from "lucide-react";
 import { BottomNav } from "@/components/boat/BottomNav";
 
 const desktopNav = [
-  { href: "/", label: "홈" },
-  { href: "/sea", label: "바다" },
-  { href: "/fish", label: "낚시" },
-  { href: "/coming-soon?section=%EB%A7%88%EC%BC%93&feature=%EB%A7%88%EC%BC%93", label: "마켓" },
-  { href: "/license-guide", label: "MY" }
+  { href: "/", label: "HOME" },
+  { href: "/sea", label: "SEA" },
+  { href: "/fishing-spots", label: "FISHING" },
+  { href: "/fish", label: "FISH" },
+  { href: "/coming-soon?section=%EB%A7%88%EC%BC%93&feature=%EB%A7%88%EC%BC%93", label: "MARKET" },
+  { href: "/license-guide", label: "GUIDE" }
 ];
 
 export function AppFrame({ children }: PropsWithChildren) {

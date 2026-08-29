@@ -2,25 +2,19 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BottomNav } from "@/components/boat/BottomNav";
-import { ExploreSeaSection } from "@/components/boat/home/ExploreSeaSection";
-import { FishingExperienceSection } from "@/components/boat/home/FishingExperienceSection";
 import { MarineVideoHero } from "@/components/boat/home/MarineVideoHero";
-import { TodaysSeaExperience } from "@/components/boat/home/TodaysSeaExperience";
 
 const serviceLinks = [
-  { href: "/today-sea", label: "Today's Sea", description: "오늘의 해양 정보" },
-  { href: "/sea", label: "Sea", description: "바다 지도와 해역 탐색" },
-  { href: "/fish", label: "Fish", description: "어종 정보와 낚시도감" },
-  { href: "/fishing-spots", label: "Spots", description: "출조 포인트 탐색" }
+  { href: "/today-sea", label: "오늘의 바다", description: "물때와 해양 기상" },
+  { href: "/sea", label: "바다 지도", description: "해역과 거점 탐색" },
+  { href: "/fishing-spots", label: "낚시 포인트", description: "출조 지역 검색" },
+  { href: "/fish", label: "어종 도감", description: "어종 정보와 기록" }
 ] as const;
 
 export function HomeLanding() {
   return (
     <div className="min-h-screen bg-[#030b15] text-white">
       <MarineVideoHero />
-      <TodaysSeaExperience showHeader={false} />
-      <ExploreSeaSection />
-      <FishingExperienceSection />
 
       <section id="home-services" className="border-y border-white/10 bg-[#050f19]" aria-label="서비스 바로가기">
         <div className="mx-auto grid w-full max-w-[1540px] grid-cols-2 px-5 sm:px-8 lg:grid-cols-4 lg:px-12">

@@ -4,11 +4,12 @@ import { Anchor, ArrowDown, ArrowRight, Compass } from "lucide-react";
 export const MARINE_HERO_VIDEO_PATH = "/media/blue-marina-marina-hero.mp4";
 
 const desktopNav = [
+  { href: "/", label: "Home" },
   { href: "/sea", label: "Sea" },
+  { href: "/fishing-spots", label: "Fishing" },
   { href: "/fish", label: "Fish" },
-  { href: "/fishing-spots", label: "Spots" },
-  { href: "/license-guide", label: "Guide" },
-  { href: "/license-guide", label: "My" }
+  { href: "/coming-soon?section=%EB%A7%88%EC%BC%93&feature=%EB%A7%88%EC%BC%93", label: "Market" },
+  { href: "/license-guide", label: "Guide" }
 ] as const;
 
 export function MarineVideoHero() {
