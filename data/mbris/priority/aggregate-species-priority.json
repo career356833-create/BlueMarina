@@ -1,0 +1,1530 @@
+[
+  {
+    "aggregateName": "불가사리",
+    "aggregateId": "AGG-000001",
+    "taxonomicScope": "Asteroidea",
+    "candidateSpecies": [
+      {
+        "internalId": "BM-SPECIES-007244",
+        "koreanName": "검은불가사리",
+        "scientificName": "Lethasterias fusca",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007245",
+        "koreanName": "일본불가사리",
+        "scientificName": "Distolasterias nipon",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007246",
+        "koreanName": "단단불가사리",
+        "scientificName": "Sclerasterias satsumana",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007247",
+        "koreanName": "아팰불가사리",
+        "scientificName": "Aphelasterias japonica",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007248",
+        "koreanName": "왕관불가사리",
+        "scientificName": "Coronaster volsellatus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007249",
+        "koreanName": "팔손이불가사리",
+        "scientificName": "Coscinasterias acutispina",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007250",
+        "koreanName": "흰뿔관불가사리",
+        "scientificName": "Stephanasterias albula",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007252",
+        "koreanName": "유연불가사리",
+        "scientificName": "Lysastrosoma anthosticta",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007253",
+        "koreanName": "문어다리불가사리",
+        "scientificName": "Plazaster borealis",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007254",
+        "koreanName": "그물불가사리",
+        "scientificName": "Evasterias retifera",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007255",
+        "koreanName": "가시그물불가사리",
+        "scientificName": "Evasterias echinosoma",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007256",
+        "koreanName": "아무르불가사리",
+        "scientificName": "Asterias amurensis",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007258",
+        "koreanName": "별불가사리",
+        "scientificName": "Patiria pectinifera",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007260",
+        "koreanName": "작은별불가사리",
+        "scientificName": "Aquilonastra minor",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007261",
+        "koreanName": "볼록별불가사리",
+        "scientificName": "Aquilonastra batheri",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007262",
+        "koreanName": "오각관불가사리",
+        "scientificName": "Pentaceraster regulus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007263",
+        "koreanName": "긴팔불가사리",
+        "scientificName": "Ophidiaster cribrarius",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007264",
+        "koreanName": "푸른불가사리",
+        "scientificName": "Linckia laevigata",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007265",
+        "koreanName": "빨강불가사리",
+        "scientificName": "Certonardoa semiregularis",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007267",
+        "koreanName": "장미모양불가사리",
+        "scientificName": "Rosaster symbolicus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007268",
+        "koreanName": "메디불가사리",
+        "scientificName": "Mediaster brachiatus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007269",
+        "koreanName": "부푼불가사리",
+        "scientificName": "Poraniopsis inflata",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007271",
+        "koreanName": "작은불가사리",
+        "scientificName": "Leptychaster arcticus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007272",
+        "koreanName": "울퉁작은불가사리",
+        "scientificName": "Leptychaster anomalus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007273",
+        "koreanName": "마른불가사리",
+        "scientificName": "Dipsacaster pretiosus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007274",
+        "koreanName": "피셀측불가사리",
+        "scientificName": "Ctenopleura fisheri",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007275",
+        "koreanName": "루드윅측불가사리",
+        "scientificName": "Ctenopleura ludwigi",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007277",
+        "koreanName": "가시불가사리",
+        "scientificName": "Astropecten polyacanthus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007278",
+        "koreanName": "전갈가시불가사리",
+        "scientificName": "Astropecten scoparius",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007279",
+        "koreanName": "가고시마가시불가사리",
+        "scientificName": "Astropecten kagoshimensis",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007281",
+        "koreanName": "헛불가사리",
+        "scientificName": "Pseudarchaster parelii",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007283",
+        "koreanName": "검은띠불가사리",
+        "scientificName": "Luidia quinaria",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007284",
+        "koreanName": "반점검은띠불가사리",
+        "scientificName": "Luidia maculata",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007285",
+        "koreanName": "거친검은띠불가사리",
+        "scientificName": "Luidia avicularia",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007286",
+        "koreanName": "빗살판불가사리",
+        "scientificName": "Ctenodiscus crispatus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007288",
+        "koreanName": "삼각애기불가사리",
+        "scientificName": "Henricia densispina",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007289",
+        "koreanName": "하야시애기불가사리",
+        "scientificName": "Henricia hayashii",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007290",
+        "koreanName": "적은가시애기불가사리",
+        "scientificName": "Henricia tumida",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007291",
+        "koreanName": "짧은가시애기불가사리",
+        "scientificName": "Henricia exigua",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007292",
+        "koreanName": "초승달애기불가사리",
+        "scientificName": "Henricia kinkasana",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007294",
+        "koreanName": "불규칙애기불가사리",
+        "scientificName": "Henricia irregularis",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007296",
+        "koreanName": "구멍애기불가사리",
+        "scientificName": "Henricia perforata",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007297",
+        "koreanName": "굽은애기불가사리",
+        "scientificName": "Henricia epiphysialis",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007298",
+        "koreanName": "거친애기불가사리",
+        "scientificName": "Henricia oculata",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007299",
+        "koreanName": "빨간애기불가사리",
+        "scientificName": "Henricia sanguinolenta",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007300",
+        "koreanName": "변칙애기불가사리",
+        "scientificName": "Henricia anomala",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007301",
+        "koreanName": "그물애기불가사리",
+        "scientificName": "Henricia reticulata",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007302",
+        "koreanName": "태평양애기불가사리",
+        "scientificName": "Henricia pacifica",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007303",
+        "koreanName": "작은애기불가사리",
+        "scientificName": "Henricia elachys",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007304",
+        "koreanName": "네모애기불가사리",
+        "scientificName": "Henricia regularis",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007305",
+        "koreanName": "육질애기불가사리",
+        "scientificName": "Henricia pachyderma",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007306",
+        "koreanName": "오지마애기불가사리",
+        "scientificName": "Henricia ohshimai",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007307",
+        "koreanName": "애기불가사리",
+        "scientificName": "Henricia nipponica",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007308",
+        "koreanName": "콩팥애기불가사리",
+        "scientificName": "Henricia reniossa",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007309",
+        "koreanName": "미끈애기불가사리",
+        "scientificName": "Henricia leviuscula",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007310",
+        "koreanName": "알루샨애기불가사리",
+        "scientificName": "Aleutihenricia beringiana",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007311",
+        "koreanName": "입방불가사리",
+        "scientificName": "Pteraster tesselatus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007312",
+        "koreanName": "주름입방불가사리",
+        "scientificName": "Pteraster militaris",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007313",
+        "koreanName": "복방석불가사리",
+        "scientificName": "Diplopteraster multipes",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007314",
+        "koreanName": "차극유가시불가사리",
+        "scientificName": "Nearchaster pedicellaris",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007316",
+        "koreanName": "왜주름불가사리",
+        "scientificName": "Crossaster japonicus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007317",
+        "koreanName": "주름불가사리",
+        "scientificName": "Crossaster papposus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007318",
+        "koreanName": "주황햇님불가사리",
+        "scientificName": "Solaster paxillatus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007319",
+        "koreanName": "넓은햇님불가사리",
+        "scientificName": "Solaster endeca",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007320",
+        "koreanName": "도우손햇님불가사리",
+        "scientificName": "Solaster dawsoni",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007321",
+        "koreanName": "우치다햇님불가사리",
+        "scientificName": "Solaster uchidai",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007322",
+        "koreanName": "붉은갈기불가사리",
+        "scientificName": "Lophaster furcilliger",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007251",
+        "koreanName": "동양차극불가사리",
+        "scientificName": "Pedicellaster orientalis",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007257",
+        "koreanName": "잎사귀거위발불가사리",
+        "scientificName": "Anseropoda petaloides",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007259",
+        "koreanName": "도란물별불가사리",
+        "scientificName": "Aquilonastra doranae",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007266",
+        "koreanName": "별모양불가사리",
+        "scientificName": "Stellaster childreni",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007270",
+        "koreanName": "가시가장자리불가사리",
+        "scientificName": "Marginaster paucispinus",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007276",
+        "koreanName": "모서리불가사리",
+        "scientificName": "Craspidaster hesperus",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007280",
+        "koreanName": "모본불가사리",
+        "scientificName": "Paragonaster ctenipes",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007243",
+        "koreanName": "극검은불가사리",
+        "scientificName": "Lethasterias nanimensis chelifera",
+        "score": 5,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS",
+          "SCIENTIFIC_NAME_UNCERTAIN"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007287",
+        "koreanName": "긴팔애기불가사리",
+        "scientificName": "Henricia reniossa asiatica",
+        "score": 5,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS",
+          "SCIENTIFIC_NAME_UNCERTAIN"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007295",
+        "koreanName": "알루샨긴가시애기불가사리",
+        "scientificName": "Henricia longispina aleutica",
+        "score": 5,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS",
+          "SCIENTIFIC_NAME_UNCERTAIN"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007282",
+        "koreanName": "깊은검은띠불가사리",
+        "scientificName": "Luidia sagamina sagamina",
+        "score": 0,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "SCIENTIFIC_NAME_UNCERTAIN"
+        ]
+      }
+    ]
+  },
+  {
+    "aggregateName": "성게",
+    "aggregateId": "AGG-000002",
+    "taxonomicScope": "Echinoidea",
+    "candidateSpecies": [
+      {
+        "internalId": "BM-SPECIES-007110",
+        "koreanName": "분지성게",
+        "scientificName": "Temnopleurus toreumaticus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007111",
+        "koreanName": "하드윅분지성게",
+        "scientificName": "Temnopleurus hardwickii",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007112",
+        "koreanName": "보라성게",
+        "scientificName": "Heliocidaris crassispina",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007113",
+        "koreanName": "만두성게",
+        "scientificName": "Echinometra mathaei",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007114",
+        "koreanName": "흰수염성게",
+        "scientificName": "Tripneustes gratilla",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007115",
+        "koreanName": "주발성게",
+        "scientificName": "Toxopneustes pileolus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007116",
+        "koreanName": "파동측강성게",
+        "scientificName": "Coelopleurus undulatus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007117",
+        "koreanName": "가시왕관성게",
+        "scientificName": "Diadema setosum",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007119",
+        "koreanName": "가는관극성게",
+        "scientificName": "Phalacrocidaris japonica",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007121",
+        "koreanName": "유연각성게",
+        "scientificName": "Asthenosoma ijimai",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007122",
+        "koreanName": "구멍연잎성게",
+        "scientificName": "Astriclypeus mannii",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007123",
+        "koreanName": "브로지연잎성게",
+        "scientificName": "Peronella japonica",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007124",
+        "koreanName": "연잎성게",
+        "scientificName": "Scaphechinus mirabilis",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007125",
+        "koreanName": "방패연잎성게",
+        "scientificName": "Clypeaster japonicus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007126",
+        "koreanName": "초록방패연잎성게",
+        "scientificName": "Clypeaster virescens",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007127",
+        "koreanName": "조각관성게",
+        "scientificName": "Glyptocidaris crenularis",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007128",
+        "koreanName": "의염통성게",
+        "scientificName": "Nacospatangus altus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007129",
+        "koreanName": "모래무치염통성게",
+        "scientificName": "Echinocardium cordatum",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007130",
+        "koreanName": "큰염통성게",
+        "scientificName": "Brissus agassizii",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007131",
+        "koreanName": "낮은염통성게",
+        "scientificName": "Brisaster latifrons",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007132",
+        "koreanName": "염통성게",
+        "scientificName": "Schizaster lacunosus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007223",
+        "koreanName": "연약둥근성게",
+        "scientificName": "Strongylocentrotus pallidus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007224",
+        "koreanName": "둥근성게",
+        "scientificName": "Mesocentrotus nudus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007315",
+        "koreanName": "모서리관극성게",
+        "scientificName": "Goniocidaris biserialis",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007336",
+        "koreanName": "새치성게",
+        "scientificName": "Strongylocentrotus intermedius",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007337",
+        "koreanName": "분홍성게",
+        "scientificName": "Pseudocentrotus depressus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007338",
+        "koreanName": "말똥성게",
+        "scientificName": "Hemicentrotus pulcherrimus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007340",
+        "koreanName": "작은성게",
+        "scientificName": "Temnotrema sculptum",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007341",
+        "koreanName": "고높은분지성게",
+        "scientificName": "Mespilia globulus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007342",
+        "koreanName": "올리브분지성게",
+        "scientificName": "Microcyphus olivaceus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007343",
+        "koreanName": "바늘분지성게",
+        "scientificName": "Temnopleurus reevesii",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007118",
+        "koreanName": "한국만두등성게",
+        "scientificName": "Echinolampas koreana",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007120",
+        "koreanName": "톱니관극성게",
+        "scientificName": "Prionocidaris baculosa",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007133",
+        "koreanName": "뤼트겐염통성게",
+        "scientificName": "Spatangus luetkeni",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007339",
+        "koreanName": "빨강작은성게",
+        "scientificName": "Temnotrema rubrum",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      }
+    ]
+  },
+  {
+    "aggregateName": "해삼",
+    "aggregateId": "AGG-000003",
+    "taxonomicScope": "Holothuroidea",
+    "candidateSpecies": [
+      {
+        "internalId": "BM-SPECIES-007134",
+        "koreanName": "가시닻해삼",
+        "scientificName": "Protankyra bidentata",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007136",
+        "koreanName": "주걱닻해삼",
+        "scientificName": "Oestergrenia dubia",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007138",
+        "koreanName": "보라바퀴해삼",
+        "scientificName": "Polycheira rufescens",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007139",
+        "koreanName": "돌기해삼",
+        "scientificName": "Apostichopus japonicus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007140",
+        "koreanName": "검은점돌기해삼",
+        "scientificName": "Parastichopus nigripunctatus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007141",
+        "koreanName": "중간해삼",
+        "scientificName": "Synallactes nozawai",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007143",
+        "koreanName": "흰해삼",
+        "scientificName": "Paracaudina chilensis",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007144",
+        "koreanName": "꼬리해삼",
+        "scientificName": "Caudina similis",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007146",
+        "koreanName": "은족해삼",
+        "scientificName": "Molpadia oolitica",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007149",
+        "koreanName": "이원촉수해삼",
+        "scientificName": "Amphicyclus japonicus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007152",
+        "koreanName": "오각해삼",
+        "scientificName": "Pentacta doliolum",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007153",
+        "koreanName": "수수해삼",
+        "scientificName": "Plesiocolochirus inornatus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007157",
+        "koreanName": "거진꼬리해삼",
+        "scientificName": "Havelockia kojinensis",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007159",
+        "koreanName": "보라해삼붙이",
+        "scientificName": "Afrocucumis africana",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007160",
+        "koreanName": "다족환꼬리해삼",
+        "scientificName": "Sclerodactyla multipes",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007161",
+        "koreanName": "갈색비늘해삼",
+        "scientificName": "Psolus phantapus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007162",
+        "koreanName": "비늘해삼",
+        "scientificName": "Psolus squamatus",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007163",
+        "koreanName": "화문해삼",
+        "scientificName": "Lipotrapeza japonica",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007330",
+        "koreanName": "가시탑해삼",
+        "scientificName": "Phyllophorus ordinata",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007332",
+        "koreanName": "개해삼",
+        "scientificName": "Holothuria hilla",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007333",
+        "koreanName": "점해삼",
+        "scientificName": "Holothuria pardalis",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007334",
+        "koreanName": "눈해삼",
+        "scientificName": "Holothuria pervicax",
+        "score": 15,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007135",
+        "koreanName": "아기닻해삼",
+        "scientificName": "Leptosynapta inhaerens",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007137",
+        "koreanName": "둥근닻해삼",
+        "scientificName": "Patinapta ooplax",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007142",
+        "koreanName": "은족민꼬리해삼",
+        "scientificName": "Acaudina molpadioides",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007145",
+        "koreanName": "높은탑은족해삼",
+        "scientificName": "Molpadia changi",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007155",
+        "koreanName": "파우손모조해삼",
+        "scientificName": "Pseudocnus pawsoni",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007165",
+        "koreanName": "두뿔티오네해삼",
+        "scientificName": "Thyone bicornis",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007166",
+        "koreanName": "작은티오네해삼",
+        "scientificName": "Thyone micra",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007167",
+        "koreanName": "소신해삼",
+        "scientificName": "Neothyonidium minutum",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007331",
+        "koreanName": "높은탑해삼",
+        "scientificName": "Phyllophorus hypsipyrga",
+        "score": 10,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007154",
+        "koreanName": "성게광삼",
+        "scientificName": "Pseudocnus echinatus",
+        "score": 5,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS",
+          "NAME_ONLY_CANDIDATE"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007158",
+        "koreanName": "오각광삼",
+        "scientificName": "Eupentacta quinquesemita",
+        "score": 5,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS",
+          "NAME_ONLY_CANDIDATE"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007147",
+        "koreanName": "소광삼",
+        "scientificName": "Cucumaria miniata",
+        "score": 0,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "NAME_ONLY_CANDIDATE"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007150",
+        "koreanName": "쿠쿠멜라광삼",
+        "scientificName": "Neoamphicyclus problematica",
+        "score": 0,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "NAME_ONLY_CANDIDATE"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007151",
+        "koreanName": "헛광삼",
+        "scientificName": "Ocnus capensis",
+        "score": 0,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "NAME_ONLY_CANDIDATE"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007156",
+        "koreanName": "와타세신광삼",
+        "scientificName": "Neocucumis watasei",
+        "score": 0,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "NAME_ONLY_CANDIDATE"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007164",
+        "koreanName": "방추티오네해삼",
+        "scientificName": "Thyone fusus chinensis",
+        "score": 0,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "SCIENTIFIC_NAME_UNCERTAIN"
+        ]
+      },
+      {
+        "internalId": "BM-SPECIES-007148",
+        "koreanName": "타원광삼",
+        "scientificName": "Cucumaria frondosa japonica",
+        "score": -5,
+        "reasons": [
+          "MBRIS_KOREAN_NAME_EXISTS",
+          "HOLDING_INSTITUTION_EXISTS",
+          "SCIENTIFIC_NAME_UNCERTAIN",
+          "NAME_ONLY_CANDIDATE"
+        ]
+      }
+    ]
+  }
+]

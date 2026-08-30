@@ -1,0 +1,2962 @@
+[
+  {
+    "internalId": "BM-SPECIES-000129",
+    "koreanName": "말쥐치",
+    "scientificName": "Thamnaconus modestus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Tetraodontiformes",
+      "family": "Monacanthidae Nardo, 1843"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": true,
+    "fishDataMatchType": "scientific_exact",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 85,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 100,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000408",
+    "koreanName": "삼치",
+    "scientificName": "Scomberomorus niphonius",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Scombriformes",
+      "family": "Scombridae Rafinesque, 1815"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": true,
+    "fishDataMatchType": "scientific_exact",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 85,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 100,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000417",
+    "koreanName": "고등어",
+    "scientificName": "Scomber japonicus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Scombriformes",
+      "family": "Scombridae Rafinesque, 1815"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": true,
+    "fishDataMatchType": "scientific_exact",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 85,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 100,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000444",
+    "koreanName": "갈치",
+    "scientificName": "Trichiurus japonicus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Scombriformes",
+      "family": "Trichiuridae Rafinesque, 1810"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "synonym",
+    "fishDataLinked": true,
+    "fishDataMatchType": "synonym",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 85,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 100,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000488",
+    "koreanName": "전갱이",
+    "scientificName": "Trachurus japonicus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Carangiformes",
+      "family": "Carangidae Rafinesque, 1815"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": true,
+    "fishDataMatchType": "scientific_exact",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 85,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 100,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000825",
+    "koreanName": "옥돔",
+    "scientificName": "Branchiostegus japonicus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Acanthuriformes",
+      "family": "Latilidae Gill, 1862"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": true,
+    "fishDataMatchType": "scientific_exact",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 85,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 100,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000900",
+    "koreanName": "갯장어",
+    "scientificName": "Muraenesox cinereus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Anguilliformes",
+      "family": "Muraenesocidae Kaup, 1859"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": true,
+    "fishDataMatchType": "scientific_exact",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 85,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 100,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001056",
+    "koreanName": "대구",
+    "scientificName": "Gadus macrocephalus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Gadiformes",
+      "family": "Gadidae Rafinesque, 1810"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": true,
+    "fishDataMatchType": "scientific_exact",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 85,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 100,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001057",
+    "koreanName": "명태",
+    "scientificName": "Gadus chalcogrammus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Gadiformes",
+      "family": "Gadidae Rafinesque, 1810"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "synonym",
+    "fishDataLinked": true,
+    "fishDataMatchType": "synonym",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 85,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 100,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-003111",
+    "koreanName": "문어",
+    "scientificName": "Enteroctopus dofleini",
+    "organismGroup": "cephalopod",
+    "taxonomy": {
+      "class": "Cephalopoda Cuvier, 1795",
+      "order": "Octopoda Leach, 1818",
+      "family": "Enteroctopodidae Strugnell, Norman, Vecchione, Guzik & Allcock, 2014"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 75,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 100,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_CEPHALOPOD",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-003117",
+    "koreanName": "살오징어",
+    "scientificName": "Todarodes pacificus",
+    "organismGroup": "cephalopod",
+    "taxonomy": {
+      "class": "Cephalopoda Cuvier, 1795",
+      "order": "Oegopsida A. d'Orbigny, 1845",
+      "family": "Ommastrephidae Steenstrup, 1857"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": true,
+    "fishDataMatchType": "scientific_exact",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 75,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 100,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_CEPHALOPOD",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000002",
+    "koreanName": "볼락",
+    "scientificName": "Sebastes inermis",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Scorpaenidae Risso, 1827"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000019",
+    "koreanName": "쏨뱅이",
+    "scientificName": "Sebastiscus marmoratus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Scorpaenidae Risso, 1827"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000057",
+    "koreanName": "꼼치",
+    "scientificName": "Liparis tanakae",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Liparidae Gill, 1861"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000060",
+    "koreanName": "물메기",
+    "scientificName": "Liparis tessellatus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Liparidae Gill, 1861"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000065",
+    "koreanName": "양태",
+    "scientificName": "Platycephalus indicus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Platycephalidae Swainson, 1839"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000080",
+    "koreanName": "아귀",
+    "scientificName": "Lophiomus setigerus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Lophiiformes",
+      "family": "Lophiidae Rafinesque, 1810"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000095",
+    "koreanName": "달고기",
+    "scientificName": "Zeus faber",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Zeiformes",
+      "family": "Zeidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000097",
+    "koreanName": "숭어",
+    "scientificName": "Mugil cephalus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Mugiliformes",
+      "family": "Mugilidae Jarocki, 1822"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000122",
+    "koreanName": "쥐치",
+    "scientificName": "Stephanolepis cirrhifer",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Tetraodontiformes",
+      "family": "Monacanthidae Nardo, 1843"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000188",
+    "koreanName": "농어",
+    "scientificName": "Lateolabrax japonicus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Acropomatiformes",
+      "family": "Lateolabracidae Ghedotti, Davis & Smith, 2018"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000223",
+    "koreanName": "망상어",
+    "scientificName": "Ditrema temminckii",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Blenniiformes",
+      "family": "Embiotocidae Agassiz, 1853"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000226",
+    "koreanName": "자리돔",
+    "scientificName": "Chromis notata",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Blenniiformes",
+      "family": "Pomacentridae Bonaparte, 1831"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000278",
+    "koreanName": "돌돔",
+    "scientificName": "Oplegnathus fasciatus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Centrarchiformes",
+      "family": "Oplegnathidae Bleeker, 1853"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000279",
+    "koreanName": "벵에돔",
+    "scientificName": "Girella punctata",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Centrarchiformes",
+      "family": "Girellidae Gill, 1862"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000412",
+    "koreanName": "가다랑어",
+    "scientificName": "Katsuwonus pelamis",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Scombriformes",
+      "family": "Scombridae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000415",
+    "koreanName": "줄삼치",
+    "scientificName": "Sarda orientalis",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Scombriformes",
+      "family": "Scombridae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000425",
+    "koreanName": "덕대",
+    "scientificName": "Pampus argenteus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Scombriformes",
+      "family": "Stromateidae Rafinesque, 1810"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000426",
+    "koreanName": "병어",
+    "scientificName": "Pampus punctatissimus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Scombriformes",
+      "family": "Stromateidae Rafinesque, 1810"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000459",
+    "koreanName": "꼬치고기",
+    "scientificName": "Sphyraena pinguis",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Carangiformes",
+      "family": "Sphyraenidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000465",
+    "koreanName": "넙치",
+    "scientificName": "Paralichthys olivaceus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Carangiformes",
+      "family": "Paralichthyidae Regan, 1910"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000473",
+    "koreanName": "돛새치",
+    "scientificName": "Istiophorus platypterus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Carangiformes",
+      "family": "Istiophoridae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000479",
+    "koreanName": "황새치",
+    "scientificName": "Xiphias gladius",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Carangiformes",
+      "family": "Xiphiidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000500",
+    "koreanName": "부시리",
+    "scientificName": "Seriola aureovittata",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Carangiformes",
+      "family": "Carangidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000501",
+    "koreanName": "방어",
+    "scientificName": "Seriola quinqueradiata",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Carangiformes",
+      "family": "Carangidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000541",
+    "koreanName": "줄가자미",
+    "scientificName": "Clidoderma asperrimum",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Carangiformes",
+      "family": "Pleuronectidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000544",
+    "koreanName": "참가자미",
+    "scientificName": "Pseudopleuronectes herzensteini",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Carangiformes",
+      "family": "Pleuronectidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000548",
+    "koreanName": "도다리",
+    "scientificName": "Pleuronichthys cornutus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Carangiformes",
+      "family": "Pleuronectidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000553",
+    "koreanName": "홍가자미",
+    "scientificName": "Hippoglossoides dubius",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Carangiformes",
+      "family": "Pleuronectidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000554",
+    "koreanName": "돌가자미",
+    "scientificName": "Platichthys bicoloratus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Carangiformes",
+      "family": "Pleuronectidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000555",
+    "koreanName": "강도다리",
+    "scientificName": "Platichthys stellatus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Carangiformes",
+      "family": "Pleuronectidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000594",
+    "koreanName": "놀래기",
+    "scientificName": "Halichoeres tenuispinis",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Labriformes",
+      "family": "Labridae Cuvier, 1816"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000649",
+    "koreanName": "홍어",
+    "scientificName": "Okamejei kenojei",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Elasmobranchii",
+      "order": "Rajiformes",
+      "family": "Rajidae de Blainville, 1816"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000710",
+    "koreanName": "먹장어",
+    "scientificName": "Eptatretus burgeri",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Myxini",
+      "order": "Myxiniformes",
+      "family": "Myxinidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000751",
+    "koreanName": "감성돔",
+    "scientificName": "Acanthopagrus schlegelii",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Acanthuriformes",
+      "family": "Sparidae Rafinesque, 1818"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000755",
+    "koreanName": "참돔",
+    "scientificName": "Pagrus major",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Acanthuriformes",
+      "family": "Sparidae Rafinesque, 1818"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000800",
+    "koreanName": "독가시치",
+    "scientificName": "Siganus fuscescens",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Acanthuriformes",
+      "family": "Siganidae Richardson, 1837"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000818",
+    "koreanName": "보리멸",
+    "scientificName": "Sillago sihama",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Acanthuriformes",
+      "family": "Sillaginidae Richardson, 1846"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000840",
+    "koreanName": "민어",
+    "scientificName": "Miichthys miiuy",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Acanthuriformes",
+      "family": "Sciaenidae Cuvier, 1829"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000881",
+    "koreanName": "꽁치",
+    "scientificName": "Cololabis saira",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Beloniformes",
+      "family": "Scomberesocidae Bleeker, 1859"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000884",
+    "koreanName": "학공치",
+    "scientificName": "Hyporhamphus sajori",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Beloniformes",
+      "family": "Hemiramphidae Gill, 1859"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000908",
+    "koreanName": "붕장어",
+    "scientificName": "Conger myriaster",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Anguilliformes",
+      "family": "Congridae Kaup, 1856"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000935",
+    "koreanName": "곰치",
+    "scientificName": "Gymnothorax kidako",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Anguilliformes",
+      "family": "Muraenidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000958",
+    "koreanName": "황어",
+    "scientificName": "Pseudaspius hakonensis",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Cypriniformes",
+      "family": "Leuciscidae Bonaparte, 1835"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001012",
+    "koreanName": "쏠종개",
+    "scientificName": "Plotosus japonicus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Siluriformes",
+      "family": "Plotosidae Bleeker, 1858"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001022",
+    "koreanName": "청어",
+    "scientificName": "Clupea pallasii",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Clupeiformes",
+      "family": "Clupeidae Cuvier, 1816"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001029",
+    "koreanName": "멸치",
+    "scientificName": "Engraulis japonicus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Clupeiformes",
+      "family": "Engraulidae Gill, 1861"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001030",
+    "koreanName": "준치",
+    "scientificName": "Ilisha elongata",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Clupeiformes",
+      "family": "Pristigasteridae Bleeker, 1872"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001037",
+    "koreanName": "전어",
+    "scientificName": "Konosirus punctatus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Clupeiformes",
+      "family": "Dorosomatidae Gill, 1861"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001040",
+    "koreanName": "정어리",
+    "scientificName": "Sardinops melanosticta",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Clupeiformes",
+      "family": "Alosidae Svetovidov, 1952"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001135",
+    "koreanName": "성대",
+    "scientificName": "Chelidonichthys spinosus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Triglidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001153",
+    "koreanName": "쑤기미",
+    "scientificName": "Inimicus japonicus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Synanceiidae Swainson, 1839"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001157",
+    "koreanName": "미역치",
+    "scientificName": "Paracentropogon rubripinnis",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Synanceiidae Swainson, 1839"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001161",
+    "koreanName": "임연수어",
+    "scientificName": "Pleurogrammus azonus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Hexagrammidae Jordan, 1888"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001164",
+    "koreanName": "노래미",
+    "scientificName": "Hexagrammos agrammus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Hexagrammidae Jordan, 1888"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001165",
+    "koreanName": "쥐노래미",
+    "scientificName": "Hexagrammos otakii",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Hexagrammidae Jordan, 1888"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001204",
+    "koreanName": "자바리",
+    "scientificName": "Epinephelus bruneus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Epinephelidae Bleeker, 1874"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001215",
+    "koreanName": "능성어",
+    "scientificName": "Hyporthodus septemfasciatus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Epinephelidae Bleeker, 1874"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001227",
+    "koreanName": "다금바리",
+    "scientificName": "Niphon spinosus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Niphonidae Jordan, 1923"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 35,
+    "dataReasons": [
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier2",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 85,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-006084",
+    "koreanName": "갯강구",
+    "scientificName": "Ligia exotica",
+    "organismGroup": "crustacean",
+    "taxonomy": {
+      "class": "Malacostraca",
+      "order": "Isopoda",
+      "family": "Ligiidae"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 25,
+    "dataReasons": [
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier3",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 80,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_CRUSTACEAN",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-002852",
+    "koreanName": "우럭",
+    "scientificName": "Mya arenaria",
+    "organismGroup": "bivalve",
+    "taxonomy": {
+      "class": "Bivalvia Linnaeus, 1758",
+      "order": "Myida Stoliczka, 1870",
+      "family": "Myidae Lamarck, 1809"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 25,
+    "dataReasons": [
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier3",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 78,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_SHELLFISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-003025",
+    "koreanName": "홍합",
+    "scientificName": "Mytilus coruscus",
+    "organismGroup": "bivalve",
+    "taxonomy": {
+      "class": "Bivalvia Linnaeus, 1758",
+      "order": "Mytilida A. Férussac, 1822",
+      "family": "Mytilidae Rafinesque, 1815"
+    },
+    "nifsLinked": false,
+    "nifsMatchType": null,
+    "fishDataLinked": true,
+    "fishDataMatchType": "korean_candidate",
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 25,
+    "dataReasons": [
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier3",
+    "detailCollectionStatus": "not_selected",
+    "servicePriorityScore": 78,
+    "serviceReasons": [
+      "FISH_DATA_EXIST",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_SHELLFISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000557",
+    "koreanName": "기름가자미",
+    "scientificName": "Glyptocephalus stelleri",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Carangiformes",
+      "family": "Pleuronectidae Rafinesque, 1815"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": false,
+    "fishDataMatchType": null,
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 85,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 70,
+    "serviceReasons": [
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000642",
+    "koreanName": "참홍어",
+    "scientificName": "Beringraja pulchra",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Elasmobranchii",
+      "order": "Rajiformes",
+      "family": "Rajidae de Blainville, 1816"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "synonym",
+    "fishDataLinked": false,
+    "fishDataMatchType": null,
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 85,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 70,
+    "serviceReasons": [
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-000841",
+    "koreanName": "참조기",
+    "scientificName": "Larimichthys polyactis",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Acanthuriformes",
+      "family": "Sciaenidae Cuvier, 1829"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": false,
+    "fishDataMatchType": null,
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 85,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 70,
+    "serviceReasons": [
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-001166",
+    "koreanName": "도루묵",
+    "scientificName": "Arctoscopus japonicus",
+    "organismGroup": "fish",
+    "taxonomy": {
+      "class": "Teleostei",
+      "order": "Perciformes",
+      "family": "Trichodontidae Bleeker, 1859"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": false,
+    "fishDataMatchType": null,
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 85,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "FISH_CORE_TARGET",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 70,
+    "serviceReasons": [
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_FISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-003106",
+    "koreanName": "낙지",
+    "scientificName": "Octopus minor",
+    "organismGroup": "cephalopod",
+    "taxonomy": {
+      "class": "Cephalopoda Cuvier, 1795",
+      "order": "Octopoda Leach, 1818",
+      "family": "Octopodidae A. d'Orbigny, 1839"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": false,
+    "fishDataMatchType": null,
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 75,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 67,
+    "serviceReasons": [
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_CEPHALOPOD",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-003107",
+    "koreanName": "주꾸미",
+    "scientificName": "Amphioctopus fangsiao",
+    "organismGroup": "cephalopod",
+    "taxonomy": {
+      "class": "Cephalopoda Cuvier, 1795",
+      "order": "Octopoda Leach, 1818",
+      "family": "Octopodidae A. d'Orbigny, 1839"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": false,
+    "fishDataMatchType": null,
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 75,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 67,
+    "serviceReasons": [
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_CEPHALOPOD",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-005541",
+    "koreanName": "홍게",
+    "scientificName": "Chionoecetes japonicus",
+    "organismGroup": "crustacean",
+    "taxonomy": {
+      "class": "Malacostraca",
+      "order": "Decapoda Latreille, 1802",
+      "family": "Oregoniidae Garth, 1958"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": false,
+    "fishDataMatchType": null,
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 75,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 65,
+    "serviceReasons": [
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_CRUSTACEAN",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-005542",
+    "koreanName": "대게",
+    "scientificName": "Chionoecetes opilio",
+    "organismGroup": "crustacean",
+    "taxonomy": {
+      "class": "Malacostraca",
+      "order": "Decapoda Latreille, 1802",
+      "family": "Oregoniidae Garth, 1958"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": false,
+    "fishDataMatchType": null,
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 75,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 65,
+    "serviceReasons": [
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_CRUSTACEAN",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-005640",
+    "koreanName": "꽃게",
+    "scientificName": "Portunus trituberculatus",
+    "organismGroup": "crustacean",
+    "taxonomy": {
+      "class": "Malacostraca",
+      "order": "Decapoda Latreille, 1802",
+      "family": "Portunidae Rafinesque, 1815"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": false,
+    "fishDataMatchType": null,
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 75,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 65,
+    "serviceReasons": [
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_CRUSTACEAN",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-002324",
+    "koreanName": "소라",
+    "scientificName": "Turbo sazae",
+    "organismGroup": "gastropod",
+    "taxonomy": {
+      "class": "Gastropoda Cuvier, 1795",
+      "order": "Trochida",
+      "family": "Turbinidae"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "korean_candidate",
+    "fishDataLinked": false,
+    "fishDataMatchType": null,
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 75,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 63,
+    "serviceReasons": [
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_SHELLFISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "manual_review"
+  },
+  {
+    "internalId": "BM-SPECIES-002418",
+    "koreanName": "오분자기",
+    "scientificName": "Haliotis supertexta",
+    "organismGroup": "gastropod",
+    "taxonomy": {
+      "class": "Gastropoda Cuvier, 1795",
+      "order": "Lepetellida Moskalev, 1971",
+      "family": "Haliotidae Rafinesque, 1815"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "synonym",
+    "fishDataLinked": false,
+    "fishDataMatchType": null,
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 75,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 63,
+    "serviceReasons": [
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_SHELLFISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-002949",
+    "koreanName": "키조개",
+    "scientificName": "Atrina pectinata",
+    "organismGroup": "bivalve",
+    "taxonomy": {
+      "class": "Bivalvia Linnaeus, 1758",
+      "order": "Ostreida A. Férussac, 1822",
+      "family": "Pinnidae Leach, 1819"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": false,
+    "fishDataMatchType": null,
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 75,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 63,
+    "serviceReasons": [
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_SHELLFISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-003313",
+    "koreanName": "바지락",
+    "scientificName": "Ruditapes philippinarum",
+    "organismGroup": "bivalve",
+    "taxonomy": {
+      "class": "Bivalvia Linnaeus, 1758",
+      "order": "Venerida Gray, 1854",
+      "family": "Veneridae Rafinesque, 1815"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "scientific_exact",
+    "fishDataLinked": false,
+    "fishDataMatchType": null,
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 75,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 63,
+    "serviceReasons": [
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_SHELLFISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  },
+  {
+    "internalId": "BM-SPECIES-003315",
+    "koreanName": "개조개",
+    "scientificName": "Saxidomus purpurata",
+    "organismGroup": "bivalve",
+    "taxonomy": {
+      "class": "Bivalvia Linnaeus, 1758",
+      "order": "Venerida Gray, 1854",
+      "family": "Veneridae Rafinesque, 1815"
+    },
+    "nifsLinked": true,
+    "nifsMatchType": "synonym",
+    "fishDataLinked": false,
+    "fishDataMatchType": null,
+    "fishingTargetStatus": "confirmed",
+    "dataPriorityScore": 75,
+    "dataReasons": [
+      "NIFS_RESOURCE_DATA",
+      "NONFISH_TARGET_GROUP",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "collectionTier": "tier1",
+    "detailCollectionStatus": "selected",
+    "servicePriorityScore": 63,
+    "serviceReasons": [
+      "NIFS_LINKED",
+      "CONFIRMED_FISHING_TARGET",
+      "ORGANISM_GROUP_SHELLFISH",
+      "HAS_KOREAN_NAME",
+      "SCIENTIFIC_NAME_NORMAL"
+    ],
+    "serviceTier": "A",
+    "reviewStatus": "auto"
+  }
+]

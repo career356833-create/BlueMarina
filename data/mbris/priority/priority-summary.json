@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-07-31T05:28:22.972889+00:00",
+  "totalEvaluated": 4332,
+  "totalExcluded": 12255,
+  "tierCounts": {
+    "tier2": 1379,
+    "tier1": 25,
+    "tier3": 2928
+  },
+  "tierThresholds": {
+    "tier1": ">=60",
+    "tier2": "30-59",
+    "tier3": "<30"
+  },
+  "fishingTargetStatusCounts": {
+    "possible": 4246,
+    "confirmed": 86
+  },
+  "reviewStatusCounts": {
+    "auto": 4235,
+    "manual_review": 97
+  },
+  "nifsLinkedCount": 25,
+  "nifsMatchTypeCounts": {
+    "scientific_exact": 19,
+    "synonym": 5,
+    "korean_candidate": 1
+  },
+  "organismGroupCounts": {
+    "fish": 1399,
+    "bivalve": 537,
+    "gastropod": 1204,
+    "cephalopod": 55,
+    "crustacean": 1137
+  },
+  "organismGroupByTier": {
+    "fish": {
+      "tier2": 1379,
+      "tier1": 13,
+      "tier3": 7
+    },
+    "cephalopod": {
+      "tier3": 51,
+      "tier1": 4
+    },
+    "crustacean": {
+      "tier3": 1134,
+      "tier1": 3
+    },
+    "gastropod": {
+      "tier3": 1202,
+      "tier1": 2
+    },
+    "bivalve": {
+      "tier3": 534,
+      "tier1": 3
+    }
+  },
+  "totalMaster": 16587
+}

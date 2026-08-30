@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-07-31T05:28:22.972889+00:00",
+  "totalEvaluated": 4332,
+  "scoreDistribution": {
+    "min": 0,
+    "max": 100,
+    "average": 21.69,
+    "histogram": {
+      "0": 89,
+      "10": 1705,
+      "20": 2452,
+      "60": 10,
+      "70": 6,
+      "80": 59,
+      "100": 11
+    }
+  },
+  "tierCounts": {
+    "C": 4246,
+    "A": 86
+  },
+  "tierThresholds": {
+    "A": ">=60",
+    "B": "40-59",
+    "C": "<40"
+  },
+  "fishDataLinkedCount": 72,
+  "nifsLinkedCount": 25,
+  "confirmedFishingCount": 86,
+  "organismGroupByServiceTier": {
+    "fish": {
+      "C": 1328,
+      "A": 71
+    },
+    "cephalopod": {
+      "C": 51,
+      "A": 4
+    },
+    "crustacean": {
+      "C": 1133,
+      "A": 4
+    },
+    "gastropod": {
+      "C": 1202,
+      "A": 2
+    },
+    "bivalve": {
+      "C": 532,
+      "A": 5
+    }
+  }
+}
