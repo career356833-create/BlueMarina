@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { ChevronDown, Fish, Filter, Search, ShieldAlert, Sparkles, Waves } from "lucide-react";
 import { AppFrame } from "@/components/boat/AppFrame";
+import { FishEncyclopediaSection } from "@/components/boat/home/FishEncyclopediaSection";
 import { fishCategories, fishItems, type FishCategory } from "@/data/fish-data";
 
 type FishCategoryFilter = FishCategory | "전체";
@@ -41,7 +42,9 @@ export default function FishPage() {
   }, [category, query]);
 
   return (
-    <AppFrame>
+    <>
+      <FishEncyclopediaSection />
+      <AppFrame>
       <div className="space-y-5">
         <section className="overflow-hidden rounded-[2rem] bg-[#0F2D52] text-white shadow-sm">
           <div className="relative p-6 sm:p-8">
@@ -226,6 +229,7 @@ export default function FishPage() {
           )}
         </section>
       </div>
-    </AppFrame>
+      </AppFrame>
+    </>
   );
 }

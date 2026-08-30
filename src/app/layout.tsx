@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import { BlueMarinaCaptainWidget } from "@/components/boat/ai-captain/BlueMarinaCaptainWidget";
 import { DevAuditFloatingButton } from "@/components/dev-audit/DevAuditFloatingButton";
 import { PwaRegister } from "@/components/PwaRegister";
 import { devAuditEnabled } from "@/lib/dev-audit/audit-data";
@@ -54,6 +55,7 @@ export default function RootLayout({
         ) : null}
         <PwaRegister />
         {children}
+        <BlueMarinaCaptainWidget />
         {devAuditEnabled ? <DevAuditFloatingButton /> : null}
       </body>
     </html>
