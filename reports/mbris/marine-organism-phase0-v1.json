@@ -1,0 +1,98 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-30T22:06:24.107Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "git": {
+    "branch": "main",
+    "head": "33f3f8aa070a6520183b133fdb02809334c894a0",
+    "originMain": "33f3f8aa070a6520183b133fdb02809334c894a0",
+    "stagedFiles": 0
+  },
+  "connections": {
+    "admin": {
+      "status": "PASS",
+      "currentUser": "postgres",
+      "connectionType": "session_pooler",
+      "publicCreate": true,
+      "databaseCreate": true
+    },
+    "auditor": {
+      "status": "PASS",
+      "currentUser": "blue_marina_readonly_auditor",
+      "transactionReadOnly": "on",
+      "bypassRls": false,
+      "schemaCreate": false
+    },
+    "secretExposed": false,
+    "credentialPersisted": false
+  },
+  "staticAudit": {
+    "status": "PASS",
+    "tablesCreated": 6,
+    "fishTableMutations": 0,
+    "fishPolicyMutations": 0,
+    "fishFunctionMutations": 0,
+    "dropStatements": 0,
+    "truncateStatements": 0,
+    "publicWriteGrants": 0,
+    "rlsEnableCount": 6,
+    "koreanNameNotNull": true,
+    "initialState": {
+      "reviewStatus": "pending",
+      "publishStatus": "draft"
+    },
+    "preApplyAdjustment": "Revoked default EXECUTE on both trigger functions from PUBLIC, anon, authenticated, and service_role."
+  },
+  "dependencies": {
+    "pgcrypto": true,
+    "isFishAdmin": true,
+    "isFishReviewer": true,
+    "isFishCrawler": true,
+    "anonRole": true,
+    "authenticatedRole": true,
+    "serviceRole": true,
+    "auditorRole": true
+  },
+  "objectCollisions": {
+    "tables": [],
+    "functions": [],
+    "policies": [],
+    "triggers": [],
+    "indexes": []
+  },
+  "fishSnapshotBefore": {
+    "species": 1258,
+    "nifs": 8,
+    "mbrisSpecies": 1250,
+    "mbrisRelations": 1253,
+    "tables": 30,
+    "rlsTables": 30,
+    "policies": 22,
+    "functions": 19,
+    "indexes": 78,
+    "triggers": 16,
+    "fingerprints": {
+      "policies": "109ee1f3a7cea5f2d8b1dc8a505dec86",
+      "constraints": "67c87f83d5fc3a6cd62bff2d6c31478e",
+      "indexes": "ec847cfe297e7069613a20fb403dec7e",
+      "triggers": "f6854eb920d199ea558dfa16dde23302"
+    }
+  },
+  "crossDomainIdentityReview": {
+    "status": "CROSS_DOMAIN_IDENTITY_REVIEW_REQUIRED",
+    "blocker": false,
+    "scientificNames": [
+      "Amphioctopus fangsiao",
+      "Chionoecetes japonicus",
+      "Chionoecetes opilio"
+    ]
+  },
+  "testsBeforeApply": {
+    "passed": 52,
+    "failed": 0
+  },
+  "gate": "MARINE_ORGANISM_PHASE0_PASS",
+  "migrationApplyAllowed": true,
+  "databaseWritesBeforeGate": 0
+}

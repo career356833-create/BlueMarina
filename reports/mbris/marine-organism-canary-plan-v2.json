@@ -1,0 +1,524 @@
+{
+  "reportVersion": "v2",
+  "generatedAt": "2026-08-31T12:01:59.387Z",
+  "status": "MARINE_ORGANISM_CANARY_PLAN_READY",
+  "plannedCount": 10,
+  "sharedSourceRecord": {
+    "sourceRecordId": "32990b45-f4f5-5293-820f-93736b5cfd55",
+    "sourceProvider": "MBRIS",
+    "sourceId": "mbris-national-species-catalog",
+    "sourceUrl": "https://www.mbris.kr/pub/marine/natilist/nationalist.do",
+    "rawStoragePath": "data/mbris/raw/catalog/original/mbris-national-species-catalog.xlsx",
+    "contentHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+    "parserVersion": "mbris-marine-organism-v1",
+    "crawlStatus": "complete",
+    "fetchedAt": "2026-07-30T19:11:12.821647+00:00",
+    "sourceMultiplicityPolicy": "one_catalog_source_record_not_one_per_organism"
+  },
+  "expectedTotals": {
+    "sourceRecords": 1,
+    "organisms": 10,
+    "sourceRelations": 10,
+    "changeLogs": 10,
+    "aliases": 0,
+    "slugAliases": 0
+  },
+  "groupCounts": {
+    "CRUSTACEAN": 2,
+    "CEPHALOPOD": 2,
+    "GASTROPOD": 2,
+    "BIVALVE": 2,
+    "ECHINODERM": 2
+  },
+  "selectionPolicy": "Two deterministic READY records per initial organism group, ordered by internal ID.",
+  "executionAuthorized": false,
+  "rows": [
+    {
+      "canonicalId": "f13d8de0-5385-57bb-a3df-b5c67c468add",
+      "sourceRecordId": "32990b45-f4f5-5293-820f-93736b5cfd55",
+      "sourceRelationId": "87052c34-3f07-5696-81b0-5223d285ce13",
+      "internalId": "BM-SPECIES-003994",
+      "slug": "promysis-orientalis",
+      "koreanName": "극동곤쟁이",
+      "scientificName": "Promysis orientalis",
+      "normalizedScientificName": "promysis orientalis",
+      "organismGroup": "CRUSTACEAN",
+      "taxonomy": {
+        "kingdom": "무척추동물",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Mysida",
+        "family": "Mysidae Haworth, 1825",
+        "genus": "Promysis Dana, 1850",
+        "species": "orientalis"
+      },
+      "sourceId": "MBRIS:무척추동물:2442",
+      "sourceProvenance": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 2442,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "holdingInstitutions": []
+      },
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "relation": {
+        "isPrimary": true,
+        "linkedBy": "import_review"
+      },
+      "lineage": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 2442,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "internalId": "BM-SPECIES-003994",
+        "candidateReport": "mbris-marine-organism-candidates-v1.json"
+      },
+      "expectedRows": {
+        "organisms": 1,
+        "sourceRelations": 1,
+        "changeLogs": 1
+      }
+    },
+    {
+      "canonicalId": "3ff3e8fb-f0d1-5522-93c6-142b3070d975",
+      "sourceRecordId": "32990b45-f4f5-5293-820f-93736b5cfd55",
+      "sourceRelationId": "f90ecaa6-b6d4-5661-9923-fabee9a280f1",
+      "internalId": "BM-SPECIES-003995",
+      "slug": "acanthomysis-stelleri",
+      "koreanName": "네마디안다리곤쟁이",
+      "scientificName": "Acanthomysis stelleri",
+      "normalizedScientificName": "acanthomysis stelleri",
+      "organismGroup": "CRUSTACEAN",
+      "taxonomy": {
+        "kingdom": "무척추동물",
+        "phylum": "Arthropoda",
+        "class": "Malacostraca",
+        "order": "Mysida",
+        "family": "Mysidae Haworth, 1825",
+        "genus": "Acanthomysis Czerniavsky, 1882",
+        "species": "stelleri"
+      },
+      "sourceId": "MBRIS:무척추동물:2443",
+      "sourceProvenance": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 2443,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "holdingInstitutions": [
+          "국립해양생물자원관"
+        ]
+      },
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "relation": {
+        "isPrimary": true,
+        "linkedBy": "import_review"
+      },
+      "lineage": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 2443,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "internalId": "BM-SPECIES-003995",
+        "candidateReport": "mbris-marine-organism-candidates-v1.json"
+      },
+      "expectedRows": {
+        "organisms": 1,
+        "sourceRelations": 1,
+        "changeLogs": 1
+      }
+    },
+    {
+      "canonicalId": "5113a992-2b4c-5baa-8380-faf93ab5a9cd",
+      "sourceRecordId": "32990b45-f4f5-5293-820f-93736b5cfd55",
+      "sourceRelationId": "c9d7e9d5-80e3-52e1-bae3-0a9813f3ebbd",
+      "internalId": "BM-SPECIES-002768",
+      "slug": "idiosepius-paradoxus",
+      "koreanName": "꼬마오징어",
+      "scientificName": "Idiosepius paradoxus",
+      "normalizedScientificName": "idiosepius paradoxus",
+      "organismGroup": "CEPHALOPOD",
+      "taxonomy": {
+        "kingdom": "무척추동물",
+        "phylum": "Mollusca",
+        "class": "Cephalopoda Cuvier, 1795",
+        "order": "Idiosepida Appellöf, 1898",
+        "family": "Idiosepiidae",
+        "genus": "Idiosepius Steenstrup, 1881",
+        "species": "paradoxus"
+      },
+      "sourceId": "MBRIS:무척추동물:1216",
+      "sourceProvenance": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 1216,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "holdingInstitutions": [
+          "국립해양생물자원관"
+        ]
+      },
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "relation": {
+        "isPrimary": true,
+        "linkedBy": "import_review"
+      },
+      "lineage": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 1216,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "internalId": "BM-SPECIES-002768",
+        "candidateReport": "mbris-marine-organism-candidates-v1.json"
+      },
+      "expectedRows": {
+        "organisms": 1,
+        "sourceRelations": 1,
+        "changeLogs": 1
+      }
+    },
+    {
+      "canonicalId": "ecd47541-c19c-59c0-9ede-4d1a1ea41777",
+      "sourceRecordId": "32990b45-f4f5-5293-820f-93736b5cfd55",
+      "sourceRelationId": "b0d84738-ed0a-53ad-b99b-5e1b971b642a",
+      "internalId": "BM-SPECIES-002769",
+      "slug": "loliolus-sumatrensis",
+      "koreanName": "꼬마꼴뚜기",
+      "scientificName": "Loliolus sumatrensis",
+      "normalizedScientificName": "loliolus sumatrensis",
+      "organismGroup": "CEPHALOPOD",
+      "taxonomy": {
+        "kingdom": "무척추동물",
+        "phylum": "Mollusca",
+        "class": "Cephalopoda Cuvier, 1795",
+        "order": "Myopsida",
+        "family": "Loliginidae Lesueur, 1821",
+        "genus": "Loliolus Steenstrup, 1856",
+        "species": "sumatrensis"
+      },
+      "sourceId": "MBRIS:무척추동물:1217",
+      "sourceProvenance": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 1217,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "holdingInstitutions": []
+      },
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "relation": {
+        "isPrimary": true,
+        "linkedBy": "import_review"
+      },
+      "lineage": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 1217,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "internalId": "BM-SPECIES-002769",
+        "candidateReport": "mbris-marine-organism-candidates-v1.json"
+      },
+      "expectedRows": {
+        "organisms": 1,
+        "sourceRelations": 1,
+        "changeLogs": 1
+      }
+    },
+    {
+      "canonicalId": "2940f459-0a4a-5c13-90c7-899e58a997df",
+      "sourceRecordId": "32990b45-f4f5-5293-820f-93736b5cfd55",
+      "sourceRelationId": "a246362d-1e1c-581a-9269-76be21308182",
+      "internalId": "BM-SPECIES-001585",
+      "slug": "tenellia-melanobrachia",
+      "koreanName": "컵산호갯민숭이",
+      "scientificName": "Tenellia melanobrachia",
+      "normalizedScientificName": "tenellia melanobrachia",
+      "organismGroup": "GASTROPOD",
+      "taxonomy": {
+        "kingdom": "무척추동물",
+        "phylum": "Mollusca",
+        "class": "Gastropoda Cuvier, 1795",
+        "order": "Nudibranchia",
+        "family": "Trinchesiidae F. Nordsieck, 1972",
+        "genus": "Tenellia A. Costa, 1866",
+        "species": "melanobrachia"
+      },
+      "sourceId": "MBRIS:무척추동물:33",
+      "sourceProvenance": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 33,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "holdingInstitutions": [
+          "국립해양생물자원관"
+        ]
+      },
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "relation": {
+        "isPrimary": true,
+        "linkedBy": "import_review"
+      },
+      "lineage": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 33,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "internalId": "BM-SPECIES-001585",
+        "candidateReport": "mbris-marine-organism-candidates-v1.json"
+      },
+      "expectedRows": {
+        "organisms": 1,
+        "sourceRelations": 1,
+        "changeLogs": 1
+      }
+    },
+    {
+      "canonicalId": "167231a3-51e5-5b43-8c7b-059613293261",
+      "sourceRecordId": "32990b45-f4f5-5293-820f-93736b5cfd55",
+      "sourceRelationId": "a9439253-f986-5ba7-9913-a5d0e9193e80",
+      "internalId": "BM-SPECIES-001586",
+      "slug": "tenellia-zvezda",
+      "koreanName": "별무리갯민숭이",
+      "scientificName": "Tenellia zvezda",
+      "normalizedScientificName": "tenellia zvezda",
+      "organismGroup": "GASTROPOD",
+      "taxonomy": {
+        "kingdom": "무척추동물",
+        "phylum": "Mollusca",
+        "class": "Gastropoda Cuvier, 1795",
+        "order": "Nudibranchia",
+        "family": "Trinchesiidae F. Nordsieck, 1972",
+        "genus": "Tenellia A. Costa, 1866",
+        "species": "zvezda"
+      },
+      "sourceId": "MBRIS:무척추동물:34",
+      "sourceProvenance": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 34,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "holdingInstitutions": [
+          "국립해양생물자원관"
+        ]
+      },
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "relation": {
+        "isPrimary": true,
+        "linkedBy": "import_review"
+      },
+      "lineage": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 34,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "internalId": "BM-SPECIES-001586",
+        "candidateReport": "mbris-marine-organism-candidates-v1.json"
+      },
+      "expectedRows": {
+        "organisms": 1,
+        "sourceRelations": 1,
+        "changeLogs": 1
+      }
+    },
+    {
+      "canonicalId": "9130b9ec-c157-5f0b-8c29-8865c2057012",
+      "sourceRecordId": "32990b45-f4f5-5293-820f-93736b5cfd55",
+      "sourceRelationId": "cc87f60e-ad00-56d7-8378-7a44aa724c4f",
+      "internalId": "BM-SPECIES-001555",
+      "slug": "axinopsida-subquadrata",
+      "koreanName": "꼬마말발조개",
+      "scientificName": "Axinopsida subquadrata",
+      "normalizedScientificName": "axinopsida subquadrata",
+      "organismGroup": "BIVALVE",
+      "taxonomy": {
+        "kingdom": "무척추동물",
+        "phylum": "Mollusca",
+        "class": "Bivalvia Linnaeus, 1758",
+        "order": "Lucinida Gray, 1854",
+        "family": "Thyasiridae Dall, 1900 (1895)",
+        "genus": "Axinopsida Keen & Chavan, 1951",
+        "species": "subquadrata"
+      },
+      "sourceId": "MBRIS:무척추동물:3",
+      "sourceProvenance": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 3,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "holdingInstitutions": [
+          "국립해양생물자원관"
+        ]
+      },
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "relation": {
+        "isPrimary": true,
+        "linkedBy": "import_review"
+      },
+      "lineage": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 3,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "internalId": "BM-SPECIES-001555",
+        "candidateReport": "mbris-marine-organism-candidates-v1.json"
+      },
+      "expectedRows": {
+        "organisms": 1,
+        "sourceRelations": 1,
+        "changeLogs": 1
+      }
+    },
+    {
+      "canonicalId": "2d314ebb-b234-51a5-93bc-0d38d6c10ca8",
+      "sourceRecordId": "32990b45-f4f5-5293-820f-93736b5cfd55",
+      "sourceRelationId": "b5fadde1-b05a-5e4e-aa95-c845bb5e89dd",
+      "internalId": "BM-SPECIES-001556",
+      "slug": "liralucina-plicatula",
+      "koreanName": "곧은줄꽃잎조개",
+      "scientificName": "Liralucina plicatula",
+      "normalizedScientificName": "liralucina plicatula",
+      "organismGroup": "BIVALVE",
+      "taxonomy": {
+        "kingdom": "무척추동물",
+        "phylum": "Mollusca",
+        "class": "Bivalvia Linnaeus, 1758",
+        "order": "Lucinida Gray, 1854",
+        "family": "Lucinidae J. Fleming, 1828",
+        "genus": "Liralucina Glover & J. D. Taylor, 2007",
+        "species": "plicatula"
+      },
+      "sourceId": "MBRIS:무척추동물:4",
+      "sourceProvenance": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 4,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "holdingInstitutions": []
+      },
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "relation": {
+        "isPrimary": true,
+        "linkedBy": "import_review"
+      },
+      "lineage": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 4,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "internalId": "BM-SPECIES-001556",
+        "candidateReport": "mbris-marine-organism-candidates-v1.json"
+      },
+      "expectedRows": {
+        "organisms": 1,
+        "sourceRelations": 1,
+        "changeLogs": 1
+      }
+    },
+    {
+      "canonicalId": "9f7b868b-6bb2-5c12-8011-485026a25c81",
+      "sourceRecordId": "32990b45-f4f5-5293-820f-93736b5cfd55",
+      "sourceRelationId": "9644fa53-a2da-5b5e-a788-1ace4e76599b",
+      "internalId": "BM-SPECIES-007110",
+      "slug": "temnopleurus-toreumaticus",
+      "koreanName": "분지성게",
+      "scientificName": "Temnopleurus toreumaticus",
+      "normalizedScientificName": "temnopleurus toreumaticus",
+      "organismGroup": "ECHINODERM",
+      "taxonomy": {
+        "kingdom": "무척추동물",
+        "phylum": "Echinodermata",
+        "class": "Echinoidea",
+        "order": "Camarodonta",
+        "family": "Temnopleuridae",
+        "genus": "Temnopleurus L. Agassiza, 1841",
+        "species": "toreumaticus"
+      },
+      "sourceId": "MBRIS:무척추동물:5558",
+      "sourceProvenance": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 5558,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "holdingInstitutions": [
+          "국립해양생물자원관",
+          "기탁등록보존기관"
+        ]
+      },
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "relation": {
+        "isPrimary": true,
+        "linkedBy": "import_review"
+      },
+      "lineage": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 5558,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "internalId": "BM-SPECIES-007110",
+        "candidateReport": "mbris-marine-organism-candidates-v1.json"
+      },
+      "expectedRows": {
+        "organisms": 1,
+        "sourceRelations": 1,
+        "changeLogs": 1
+      }
+    },
+    {
+      "canonicalId": "8e64a99a-9d1a-5163-8485-55424bb98a61",
+      "sourceRecordId": "32990b45-f4f5-5293-820f-93736b5cfd55",
+      "sourceRelationId": "158b82c4-2328-5269-b2bf-4370e8ab3637",
+      "internalId": "BM-SPECIES-007111",
+      "slug": "temnopleurus-hardwickii",
+      "koreanName": "하드윅분지성게",
+      "scientificName": "Temnopleurus hardwickii",
+      "normalizedScientificName": "temnopleurus hardwickii",
+      "organismGroup": "ECHINODERM",
+      "taxonomy": {
+        "kingdom": "무척추동물",
+        "phylum": "Echinodermata",
+        "class": "Echinoidea",
+        "order": "Camarodonta",
+        "family": "Temnopleuridae",
+        "genus": "Temnopleurus L. Agassiza, 1841",
+        "species": "hardwickii"
+      },
+      "sourceId": "MBRIS:무척추동물:5559",
+      "sourceProvenance": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 5559,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "holdingInstitutions": [
+          "국립해양생물자원관",
+          "기탁등록보존기관"
+        ]
+      },
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "relation": {
+        "isPrimary": true,
+        "linkedBy": "import_review"
+      },
+      "lineage": {
+        "sourceProvider": "MBRIS",
+        "sourceSheet": "무척추동물",
+        "sourceRow": 5559,
+        "sourceHash": "f75a1882ef194d4c0df48c2d1889dc9558662e71c03c9e309316a6b056c20332",
+        "internalId": "BM-SPECIES-007111",
+        "candidateReport": "mbris-marine-organism-candidates-v1.json"
+      },
+      "expectedRows": {
+        "organisms": 1,
+        "sourceRelations": 1,
+        "changeLogs": 1
+      }
+    }
+  ],
+  "databaseWrites": 0
+}

@@ -1,0 +1,73 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-31T02:10:00+09:00",
+  "status": "MARINE_ORGANISM_SCHEMA_READY",
+  "officialDomainName": "Marine Organism",
+  "databaseNamespace": "marine_organism",
+  "environmentTarget": "staging",
+  "migrationFile": "supabase/migrations/drafts/202608310001_create_marine_organism_domain.sql",
+  "migrationApplied": false,
+  "databaseWrites": 0,
+  "input": {"total":3167,"ready":3016,"review":93,"outOfScope":58},
+  "domainSeparation": {
+    "fishTablesReferenced": false,
+    "fishTablesModified": false,
+    "sharedConcepts": ["source identity", "internal ID", "aliases", "lineage", "review/publish state"],
+    "sharedPersistence": false,
+    "authorizationDependency": "Existing app-wide fish role helpers are reused only for reviewer/admin/crawler authorization."
+  },
+  "tables": [
+    {"name":"marine_organisms","purpose":"Canonical Marine Organism identity and publication state","keyFields":["id","internal_id","slug","korean_name","scientific_name","normalized_scientific_name","organism_group","taxonomy","review_status","publish_status"]},
+    {"name":"marine_organism_source_records","purpose":"Versioned source evidence in an independent domain registry","keyFields":["id","source_provider","source_id","content_hash","raw_payload_summary","parser_version","is_current"]},
+    {"name":"marine_organism_sources","purpose":"Canonical-to-source relation with field precedence and lineage","keyFields":["id","marine_organism_id","source_record_id","is_primary","lineage"]},
+    {"name":"marine_organism_aliases","purpose":"Reviewed common, regional, historic, English, and scientific aliases","keyFields":["marine_organism_id","alias_name","normalized_alias","alias_type","review_status"]},
+    {"name":"marine_organism_slug_aliases","purpose":"Redirect continuity for immutable canonical slugs","keyFields":["marine_organism_id","alias_slug","redirect_source","is_active"]},
+    {"name":"marine_organism_change_logs","purpose":"Append-only domain change provenance","keyFields":["entity_type","entity_id","change_type","source_record_id","actor_type"]}
+  ],
+  "identity": {
+    "primaryKey": "Deterministic UUIDv5 generated from the Marine Organism namespace and MBRIS internal ID.",
+    "businessIdentity": "internal_id, unique within Marine Organism",
+    "sourceIdentity": "source_provider + source_id + content_hash",
+    "slug": "Deterministic lowercase ASCII kebab-case from canonical scientific name; immutable and unique within this domain.",
+    "koreanTransliteration": false,
+    "automaticNumericSuffix": false,
+    "intraDomainCollisions": 0,
+    "fishCrossDomainScientificMatches": ["Amphioctopus fangsiao", "Chionoecetes japonicus", "Chionoecetes opilio"],
+    "crossDomainPolicy": "Documented overlap is permitted because Fish and Marine Organism have separate UUID, table, and route slug namespaces."
+  },
+  "sourceStrategy": {
+    "selected": "B_DEDICATED_MARINE_ORGANISM_SOURCE_TABLE",
+    "reason": "It reuses stable provider/source identity without coupling Fish and Marine Organism row lifecycles or FKs.",
+    "commonRegistryFutureOption": "A neutral shared source registry may be introduced only through a separately reviewed migration."
+  },
+  "taxonomyStrategy": {
+    "promotedColumns": ["organism_group","phylum","taxonomic_class","taxonomic_order","family","genus"],
+    "fullTaxonomy": "taxonomy JSONB",
+    "overNormalizationAvoided": true
+  },
+  "koreanNamePolicy": {
+    "selected": "B_BLOCK_CANONICAL_IMPORT_UNTIL_NAME_EXISTS",
+    "columnNullable": false,
+    "reason": "V1 product identity and Korean UX require a sourced Korean name; inferred translation is forbidden.",
+    "reviewRecordsExcluded": 55
+  },
+  "rls": {
+    "public": "Only published + approved + non-archived canonical rows and approved active aliases.",
+    "reviewer": "Read domain evidence and update review_status only.",
+    "admin": "Policies are prepared; broad mutations remain server-side/service credential operations.",
+    "crawler": "Insert source records only.",
+    "defaultBrowserPrivilegesRevoked": true
+  },
+  "auditStrategy": {
+    "phase": "SEPARATE_PRE_IMPORT_PHASE",
+    "includedInThisMigration": false,
+    "reason": "SECURITY DEFINER audit functions require an independent ACL and metadata-only review.",
+    "requiredAcl": "Revoke EXECUTE from PUBLIC, anon, and authenticated before granting the dedicated auditor."
+  },
+  "indexes": ["source current identity","source lookup","public state/group","taxonomy lookup","Korean name","source relation","alias lookup","change-log entity"],
+  "gate": {
+    "status": "MARINE_ORGANISM_SCHEMA_READY",
+    "readyForStagingSchemaApply": true,
+    "conditions": ["Review SQL diff", "Create separate audit-surface draft", "Run Phase 0 preflight", "Obtain explicit apply approval"]
+  }
+}

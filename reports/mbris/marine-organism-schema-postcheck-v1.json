@@ -1,0 +1,70 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-30T22:06:24.107Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "MARINE_ORGANISM_SCHEMA_APPLY_PASS",
+  "transactional": true,
+  "appliedSql": [
+    "supabase/migrations/drafts/202608310001_create_marine_organism_domain.sql",
+    "supabase/migrations/drafts/staging-hotfix/202608310002_add_marine_organism_readonly_audit_surface.sql"
+  ],
+  "schema": {
+    "tables": 6,
+    "columns": 73,
+    "constraints": 44,
+    "indexes": 24,
+    "triggers": 6,
+    "policies": 17,
+    "rlsEnabled": 6
+  },
+  "acl": {
+    "anonSelectTables": 3,
+    "anonWriteTables": 0,
+    "authenticatedSelectTables": 6,
+    "authenticatedInsertTables": 1,
+    "authenticatedDeleteTables": 0,
+    "authenticatedReviewStatusUpdate": true,
+    "authenticatedSlugUpdate": false,
+    "auditorDirectSelectTables": 0
+  },
+  "auditSurface": {
+    "functions": 6,
+    "securityDefiner": 6,
+    "stable": 6,
+    "fixedSearchPath": 6,
+    "publicExecute": 0,
+    "anonExecute": 0,
+    "authenticatedExecute": 0,
+    "serviceRoleExecute": 0,
+    "auditorExecute": 6,
+    "triggerFunctionPublicExecute": 0,
+    "sideEffects": 0
+  },
+  "emptyInventory": {
+    "organisms": 0,
+    "sourceRecords": 0,
+    "sourceRelations": 0,
+    "aliases": 0,
+    "slugAliases": 0,
+    "changeLogs": 0
+  },
+  "fishProtection": {
+    "speciesBefore": 1258,
+    "speciesAfter": 1258,
+    "nifsBefore": 8,
+    "nifsAfter": 8,
+    "mbrisSpeciesBefore": 1250,
+    "mbrisSpeciesAfter": 1250,
+    "mbrisRelationsBefore": 1253,
+    "mbrisRelationsAfter": 1253,
+    "schemaChanged": false,
+    "rlsChanged": false,
+    "rowsChanged": false,
+    "fingerprintsUnchanged": true
+  },
+  "dataRowsInserted": 0,
+  "rollbackRequired": false,
+  "credentialRemoved": true,
+  "readyForCanaryImport": true
+}
