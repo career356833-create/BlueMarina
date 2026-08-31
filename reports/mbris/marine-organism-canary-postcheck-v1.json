@@ -1,0 +1,67 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-31T12:09:24.175Z",
+  "status": "MARINE_ORGANISM_CANARY_IMPORT_PASS",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "inventory": {
+    "sourceRecords": 1,
+    "organisms": 10,
+    "sourceRelations": 10,
+    "changeLogs": 10,
+    "aliases": 0,
+    "slugAliases": 0
+  },
+  "groups": {
+    "CRUSTACEAN": 2,
+    "CEPHALOPOD": 2,
+    "GASTROPOD": 2,
+    "BIVALVE": 2,
+    "ECHINODERM": 2
+  },
+  "publicVisible": 0,
+  "auditVisible": 10,
+  "draftPending": 10,
+  "duplicates": 0,
+  "fishBefore": {
+    "nifs": 8,
+    "species": 1258,
+    "fingerprints": {
+      "indexes": "ec847cfe297e7069613a20fb403dec7e",
+      "policies": "109ee1f3a7cea5f2d8b1dc8a505dec86",
+      "triggers": "f6854eb920d199ea558dfa16dde23302",
+      "constraints": "67c87f83d5fc3a6cd62bff2d6c31478e"
+    },
+    "mbrisSpecies": 1250,
+    "mbrisRelations": 1253
+  },
+  "fishAfter": {
+    "nifs": 8,
+    "species": 1258,
+    "fingerprints": {
+      "indexes": "ec847cfe297e7069613a20fb403dec7e",
+      "policies": "109ee1f3a7cea5f2d8b1dc8a505dec86",
+      "triggers": "f6854eb920d199ea558dfa16dde23302",
+      "constraints": "67c87f83d5fc3a6cd62bff2d6c31478e"
+    },
+    "mbrisSpecies": 1250,
+    "mbrisRelations": 1253
+  },
+  "fishChanged": false,
+  "marineFingerprintsBefore": {
+    "policies": "7ad40a1140b8994c1e61d519011fc70c",
+    "constraints": "96396b7facdc18d15ca2551886971509"
+  },
+  "marineFingerprintsAfter": {
+    "policies": "7ad40a1140b8994c1e61d519011fc70c",
+    "constraints": "96396b7facdc18d15ca2551886971509"
+  },
+  "marineSchemaOrRlsChanged": false,
+  "excludedWrites": {
+    "remainingReady": 0,
+    "review": 0,
+    "outOfScope": 0,
+    "crossDomainReview": 0
+  },
+  "readyForFullMarineOrganismImport": true
+}

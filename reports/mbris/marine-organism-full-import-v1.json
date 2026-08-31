@@ -1,0 +1,95 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-31T12:42:09.732Z",
+  "status": "FULL_MARINE_ORGANISM_IMPORT_PASS",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "prewrite": {
+    "counts": {
+      "sourceRecords": 1,
+      "organisms": 10,
+      "sourceRelations": 10,
+      "changeLogs": 10,
+      "aliases": 0,
+      "slugAliases": 0
+    },
+    "collisions": {
+      "internalId": 0,
+      "uuid": 0,
+      "scientific": 0,
+      "normalizedScientific": 0,
+      "slug": 0,
+      "relationId": 0,
+      "changeLogId": 0,
+      "sourceExternalId": 0
+    },
+    "fishCrossDomain": [
+      {
+        "slug": "webfoot-octopus",
+        "source_id": "fish_1576639605227",
+        "species_id": "47aa9b93-2b32-4df4-9a2a-45ed3abbd484",
+        "archived_at": null,
+        "internal_id": null,
+        "korean_name": "주꾸미",
+        "english_name": "Webfoot octopus",
+        "publish_status": "draft",
+        "scientific_name": "Amphioctopus fangsiao",
+        "source_provider": "NIFS",
+        "fact_review_status": "pending",
+        "normalized_scientific_name": "Amphioctopus fangsiao"
+      },
+      {
+        "slug": "red-snow-crab",
+        "source_id": "fish_1573537097812",
+        "species_id": "608fe1d8-dffa-4314-813c-057e84bd9ca3",
+        "archived_at": null,
+        "internal_id": null,
+        "korean_name": "붉은대게",
+        "english_name": "Red snow crab",
+        "publish_status": "draft",
+        "scientific_name": "Chionoecetes japonicus",
+        "source_provider": "NIFS",
+        "fact_review_status": "pending",
+        "normalized_scientific_name": "Chionoecetes japonicus"
+      },
+      {
+        "slug": "tanner-crab",
+        "source_id": "fish_1576639605222",
+        "species_id": "9205ce01-e1c4-4234-82cf-06a70d938ff2",
+        "archived_at": null,
+        "internal_id": null,
+        "korean_name": "대게",
+        "english_name": "Tanner crab",
+        "publish_status": "draft",
+        "scientific_name": "Chionoecetes opilio",
+        "source_provider": "NIFS",
+        "fact_review_status": "pending",
+        "normalized_scientific_name": "Chionoecetes opilio"
+      }
+    ]
+  },
+  "admission": {
+    "readyTotal": 3016,
+    "canaryExisting": 10,
+    "remaining": 3006,
+    "reviewExcluded": 93,
+    "outOfScopeExcluded": 58
+  },
+  "sourceInserts": 0,
+  "inserted": {
+    "organisms": 3006,
+    "sourceRelations": 3006,
+    "changeLogs": 3006,
+    "aliases": 0,
+    "slugAliases": 0
+  },
+  "totalInserted": 9018,
+  "transactions": {
+    "planned": 31,
+    "committed": 31,
+    "failed": 0
+  },
+  "unexpectedWrites": 0,
+  "fishWrites": 0,
+  "productionWrites": 0
+}

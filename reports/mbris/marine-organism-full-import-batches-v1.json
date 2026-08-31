@@ -1,0 +1,259 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-31T12:42:09.732Z",
+  "status": "FULL_MARINE_ORGANISM_IMPORT_BATCHES_PASS",
+  "batchSize": 100,
+  "planned": 31,
+  "committed": 31,
+  "failed": 0,
+  "batches": [
+    {
+      "batch": 1,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 2,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 3,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 4,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 5,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 6,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 7,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 8,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 9,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 10,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 11,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 12,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 13,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 14,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 15,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 16,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 17,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 18,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 19,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 20,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 21,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 22,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 23,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 24,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 25,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 26,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 27,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 28,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 29,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 30,
+      "requested": 100,
+      "insertedOrganisms": 100,
+      "insertedRelations": 100,
+      "insertedChangeLogs": 100,
+      "status": "COMMITTED"
+    },
+    {
+      "batch": 31,
+      "requested": 6,
+      "insertedOrganisms": 6,
+      "insertedRelations": 6,
+      "insertedChangeLogs": 6,
+      "status": "COMMITTED"
+    }
+  ]
+}

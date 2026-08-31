@@ -1,0 +1,149 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-31T12:09:24.175Z",
+  "status": "MARINE_ORGANISM_CANARY_IMPORT_PASS",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "prewrite": {
+    "counts": {
+      "sourceRecords": 0,
+      "organisms": 0,
+      "sourceRelations": 0,
+      "changeLogs": 0,
+      "aliases": 0,
+      "slugAliases": 0
+    },
+    "collisions": {
+      "internalId": 0,
+      "uuid": 0,
+      "scientific": 0,
+      "normalizedScientific": 0,
+      "slug": 0,
+      "sourceId": 0
+    }
+  },
+  "transactionCommitted": true,
+  "inserted": {
+    "sourceRecords": 1,
+    "organisms": 10,
+    "sourceRelations": 10,
+    "changeLogs": 10,
+    "aliases": 0,
+    "slugAliases": 0
+  },
+  "totalInserted": 31,
+  "groups": {
+    "CRUSTACEAN": 2,
+    "CEPHALOPOD": 2,
+    "GASTROPOD": 2,
+    "BIVALVE": 2,
+    "ECHINODERM": 2
+  },
+  "publicVisible": 0,
+  "auditVisible": 10,
+  "rows": [
+    {
+      "organismId": "9130b9ec-c157-5f0b-8c29-8865c2057012",
+      "internalId": "BM-SPECIES-001555",
+      "slug": "axinopsida-subquadrata",
+      "koreanName": "꼬마말발조개",
+      "scientificName": "Axinopsida subquadrata",
+      "organismGroup": "BIVALVE",
+      "reviewStatus": "pending",
+      "publishStatus": "draft"
+    },
+    {
+      "organismId": "2d314ebb-b234-51a5-93bc-0d38d6c10ca8",
+      "internalId": "BM-SPECIES-001556",
+      "slug": "liralucina-plicatula",
+      "koreanName": "곧은줄꽃잎조개",
+      "scientificName": "Liralucina plicatula",
+      "organismGroup": "BIVALVE",
+      "reviewStatus": "pending",
+      "publishStatus": "draft"
+    },
+    {
+      "organismId": "2940f459-0a4a-5c13-90c7-899e58a997df",
+      "internalId": "BM-SPECIES-001585",
+      "slug": "tenellia-melanobrachia",
+      "koreanName": "컵산호갯민숭이",
+      "scientificName": "Tenellia melanobrachia",
+      "organismGroup": "GASTROPOD",
+      "reviewStatus": "pending",
+      "publishStatus": "draft"
+    },
+    {
+      "organismId": "167231a3-51e5-5b43-8c7b-059613293261",
+      "internalId": "BM-SPECIES-001586",
+      "slug": "tenellia-zvezda",
+      "koreanName": "별무리갯민숭이",
+      "scientificName": "Tenellia zvezda",
+      "organismGroup": "GASTROPOD",
+      "reviewStatus": "pending",
+      "publishStatus": "draft"
+    },
+    {
+      "organismId": "5113a992-2b4c-5baa-8380-faf93ab5a9cd",
+      "internalId": "BM-SPECIES-002768",
+      "slug": "idiosepius-paradoxus",
+      "koreanName": "꼬마오징어",
+      "scientificName": "Idiosepius paradoxus",
+      "organismGroup": "CEPHALOPOD",
+      "reviewStatus": "pending",
+      "publishStatus": "draft"
+    },
+    {
+      "organismId": "ecd47541-c19c-59c0-9ede-4d1a1ea41777",
+      "internalId": "BM-SPECIES-002769",
+      "slug": "loliolus-sumatrensis",
+      "koreanName": "꼬마꼴뚜기",
+      "scientificName": "Loliolus sumatrensis",
+      "organismGroup": "CEPHALOPOD",
+      "reviewStatus": "pending",
+      "publishStatus": "draft"
+    },
+    {
+      "organismId": "f13d8de0-5385-57bb-a3df-b5c67c468add",
+      "internalId": "BM-SPECIES-003994",
+      "slug": "promysis-orientalis",
+      "koreanName": "극동곤쟁이",
+      "scientificName": "Promysis orientalis",
+      "organismGroup": "CRUSTACEAN",
+      "reviewStatus": "pending",
+      "publishStatus": "draft"
+    },
+    {
+      "organismId": "3ff3e8fb-f0d1-5522-93c6-142b3070d975",
+      "internalId": "BM-SPECIES-003995",
+      "slug": "acanthomysis-stelleri",
+      "koreanName": "네마디안다리곤쟁이",
+      "scientificName": "Acanthomysis stelleri",
+      "organismGroup": "CRUSTACEAN",
+      "reviewStatus": "pending",
+      "publishStatus": "draft"
+    },
+    {
+      "organismId": "9f7b868b-6bb2-5c12-8011-485026a25c81",
+      "internalId": "BM-SPECIES-007110",
+      "slug": "temnopleurus-toreumaticus",
+      "koreanName": "분지성게",
+      "scientificName": "Temnopleurus toreumaticus",
+      "organismGroup": "ECHINODERM",
+      "reviewStatus": "pending",
+      "publishStatus": "draft"
+    },
+    {
+      "organismId": "8e64a99a-9d1a-5163-8485-55424bb98a61",
+      "internalId": "BM-SPECIES-007111",
+      "slug": "temnopleurus-hardwickii",
+      "koreanName": "하드윅분지성게",
+      "scientificName": "Temnopleurus hardwickii",
+      "organismGroup": "ECHINODERM",
+      "reviewStatus": "pending",
+      "publishStatus": "draft"
+    }
+  ],
+  "unexpectedWrites": 0,
+  "fishWrites": 0,
+  "productionWrites": 0
+}

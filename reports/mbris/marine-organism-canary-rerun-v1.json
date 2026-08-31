@@ -1,0 +1,27 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-31T12:09:24.175Z",
+  "status": "MARINE_ORGANISM_CANARY_RERUN_PASS",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "inserted": {
+    "sourceRecords": 0,
+    "organisms": 0,
+    "sourceRelations": 0,
+    "changeLogs": 0,
+    "aliases": 0,
+    "slugAliases": 0
+  },
+  "existing": {
+    "sourceRecords": 1,
+    "organisms": 10,
+    "sourceRelations": 10,
+    "changeLogs": 10,
+    "aliases": 0,
+    "slugAliases": 0
+  },
+  "publicVisible": 0,
+  "duplicates": 0,
+  "fishWrites": 0,
+  "productionWrites": 0
+}

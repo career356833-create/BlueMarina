@@ -1,0 +1,72 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-31T12:42:09.732Z",
+  "status": "CROSS_DOMAIN_TRANSITIONAL_DUPLICATE",
+  "count": 3,
+  "rows": [
+    {
+      "status": "CROSS_DOMAIN_TRANSITIONAL_DUPLICATE",
+      "scientificName": "Amphioctopus fangsiao",
+      "classification": "CEPHALOPOD",
+      "fish": {
+        "speciesId": "47aa9b93-2b32-4df4-9a2a-45ed3abbd484",
+        "internalId": null,
+        "koreanName": "주꾸미",
+        "sourceProvider": "NIFS",
+        "sourceId": "fish_1576639605227"
+      },
+      "marine": {
+        "organismId": "1bc2edd8-6671-5136-9424-56605cf92240",
+        "internalId": "BM-SPECIES-003107",
+        "koreanName": "주꾸미",
+        "sourceProvider": "MBRIS",
+        "sourceId": "MBRIS:무척추동물:1555"
+      },
+      "imported": true,
+      "fishChanged": false
+    },
+    {
+      "status": "CROSS_DOMAIN_TRANSITIONAL_DUPLICATE",
+      "scientificName": "Chionoecetes japonicus",
+      "classification": "CRUSTACEAN",
+      "fish": {
+        "speciesId": "608fe1d8-dffa-4314-813c-057e84bd9ca3",
+        "internalId": null,
+        "koreanName": "붉은대게",
+        "sourceProvider": "NIFS",
+        "sourceId": "fish_1573537097812"
+      },
+      "marine": {
+        "organismId": "88f0fead-f88f-5eed-822a-c42919b31691",
+        "internalId": "BM-SPECIES-005541",
+        "koreanName": "홍게",
+        "sourceProvider": "MBRIS",
+        "sourceId": "MBRIS:무척추동물:3989"
+      },
+      "imported": true,
+      "fishChanged": false
+    },
+    {
+      "status": "CROSS_DOMAIN_TRANSITIONAL_DUPLICATE",
+      "scientificName": "Chionoecetes opilio",
+      "classification": "CRUSTACEAN",
+      "fish": {
+        "speciesId": "9205ce01-e1c4-4234-82cf-06a70d938ff2",
+        "internalId": null,
+        "koreanName": "대게",
+        "sourceProvider": "NIFS",
+        "sourceId": "fish_1576639605222"
+      },
+      "marine": {
+        "organismId": "8e3028fd-ef08-5e04-8463-4140fe373a7f",
+        "internalId": "BM-SPECIES-005542",
+        "koreanName": "대게",
+        "sourceProvider": "MBRIS",
+        "sourceId": "MBRIS:무척추동물:3990"
+      },
+      "imported": true,
+      "fishChanged": false
+    }
+  ],
+  "fishWrites": 0
+}
