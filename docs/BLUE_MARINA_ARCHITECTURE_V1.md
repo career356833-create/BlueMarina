@@ -130,7 +130,6 @@ These routes must remain functional until a deliberate retirement or migration p
 
 Reserved routes are architectural intent only. Do not create fake live functionality.
 
-- Marine Navigation: `/sea/navigation`
 - Charter: `/charters`, `/charters/[id]`
 - Reservation: `/reservations`
 - Market: `/market`, `/market/[id]`
@@ -139,9 +138,9 @@ Reserved routes are architectural intent only. Do not create fake live functiona
 
 ## 8. Marine Navigation
 
-Marine Navigation is a future module under `/sea/navigation`.
+Marine Navigation is an active, standalone module under `/sea/navigation`. `/sea` remains the Kakao-based place discovery map and owns the selected-place handoff into navigation.
 
-Expected future scope:
+Current scope:
 
 - GPS current position.
 - Destination.
@@ -152,9 +151,10 @@ Expected future scope:
 - Waypoints.
 - Track.
 - ETA.
-- Safe route guidance.
+- Local waypoints and tracks.
+- A provider-neutral map boundary with a temporary Leaflet/OpenStreetMap renderer.
 
-It must not be implemented like a generic car shortest-route feature.
+It does not provide safe routing, land/reef avoidance, depth routing, or an official navigation-equipment replacement. A future route engine requires validated chart and hazard data and must not be implemented like a generic car shortest-route feature.
 
 ## 9. AI Captain
 

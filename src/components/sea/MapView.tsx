@@ -12,6 +12,8 @@ import { fixedPorts, type FixedPort } from "@/data/fixed-ports";
 import { createCurrentLocationMarkerImage, createFixedPortMarkerImage, createLocalPortMarkerImage, createMarinePlaceGroupMarkerImage, createNationalPortMarkerImage, createSpotMarkerImage } from "@/components/sea/SpotMarker";
 import { loadKakaoMaps, type KakaoMapInstance, type KakaoMarkerInstance } from "@/lib/sea/kakao-maps";
 import { LocationButton } from "@/components/sea/LocationButton";
+import { SeaNavigationLink } from "@/components/boat/navigation/SeaNavigationLink";
+import { navigationDestinationFromFishingSpot, navigationDestinationFromMarinePlace } from "@/lib/marine-navigation/adapters/navigation-destination-adapter";
 
 type GPSStatus = "unavailable" | "locating" | "ready" | "denied";
 type SDKStatus = "loading" | "ready" | "error";
@@ -1027,6 +1029,7 @@ export function SeaMapView() {
                     </Link>
                   </div>
                 </div>
+                <SeaNavigationLink destination={navigationDestinationFromFishingSpot(selectedFishingSpot)} />
               </div>
             ) : selectedNationalPort ? (
               <div className="space-y-3">
@@ -1082,6 +1085,7 @@ export function SeaMapView() {
                 </div>
 
                 {renderRevitalizationProjects(revitalizationProjectsByMarinePlaceId.get(selectedNationalPort.id) ?? [])}
+                <SeaNavigationLink destination={navigationDestinationFromMarinePlace(selectedNationalPort, "port")} />
 
                 <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
                   <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">안내</p>
@@ -1142,6 +1146,7 @@ export function SeaMapView() {
                 </div>
 
                 {renderRevitalizationProjects(revitalizationProjectsByMarinePlaceId.get(selectedFixedPort.id) ?? [])}
+                <SeaNavigationLink destination={navigationDestinationFromMarinePlace(selectedFixedPort, "port")} />
 
                 <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
                   <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">안내</p>
@@ -1202,6 +1207,7 @@ export function SeaMapView() {
                 </div>
 
                 {renderRevitalizationProjects(revitalizationProjectsByMarinePlaceId.get(selectedLocalPort.id) ?? [])}
+                <SeaNavigationLink destination={navigationDestinationFromMarinePlace(selectedLocalPort, "port")} />
 
                 <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
                   <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">안내</p>
