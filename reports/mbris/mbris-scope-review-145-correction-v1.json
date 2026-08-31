@@ -1,0 +1,1467 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-30T16:32:55.344Z",
+  "sourceArtifact": "reports/mbris/mbris-nonfish-marine-organisms-v1.json",
+  "sourceArtifactOverwritten": false,
+  "status": "SCOPE_CLASSIFICATION_CORRECTED",
+  "recordCount": 145,
+  "taxonomyClassCounts": {
+    "Teleostei": 143,
+    "Petromyzonti": 2
+  },
+  "correctedScope": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE",
+  "marineOrganismInputAllowed": false,
+  "records": [
+    {
+      "sourceId": "MBRIS:육상담수종:3",
+      "internalId": "BM-SPECIES-016329",
+      "koreanName": "우레기",
+      "scientificName": "Coregonus ussuriensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:4",
+      "internalId": "BM-SPECIES-016330",
+      "koreanName": "자치",
+      "scientificName": "Hucho ishikawae",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:5",
+      "internalId": "BM-SPECIES-016331",
+      "koreanName": "곤들매기",
+      "scientificName": "Salvelinus malma",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:6",
+      "internalId": "BM-SPECIES-016332",
+      "koreanName": "열목어",
+      "scientificName": "Brachymystax lenok tsinlingensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:7",
+      "internalId": "BM-SPECIES-016333",
+      "koreanName": "사루기",
+      "scientificName": "Thymallus yaluensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:8",
+      "internalId": "BM-SPECIES-016334",
+      "koreanName": "블루길",
+      "scientificName": "Lepomis macrochirus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:9",
+      "internalId": "BM-SPECIES-016335",
+      "koreanName": "배스",
+      "scientificName": "Micropterus salmoides",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:10",
+      "internalId": "BM-SPECIES-016336",
+      "koreanName": "꺽저기",
+      "scientificName": "Coreoperca kawamebari",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:11",
+      "internalId": "BM-SPECIES-016337",
+      "koreanName": "꺽지",
+      "scientificName": "Coreoperca herzi",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:12",
+      "internalId": "BM-SPECIES-016338",
+      "koreanName": "쏘가리",
+      "scientificName": "Siniperca scherzeri",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:13",
+      "internalId": "BM-SPECIES-016339",
+      "koreanName": "좀구굴치",
+      "scientificName": "Micropercops swinhonis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:14",
+      "internalId": "BM-SPECIES-016340",
+      "koreanName": "동사리",
+      "scientificName": "Odontobutis platycephala",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:15",
+      "internalId": "BM-SPECIES-016341",
+      "koreanName": "얼록동사리",
+      "scientificName": "Odontobutis interrupta",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:16",
+      "internalId": "BM-SPECIES-016342",
+      "koreanName": "남방동사리",
+      "scientificName": "Odontobutis obscurus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:17",
+      "internalId": "BM-SPECIES-016343",
+      "koreanName": "밀어",
+      "scientificName": "Rhinogobius brunneus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:18",
+      "internalId": "BM-SPECIES-016344",
+      "koreanName": "줄밀어",
+      "scientificName": "Rhinogobius nagoyae",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:19",
+      "internalId": "BM-SPECIES-016345",
+      "koreanName": "파랑밀어",
+      "scientificName": "Rhinogobius mizunoi",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:20",
+      "internalId": "BM-SPECIES-016346",
+      "koreanName": "버들붕어",
+      "scientificName": "Macropodus ocellatus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:21",
+      "internalId": "BM-SPECIES-016347",
+      "koreanName": "가물치",
+      "scientificName": "Channa argus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:22",
+      "internalId": "BM-SPECIES-016348",
+      "koreanName": "나일틸라피아",
+      "scientificName": "Oreochromis niloticus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:23",
+      "internalId": "BM-SPECIES-016349",
+      "koreanName": "다묵장어",
+      "scientificName": "Lethenteron reissneri",
+      "taxonomyClass": "Petromyzonti",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:24",
+      "internalId": "BM-SPECIES-016350",
+      "koreanName": "칠성말배꼽",
+      "scientificName": "Eudontomyzon morii",
+      "taxonomyClass": "Petromyzonti",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:25",
+      "internalId": "BM-SPECIES-016351",
+      "koreanName": "드렁허리",
+      "scientificName": "Monopterus albus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:26",
+      "internalId": "BM-SPECIES-016352",
+      "koreanName": "대륙송사리",
+      "scientificName": "Oryzias sinensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:27",
+      "internalId": "BM-SPECIES-016353",
+      "koreanName": "송사리",
+      "scientificName": "Oryzias latipes",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:28",
+      "internalId": "BM-SPECIES-016354",
+      "koreanName": "강준치",
+      "scientificName": "Erythroculter erythropterus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:29",
+      "internalId": "BM-SPECIES-016355",
+      "koreanName": "붕어",
+      "scientificName": "Carassius auratus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:30",
+      "internalId": "BM-SPECIES-016356",
+      "koreanName": "떡붕어",
+      "scientificName": "Carassius cuvieri",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:31",
+      "internalId": "BM-SPECIES-016357",
+      "koreanName": "잉어",
+      "scientificName": "Cyprinus carpio",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:32",
+      "internalId": "BM-SPECIES-016358",
+      "koreanName": "좀수수치",
+      "scientificName": "Kichulchoia brevifasciata",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:33",
+      "internalId": "BM-SPECIES-016359",
+      "koreanName": "미꾸리",
+      "scientificName": "Misgurnus anguillicaudatus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:34",
+      "internalId": "BM-SPECIES-016360",
+      "koreanName": "미꾸라지",
+      "scientificName": "Misgurnus mizolepis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:35",
+      "internalId": "BM-SPECIES-016361",
+      "koreanName": "수수미꾸리",
+      "scientificName": "Cobitis multifasciata",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:36",
+      "internalId": "BM-SPECIES-016362",
+      "koreanName": "점줄종개",
+      "scientificName": "Cobitis nalbanti",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:37",
+      "internalId": "BM-SPECIES-016363",
+      "koreanName": "줄종개",
+      "scientificName": "Cobitis tetralineata",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:38",
+      "internalId": "BM-SPECIES-016364",
+      "koreanName": "기름종개",
+      "scientificName": "Cobitis hankugensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:39",
+      "internalId": "BM-SPECIES-016365",
+      "koreanName": "아무르점줄종개",
+      "scientificName": "Cobitis lutheri",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:40",
+      "internalId": "BM-SPECIES-016366",
+      "koreanName": "북방종개",
+      "scientificName": "Cobitis pacifica",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:41",
+      "internalId": "BM-SPECIES-016367",
+      "koreanName": "미호종개",
+      "scientificName": "Cobitis choii",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:42",
+      "internalId": "BM-SPECIES-016368",
+      "koreanName": "동방종개",
+      "scientificName": "Iksookimia yongdokensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:43",
+      "internalId": "BM-SPECIES-016369",
+      "koreanName": "왕종개",
+      "scientificName": "Iksookimia longicorpa",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:44",
+      "internalId": "BM-SPECIES-016370",
+      "koreanName": "참종개",
+      "scientificName": "Iksookimia koreensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:45",
+      "internalId": "BM-SPECIES-016371",
+      "koreanName": "남방종개",
+      "scientificName": "Iksookimia hugowolfeldi",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:46",
+      "internalId": "BM-SPECIES-016372",
+      "koreanName": "부안종개",
+      "scientificName": "Iksookimia pumila",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:47",
+      "internalId": "BM-SPECIES-016373",
+      "koreanName": "얼룩새코미꾸리",
+      "scientificName": "Koreocobitis naktongensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:48",
+      "internalId": "BM-SPECIES-016374",
+      "koreanName": "새코미꾸리",
+      "scientificName": "Koreocobitis rotundicaudata",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:49",
+      "internalId": "BM-SPECIES-016375",
+      "koreanName": "쌀미꾸리",
+      "scientificName": "Lefua costata",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:50",
+      "internalId": "BM-SPECIES-016376",
+      "koreanName": "대륙종개",
+      "scientificName": "Barbatula nuda",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:51",
+      "internalId": "BM-SPECIES-016377",
+      "koreanName": "종개",
+      "scientificName": "Barbatula toni",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:52",
+      "internalId": "BM-SPECIES-016378",
+      "koreanName": "조치",
+      "scientificName": "Pseudolaubuca jouyi",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:53",
+      "internalId": "BM-SPECIES-016379",
+      "koreanName": "초어",
+      "scientificName": "Ctenopharyngodon idella",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:54",
+      "internalId": "BM-SPECIES-016380",
+      "koreanName": "백련어",
+      "scientificName": "Hypophthalmichthys molitrix",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:55",
+      "internalId": "BM-SPECIES-016381",
+      "koreanName": "대두어",
+      "scientificName": "Hypophthalmichthys nobilis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:56",
+      "internalId": "BM-SPECIES-016382",
+      "koreanName": "살치",
+      "scientificName": "Hemiculter leucisculus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:57",
+      "internalId": "BM-SPECIES-016383",
+      "koreanName": "치리",
+      "scientificName": "Hemiculter eigenmanni",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:58",
+      "internalId": "BM-SPECIES-016384",
+      "koreanName": "청백치",
+      "scientificName": "Ochetobius elongatus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:59",
+      "internalId": "BM-SPECIES-016385",
+      "koreanName": "왜몰개",
+      "scientificName": "Aphyocypris chinensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:60",
+      "internalId": "BM-SPECIES-016386",
+      "koreanName": "참갈겨니",
+      "scientificName": "Nipponocypris koreanus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:61",
+      "internalId": "BM-SPECIES-016387",
+      "koreanName": "갈겨니",
+      "scientificName": "Nipponocypris temminckii",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:62",
+      "internalId": "BM-SPECIES-016388",
+      "koreanName": "끄리",
+      "scientificName": "Opsariichthys uncirostris amurensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:63",
+      "internalId": "BM-SPECIES-016389",
+      "koreanName": "눈불개",
+      "scientificName": "Squaliobarbus curriculus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:64",
+      "internalId": "BM-SPECIES-016390",
+      "koreanName": "피라미",
+      "scientificName": "Zacco platypus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:65",
+      "internalId": "BM-SPECIES-016391",
+      "koreanName": "연준모치",
+      "scientificName": "Phoxinus phoxinus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:66",
+      "internalId": "BM-SPECIES-016392",
+      "koreanName": "야레",
+      "scientificName": "Leuciscus waleckii",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:67",
+      "internalId": "BM-SPECIES-016393",
+      "koreanName": "동버들개",
+      "scientificName": "Rhynchocypris percnurus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:68",
+      "internalId": "BM-SPECIES-016394",
+      "koreanName": "버들치",
+      "scientificName": "Rhynchocypris oxycephalus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:69",
+      "internalId": "BM-SPECIES-016395",
+      "koreanName": "버들개",
+      "scientificName": "Rhynchocypris steindachneri",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:70",
+      "internalId": "BM-SPECIES-016396",
+      "koreanName": "버들가지",
+      "scientificName": "Rhynchocypris semotilus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:71",
+      "internalId": "BM-SPECIES-016397",
+      "koreanName": "덕유모치",
+      "scientificName": "Rhynchocypris deogyuensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:72",
+      "internalId": "BM-SPECIES-016398",
+      "koreanName": "금강모치",
+      "scientificName": "Rhynchocypris keumkang",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:73",
+      "internalId": "BM-SPECIES-016399",
+      "koreanName": "칼납자루",
+      "scientificName": "Tanakia koreensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:74",
+      "internalId": "BM-SPECIES-016400",
+      "koreanName": "묵납자루",
+      "scientificName": "Tanakia signifer",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:75",
+      "internalId": "BM-SPECIES-016401",
+      "koreanName": "납자루",
+      "scientificName": "Tanakia lanceolatus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:76",
+      "internalId": "BM-SPECIES-016402",
+      "koreanName": "낙동납자루",
+      "scientificName": "Tanakia latimarginata",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:77",
+      "internalId": "BM-SPECIES-016403",
+      "koreanName": "임실납자루",
+      "scientificName": "Tanakia somjinensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:78",
+      "internalId": "BM-SPECIES-016404",
+      "koreanName": "큰줄납자루",
+      "scientificName": "Acheilognathus majusculus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:79",
+      "internalId": "BM-SPECIES-016405",
+      "koreanName": "큰납지리",
+      "scientificName": "Acheilognathus macropterus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:80",
+      "internalId": "BM-SPECIES-016406",
+      "koreanName": "줄납자루",
+      "scientificName": "Acheilognathus yamatsutae",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:81",
+      "internalId": "BM-SPECIES-016407",
+      "koreanName": "납지리",
+      "scientificName": "Acheilognathus rhombeus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:82",
+      "internalId": "BM-SPECIES-016408",
+      "koreanName": "가시납지리",
+      "scientificName": "Acheilognathus chankaensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:83",
+      "internalId": "BM-SPECIES-016409",
+      "koreanName": null,
+      "scientificName": "Acheilognathus coreanus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:84",
+      "internalId": "BM-SPECIES-016410",
+      "koreanName": "떡납줄갱이",
+      "scientificName": "Rhodeus notatus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:85",
+      "internalId": "BM-SPECIES-016411",
+      "koreanName": "납줄개",
+      "scientificName": "Rhodeus sericeus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:86",
+      "internalId": "BM-SPECIES-016412",
+      "koreanName": "각시붕어",
+      "scientificName": "Rhodeus uyekii",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:87",
+      "internalId": "BM-SPECIES-016413",
+      "koreanName": "한강납줄개",
+      "scientificName": "Rhodeus pseudosericeus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:88",
+      "internalId": "BM-SPECIES-016414",
+      "koreanName": "서호납줄갱이",
+      "scientificName": "Rhodeus hondae",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:89",
+      "internalId": "BM-SPECIES-016415",
+      "koreanName": "흰줄납줄개",
+      "scientificName": "Rhodeus ocellatus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:90",
+      "internalId": "BM-SPECIES-016416",
+      "koreanName": "줄몰개",
+      "scientificName": "Gnathopogon strigatus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:91",
+      "internalId": "BM-SPECIES-016417",
+      "koreanName": "쉬리",
+      "scientificName": "Coreoleuciscus splendidus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:92",
+      "internalId": "BM-SPECIES-016418",
+      "koreanName": "참쉬리",
+      "scientificName": "Coreoleuciscus aeruginos",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:93",
+      "internalId": "BM-SPECIES-016419",
+      "koreanName": "버들매치",
+      "scientificName": "Abbottina rivularis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:94",
+      "internalId": "BM-SPECIES-016420",
+      "koreanName": "중고기",
+      "scientificName": "Sarcocheilichthys nigripinnis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:95",
+      "internalId": "BM-SPECIES-016421",
+      "koreanName": "북방중고기",
+      "scientificName": "Sarcocheilichthys sciistius",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:96",
+      "internalId": "BM-SPECIES-016422",
+      "koreanName": "참중고기",
+      "scientificName": "Sarcocheilichthys variegatus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:97",
+      "internalId": "BM-SPECIES-016423",
+      "koreanName": "어름치",
+      "scientificName": "Hemibarbus mylodon",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:98",
+      "internalId": "BM-SPECIES-016424",
+      "koreanName": "누치",
+      "scientificName": "Hemibarbus labeo",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:99",
+      "internalId": "BM-SPECIES-016425",
+      "koreanName": "참마자",
+      "scientificName": "Hemibarbus longirostris",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:100",
+      "internalId": "BM-SPECIES-016426",
+      "koreanName": "모래무지",
+      "scientificName": "Pseudogobio esocinus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:101",
+      "internalId": "BM-SPECIES-016427",
+      "koreanName": "돌상어",
+      "scientificName": "Gobiobotia brevibarba",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:102",
+      "internalId": "BM-SPECIES-016428",
+      "koreanName": "꾸구리",
+      "scientificName": "Gobiobotia macrocephala",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:103",
+      "internalId": "BM-SPECIES-016429",
+      "koreanName": "흰수마자",
+      "scientificName": "Gobiobotia nakdongensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:104",
+      "internalId": "BM-SPECIES-016430",
+      "koreanName": "모샘치",
+      "scientificName": "Gobio cynocephalus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:105",
+      "internalId": "BM-SPECIES-016431",
+      "koreanName": "새미",
+      "scientificName": "Ladislavia taczanowskii",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:106",
+      "internalId": "BM-SPECIES-016432",
+      "koreanName": "두만강자그사니",
+      "scientificName": "Mesogobio tumenensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:107",
+      "internalId": "BM-SPECIES-016433",
+      "koreanName": "압록자그사니",
+      "scientificName": "Mesogobio lachneri",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:108",
+      "internalId": "BM-SPECIES-016434",
+      "koreanName": "두우쟁이",
+      "scientificName": "Saurogobio dabryi",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:109",
+      "internalId": "BM-SPECIES-016435",
+      "koreanName": "점몰개",
+      "scientificName": "Squalidus multimaculatus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:110",
+      "internalId": "BM-SPECIES-016436",
+      "koreanName": "참몰개",
+      "scientificName": "Squalidus chankaensis tsuchigae",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:111",
+      "internalId": "BM-SPECIES-016437",
+      "koreanName": "몰개",
+      "scientificName": "Squalidus japonicus coreanus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:112",
+      "internalId": "BM-SPECIES-016438",
+      "koreanName": "긴몰개",
+      "scientificName": "Squalidus gracilis majimae",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:113",
+      "internalId": "BM-SPECIES-016439",
+      "koreanName": "케톱치",
+      "scientificName": "Coreius heterodon",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:114",
+      "internalId": "BM-SPECIES-016440",
+      "koreanName": "됭경모치",
+      "scientificName": "Microphysogobio jeoni",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:115",
+      "internalId": "BM-SPECIES-016441",
+      "koreanName": "배가사리",
+      "scientificName": "Microphysogobio longidorsalis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:116",
+      "internalId": "BM-SPECIES-016442",
+      "koreanName": "모래주사",
+      "scientificName": "Microphysogobio koreensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:117",
+      "internalId": "BM-SPECIES-016443",
+      "koreanName": "여울마자",
+      "scientificName": "Microphysogobio rapidus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:118",
+      "internalId": "BM-SPECIES-016444",
+      "koreanName": "돌마자",
+      "scientificName": "Microphysogobio yaluensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:119",
+      "internalId": "BM-SPECIES-016445",
+      "koreanName": "왜매치",
+      "scientificName": "Microphysogobio springeri",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:120",
+      "internalId": "BM-SPECIES-016446",
+      "koreanName": "감돌고기",
+      "scientificName": "Pseudopungtungia nigra",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:121",
+      "internalId": "BM-SPECIES-016447",
+      "koreanName": "가는돌고기",
+      "scientificName": "Pseudopungtungia tenuicorpus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:122",
+      "internalId": "BM-SPECIES-016448",
+      "koreanName": "참붕어",
+      "scientificName": "Pseudorasbora parva",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:123",
+      "internalId": "BM-SPECIES-016449",
+      "koreanName": "돌고기",
+      "scientificName": "Pungtungia herzi",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:124",
+      "internalId": "BM-SPECIES-016450",
+      "koreanName": "자가사리",
+      "scientificName": "Liobagrus mediadiposalis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:125",
+      "internalId": "BM-SPECIES-016451",
+      "koreanName": "섬진자가사리",
+      "scientificName": "Liobagrus somjinensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:126",
+      "internalId": "BM-SPECIES-016452",
+      "koreanName": "퉁가리",
+      "scientificName": "Liobagrus andersoni",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:127",
+      "internalId": "BM-SPECIES-016453",
+      "koreanName": "퉁사리",
+      "scientificName": "Liobagrus obesus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:128",
+      "internalId": "BM-SPECIES-016454",
+      "koreanName": "동방자가사리",
+      "scientificName": "Liobagrus hyeongsanensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:129",
+      "internalId": "BM-SPECIES-016455",
+      "koreanName": "금강자가사리",
+      "scientificName": "Liobagrus geumgangensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:130",
+      "internalId": "BM-SPECIES-016456",
+      "koreanName": "밀자개",
+      "scientificName": "Tachysurus nitidus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:131",
+      "internalId": "BM-SPECIES-016457",
+      "koreanName": "꼬치동자개",
+      "scientificName": "Tachysurus brevicorpus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:132",
+      "internalId": "BM-SPECIES-016458",
+      "koreanName": "눈동자개",
+      "scientificName": "Tachysurus koreanus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:133",
+      "internalId": "BM-SPECIES-016459",
+      "koreanName": "동자개",
+      "scientificName": "Tachysurus sinensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:134",
+      "internalId": "BM-SPECIES-016460",
+      "koreanName": "종어",
+      "scientificName": "Rhinobagrus dumerili",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:135",
+      "internalId": "BM-SPECIES-016461",
+      "koreanName": "대농갱이",
+      "scientificName": "Rhinobagrus ussuriensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:136",
+      "internalId": "BM-SPECIES-016462",
+      "koreanName": "찬넬동자개",
+      "scientificName": "Ictalurus punctatus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:137",
+      "internalId": "BM-SPECIES-016463",
+      "koreanName": "메기",
+      "scientificName": "Silurus asotus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:138",
+      "internalId": "BM-SPECIES-016464",
+      "koreanName": "미유기",
+      "scientificName": "Silurus microdorsalis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:139",
+      "internalId": "BM-SPECIES-016465",
+      "koreanName": "모오캐",
+      "scientificName": "Lota lota",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:140",
+      "internalId": "BM-SPECIES-016466",
+      "koreanName": "두만가시고기",
+      "scientificName": "Pungitius tymensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:141",
+      "internalId": "BM-SPECIES-016467",
+      "koreanName": "가시고기",
+      "scientificName": "Pungitius sinensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:142",
+      "internalId": "BM-SPECIES-016468",
+      "koreanName": "잔가시고기",
+      "scientificName": "Pungitius kaibarae",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:143",
+      "internalId": "BM-SPECIES-016469",
+      "koreanName": "청가시고기",
+      "scientificName": "Pungitius pungitius",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:144",
+      "internalId": "BM-SPECIES-016470",
+      "koreanName": "큰가시고기",
+      "scientificName": "Gasterosteus aculeatus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:145",
+      "internalId": "BM-SPECIES-016471",
+      "koreanName": "참둑중개",
+      "scientificName": "Cottus czerskii",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:146",
+      "internalId": "BM-SPECIES-016472",
+      "koreanName": "한둑중개",
+      "scientificName": "Cottus hangiongensis",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:147",
+      "internalId": "BM-SPECIES-016473",
+      "koreanName": "둑중개",
+      "scientificName": "Cottus koreanus",
+      "taxonomyClass": "Teleostei",
+      "sourceScope": "육상담수종",
+      "previousClassification": "MARINE_ORGANISM_NON_FISH",
+      "correctedClassification": "FRESHWATER_OR_NON_MARINE_FISH_SCOPE"
+    }
+  ],
+  "databaseWrites": 0
+}

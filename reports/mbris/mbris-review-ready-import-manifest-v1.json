@@ -1,0 +1,5191 @@
+{
+  "manifestVersion": "MBRIS_REVIEW_READY_IMPORT_MANIFEST_V1",
+  "generatedAt": "2026-08-30T14:41:36.993Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "readOnly": true,
+  "dbWrite": 0,
+  "initialState": {
+    "publishStatus": "draft",
+    "reviewStatus": "pending"
+  },
+  "readyNewTotal": 136,
+  "collisionPreflight": {
+    "id": 0,
+    "sourceId": 0,
+    "scientific": 0,
+    "normalized": 0,
+    "slug": 0,
+    "relation": 0
+  },
+  "rows": [
+    {
+      "canonicalId": "BM-SPECIES-000002",
+      "internalId": "BM-SPECIES-000002",
+      "mbrisSourceId": "MBRIS:척추동물:4",
+      "koreanName": "볼락",
+      "scientificName": "Sebastes inermis",
+      "normalizedScientificName": "Sebastes inermis",
+      "slug": "sebastes-inermis",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastes Cuvier, 1829",
+        "species": "inermis"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:4",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:4",
+        "originalKoreanName": "볼락",
+        "originalScientificName": "Sebastes inermis",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000004",
+      "internalId": "BM-SPECIES-000004",
+      "mbrisSourceId": "MBRIS:척추동물:6",
+      "koreanName": "황점볼락",
+      "scientificName": "Sebastes oblongus",
+      "normalizedScientificName": "Sebastes oblongus",
+      "slug": "sebastes-oblongus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastes Cuvier, 1829",
+        "species": "oblongus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:6",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:6",
+        "originalKoreanName": "황점볼락",
+        "originalScientificName": "Sebastes oblongus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000011",
+      "internalId": "BM-SPECIES-000011",
+      "mbrisSourceId": "MBRIS:척추동물:13",
+      "koreanName": "개볼락",
+      "scientificName": "Sebastes pachycephalus",
+      "normalizedScientificName": "Sebastes pachycephalus",
+      "slug": "sebastes-pachycephalus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastes Cuvier, 1829",
+        "species": "pachycephalus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:13",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:13",
+        "originalKoreanName": "개볼락",
+        "originalScientificName": "Sebastes pachycephalus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000014",
+      "internalId": "BM-SPECIES-000014",
+      "mbrisSourceId": "MBRIS:척추동물:16",
+      "koreanName": "노랑볼락",
+      "scientificName": "Sebastes steindachneri",
+      "normalizedScientificName": "Sebastes steindachneri",
+      "slug": "sebastes-steindachneri",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastes Cuvier, 1829",
+        "species": "steindachneri"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:16",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:16",
+        "originalKoreanName": "노랑볼락",
+        "originalScientificName": "Sebastes steindachneri",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000015",
+      "internalId": "BM-SPECIES-000015",
+      "mbrisSourceId": "MBRIS:척추동물:17",
+      "koreanName": "불볼락",
+      "scientificName": "Sebastes thompsoni",
+      "normalizedScientificName": "Sebastes thompsoni",
+      "slug": "sebastes-thompsoni",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastes Cuvier, 1829",
+        "species": "thompsoni"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:17",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:17",
+        "originalKoreanName": "불볼락",
+        "originalScientificName": "Sebastes thompsoni",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000019",
+      "internalId": "BM-SPECIES-000019",
+      "mbrisSourceId": "MBRIS:척추동물:21",
+      "koreanName": "쏨뱅이",
+      "scientificName": "Sebastiscus marmoratus",
+      "normalizedScientificName": "Sebastiscus marmoratus",
+      "slug": "sebastiscus-marmoratus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastiscus Jordan & Starks, 1904",
+        "species": "marmoratus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:21",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:21",
+        "originalKoreanName": "쏨뱅이",
+        "originalScientificName": "Sebastiscus marmoratus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000020",
+      "internalId": "BM-SPECIES-000020",
+      "mbrisSourceId": "MBRIS:척추동물:22",
+      "koreanName": "붉은쏨뱅이",
+      "scientificName": "Sebastiscus tertius",
+      "normalizedScientificName": "Sebastiscus tertius",
+      "slug": "sebastiscus-tertius",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastiscus Jordan & Starks, 1904",
+        "species": "tertius"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:22",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:22",
+        "originalKoreanName": "붉은쏨뱅이",
+        "originalScientificName": "Sebastiscus tertius",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000042",
+      "internalId": "BM-SPECIES-000042",
+      "mbrisSourceId": "MBRIS:척추동물:44",
+      "koreanName": "삼세기",
+      "scientificName": "Hemitripterus villosus",
+      "normalizedScientificName": "Hemitripterus villosus",
+      "slug": "hemitripterus-villosus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Agonidae Swainson, 1839",
+        "genus": "Hemitripterus Cuvier, 1829",
+        "species": "villosus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:44",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:44",
+        "originalKoreanName": "삼세기",
+        "originalScientificName": "Hemitripterus villosus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000057",
+      "internalId": "BM-SPECIES-000057",
+      "mbrisSourceId": "MBRIS:척추동물:59",
+      "koreanName": "꼼치",
+      "scientificName": "Liparis tanakae",
+      "normalizedScientificName": "Liparis tanakae",
+      "slug": "liparis-tanakae",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Liparidae Gill, 1861",
+        "genus": "Liparis Scopoli, 1777",
+        "species": "tanakae"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:59",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:59",
+        "originalKoreanName": "꼼치",
+        "originalScientificName": "Liparis tanakae",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000060",
+      "internalId": "BM-SPECIES-000060",
+      "mbrisSourceId": "MBRIS:척추동물:62",
+      "koreanName": "물메기",
+      "scientificName": "Liparis tessellatus",
+      "normalizedScientificName": "Liparis tessellatus",
+      "slug": "liparis-tessellatus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Liparidae Gill, 1861",
+        "genus": "Liparis Scopoli, 1777",
+        "species": "tessellatus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:62",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:62",
+        "originalKoreanName": "물메기",
+        "originalScientificName": "Liparis tessellatus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000065",
+      "internalId": "BM-SPECIES-000065",
+      "mbrisSourceId": "MBRIS:척추동물:67",
+      "koreanName": "양태",
+      "scientificName": "Platycephalus indicus",
+      "normalizedScientificName": "Platycephalus indicus",
+      "slug": "platycephalus-indicus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Platycephalidae Swainson, 1839",
+        "genus": "Platycephalus Bloch, 1795",
+        "species": "indicus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:67",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:67",
+        "originalKoreanName": "양태",
+        "originalScientificName": "Platycephalus indicus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000080",
+      "internalId": "BM-SPECIES-000080",
+      "mbrisSourceId": "MBRIS:척추동물:82",
+      "koreanName": "아귀",
+      "scientificName": "Lophiomus setigerus",
+      "normalizedScientificName": "Lophiomus setigerus",
+      "slug": "lophiomus-setigerus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Lophiiformes",
+        "family": "Lophiidae Rafinesque, 1810",
+        "genus": "Lophiomus Gill, 1883",
+        "species": "setigerus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:82",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:82",
+        "originalKoreanName": "아귀",
+        "originalScientificName": "Lophiomus setigerus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000095",
+      "internalId": "BM-SPECIES-000095",
+      "mbrisSourceId": "MBRIS:척추동물:97",
+      "koreanName": "달고기",
+      "scientificName": "Zeus faber",
+      "normalizedScientificName": "Zeus faber",
+      "slug": "zeus-faber",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Zeiformes",
+        "family": "Zeidae Rafinesque, 1815",
+        "genus": "Zeus Linnaeus, 1758",
+        "species": "faber"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:97",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:97",
+        "originalKoreanName": "달고기",
+        "originalScientificName": "Zeus faber",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000097",
+      "internalId": "BM-SPECIES-000097",
+      "mbrisSourceId": "MBRIS:척추동물:99",
+      "koreanName": "숭어",
+      "scientificName": "Mugil cephalus",
+      "normalizedScientificName": "Mugil cephalus",
+      "slug": "mugil-cephalus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Mugiliformes",
+        "family": "Mugilidae Jarocki, 1822",
+        "genus": "Mugil Linnaeus, 1758",
+        "species": "cephalus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:99",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:99",
+        "originalKoreanName": "숭어",
+        "originalScientificName": "Mugil cephalus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000103",
+      "internalId": "BM-SPECIES-000103",
+      "mbrisSourceId": "MBRIS:척추동물:105",
+      "koreanName": "가숭어",
+      "scientificName": "Planiliza haematocheilus",
+      "normalizedScientificName": "Planiliza haematocheilus",
+      "slug": "planiliza-haematocheilus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Mugiliformes",
+        "family": "Mugilidae Jarocki, 1822",
+        "genus": "Planiliza Whitley, 1945",
+        "species": "haematocheilus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:105",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:105",
+        "originalKoreanName": "가숭어",
+        "originalScientificName": "Planiliza haematocheilus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000122",
+      "internalId": "BM-SPECIES-000122",
+      "mbrisSourceId": "MBRIS:척추동물:124",
+      "koreanName": "쥐치",
+      "scientificName": "Stephanolepis cirrhifer",
+      "normalizedScientificName": "Stephanolepis cirrhifer",
+      "slug": "stephanolepis-cirrhifer",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Tetraodontiformes",
+        "family": "Monacanthidae Nardo, 1843",
+        "genus": "Stephanolepis Gill, 1861",
+        "species": "cirrhifer"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:124",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:124",
+        "originalKoreanName": "쥐치",
+        "originalScientificName": "Stephanolepis cirrhifer",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000129",
+      "internalId": "BM-SPECIES-000129",
+      "mbrisSourceId": "MBRIS:척추동물:131",
+      "koreanName": "말쥐치",
+      "scientificName": "Thamnaconus modestus",
+      "normalizedScientificName": "Thamnaconus modestus",
+      "slug": "thamnaconus-modestus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Tetraodontiformes",
+        "family": "Monacanthidae Nardo, 1843",
+        "genus": "Thamnaconus Smith, 1949",
+        "species": "modestus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:131",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:131",
+        "originalKoreanName": "말쥐치",
+        "originalScientificName": "Thamnaconus modestus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000143",
+      "internalId": "BM-SPECIES-000143",
+      "mbrisSourceId": "MBRIS:척추동물:145",
+      "koreanName": "가시복",
+      "scientificName": "Diodon holocanthus",
+      "normalizedScientificName": "Diodon holocanthus",
+      "slug": "diodon-holocanthus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Tetraodontiformes",
+        "family": "Diodontidae Bonaparte, 1835",
+        "genus": "Diodon Linnaeus, 1758",
+        "species": "holocanthus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:145",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:145",
+        "originalKoreanName": "가시복",
+        "originalScientificName": "Diodon holocanthus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000163",
+      "internalId": "BM-SPECIES-000163",
+      "mbrisSourceId": "MBRIS:척추동물:165",
+      "koreanName": "까치복",
+      "scientificName": "Takifugu xanthopterus",
+      "normalizedScientificName": "Takifugu xanthopterus",
+      "slug": "takifugu-xanthopterus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Tetraodontiformes",
+        "family": "Tetraodontidae Bonaparte, 1831",
+        "genus": "Takifugu Abe, 1949",
+        "species": "xanthopterus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:165",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:165",
+        "originalKoreanName": "까치복",
+        "originalScientificName": "Takifugu xanthopterus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000165",
+      "internalId": "BM-SPECIES-000165",
+      "mbrisSourceId": "MBRIS:척추동물:167",
+      "koreanName": "검복",
+      "scientificName": "Takifugu porphyreus",
+      "normalizedScientificName": "Takifugu porphyreus",
+      "slug": "takifugu-porphyreus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Tetraodontiformes",
+        "family": "Tetraodontidae Bonaparte, 1831",
+        "genus": "Takifugu Abe, 1949",
+        "species": "porphyreus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:167",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:167",
+        "originalKoreanName": "검복",
+        "originalScientificName": "Takifugu porphyreus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000188",
+      "internalId": "BM-SPECIES-000188",
+      "mbrisSourceId": "MBRIS:척추동물:190",
+      "koreanName": "농어",
+      "scientificName": "Lateolabrax japonicus",
+      "normalizedScientificName": "Lateolabrax japonicus",
+      "slug": "lateolabrax-japonicus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acropomatiformes",
+        "family": "Lateolabracidae Ghedotti, Davis & Smith, 2018",
+        "genus": "Lateolabrax Bleeker, 1855",
+        "species": "japonicus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:190",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:190",
+        "originalKoreanName": "농어",
+        "originalScientificName": "Lateolabrax japonicus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000190",
+      "internalId": "BM-SPECIES-000190",
+      "mbrisSourceId": "MBRIS:척추동물:192",
+      "koreanName": "점농어",
+      "scientificName": "Lateolabrax spilonotus",
+      "normalizedScientificName": "Lateolabrax spilonotus",
+      "slug": "lateolabrax-spilonotus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acropomatiformes",
+        "family": "Lateolabracidae Ghedotti, Davis & Smith, 2018",
+        "genus": "Lateolabrax Bleeker, 1855",
+        "species": "spilonotus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:192",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:192",
+        "originalKoreanName": "점농어",
+        "originalScientificName": "Lateolabrax spilonotus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000192",
+      "internalId": "BM-SPECIES-000192",
+      "mbrisSourceId": "MBRIS:척추동물:194",
+      "koreanName": "눈볼대",
+      "scientificName": "Doederleinia berycoides",
+      "normalizedScientificName": "Doederleinia berycoides",
+      "slug": "doederleinia-berycoides",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acropomatiformes",
+        "family": "Acropomatidae Gill, 1893",
+        "genus": "Doederleinia Steindachner, 1883",
+        "species": "berycoides"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:194",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:194",
+        "originalKoreanName": "눈볼대",
+        "originalScientificName": "Doederleinia berycoides",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000221",
+      "internalId": "BM-SPECIES-000221",
+      "mbrisSourceId": "MBRIS:척추동물:223",
+      "koreanName": "인상어",
+      "scientificName": "Neoditrema ransonnetii",
+      "normalizedScientificName": "Neoditrema ransonnetii",
+      "slug": "neoditrema-ransonnetii",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Blenniiformes",
+        "family": "Embiotocidae Agassiz, 1853",
+        "genus": "Neoditrema Steindachner, 1883",
+        "species": "ransonnetii"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:223",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:223",
+        "originalKoreanName": "인상어",
+        "originalScientificName": "Neoditrema ransonnetii",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000223",
+      "internalId": "BM-SPECIES-000223",
+      "mbrisSourceId": "MBRIS:척추동물:225",
+      "koreanName": "망상어",
+      "scientificName": "Ditrema temminckii",
+      "normalizedScientificName": "Ditrema temminckii",
+      "slug": "ditrema-temminckii",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Blenniiformes",
+        "family": "Embiotocidae Agassiz, 1853",
+        "genus": "Ditrema Temminck & Schlegel, 1844",
+        "species": "temminckii"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:225",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:225",
+        "originalKoreanName": "망상어",
+        "originalScientificName": "Ditrema temminckii",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000226",
+      "internalId": "BM-SPECIES-000226",
+      "mbrisSourceId": "MBRIS:척추동물:228",
+      "koreanName": "자리돔",
+      "scientificName": "Chromis notata",
+      "normalizedScientificName": "Chromis notata",
+      "slug": "chromis-notata",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Blenniiformes",
+        "family": "Pomacentridae Bonaparte, 1831",
+        "genus": "Chromis Cuvier, 1814",
+        "species": "notata"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:228",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:228",
+        "originalKoreanName": "자리돔",
+        "originalScientificName": "Chromis notata",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000277",
+      "internalId": "BM-SPECIES-000277",
+      "mbrisSourceId": "MBRIS:척추동물:279",
+      "koreanName": "강담돔",
+      "scientificName": "Oplegnathus punctatus",
+      "normalizedScientificName": "Oplegnathus punctatus",
+      "slug": "oplegnathus-punctatus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Centrarchiformes",
+        "family": "Oplegnathidae Bleeker, 1853",
+        "genus": "Oplegnathus Richardson, 1840",
+        "species": "punctatus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:279",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:279",
+        "originalKoreanName": "강담돔",
+        "originalScientificName": "Oplegnathus punctatus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000278",
+      "internalId": "BM-SPECIES-000278",
+      "mbrisSourceId": "MBRIS:척추동물:280",
+      "koreanName": "돌돔",
+      "scientificName": "Oplegnathus fasciatus",
+      "normalizedScientificName": "Oplegnathus fasciatus",
+      "slug": "oplegnathus-fasciatus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Centrarchiformes",
+        "family": "Oplegnathidae Bleeker, 1853",
+        "genus": "Oplegnathus Richardson, 1840",
+        "species": "fasciatus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:280",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:280",
+        "originalKoreanName": "돌돔",
+        "originalScientificName": "Oplegnathus fasciatus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000279",
+      "internalId": "BM-SPECIES-000279",
+      "mbrisSourceId": "MBRIS:척추동물:281",
+      "koreanName": "벵에돔",
+      "scientificName": "Girella punctata",
+      "normalizedScientificName": "Girella punctata",
+      "slug": "girella-punctata",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Centrarchiformes",
+        "family": "Girellidae Gill, 1862",
+        "genus": "Girella Gray, 1835",
+        "species": "punctata"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:281",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:281",
+        "originalKoreanName": "벵에돔",
+        "originalScientificName": "Girella punctata",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000280",
+      "internalId": "BM-SPECIES-000280",
+      "mbrisSourceId": "MBRIS:척추동물:282",
+      "koreanName": "긴꼬리벵에돔",
+      "scientificName": "Girella leonina",
+      "normalizedScientificName": "Girella leonina",
+      "slug": "girella-leonina",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Centrarchiformes",
+        "family": "Girellidae Gill, 1862",
+        "genus": "Girella Gray, 1835",
+        "species": "leonina"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:282",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:282",
+        "originalKoreanName": "긴꼬리벵에돔",
+        "originalScientificName": "Girella leonina",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000284",
+      "internalId": "BM-SPECIES-000284",
+      "mbrisSourceId": "MBRIS:척추동물:286",
+      "koreanName": "무늬망둑",
+      "scientificName": "Bathygobius fuscus",
+      "normalizedScientificName": "Bathygobius fuscus",
+      "slug": "bathygobius-fuscus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Gobiidae Cuvier, 1816",
+        "genus": "Bathygobius Bleeker, 1878",
+        "species": "fuscus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:286",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:286",
+        "originalKoreanName": "무늬망둑",
+        "originalScientificName": "Bathygobius fuscus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000338",
+      "internalId": "BM-SPECIES-000338",
+      "mbrisSourceId": "MBRIS:척추동물:340",
+      "koreanName": "풀망둑",
+      "scientificName": "Acanthogobius hasta",
+      "normalizedScientificName": "Acanthogobius hasta",
+      "slug": "acanthogobius-hasta",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Acanthogobius Gill, 1859",
+        "species": "hasta"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:340",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:340",
+        "originalKoreanName": "풀망둑",
+        "originalScientificName": "Acanthogobius hasta",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000339",
+      "internalId": "BM-SPECIES-000339",
+      "mbrisSourceId": "MBRIS:척추동물:341",
+      "koreanName": "문절망둑",
+      "scientificName": "Acanthogobius flavimanus",
+      "normalizedScientificName": "Acanthogobius flavimanus",
+      "slug": "acanthogobius-flavimanus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Acanthogobius Gill, 1859",
+        "species": "flavimanus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:341",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:341",
+        "originalKoreanName": "문절망둑",
+        "originalScientificName": "Acanthogobius flavimanus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000346",
+      "internalId": "BM-SPECIES-000346",
+      "mbrisSourceId": "MBRIS:척추동물:348",
+      "koreanName": "도화망둑",
+      "scientificName": "Amblychaeturichthys hexanema",
+      "normalizedScientificName": "Amblychaeturichthys hexanema",
+      "slug": "amblychaeturichthys-hexanema",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Amblychaeturichthys Bleeker, 1874",
+        "species": "hexanema"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:348",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:348",
+        "originalKoreanName": "도화망둑",
+        "originalScientificName": "Amblychaeturichthys hexanema",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000351",
+      "internalId": "BM-SPECIES-000351",
+      "mbrisSourceId": "MBRIS:척추동물:353",
+      "koreanName": "두줄망둑",
+      "scientificName": "Tridentiger trigonocephalus",
+      "normalizedScientificName": "Tridentiger trigonocephalus",
+      "slug": "tridentiger-trigonocephalus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Tridentiger Gill, 1859",
+        "species": "trigonocephalus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:353",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:353",
+        "originalKoreanName": "두줄망둑",
+        "originalScientificName": "Tridentiger trigonocephalus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000356",
+      "internalId": "BM-SPECIES-000356",
+      "mbrisSourceId": "MBRIS:척추동물:358",
+      "koreanName": "검정망둑",
+      "scientificName": "Tridentiger obscurus",
+      "normalizedScientificName": "Tridentiger obscurus",
+      "slug": "tridentiger-obscurus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Tridentiger Gill, 1859",
+        "species": "obscurus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:358",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:358",
+        "originalKoreanName": "검정망둑",
+        "originalScientificName": "Tridentiger obscurus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000362",
+      "internalId": "BM-SPECIES-000362",
+      "mbrisSourceId": "MBRIS:척추동물:364",
+      "koreanName": "살망둑",
+      "scientificName": "Gymnogobius heptacanthus",
+      "normalizedScientificName": "Gymnogobius heptacanthus",
+      "slug": "gymnogobius-heptacanthus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Gymnogobius Gill, 1863",
+        "species": "heptacanthus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:364",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:364",
+        "originalKoreanName": "살망둑",
+        "originalScientificName": "Gymnogobius heptacanthus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000384",
+      "internalId": "BM-SPECIES-000384",
+      "mbrisSourceId": "MBRIS:척추동물:386",
+      "koreanName": "별망둑",
+      "scientificName": "Chaenogobius gulosus",
+      "normalizedScientificName": "Chaenogobius gulosus",
+      "slug": "chaenogobius-gulosus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Chaenogobius Gill, 1859",
+        "species": "gulosus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:386",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:386",
+        "originalKoreanName": "별망둑",
+        "originalScientificName": "Chaenogobius gulosus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000395",
+      "internalId": "BM-SPECIES-000395",
+      "mbrisSourceId": "MBRIS:척추동물:397",
+      "koreanName": "금줄망둑",
+      "scientificName": "Pterogobius virgo",
+      "normalizedScientificName": "Pterogobius virgo",
+      "slug": "pterogobius-virgo",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Pterogobius Gill, 1863",
+        "species": "virgo"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:397",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:397",
+        "originalKoreanName": "금줄망둑",
+        "originalScientificName": "Pterogobius virgo",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000407",
+      "internalId": "BM-SPECIES-000407",
+      "mbrisSourceId": "MBRIS:척추동물:409",
+      "koreanName": "동갈삼치",
+      "scientificName": "Scomberomorus commerson",
+      "normalizedScientificName": "Scomberomorus commerson",
+      "slug": "scomberomorus-commerson",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Scomberomorus Lacepède, 1801",
+        "species": "commerson"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:409",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:409",
+        "originalKoreanName": "동갈삼치",
+        "originalScientificName": "Scomberomorus commerson",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000408",
+      "internalId": "BM-SPECIES-000408",
+      "mbrisSourceId": "MBRIS:척추동물:410",
+      "koreanName": "삼치",
+      "scientificName": "Scomberomorus niphonius",
+      "normalizedScientificName": "Scomberomorus niphonius",
+      "slug": "scomberomorus-niphonius",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Scomberomorus Lacepède, 1801",
+        "species": "niphonius"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:410",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:410",
+        "originalKoreanName": "삼치",
+        "originalScientificName": "Scomberomorus niphonius",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000411",
+      "internalId": "BM-SPECIES-000411",
+      "mbrisSourceId": "MBRIS:척추동물:413",
+      "koreanName": "점다랑어",
+      "scientificName": "Euthynnus affinis",
+      "normalizedScientificName": "Euthynnus affinis",
+      "slug": "euthynnus-affinis",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Euthynnus Lütken, 1883",
+        "species": "affinis"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:413",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:413",
+        "originalKoreanName": "점다랑어",
+        "originalScientificName": "Euthynnus affinis",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000412",
+      "internalId": "BM-SPECIES-000412",
+      "mbrisSourceId": "MBRIS:척추동물:414",
+      "koreanName": "가다랑어",
+      "scientificName": "Katsuwonus pelamis",
+      "normalizedScientificName": "Katsuwonus pelamis",
+      "slug": "katsuwonus-pelamis",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Katsuwonus Kishinouye, 1915",
+        "species": "pelamis"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:414",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:414",
+        "originalKoreanName": "가다랑어",
+        "originalScientificName": "Katsuwonus pelamis",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000415",
+      "internalId": "BM-SPECIES-000415",
+      "mbrisSourceId": "MBRIS:척추동물:417",
+      "koreanName": "줄삼치",
+      "scientificName": "Sarda orientalis",
+      "normalizedScientificName": "Sarda orientalis",
+      "slug": "sarda-orientalis",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Sarda Cuvier, 1829",
+        "species": "orientalis"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:417",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:417",
+        "originalKoreanName": "줄삼치",
+        "originalScientificName": "Sarda orientalis",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000417",
+      "internalId": "BM-SPECIES-000417",
+      "mbrisSourceId": "MBRIS:척추동물:419",
+      "koreanName": "고등어",
+      "scientificName": "Scomber japonicus",
+      "normalizedScientificName": "Scomber japonicus",
+      "slug": "scomber-japonicus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Scomber Linnaeus, 1758",
+        "species": "japonicus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:419",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:419",
+        "originalKoreanName": "고등어",
+        "originalScientificName": "Scomber japonicus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000418",
+      "internalId": "BM-SPECIES-000418",
+      "mbrisSourceId": "MBRIS:척추동물:420",
+      "koreanName": "꼬치삼치",
+      "scientificName": "Acanthocybium solandri",
+      "normalizedScientificName": "Acanthocybium solandri",
+      "slug": "acanthocybium-solandri",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Acanthocybium Gill, 1862",
+        "species": "solandri"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:420",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:420",
+        "originalKoreanName": "꼬치삼치",
+        "originalScientificName": "Acanthocybium solandri",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000421",
+      "internalId": "BM-SPECIES-000421",
+      "mbrisSourceId": "MBRIS:척추동물:423",
+      "koreanName": "눈다랑어",
+      "scientificName": "Thunnus obesus",
+      "normalizedScientificName": "Thunnus obesus",
+      "slug": "thunnus-obesus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Thunnus South, 1845",
+        "species": "obesus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:423",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:423",
+        "originalKoreanName": "눈다랑어",
+        "originalScientificName": "Thunnus obesus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000425",
+      "internalId": "BM-SPECIES-000425",
+      "mbrisSourceId": "MBRIS:척추동물:427",
+      "koreanName": "덕대",
+      "scientificName": "Pampus argenteus",
+      "normalizedScientificName": "Pampus argenteus",
+      "slug": "pampus-argenteus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Stromateidae Rafinesque, 1810",
+        "genus": "Pampus Bonaparte, 1834",
+        "species": "argenteus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:427",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:427",
+        "originalKoreanName": "덕대",
+        "originalScientificName": "Pampus argenteus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000426",
+      "internalId": "BM-SPECIES-000426",
+      "mbrisSourceId": "MBRIS:척추동물:428",
+      "koreanName": "병어",
+      "scientificName": "Pampus punctatissimus",
+      "normalizedScientificName": "Pampus punctatissimus",
+      "slug": "pampus-punctatissimus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Stromateidae Rafinesque, 1810",
+        "genus": "Pampus Bonaparte, 1834",
+        "species": "punctatissimus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:428",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:428",
+        "originalKoreanName": "병어",
+        "originalScientificName": "Pampus punctatissimus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000438",
+      "internalId": "BM-SPECIES-000438",
+      "mbrisSourceId": "MBRIS:척추동물:440",
+      "koreanName": "새다래",
+      "scientificName": "Brama japonica",
+      "normalizedScientificName": "Brama japonica",
+      "slug": "brama-japonica",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Bramidae Bonaparte, 1831",
+        "genus": "Brama Bloch & Schneider, 1801",
+        "species": "japonica"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:440",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:440",
+        "originalKoreanName": "새다래",
+        "originalScientificName": "Brama japonica",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000444",
+      "internalId": "BM-SPECIES-000444",
+      "mbrisSourceId": "MBRIS:척추동물:446",
+      "koreanName": "갈치",
+      "scientificName": "Trichiurus japonicus",
+      "normalizedScientificName": "Trichiurus japonicus",
+      "slug": "trichiurus-japonicus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Trichiuridae Rafinesque, 1810",
+        "genus": "Trichiurus Linnaeus, 1758",
+        "species": "japonicus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:446",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:446",
+        "originalKoreanName": "갈치",
+        "originalScientificName": "Trichiurus japonicus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000459",
+      "internalId": "BM-SPECIES-000459",
+      "mbrisSourceId": "MBRIS:척추동물:461",
+      "koreanName": "꼬치고기",
+      "scientificName": "Sphyraena pinguis",
+      "normalizedScientificName": "Sphyraena pinguis",
+      "slug": "sphyraena-pinguis",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Sphyraenidae Rafinesque, 1815",
+        "genus": "Sphyraena Artedi, 1793",
+        "species": "pinguis"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:461",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:461",
+        "originalKoreanName": "꼬치고기",
+        "originalScientificName": "Sphyraena pinguis",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000465",
+      "internalId": "BM-SPECIES-000465",
+      "mbrisSourceId": "MBRIS:척추동물:467",
+      "koreanName": "넙치",
+      "scientificName": "Paralichthys olivaceus",
+      "normalizedScientificName": "Paralichthys olivaceus",
+      "slug": "paralichthys-olivaceus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Paralichthyidae Regan, 1910",
+        "genus": "Paralichthys Girard, 1858",
+        "species": "olivaceus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:467",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:467",
+        "originalKoreanName": "넙치",
+        "originalScientificName": "Paralichthys olivaceus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000470",
+      "internalId": "BM-SPECIES-000470",
+      "mbrisSourceId": "MBRIS:척추동물:472",
+      "koreanName": "청새치",
+      "scientificName": "Kajikia audax",
+      "normalizedScientificName": "Kajikia audax",
+      "slug": "kajikia-audax",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Istiophoridae Rafinesque, 1815",
+        "genus": "Kajikia Hirasaka & Nakamura, 1947",
+        "species": "audax"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:472",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:472",
+        "originalKoreanName": "청새치",
+        "originalScientificName": "Kajikia audax",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000473",
+      "internalId": "BM-SPECIES-000473",
+      "mbrisSourceId": "MBRIS:척추동물:475",
+      "koreanName": "돛새치",
+      "scientificName": "Istiophorus platypterus",
+      "normalizedScientificName": "Istiophorus platypterus",
+      "slug": "istiophorus-platypterus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Istiophoridae Rafinesque, 1815",
+        "genus": "Istiophorus Lacepède, 1801",
+        "species": "platypterus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:475",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:475",
+        "originalKoreanName": "돛새치",
+        "originalScientificName": "Istiophorus platypterus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000479",
+      "internalId": "BM-SPECIES-000479",
+      "mbrisSourceId": "MBRIS:척추동물:481",
+      "koreanName": "황새치",
+      "scientificName": "Xiphias gladius",
+      "normalizedScientificName": "Xiphias gladius",
+      "slug": "xiphias-gladius",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Xiphiidae Rafinesque, 1815",
+        "genus": "Xiphias Linnaeus, 1758",
+        "species": "gladius"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:481",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:481",
+        "originalKoreanName": "황새치",
+        "originalScientificName": "Xiphias gladius",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000488",
+      "internalId": "BM-SPECIES-000488",
+      "mbrisSourceId": "MBRIS:척추동물:490",
+      "koreanName": "전갱이",
+      "scientificName": "Trachurus japonicus",
+      "normalizedScientificName": "Trachurus japonicus",
+      "slug": "trachurus-japonicus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Carangidae Rafinesque, 1815",
+        "genus": "Trachurus Rafinesque, 1810",
+        "species": "japonicus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:490",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:490",
+        "originalKoreanName": "전갱이",
+        "originalScientificName": "Trachurus japonicus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000492",
+      "internalId": "BM-SPECIES-000492",
+      "mbrisSourceId": "MBRIS:척추동물:494",
+      "koreanName": "흑점줄전갱이",
+      "scientificName": "Pseudocaranx dentex",
+      "normalizedScientificName": "Pseudocaranx dentex",
+      "slug": "pseudocaranx-dentex",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Carangidae Rafinesque, 1815",
+        "genus": "Pseudocaranx Bleeker, 1863",
+        "species": "dentex"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:494",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:494",
+        "originalKoreanName": "흑점줄전갱이",
+        "originalScientificName": "Pseudocaranx dentex",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000499",
+      "internalId": "BM-SPECIES-000499",
+      "mbrisSourceId": "MBRIS:척추동물:501",
+      "koreanName": "잿방어",
+      "scientificName": "Seriola dumerili",
+      "normalizedScientificName": "Seriola dumerili",
+      "slug": "seriola-dumerili",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Carangidae Rafinesque, 1815",
+        "genus": "Seriola Cuvier, 1816",
+        "species": "dumerili"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:501",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:501",
+        "originalKoreanName": "잿방어",
+        "originalScientificName": "Seriola dumerili",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000500",
+      "internalId": "BM-SPECIES-000500",
+      "mbrisSourceId": "MBRIS:척추동물:502",
+      "koreanName": "부시리",
+      "scientificName": "Seriola aureovittata",
+      "normalizedScientificName": "Seriola aureovittata",
+      "slug": "seriola-aureovittata",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Carangidae Rafinesque, 1815",
+        "genus": "Seriola Cuvier, 1816",
+        "species": "aureovittata"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:502",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:502",
+        "originalKoreanName": "부시리",
+        "originalScientificName": "Seriola aureovittata",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000501",
+      "internalId": "BM-SPECIES-000501",
+      "mbrisSourceId": "MBRIS:척추동물:503",
+      "koreanName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "normalizedScientificName": "Seriola quinqueradiata",
+      "slug": "seriola-quinqueradiata",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Carangidae Rafinesque, 1815",
+        "genus": "Seriola Cuvier, 1816",
+        "species": "quinqueradiata"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:503",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:503",
+        "originalKoreanName": "방어",
+        "originalScientificName": "Seriola quinqueradiata",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000540",
+      "internalId": "BM-SPECIES-000540",
+      "mbrisSourceId": "MBRIS:척추동물:542",
+      "koreanName": "용가자미",
+      "scientificName": "Cleisthenes pinetorum",
+      "normalizedScientificName": "Cleisthenes pinetorum",
+      "slug": "cleisthenes-pinetorum",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Cleisthenes Jordan & Starks, 1904",
+        "species": "pinetorum"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:542",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:542",
+        "originalKoreanName": "용가자미",
+        "originalScientificName": "Cleisthenes pinetorum",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000541",
+      "internalId": "BM-SPECIES-000541",
+      "mbrisSourceId": "MBRIS:척추동물:543",
+      "koreanName": "줄가자미",
+      "scientificName": "Clidoderma asperrimum",
+      "normalizedScientificName": "Clidoderma asperrimum",
+      "slug": "clidoderma-asperrimum",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Clidoderma Bleeker, 1862",
+        "species": "asperrimum"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:543",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:543",
+        "originalKoreanName": "줄가자미",
+        "originalScientificName": "Clidoderma asperrimum",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000544",
+      "internalId": "BM-SPECIES-000544",
+      "mbrisSourceId": "MBRIS:척추동물:546",
+      "koreanName": "참가자미",
+      "scientificName": "Pseudopleuronectes herzensteini",
+      "normalizedScientificName": "Pseudopleuronectes herzensteini",
+      "slug": "pseudopleuronectes-herzensteini",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Pseudopleuronectes Bleeker, 1862",
+        "species": "herzensteini"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:546",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:546",
+        "originalKoreanName": "참가자미",
+        "originalScientificName": "Pseudopleuronectes herzensteini",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000548",
+      "internalId": "BM-SPECIES-000548",
+      "mbrisSourceId": "MBRIS:척추동물:550",
+      "koreanName": "도다리",
+      "scientificName": "Pleuronichthys cornutus",
+      "normalizedScientificName": "Pleuronichthys cornutus",
+      "slug": "pleuronichthys-cornutus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Pleuronichthys Girard, 1854",
+        "species": "cornutus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:550",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:550",
+        "originalKoreanName": "도다리",
+        "originalScientificName": "Pleuronichthys cornutus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000553",
+      "internalId": "BM-SPECIES-000553",
+      "mbrisSourceId": "MBRIS:척추동물:555",
+      "koreanName": "홍가자미",
+      "scientificName": "Hippoglossoides dubius",
+      "normalizedScientificName": "Hippoglossoides dubius",
+      "slug": "hippoglossoides-dubius",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Hippoglossoides Gottsche, 1835",
+        "species": "dubius"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:555",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:555",
+        "originalKoreanName": "홍가자미",
+        "originalScientificName": "Hippoglossoides dubius",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000554",
+      "internalId": "BM-SPECIES-000554",
+      "mbrisSourceId": "MBRIS:척추동물:556",
+      "koreanName": "돌가자미",
+      "scientificName": "Platichthys bicoloratus",
+      "normalizedScientificName": "Platichthys bicoloratus",
+      "slug": "platichthys-bicoloratus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Platichthys Girard, 1854",
+        "species": "bicoloratus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:556",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:556",
+        "originalKoreanName": "돌가자미",
+        "originalScientificName": "Platichthys bicoloratus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000555",
+      "internalId": "BM-SPECIES-000555",
+      "mbrisSourceId": "MBRIS:척추동물:557",
+      "koreanName": "강도다리",
+      "scientificName": "Platichthys stellatus",
+      "normalizedScientificName": "Platichthys stellatus",
+      "slug": "platichthys-stellatus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Platichthys Girard, 1854",
+        "species": "stellatus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:557",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:557",
+        "originalKoreanName": "강도다리",
+        "originalScientificName": "Platichthys stellatus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000556",
+      "internalId": "BM-SPECIES-000556",
+      "mbrisSourceId": "MBRIS:척추동물:558",
+      "koreanName": "각시가자미",
+      "scientificName": "Limanda aspera",
+      "normalizedScientificName": "Limanda aspera",
+      "slug": "limanda-aspera",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Limanda Gottsche, 1835",
+        "species": "aspera"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:558",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:558",
+        "originalKoreanName": "각시가자미",
+        "originalScientificName": "Limanda aspera",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000566",
+      "internalId": "BM-SPECIES-000566",
+      "mbrisSourceId": "MBRIS:척추동물:568",
+      "koreanName": "박대",
+      "scientificName": "Cynoglossus semilaevis",
+      "normalizedScientificName": "Cynoglossus semilaevis",
+      "slug": "cynoglossus-semilaevis",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Cynoglossidae Jordan, 1888",
+        "genus": "Cynoglossus Hamilton, 1822",
+        "species": "semilaevis"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:568",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:568",
+        "originalKoreanName": "박대",
+        "originalScientificName": "Cynoglossus semilaevis",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000576",
+      "internalId": "BM-SPECIES-000576",
+      "mbrisSourceId": "MBRIS:척추동물:578",
+      "koreanName": "양미리",
+      "scientificName": "Ammodytes heian",
+      "normalizedScientificName": "Ammodytes heian",
+      "slug": "ammodytes-heian",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Labriformes",
+        "family": "Ammodytidae Bonaparte, 1835",
+        "genus": "Ammodytes Linnaeus, 1758",
+        "species": "heian"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:578",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:578",
+        "originalKoreanName": "양미리",
+        "originalScientificName": "Ammodytes heian",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000578",
+      "internalId": "BM-SPECIES-000578",
+      "mbrisSourceId": "MBRIS:척추동물:580",
+      "koreanName": "쌍동가리",
+      "scientificName": "Parapercis sexfasciata",
+      "normalizedScientificName": "Parapercis sexfasciata",
+      "slug": "parapercis-sexfasciata",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Labriformes",
+        "family": "Pinguipedidae Günther, 1860",
+        "genus": "Parapercis Bleeker, 1863",
+        "species": "sexfasciata"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:580",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:580",
+        "originalKoreanName": "쌍동가리",
+        "originalScientificName": "Parapercis sexfasciata",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000594",
+      "internalId": "BM-SPECIES-000594",
+      "mbrisSourceId": "MBRIS:척추동물:596",
+      "koreanName": "놀래기",
+      "scientificName": "Halichoeres tenuispinis",
+      "normalizedScientificName": "Halichoeres tenuispinis",
+      "slug": "halichoeres-tenuispinis",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Labriformes",
+        "family": "Labridae Cuvier, 1816",
+        "genus": "Halichoeres Rüppell, 1835",
+        "species": "tenuispinis"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:596",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:596",
+        "originalKoreanName": "놀래기",
+        "originalScientificName": "Halichoeres tenuispinis",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000607",
+      "internalId": "BM-SPECIES-000607",
+      "mbrisSourceId": "MBRIS:척추동물:609",
+      "koreanName": "혹돔",
+      "scientificName": "Bodianus reticulatus",
+      "normalizedScientificName": "Bodianus reticulatus",
+      "slug": "bodianus-reticulatus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Labriformes",
+        "family": "Labridae Cuvier, 1816",
+        "genus": "Bodianus Bloch, 1790",
+        "species": "reticulatus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:609",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:609",
+        "originalKoreanName": "혹돔",
+        "originalScientificName": "Bodianus reticulatus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000625",
+      "internalId": "BM-SPECIES-000625",
+      "mbrisSourceId": "MBRIS:척추동물:627",
+      "koreanName": "은상어",
+      "scientificName": "Chimaera phantasma",
+      "normalizedScientificName": "Chimaera phantasma",
+      "slug": "chimaera-phantasma",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Holocephali",
+        "order": "Chimaeriformes",
+        "family": "Chimaeridae Rafinesque, 1815",
+        "genus": "Chimaera Linnaeus, 1758",
+        "species": "phantasma"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:627",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:627",
+        "originalKoreanName": "은상어",
+        "originalScientificName": "Chimaera phantasma",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000649",
+      "internalId": "BM-SPECIES-000649",
+      "mbrisSourceId": "MBRIS:척추동물:651",
+      "koreanName": "홍어",
+      "scientificName": "Okamejei kenojei",
+      "normalizedScientificName": "Okamejei kenojei",
+      "slug": "okamejei-kenojei",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Rajiformes",
+        "family": "Rajidae de Blainville, 1816",
+        "genus": "Okamejei Ishiyama, 1958",
+        "species": "kenojei"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:651",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:651",
+        "originalKoreanName": "홍어",
+        "originalScientificName": "Okamejei kenojei",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000654",
+      "internalId": "BM-SPECIES-000654",
+      "mbrisSourceId": "MBRIS:척추동물:656",
+      "koreanName": "돌묵상어",
+      "scientificName": "Cetorhinus maximus",
+      "normalizedScientificName": "Cetorhinus maximus",
+      "slug": "cetorhinus-maximus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Lamniformes",
+        "family": "Cetorhinidae Gill, 1861",
+        "genus": "Cetorhinus Blainville, 1816",
+        "species": "maximus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:656",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:656",
+        "originalKoreanName": "돌묵상어",
+        "originalScientificName": "Cetorhinus maximus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000662",
+      "internalId": "BM-SPECIES-000662",
+      "mbrisSourceId": "MBRIS:척추동물:664",
+      "koreanName": "귀상어",
+      "scientificName": "Sphyrna zygaena",
+      "normalizedScientificName": "Sphyrna zygaena",
+      "slug": "sphyrna-zygaena",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Carcharhiniformes",
+        "family": "Sphyrnidae Bonaparte, 1840",
+        "genus": "Sphyrna Rafinesque, 1810",
+        "species": "zygaena"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:664",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:664",
+        "originalKoreanName": "귀상어",
+        "originalScientificName": "Sphyrna zygaena",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000673",
+      "internalId": "BM-SPECIES-000673",
+      "mbrisSourceId": "MBRIS:척추동물:675",
+      "koreanName": "청새리상어",
+      "scientificName": "Prionace glauca",
+      "normalizedScientificName": "Prionace glauca",
+      "slug": "prionace-glauca",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Carcharhiniformes",
+        "family": "Carcharhinidae Jordan & Evermann, 1896",
+        "genus": "Prionace Cantor, 1849",
+        "species": "glauca"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:675",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:675",
+        "originalKoreanName": "청새리상어",
+        "originalScientificName": "Prionace glauca",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000676",
+      "internalId": "BM-SPECIES-000676",
+      "mbrisSourceId": "MBRIS:척추동물:678",
+      "koreanName": "까치상어",
+      "scientificName": "Triakis scyllium",
+      "normalizedScientificName": "Triakis scyllium",
+      "slug": "triakis-scyllium",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Carcharhiniformes",
+        "family": "Triakidae Gray, 1851",
+        "genus": "Triakis Müller & Henle, 1838",
+        "species": "scyllium"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:678",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:678",
+        "originalKoreanName": "까치상어",
+        "originalScientificName": "Triakis scyllium",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000684",
+      "internalId": "BM-SPECIES-000684",
+      "mbrisSourceId": "MBRIS:척추동물:686",
+      "koreanName": "전기가오리",
+      "scientificName": "Narke japonica",
+      "normalizedScientificName": "Narke japonica",
+      "slug": "narke-japonica",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Torpediniformes",
+        "family": "Narcinidae Gill, 1862",
+        "genus": "Narke Kaup, 1826",
+        "species": "japonica"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:686",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:686",
+        "originalKoreanName": "전기가오리",
+        "originalScientificName": "Narke japonica",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000695",
+      "internalId": "BM-SPECIES-000695",
+      "mbrisSourceId": "MBRIS:척추동물:697",
+      "koreanName": "노랑가오리",
+      "scientificName": "Hemitrygon akajei",
+      "normalizedScientificName": "Hemitrygon akajei",
+      "slug": "hemitrygon-akajei",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Myliobatiformes",
+        "family": "Dasyatidae Jordan & Gilbert, 1879",
+        "genus": "Hemitrygon Müller & Henle, 1838",
+        "species": "akajei"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:697",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:697",
+        "originalKoreanName": "노랑가오리",
+        "originalScientificName": "Hemitrygon akajei",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000710",
+      "internalId": "BM-SPECIES-000710",
+      "mbrisSourceId": "MBRIS:척추동물:712",
+      "koreanName": "먹장어",
+      "scientificName": "Eptatretus burgeri",
+      "normalizedScientificName": "Eptatretus burgeri",
+      "slug": "eptatretus-burgeri",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Myxini",
+        "order": "Myxiniformes",
+        "family": "Myxinidae Rafinesque, 1815",
+        "genus": "Eptatretus Cloquet, 1819",
+        "species": "burgeri"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:712",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:712",
+        "originalKoreanName": "먹장어",
+        "originalScientificName": "Eptatretus burgeri",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000751",
+      "internalId": "BM-SPECIES-000751",
+      "mbrisSourceId": "MBRIS:척추동물:753",
+      "koreanName": "감성돔",
+      "scientificName": "Acanthopagrus schlegelii",
+      "normalizedScientificName": "Acanthopagrus schlegelii",
+      "slug": "acanthopagrus-schlegelii",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sparidae Rafinesque, 1818",
+        "genus": "Acanthopagrus Peters, 1855",
+        "species": "schlegelii"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:753",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:753",
+        "originalKoreanName": "감성돔",
+        "originalScientificName": "Acanthopagrus schlegelii",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000752",
+      "internalId": "BM-SPECIES-000752",
+      "mbrisSourceId": "MBRIS:척추동물:754",
+      "koreanName": "청돔",
+      "scientificName": "Rhabdosargus sarba",
+      "normalizedScientificName": "Rhabdosargus sarba",
+      "slug": "rhabdosargus-sarba",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sparidae Rafinesque, 1818",
+        "genus": "Rhabdosargus Fowler, 1933",
+        "species": "sarba"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:754",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:754",
+        "originalKoreanName": "청돔",
+        "originalScientificName": "Rhabdosargus sarba",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000753",
+      "internalId": "BM-SPECIES-000753",
+      "mbrisSourceId": "MBRIS:척추동물:755",
+      "koreanName": "황돔",
+      "scientificName": "Dentex hypselosomus",
+      "normalizedScientificName": "Dentex hypselosomus",
+      "slug": "dentex-hypselosomus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sparidae Rafinesque, 1818",
+        "genus": "Dentex Cuvier, 1814",
+        "species": "hypselosomus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:755",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:755",
+        "originalKoreanName": "황돔",
+        "originalScientificName": "Dentex hypselosomus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000755",
+      "internalId": "BM-SPECIES-000755",
+      "mbrisSourceId": "MBRIS:척추동물:757",
+      "koreanName": "참돔",
+      "scientificName": "Pagrus major",
+      "normalizedScientificName": "Pagrus major",
+      "slug": "pagrus-major",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sparidae Rafinesque, 1818",
+        "genus": "Pagrus Cuvier, 1816",
+        "species": "major"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:757",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:757",
+        "originalKoreanName": "참돔",
+        "originalScientificName": "Pagrus major",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000757",
+      "internalId": "BM-SPECIES-000757",
+      "mbrisSourceId": "MBRIS:척추동물:759",
+      "koreanName": "붉돔",
+      "scientificName": "Evynnis tumifrons",
+      "normalizedScientificName": "Evynnis tumifrons",
+      "slug": "evynnis-tumifrons",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sparidae Rafinesque, 1818",
+        "genus": "Evynnis Jordan & Thompson, 1912",
+        "species": "tumifrons"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:759",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:759",
+        "originalKoreanName": "붉돔",
+        "originalScientificName": "Evynnis tumifrons",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000760",
+      "internalId": "BM-SPECIES-000760",
+      "mbrisSourceId": "MBRIS:척추동물:762",
+      "koreanName": "갈돔",
+      "scientificName": "Lethrinus nebulosus",
+      "normalizedScientificName": "Lethrinus nebulosus",
+      "slug": "lethrinus-nebulosus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Lethrinidae Bonaparte, 1831",
+        "genus": "Lethrinus Cuvier, 1829",
+        "species": "nebulosus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:762",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:762",
+        "originalKoreanName": "갈돔",
+        "originalScientificName": "Lethrinus nebulosus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000761",
+      "internalId": "BM-SPECIES-000761",
+      "mbrisSourceId": "MBRIS:척추동물:763",
+      "koreanName": "구갈돔",
+      "scientificName": "Lethrinus haematopterus",
+      "normalizedScientificName": "Lethrinus haematopterus",
+      "slug": "lethrinus-haematopterus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Lethrinidae Bonaparte, 1831",
+        "genus": "Lethrinus Cuvier, 1829",
+        "species": "haematopterus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:763",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:763",
+        "originalKoreanName": "구갈돔",
+        "originalScientificName": "Lethrinus haematopterus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000764",
+      "internalId": "BM-SPECIES-000764",
+      "mbrisSourceId": "MBRIS:척추동물:766",
+      "koreanName": "군평선이",
+      "scientificName": "Hapalogenys analis",
+      "normalizedScientificName": "Hapalogenys analis",
+      "slug": "hapalogenys-analis",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Lobotidae Gill, 1861",
+        "genus": "Hapalogenys Richardson, 1844",
+        "species": "analis"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:766",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:766",
+        "originalKoreanName": "군평선이",
+        "originalScientificName": "Hapalogenys analis",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000766",
+      "internalId": "BM-SPECIES-000766",
+      "mbrisSourceId": "MBRIS:척추동물:768",
+      "koreanName": "동갈돗돔",
+      "scientificName": "Hapalogenys nigripinnis",
+      "normalizedScientificName": "Hapalogenys nigripinnis",
+      "slug": "hapalogenys-nigripinnis",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Lobotidae Gill, 1861",
+        "genus": "Hapalogenys Richardson, 1844",
+        "species": "nigripinnis"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:768",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:768",
+        "originalKoreanName": "동갈돗돔",
+        "originalScientificName": "Hapalogenys nigripinnis",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000792",
+      "internalId": "BM-SPECIES-000792",
+      "mbrisSourceId": "MBRIS:척추동물:794",
+      "koreanName": "벤자리",
+      "scientificName": "Parapristipoma trilineatum",
+      "normalizedScientificName": "Parapristipoma trilineatum",
+      "slug": "parapristipoma-trilineatum",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Haemulidae Gill, 1885",
+        "genus": "Parapristipoma Bleeker, 1873",
+        "species": "trilineatum"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:794",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:794",
+        "originalKoreanName": "벤자리",
+        "originalScientificName": "Parapristipoma trilineatum",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000800",
+      "internalId": "BM-SPECIES-000800",
+      "mbrisSourceId": "MBRIS:척추동물:802",
+      "koreanName": "독가시치",
+      "scientificName": "Siganus fuscescens",
+      "normalizedScientificName": "Siganus fuscescens",
+      "slug": "siganus-fuscescens",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Siganidae Richardson, 1837",
+        "genus": "Siganus Forsskål, 1775",
+        "species": "fuscescens"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:802",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:802",
+        "originalKoreanName": "독가시치",
+        "originalScientificName": "Siganus fuscescens",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000818",
+      "internalId": "BM-SPECIES-000818",
+      "mbrisSourceId": "MBRIS:척추동물:820",
+      "koreanName": "보리멸",
+      "scientificName": "Sillago sihama",
+      "normalizedScientificName": "Sillago sihama",
+      "slug": "sillago-sihama",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sillaginidae Richardson, 1846",
+        "genus": "Sillago Cuvier, 1816",
+        "species": "sihama"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:820",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:820",
+        "originalKoreanName": "보리멸",
+        "originalScientificName": "Sillago sihama",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000825",
+      "internalId": "BM-SPECIES-000825",
+      "mbrisSourceId": "MBRIS:척추동물:827",
+      "koreanName": "옥돔",
+      "scientificName": "Branchiostegus japonicus",
+      "normalizedScientificName": "Branchiostegus japonicus",
+      "slug": "branchiostegus-japonicus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Latilidae Gill, 1862",
+        "genus": "Branchiostegus Rafinesque, 1815",
+        "species": "japonicus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:827",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:827",
+        "originalKoreanName": "옥돔",
+        "originalScientificName": "Branchiostegus japonicus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000839",
+      "internalId": "BM-SPECIES-000839",
+      "mbrisSourceId": "MBRIS:척추동물:841",
+      "koreanName": "보구치",
+      "scientificName": "Pennahia argentata",
+      "normalizedScientificName": "Pennahia argentata",
+      "slug": "pennahia-argentata",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sciaenidae Cuvier, 1829",
+        "genus": "Pennahia Fowler, 1926",
+        "species": "argentata"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:841",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:841",
+        "originalKoreanName": "보구치",
+        "originalScientificName": "Pennahia argentata",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000840",
+      "internalId": "BM-SPECIES-000840",
+      "mbrisSourceId": "MBRIS:척추동물:842",
+      "koreanName": "민어",
+      "scientificName": "Miichthys miiuy",
+      "normalizedScientificName": "Miichthys miiuy",
+      "slug": "miichthys-miiuy",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sciaenidae Cuvier, 1829",
+        "genus": "Miichthys Lin, 1938",
+        "species": "miiuy"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:842",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:842",
+        "originalKoreanName": "민어",
+        "originalScientificName": "Miichthys miiuy",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000842",
+      "internalId": "BM-SPECIES-000842",
+      "mbrisSourceId": "MBRIS:척추동물:844",
+      "koreanName": "부세",
+      "scientificName": "Larimichthys crocea",
+      "normalizedScientificName": "Larimichthys crocea",
+      "slug": "larimichthys-crocea",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sciaenidae Cuvier, 1829",
+        "genus": "Larimichthys Jordan & Starks, 1905",
+        "species": "crocea"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:844",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:844",
+        "originalKoreanName": "부세",
+        "originalScientificName": "Larimichthys crocea",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000843",
+      "internalId": "BM-SPECIES-000843",
+      "mbrisSourceId": "MBRIS:척추동물:845",
+      "koreanName": "꼬마민어",
+      "scientificName": "Protonibea diacanthus",
+      "normalizedScientificName": "Protonibea diacanthus",
+      "slug": "protonibea-diacanthus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sciaenidae Cuvier, 1829",
+        "genus": "Protonibea Trewavas, 1971",
+        "species": "diacanthus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:845",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:845",
+        "originalKoreanName": "꼬마민어",
+        "originalScientificName": "Protonibea diacanthus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000867",
+      "internalId": "BM-SPECIES-000867",
+      "mbrisSourceId": "MBRIS:척추동물:869",
+      "koreanName": "동갈치",
+      "scientificName": "Strongylura anastomella",
+      "normalizedScientificName": "Strongylura anastomella",
+      "slug": "strongylura-anastomella",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Beloniformes",
+        "family": "Belonidae Bonaparte, 1835",
+        "genus": "Strongylura van Hasselt, 1824",
+        "species": "anastomella"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:869",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:869",
+        "originalKoreanName": "동갈치",
+        "originalScientificName": "Strongylura anastomella",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000881",
+      "internalId": "BM-SPECIES-000881",
+      "mbrisSourceId": "MBRIS:척추동물:883",
+      "koreanName": "꽁치",
+      "scientificName": "Cololabis saira",
+      "normalizedScientificName": "Cololabis saira",
+      "slug": "cololabis-saira",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Beloniformes",
+        "family": "Scomberesocidae Bleeker, 1859",
+        "genus": "Cololabis Gill, 1896",
+        "species": "saira"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:883",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:883",
+        "originalKoreanName": "꽁치",
+        "originalScientificName": "Cololabis saira",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000884",
+      "internalId": "BM-SPECIES-000884",
+      "mbrisSourceId": "MBRIS:척추동물:886",
+      "koreanName": "학공치",
+      "scientificName": "Hyporhamphus sajori",
+      "normalizedScientificName": "Hyporhamphus sajori",
+      "slug": "hyporhamphus-sajori",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Beloniformes",
+        "family": "Hemiramphidae Gill, 1859",
+        "genus": "Hyporhamphus Gill, 1859",
+        "species": "sajori"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:886",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:886",
+        "originalKoreanName": "학공치",
+        "originalScientificName": "Hyporhamphus sajori",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000900",
+      "internalId": "BM-SPECIES-000900",
+      "mbrisSourceId": "MBRIS:척추동물:902",
+      "koreanName": "갯장어",
+      "scientificName": "Muraenesox cinereus",
+      "normalizedScientificName": "Muraenesox cinereus",
+      "slug": "muraenesox-cinereus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Anguilliformes",
+        "family": "Muraenesocidae Kaup, 1859",
+        "genus": "Muraenesox McClelland, 1844",
+        "species": "cinereus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:902",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:902",
+        "originalKoreanName": "갯장어",
+        "originalScientificName": "Muraenesox cinereus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000908",
+      "internalId": "BM-SPECIES-000908",
+      "mbrisSourceId": "MBRIS:척추동물:910",
+      "koreanName": "붕장어",
+      "scientificName": "Conger myriaster",
+      "normalizedScientificName": "Conger myriaster",
+      "slug": "conger-myriaster",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Anguilliformes",
+        "family": "Congridae Kaup, 1856",
+        "genus": "Conger Bosc, 1817",
+        "species": "myriaster"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:910",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:910",
+        "originalKoreanName": "붕장어",
+        "originalScientificName": "Conger myriaster",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000935",
+      "internalId": "BM-SPECIES-000935",
+      "mbrisSourceId": "MBRIS:척추동물:937",
+      "koreanName": "곰치",
+      "scientificName": "Gymnothorax kidako",
+      "normalizedScientificName": "Gymnothorax kidako",
+      "slug": "gymnothorax-kidako",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Anguilliformes",
+        "family": "Muraenidae Rafinesque, 1815",
+        "genus": "Gymnothorax Bloch, 1795",
+        "species": "kidako"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:937",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:937",
+        "originalKoreanName": "곰치",
+        "originalScientificName": "Gymnothorax kidako",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-000958",
+      "internalId": "BM-SPECIES-000958",
+      "mbrisSourceId": "MBRIS:척추동물:960",
+      "koreanName": "황어",
+      "scientificName": "Pseudaspius hakonensis",
+      "normalizedScientificName": "Pseudaspius hakonensis",
+      "slug": "pseudaspius-hakonensis",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Cypriniformes",
+        "family": "Leuciscidae Bonaparte, 1835",
+        "genus": "Pseudaspius Dybowski, 1869",
+        "species": "hakonensis"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:960",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:960",
+        "originalKoreanName": "황어",
+        "originalScientificName": "Pseudaspius hakonensis",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001012",
+      "internalId": "BM-SPECIES-001012",
+      "mbrisSourceId": "MBRIS:척추동물:1014",
+      "koreanName": "쏠종개",
+      "scientificName": "Plotosus japonicus",
+      "normalizedScientificName": "Plotosus japonicus",
+      "slug": "plotosus-japonicus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Siluriformes",
+        "family": "Plotosidae Bleeker, 1858",
+        "genus": "Plotosus Lacepède, 1803",
+        "species": "japonicus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1014",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1014",
+        "originalKoreanName": "쏠종개",
+        "originalScientificName": "Plotosus japonicus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001018",
+      "internalId": "BM-SPECIES-001018",
+      "mbrisSourceId": "MBRIS:척추동물:1020",
+      "koreanName": "붉은메기",
+      "scientificName": "Hoplobrotula armata",
+      "normalizedScientificName": "Hoplobrotula armata",
+      "slug": "hoplobrotula-armata",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Ophidiiformes",
+        "family": "Ophidiidae Rafinesque, 1810",
+        "genus": "Hoplobrotula Gill, 1863",
+        "species": "armata"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1020",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1020",
+        "originalKoreanName": "붉은메기",
+        "originalScientificName": "Hoplobrotula armata",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001022",
+      "internalId": "BM-SPECIES-001022",
+      "mbrisSourceId": "MBRIS:척추동물:1024",
+      "koreanName": "청어",
+      "scientificName": "Clupea pallasii",
+      "normalizedScientificName": "Clupea pallasii",
+      "slug": "clupea-pallasii",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Clupeiformes",
+        "family": "Clupeidae Cuvier, 1816",
+        "genus": "Clupea Linnaeus, 1758",
+        "species": "pallasii"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1024",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1024",
+        "originalKoreanName": "청어",
+        "originalScientificName": "Clupea pallasii",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001029",
+      "internalId": "BM-SPECIES-001029",
+      "mbrisSourceId": "MBRIS:척추동물:1031",
+      "koreanName": "멸치",
+      "scientificName": "Engraulis japonicus",
+      "normalizedScientificName": "Engraulis japonicus",
+      "slug": "engraulis-japonicus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Clupeiformes",
+        "family": "Engraulidae Gill, 1861",
+        "genus": "Engraulis Cuvier, 1816",
+        "species": "japonicus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1031",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1031",
+        "originalKoreanName": "멸치",
+        "originalScientificName": "Engraulis japonicus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001030",
+      "internalId": "BM-SPECIES-001030",
+      "mbrisSourceId": "MBRIS:척추동물:1032",
+      "koreanName": "준치",
+      "scientificName": "Ilisha elongata",
+      "normalizedScientificName": "Ilisha elongata",
+      "slug": "ilisha-elongata",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Clupeiformes",
+        "family": "Pristigasteridae Bleeker, 1872",
+        "genus": "Ilisha Richardson, 1846",
+        "species": "elongata"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1032",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1032",
+        "originalKoreanName": "준치",
+        "originalScientificName": "Ilisha elongata",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001037",
+      "internalId": "BM-SPECIES-001037",
+      "mbrisSourceId": "MBRIS:척추동물:1039",
+      "koreanName": "전어",
+      "scientificName": "Konosirus punctatus",
+      "normalizedScientificName": "Konosirus punctatus",
+      "slug": "konosirus-punctatus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Clupeiformes",
+        "family": "Dorosomatidae Gill, 1861",
+        "genus": "Konosirus Jordan & Snyder, 1900",
+        "species": "punctatus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1039",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1039",
+        "originalKoreanName": "전어",
+        "originalScientificName": "Konosirus punctatus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001040",
+      "internalId": "BM-SPECIES-001040",
+      "mbrisSourceId": "MBRIS:척추동물:1042",
+      "koreanName": "정어리",
+      "scientificName": "Sardinops melanosticta",
+      "normalizedScientificName": "Sardinops melanosticta",
+      "slug": "sardinops-melanosticta",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Clupeiformes",
+        "family": "Alosidae Svetovidov, 1952",
+        "genus": "Sardinops Hubbs, 1929",
+        "species": "melanosticta"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1042",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1042",
+        "originalKoreanName": "정어리",
+        "originalScientificName": "Sardinops melanosticta",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001056",
+      "internalId": "BM-SPECIES-001056",
+      "mbrisSourceId": "MBRIS:척추동물:1058",
+      "koreanName": "대구",
+      "scientificName": "Gadus macrocephalus",
+      "normalizedScientificName": "Gadus macrocephalus",
+      "slug": "gadus-macrocephalus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gadiformes",
+        "family": "Gadidae Rafinesque, 1810",
+        "genus": "Gadus Linnaeus, 1758",
+        "species": "macrocephalus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1058",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1058",
+        "originalKoreanName": "대구",
+        "originalScientificName": "Gadus macrocephalus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001057",
+      "internalId": "BM-SPECIES-001057",
+      "mbrisSourceId": "MBRIS:척추동물:1059",
+      "koreanName": "명태",
+      "scientificName": "Gadus chalcogrammus",
+      "normalizedScientificName": "Gadus chalcogrammus",
+      "slug": "gadus-chalcogrammus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gadiformes",
+        "family": "Gadidae Rafinesque, 1810",
+        "genus": "Gadus Linnaeus, 1758",
+        "species": "chalcogrammus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1059",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1059",
+        "originalKoreanName": "명태",
+        "originalScientificName": "Gadus chalcogrammus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001084",
+      "internalId": "BM-SPECIES-001084",
+      "mbrisSourceId": "MBRIS:척추동물:1086",
+      "koreanName": "가시망둑",
+      "scientificName": "Pseudoblennius cottoides",
+      "normalizedScientificName": "Pseudoblennius cottoides",
+      "slug": "pseudoblennius-cottoides",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Psychrolutidae Günther, 1861",
+        "genus": "Pseudoblennius Temminck & Schlegel, 1850",
+        "species": "cottoides"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1086",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1086",
+        "originalKoreanName": "가시망둑",
+        "originalScientificName": "Pseudoblennius cottoides",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001086",
+      "internalId": "BM-SPECIES-001086",
+      "mbrisSourceId": "MBRIS:척추동물:1088",
+      "koreanName": "돌팍망둑",
+      "scientificName": "Pseudoblennius percoides",
+      "normalizedScientificName": "Pseudoblennius percoides",
+      "slug": "pseudoblennius-percoides",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Psychrolutidae Günther, 1861",
+        "genus": "Pseudoblennius Temminck & Schlegel, 1850",
+        "species": "percoides"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1088",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1088",
+        "originalKoreanName": "돌팍망둑",
+        "originalScientificName": "Pseudoblennius percoides",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001104",
+      "internalId": "BM-SPECIES-001104",
+      "mbrisSourceId": "MBRIS:척추동물:1106",
+      "koreanName": "대구횟대",
+      "scientificName": "Gymnocanthus herzensteini",
+      "normalizedScientificName": "Gymnocanthus herzensteini",
+      "slug": "gymnocanthus-herzensteini",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Psychrolutidae Günther, 1861",
+        "genus": "Gymnocanthus Swainson, 1839",
+        "species": "herzensteini"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1106",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1106",
+        "originalKoreanName": "대구횟대",
+        "originalScientificName": "Gymnocanthus herzensteini",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001123",
+      "internalId": "BM-SPECIES-001123",
+      "mbrisSourceId": "MBRIS:척추동물:1125",
+      "koreanName": "베도라치",
+      "scientificName": "Pholis nebulosa",
+      "normalizedScientificName": "Pholis nebulosa",
+      "slug": "pholis-nebulosa",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Pholidae Gill, 1893",
+        "genus": "Pholis Scopoli, 1777",
+        "species": "nebulosa"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1125",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1125",
+        "originalKoreanName": "베도라치",
+        "originalScientificName": "Pholis nebulosa",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001135",
+      "internalId": "BM-SPECIES-001135",
+      "mbrisSourceId": "MBRIS:척추동물:1137",
+      "koreanName": "성대",
+      "scientificName": "Chelidonichthys spinosus",
+      "normalizedScientificName": "Chelidonichthys spinosus",
+      "slug": "chelidonichthys-spinosus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Triglidae Rafinesque, 1815",
+        "genus": "Chelidonichthys Kaup, 1873",
+        "species": "spinosus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1137",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1137",
+        "originalKoreanName": "성대",
+        "originalScientificName": "Chelidonichthys spinosus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001153",
+      "internalId": "BM-SPECIES-001153",
+      "mbrisSourceId": "MBRIS:척추동물:1155",
+      "koreanName": "쑤기미",
+      "scientificName": "Inimicus japonicus",
+      "normalizedScientificName": "Inimicus japonicus",
+      "slug": "inimicus-japonicus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Synanceiidae Swainson, 1839",
+        "genus": "Inimicus Jordan & Starks, 1904",
+        "species": "japonicus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1155",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1155",
+        "originalKoreanName": "쑤기미",
+        "originalScientificName": "Inimicus japonicus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001157",
+      "internalId": "BM-SPECIES-001157",
+      "mbrisSourceId": "MBRIS:척추동물:1159",
+      "koreanName": "미역치",
+      "scientificName": "Paracentropogon rubripinnis",
+      "normalizedScientificName": "Paracentropogon rubripinnis",
+      "slug": "paracentropogon-rubripinnis",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Synanceiidae Swainson, 1839",
+        "genus": "Paracentropogon Bleeker, 1876",
+        "species": "rubripinnis"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1159",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1159",
+        "originalKoreanName": "미역치",
+        "originalScientificName": "Paracentropogon rubripinnis",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001161",
+      "internalId": "BM-SPECIES-001161",
+      "mbrisSourceId": "MBRIS:척추동물:1163",
+      "koreanName": "임연수어",
+      "scientificName": "Pleurogrammus azonus",
+      "normalizedScientificName": "Pleurogrammus azonus",
+      "slug": "pleurogrammus-azonus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Hexagrammidae Jordan, 1888",
+        "genus": "Pleurogrammus Gill, 1861",
+        "species": "azonus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1163",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1163",
+        "originalKoreanName": "임연수어",
+        "originalScientificName": "Pleurogrammus azonus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001164",
+      "internalId": "BM-SPECIES-001164",
+      "mbrisSourceId": "MBRIS:척추동물:1166",
+      "koreanName": "노래미",
+      "scientificName": "Hexagrammos agrammus",
+      "normalizedScientificName": "Hexagrammos agrammus",
+      "slug": "hexagrammos-agrammus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Hexagrammidae Jordan, 1888",
+        "genus": "Hexagrammos Tilesius, 1810",
+        "species": "agrammus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1166",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1166",
+        "originalKoreanName": "노래미",
+        "originalScientificName": "Hexagrammos agrammus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001165",
+      "internalId": "BM-SPECIES-001165",
+      "mbrisSourceId": "MBRIS:척추동물:1167",
+      "koreanName": "쥐노래미",
+      "scientificName": "Hexagrammos otakii",
+      "normalizedScientificName": "Hexagrammos otakii",
+      "slug": "hexagrammos-otakii",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Hexagrammidae Jordan, 1888",
+        "genus": "Hexagrammos Tilesius, 1810",
+        "species": "otakii"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1167",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1167",
+        "originalKoreanName": "쥐노래미",
+        "originalScientificName": "Hexagrammos otakii",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001166",
+      "internalId": "BM-SPECIES-001166",
+      "mbrisSourceId": "MBRIS:척추동물:1168",
+      "koreanName": "도루묵",
+      "scientificName": "Arctoscopus japonicus",
+      "normalizedScientificName": "Arctoscopus japonicus",
+      "slug": "arctoscopus-japonicus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Trichodontidae Bleeker, 1859",
+        "genus": "Arctoscopus Jordan & Evermann, 1896",
+        "species": "japonicus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1168",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1168",
+        "originalKoreanName": "도루묵",
+        "originalScientificName": "Arctoscopus japonicus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001188",
+      "internalId": "BM-SPECIES-001188",
+      "mbrisSourceId": "MBRIS:척추동물:1190",
+      "koreanName": "먹갈치",
+      "scientificName": "Lycodes nakamurae",
+      "normalizedScientificName": "Lycodes nakamurae",
+      "slug": "lycodes-nakamurae",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Zoarcidae Swainson, 1839",
+        "genus": "Lycodes Reinhardt, 1831",
+        "species": "nakamurae"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1190",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1190",
+        "originalKoreanName": "먹갈치",
+        "originalScientificName": "Lycodes nakamurae",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001192",
+      "internalId": "BM-SPECIES-001192",
+      "mbrisSourceId": "MBRIS:척추동물:1194",
+      "koreanName": "등가시치",
+      "scientificName": "Zoarces gillii",
+      "normalizedScientificName": "Zoarces gillii",
+      "slug": "zoarces-gillii",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Zoarcidae Swainson, 1839",
+        "genus": "Zoarces Cuvier, 1829",
+        "species": "gillii"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1194",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1194",
+        "originalKoreanName": "등가시치",
+        "originalScientificName": "Zoarces gillii",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001204",
+      "internalId": "BM-SPECIES-001204",
+      "mbrisSourceId": "MBRIS:척추동물:1206",
+      "koreanName": "자바리",
+      "scientificName": "Epinephelus bruneus",
+      "normalizedScientificName": "Epinephelus bruneus",
+      "slug": "epinephelus-bruneus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Epinephelidae Bleeker, 1874",
+        "genus": "Epinephelus Bloch, 1793",
+        "species": "bruneus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1206",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1206",
+        "originalKoreanName": "자바리",
+        "originalScientificName": "Epinephelus bruneus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001205",
+      "internalId": "BM-SPECIES-001205",
+      "mbrisSourceId": "MBRIS:척추동물:1207",
+      "koreanName": "붉바리",
+      "scientificName": "Epinephelus akaara",
+      "normalizedScientificName": "Epinephelus akaara",
+      "slug": "epinephelus-akaara",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Epinephelidae Bleeker, 1874",
+        "genus": "Epinephelus Bloch, 1793",
+        "species": "akaara"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1207",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1207",
+        "originalKoreanName": "붉바리",
+        "originalScientificName": "Epinephelus akaara",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001215",
+      "internalId": "BM-SPECIES-001215",
+      "mbrisSourceId": "MBRIS:척추동물:1217",
+      "koreanName": "능성어",
+      "scientificName": "Hyporthodus septemfasciatus",
+      "normalizedScientificName": "Hyporthodus septemfasciatus",
+      "slug": "hyporthodus-septemfasciatus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Epinephelidae Bleeker, 1874",
+        "genus": "Hyporthodus Gill, 1861",
+        "species": "septemfasciatus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1217",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1217",
+        "originalKoreanName": "능성어",
+        "originalScientificName": "Hyporthodus septemfasciatus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001227",
+      "internalId": "BM-SPECIES-001227",
+      "mbrisSourceId": "MBRIS:척추동물:1229",
+      "koreanName": "다금바리",
+      "scientificName": "Niphon spinosus",
+      "normalizedScientificName": "Niphon spinosus",
+      "slug": "niphon-spinosus",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Niphonidae Jordan, 1923",
+        "genus": "Niphon Cuvier, 1828",
+        "species": "spinosus"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1229",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1229",
+        "originalKoreanName": "다금바리",
+        "originalScientificName": "Niphon spinosus",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001245",
+      "internalId": "BM-SPECIES-001245",
+      "mbrisSourceId": "MBRIS:척추동물:1247",
+      "koreanName": "홍감펭",
+      "scientificName": "Helicolenus hilgendorfii",
+      "normalizedScientificName": "Helicolenus hilgendorfii",
+      "slug": "helicolenus-hilgendorfii",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Helicolenus Goode & Bean, 1896",
+        "species": "hilgendorfii"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1247",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1247",
+        "originalKoreanName": "홍감펭",
+        "originalScientificName": "Helicolenus hilgendorfii",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001246",
+      "internalId": "BM-SPECIES-001246",
+      "mbrisSourceId": "MBRIS:척추동물:1248",
+      "koreanName": "점쏠배감펭",
+      "scientificName": "Pterois volitans",
+      "normalizedScientificName": "Pterois volitans",
+      "slug": "pterois-volitans",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Pterois Oken, 1817",
+        "species": "volitans"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1248",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1248",
+        "originalKoreanName": "점쏠배감펭",
+        "originalScientificName": "Pterois volitans",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    },
+    {
+      "canonicalId": "BM-SPECIES-001247",
+      "internalId": "BM-SPECIES-001247",
+      "mbrisSourceId": "MBRIS:척추동물:1249",
+      "koreanName": "쏠배감펭",
+      "scientificName": "Pterois lunulata",
+      "normalizedScientificName": "Pterois lunulata",
+      "slug": "pterois-lunulata",
+      "classification": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "legacyMappingRequired": true,
+      "publishStatus": "draft",
+      "reviewStatus": "pending",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Pterois Oken, 1817",
+        "species": "lunulata"
+      },
+      "relationPlan": {
+        "action": "INSERT_IF_ABSENT",
+        "sourceProvider": "MBRIS",
+        "sourceId": "mbris-national-species-catalog",
+        "mbrisSourceId": "MBRIS:척추동물:1249",
+        "isPrimary": true
+      },
+      "lineagePlan": {
+        "action": "INSERT_IMPORT_LINEAGE",
+        "sourceProvider": "MBRIS",
+        "mbrisSourceId": "MBRIS:척추동물:1249",
+        "originalKoreanName": "쏠배감펭",
+        "originalScientificName": "Pterois lunulata",
+        "importBatch": "mbris-review-ready-import-manifest-v1"
+      },
+      "malformedScientific": false
+    }
+  ]
+}

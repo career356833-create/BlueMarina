@@ -1,0 +1,12 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-31T01:02:29.3275496+09:00",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "NO_READY_MARINE_CANONICAL_RECORDS",
+  "inputCount": 6,
+  "rowCount": 0,
+  "rows": [],
+  "databaseWrites": 0,
+  "reason": "Chaeturichthys jeoni has no confirmed official Korean name; the other five records are freshwater and outside the current product domain."
+}

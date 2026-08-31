@@ -1,0 +1,4927 @@
+{
+  "reportVersion": "MBRIS_REVIEW_PROMOTION_V2",
+  "generatedAt": "2026-08-30T14:41:36.993Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "readOnly": true,
+  "dbWrite": 0,
+  "externalTaxonomyLookup": false,
+  "base": {
+    "stagingCanonical": 1122,
+    "reviewInput": 137,
+    "previousQueueInput": 137,
+    "malformedScientificSeparateTrack": 5
+  },
+  "classification": {
+    "PROMOTE_NEW_READY": 0,
+    "LINK_LEGACY_AND_PROMOTE_NEW": 136,
+    "EXISTING_CANONICAL_EXACT": 0,
+    "EXISTING_CANONICAL_ALIAS_REVIEW": 0,
+    "KOREAN_NAME_REVIEW": 1,
+    "SCIENTIFIC_NAME_REVIEW": 0,
+    "TAXONOMY_REVIEW": 0,
+    "IDENTITY_CONFLICT": 0,
+    "OUT_OF_SCOPE_RECLASSIFY": 0,
+    "HOLD": 0
+  },
+  "readyNewTotal": 136,
+  "projectedAfterReviewReady": 1258,
+  "potentialAfterManualReview": 1259,
+  "remoteCollisionPreflight": {
+    "status": "PASS",
+    "counts": {
+      "id": 0,
+      "sourceId": 0,
+      "scientific": 0,
+      "normalized": 0,
+      "slug": 0,
+      "relation": 0
+    },
+    "currentUser": "blue_marina_readonly_auditor",
+    "transactionReadOnly": "on",
+    "bypassRls": false
+  },
+  "verification": {
+    "classified": 137,
+    "unclassified": 0,
+    "duplicatePrimaryClass": 0,
+    "readyManifestRows": 136,
+    "malformedAdmitted": 0,
+    "chamhongAdmitted": 0,
+    "nonFishAdmitted": 0
+  },
+  "rows": [
+    {
+      "mbrisSourceId": "MBRIS:척추동물:4",
+      "internalId": "BM-SPECIES-000002",
+      "koreanName": "볼락",
+      "scientificName": "Sebastes inermis",
+      "normalizedScientificName": "Sebastes inermis",
+      "canonicalSlug": "sebastes-inermis",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastes Cuvier, 1829",
+        "species": "inermis"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:6",
+      "internalId": "BM-SPECIES-000004",
+      "koreanName": "황점볼락",
+      "scientificName": "Sebastes oblongus",
+      "normalizedScientificName": "Sebastes oblongus",
+      "canonicalSlug": "sebastes-oblongus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastes Cuvier, 1829",
+        "species": "oblongus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:13",
+      "internalId": "BM-SPECIES-000011",
+      "koreanName": "개볼락",
+      "scientificName": "Sebastes pachycephalus",
+      "normalizedScientificName": "Sebastes pachycephalus",
+      "canonicalSlug": "sebastes-pachycephalus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastes Cuvier, 1829",
+        "species": "pachycephalus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:16",
+      "internalId": "BM-SPECIES-000014",
+      "koreanName": "노랑볼락",
+      "scientificName": "Sebastes steindachneri",
+      "normalizedScientificName": "Sebastes steindachneri",
+      "canonicalSlug": "sebastes-steindachneri",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastes Cuvier, 1829",
+        "species": "steindachneri"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:17",
+      "internalId": "BM-SPECIES-000015",
+      "koreanName": "불볼락",
+      "scientificName": "Sebastes thompsoni",
+      "normalizedScientificName": "Sebastes thompsoni",
+      "canonicalSlug": "sebastes-thompsoni",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastes Cuvier, 1829",
+        "species": "thompsoni"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:21",
+      "internalId": "BM-SPECIES-000019",
+      "koreanName": "쏨뱅이",
+      "scientificName": "Sebastiscus marmoratus",
+      "normalizedScientificName": "Sebastiscus marmoratus",
+      "canonicalSlug": "sebastiscus-marmoratus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastiscus Jordan & Starks, 1904",
+        "species": "marmoratus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:22",
+      "internalId": "BM-SPECIES-000020",
+      "koreanName": "붉은쏨뱅이",
+      "scientificName": "Sebastiscus tertius",
+      "normalizedScientificName": "Sebastiscus tertius",
+      "canonicalSlug": "sebastiscus-tertius",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastiscus Jordan & Starks, 1904",
+        "species": "tertius"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:44",
+      "internalId": "BM-SPECIES-000042",
+      "koreanName": "삼세기",
+      "scientificName": "Hemitripterus villosus",
+      "normalizedScientificName": "Hemitripterus villosus",
+      "canonicalSlug": "hemitripterus-villosus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Agonidae Swainson, 1839",
+        "genus": "Hemitripterus Cuvier, 1829",
+        "species": "villosus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:59",
+      "internalId": "BM-SPECIES-000057",
+      "koreanName": "꼼치",
+      "scientificName": "Liparis tanakae",
+      "normalizedScientificName": "Liparis tanakae",
+      "canonicalSlug": "liparis-tanakae",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Liparidae Gill, 1861",
+        "genus": "Liparis Scopoli, 1777",
+        "species": "tanakae"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:62",
+      "internalId": "BM-SPECIES-000060",
+      "koreanName": "물메기",
+      "scientificName": "Liparis tessellatus",
+      "normalizedScientificName": "Liparis tessellatus",
+      "canonicalSlug": "liparis-tessellatus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Liparidae Gill, 1861",
+        "genus": "Liparis Scopoli, 1777",
+        "species": "tessellatus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:67",
+      "internalId": "BM-SPECIES-000065",
+      "koreanName": "양태",
+      "scientificName": "Platycephalus indicus",
+      "normalizedScientificName": "Platycephalus indicus",
+      "canonicalSlug": "platycephalus-indicus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Platycephalidae Swainson, 1839",
+        "genus": "Platycephalus Bloch, 1795",
+        "species": "indicus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:82",
+      "internalId": "BM-SPECIES-000080",
+      "koreanName": "아귀",
+      "scientificName": "Lophiomus setigerus",
+      "normalizedScientificName": "Lophiomus setigerus",
+      "canonicalSlug": "lophiomus-setigerus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Lophiiformes",
+        "family": "Lophiidae Rafinesque, 1810",
+        "genus": "Lophiomus Gill, 1883",
+        "species": "setigerus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:97",
+      "internalId": "BM-SPECIES-000095",
+      "koreanName": "달고기",
+      "scientificName": "Zeus faber",
+      "normalizedScientificName": "Zeus faber",
+      "canonicalSlug": "zeus-faber",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Zeiformes",
+        "family": "Zeidae Rafinesque, 1815",
+        "genus": "Zeus Linnaeus, 1758",
+        "species": "faber"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:99",
+      "internalId": "BM-SPECIES-000097",
+      "koreanName": "숭어",
+      "scientificName": "Mugil cephalus",
+      "normalizedScientificName": "Mugil cephalus",
+      "canonicalSlug": "mugil-cephalus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Mugiliformes",
+        "family": "Mugilidae Jarocki, 1822",
+        "genus": "Mugil Linnaeus, 1758",
+        "species": "cephalus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:105",
+      "internalId": "BM-SPECIES-000103",
+      "koreanName": "가숭어",
+      "scientificName": "Planiliza haematocheilus",
+      "normalizedScientificName": "Planiliza haematocheilus",
+      "canonicalSlug": "planiliza-haematocheilus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Mugiliformes",
+        "family": "Mugilidae Jarocki, 1822",
+        "genus": "Planiliza Whitley, 1945",
+        "species": "haematocheilus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:124",
+      "internalId": "BM-SPECIES-000122",
+      "koreanName": "쥐치",
+      "scientificName": "Stephanolepis cirrhifer",
+      "normalizedScientificName": "Stephanolepis cirrhifer",
+      "canonicalSlug": "stephanolepis-cirrhifer",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Tetraodontiformes",
+        "family": "Monacanthidae Nardo, 1843",
+        "genus": "Stephanolepis Gill, 1861",
+        "species": "cirrhifer"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:131",
+      "internalId": "BM-SPECIES-000129",
+      "koreanName": "말쥐치",
+      "scientificName": "Thamnaconus modestus",
+      "normalizedScientificName": "Thamnaconus modestus",
+      "canonicalSlug": "thamnaconus-modestus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Tetraodontiformes",
+        "family": "Monacanthidae Nardo, 1843",
+        "genus": "Thamnaconus Smith, 1949",
+        "species": "modestus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_scientific_exact",
+        "LOCAL_UI_NAME_MATCH",
+        "NIFS_LINKED_scientific_exact"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 100,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:145",
+      "internalId": "BM-SPECIES-000143",
+      "koreanName": "가시복",
+      "scientificName": "Diodon holocanthus",
+      "normalizedScientificName": "Diodon holocanthus",
+      "canonicalSlug": "diodon-holocanthus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Tetraodontiformes",
+        "family": "Diodontidae Bonaparte, 1835",
+        "genus": "Diodon Linnaeus, 1758",
+        "species": "holocanthus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:165",
+      "internalId": "BM-SPECIES-000163",
+      "koreanName": "까치복",
+      "scientificName": "Takifugu xanthopterus",
+      "normalizedScientificName": "Takifugu xanthopterus",
+      "canonicalSlug": "takifugu-xanthopterus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Tetraodontiformes",
+        "family": "Tetraodontidae Bonaparte, 1831",
+        "genus": "Takifugu Abe, 1949",
+        "species": "xanthopterus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:167",
+      "internalId": "BM-SPECIES-000165",
+      "koreanName": "검복",
+      "scientificName": "Takifugu porphyreus",
+      "normalizedScientificName": "Takifugu porphyreus",
+      "canonicalSlug": "takifugu-porphyreus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Tetraodontiformes",
+        "family": "Tetraodontidae Bonaparte, 1831",
+        "genus": "Takifugu Abe, 1949",
+        "species": "porphyreus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:190",
+      "internalId": "BM-SPECIES-000188",
+      "koreanName": "농어",
+      "scientificName": "Lateolabrax japonicus",
+      "normalizedScientificName": "Lateolabrax japonicus",
+      "canonicalSlug": "lateolabrax-japonicus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acropomatiformes",
+        "family": "Lateolabracidae Ghedotti, Davis & Smith, 2018",
+        "genus": "Lateolabrax Bleeker, 1855",
+        "species": "japonicus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:192",
+      "internalId": "BM-SPECIES-000190",
+      "koreanName": "점농어",
+      "scientificName": "Lateolabrax spilonotus",
+      "normalizedScientificName": "Lateolabrax spilonotus",
+      "canonicalSlug": "lateolabrax-spilonotus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acropomatiformes",
+        "family": "Lateolabracidae Ghedotti, Davis & Smith, 2018",
+        "genus": "Lateolabrax Bleeker, 1855",
+        "species": "spilonotus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:194",
+      "internalId": "BM-SPECIES-000192",
+      "koreanName": "눈볼대",
+      "scientificName": "Doederleinia berycoides",
+      "normalizedScientificName": "Doederleinia berycoides",
+      "canonicalSlug": "doederleinia-berycoides",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acropomatiformes",
+        "family": "Acropomatidae Gill, 1893",
+        "genus": "Doederleinia Steindachner, 1883",
+        "species": "berycoides"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:223",
+      "internalId": "BM-SPECIES-000221",
+      "koreanName": "인상어",
+      "scientificName": "Neoditrema ransonnetii",
+      "normalizedScientificName": "Neoditrema ransonnetii",
+      "canonicalSlug": "neoditrema-ransonnetii",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Blenniiformes",
+        "family": "Embiotocidae Agassiz, 1853",
+        "genus": "Neoditrema Steindachner, 1883",
+        "species": "ransonnetii"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:225",
+      "internalId": "BM-SPECIES-000223",
+      "koreanName": "망상어",
+      "scientificName": "Ditrema temminckii",
+      "normalizedScientificName": "Ditrema temminckii",
+      "canonicalSlug": "ditrema-temminckii",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Blenniiformes",
+        "family": "Embiotocidae Agassiz, 1853",
+        "genus": "Ditrema Temminck & Schlegel, 1844",
+        "species": "temminckii"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:228",
+      "internalId": "BM-SPECIES-000226",
+      "koreanName": "자리돔",
+      "scientificName": "Chromis notata",
+      "normalizedScientificName": "Chromis notata",
+      "canonicalSlug": "chromis-notata",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Blenniiformes",
+        "family": "Pomacentridae Bonaparte, 1831",
+        "genus": "Chromis Cuvier, 1814",
+        "species": "notata"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:279",
+      "internalId": "BM-SPECIES-000277",
+      "koreanName": "강담돔",
+      "scientificName": "Oplegnathus punctatus",
+      "normalizedScientificName": "Oplegnathus punctatus",
+      "canonicalSlug": "oplegnathus-punctatus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Centrarchiformes",
+        "family": "Oplegnathidae Bleeker, 1853",
+        "genus": "Oplegnathus Richardson, 1840",
+        "species": "punctatus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:280",
+      "internalId": "BM-SPECIES-000278",
+      "koreanName": "돌돔",
+      "scientificName": "Oplegnathus fasciatus",
+      "normalizedScientificName": "Oplegnathus fasciatus",
+      "canonicalSlug": "oplegnathus-fasciatus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Centrarchiformes",
+        "family": "Oplegnathidae Bleeker, 1853",
+        "genus": "Oplegnathus Richardson, 1840",
+        "species": "fasciatus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:281",
+      "internalId": "BM-SPECIES-000279",
+      "koreanName": "벵에돔",
+      "scientificName": "Girella punctata",
+      "normalizedScientificName": "Girella punctata",
+      "canonicalSlug": "girella-punctata",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Centrarchiformes",
+        "family": "Girellidae Gill, 1862",
+        "genus": "Girella Gray, 1835",
+        "species": "punctata"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:282",
+      "internalId": "BM-SPECIES-000280",
+      "koreanName": "긴꼬리벵에돔",
+      "scientificName": "Girella leonina",
+      "normalizedScientificName": "Girella leonina",
+      "canonicalSlug": "girella-leonina",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Centrarchiformes",
+        "family": "Girellidae Gill, 1862",
+        "genus": "Girella Gray, 1835",
+        "species": "leonina"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:286",
+      "internalId": "BM-SPECIES-000284",
+      "koreanName": "무늬망둑",
+      "scientificName": "Bathygobius fuscus",
+      "normalizedScientificName": "Bathygobius fuscus",
+      "canonicalSlug": "bathygobius-fuscus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Gobiidae Cuvier, 1816",
+        "genus": "Bathygobius Bleeker, 1878",
+        "species": "fuscus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:340",
+      "internalId": "BM-SPECIES-000338",
+      "koreanName": "풀망둑",
+      "scientificName": "Acanthogobius hasta",
+      "normalizedScientificName": "Acanthogobius hasta",
+      "canonicalSlug": "acanthogobius-hasta",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Acanthogobius Gill, 1859",
+        "species": "hasta"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:341",
+      "internalId": "BM-SPECIES-000339",
+      "koreanName": "문절망둑",
+      "scientificName": "Acanthogobius flavimanus",
+      "normalizedScientificName": "Acanthogobius flavimanus",
+      "canonicalSlug": "acanthogobius-flavimanus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Acanthogobius Gill, 1859",
+        "species": "flavimanus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:348",
+      "internalId": "BM-SPECIES-000346",
+      "koreanName": "도화망둑",
+      "scientificName": "Amblychaeturichthys hexanema",
+      "normalizedScientificName": "Amblychaeturichthys hexanema",
+      "canonicalSlug": "amblychaeturichthys-hexanema",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Amblychaeturichthys Bleeker, 1874",
+        "species": "hexanema"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:353",
+      "internalId": "BM-SPECIES-000351",
+      "koreanName": "두줄망둑",
+      "scientificName": "Tridentiger trigonocephalus",
+      "normalizedScientificName": "Tridentiger trigonocephalus",
+      "canonicalSlug": "tridentiger-trigonocephalus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Tridentiger Gill, 1859",
+        "species": "trigonocephalus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:358",
+      "internalId": "BM-SPECIES-000356",
+      "koreanName": "검정망둑",
+      "scientificName": "Tridentiger obscurus",
+      "normalizedScientificName": "Tridentiger obscurus",
+      "canonicalSlug": "tridentiger-obscurus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Tridentiger Gill, 1859",
+        "species": "obscurus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:364",
+      "internalId": "BM-SPECIES-000362",
+      "koreanName": "살망둑",
+      "scientificName": "Gymnogobius heptacanthus",
+      "normalizedScientificName": "Gymnogobius heptacanthus",
+      "canonicalSlug": "gymnogobius-heptacanthus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Gymnogobius Gill, 1863",
+        "species": "heptacanthus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:384",
+      "internalId": "BM-SPECIES-000382",
+      "koreanName": null,
+      "scientificName": "Chaeturichthys jeoni",
+      "normalizedScientificName": "Chaeturichthys jeoni",
+      "canonicalSlug": "chaeturichthys-jeoni",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Chaeturichthys Richardson, 1844",
+        "species": "jeoni"
+      },
+      "primaryClass": "KOREAN_NAME_REVIEW",
+      "reason": "MBRIS does not provide a Korean name; automatic naming is prohibited.",
+      "secondaryFlags": [
+        "KOREAN_NAME_MISSING"
+      ],
+      "legacyLocalMatch": "NONE",
+      "legacyMappingRequired": false,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 10,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:386",
+      "internalId": "BM-SPECIES-000384",
+      "koreanName": "별망둑",
+      "scientificName": "Chaenogobius gulosus",
+      "normalizedScientificName": "Chaenogobius gulosus",
+      "canonicalSlug": "chaenogobius-gulosus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Chaenogobius Gill, 1859",
+        "species": "gulosus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:397",
+      "internalId": "BM-SPECIES-000395",
+      "koreanName": "금줄망둑",
+      "scientificName": "Pterogobius virgo",
+      "normalizedScientificName": "Pterogobius virgo",
+      "canonicalSlug": "pterogobius-virgo",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gobiiformes 망둑어목",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Pterogobius Gill, 1863",
+        "species": "virgo"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:409",
+      "internalId": "BM-SPECIES-000407",
+      "koreanName": "동갈삼치",
+      "scientificName": "Scomberomorus commerson",
+      "normalizedScientificName": "Scomberomorus commerson",
+      "canonicalSlug": "scomberomorus-commerson",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Scomberomorus Lacepède, 1801",
+        "species": "commerson"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:410",
+      "internalId": "BM-SPECIES-000408",
+      "koreanName": "삼치",
+      "scientificName": "Scomberomorus niphonius",
+      "normalizedScientificName": "Scomberomorus niphonius",
+      "canonicalSlug": "scomberomorus-niphonius",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Scomberomorus Lacepède, 1801",
+        "species": "niphonius"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_scientific_exact",
+        "LOCAL_UI_NAME_MATCH",
+        "NIFS_LINKED_scientific_exact"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 100,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:413",
+      "internalId": "BM-SPECIES-000411",
+      "koreanName": "점다랑어",
+      "scientificName": "Euthynnus affinis",
+      "normalizedScientificName": "Euthynnus affinis",
+      "canonicalSlug": "euthynnus-affinis",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Euthynnus Lütken, 1883",
+        "species": "affinis"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:414",
+      "internalId": "BM-SPECIES-000412",
+      "koreanName": "가다랑어",
+      "scientificName": "Katsuwonus pelamis",
+      "normalizedScientificName": "Katsuwonus pelamis",
+      "canonicalSlug": "katsuwonus-pelamis",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Katsuwonus Kishinouye, 1915",
+        "species": "pelamis"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:417",
+      "internalId": "BM-SPECIES-000415",
+      "koreanName": "줄삼치",
+      "scientificName": "Sarda orientalis",
+      "normalizedScientificName": "Sarda orientalis",
+      "canonicalSlug": "sarda-orientalis",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Sarda Cuvier, 1829",
+        "species": "orientalis"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:419",
+      "internalId": "BM-SPECIES-000417",
+      "koreanName": "고등어",
+      "scientificName": "Scomber japonicus",
+      "normalizedScientificName": "Scomber japonicus",
+      "canonicalSlug": "scomber-japonicus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Scomber Linnaeus, 1758",
+        "species": "japonicus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_scientific_exact",
+        "LOCAL_UI_NAME_MATCH",
+        "NIFS_LINKED_scientific_exact"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 100,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:420",
+      "internalId": "BM-SPECIES-000418",
+      "koreanName": "꼬치삼치",
+      "scientificName": "Acanthocybium solandri",
+      "normalizedScientificName": "Acanthocybium solandri",
+      "canonicalSlug": "acanthocybium-solandri",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Acanthocybium Gill, 1862",
+        "species": "solandri"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:423",
+      "internalId": "BM-SPECIES-000421",
+      "koreanName": "눈다랑어",
+      "scientificName": "Thunnus obesus",
+      "normalizedScientificName": "Thunnus obesus",
+      "canonicalSlug": "thunnus-obesus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Thunnus South, 1845",
+        "species": "obesus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:427",
+      "internalId": "BM-SPECIES-000425",
+      "koreanName": "덕대",
+      "scientificName": "Pampus argenteus",
+      "normalizedScientificName": "Pampus argenteus",
+      "canonicalSlug": "pampus-argenteus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Stromateidae Rafinesque, 1810",
+        "genus": "Pampus Bonaparte, 1834",
+        "species": "argenteus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:428",
+      "internalId": "BM-SPECIES-000426",
+      "koreanName": "병어",
+      "scientificName": "Pampus punctatissimus",
+      "normalizedScientificName": "Pampus punctatissimus",
+      "canonicalSlug": "pampus-punctatissimus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Stromateidae Rafinesque, 1810",
+        "genus": "Pampus Bonaparte, 1834",
+        "species": "punctatissimus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:440",
+      "internalId": "BM-SPECIES-000438",
+      "koreanName": "새다래",
+      "scientificName": "Brama japonica",
+      "normalizedScientificName": "Brama japonica",
+      "canonicalSlug": "brama-japonica",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Bramidae Bonaparte, 1831",
+        "genus": "Brama Bloch & Schneider, 1801",
+        "species": "japonica"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:446",
+      "internalId": "BM-SPECIES-000444",
+      "koreanName": "갈치",
+      "scientificName": "Trichiurus japonicus",
+      "normalizedScientificName": "Trichiurus japonicus",
+      "canonicalSlug": "trichiurus-japonicus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Scombriformes",
+        "family": "Trichiuridae Rafinesque, 1810",
+        "genus": "Trichiurus Linnaeus, 1758",
+        "species": "japonicus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_synonym",
+        "LOCAL_UI_NAME_MATCH",
+        "NIFS_LINKED_synonym"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 100,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:461",
+      "internalId": "BM-SPECIES-000459",
+      "koreanName": "꼬치고기",
+      "scientificName": "Sphyraena pinguis",
+      "normalizedScientificName": "Sphyraena pinguis",
+      "canonicalSlug": "sphyraena-pinguis",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Sphyraenidae Rafinesque, 1815",
+        "genus": "Sphyraena Artedi, 1793",
+        "species": "pinguis"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:467",
+      "internalId": "BM-SPECIES-000465",
+      "koreanName": "넙치",
+      "scientificName": "Paralichthys olivaceus",
+      "normalizedScientificName": "Paralichthys olivaceus",
+      "canonicalSlug": "paralichthys-olivaceus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Paralichthyidae Regan, 1910",
+        "genus": "Paralichthys Girard, 1858",
+        "species": "olivaceus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:472",
+      "internalId": "BM-SPECIES-000470",
+      "koreanName": "청새치",
+      "scientificName": "Kajikia audax",
+      "normalizedScientificName": "Kajikia audax",
+      "canonicalSlug": "kajikia-audax",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Istiophoridae Rafinesque, 1815",
+        "genus": "Kajikia Hirasaka & Nakamura, 1947",
+        "species": "audax"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:475",
+      "internalId": "BM-SPECIES-000473",
+      "koreanName": "돛새치",
+      "scientificName": "Istiophorus platypterus",
+      "normalizedScientificName": "Istiophorus platypterus",
+      "canonicalSlug": "istiophorus-platypterus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Istiophoridae Rafinesque, 1815",
+        "genus": "Istiophorus Lacepède, 1801",
+        "species": "platypterus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:481",
+      "internalId": "BM-SPECIES-000479",
+      "koreanName": "황새치",
+      "scientificName": "Xiphias gladius",
+      "normalizedScientificName": "Xiphias gladius",
+      "canonicalSlug": "xiphias-gladius",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Xiphiidae Rafinesque, 1815",
+        "genus": "Xiphias Linnaeus, 1758",
+        "species": "gladius"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:490",
+      "internalId": "BM-SPECIES-000488",
+      "koreanName": "전갱이",
+      "scientificName": "Trachurus japonicus",
+      "normalizedScientificName": "Trachurus japonicus",
+      "canonicalSlug": "trachurus-japonicus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Carangidae Rafinesque, 1815",
+        "genus": "Trachurus Rafinesque, 1810",
+        "species": "japonicus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_scientific_exact",
+        "LOCAL_UI_NAME_MATCH",
+        "NIFS_LINKED_scientific_exact"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 100,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:494",
+      "internalId": "BM-SPECIES-000492",
+      "koreanName": "흑점줄전갱이",
+      "scientificName": "Pseudocaranx dentex",
+      "normalizedScientificName": "Pseudocaranx dentex",
+      "canonicalSlug": "pseudocaranx-dentex",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Carangidae Rafinesque, 1815",
+        "genus": "Pseudocaranx Bleeker, 1863",
+        "species": "dentex"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:501",
+      "internalId": "BM-SPECIES-000499",
+      "koreanName": "잿방어",
+      "scientificName": "Seriola dumerili",
+      "normalizedScientificName": "Seriola dumerili",
+      "canonicalSlug": "seriola-dumerili",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Carangidae Rafinesque, 1815",
+        "genus": "Seriola Cuvier, 1816",
+        "species": "dumerili"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:502",
+      "internalId": "BM-SPECIES-000500",
+      "koreanName": "부시리",
+      "scientificName": "Seriola aureovittata",
+      "normalizedScientificName": "Seriola aureovittata",
+      "canonicalSlug": "seriola-aureovittata",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Carangidae Rafinesque, 1815",
+        "genus": "Seriola Cuvier, 1816",
+        "species": "aureovittata"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:503",
+      "internalId": "BM-SPECIES-000501",
+      "koreanName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "normalizedScientificName": "Seriola quinqueradiata",
+      "canonicalSlug": "seriola-quinqueradiata",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Carangidae Rafinesque, 1815",
+        "genus": "Seriola Cuvier, 1816",
+        "species": "quinqueradiata"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:542",
+      "internalId": "BM-SPECIES-000540",
+      "koreanName": "용가자미",
+      "scientificName": "Cleisthenes pinetorum",
+      "normalizedScientificName": "Cleisthenes pinetorum",
+      "canonicalSlug": "cleisthenes-pinetorum",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Cleisthenes Jordan & Starks, 1904",
+        "species": "pinetorum"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:543",
+      "internalId": "BM-SPECIES-000541",
+      "koreanName": "줄가자미",
+      "scientificName": "Clidoderma asperrimum",
+      "normalizedScientificName": "Clidoderma asperrimum",
+      "canonicalSlug": "clidoderma-asperrimum",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Clidoderma Bleeker, 1862",
+        "species": "asperrimum"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:546",
+      "internalId": "BM-SPECIES-000544",
+      "koreanName": "참가자미",
+      "scientificName": "Pseudopleuronectes herzensteini",
+      "normalizedScientificName": "Pseudopleuronectes herzensteini",
+      "canonicalSlug": "pseudopleuronectes-herzensteini",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Pseudopleuronectes Bleeker, 1862",
+        "species": "herzensteini"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:550",
+      "internalId": "BM-SPECIES-000548",
+      "koreanName": "도다리",
+      "scientificName": "Pleuronichthys cornutus",
+      "normalizedScientificName": "Pleuronichthys cornutus",
+      "canonicalSlug": "pleuronichthys-cornutus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Pleuronichthys Girard, 1854",
+        "species": "cornutus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:555",
+      "internalId": "BM-SPECIES-000553",
+      "koreanName": "홍가자미",
+      "scientificName": "Hippoglossoides dubius",
+      "normalizedScientificName": "Hippoglossoides dubius",
+      "canonicalSlug": "hippoglossoides-dubius",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Hippoglossoides Gottsche, 1835",
+        "species": "dubius"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:556",
+      "internalId": "BM-SPECIES-000554",
+      "koreanName": "돌가자미",
+      "scientificName": "Platichthys bicoloratus",
+      "normalizedScientificName": "Platichthys bicoloratus",
+      "canonicalSlug": "platichthys-bicoloratus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Platichthys Girard, 1854",
+        "species": "bicoloratus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:557",
+      "internalId": "BM-SPECIES-000555",
+      "koreanName": "강도다리",
+      "scientificName": "Platichthys stellatus",
+      "normalizedScientificName": "Platichthys stellatus",
+      "canonicalSlug": "platichthys-stellatus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Platichthys Girard, 1854",
+        "species": "stellatus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:558",
+      "internalId": "BM-SPECIES-000556",
+      "koreanName": "각시가자미",
+      "scientificName": "Limanda aspera",
+      "normalizedScientificName": "Limanda aspera",
+      "canonicalSlug": "limanda-aspera",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Pleuronectidae Rafinesque, 1815",
+        "genus": "Limanda Gottsche, 1835",
+        "species": "aspera"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:568",
+      "internalId": "BM-SPECIES-000566",
+      "koreanName": "박대",
+      "scientificName": "Cynoglossus semilaevis",
+      "normalizedScientificName": "Cynoglossus semilaevis",
+      "canonicalSlug": "cynoglossus-semilaevis",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Carangiformes",
+        "family": "Cynoglossidae Jordan, 1888",
+        "genus": "Cynoglossus Hamilton, 1822",
+        "species": "semilaevis"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:578",
+      "internalId": "BM-SPECIES-000576",
+      "koreanName": "양미리",
+      "scientificName": "Ammodytes heian",
+      "normalizedScientificName": "Ammodytes heian",
+      "canonicalSlug": "ammodytes-heian",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Labriformes",
+        "family": "Ammodytidae Bonaparte, 1835",
+        "genus": "Ammodytes Linnaeus, 1758",
+        "species": "heian"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:580",
+      "internalId": "BM-SPECIES-000578",
+      "koreanName": "쌍동가리",
+      "scientificName": "Parapercis sexfasciata",
+      "normalizedScientificName": "Parapercis sexfasciata",
+      "canonicalSlug": "parapercis-sexfasciata",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Labriformes",
+        "family": "Pinguipedidae Günther, 1860",
+        "genus": "Parapercis Bleeker, 1863",
+        "species": "sexfasciata"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:596",
+      "internalId": "BM-SPECIES-000594",
+      "koreanName": "놀래기",
+      "scientificName": "Halichoeres tenuispinis",
+      "normalizedScientificName": "Halichoeres tenuispinis",
+      "canonicalSlug": "halichoeres-tenuispinis",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Labriformes",
+        "family": "Labridae Cuvier, 1816",
+        "genus": "Halichoeres Rüppell, 1835",
+        "species": "tenuispinis"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:609",
+      "internalId": "BM-SPECIES-000607",
+      "koreanName": "혹돔",
+      "scientificName": "Bodianus reticulatus",
+      "normalizedScientificName": "Bodianus reticulatus",
+      "canonicalSlug": "bodianus-reticulatus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Labriformes",
+        "family": "Labridae Cuvier, 1816",
+        "genus": "Bodianus Bloch, 1790",
+        "species": "reticulatus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:627",
+      "internalId": "BM-SPECIES-000625",
+      "koreanName": "은상어",
+      "scientificName": "Chimaera phantasma",
+      "normalizedScientificName": "Chimaera phantasma",
+      "canonicalSlug": "chimaera-phantasma",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Holocephali",
+        "order": "Chimaeriformes",
+        "family": "Chimaeridae Rafinesque, 1815",
+        "genus": "Chimaera Linnaeus, 1758",
+        "species": "phantasma"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:651",
+      "internalId": "BM-SPECIES-000649",
+      "koreanName": "홍어",
+      "scientificName": "Okamejei kenojei",
+      "normalizedScientificName": "Okamejei kenojei",
+      "canonicalSlug": "okamejei-kenojei",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Rajiformes",
+        "family": "Rajidae de Blainville, 1816",
+        "genus": "Okamejei Ishiyama, 1958",
+        "species": "kenojei"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:656",
+      "internalId": "BM-SPECIES-000654",
+      "koreanName": "돌묵상어",
+      "scientificName": "Cetorhinus maximus",
+      "normalizedScientificName": "Cetorhinus maximus",
+      "canonicalSlug": "cetorhinus-maximus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Lamniformes",
+        "family": "Cetorhinidae Gill, 1861",
+        "genus": "Cetorhinus Blainville, 1816",
+        "species": "maximus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:664",
+      "internalId": "BM-SPECIES-000662",
+      "koreanName": "귀상어",
+      "scientificName": "Sphyrna zygaena",
+      "normalizedScientificName": "Sphyrna zygaena",
+      "canonicalSlug": "sphyrna-zygaena",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Carcharhiniformes",
+        "family": "Sphyrnidae Bonaparte, 1840",
+        "genus": "Sphyrna Rafinesque, 1810",
+        "species": "zygaena"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:675",
+      "internalId": "BM-SPECIES-000673",
+      "koreanName": "청새리상어",
+      "scientificName": "Prionace glauca",
+      "normalizedScientificName": "Prionace glauca",
+      "canonicalSlug": "prionace-glauca",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Carcharhiniformes",
+        "family": "Carcharhinidae Jordan & Evermann, 1896",
+        "genus": "Prionace Cantor, 1849",
+        "species": "glauca"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:678",
+      "internalId": "BM-SPECIES-000676",
+      "koreanName": "까치상어",
+      "scientificName": "Triakis scyllium",
+      "normalizedScientificName": "Triakis scyllium",
+      "canonicalSlug": "triakis-scyllium",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Carcharhiniformes",
+        "family": "Triakidae Gray, 1851",
+        "genus": "Triakis Müller & Henle, 1838",
+        "species": "scyllium"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:686",
+      "internalId": "BM-SPECIES-000684",
+      "koreanName": "전기가오리",
+      "scientificName": "Narke japonica",
+      "normalizedScientificName": "Narke japonica",
+      "canonicalSlug": "narke-japonica",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Torpediniformes",
+        "family": "Narcinidae Gill, 1862",
+        "genus": "Narke Kaup, 1826",
+        "species": "japonica"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:697",
+      "internalId": "BM-SPECIES-000695",
+      "koreanName": "노랑가오리",
+      "scientificName": "Hemitrygon akajei",
+      "normalizedScientificName": "Hemitrygon akajei",
+      "canonicalSlug": "hemitrygon-akajei",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Elasmobranchii",
+        "order": "Myliobatiformes",
+        "family": "Dasyatidae Jordan & Gilbert, 1879",
+        "genus": "Hemitrygon Müller & Henle, 1838",
+        "species": "akajei"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:712",
+      "internalId": "BM-SPECIES-000710",
+      "koreanName": "먹장어",
+      "scientificName": "Eptatretus burgeri",
+      "normalizedScientificName": "Eptatretus burgeri",
+      "canonicalSlug": "eptatretus-burgeri",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Myxini",
+        "order": "Myxiniformes",
+        "family": "Myxinidae Rafinesque, 1815",
+        "genus": "Eptatretus Cloquet, 1819",
+        "species": "burgeri"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:753",
+      "internalId": "BM-SPECIES-000751",
+      "koreanName": "감성돔",
+      "scientificName": "Acanthopagrus schlegelii",
+      "normalizedScientificName": "Acanthopagrus schlegelii",
+      "canonicalSlug": "acanthopagrus-schlegelii",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sparidae Rafinesque, 1818",
+        "genus": "Acanthopagrus Peters, 1855",
+        "species": "schlegelii"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:754",
+      "internalId": "BM-SPECIES-000752",
+      "koreanName": "청돔",
+      "scientificName": "Rhabdosargus sarba",
+      "normalizedScientificName": "Rhabdosargus sarba",
+      "canonicalSlug": "rhabdosargus-sarba",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sparidae Rafinesque, 1818",
+        "genus": "Rhabdosargus Fowler, 1933",
+        "species": "sarba"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:755",
+      "internalId": "BM-SPECIES-000753",
+      "koreanName": "황돔",
+      "scientificName": "Dentex hypselosomus",
+      "normalizedScientificName": "Dentex hypselosomus",
+      "canonicalSlug": "dentex-hypselosomus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sparidae Rafinesque, 1818",
+        "genus": "Dentex Cuvier, 1814",
+        "species": "hypselosomus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:757",
+      "internalId": "BM-SPECIES-000755",
+      "koreanName": "참돔",
+      "scientificName": "Pagrus major",
+      "normalizedScientificName": "Pagrus major",
+      "canonicalSlug": "pagrus-major",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sparidae Rafinesque, 1818",
+        "genus": "Pagrus Cuvier, 1816",
+        "species": "major"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:759",
+      "internalId": "BM-SPECIES-000757",
+      "koreanName": "붉돔",
+      "scientificName": "Evynnis tumifrons",
+      "normalizedScientificName": "Evynnis tumifrons",
+      "canonicalSlug": "evynnis-tumifrons",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sparidae Rafinesque, 1818",
+        "genus": "Evynnis Jordan & Thompson, 1912",
+        "species": "tumifrons"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:762",
+      "internalId": "BM-SPECIES-000760",
+      "koreanName": "갈돔",
+      "scientificName": "Lethrinus nebulosus",
+      "normalizedScientificName": "Lethrinus nebulosus",
+      "canonicalSlug": "lethrinus-nebulosus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Lethrinidae Bonaparte, 1831",
+        "genus": "Lethrinus Cuvier, 1829",
+        "species": "nebulosus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:763",
+      "internalId": "BM-SPECIES-000761",
+      "koreanName": "구갈돔",
+      "scientificName": "Lethrinus haematopterus",
+      "normalizedScientificName": "Lethrinus haematopterus",
+      "canonicalSlug": "lethrinus-haematopterus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Lethrinidae Bonaparte, 1831",
+        "genus": "Lethrinus Cuvier, 1829",
+        "species": "haematopterus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:766",
+      "internalId": "BM-SPECIES-000764",
+      "koreanName": "군평선이",
+      "scientificName": "Hapalogenys analis",
+      "normalizedScientificName": "Hapalogenys analis",
+      "canonicalSlug": "hapalogenys-analis",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Lobotidae Gill, 1861",
+        "genus": "Hapalogenys Richardson, 1844",
+        "species": "analis"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:768",
+      "internalId": "BM-SPECIES-000766",
+      "koreanName": "동갈돗돔",
+      "scientificName": "Hapalogenys nigripinnis",
+      "normalizedScientificName": "Hapalogenys nigripinnis",
+      "canonicalSlug": "hapalogenys-nigripinnis",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Lobotidae Gill, 1861",
+        "genus": "Hapalogenys Richardson, 1844",
+        "species": "nigripinnis"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:794",
+      "internalId": "BM-SPECIES-000792",
+      "koreanName": "벤자리",
+      "scientificName": "Parapristipoma trilineatum",
+      "normalizedScientificName": "Parapristipoma trilineatum",
+      "canonicalSlug": "parapristipoma-trilineatum",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Haemulidae Gill, 1885",
+        "genus": "Parapristipoma Bleeker, 1873",
+        "species": "trilineatum"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:802",
+      "internalId": "BM-SPECIES-000800",
+      "koreanName": "독가시치",
+      "scientificName": "Siganus fuscescens",
+      "normalizedScientificName": "Siganus fuscescens",
+      "canonicalSlug": "siganus-fuscescens",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Siganidae Richardson, 1837",
+        "genus": "Siganus Forsskål, 1775",
+        "species": "fuscescens"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:820",
+      "internalId": "BM-SPECIES-000818",
+      "koreanName": "보리멸",
+      "scientificName": "Sillago sihama",
+      "normalizedScientificName": "Sillago sihama",
+      "canonicalSlug": "sillago-sihama",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sillaginidae Richardson, 1846",
+        "genus": "Sillago Cuvier, 1816",
+        "species": "sihama"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:827",
+      "internalId": "BM-SPECIES-000825",
+      "koreanName": "옥돔",
+      "scientificName": "Branchiostegus japonicus",
+      "normalizedScientificName": "Branchiostegus japonicus",
+      "canonicalSlug": "branchiostegus-japonicus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Latilidae Gill, 1862",
+        "genus": "Branchiostegus Rafinesque, 1815",
+        "species": "japonicus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_scientific_exact",
+        "LOCAL_UI_NAME_MATCH",
+        "NIFS_LINKED_scientific_exact"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 100,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:841",
+      "internalId": "BM-SPECIES-000839",
+      "koreanName": "보구치",
+      "scientificName": "Pennahia argentata",
+      "normalizedScientificName": "Pennahia argentata",
+      "canonicalSlug": "pennahia-argentata",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sciaenidae Cuvier, 1829",
+        "genus": "Pennahia Fowler, 1926",
+        "species": "argentata"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:842",
+      "internalId": "BM-SPECIES-000840",
+      "koreanName": "민어",
+      "scientificName": "Miichthys miiuy",
+      "normalizedScientificName": "Miichthys miiuy",
+      "canonicalSlug": "miichthys-miiuy",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sciaenidae Cuvier, 1829",
+        "genus": "Miichthys Lin, 1938",
+        "species": "miiuy"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:844",
+      "internalId": "BM-SPECIES-000842",
+      "koreanName": "부세",
+      "scientificName": "Larimichthys crocea",
+      "normalizedScientificName": "Larimichthys crocea",
+      "canonicalSlug": "larimichthys-crocea",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sciaenidae Cuvier, 1829",
+        "genus": "Larimichthys Jordan & Starks, 1905",
+        "species": "crocea"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:845",
+      "internalId": "BM-SPECIES-000843",
+      "koreanName": "꼬마민어",
+      "scientificName": "Protonibea diacanthus",
+      "normalizedScientificName": "Protonibea diacanthus",
+      "canonicalSlug": "protonibea-diacanthus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Acanthuriformes",
+        "family": "Sciaenidae Cuvier, 1829",
+        "genus": "Protonibea Trewavas, 1971",
+        "species": "diacanthus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:869",
+      "internalId": "BM-SPECIES-000867",
+      "koreanName": "동갈치",
+      "scientificName": "Strongylura anastomella",
+      "normalizedScientificName": "Strongylura anastomella",
+      "canonicalSlug": "strongylura-anastomella",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Beloniformes",
+        "family": "Belonidae Bonaparte, 1835",
+        "genus": "Strongylura van Hasselt, 1824",
+        "species": "anastomella"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:883",
+      "internalId": "BM-SPECIES-000881",
+      "koreanName": "꽁치",
+      "scientificName": "Cololabis saira",
+      "normalizedScientificName": "Cololabis saira",
+      "canonicalSlug": "cololabis-saira",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Beloniformes",
+        "family": "Scomberesocidae Bleeker, 1859",
+        "genus": "Cololabis Gill, 1896",
+        "species": "saira"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:886",
+      "internalId": "BM-SPECIES-000884",
+      "koreanName": "학공치",
+      "scientificName": "Hyporhamphus sajori",
+      "normalizedScientificName": "Hyporhamphus sajori",
+      "canonicalSlug": "hyporhamphus-sajori",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Beloniformes",
+        "family": "Hemiramphidae Gill, 1859",
+        "genus": "Hyporhamphus Gill, 1859",
+        "species": "sajori"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:902",
+      "internalId": "BM-SPECIES-000900",
+      "koreanName": "갯장어",
+      "scientificName": "Muraenesox cinereus",
+      "normalizedScientificName": "Muraenesox cinereus",
+      "canonicalSlug": "muraenesox-cinereus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Anguilliformes",
+        "family": "Muraenesocidae Kaup, 1859",
+        "genus": "Muraenesox McClelland, 1844",
+        "species": "cinereus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_scientific_exact",
+        "LOCAL_UI_NAME_MATCH",
+        "NIFS_LINKED_scientific_exact"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 100,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:910",
+      "internalId": "BM-SPECIES-000908",
+      "koreanName": "붕장어",
+      "scientificName": "Conger myriaster",
+      "normalizedScientificName": "Conger myriaster",
+      "canonicalSlug": "conger-myriaster",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Anguilliformes",
+        "family": "Congridae Kaup, 1856",
+        "genus": "Conger Bosc, 1817",
+        "species": "myriaster"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:937",
+      "internalId": "BM-SPECIES-000935",
+      "koreanName": "곰치",
+      "scientificName": "Gymnothorax kidako",
+      "normalizedScientificName": "Gymnothorax kidako",
+      "canonicalSlug": "gymnothorax-kidako",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Anguilliformes",
+        "family": "Muraenidae Rafinesque, 1815",
+        "genus": "Gymnothorax Bloch, 1795",
+        "species": "kidako"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:960",
+      "internalId": "BM-SPECIES-000958",
+      "koreanName": "황어",
+      "scientificName": "Pseudaspius hakonensis",
+      "normalizedScientificName": "Pseudaspius hakonensis",
+      "canonicalSlug": "pseudaspius-hakonensis",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Cypriniformes",
+        "family": "Leuciscidae Bonaparte, 1835",
+        "genus": "Pseudaspius Dybowski, 1869",
+        "species": "hakonensis"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1014",
+      "internalId": "BM-SPECIES-001012",
+      "koreanName": "쏠종개",
+      "scientificName": "Plotosus japonicus",
+      "normalizedScientificName": "Plotosus japonicus",
+      "canonicalSlug": "plotosus-japonicus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Siluriformes",
+        "family": "Plotosidae Bleeker, 1858",
+        "genus": "Plotosus Lacepède, 1803",
+        "species": "japonicus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1020",
+      "internalId": "BM-SPECIES-001018",
+      "koreanName": "붉은메기",
+      "scientificName": "Hoplobrotula armata",
+      "normalizedScientificName": "Hoplobrotula armata",
+      "canonicalSlug": "hoplobrotula-armata",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Ophidiiformes",
+        "family": "Ophidiidae Rafinesque, 1810",
+        "genus": "Hoplobrotula Gill, 1863",
+        "species": "armata"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1024",
+      "internalId": "BM-SPECIES-001022",
+      "koreanName": "청어",
+      "scientificName": "Clupea pallasii",
+      "normalizedScientificName": "Clupea pallasii",
+      "canonicalSlug": "clupea-pallasii",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Clupeiformes",
+        "family": "Clupeidae Cuvier, 1816",
+        "genus": "Clupea Linnaeus, 1758",
+        "species": "pallasii"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1031",
+      "internalId": "BM-SPECIES-001029",
+      "koreanName": "멸치",
+      "scientificName": "Engraulis japonicus",
+      "normalizedScientificName": "Engraulis japonicus",
+      "canonicalSlug": "engraulis-japonicus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Clupeiformes",
+        "family": "Engraulidae Gill, 1861",
+        "genus": "Engraulis Cuvier, 1816",
+        "species": "japonicus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1032",
+      "internalId": "BM-SPECIES-001030",
+      "koreanName": "준치",
+      "scientificName": "Ilisha elongata",
+      "normalizedScientificName": "Ilisha elongata",
+      "canonicalSlug": "ilisha-elongata",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Clupeiformes",
+        "family": "Pristigasteridae Bleeker, 1872",
+        "genus": "Ilisha Richardson, 1846",
+        "species": "elongata"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1039",
+      "internalId": "BM-SPECIES-001037",
+      "koreanName": "전어",
+      "scientificName": "Konosirus punctatus",
+      "normalizedScientificName": "Konosirus punctatus",
+      "canonicalSlug": "konosirus-punctatus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Clupeiformes",
+        "family": "Dorosomatidae Gill, 1861",
+        "genus": "Konosirus Jordan & Snyder, 1900",
+        "species": "punctatus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1042",
+      "internalId": "BM-SPECIES-001040",
+      "koreanName": "정어리",
+      "scientificName": "Sardinops melanosticta",
+      "normalizedScientificName": "Sardinops melanosticta",
+      "canonicalSlug": "sardinops-melanosticta",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Clupeiformes",
+        "family": "Alosidae Svetovidov, 1952",
+        "genus": "Sardinops Hubbs, 1929",
+        "species": "melanosticta"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1058",
+      "internalId": "BM-SPECIES-001056",
+      "koreanName": "대구",
+      "scientificName": "Gadus macrocephalus",
+      "normalizedScientificName": "Gadus macrocephalus",
+      "canonicalSlug": "gadus-macrocephalus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gadiformes",
+        "family": "Gadidae Rafinesque, 1810",
+        "genus": "Gadus Linnaeus, 1758",
+        "species": "macrocephalus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_scientific_exact",
+        "LOCAL_UI_NAME_MATCH",
+        "NIFS_LINKED_scientific_exact"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 100,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1059",
+      "internalId": "BM-SPECIES-001057",
+      "koreanName": "명태",
+      "scientificName": "Gadus chalcogrammus",
+      "normalizedScientificName": "Gadus chalcogrammus",
+      "canonicalSlug": "gadus-chalcogrammus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Gadiformes",
+        "family": "Gadidae Rafinesque, 1810",
+        "genus": "Gadus Linnaeus, 1758",
+        "species": "chalcogrammus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_synonym",
+        "LOCAL_UI_NAME_MATCH",
+        "NIFS_LINKED_synonym"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 100,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1086",
+      "internalId": "BM-SPECIES-001084",
+      "koreanName": "가시망둑",
+      "scientificName": "Pseudoblennius cottoides",
+      "normalizedScientificName": "Pseudoblennius cottoides",
+      "canonicalSlug": "pseudoblennius-cottoides",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Psychrolutidae Günther, 1861",
+        "genus": "Pseudoblennius Temminck & Schlegel, 1850",
+        "species": "cottoides"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1088",
+      "internalId": "BM-SPECIES-001086",
+      "koreanName": "돌팍망둑",
+      "scientificName": "Pseudoblennius percoides",
+      "normalizedScientificName": "Pseudoblennius percoides",
+      "canonicalSlug": "pseudoblennius-percoides",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Psychrolutidae Günther, 1861",
+        "genus": "Pseudoblennius Temminck & Schlegel, 1850",
+        "species": "percoides"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1106",
+      "internalId": "BM-SPECIES-001104",
+      "koreanName": "대구횟대",
+      "scientificName": "Gymnocanthus herzensteini",
+      "normalizedScientificName": "Gymnocanthus herzensteini",
+      "canonicalSlug": "gymnocanthus-herzensteini",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Psychrolutidae Günther, 1861",
+        "genus": "Gymnocanthus Swainson, 1839",
+        "species": "herzensteini"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1125",
+      "internalId": "BM-SPECIES-001123",
+      "koreanName": "베도라치",
+      "scientificName": "Pholis nebulosa",
+      "normalizedScientificName": "Pholis nebulosa",
+      "canonicalSlug": "pholis-nebulosa",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Pholidae Gill, 1893",
+        "genus": "Pholis Scopoli, 1777",
+        "species": "nebulosa"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1137",
+      "internalId": "BM-SPECIES-001135",
+      "koreanName": "성대",
+      "scientificName": "Chelidonichthys spinosus",
+      "normalizedScientificName": "Chelidonichthys spinosus",
+      "canonicalSlug": "chelidonichthys-spinosus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Triglidae Rafinesque, 1815",
+        "genus": "Chelidonichthys Kaup, 1873",
+        "species": "spinosus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1155",
+      "internalId": "BM-SPECIES-001153",
+      "koreanName": "쑤기미",
+      "scientificName": "Inimicus japonicus",
+      "normalizedScientificName": "Inimicus japonicus",
+      "canonicalSlug": "inimicus-japonicus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Synanceiidae Swainson, 1839",
+        "genus": "Inimicus Jordan & Starks, 1904",
+        "species": "japonicus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1159",
+      "internalId": "BM-SPECIES-001157",
+      "koreanName": "미역치",
+      "scientificName": "Paracentropogon rubripinnis",
+      "normalizedScientificName": "Paracentropogon rubripinnis",
+      "canonicalSlug": "paracentropogon-rubripinnis",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Synanceiidae Swainson, 1839",
+        "genus": "Paracentropogon Bleeker, 1876",
+        "species": "rubripinnis"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1163",
+      "internalId": "BM-SPECIES-001161",
+      "koreanName": "임연수어",
+      "scientificName": "Pleurogrammus azonus",
+      "normalizedScientificName": "Pleurogrammus azonus",
+      "canonicalSlug": "pleurogrammus-azonus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Hexagrammidae Jordan, 1888",
+        "genus": "Pleurogrammus Gill, 1861",
+        "species": "azonus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1166",
+      "internalId": "BM-SPECIES-001164",
+      "koreanName": "노래미",
+      "scientificName": "Hexagrammos agrammus",
+      "normalizedScientificName": "Hexagrammos agrammus",
+      "canonicalSlug": "hexagrammos-agrammus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Hexagrammidae Jordan, 1888",
+        "genus": "Hexagrammos Tilesius, 1810",
+        "species": "agrammus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1167",
+      "internalId": "BM-SPECIES-001165",
+      "koreanName": "쥐노래미",
+      "scientificName": "Hexagrammos otakii",
+      "normalizedScientificName": "Hexagrammos otakii",
+      "canonicalSlug": "hexagrammos-otakii",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Hexagrammidae Jordan, 1888",
+        "genus": "Hexagrammos Tilesius, 1810",
+        "species": "otakii"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1168",
+      "internalId": "BM-SPECIES-001166",
+      "koreanName": "도루묵",
+      "scientificName": "Arctoscopus japonicus",
+      "normalizedScientificName": "Arctoscopus japonicus",
+      "canonicalSlug": "arctoscopus-japonicus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Trichodontidae Bleeker, 1859",
+        "genus": "Arctoscopus Jordan & Evermann, 1896",
+        "species": "japonicus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH",
+        "NIFS_LINKED_scientific_exact"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 70,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1190",
+      "internalId": "BM-SPECIES-001188",
+      "koreanName": "먹갈치",
+      "scientificName": "Lycodes nakamurae",
+      "normalizedScientificName": "Lycodes nakamurae",
+      "canonicalSlug": "lycodes-nakamurae",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Zoarcidae Swainson, 1839",
+        "genus": "Lycodes Reinhardt, 1831",
+        "species": "nakamurae"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1194",
+      "internalId": "BM-SPECIES-001192",
+      "koreanName": "등가시치",
+      "scientificName": "Zoarces gillii",
+      "normalizedScientificName": "Zoarces gillii",
+      "canonicalSlug": "zoarces-gillii",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Zoarcidae Swainson, 1839",
+        "genus": "Zoarces Cuvier, 1829",
+        "species": "gillii"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1206",
+      "internalId": "BM-SPECIES-001204",
+      "koreanName": "자바리",
+      "scientificName": "Epinephelus bruneus",
+      "normalizedScientificName": "Epinephelus bruneus",
+      "canonicalSlug": "epinephelus-bruneus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Epinephelidae Bleeker, 1874",
+        "genus": "Epinephelus Bloch, 1793",
+        "species": "bruneus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1207",
+      "internalId": "BM-SPECIES-001205",
+      "koreanName": "붉바리",
+      "scientificName": "Epinephelus akaara",
+      "normalizedScientificName": "Epinephelus akaara",
+      "canonicalSlug": "epinephelus-akaara",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Epinephelidae Bleeker, 1874",
+        "genus": "Epinephelus Bloch, 1793",
+        "species": "akaara"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1217",
+      "internalId": "BM-SPECIES-001215",
+      "koreanName": "능성어",
+      "scientificName": "Hyporthodus septemfasciatus",
+      "normalizedScientificName": "Hyporthodus septemfasciatus",
+      "canonicalSlug": "hyporthodus-septemfasciatus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Epinephelidae Bleeker, 1874",
+        "genus": "Hyporthodus Gill, 1861",
+        "species": "septemfasciatus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1229",
+      "internalId": "BM-SPECIES-001227",
+      "koreanName": "다금바리",
+      "scientificName": "Niphon spinosus",
+      "normalizedScientificName": "Niphon spinosus",
+      "canonicalSlug": "niphon-spinosus",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Niphonidae Jordan, 1923",
+        "genus": "Niphon Cuvier, 1828",
+        "species": "spinosus"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "FISH_DATA_LINKED_korean_candidate",
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_SOURCE_LINK",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 85,
+      "tier": "A"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1247",
+      "internalId": "BM-SPECIES-001245",
+      "koreanName": "홍감펭",
+      "scientificName": "Helicolenus hilgendorfii",
+      "normalizedScientificName": "Helicolenus hilgendorfii",
+      "canonicalSlug": "helicolenus-hilgendorfii",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Helicolenus Goode & Bean, 1896",
+        "species": "hilgendorfii"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1248",
+      "internalId": "BM-SPECIES-001246",
+      "koreanName": "점쏠배감펭",
+      "scientificName": "Pterois volitans",
+      "normalizedScientificName": "Pterois volitans",
+      "canonicalSlug": "pterois-volitans",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Pterois Oken, 1817",
+        "species": "volitans"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    },
+    {
+      "mbrisSourceId": "MBRIS:척추동물:1249",
+      "internalId": "BM-SPECIES-001247",
+      "koreanName": "쏠배감펭",
+      "scientificName": "Pterois lunulata",
+      "normalizedScientificName": "Pterois lunulata",
+      "canonicalSlug": "pterois-lunulata",
+      "taxonomy": {
+        "kingdom": "척추동물",
+        "phylum": "Chordata",
+        "class": "Teleostei",
+        "order": "Perciformes",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Pterois Oken, 1817",
+        "species": "lunulata"
+      },
+      "primaryClass": "LINK_LEGACY_AND_PROMOTE_NEW",
+      "reason": "A local UI fish record exists, but no staging canonical identity exists; create a new canonical species and retain a legacy mapping.",
+      "secondaryFlags": [
+        "LOCAL_UI_NAME_MATCH"
+      ],
+      "legacyLocalMatch": "LEGACY_LOCAL_NAME_MATCH",
+      "legacyMappingRequired": true,
+      "stagingMatch": null,
+      "collisions": {
+        "id": false,
+        "sourceId": false,
+        "scientific": false,
+        "normalizedScientific": false,
+        "slug": false,
+        "relation": false
+      },
+      "priority": 25,
+      "tier": "C"
+    }
+  ]
+}

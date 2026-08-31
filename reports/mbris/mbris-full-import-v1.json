@@ -1,0 +1,65 @@
+{
+  "reportVersion": "1",
+  "generatedAt": "2026-08-30T13:59:54.361Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "FULL_MBRIS_IMPORT_PASS",
+  "prewrite": {
+    "speciesBefore": 18,
+    "nifs": 8,
+    "canary": 10,
+    "source": 1,
+    "remainingAdmission": 1104,
+    "collisions": [],
+    "existing2": [
+      {
+        "internalId": "BM-SPECIES-000557",
+        "koreanName": "기름가자미",
+        "speciesId": "246b2977-2cb3-432d-885d-7be5cda4ab53",
+        "identityMatches": true,
+        "relationExisting": 0,
+        "lineageExisting": 0
+      },
+      {
+        "internalId": "BM-SPECIES-000841",
+        "koreanName": "참조기",
+        "speciesId": "6ba2ceaa-e860-436c-b16a-29c494a63584",
+        "identityMatches": true,
+        "relationExisting": 0,
+        "lineageExisting": 0
+      }
+    ],
+    "expectedExisting2RelationInserts": 2,
+    "expectedExisting2LineageInserts": 2,
+    "fingerprints": {
+      "indexes": "ec847cfe297e7069613a20fb403dec7e",
+      "policies": "109ee1f3a7cea5f2d8b1dc8a505dec86",
+      "triggers": "f6854eb920d199ea558dfa16dde23302",
+      "constraints": "67c87f83d5fc3a6cd62bff2d6c31478e"
+    }
+  },
+  "existing2": {
+    "inserted": {
+      "sourceInserted": 0,
+      "lineageInserted": 2,
+      "speciesInserted": 0,
+      "relationsInserted": 2
+    },
+    "duplicateSpecies": 0
+  },
+  "firstImport": {
+    "sourceInserted": 0,
+    "speciesInserted": 1104,
+    "relationsInserted": 1106,
+    "lineageInserted": 1106
+  },
+  "committedBatches": 12,
+  "failedBatches": 0,
+  "priorityDiversityWarning": "PRIORITY_DIVERSITY_NOT_TESTED",
+  "exclusions": {
+    "review": 137,
+    "conflict": 1,
+    "nonfish": 145,
+    "malformed": 5
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "reportVersion": "1",
+  "generatedAt": "2026-08-30T13:46:36.517Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "CANARY_POSTCHECK_PASS",
+  "totalSpecies": 18,
+  "nifsSpecies": 8,
+  "nifsPreserved": true,
+  "canarySpecies": 10,
+  "mbrisSourceRecords": 1,
+  "relations": 10,
+  "lineage": 10,
+  "publicCanaryVisibility": 0,
+  "auditCanaryVisibility": 10,
+  "allDraftPending": true,
+  "duplicates": {
+    "internalId": 0,
+    "slug": 0,
+    "relation": 0,
+    "lineage": 0
+  },
+  "schemaChanged": false,
+  "rlsChanged": false,
+  "species": [
+    {
+      "speciesId": "8850e99f-1e93-4022-8b19-74f4421fd2e7",
+      "internalId": "BM-SPECIES-000081",
+      "koreanName": "빨간씬벵이",
+      "scientificName": "Antennarius striatus",
+      "slug": "antennarius-striatus",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "3ef0d08e-0ee5-4763-8cd5-f6f9ed20fadd",
+      "internalId": "BM-SPECIES-000052",
+      "koreanName": "먹분홍꼼치",
+      "scientificName": "Careproctus colletti",
+      "slug": "careproctus-colletti",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "d2289a70-93c3-4c5f-a50e-9357a1c661e4",
+      "internalId": "BM-SPECIES-000076",
+      "koreanName": "점씬벵이",
+      "scientificName": "Chaunax abei",
+      "slug": "chaunax-abei",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "0184fb7a-25b9-4d4f-be8b-f19eb1779025",
+      "internalId": "BM-SPECIES-000063",
+      "koreanName": "까지양태",
+      "scientificName": "Cociella crocodilus",
+      "slug": "cociella-crocodilus",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "5c90c2b5-ed99-40f3-86bc-010bc1df7264",
+      "internalId": "BM-SPECIES-000030",
+      "koreanName": "실줄고기",
+      "scientificName": "Freemanichthys thompsoni",
+      "slug": "freemanichthys-thompsoni",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "1da93195-41be-4463-adfa-71b4167671b4",
+      "internalId": "BM-SPECIES-000072",
+      "koreanName": "민부치",
+      "scientificName": "Halieutaea fumosa",
+      "slug": "halieutaea-fumosa",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "fae8ddd0-20c3-406d-9262-4fef59c0cb63",
+      "internalId": "BM-SPECIES-000077",
+      "koreanName": "용아귀",
+      "scientificName": "Lophiodes insidiator",
+      "slug": "lophiodes-insidiator",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "b6bb173d-b05c-47b5-80a6-5c03d9979062",
+      "internalId": "BM-SPECIES-000071",
+      "koreanName": "단풍잎성대볼락",
+      "scientificName": "Neosebastes entaxis",
+      "slug": "neosebastes-entaxis",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "755048a9-1ab3-4ddb-8743-b85a671c84e9",
+      "internalId": "BM-SPECIES-000087",
+      "koreanName": "홍송어",
+      "scientificName": "Salvelinus leucomaenis",
+      "slug": "salvelinus-leucomaenis",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "39bff46b-71b7-42e2-a13d-d72014b4b474",
+      "internalId": "BM-SPECIES-000001",
+      "koreanName": "돌삼뱅이",
+      "scientificName": "Sebastes baramenuke",
+      "slug": "sebastes-baramenuke",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    }
+  ],
+  "relationRows": [
+    {
+      "linked_by": "import_review",
+      "is_primary": true,
+      "species_id": "0184fb7a-25b9-4d4f-be8b-f19eb1779025",
+      "archived_at": null,
+      "relation_id": "74705a5b-ed70-4437-921a-58b8fcfd2f8c",
+      "mbris_source_id": "MBRIS:척추동물:65",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84"
+    },
+    {
+      "linked_by": "import_review",
+      "is_primary": true,
+      "species_id": "1da93195-41be-4463-adfa-71b4167671b4",
+      "archived_at": null,
+      "relation_id": "013fec0f-5012-40b3-9a54-75cd667baa4a",
+      "mbris_source_id": "MBRIS:척추동물:74",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84"
+    },
+    {
+      "linked_by": "import_review",
+      "is_primary": true,
+      "species_id": "39bff46b-71b7-42e2-a13d-d72014b4b474",
+      "archived_at": null,
+      "relation_id": "6a9d5010-54ea-4047-8040-ea13c6a82382",
+      "mbris_source_id": "MBRIS:척추동물:3",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84"
+    },
+    {
+      "linked_by": "import_review",
+      "is_primary": true,
+      "species_id": "3ef0d08e-0ee5-4763-8cd5-f6f9ed20fadd",
+      "archived_at": null,
+      "relation_id": "d5f92ce4-60aa-4609-8036-391ebd9b12be",
+      "mbris_source_id": "MBRIS:척추동물:54",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84"
+    },
+    {
+      "linked_by": "import_review",
+      "is_primary": true,
+      "species_id": "5c90c2b5-ed99-40f3-86bc-010bc1df7264",
+      "archived_at": null,
+      "relation_id": "31447260-6695-4a77-aeba-7d142ab0a720",
+      "mbris_source_id": "MBRIS:척추동물:32",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84"
+    },
+    {
+      "linked_by": "import_review",
+      "is_primary": true,
+      "species_id": "755048a9-1ab3-4ddb-8743-b85a671c84e9",
+      "archived_at": null,
+      "relation_id": "80ef5982-8b4b-46d6-8605-23cd4c0b483a",
+      "mbris_source_id": "MBRIS:척추동물:89",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84"
+    },
+    {
+      "linked_by": "import_review",
+      "is_primary": true,
+      "species_id": "8850e99f-1e93-4022-8b19-74f4421fd2e7",
+      "archived_at": null,
+      "relation_id": "7382afb6-97e9-46af-9250-13505f4b3e7d",
+      "mbris_source_id": "MBRIS:척추동물:83",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84"
+    },
+    {
+      "linked_by": "import_review",
+      "is_primary": true,
+      "species_id": "b6bb173d-b05c-47b5-80a6-5c03d9979062",
+      "archived_at": null,
+      "relation_id": "e76fd523-bcbc-4f05-9ed2-206467888225",
+      "mbris_source_id": "MBRIS:척추동물:73",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84"
+    },
+    {
+      "linked_by": "import_review",
+      "is_primary": true,
+      "species_id": "d2289a70-93c3-4c5f-a50e-9357a1c661e4",
+      "archived_at": null,
+      "relation_id": "69365c4c-1606-4644-8ace-53d290fb3c8f",
+      "mbris_source_id": "MBRIS:척추동물:78",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84"
+    },
+    {
+      "linked_by": "import_review",
+      "is_primary": true,
+      "species_id": "fae8ddd0-20c3-406d-9262-4fef59c0cb63",
+      "archived_at": null,
+      "relation_id": "1b0d9347-f402-4d27-921d-e7774ad50caf",
+      "mbris_source_id": "MBRIS:척추동물:79",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84"
+    }
+  ],
+  "lineageRows": [
+    {
+      "entity_id": "39bff46b-71b7-42e2-a13d-d72014b4b474",
+      "source_id": "MBRIS:척추동물:3",
+      "created_at": "2026-08-30T13:41:23.167682+00:00",
+      "change_type": "mbris_canary_import_v1",
+      "entity_type": "fish_species",
+      "internal_id": "BM-SPECIES-000001",
+      "import_batch": "mbris-canary-import-v1",
+      "change_log_id": "10308d99-26a9-462c-9862-9b00e29db457",
+      "source_provider": "MBRIS",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84",
+      "normalized_scientific_name": "Sebastes baramenuke"
+    },
+    {
+      "entity_id": "b6bb173d-b05c-47b5-80a6-5c03d9979062",
+      "source_id": "MBRIS:척추동물:73",
+      "created_at": "2026-08-30T13:41:23.167682+00:00",
+      "change_type": "mbris_canary_import_v1",
+      "entity_type": "fish_species",
+      "internal_id": "BM-SPECIES-000071",
+      "import_batch": "mbris-canary-import-v1",
+      "change_log_id": "4402d9ed-0cca-403a-bc35-af7b2d9dbe27",
+      "source_provider": "MBRIS",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84",
+      "normalized_scientific_name": "Neosebastes entaxis"
+    },
+    {
+      "entity_id": "d2289a70-93c3-4c5f-a50e-9357a1c661e4",
+      "source_id": "MBRIS:척추동물:78",
+      "created_at": "2026-08-30T13:41:23.167682+00:00",
+      "change_type": "mbris_canary_import_v1",
+      "entity_type": "fish_species",
+      "internal_id": "BM-SPECIES-000076",
+      "import_batch": "mbris-canary-import-v1",
+      "change_log_id": "55d1cdd0-071b-4064-b317-2428be8bed15",
+      "source_provider": "MBRIS",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84",
+      "normalized_scientific_name": "Chaunax abei"
+    },
+    {
+      "entity_id": "0184fb7a-25b9-4d4f-be8b-f19eb1779025",
+      "source_id": "MBRIS:척추동물:65",
+      "created_at": "2026-08-30T13:41:23.167682+00:00",
+      "change_type": "mbris_canary_import_v1",
+      "entity_type": "fish_species",
+      "internal_id": "BM-SPECIES-000063",
+      "import_batch": "mbris-canary-import-v1",
+      "change_log_id": "583022b4-a740-4fef-b9fa-33c481c9bb98",
+      "source_provider": "MBRIS",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84",
+      "normalized_scientific_name": "Cociella crocodilus"
+    },
+    {
+      "entity_id": "8850e99f-1e93-4022-8b19-74f4421fd2e7",
+      "source_id": "MBRIS:척추동물:83",
+      "created_at": "2026-08-30T13:41:23.167682+00:00",
+      "change_type": "mbris_canary_import_v1",
+      "entity_type": "fish_species",
+      "internal_id": "BM-SPECIES-000081",
+      "import_batch": "mbris-canary-import-v1",
+      "change_log_id": "6f97133c-7a05-4ec8-a88b-06ebedae4f91",
+      "source_provider": "MBRIS",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84",
+      "normalized_scientific_name": "Antennarius striatus"
+    },
+    {
+      "entity_id": "1da93195-41be-4463-adfa-71b4167671b4",
+      "source_id": "MBRIS:척추동물:74",
+      "created_at": "2026-08-30T13:41:23.167682+00:00",
+      "change_type": "mbris_canary_import_v1",
+      "entity_type": "fish_species",
+      "internal_id": "BM-SPECIES-000072",
+      "import_batch": "mbris-canary-import-v1",
+      "change_log_id": "9fd4e950-bd91-405f-9691-ebcd537bd143",
+      "source_provider": "MBRIS",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84",
+      "normalized_scientific_name": "Halieutaea fumosa"
+    },
+    {
+      "entity_id": "755048a9-1ab3-4ddb-8743-b85a671c84e9",
+      "source_id": "MBRIS:척추동물:89",
+      "created_at": "2026-08-30T13:41:23.167682+00:00",
+      "change_type": "mbris_canary_import_v1",
+      "entity_type": "fish_species",
+      "internal_id": "BM-SPECIES-000087",
+      "import_batch": "mbris-canary-import-v1",
+      "change_log_id": "bd3ae856-87b7-4784-a206-af7794f6b890",
+      "source_provider": "MBRIS",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84",
+      "normalized_scientific_name": "Salvelinus leucomaenis"
+    },
+    {
+      "entity_id": "5c90c2b5-ed99-40f3-86bc-010bc1df7264",
+      "source_id": "MBRIS:척추동물:32",
+      "created_at": "2026-08-30T13:41:23.167682+00:00",
+      "change_type": "mbris_canary_import_v1",
+      "entity_type": "fish_species",
+      "internal_id": "BM-SPECIES-000030",
+      "import_batch": "mbris-canary-import-v1",
+      "change_log_id": "f540cf86-0460-48ea-aa3c-acb0c072e148",
+      "source_provider": "MBRIS",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84",
+      "normalized_scientific_name": "Freemanichthys thompsoni"
+    },
+    {
+      "entity_id": "3ef0d08e-0ee5-4763-8cd5-f6f9ed20fadd",
+      "source_id": "MBRIS:척추동물:54",
+      "created_at": "2026-08-30T13:41:23.167682+00:00",
+      "change_type": "mbris_canary_import_v1",
+      "entity_type": "fish_species",
+      "internal_id": "BM-SPECIES-000052",
+      "import_batch": "mbris-canary-import-v1",
+      "change_log_id": "ff57a4be-fb1c-4a93-9b17-3f3d8be6d5a4",
+      "source_provider": "MBRIS",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84",
+      "normalized_scientific_name": "Careproctus colletti"
+    },
+    {
+      "entity_id": "fae8ddd0-20c3-406d-9262-4fef59c0cb63",
+      "source_id": "MBRIS:척추동물:79",
+      "created_at": "2026-08-30T13:41:23.167682+00:00",
+      "change_type": "mbris_canary_import_v1",
+      "entity_type": "fish_species",
+      "internal_id": "BM-SPECIES-000077",
+      "import_batch": "mbris-canary-import-v1",
+      "change_log_id": "ffee2a39-9613-4840-9fd7-13294d2f9ece",
+      "source_provider": "MBRIS",
+      "source_record_id": "cc89dd60-08e7-4c98-9218-a1615d5b5d84",
+      "normalized_scientific_name": "Lophiodes insidiator"
+    }
+  ],
+  "fingerprints": {
+    "indexes": "ec847cfe297e7069613a20fb403dec7e",
+    "policies": "109ee1f3a7cea5f2d8b1dc8a505dec86",
+    "triggers": "f6854eb920d199ea558dfa16dde23302",
+    "constraints": "67c87f83d5fc3a6cd62bff2d6c31478e"
+  },
+  "publicAccessDenied": true,
+  "publicAccessReason": "ANON_RLS_HELPER_EXECUTE_DENIED",
+  "remainingReadySpecies": 1104,
+  "fullImportExecuted": false,
+  "readyForFullImport": true
+}

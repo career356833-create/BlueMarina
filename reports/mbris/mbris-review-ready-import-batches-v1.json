@@ -1,0 +1,48 @@
+{
+  "reportVersion": "1",
+  "generatedAt": "2026-08-30T14:57:17.213Z",
+  "status": "REVIEW_IMPORT_BATCHES_PASS",
+  "batchShape": [
+    50,
+    50,
+    36
+  ],
+  "batches": [
+    {
+      "index": 1,
+      "mode": "FIRST_IMPORT",
+      "requested": 50,
+      "firstInternalId": "BM-SPECIES-000002",
+      "lastInternalId": "BM-SPECIES-000438",
+      "sourceInserted": 0,
+      "lineageInserted": 50,
+      "speciesInserted": 50,
+      "relationsInserted": 50,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 2,
+      "mode": "FIRST_IMPORT",
+      "requested": 50,
+      "firstInternalId": "BM-SPECIES-000444",
+      "lastInternalId": "BM-SPECIES-000843",
+      "sourceInserted": 0,
+      "lineageInserted": 50,
+      "speciesInserted": 50,
+      "relationsInserted": 50,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 3,
+      "mode": "FIRST_IMPORT",
+      "requested": 36,
+      "firstInternalId": "BM-SPECIES-000867",
+      "lastInternalId": "BM-SPECIES-001247",
+      "sourceInserted": 0,
+      "lineageInserted": 36,
+      "speciesInserted": 36,
+      "relationsInserted": 36,
+      "status": "COMMITTED"
+    }
+  ]
+}

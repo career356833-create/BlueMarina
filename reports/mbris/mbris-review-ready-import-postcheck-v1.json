@@ -1,0 +1,44 @@
+{
+  "reportVersion": "1",
+  "generatedAt": "2026-08-30T14:57:17.213Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "REVIEW_IMPORT_POSTCHECK_PASS",
+  "totalSpecies": 1258,
+  "nifsSpecies": 8,
+  "previousMbrisSpecies": 1114,
+  "reviewSpecies": 136,
+  "mbrisSourceRecords": 1,
+  "reviewRelations": 136,
+  "reviewLineage": 136,
+  "totalMbrisRelations": 1252,
+  "totalMbrisLineage": 1252,
+  "publicVisibility": 0,
+  "publicAccessDenied": true,
+  "publicAccessReason": "ANON_RLS_HELPER_EXECUTE_DENIED",
+  "auditVisibility": 136,
+  "allReviewDraftPending": true,
+  "duplicates": {
+    "speciesInternalId": 0,
+    "speciesSlug": 0,
+    "relations": 0,
+    "lineage": 0
+  },
+  "unexpectedSpecies": 0,
+  "excludedWrites": {
+    "blockedKorean": 0,
+    "conflict": 0,
+    "nonFish": 0,
+    "malformed": 0
+  },
+  "schemaChanged": false,
+  "rlsChanged": false,
+  "fishDataModified": false,
+  "fingerprints": {
+    "indexes": "ec847cfe297e7069613a20fb403dec7e",
+    "policies": "109ee1f3a7cea5f2d8b1dc8a505dec86",
+    "triggers": "f6854eb920d199ea558dfa16dde23302",
+    "constraints": "67c87f83d5fc3a6cd62bff2d6c31478e"
+  },
+  "legacyMappings": 136
+}

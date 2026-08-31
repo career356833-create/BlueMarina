@@ -1,0 +1,146 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-31T01:02:29.3275496+09:00",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "inputCount": 6,
+  "classifiedCount": 6,
+  "unclassifiedCount": 0,
+  "databaseWrites": 0,
+  "classificationCounts": {
+    "READY_MARINE_CANONICAL": 0,
+    "KOREAN_NAME_UNRESOLVED": 1,
+    "FRESHWATER_FUTURE_DOMAIN": 5,
+    "TAXONOMY_UNRESOLVED": 0,
+    "HOLD": 0
+  },
+  "records": [
+    {
+      "sourceId": "MBRIS:척추동물:384",
+      "internalId": "BM-SPECIES-000382",
+      "koreanName": null,
+      "sourceScientificName": "Chaeturichthys jeoni",
+      "acceptedScientificName": "Chaeturichthys jeoni",
+      "acceptedRank": "species",
+      "acceptedAuthority": "Shibukawa & Iwata, 2013",
+      "synonyms": [],
+      "officialKoreanName": null,
+      "koreanNameReview": "KOREAN_NAME_STILL_UNRESOLVED",
+      "rejectedUnofficialCandidate": "비늘쉬쉬망둑",
+      "habitat": "MARINE",
+      "domesticDistribution": "No authoritative Korean occurrence statement was confirmed in the reviewed official Korean name sources.",
+      "sourceDisagreement": "The scientific identity is accepted, but no official Korean name was confirmed by NIBR or NIFS.",
+      "classification": "KOREAN_NAME_UNRESOLVED",
+      "action": "KEEP_BLOCKED_PENDING_OFFICIAL_KOREAN_NAME",
+      "collision": {"scientific": 0, "acceptedScientific": 0, "korean": 0, "alias": 0, "internalId": 0, "slug": 0, "sourceRelation": 0},
+      "evidence": [
+        {"source": "Eschmeyer's Catalog of Fishes", "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=72703", "accessedDate": "2026-08-31", "finding": "Chaeturichthys jeoni is the current valid species."},
+        {"source": "Original description", "url": "https://www.kahaku.go.jp/research/publication/zoology_s/download/s07/7-05.pdf", "accessedDate": "2026-08-31", "finding": "Original species description; it does not establish an official Korean common name."},
+        {"source": "NIBR National Species List 2017", "url": "https://www.nibr.go.kr/aiibook/catImage/21/National%20Species%202.pdf", "accessedDate": "2026-08-31", "finding": "No matching official Korean-name entry was confirmed."}
+      ]
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:6",
+      "internalId": "BM-SPECIES-016332",
+      "koreanName": "열목어",
+      "sourceScientificName": "Brachymystax lenok tsinlingensis",
+      "acceptedScientificName": "Brachymystax tsinlingensis",
+      "acceptedRank": "species in Eschmeyer; subspecies combination retained in Korean official usage",
+      "synonyms": ["Brachymystax lenok tsinlingensis"],
+      "officialKoreanNameSource": "NIBR National Species List 2017",
+      "habitat": "FRESHWATER",
+      "domesticDistribution": "Korean freshwater population; population-level identity remains disputed in recent phylogeographic work.",
+      "sourceDisagreement": "International species-level treatment and Korean subspecies usage differ.",
+      "classification": "FRESHWATER_FUTURE_DOMAIN",
+      "action": "PRESERVE_FOR_FUTURE_FRESHWATER_DOMAIN_AND_REVIEW_TAXONOMY",
+      "collision": {"scientific": 0, "acceptedScientific": 0, "korean": 0, "alias": 0, "internalId": 0, "slug": 0, "sourceRelation": 0},
+      "evidence": [
+        {"source": "Eschmeyer's Catalog of Fishes", "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=13182", "accessedDate": "2026-08-31", "finding": "Current valid Brachymystax tsinlingensis; freshwater."},
+        {"source": "NIBR National Species List 2017", "url": "https://www.nibr.go.kr/aiibook/catImage/21/National%20Species%202.pdf", "accessedDate": "2026-08-31", "finding": "열목어 is linked to Brachymystax lenok tsinlingensis."},
+        {"source": "Recent phylogeographic review", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12547837/", "accessedDate": "2026-08-31", "finding": "Population-level taxonomy remains an active issue."}
+      ]
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:62",
+      "internalId": "BM-SPECIES-016388",
+      "koreanName": "끄리",
+      "sourceScientificName": "Opsariichthys uncirostris amurensis",
+      "acceptedScientificName": "Opsariichthys amurensis",
+      "acceptedRank": "species in Eschmeyer; subspecies combination retained in Korean official usage",
+      "synonyms": ["Opsariichthys uncirostris amurensis"],
+      "officialKoreanNameSource": "NIBR National Species List 2017",
+      "habitat": "FRESHWATER",
+      "domesticDistribution": "Korean freshwater populations are recorded under 끄리; genetic work raises identity questions relative to O. bidens.",
+      "sourceDisagreement": "International current-name treatment, Korean subspecies usage, and Korean population genetics are not fully aligned.",
+      "classification": "FRESHWATER_FUTURE_DOMAIN",
+      "action": "PRESERVE_FOR_FUTURE_FRESHWATER_DOMAIN_AND_REVIEW_TAXONOMY",
+      "collision": {"scientific": 0, "acceptedScientific": 0, "korean": 0, "alias": 0, "internalId": 0, "slug": 0, "sourceRelation": 0},
+      "evidence": [
+        {"source": "Eschmeyer's Catalog of Fishes", "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=53498", "accessedDate": "2026-08-31", "finding": "Current valid Opsariichthys amurensis; freshwater."},
+        {"source": "NIBR National Species List 2017", "url": "https://www.nibr.go.kr/aiibook/catImage/21/National%20Species%202.pdf", "accessedDate": "2026-08-31", "finding": "끄리 is linked to Opsariichthys uncirostris amurensis."},
+        {"source": "Korean mitochondrial study", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8820798/", "accessedDate": "2026-08-31", "finding": "Korean population identity requires future freshwater-domain resolution."}
+      ]
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:110",
+      "internalId": "BM-SPECIES-016436",
+      "koreanName": "참몰개",
+      "sourceScientificName": "Squalidus chankaensis tsuchigae",
+      "acceptedScientificName": "Squalidus gracilis",
+      "acceptedRank": "species; source trinomial is treated as a synonym internationally",
+      "synonyms": ["Squalidus chankaensis tsuchigae"],
+      "officialKoreanNameSource": "NIBR National Species List 2017",
+      "habitat": "FRESHWATER",
+      "domesticDistribution": "Korean freshwater taxon under the source trinomial.",
+      "sourceDisagreement": "Eschmeyer synonymizes the source trinomial under Squalidus gracilis while Korean usage retains it.",
+      "classification": "FRESHWATER_FUTURE_DOMAIN",
+      "action": "PRESERVE_FOR_FUTURE_FRESHWATER_DOMAIN_AND_REVIEW_SUBSPECIES_MODEL",
+      "collision": {"scientific": 0, "acceptedScientific": 0, "korean": 0, "alias": 0, "internalId": 0, "slug": 0, "sourceRelation": 0},
+      "evidence": [
+        {"source": "Eschmeyer's Catalog of Fishes", "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=29466", "accessedDate": "2026-08-31", "finding": "Source trinomial is treated under Squalidus gracilis."},
+        {"source": "NIBR National Species List 2017", "url": "https://www.nibr.go.kr/aiibook/catImage/21/National%20Species%202.pdf", "accessedDate": "2026-08-31", "finding": "참몰개 is linked to Squalidus chankaensis tsuchigae."}
+      ]
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:111",
+      "internalId": "BM-SPECIES-016437",
+      "koreanName": "몰개",
+      "sourceScientificName": "Squalidus japonicus coreanus",
+      "acceptedScientificName": "Squalidus japonicus",
+      "acceptedRank": "species; source trinomial is treated as a synonym in FishBase",
+      "synonyms": ["Squalidus japonicus coreanus"],
+      "officialKoreanNameSource": "NIBR National Species List 2017",
+      "habitat": "FRESHWATER",
+      "domesticDistribution": "Korean freshwater taxon under the source trinomial.",
+      "sourceDisagreement": "FishBase synonym treatment and Korean subspecies usage differ.",
+      "classification": "FRESHWATER_FUTURE_DOMAIN",
+      "action": "PRESERVE_FOR_FUTURE_FRESHWATER_DOMAIN_AND_REVIEW_SUBSPECIES_MODEL",
+      "collision": {"scientific": 0, "acceptedScientific": 0, "korean": 0, "alias": 0, "internalId": 0, "slug": 0, "sourceRelation": 0},
+      "evidence": [
+        {"source": "FishBase", "url": "https://www.fishbase.se/Nomenclature/SynonymSummary.php?Author=%28Berg%2C+1906%29&Combination=new+combination&GSID=29440&GenusName=Squalidus&ID=146535&Misspelling=0&SpecCode=22921&SpeciesName=japonicus+coreanus&Status=synonym&SynonymsRef=559&Synonymy=junior+synonym", "accessedDate": "2026-08-31", "finding": "Source trinomial is treated as a synonym of Squalidus japonicus."},
+        {"source": "NIBR National Species List 2017", "url": "https://www.nibr.go.kr/aiibook/catImage/21/National%20Species%202.pdf", "accessedDate": "2026-08-31", "finding": "몰개 is linked to Squalidus japonicus coreanus."},
+        {"source": "Korean mitochondrial genome record", "url": "https://pubmed.ncbi.nlm.nih.gov/26329666/", "accessedDate": "2026-08-31", "finding": "Documents Korean use of the source trinomial."}
+      ]
+    },
+    {
+      "sourceId": "MBRIS:육상담수종:112",
+      "internalId": "BM-SPECIES-016438",
+      "koreanName": "긴몰개",
+      "sourceScientificName": "Squalidus gracilis majimae",
+      "acceptedScientificName": "Squalidus gracilis",
+      "acceptedRank": "species; source trinomial is treated as a synonym internationally",
+      "synonyms": ["Squalidus gracilis majimae"],
+      "officialKoreanNameSource": "NIBR National Species List 2017",
+      "habitat": "FRESHWATER",
+      "domesticDistribution": "Korean freshwater endemic subspecies usage.",
+      "sourceDisagreement": "Eschmeyer synonymizes the source trinomial under Squalidus gracilis while Korean usage retains it.",
+      "classification": "FRESHWATER_FUTURE_DOMAIN",
+      "action": "PRESERVE_FOR_FUTURE_FRESHWATER_DOMAIN_AND_REVIEW_SUBSPECIES_MODEL",
+      "collision": {"scientific": 0, "acceptedScientific": 0, "korean": 0, "alias": 0, "internalId": 0, "slug": 0, "sourceRelation": 0},
+      "evidence": [
+        {"source": "Eschmeyer's Catalog of Fishes", "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=54974", "accessedDate": "2026-08-31", "finding": "Source trinomial is treated under Squalidus gracilis."},
+        {"source": "NIBR National Species List 2017", "url": "https://www.nibr.go.kr/aiibook/catImage/21/National%20Species%202.pdf", "accessedDate": "2026-08-31", "finding": "긴몰개 is linked to Squalidus gracilis majimae."}
+      ]
+    }
+  ]
+}

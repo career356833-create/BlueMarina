@@ -1,0 +1,55 @@
+{
+  "reportVersion": "1",
+  "generatedAt": "2026-08-30T14:57:17.213Z",
+  "status": "REVIEW_IMPORT_IDEMPOTENCY_PASS",
+  "inserted": {
+    "sourceInserted": 0,
+    "speciesInserted": 0,
+    "relationsInserted": 0,
+    "lineageInserted": 0
+  },
+  "existingSkipped": {
+    "source": 1,
+    "species": 136,
+    "relations": 136,
+    "lineage": 136
+  },
+  "batches": [
+    {
+      "index": 1,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 50,
+      "firstInternalId": "BM-SPECIES-000002",
+      "lastInternalId": "BM-SPECIES-000438",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 2,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 50,
+      "firstInternalId": "BM-SPECIES-000444",
+      "lastInternalId": "BM-SPECIES-000843",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 3,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 36,
+      "firstInternalId": "BM-SPECIES-000867",
+      "lastInternalId": "BM-SPECIES-001247",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    }
+  ]
+}

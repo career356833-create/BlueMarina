@@ -1,0 +1,64 @@
+{
+  "reportVersion": "1",
+  "generatedAt": "2026-08-30T15:44:09.484Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "MOTTLED_SKATE_CANONICAL_UPDATE_PASS",
+  "approval": {
+    "reviewDoc": "docs/MBRIS_MANUAL_TAXONOMY_REVIEW_V1.md",
+    "blockedReport": "reports/mbris/mbris-manual-review-blocked-v1.json",
+    "classification": "READY_CANONICAL_NAME_UPDATE_REVIEW",
+    "action": "UPDATE_CANONICAL_AFTER_APPROVAL",
+    "evidenceCount": 4
+  },
+  "prewrite": {
+    "speciesTotal": 1258,
+    "target": {
+      "speciesId": "1f158822-5672-4174-b44a-2237496b9504",
+      "koreanName": "참홍어",
+      "scientificName": "Raja pulchra",
+      "slug": "mottled-skate",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    "collisions": {
+      "acceptedCanonicalOther": 0,
+      "acceptedNormalizedOther": 0,
+      "previousAliasOther": 0,
+      "acceptedAliasOther": 0,
+      "slugOther": 0
+    },
+    "nifsRelationCount": 1,
+    "mbrisRelationCount": 0,
+    "aliasCount": 0,
+    "lineageCount": 1,
+    "fingerprints": {
+      "indexes": "ec847cfe297e7069613a20fb403dec7e",
+      "policies": "109ee1f3a7cea5f2d8b1dc8a505dec86",
+      "triggers": "f6854eb920d199ea558dfa16dde23302",
+      "constraints": "67c87f83d5fc3a6cd62bff2d6c31478e"
+    },
+    "nonTargetSpeciesHash": "ca42b483463e722b43ecb44d7d47e33702936e7ee973b4a7f6e24f87e3699f77",
+    "protectedSixHash": "5b32b9f521f74589f9fb97e500c42ef874b202bb1c7569063e6ab1f18827268a"
+  },
+  "beforeDetail": {
+    "slug": "mottled-skate",
+    "version": 1,
+    "koreanName": "참홍어",
+    "targetCount": 1,
+    "speciesTotal": 1258,
+    "taxonomyHash": "99914b932bd37a50b983c5e7c90ae93b",
+    "scientificName": "Raja pulchra",
+    "officialFactsHash": "cbfbf06435341d7c2f70576546352f1a",
+    "nifsRawRajaPreserved": true
+  },
+  "update": {
+    "aliasInserted": 1,
+    "speciesUpdated": 1,
+    "lineageInserted": 1,
+    "relationInserted": 1
+  },
+  "transactionCommitted": true,
+  "speciesInserted": 0,
+  "productionWrites": 0
+}

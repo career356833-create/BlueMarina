@@ -1,0 +1,20 @@
+{
+  "reportVersion": "1",
+  "generatedAt": "2026-08-30T13:46:36.517Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "IDEMPOTENCY_PASS",
+  "inserted": {
+    "sourceInserted": 0,
+    "lineageInserted": 0,
+    "speciesInserted": 0,
+    "relationsInserted": 0
+  },
+  "existing": {
+    "source": 1,
+    "species": 10,
+    "relations": 10,
+    "lineage": 10
+  },
+  "duplicateRows": 0
+}

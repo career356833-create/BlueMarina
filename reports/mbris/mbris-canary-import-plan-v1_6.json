@@ -1,0 +1,214 @@
+{
+  "reportVersion": "1.6",
+  "generatedAt": "2026-08-30T13:46:36.517Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "gate": "CANARY_PLAN_APPROVED_AND_IMPORTED",
+  "selectedCount": 10,
+  "species": [
+    {
+      "order": 1,
+      "canonicalId": "BM-SPECIES-000001",
+      "internalId": "BM-SPECIES-000001",
+      "mbrisSourceId": "MBRIS:척추동물:3",
+      "sourceId": "MBRIS:척추동물:3",
+      "koreanName": "돌삼뱅이",
+      "scientificName": "Sebastes baramenuke",
+      "canonicalSlug": "sebastes-baramenuke",
+      "family": "Scorpaenidae Risso, 1827",
+      "priority": 25,
+      "tier": "C",
+      "expectedRows": {
+        "species": 1,
+        "speciesSourceRelation": 1,
+        "lineage": 1
+      }
+    },
+    {
+      "order": 2,
+      "canonicalId": "BM-SPECIES-000030",
+      "internalId": "BM-SPECIES-000030",
+      "mbrisSourceId": "MBRIS:척추동물:32",
+      "sourceId": "MBRIS:척추동물:32",
+      "koreanName": "실줄고기",
+      "scientificName": "Freemanichthys thompsoni",
+      "canonicalSlug": "freemanichthys-thompsoni",
+      "family": "Agonidae Swainson, 1839",
+      "priority": 25,
+      "tier": "C",
+      "expectedRows": {
+        "species": 1,
+        "speciesSourceRelation": 1,
+        "lineage": 1
+      }
+    },
+    {
+      "order": 3,
+      "canonicalId": "BM-SPECIES-000052",
+      "internalId": "BM-SPECIES-000052",
+      "mbrisSourceId": "MBRIS:척추동물:54",
+      "sourceId": "MBRIS:척추동물:54",
+      "koreanName": "먹분홍꼼치",
+      "scientificName": "Careproctus colletti",
+      "canonicalSlug": "careproctus-colletti",
+      "family": "Liparidae Gill, 1861",
+      "priority": 25,
+      "tier": "C",
+      "expectedRows": {
+        "species": 1,
+        "speciesSourceRelation": 1,
+        "lineage": 1
+      }
+    },
+    {
+      "order": 4,
+      "canonicalId": "BM-SPECIES-000063",
+      "internalId": "BM-SPECIES-000063",
+      "mbrisSourceId": "MBRIS:척추동물:65",
+      "sourceId": "MBRIS:척추동물:65",
+      "koreanName": "까지양태",
+      "scientificName": "Cociella crocodilus",
+      "canonicalSlug": "cociella-crocodilus",
+      "family": "Platycephalidae Swainson, 1839",
+      "priority": 25,
+      "tier": "C",
+      "expectedRows": {
+        "species": 1,
+        "speciesSourceRelation": 1,
+        "lineage": 1
+      }
+    },
+    {
+      "order": 5,
+      "canonicalId": "BM-SPECIES-000071",
+      "internalId": "BM-SPECIES-000071",
+      "mbrisSourceId": "MBRIS:척추동물:73",
+      "sourceId": "MBRIS:척추동물:73",
+      "koreanName": "단풍잎성대볼락",
+      "scientificName": "Neosebastes entaxis",
+      "canonicalSlug": "neosebastes-entaxis",
+      "family": "Neosebastidae Matsubara, 1943",
+      "priority": 25,
+      "tier": "C",
+      "expectedRows": {
+        "species": 1,
+        "speciesSourceRelation": 1,
+        "lineage": 1
+      }
+    },
+    {
+      "order": 6,
+      "canonicalId": "BM-SPECIES-000072",
+      "internalId": "BM-SPECIES-000072",
+      "mbrisSourceId": "MBRIS:척추동물:74",
+      "sourceId": "MBRIS:척추동물:74",
+      "koreanName": "민부치",
+      "scientificName": "Halieutaea fumosa",
+      "canonicalSlug": "halieutaea-fumosa",
+      "family": "Ogcocephalidae Gill, 1893",
+      "priority": 25,
+      "tier": "C",
+      "expectedRows": {
+        "species": 1,
+        "speciesSourceRelation": 1,
+        "lineage": 1
+      }
+    },
+    {
+      "order": 7,
+      "canonicalId": "BM-SPECIES-000076",
+      "internalId": "BM-SPECIES-000076",
+      "mbrisSourceId": "MBRIS:척추동물:78",
+      "sourceId": "MBRIS:척추동물:78",
+      "koreanName": "점씬벵이",
+      "scientificName": "Chaunax abei",
+      "canonicalSlug": "chaunax-abei",
+      "family": "Chaunacidae Gill, 1863",
+      "priority": 25,
+      "tier": "C",
+      "expectedRows": {
+        "species": 1,
+        "speciesSourceRelation": 1,
+        "lineage": 1
+      }
+    },
+    {
+      "order": 8,
+      "canonicalId": "BM-SPECIES-000077",
+      "internalId": "BM-SPECIES-000077",
+      "mbrisSourceId": "MBRIS:척추동물:79",
+      "sourceId": "MBRIS:척추동물:79",
+      "koreanName": "용아귀",
+      "scientificName": "Lophiodes insidiator",
+      "canonicalSlug": "lophiodes-insidiator",
+      "family": "Lophiidae Rafinesque, 1810",
+      "priority": 25,
+      "tier": "C",
+      "expectedRows": {
+        "species": 1,
+        "speciesSourceRelation": 1,
+        "lineage": 1
+      }
+    },
+    {
+      "order": 9,
+      "canonicalId": "BM-SPECIES-000081",
+      "internalId": "BM-SPECIES-000081",
+      "mbrisSourceId": "MBRIS:척추동물:83",
+      "sourceId": "MBRIS:척추동물:83",
+      "koreanName": "빨간씬벵이",
+      "scientificName": "Antennarius striatus",
+      "canonicalSlug": "antennarius-striatus",
+      "family": "Antennariidae Jarocki, 1822",
+      "priority": 25,
+      "tier": "C",
+      "expectedRows": {
+        "species": 1,
+        "speciesSourceRelation": 1,
+        "lineage": 1
+      }
+    },
+    {
+      "order": 10,
+      "canonicalId": "BM-SPECIES-000087",
+      "internalId": "BM-SPECIES-000087",
+      "mbrisSourceId": "MBRIS:척추동물:89",
+      "sourceId": "MBRIS:척추동물:89",
+      "koreanName": "홍송어",
+      "scientificName": "Salvelinus leucomaenis",
+      "canonicalSlug": "salvelinus-leucomaenis",
+      "family": "Salmonidae Jarocki or Schinz, 1822",
+      "priority": 25,
+      "tier": "C",
+      "expectedRows": {
+        "species": 1,
+        "speciesSourceRelation": 1,
+        "lineage": 1
+      }
+    }
+  ],
+  "selection": {
+    "selectedFamilyCount": 10,
+    "selectedTierCount": 1,
+    "selectedPriorityCount": 1,
+    "manifestTierDistribution": {
+      "C": 1114
+    },
+    "manifestPriorityDistribution": {
+      "25": 1114
+    },
+    "warnings": [
+      "TIER_DIVERSITY_UNAVAILABLE_ALL_1114_ARE_TIER_C",
+      "PRIORITY_DIVERSITY_NOT_TESTED"
+    ]
+  },
+  "expectedRows": {
+    "sourceRecords": 1,
+    "species": 10,
+    "speciesSourceRelations": 10,
+    "lineage": 10
+  },
+  "importExecuted": true,
+  "readyForImport": false,
+  "blockers": []
+}

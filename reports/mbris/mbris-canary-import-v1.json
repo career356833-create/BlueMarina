@@ -1,0 +1,124 @@
+{
+  "reportVersion": "1",
+  "generatedAt": "2026-08-30T13:46:36.517Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "CANARY_IMPORT_PASS",
+  "prewrite": {
+    "stagingSpecies": 8,
+    "nifsSpecies": 8,
+    "nifsPreserved": true,
+    "sourceMatches": 0,
+    "collisions": [],
+    "canaryAdmitted": 10,
+    "state": "PRISTINE",
+    "fingerprints": {
+      "indexes": "ec847cfe297e7069613a20fb403dec7e",
+      "policies": "109ee1f3a7cea5f2d8b1dc8a505dec86",
+      "triggers": "f6854eb920d199ea558dfa16dde23302",
+      "constraints": "67c87f83d5fc3a6cd62bff2d6c31478e"
+    },
+    "recoveredAfterCommittedFirstImport": true
+  },
+  "transactionCommitted": true,
+  "inserted": {
+    "sourceInserted": 1,
+    "speciesInserted": 10,
+    "relationsInserted": 10,
+    "lineageInserted": 10
+  },
+  "unexpectedWrites": 0,
+  "species": [
+    {
+      "speciesId": "8850e99f-1e93-4022-8b19-74f4421fd2e7",
+      "internalId": "BM-SPECIES-000081",
+      "koreanName": "빨간씬벵이",
+      "scientificName": "Antennarius striatus",
+      "slug": "antennarius-striatus",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "3ef0d08e-0ee5-4763-8cd5-f6f9ed20fadd",
+      "internalId": "BM-SPECIES-000052",
+      "koreanName": "먹분홍꼼치",
+      "scientificName": "Careproctus colletti",
+      "slug": "careproctus-colletti",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "d2289a70-93c3-4c5f-a50e-9357a1c661e4",
+      "internalId": "BM-SPECIES-000076",
+      "koreanName": "점씬벵이",
+      "scientificName": "Chaunax abei",
+      "slug": "chaunax-abei",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "0184fb7a-25b9-4d4f-be8b-f19eb1779025",
+      "internalId": "BM-SPECIES-000063",
+      "koreanName": "까지양태",
+      "scientificName": "Cociella crocodilus",
+      "slug": "cociella-crocodilus",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "5c90c2b5-ed99-40f3-86bc-010bc1df7264",
+      "internalId": "BM-SPECIES-000030",
+      "koreanName": "실줄고기",
+      "scientificName": "Freemanichthys thompsoni",
+      "slug": "freemanichthys-thompsoni",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "1da93195-41be-4463-adfa-71b4167671b4",
+      "internalId": "BM-SPECIES-000072",
+      "koreanName": "민부치",
+      "scientificName": "Halieutaea fumosa",
+      "slug": "halieutaea-fumosa",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "fae8ddd0-20c3-406d-9262-4fef59c0cb63",
+      "internalId": "BM-SPECIES-000077",
+      "koreanName": "용아귀",
+      "scientificName": "Lophiodes insidiator",
+      "slug": "lophiodes-insidiator",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "b6bb173d-b05c-47b5-80a6-5c03d9979062",
+      "internalId": "BM-SPECIES-000071",
+      "koreanName": "단풍잎성대볼락",
+      "scientificName": "Neosebastes entaxis",
+      "slug": "neosebastes-entaxis",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "755048a9-1ab3-4ddb-8743-b85a671c84e9",
+      "internalId": "BM-SPECIES-000087",
+      "koreanName": "홍송어",
+      "scientificName": "Salvelinus leucomaenis",
+      "slug": "salvelinus-leucomaenis",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    },
+    {
+      "speciesId": "39bff46b-71b7-42e2-a13d-d72014b4b474",
+      "internalId": "BM-SPECIES-000001",
+      "koreanName": "돌삼뱅이",
+      "scientificName": "Sebastes baramenuke",
+      "slug": "sebastes-baramenuke",
+      "publishStatus": "draft",
+      "reviewStatus": "pending"
+    }
+  ],
+  "priorityDiversityWarning": "PRIORITY_DIVERSITY_NOT_TESTED"
+}

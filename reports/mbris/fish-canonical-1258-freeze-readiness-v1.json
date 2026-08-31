@@ -1,0 +1,41 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-31T01:02:29.3275496+09:00",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "FISH_CANONICAL_1258_FREEZE_READY",
+  "canonicalBaseline": 1258,
+  "readOnlyVerification": {"currentUser":"blue_marina_readonly_auditor","transactionReadOnly":true,"bypassRls":false,"databaseWrites":0},
+  "states": {"draft":1258,"published":0,"pendingReview":1258,"approvedReview":0},
+  "duplicates": {"scientific":0,"slug":0,"internalId":0},
+  "sourceIntegrity": {"activeMbrisRelations":1253,"duplicateMbrisSourceRelations":0,"mbrisLineageRecords":1253},
+  "finalSix": {"input":6,"classified":6,"readyMarine":0,"freshwaterFuture":5,"koreanNameUnresolved":1,"allCollisionAxesZero":true},
+  "security": {
+    "schemaChanged": false,
+    "rlsChanged": false,
+    "fingerprints": {
+      "indexes":"ec847cfe297e7069613a20fb403dec7e",
+      "policies":"109ee1f3a7cea5f2d8b1dc8a505dec86",
+      "triggers":"f6854eb920d199ea558dfa16dde23302",
+      "constraints":"67c87f83d5fc3a6cd62bff2d6c31478e"
+    }
+  },
+  "idempotencyEvidence": ["FULL_IMPORT_IDEMPOTENCY_PASS","REVIEW_IMPORT_IDEMPOTENCY_PASS","MOTTLED_SKATE_UPDATE_IDEMPOTENCY_PASS"],
+  "freezePolicy": [
+    "Treat the current 1,258 records as the stable marine/coastal canonical baseline.",
+    "Do not directly import raw NIFS or MBRIS records into canonical tables.",
+    "Admit later records only through the promotion and collision-review pipeline.",
+    "Freeze does not change draft/pending records to published/approved."
+  ],
+  "nonFishNextTrack": {
+    "records":145,
+    "sourceIdentityMissing":0,
+    "scientificNameMissing":0,
+    "taxonomyHierarchyMissing":0,
+    "sourceSheet":"육상담수종",
+    "teleosteiRecords":143,
+    "petromyzontiRecords":2,
+    "status":"MARINE_ORGANISM_TRACK_READY_NO",
+    "reason":"The artifact is structurally complete but is a mislabeled freshwater vertebrate scope queue, not a marine non-fish organism queue."
+  }
+}

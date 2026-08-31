@@ -1,0 +1,13 @@
+{
+  "reportVersion": "1",
+  "generatedAt": "2026-08-30T15:44:09.484Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "MOTTLED_SKATE_UPDATE_IDEMPOTENCY_PASS",
+  "insertedOrUpdated": {
+    "aliasInserted": 0,
+    "speciesUpdated": 0,
+    "lineageInserted": 0,
+    "relationInserted": 0
+  }
+}

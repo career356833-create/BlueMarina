@@ -1,0 +1,86 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-31T01:30:01.556+09:00",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "FISH_CANONICAL_1258_BASELINE_FROZEN",
+  "databaseWrites": 0,
+  "baseline": {
+    "species": 1258,
+    "sourceComposition": {"NIFS": 8, "MBRISCanonicalSpecies": 1250},
+    "mbrisRelations": 1253,
+    "mbrisLineage": 1253,
+    "duplicates": {"scientific": 0, "slug": 0, "internalId": 0},
+    "unexpectedSpecies": 0,
+    "states": {"draft": 1258, "pendingReview": 1258, "published": 0},
+    "publicExposure": 0
+  },
+  "readOnlyAudit": {
+    "currentUser": "blue_marina_readonly_auditor",
+    "transactionReadOnly": true,
+    "bypassRls": false,
+    "fingerprints": {
+      "indexes": "ec847cfe297e7069613a20fb403dec7e",
+      "policies": "109ee1f3a7cea5f2d8b1dc8a505dec86",
+      "triggers": "f6854eb920d199ea558dfa16dde23302",
+      "constraints": "67c87f83d5fc3a6cd62bff2d6c31478e"
+    }
+  },
+  "domainScope": "Marine, coastal, and marine-fishing fish species admitted through controlled promotion.",
+  "excludedOrHeld": {
+    "officialKoreanNameUnresolved": ["Chaeturichthys jeoni"],
+    "freshwaterFutureDomain": ["Brachymystax lenok tsinlingensis", "Opsariichthys uncirostris amurensis", "Squalidus chankaensis tsuchigae", "Squalidus japonicus coreanus", "Squalidus gracilis majimae"],
+    "marineOrganisms": "Separate future domain; never insert into FishSpecies."
+  },
+  "identityRules": [
+    "Preserve source scientific strings and source identity.",
+    "Use verified former combinations and synonyms as aliases.",
+    "Do not infer an official Korean name.",
+    "Do not mutate immutable canonical slugs after admission.",
+    "Taxonomic validity does not by itself authorize product-domain admission."
+  ],
+  "futurePromotionPipeline": ["Source", "Candidate", "Validation", "Canonical Promotion"],
+  "directRawImportAllowed": false,
+  "publishOrApprovalChanged": false,
+  "gitPreservation": {
+    "whitelist": [
+      "docs/FISH_CANONICAL_1258_BASELINE_V1.md",
+      "docs/FISH_DOMAIN_SCOPE_V1.md",
+      "docs/MBRIS_FINAL_SIX_REVIEW_V1.md",
+      "docs/MBRIS_FULL_STAGING_IMPORT_V1.md",
+      "docs/MBRIS_REVIEW_PROMOTION_V2.md",
+      "docs/MBRIS_REVIEW_READY_IMPORT_V1.md",
+      "docs/MBRIS_MOTTLED_SKATE_CANONICAL_UPDATE_V1.md",
+      "docs/data/fish-supabase-readonly-audit-surface-v1.md",
+      "supabase/migrations/drafts/staging-hotfix/20260830_add_fish_readonly_audit_surface.sql",
+      "reports/mbris/fish-canonical-1258-baseline-v1.json",
+      "reports/mbris/fish-canonical-1258-freeze-readiness-v1.json",
+      "reports/mbris/mbris-final-six-review-v1.json",
+      "reports/mbris/mbris-final-manual-ready-v1.json",
+      "reports/mbris/mbris-freshwater-future-domain-v1.json",
+      "reports/mbris/mbris-full-import-v1.json",
+      "reports/mbris/mbris-full-import-rerun-v1.json",
+      "reports/mbris/mbris-full-import-postcheck-v1.json",
+      "reports/mbris/mbris-review-promotion-v2.json",
+      "reports/mbris/mbris-review-ready-import-v1.json",
+      "reports/mbris/mbris-review-ready-import-rerun-v1.json",
+      "reports/mbris/mbris-review-ready-import-postcheck-v1.json",
+      "reports/mbris/mbris-mottled-skate-update-v1.json",
+      "reports/mbris/mbris-mottled-skate-update-rerun-v1.json",
+      "reports/mbris/mbris-mottled-skate-postcheck-v1.json",
+      "reports/mbris/mbris-scope-review-145-correction-v1.json",
+      "reports/mbris/mbris-marine-organism-candidates-v1.json",
+      "reports/mbris/mbris-marine-organism-candidates-v1.csv",
+      "reports/mbris/mbris-marine-organism-review-v1.json",
+      "tools/mbris/build-marine-organism-candidates-v1.cjs"
+    ],
+    "excludeGroups": [
+      ".next*/ and build caches",
+      "*.log, *.tmp, *.har, screenshots, and debug HTML",
+      "__pycache__/, *.pyc, and .pytest_cache/",
+      "local .env and credential files",
+      "network captures and crawler inspection caches",
+      "duplicate generated snapshots not named in the whitelist"
+    ]
+  }
+}

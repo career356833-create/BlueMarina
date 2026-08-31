@@ -1,0 +1,39 @@
+{
+  "reportVersion": "1",
+  "generatedAt": "2026-08-30T14:57:17.213Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "MBRIS_REVIEW_READY_IMPORT_PASS",
+  "prewrite": {
+    "status": "REVIEW_IMPORT_PREWRITE_PASS",
+    "speciesBefore": 1122,
+    "admitted": 136,
+    "sourceMatches": 1,
+    "sourceInsertExpected": 0,
+    "collisions": [],
+    "nifsBefore": 8,
+    "previousMbrisBefore": 1114,
+    "excludedBefore": {
+      "blockedKorean": 0,
+      "conflict": 0,
+      "nonFish": 0,
+      "malformed": 0
+    },
+    "fingerprints": {
+      "indexes": "ec847cfe297e7069613a20fb403dec7e",
+      "policies": "109ee1f3a7cea5f2d8b1dc8a505dec86",
+      "triggers": "f6854eb920d199ea558dfa16dde23302",
+      "constraints": "67c87f83d5fc3a6cd62bff2d6c31478e"
+    }
+  },
+  "firstImport": {
+    "sourceInserted": 0,
+    "speciesInserted": 136,
+    "relationsInserted": 136,
+    "lineageInserted": 136
+  },
+  "committedBatches": 3,
+  "failedBatches": 0,
+  "unexpectedWrites": 0,
+  "productionImportExecuted": false
+}

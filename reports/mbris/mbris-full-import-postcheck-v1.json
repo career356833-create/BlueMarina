@@ -1,0 +1,59 @@
+{
+  "reportVersion": "1",
+  "generatedAt": "2026-08-30T13:59:54.361Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "FULL_IMPORT_POSTCHECK_PASS",
+  "totalSpecies": 1122,
+  "nifsSpecies": 8,
+  "mbrisNewSpecies": 1114,
+  "mbrisSourceRecords": 1,
+  "mbrisRelations": 1116,
+  "mbrisLineage": 1116,
+  "publicVisibility": 0,
+  "publicAccessDenied": true,
+  "publicAccessReason": "ANON_RLS_HELPER_EXECUTE_DENIED",
+  "auditVisibility": 1114,
+  "allMbrisNewDraftPending": true,
+  "duplicates": {
+    "speciesInternalId": 0,
+    "speciesSlug": 0,
+    "relations": 0,
+    "lineage": 0
+  },
+  "unexpectedSpecies": 0,
+  "existing2": [
+    {
+      "internalId": "BM-SPECIES-000557",
+      "koreanName": "기름가자미",
+      "speciesId": "246b2977-2cb3-432d-885d-7be5cda4ab53",
+      "speciesExists": true,
+      "relationCount": 1,
+      "lineageCount": 1
+    },
+    {
+      "internalId": "BM-SPECIES-000841",
+      "koreanName": "참조기",
+      "speciesId": "6ba2ceaa-e860-436c-b16a-29c494a63584",
+      "speciesExists": true,
+      "relationCount": 1,
+      "lineageCount": 1
+    }
+  ],
+  "schemaChanged": false,
+  "rlsChanged": false,
+  "fingerprints": {
+    "indexes": "ec847cfe297e7069613a20fb403dec7e",
+    "policies": "109ee1f3a7cea5f2d8b1dc8a505dec86",
+    "triggers": "f6854eb920d199ea558dfa16dde23302",
+    "constraints": "67c87f83d5fc3a6cd62bff2d6c31478e"
+  },
+  "exclusions": {
+    "review": 137,
+    "conflict": 1,
+    "nonfish": 145,
+    "malformed": 5
+  },
+  "readyForNextReviewTrack": true,
+  "productionImportExecuted": false
+}

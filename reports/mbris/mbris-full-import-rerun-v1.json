@@ -1,0 +1,172 @@
+{
+  "reportVersion": "1",
+  "generatedAt": "2026-08-30T13:59:54.361Z",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "status": "FULL_IMPORT_IDEMPOTENCY_PASS",
+  "inserted": {
+    "sourceInserted": 0,
+    "speciesInserted": 0,
+    "relationsInserted": 0,
+    "lineageInserted": 0
+  },
+  "existing2Inserted": {
+    "sourceInserted": 0,
+    "lineageInserted": 0,
+    "speciesInserted": 0,
+    "relationsInserted": 0
+  },
+  "existingSkipped": {
+    "source": 1,
+    "mbrisNewSpecies": 1114,
+    "existingCanonicalLinks": 2,
+    "relations": 1116,
+    "lineage": 1116
+  },
+  "batches": [
+    {
+      "index": 1,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 100,
+      "firstInternalId": "BM-SPECIES-000003",
+      "lastInternalId": "BM-SPECIES-000126",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 2,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 100,
+      "firstInternalId": "BM-SPECIES-000127",
+      "lastInternalId": "BM-SPECIES-000236",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 3,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 100,
+      "firstInternalId": "BM-SPECIES-000237",
+      "lastInternalId": "BM-SPECIES-000343",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 4,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 100,
+      "firstInternalId": "BM-SPECIES-000344",
+      "lastInternalId": "BM-SPECIES-000463",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 5,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 100,
+      "firstInternalId": "BM-SPECIES-000464",
+      "lastInternalId": "BM-SPECIES-000584",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 6,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 100,
+      "firstInternalId": "BM-SPECIES-000585",
+      "lastInternalId": "BM-SPECIES-000694",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 7,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 100,
+      "firstInternalId": "BM-SPECIES-000696",
+      "lastInternalId": "BM-SPECIES-000807",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 8,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 100,
+      "firstInternalId": "BM-SPECIES-000808",
+      "lastInternalId": "BM-SPECIES-000919",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 9,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 100,
+      "firstInternalId": "BM-SPECIES-000920",
+      "lastInternalId": "BM-SPECIES-001024",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 10,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 100,
+      "firstInternalId": "BM-SPECIES-001025",
+      "lastInternalId": "BM-SPECIES-001134",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 11,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 100,
+      "firstInternalId": "BM-SPECIES-001136",
+      "lastInternalId": "BM-SPECIES-001250",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    },
+    {
+      "index": 12,
+      "mode": "IDEMPOTENCY_RERUN",
+      "requested": 4,
+      "firstInternalId": "BM-SPECIES-001251",
+      "lastInternalId": "BM-SPECIES-001254",
+      "sourceInserted": 0,
+      "lineageInserted": 0,
+      "speciesInserted": 0,
+      "relationsInserted": 0,
+      "status": "COMMITTED"
+    }
+  ]
+}

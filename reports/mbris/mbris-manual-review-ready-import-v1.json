@@ -1,0 +1,18 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-08-31T00:17:03.7700554+09:00",
+  "environment": "staging",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "currentSpeciesCount": 1258,
+  "inputCount": 7,
+  "reviewedCount": 7,
+  "readyCount": 0,
+  "initialPublishStatus": "draft",
+  "initialReviewStatus": "pending",
+  "rows": [],
+  "notes": [
+    "Only immediately importable new canonical species belong in this manifest.",
+    "Beringraja pulchra is an approved-name update proposal for an existing species and still requires explicit approval, so it is not an import row.",
+    "No database write was performed."
+  ]
+}
