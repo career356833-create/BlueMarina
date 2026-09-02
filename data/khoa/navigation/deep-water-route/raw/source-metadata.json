@@ -1,0 +1,13 @@
+{
+  "dataset": "해양수산부 국립해양조사원_깊은수심항로부_20250811",
+  "provider": "해양수산부 국립해양조사원",
+  "officialUrl": "https://www.data.go.kr/data/15130169/fileData.do",
+  "format": "SHP archive",
+  "publishedAt": "2025-08-11",
+  "updateCycle": "annual",
+  "license": "이용허락범위 제한 없음",
+  "downloadedAt": "2026-09-02",
+  "archive": "khoa-deep-water-route-20250811.zip",
+  "archiveBytes": 29510,
+  "archiveSha256": "fde8b7b227fb9db73d8e0e283c20801dbad2987f54826f43fa3aabdd7bb4dd48"
+}

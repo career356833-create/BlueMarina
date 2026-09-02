@@ -1,0 +1,13 @@
+{
+  "dataset": "해양수산부 국립해양조사원_항만구역_20250811",
+  "provider": "해양수산부 국립해양조사원",
+  "officialUrl": "https://www.data.go.kr/data/15130180/fileData.do",
+  "format": "SHP archive",
+  "publishedAt": "2025-08-11",
+  "updateCycle": "annual",
+  "license": "이용허락범위 제한 없음",
+  "downloadedAt": "2026-09-02",
+  "archive": "khoa-harbor-zone-20250811.zip",
+  "archiveBytes": 3590376,
+  "archiveSha256": "8367da77617cc4550e7589e11d7c415499d370b85f429a3147b5c9314e3933de"
+}

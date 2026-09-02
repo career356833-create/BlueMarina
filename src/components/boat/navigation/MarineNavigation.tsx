@@ -9,6 +9,8 @@ import { distanceMeters, hasArrived, metersPerSecondToKnots } from "@/lib/marine
 import { deriveMovement } from "@/lib/marine-navigation/speed";
 import { advanceSimulation, simulationEnabled, simulationOrigin } from "@/lib/marine-navigation/simulation";
 import { createLocalStorageAdapter, trackStorageKey, waypointStorageKey } from "@/lib/marine-navigation/storage";
+import type { KhoaDeepWaterRouteProperties } from "@/lib/marine-navigation/adapters/khoa-deep-water-route";
+import type { KhoaHarborZoneProperties } from "@/lib/marine-navigation/adapters/khoa-harbor-zone";
 import { shouldAppendTrackPoint } from "@/lib/marine-navigation/track";
 import { createSavedWaypoint } from "@/lib/marine-navigation/waypoint";
 import type { GeoPoint, GeolocationFailure, MarineNavigationProps, NavigationDestination, NavigationState, SavedWaypoint, TrackSession, VesselPosition } from "@/lib/marine-navigation/types";
@@ -17,6 +19,7 @@ import { NavigationDestinationPanel } from "./NavigationDestinationPanel";
 import { NavigationHUD } from "./NavigationHUD";
 import { NavigationMapShell } from "./NavigationMapShell";
 import { NavigationStatus } from "./NavigationStatus";
+import { MarineLayerControl, type SelectedMarineFeature } from "./MarineLayerControl";
 import { TrackRecorder } from "./TrackRecorder";
 import { WaypointPanel } from "./WaypointPanel";
 
@@ -48,6 +51,11 @@ export function MarineNavigation({ initialDestination, initialQueryError, destin
   const [waypoints, setWaypoints] = useState<SavedWaypoint[]>([]);
   const [tracks, setTracks] = useState<TrackSession[]>([]);
   const [activeTrackId, setActiveTrackId] = useState<string | null>(null);
+  const [deepWaterRouteVisible, setDeepWaterRouteVisible] = useState(true);
+  const [deepWaterRouteState, setDeepWaterRouteState] = useState<"loading" | "ready" | "failed">("loading");
+  const [harborZoneVisible, setHarborZoneVisible] = useState(false);
+  const [harborZoneState, setHarborZoneState] = useState<"loading" | "ready" | "failed">("loading");
+  const [selectedMarineFeature, setSelectedMarineFeature] = useState<SelectedMarineFeature | null>(null);
   const watchId = useRef<number | null>(null);
   const previous = useRef<VesselPosition | null>(null);
   const orientationCleanup = useRef<(() => void) | null>(null);
@@ -119,8 +127,9 @@ export function MarineNavigation({ initialDestination, initialQueryError, destin
           <TrackRecorder activeTrack={activeTrack} savedTrackCount={tracks.length} onStart={startTrack} onPause={() => updateTrack("paused")} onResume={() => updateTrack("recording")} onStop={() => updateTrack("completed")} onClear={() => { setTracks([]); setActiveTrackId(null); trackStorage.clear(); }} />
         </aside>
         <section className="relative order-1 min-h-0 overflow-hidden lg:order-2" aria-label="해상 내비게이션">
-          <NavigationMapShell presentation={{ vessel: effectiveVessel, destination, waypoints, track: visibleTrack?.points ?? [] }} onPointSelect={selectMapPoint} />
+          <NavigationMapShell presentation={{ vessel: effectiveVessel, destination, waypoints, track: visibleTrack?.points ?? [] }} deepWaterRouteVisible={deepWaterRouteVisible} harborZoneVisible={harborZoneVisible} onPointSelect={selectMapPoint} onDeepWaterRouteSelect={(properties: KhoaDeepWaterRouteProperties) => setSelectedMarineFeature({ kind: "deep-water-route", properties })} onHarborZoneSelect={(properties: KhoaHarborZoneProperties) => setSelectedMarineFeature({ kind: "harbor-zone", properties })} onDeepWaterRouteStateChange={setDeepWaterRouteState} onHarborZoneStateChange={setHarborZoneState} />
           <div className="pointer-events-none absolute left-3 top-3 z-[500] max-w-[calc(100%-96px)] border-l-2 border-[#d2b178] bg-[#06131a]/90 px-3 py-2 backdrop-blur-sm"><p className="text-[9px] text-[#d2b178]">{mode === "simulation" ? "SIMULATION · 직선 이동" : "TEMPORARY BASE MAP"}</p><p className="mt-1 truncate text-sm">{destination?.name ?? "지도에서 목적지를 선택하세요"}</p></div>
+          <MarineLayerControl deepWaterRouteVisible={deepWaterRouteVisible} deepWaterRouteState={deepWaterRouteState} harborZoneVisible={harborZoneVisible} harborZoneState={harborZoneState} selected={selectedMarineFeature} onDeepWaterRouteVisibleChange={(visible) => { setDeepWaterRouteVisible(visible); if (!visible && selectedMarineFeature?.kind === "deep-water-route") setSelectedMarineFeature(null); }} onHarborZoneVisibleChange={(visible) => { setHarborZoneVisible(visible); if (!visible && selectedMarineFeature?.kind === "harbor-zone") setSelectedMarineFeature(null); }} onCloseFeature={() => setSelectedMarineFeature(null)} />
           {navigation.relativeBearingDegrees != null ? <NavigationCompass relativeBearing={navigation.relativeBearingDegrees} /> : null}
           <div className="absolute inset-x-0 bottom-0 z-[500]"><NavigationHUD navigation={navigation} vessel={effectiveVessel} /><div className="flex min-h-12 items-center justify-between gap-3 bg-[#06131a]/96 px-3 sm:px-5"><div className="flex min-w-0 items-center gap-2 text-[9px] leading-4 text-[#9ba6a1]"><ShieldAlert size={14} className="shrink-0 text-[#d2b178]" /><span className="line-clamp-2">직선 방위 보조이며 안전항로·육지/암초 회피 또는 공식 항법장비가 아닙니다.</span></div>{status === "navigating" || status === "arrived" ? <button type="button" onClick={() => { setStatus("idle"); onNavigationStop?.(); }} className="h-9 shrink-0 border border-white/20 px-4 text-xs">항해 종료</button> : <button type="button" disabled={!destination || !effectiveVessel} onClick={() => { if (!destination) return; setStatus("navigating"); arrivedId.current = null; onNavigationStart?.(destination); }} className="flex h-9 shrink-0 items-center gap-2 bg-[#eee7d8] px-4 text-xs font-semibold text-[#07161b] disabled:opacity-35"><MapPinned size={14} /> 항해 시작</button>}</div></div>
         </section>

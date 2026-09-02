@@ -1,0 +1,85 @@
+import { Anchor, Layers3, X } from "lucide-react";
+import type { KhoaDeepWaterRouteProperties } from "@/lib/marine-navigation/adapters/khoa-deep-water-route";
+import type { KhoaHarborZoneProperties } from "@/lib/marine-navigation/adapters/khoa-harbor-zone";
+
+export type MarineLayerState = "loading" | "ready" | "failed";
+export type SelectedMarineFeature =
+  | { kind: "deep-water-route"; properties: KhoaDeepWaterRouteProperties }
+  | { kind: "harbor-zone"; properties: KhoaHarborZoneProperties };
+
+function stateLabel(state: MarineLayerState) {
+  return state === "loading" ? "LOADING" : state === "failed" ? "UNAVAILABLE" : "KHOA";
+}
+
+function LayerToggle({ label, description, visible, state, onChange, icon }: {
+  label: string;
+  description: string;
+  visible: boolean;
+  state: MarineLayerState;
+  onChange: (visible: boolean) => void;
+  icon: "layers" | "anchor";
+}) {
+  const Icon = icon === "anchor" ? Anchor : Layers3;
+  return (
+    <label className="flex cursor-pointer items-start gap-2.5 border-b border-white/10 py-2.5 last:border-b-0">
+      <input type="checkbox" checked={visible} disabled={state === "failed"} onChange={(event) => onChange(event.target.checked)} className="mt-0.5 size-4 accent-[#c8a66c]" />
+      <Icon size={15} className="mt-0.5 text-[#d2b178]" aria-hidden="true" />
+      <span className="min-w-0 flex-1">
+        <span className="block text-xs">{label}</span>
+        <span className="mt-0.5 block text-[9px] text-[#899793]">{description}</span>
+      </span>
+      <span className={`pt-0.5 text-[9px] ${state === "failed" ? "text-[#d58a7a]" : "text-[#879b96]"}`}>{stateLabel(state)}</span>
+    </label>
+  );
+}
+
+function FeatureDetails({ selected, onClose }: { selected: SelectedMarineFeature; onClose: () => void }) {
+  const isHarbor = selected.kind === "harbor-zone";
+  const title = selected.properties.name ?? selected.properties.id;
+  return (
+    <section className="mt-2 border border-[#d2b178]/35 bg-[#06131a]/96 p-3 shadow-xl backdrop-blur-md" aria-label={isHarbor ? "항만구역 정보" : "깊은수심 항로 정보"}>
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <p className="text-[9px] tracking-[0.12em] text-[#d2b178]">{isHarbor ? "HARBOR ZONE" : "DEEP-WATER ROUTE"}</p>
+          <h2 className="mt-1 font-serif text-base">{title}</h2>
+          {selected.kind === "harbor-zone" && selected.properties.englishName && selected.properties.englishName !== selected.properties.name ? <p className="mt-0.5 text-[9px] text-[#899793]">{selected.properties.englishName}</p> : null}
+        </div>
+        <button type="button" onClick={onClose} className="grid size-7 shrink-0 place-items-center border border-white/15" aria-label="해양공간 정보 닫기"><X size={13} /></button>
+      </div>
+      <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 border-t border-white/10 pt-3 text-[10px]">
+        {selected.kind === "deep-water-route" ? <>
+          {selected.properties.minDepth != null ? <div><dt className="text-[#82928e]">최소수심</dt><dd className="mt-0.5">{selected.properties.minDepth} m</dd></div> : null}
+          {selected.properties.maxDepth != null ? <div><dt className="text-[#82928e]">최대수심</dt><dd className="mt-0.5">{selected.properties.maxDepth} m</dd></div> : null}
+          {selected.properties.bearing != null ? <div><dt className="text-[#82928e]">방위</dt><dd className="mt-0.5">{selected.properties.bearing}°</dd></div> : null}
+          {selected.properties.trafficFlow ? <div><dt className="text-[#82928e]">교통흐름</dt><dd className="mt-0.5">{selected.properties.trafficFlow}</dd></div> : null}
+        </> : <>
+          {selected.properties.harborTypeCode ? <div><dt className="text-[#82928e]">구역 분류</dt><dd className="mt-0.5">{selected.properties.harborTypeCode}</dd></div> : null}
+          {selected.properties.relatedInstitutionCode ? <div><dt className="text-[#82928e]">관련기관 코드</dt><dd className="mt-0.5">{selected.properties.relatedInstitutionCode}</dd></div> : null}
+          {selected.properties.statusCode ? <div><dt className="text-[#82928e]">상태 코드</dt><dd className="mt-0.5">{selected.properties.statusCode}</dd></div> : null}
+        </>}
+      </dl>
+      <p className="mt-3 border-t border-white/10 pt-2 text-[9px] leading-4 text-[#899793]">출처: 국립해양조사원(KHOA)<br />참고용 해양공간정보이며 공식 항법장비를 대체하지 않습니다.</p>
+    </section>
+  );
+}
+
+export function MarineLayerControl({ deepWaterRouteVisible, deepWaterRouteState, harborZoneVisible, harborZoneState, selected, onDeepWaterRouteVisibleChange, onHarborZoneVisibleChange, onCloseFeature }: {
+  deepWaterRouteVisible: boolean;
+  deepWaterRouteState: MarineLayerState;
+  harborZoneVisible: boolean;
+  harborZoneState: MarineLayerState;
+  selected: SelectedMarineFeature | null;
+  onDeepWaterRouteVisibleChange: (visible: boolean) => void;
+  onHarborZoneVisibleChange: (visible: boolean) => void;
+  onCloseFeature: () => void;
+}) {
+  return (
+    <div className="absolute right-3 top-14 z-[500] w-[min(292px,calc(100vw-24px))] text-[#f2eee3]">
+      <div className="border border-white/15 bg-[#06131a]/94 px-3 shadow-xl backdrop-blur-md" aria-label="해양 레이어">
+        <LayerToggle label="깊은수심 항로" description="국립해양조사원 공개 공간정보" visible={deepWaterRouteVisible} state={deepWaterRouteState} onChange={onDeepWaterRouteVisibleChange} icon="layers" />
+        <LayerToggle label="항만구역" description="전자해도 기반 항만 면형정보" visible={harborZoneVisible} state={harborZoneState} onChange={onHarborZoneVisibleChange} icon="anchor" />
+      </div>
+      {selected ? <FeatureDetails selected={selected} onClose={onCloseFeature} /> : null}
+    </div>
+  );
+}

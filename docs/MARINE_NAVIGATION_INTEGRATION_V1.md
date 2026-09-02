@@ -55,7 +55,9 @@ The current technology candidates are deliberately not final decisions:
 - `/sea`: keep Kakao Map now; evaluate TMAP as a future place-discovery map candidate.
 - `/sea/navigation`: MapLibre GL JS renderer with a temporary OpenStreetMap raster base. Future layer targets are properly licensed KHOA/MOF public marine-spatial layers, depth/bathymetry, navigation aids, restricted areas, and currents.
 
-`MapLibreNavigationProvider` exposes provider-scoped add, remove, and visibility operations for future marine layers. No KHOA, MOF, WMS, ENC, depth, hazard, or current data is connected in this version. ENC remains unimplemented pending a license and data strategy.
+`MapLibreNavigationProvider` exposes provider-scoped add, remove, ordered stacking, and visibility operations. The connected optional reference overlays are the official KHOA deep-water-route and harbor-zone snapshots documented in `KHOA_MARINE_LAYER_CATALOG_V1.md`. No ENC, bathymetry, hazard, current, or route-engine data is connected. ENC remains unimplemented pending a license and data strategy.
+
+MapLibre 6 worker assets are copied from the installed package by `scripts/copy-maplibre-worker.mjs` during `predev` and `prebuild`. The provider points `setWorkerUrl` to the same-origin worker under `public/maplibre`; both the worker and its shared ESM sibling are required for GeoJSON source processing in Next.js.
 
 ## Safety Boundary
 

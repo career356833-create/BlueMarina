@@ -17,6 +17,7 @@ export type NavigationMapAdapter = {
 
 export type NavigationMarineLayerConfig<TSource = unknown, TLayer = unknown> = {
   id: string;
+  order?: number;
   source: TSource;
   layers: TLayer[];
   visible?: boolean;

@@ -1,4 +1,4 @@
-import { AttributionControl, LngLatBounds, Map as MapLibreMap, NavigationControl, type GeoJSONSource, type LayerSpecification, type MapMouseEvent, type SourceSpecification, type StyleSpecification } from "maplibre-gl";
+import { AttributionControl, LngLatBounds, Map as MapLibreMap, NavigationControl, setWorkerUrl, type GeoJSONSource, type LayerSpecification, type MapMouseEvent, type SourceSpecification, type StyleSpecification } from "maplibre-gl";
 import { toAccuracyGeoJson, toBearingGeoJson, toNavigationPointGeoJson, toTrackGeoJson } from "@/lib/marine-navigation/adapters/navigation-map-geojson";
 import { mapLibrePrototypeAdapter, type MapPresentation, type NavigationMapProvider, type NavigationMarineLayerConfig } from "@/lib/marine-navigation/adapters/navigation-map-adapter";
 import type { GeoPoint } from "@/lib/marine-navigation/types";
@@ -9,6 +9,8 @@ const sourceIds = {
   points: "navigation-points",
   track: "navigation-track",
 } as const;
+
+setWorkerUrl("/maplibre/maplibre-gl-worker.mjs");
 
 const TEMPORARY_BASE_STYLE: StyleSpecification = {
   version: 8,
@@ -36,10 +38,13 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   private loaded = false;
   private lastFocusedDestinationId: string | null = null;
   private pointSelectHandler: (point: GeoPoint) => void;
+  private marineFeatureSelectHandler: (layerId: string, properties: unknown) => void;
   private readonly marineLayers = new Map<string, string[]>();
+  private readonly marineLayerConfigs = new Map<string, MapLibreMarineLayerConfig>();
 
-  constructor(container: HTMLElement, onPointSelect: (point: GeoPoint) => void) {
+  constructor(container: HTMLElement, onPointSelect: (point: GeoPoint) => void, onMarineFeatureSelect: (layerId: string, properties: unknown) => void = () => undefined) {
     this.pointSelectHandler = onPointSelect;
+    this.marineFeatureSelectHandler = onMarineFeatureSelect;
     this.map = new MapLibreMap({
       container,
       style: TEMPORARY_BASE_STYLE,
@@ -49,16 +54,33 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
     });
     this.map.addControl(new NavigationControl({ showCompass: true, showZoom: true }), "top-right");
     this.map.addControl(new AttributionControl({ compact: true }), "bottom-right");
-    this.map.on("click", (event: MapMouseEvent) => this.pointSelectHandler({ latitude: event.lngLat.lat, longitude: event.lngLat.lng }));
+    this.map.on("click", (event: MapMouseEvent) => {
+      window.setTimeout(() => {
+        if (event.defaultPrevented) return;
+        const marineLayerIds = [...this.marineLayers.values()].flat().filter((id) => this.map.getLayer(id));
+        const marineFeature = marineLayerIds.length > 0 ? this.map.queryRenderedFeatures(event.point, { layers: marineLayerIds })[0] : null;
+        if (marineFeature?.properties) {
+          const marineLayerId = [...this.marineLayers.entries()].find(([, layerIds]) => layerIds.includes(marineFeature.layer.id))?.[0];
+          if (marineLayerId) this.marineFeatureSelectHandler(marineLayerId, { ...marineFeature.properties, id: marineFeature.properties.id ?? marineFeature.id });
+          return;
+        }
+        this.pointSelectHandler({ latitude: event.lngLat.lat, longitude: event.lngLat.lng });
+      }, 0);
+    });
     this.map.once("load", () => {
       this.loaded = true;
       this.installNavigationLayers();
+      for (const config of this.marineLayerConfigs.values()) this.installMarineLayer(config);
       if (this.latestPresentation) this.renderPresentation(this.latestPresentation);
     });
   }
 
   setPointSelectHandler(handler: (point: GeoPoint) => void) {
     this.pointSelectHandler = handler;
+  }
+
+  setMarineFeatureSelectHandler(handler: (layerId: string, properties: unknown) => void) {
+    this.marineFeatureSelectHandler = handler;
   }
 
   setPresentation(presentation: MapPresentation) {
@@ -77,20 +99,38 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   }
 
   addMarineLayer(config: MapLibreMarineLayerConfig) {
-    if (!this.loaded || this.marineLayers.has(config.id)) return;
+    this.marineLayerConfigs.set(config.id, config);
+    if (this.loaded) this.installMarineLayer(config);
+  }
+
+  private installMarineLayer(config: MapLibreMarineLayerConfig) {
+    if (this.marineLayers.has(config.id)) return;
     const sourceId = `marine-source:${config.id}`;
     this.map.addSource(sourceId, config.source);
     const layerIds: string[] = [];
+    const nextMarineLayer = [...this.marineLayerConfigs.values()]
+      .filter((candidate) => candidate.id !== config.id && (candidate.order ?? 0) > (config.order ?? 0))
+      .sort((left, right) => (left.order ?? 0) - (right.order ?? 0))
+      .map((candidate) => this.marineLayers.get(candidate.id)?.[0])
+      .find((layerId): layerId is string => Boolean(layerId && this.map.getLayer(layerId)));
+    const beforeId = nextMarineLayer ?? (this.map.getLayer("navigation-accuracy-fill") ? "navigation-accuracy-fill" : undefined);
     for (const layer of config.layers) {
       const layerId = `marine-layer:${config.id}:${layer.id}`;
-      this.map.addLayer({ ...layer, id: layerId, source: sourceId } as LayerSpecification);
+      this.map.addLayer({ ...layer, id: layerId, source: sourceId } as LayerSpecification, beforeId);
       this.map.setLayoutProperty(layerId, "visibility", config.visible === false ? "none" : "visible");
+      this.map.on("click", layerId, (event) => {
+        const properties = event.features?.[0]?.properties;
+        if (!properties) return;
+        event.preventDefault();
+        this.marineFeatureSelectHandler(config.id, { ...properties, id: properties.id ?? event.features?.[0]?.id });
+      });
       layerIds.push(layerId);
     }
     this.marineLayers.set(config.id, layerIds);
   }
 
   removeMarineLayer(id: string) {
+    this.marineLayerConfigs.delete(id);
     const layerIds = this.marineLayers.get(id) ?? [];
     for (const layerId of [...layerIds].reverse()) if (this.map.getLayer(layerId)) this.map.removeLayer(layerId);
     const sourceId = `marine-source:${id}`;
@@ -99,8 +139,12 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   }
 
   setMarineLayerVisibility(id: string, visible: boolean) {
+    const config = this.marineLayerConfigs.get(id);
+    if (config) this.marineLayerConfigs.set(id, { ...config, visible });
     for (const layerId of this.marineLayers.get(id) ?? []) {
-      if (this.map.getLayer(layerId)) this.map.setLayoutProperty(layerId, "visibility", visible ? "visible" : "none");
+      if (this.map.getLayer(layerId)) {
+        this.map.setLayoutProperty(layerId, "visibility", visible ? "visible" : "none");
+      }
     }
   }
 
@@ -111,6 +155,7 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   destroy() {
     this.map.remove();
     this.marineLayers.clear();
+    this.marineLayerConfigs.clear();
   }
 
   private installNavigationLayers() {
