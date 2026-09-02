@@ -20,7 +20,7 @@ Navigation types, sensor orchestration, localStorage persistence, simulation, wa
 
 ### MAP_PROVIDER_SPECIFIC
 
-The Leaflet renderer and OpenStreetMap tiles live only in `LeafletPrototypeNavigationMap.tsx`. `NavigationMapShell` and `navigation-map-adapter.ts` isolate the temporary provider.
+The current renderer is MapLibre GL JS. Its provider implementation lives only under `src/components/boat/navigation/adapters/`. `NavigationMapShell` dynamically loads that client-only implementation, while `navigation-map-adapter.ts` keeps the presentation and provider contracts independent from MapLibre.
 
 ### DO_NOT_COPY
 
@@ -48,14 +48,14 @@ The prototype app shell, root routes, global CSS, package configuration, and sta
 
 ## Map Provider Boundary
 
-Leaflet/OpenStreetMap is a temporary base-map prototype, not the final navigation technology. TMAP or MapLibre plus properly licensed KHOA/ENC layers can replace the provider adapter without changing geo, bearing, speed, ETA, arrival, waypoint, track, simulation, or navigation-state modules.
+The previous temporary renderer was Leaflet with OpenStreetMap raster tiles. The current renderer is MapLibre GL JS and still uses OpenStreetMap raster tiles as a **TEMPORARY BASE MAP** solely to verify renderer behavior. MapLibre is the navigation renderer candidate; the base layer is not a final marine-map provider.
 
 The current technology candidates are deliberately not final decisions:
 
 - `/sea`: keep Kakao Map now; evaluate TMAP as a future place-discovery map candidate.
-- `/sea/navigation`: keep the temporary Leaflet/OpenStreetMap renderer now; evaluate MapLibre with properly licensed KHOA/public marine-spatial layers as a future navigation-map candidate.
+- `/sea/navigation`: MapLibre GL JS renderer with a temporary OpenStreetMap raster base. Future layer targets are properly licensed KHOA/MOF public marine-spatial layers, depth/bathymetry, navigation aids, restricted areas, and currents.
 
-This integration does not implement or select either candidate.
+`MapLibreNavigationProvider` exposes provider-scoped add, remove, and visibility operations for future marine layers. No KHOA, MOF, WMS, ENC, depth, hazard, or current data is connected in this version. ENC remains unimplemented pending a license and data strategy.
 
 ## Safety Boundary
 

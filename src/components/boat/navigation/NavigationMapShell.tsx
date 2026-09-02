@@ -4,8 +4,8 @@ import dynamic from "next/dynamic";
 import type { MapPresentation } from "@/lib/marine-navigation/adapters/navigation-map-adapter";
 import type { GeoPoint } from "@/lib/marine-navigation/types";
 
-const LeafletMap = dynamic(() => import("./adapters/LeafletPrototypeNavigationMap"), { ssr: false, loading: () => <div className="h-full w-full animate-pulse bg-[#17363a]" aria-label="지도를 불러오는 중" /> });
+const MapLibreMap = dynamic(() => import("./adapters/MapLibreNavigationMap"), { ssr: false, loading: () => <div className="h-full w-full animate-pulse bg-[#17363a]" aria-label="지도를 불러오는 중" /> });
 
 export function NavigationMapShell(props: { presentation: MapPresentation; onPointSelect: (point: GeoPoint) => void }) {
-  return <LeafletMap {...props} />;
+  return <MapLibreMap {...props} />;
 }

@@ -152,7 +152,7 @@ Current scope:
 - Track.
 - ETA.
 - Local waypoints and tracks.
-- A provider-neutral map boundary with a temporary Leaflet/OpenStreetMap renderer.
+- A provider-neutral map boundary with a MapLibre GL JS renderer and temporary OpenStreetMap raster base.
 
 It does not provide safe routing, land/reef avoidance, depth routing, or an official navigation-equipment replacement. A future route engine requires validated chart and hazard data and must not be implemented like a generic car shortest-route feature.
 
