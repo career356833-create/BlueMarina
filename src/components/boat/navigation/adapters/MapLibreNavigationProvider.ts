@@ -121,6 +121,14 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
       this.map.on("click", layerId, (event) => {
         const properties = event.features?.[0]?.properties;
         if (!properties) return;
+        if (properties.cluster_id != null) {
+          event.preventDefault();
+          const source = this.map.getSource(sourceId) as GeoJSONSource;
+          source.getClusterExpansionZoom(Number(properties.cluster_id)).then((zoom) => {
+            this.map.easeTo({ center: event.lngLat, zoom });
+          }).catch(() => undefined);
+          return;
+        }
         event.preventDefault();
         this.marineFeatureSelectHandler(config.id, { ...properties, id: properties.id ?? event.features?.[0]?.id });
       });

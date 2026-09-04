@@ -1,0 +1,398 @@
+{
+  "generatedAt": "2026-09-04T09:14:29.382Z",
+  "source": "KHOA",
+  "endpoint": "https://apis.data.go.kr/1192136/Buoy/getBuoyInfo",
+  "requestCount": 9,
+  "categoryResults": [
+    {
+      "categoryCode": "A01",
+      "httpStatus": 200,
+      "resultCode": "00",
+      "totalCount": 2885,
+      "fetchedCount": 2885
+    },
+    {
+      "categoryCode": "A02",
+      "httpStatus": 200,
+      "resultCode": "00",
+      "totalCount": 2465,
+      "fetchedCount": 2465
+    },
+    {
+      "categoryCode": "A03",
+      "httpStatus": 200,
+      "resultCode": "00",
+      "totalCount": 3524,
+      "fetchedCount": 3524
+    },
+    {
+      "categoryCode": "A04",
+      "httpStatus": 200,
+      "resultCode": "00",
+      "totalCount": 139,
+      "fetchedCount": 139
+    },
+    {
+      "categoryCode": "A05",
+      "httpStatus": 200,
+      "resultCode": "00",
+      "totalCount": 120,
+      "fetchedCount": 120
+    },
+    {
+      "categoryCode": "A06",
+      "httpStatus": 200,
+      "resultCode": "00",
+      "totalCount": 329,
+      "fetchedCount": 329
+    },
+    {
+      "categoryCode": "A07",
+      "httpStatus": 200,
+      "resultCode": "00",
+      "totalCount": 13,
+      "fetchedCount": 13
+    },
+    {
+      "categoryCode": "A08",
+      "httpStatus": 200,
+      "resultCode": "00",
+      "totalCount": 40,
+      "fetchedCount": 40
+    },
+    {
+      "categoryCode": "A09",
+      "httpStatus": 200,
+      "resultCode": "00",
+      "totalCount": 9,
+      "fetchedCount": 9
+    }
+  ],
+  "totalCountSum": 9524,
+  "fetchedCount": 9524,
+  "uniqueIdCount": 6201,
+  "missingIdCount": 0,
+  "duplicateIdCount": 207,
+  "duplicateOccurrenceCount": 3323,
+  "duplicateIdSample": [
+    "1218.6",
+    "1219.1",
+    "1221.1",
+    "1250.2",
+    "1282.1",
+    "1297.9",
+    "1316.1",
+    "1318",
+    "1318.1",
+    "1318.2",
+    "1318.3",
+    "1357.7",
+    "1369.1",
+    "1438.7",
+    "2001.11",
+    "2002.4",
+    "2008.1",
+    "2009",
+    "2010",
+    "2027.1"
+  ],
+  "exactDuplicateCount": 3321,
+  "normalizedFeatureCount": 6203,
+  "sourceIdentityConflictCount": 2,
+  "sourceIdentityConflicts": [
+    {
+      "sourceRecordId": "1282.1",
+      "normalizedFeatureCount": 2,
+      "variants": [
+        {
+          "categoryCode": "A01",
+          "koreanName": "왕돌초\n해양과학기지등",
+          "officialTypeLabel": "고정표지",
+          "detailedTypeLabel": null,
+          "latitude": 36.6859167,
+          "longitude": 129.7424444
+        },
+        {
+          "categoryCode": "A01",
+          "koreanName": "왕돌초\n해양과학기지등",
+          "officialTypeLabel": "고정표지",
+          "detailedTypeLabel": "항해 목표용 표지",
+          "latitude": 36.6859167,
+          "longitude": 129.7424444
+        }
+      ]
+    },
+    {
+      "sourceRecordId": "3093",
+      "normalizedFeatureCount": 2,
+      "variants": [
+        {
+          "categoryCode": "A01",
+          "koreanName": "대불항\n삼표시멘트 돌핀 A호 등대",
+          "officialTypeLabel": "고정표지",
+          "detailedTypeLabel": null,
+          "latitude": 34.7785556,
+          "longitude": 126.4267778
+        },
+        {
+          "categoryCode": "A01",
+          "koreanName": "대불항\n삼표시멘트 돌핀 A호 등대",
+          "officialTypeLabel": "고정표지",
+          "detailedTypeLabel": "항해원조",
+          "latitude": 34.7785556,
+          "longitude": 126.4267778
+        }
+      ]
+    }
+  ],
+  "validCoordinateCount": 9524,
+  "invalidCoordinateCount": 0,
+  "coordinateFormats": {
+    "decimal": 0,
+    "directionalDecimal": 9524,
+    "dms": 0,
+    "invalid": 0
+  },
+  "coordinateBounds": {
+    "minLatitude": 15.1298611,
+    "maxLatitude": 59.4172222,
+    "minLongitude": 107.2226667,
+    "maxLongitude": 157.69525
+  },
+  "zeroCoordinateCount": 0,
+  "outsideKoreaEnvelopeCount": 91,
+  "missingKoreanNameCount": 0,
+  "missingEnglishNameCount": 47,
+  "missingTypeCount": 0,
+  "missingLightCharacteristicCount": 935,
+  "aidTypeLabels": {
+    "고정표지": 2885,
+    "이동표지": 2465,
+    "교량등": 3524,
+    "무신호": 139,
+    "레이콘": 120,
+    "AIS": 329,
+    "로란-C": 13,
+    "DGPS": 40,
+    "항공무선표지국": 9
+  },
+  "detailedTypeLabels": {
+    "항해 목표용 표지": 395,
+    "좌현표지": 1038,
+    "우현표지": 1101,
+    "기타": 181,
+    "특수표지": 1954,
+    "<missing>": 4211,
+    "동방위표지": 62,
+    "북방위표지": 58,
+    "남방위표지": 83,
+    "고립장애 표지": 195,
+    "서방위표지": 78,
+    "항해원조": 29,
+    "좌항로우선 표지": 1,
+    "선박 계류용 표지": 89,
+    "안전수역 표지": 47,
+    "우항로우선 표지": 2
+  },
+  "anomalySample": [
+    {
+      "id": "1001",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2751667,
+      "longitude": 130.6366389
+    },
+    {
+      "id": "1002",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2761667,
+      "longitude": 130.5970278
+    },
+    {
+      "id": "1003",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2756111,
+      "longitude": 130.5961667
+    },
+    {
+      "id": "1004",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2312222,
+      "longitude": 130.5290556
+    },
+    {
+      "id": "1005",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.3312778,
+      "longitude": 130.4048889
+    },
+    {
+      "id": "1006",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.3314167,
+      "longitude": 130.4012222
+    },
+    {
+      "id": "1007",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.3328611,
+      "longitude": 130.399
+    },
+    {
+      "id": "1008",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2509722,
+      "longitude": 130.4011111
+    },
+    {
+      "id": "1009",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2445278,
+      "longitude": 130.3075278
+    },
+    {
+      "id": "1010",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2571389,
+      "longitude": 130.3176944
+    },
+    {
+      "id": "1011",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2336944,
+      "longitude": 130.2921667
+    },
+    {
+      "id": "1012",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2223056,
+      "longitude": 130.2849167
+    },
+    {
+      "id": "1013",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2268889,
+      "longitude": 130.28625
+    },
+    {
+      "id": "1014",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2333333,
+      "longitude": 130.2917222
+    },
+    {
+      "id": "1015",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2340556,
+      "longitude": 130.2906111
+    },
+    {
+      "id": "1016",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2336944,
+      "longitude": 130.2921667
+    },
+    {
+      "id": "1017",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2352222,
+      "longitude": 130.2958889
+    },
+    {
+      "id": "1018",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2399722,
+      "longitude": 130.30125
+    },
+    {
+      "id": "1019",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.2333889,
+      "longitude": 130.31325
+    },
+    {
+      "id": "1022",
+      "categoryCode": "A01",
+      "code": "OUTSIDE_KOREA_ENVELOPE",
+      "latitude": 42.14975,
+      "longitude": 130.2772778
+    }
+  ],
+  "busanCrosscheck": {
+    "sourceRowCount": 314,
+    "sampleCount": 20,
+    "nameMatchedCount": 16,
+    "coordinateMatchedWithin250mCount": 14,
+    "typeComparison": "UNAVAILABLE_SECONDARY_STRUCTURED_FIELD",
+    "statusComparison": "UNAVAILABLE_PRIMARY_FIELD",
+    "differences": [
+      {
+        "sourceId": "A00029",
+        "name": "동암어항방파제등대",
+        "active": "Y",
+        "nameMatched": true,
+        "nearestDistanceMeters": 272593,
+        "coordinateMatchedWithin250m": false
+      },
+      {
+        "sourceId": "A00032",
+        "name": "송정항동방파제등대",
+        "active": "Y",
+        "nameMatched": false,
+        "nearestDistanceMeters": null,
+        "coordinateMatchedWithin250m": false
+      },
+      {
+        "sourceId": "A00033",
+        "name": "송정항서방파제등대",
+        "active": "Y",
+        "nameMatched": false,
+        "nearestDistanceMeters": null,
+        "coordinateMatchedWithin250m": false
+      },
+      {
+        "sourceId": "A00034",
+        "name": "청사포어항남방파제등대",
+        "active": "Y",
+        "nameMatched": false,
+        "nearestDistanceMeters": null,
+        "coordinateMatchedWithin250m": false
+      },
+      {
+        "sourceId": "A00038",
+        "name": "동백섬등표",
+        "active": "Y",
+        "nameMatched": true,
+        "nearestDistanceMeters": 1516,
+        "coordinateMatchedWithin250m": false
+      },
+      {
+        "sourceId": "A00040",
+        "name": "용호부두방파제등대",
+        "active": "Y",
+        "nameMatched": false,
+        "nearestDistanceMeters": null,
+        "coordinateMatchedWithin250m": false
+      }
+    ]
+  },
+  "credentialLogged": false
+}

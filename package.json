@@ -40,13 +40,14 @@
     "validate:supabase-audit-readonly-sql": "node tools/supabase-audit/validate-readonly-sql.cjs",
     "dry-run:supabase-audit-readiness": "node tools/supabase-audit/dry-run-audit-readiness.cjs",
     "test:supabase-audit-tools": "node --test tools/supabase-audit/draft-schema-parser.test.cjs tools/supabase-audit/verify-staging-mapping.test.cjs tools/supabase-audit/build-migration-plan.test.cjs tools/supabase-audit/draft-object-classification.test.cjs tools/supabase-audit/validate-readonly-sql.test.cjs tools/supabase-audit/dry-run-audit-readiness.test.cjs tools/supabase-audit/audit-config.test.cjs",
-    "test:species-importer": "node --test tools/species-importer/build-species-db-staging.test.cjs tools/species-importer/import-species-db.test.cjs"
-    ,"smoke:fish-media-live": "node tools/fish-media-smoke/live-functional-smoke.cjs"
+    "test:species-importer": "node --test tools/species-importer/build-species-db-staging.test.cjs tools/species-importer/import-species-db.test.cjs",
+    "smoke:fish-media-live": "node tools/fish-media-smoke/live-functional-smoke.cjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.49.4",
     "clsx": "^2.1.1",
+    "fast-xml-parser": "5.11.1",
     "lucide-react": "^0.468.0",
     "maplibre-gl": "^6.6.0",
     "next": "^15.1.0",
