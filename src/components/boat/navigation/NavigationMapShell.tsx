@@ -5,6 +5,7 @@ import type { MapPresentation } from "@/lib/marine-navigation/adapters/navigatio
 import type { KhoaDeepWaterRouteProperties } from "@/lib/marine-navigation/adapters/khoa-deep-water-route";
 import type { KhoaHarborZoneProperties } from "@/lib/marine-navigation/adapters/khoa-harbor-zone";
 import type { KhoaNavigationAid } from "@/lib/marine-navigation/adapters/khoa-navigation-aids";
+import type { KhoaTrainingFiringZoneProperties } from "@/lib/marine-navigation/adapters/khoa-training-firing-zone";
 import type { GeoPoint } from "@/lib/marine-navigation/types";
 
 const MapLibreMap = dynamic(() => import("./adapters/MapLibreNavigationMap"), { ssr: false, loading: () => <div className="h-full w-full animate-pulse bg-[#17363a]" aria-label="지도를 불러오는 중" /> });
@@ -14,13 +15,16 @@ export function NavigationMapShell(props: {
   deepWaterRouteVisible: boolean;
   harborZoneVisible: boolean;
   navigationAidsVisible: boolean;
+  trainingFiringZoneVisible: boolean;
   onPointSelect: (point: GeoPoint) => void;
   onDeepWaterRouteSelect: (feature: KhoaDeepWaterRouteProperties) => void;
   onHarborZoneSelect: (feature: KhoaHarborZoneProperties) => void;
   onNavigationAidSelect: (feature: KhoaNavigationAid) => void;
+  onTrainingFiringZoneSelect: (feature: KhoaTrainingFiringZoneProperties) => void;
   onDeepWaterRouteStateChange: (state: "loading" | "ready" | "failed") => void;
   onHarborZoneStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationAidsStateChange: (state: "loading" | "ready" | "failed") => void;
+  onTrainingFiringZoneStateChange: (state: "loading" | "ready" | "failed") => void;
 }) {
   return <MapLibreMap {...props} />;
 }

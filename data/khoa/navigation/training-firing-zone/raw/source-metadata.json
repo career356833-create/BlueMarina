@@ -1,0 +1,18 @@
+{
+  "dataset": "해양수산부 국립해양조사원_해상훈련및사격구역_20260415",
+  "provider": "해양수산부 국립해양조사원",
+  "officialUrl": "https://www.data.go.kr/data/15116506/fileData.do",
+  "registeredAt": "2026-04-15",
+  "updatedAt": "2026-04-15",
+  "updateCycle": "annual",
+  "nextExpectedRegistrationDate": "2027-04-15",
+  "format": "SHP",
+  "portalDeclaredEncoding": "UTF-8",
+  "license": "공공저작물 출처표시 제1유형",
+  "cost": "free",
+  "collectionMethod": "타기관 업무 협조",
+  "providerLimitation": "일부 누락 가능성 있음",
+  "rawArchive": "khoa-training-firing-zone-20260415.zip",
+  "rawBytes": 102891,
+  "rawSha256": "f0e10d29c1ac67746d2fcdde16b359200e215f0e118befb0d1fbe5d54d544d8a"
+}

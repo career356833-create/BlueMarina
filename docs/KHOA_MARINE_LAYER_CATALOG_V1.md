@@ -1,6 +1,6 @@
 # KHOA Marine Layer Catalog V1
 
-Updated: 2026-09-02
+Updated: 2026-09-04
 
 This catalog separates public reference layers from navigation-critical products. A listed dataset is not an endorsement for route planning. Blue Marina must not describe any layer here as a safe route or a replacement for an approved chart, ECDIS, ENC, or onboard navigation equipment.
 
@@ -64,21 +64,41 @@ python tools/khoa/convert-harbor-zone.py `
 
 The official 302,501-vertex geometry remains unchanged under `raw`. The browser-specific derived copy is explicitly separate and does not represent a legal or safe-navigation boundary determination. See `KHOA_HARBOR_ZONE_LAYER_V1.md`.
 
+### C. Maritime training and firing zone
+
+| Field | Value |
+| --- | --- |
+| Provider | Ministry of Oceans and Fisheries, Korea Hydrographic and Oceanographic Agency (KHOA) |
+| Official dataset | `해양수산부 국립해양조사원_해상훈련및사격구역_20260415` |
+| Official reference | https://www.data.go.kr/data/15116506/fileData.do |
+| Format / cadence | SHP / annual static snapshot |
+| License | 공공저작물 출처표시 제1유형 |
+| Source CRS / encoding | EPSG:5179 authority in embedded WKT / UTF-8 declared by `.cpg` |
+| Raw provenance | Official ZIP preserved with SHA-256; extracted source remains unchanged |
+| MapLibre integration | **CONNECTED** as `khoa-maritime-training-firing-zone`, Polygon fill plus dashed outline, default OFF |
+| Product use | Static reference boundary and source-backed details only; not current training/firing status |
+| Performance | 60 features; no simplification; 247,526-byte browser GeoJSON; no tile server in V1 |
+
+The source contains POLYLINE boundaries. Conversion to Polygon is permitted only for rings already closed within 0.01 m; no boundary inference is allowed. See `KHOA_TRAINING_FIRING_ZONE_LAYER_V1.md`.
+
 ## Candidate Catalog
 
 | Candidate | Status | Provider | Format / access | License | Time model | MapLibre path | Phase | Current blocker |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| C. ROMS surface current/speed/temperature | `RESEARCHED/API_REPLACEMENT_REQUIRED` | KHOA | KHOA/public-data API family; response commonly includes forecast time and coordinates | Verify per replacement API | Forecast / near-real-time | Server-normalized current vectors or raster/vector tiles | Phase 4 | KHOA announced retirement/replacement of 35 legacy APIs in 2026. The active replacement endpoint, terms, key, grid density, and cache policy must be verified before coding. |
-| D. Tide stations | `EXISTING_KHOA_BOUNDARY` | KHOA | Public-data APIs and Blue Marina's existing server-only tide boundary | Verify per active API | Observation / forecast | Point source with server-normalized station metadata | Phase 3 | Keep separate from this static layer. Existing `TideInfoResult` and KHOA route contract must remain authoritative. |
-| E. Marine-use zones | `SOURCE_SELECTION_REQUIRED` | KHOA/MOF | Multiple official SHP datasets (environmental conservation, restricted and operating zones) | Dataset-specific, often attribution or no restriction | Static / periodic | Thematic polygon layers with explicit legal/source dates | Phase 3 | “Marine-use zone” is not one product. Select exact legal datasets and review update/legal-effective dates before combining. |
-| F. Navigation aids / lighthouse / buoy | `CONNECTED` | KHOA | Official nationwide `Buoy/getBuoyInfo` REST/XML 1.0 API through a server-only boundary | 공공저작물 출처표시 제1유형 | Weekly | Clustered Point GeoJSON; non-ENC markers; default OFF | Phase 4 | Dedicated-key live audit passed. 9,524 category responses normalize to 6,203 exact-deduplicated map records; 91 geographic-envelope anomalies remain disclosed. See `KHOA_NAVIGATION_AIDS_SOURCE_AUDIT_V2.md`. |
-| G. Bathymetry / contours | `DATUM_LICENSE_STRATEGY_REQUIRED` | KHOA | Hydrographic/chart products or approved public derivatives; access and resolution vary | Product-specific | Survey/chart release | Vector tiles or raster terrain-style source, never a large national GeoJSON | Phase 5 | Survey datum, soundings/contour license, scale-dependent generalization, and payload size need a dedicated data strategy. |
-| H. Formal ENC | `SEPARATE_LICENSED_PROGRAM` | KHOA-authorized distribution | S-57/S-101 chart distribution, not a generic public GeoJSON feed | Licensed/controlled chart product | Official chart updates | Dedicated ENC renderer/authorized service, not this prototype source | Separate program | Licensing, authorized distribution, update chain, symbology, and compliance. Do not approximate ENC from public reference layers. |
+| D. ROMS surface current/speed/temperature | `API_REPLACEMENT_REQUIRED` | KHOA | KHOA/public-data API family; response commonly includes forecast time and coordinates | Verify per replacement API | Forecast / near-real-time | Server-normalized current vectors or raster/vector tiles | Phase 4 | KHOA announced retirement/replacement of 35 legacy APIs in 2026. The active replacement endpoint, terms, key, grid density, and cache policy must be verified before coding. |
+| E. Tide stations | `EXISTING_KHOA_BOUNDARY` | KHOA | Public-data APIs and Blue Marina's existing server-only tide boundary | Verify per active API | Observation / forecast | Point source with server-normalized station metadata | Phase 3 | Keep separate from this static layer. Existing `TideInfoResult` and KHOA route contract must remain authoritative. |
+| F. Marine-use zones | `SOURCE_SELECTION_REQUIRED` | KHOA/MOF | Multiple official SHP datasets (environmental conservation, restricted and operating zones) | Dataset-specific, often attribution or no restriction | Static / periodic | Thematic polygon layers with explicit legal/source dates | Phase 3 | “Marine-use zone” is not one product. Select exact legal datasets and review update/legal-effective dates before combining. |
+| G. Navigation aids / lighthouse / buoy | `CONNECTED` | KHOA | Official nationwide `Buoy/getBuoyInfo` REST/XML 1.0 API through a server-only boundary | 공공저작물 출처표시 제1유형 | Weekly | Clustered Point GeoJSON; non-ENC markers; default OFF | Phase 4 | Dedicated-key live audit passed. 9,524 category responses normalize to 6,203 exact-deduplicated map records; 91 geographic-envelope anomalies remain disclosed. See `KHOA_NAVIGATION_AIDS_SOURCE_AUDIT_V2.md`. |
+| H. Bathymetry / contours | `DATUM_LICENSE_STRATEGY_REQUIRED` | KHOA | Hydrographic/chart products or approved public derivatives; access and resolution vary | Product-specific | Survey/chart release | Vector tiles or raster terrain-style source, never a large national GeoJSON | Phase 5 | Survey datum, soundings/contour license, scale-dependent generalization, and payload size need a dedicated data strategy. |
+| I. Formal ENC | `SEPARATE_ENC_PROGRAM` | KHOA-authorized distribution | S-57/S-101 chart distribution, not a generic public GeoJSON feed | Licensed/controlled chart product | Official chart updates | Dedicated ENC renderer/authorized service, not this prototype source | Separate program | Licensing, authorized distribution, update chain, symbology, and compliance. Do not approximate ENC from public reference layers. |
+| J. Active navigation warnings | `NEXT_DYNAMIC_SAFETY_LAYER` | KHOA / responsible authorities | Verified active warning source not yet selected | Source-specific | Dynamic/current | Separate server-normalized warning layer | Future | Must remain separate from static training/firing boundaries and requires validity-time, cancellation, freshness, and authority review. |
 
 ## Safety Boundary
 
 - The connected deep-water-route polygons do not participate in destination selection, snapping, bearing, ETA, waypoint, track, or simulation calculations.
 - The connected harbor-zone polygons are display-only and do not determine entry permission, departure availability, or route legality.
+- The connected training/firing-zone polygons are static public boundaries. They do not indicate current activity, passage permission, or route safety and never participate in route calculations.
+- `STATIC_REFERENCE_LAYER != ACTIVE_WARNING_LAYER`.
 - Feature clicks show only fields present in the official source.
 - UI wording: `참고용 해양공간정보이며 공식 항법장비를 대체하지 않습니다.`
 - Source attribution: `국립해양조사원(KHOA)`.
@@ -86,4 +106,4 @@ The official 302,501-vertex geometry remains unchanged under `raw`. The browser-
 
 ## Performance Direction
 
-The deep-water-route GeoJSON is only 5 features and about 6 KB, so a single static fetch is appropriate and no simplification is applied. The 70-feature harbor layer uses a separately recorded 25 m topology-preserving display simplification, reducing 302,501 source vertices to 24,284 and the browser copy to about 0.59 MiB. If later nationwide datasets exceed a practical browser payload, preserve the original geometry and produce separate derived regional chunks or PMTiles/vector tiles. A tile server is intentionally out of scope for V1.
+The deep-water-route GeoJSON is only 5 features and about 6 KB, so a single static fetch is appropriate and no simplification is applied. The 70-feature harbor layer uses a separately recorded 25 m topology-preserving display simplification, reducing 302,501 source vertices to 24,284 and the browser copy to about 0.59 MiB. The training/firing-zone snapshot has 60 polygons, retains all 6,958 source vertices, and is 247,526 bytes, so a static GeoJSON fetch remains appropriate. If later nationwide datasets exceed a practical browser payload, preserve the original geometry and produce separate derived regional chunks or PMTiles/vector tiles. A tile server is intentionally out of scope for V1.
