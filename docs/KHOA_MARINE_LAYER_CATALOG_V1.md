@@ -91,7 +91,7 @@ The source contains POLYLINE boundaries. Conversion to Polygon is permitted only
 | G. Navigation aids / lighthouse / buoy | `CONNECTED` | KHOA | Official nationwide `Buoy/getBuoyInfo` REST/XML 1.0 API through a server-only boundary | 공공저작물 출처표시 제1유형 | Weekly | Clustered Point GeoJSON; non-ENC markers; default OFF | Phase 4 | Dedicated-key live audit passed. 9,524 category responses normalize to 6,203 exact-deduplicated map records; 91 geographic-envelope anomalies remain disclosed. See `KHOA_NAVIGATION_AIDS_SOURCE_AUDIT_V2.md`. |
 | H. Bathymetry / contours | `DATUM_LICENSE_STRATEGY_REQUIRED` | KHOA | Hydrographic/chart products or approved public derivatives; access and resolution vary | Product-specific | Survey/chart release | Vector tiles or raster terrain-style source, never a large national GeoJSON | Phase 5 | Survey datum, soundings/contour license, scale-dependent generalization, and payload size need a dedicated data strategy. |
 | I. Formal ENC | `SEPARATE_ENC_PROGRAM` | KHOA-authorized distribution | S-57/S-101 chart distribution, not a generic public GeoJSON feed | Licensed/controlled chart product | Official chart updates | Dedicated ENC renderer/authorized service, not this prototype source | Separate program | Licensing, authorized distribution, update chain, symbology, and compliance. Do not approximate ENC from public reference layers. |
-| J. Active navigation warnings | `NEXT_DYNAMIC_SAFETY_LAYER` | KHOA / responsible authorities | Verified active warning source not yet selected | Source-specific | Dynamic/current | Separate server-normalized warning layer | Future | Must remain separate from static training/firing boundaries and requires validity-time, cancellation, freshness, and authority review. |
+| J. Active navigation warnings | `CONNECTED` | KHOA | Official `NavigationalWarning/getNavigationalWarningInfo` and `getNavigationalWarningDetailInfo` REST/XML API through a dedicated server-only boundary | 이용허락범위 제한 없음 | Event-driven; 10-minute server cache, stale fallback to 60 minutes, latest fetch shown | `khoa-navigation-warnings`, default OFF; point/line/polygon plus list-only fallback | Reference display only | Live audit covered 589 list observations, 112 unique documents, and 916 detail rows. Lifecycle remains `UNKNOWN`; no route blocking, rerouting, or passage decision. See `KHOA_NAVIGATION_WARNING_SOURCE_AUDIT_V2.md`. |
 
 ## Safety Boundary
 
@@ -99,6 +99,7 @@ The source contains POLYLINE boundaries. Conversion to Polygon is permitted only
 - The connected harbor-zone polygons are display-only and do not determine entry permission, departure availability, or route legality.
 - The connected training/firing-zone polygons are static public boundaries. They do not indicate current activity, passage permission, or route safety and never participate in route calculations.
 - `STATIC_REFERENCE_LAYER != ACTIVE_WARNING_LAYER`.
+- Navigation-warning data remains display-only even after connection. It cannot trigger route blocking, automatic rerouting, waypoint prohibition, risk scoring, or passage-safety decisions.
 - Feature clicks show only fields present in the official source.
 - UI wording: `참고용 해양공간정보이며 공식 항법장비를 대체하지 않습니다.`
 - Source attribution: `국립해양조사원(KHOA)`.

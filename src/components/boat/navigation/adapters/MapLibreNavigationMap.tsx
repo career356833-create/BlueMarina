@@ -6,24 +6,30 @@ import { createKhoaDeepWaterRouteLayerConfig, KHOA_DEEP_WATER_ROUTE_DATA_URL, KH
 import { createKhoaHarborZoneLayerConfig, KHOA_HARBOR_ZONE_DATA_URL, KHOA_HARBOR_ZONE_LAYER_ID, parseKhoaHarborZoneFeatureProperties, parseKhoaHarborZoneGeoJson, type KhoaHarborZoneProperties } from "@/lib/marine-navigation/adapters/khoa-harbor-zone";
 import { createKhoaNavigationAidsLayerConfig, KHOA_NAVIGATION_AIDS_DATA_URL, KHOA_NAVIGATION_AIDS_LAYER_ID, parseKhoaNavigationAidFeatureProperties, parseKhoaNavigationAidsGeoJson, type KhoaNavigationAid } from "@/lib/marine-navigation/adapters/khoa-navigation-aids";
 import { createKhoaTrainingFiringZoneLayerConfig, KHOA_TRAINING_FIRING_ZONE_DATA_URL, KHOA_TRAINING_FIRING_ZONE_LAYER_ID, parseKhoaTrainingFiringZoneFeatureProperties, parseKhoaTrainingFiringZoneGeoJson, type KhoaTrainingFiringZoneProperties } from "@/lib/marine-navigation/adapters/khoa-training-firing-zone";
+import { createKhoaNavigationWarningsLayerConfig, KHOA_NAVIGATION_WARNINGS_DATA_URL, KHOA_NAVIGATION_WARNINGS_LAYER_ID, parseKhoaNavigationWarningFeatureProperties, parseKhoaNavigationWarningsResponse, warningGeometryPoints, type KhoaNavigationWarning, type KhoaNavigationWarningsResponse } from "@/lib/marine-navigation/adapters/khoa-navigation-warnings";
 import type { GeoPoint } from "@/lib/marine-navigation/types";
 import { MapLibreNavigationProvider } from "./MapLibreNavigationProvider";
 
-export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisible, harborZoneVisible, navigationAidsVisible, trainingFiringZoneVisible, onPointSelect, onDeepWaterRouteSelect, onHarborZoneSelect, onNavigationAidSelect, onTrainingFiringZoneSelect, onDeepWaterRouteStateChange, onHarborZoneStateChange, onNavigationAidsStateChange, onTrainingFiringZoneStateChange }: {
+export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisible, harborZoneVisible, navigationAidsVisible, trainingFiringZoneVisible, navigationWarningsVisible, navigationWarningFocus, onPointSelect, onDeepWaterRouteSelect, onHarborZoneSelect, onNavigationAidSelect, onTrainingFiringZoneSelect, onNavigationWarningSelect, onDeepWaterRouteStateChange, onHarborZoneStateChange, onNavigationAidsStateChange, onTrainingFiringZoneStateChange, onNavigationWarningsStateChange, onNavigationWarningsDataChange }: {
   presentation: MapPresentation;
   deepWaterRouteVisible: boolean;
   harborZoneVisible: boolean;
   navigationAidsVisible: boolean;
   trainingFiringZoneVisible: boolean;
+  navigationWarningsVisible: boolean;
+  navigationWarningFocus: KhoaNavigationWarning | null;
   onPointSelect: (point: GeoPoint) => void;
   onDeepWaterRouteSelect: (feature: KhoaDeepWaterRouteProperties) => void;
   onHarborZoneSelect: (feature: KhoaHarborZoneProperties) => void;
   onNavigationAidSelect: (feature: KhoaNavigationAid) => void;
   onTrainingFiringZoneSelect: (feature: KhoaTrainingFiringZoneProperties) => void;
+  onNavigationWarningSelect: (feature: KhoaNavigationWarning) => void;
   onDeepWaterRouteStateChange: (state: "loading" | "ready" | "failed") => void;
   onHarborZoneStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationAidsStateChange: (state: "loading" | "ready" | "failed") => void;
   onTrainingFiringZoneStateChange: (state: "loading" | "ready" | "failed") => void;
+  onNavigationWarningsStateChange: (state: "loading" | "ready" | "failed") => void;
+  onNavigationWarningsDataChange: (data: KhoaNavigationWarningsResponse | null) => void;
 }) {
   const elementRef = useRef<HTMLDivElement>(null);
   const providerRef = useRef<MapLibreNavigationProvider | null>(null);
@@ -32,10 +38,12 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   const harborZoneSelectRef = useRef(onHarborZoneSelect);
   const navigationAidSelectRef = useRef(onNavigationAidSelect);
   const trainingFiringZoneSelectRef = useRef(onTrainingFiringZoneSelect);
+  const navigationWarningSelectRef = useRef(onNavigationWarningSelect);
   const deepWaterRouteVisibleRef = useRef(deepWaterRouteVisible);
   const harborZoneVisibleRef = useRef(harborZoneVisible);
   const navigationAidsVisibleRef = useRef(navigationAidsVisible);
   const trainingFiringZoneVisibleRef = useRef(trainingFiringZoneVisible);
+  const navigationWarningsVisibleRef = useRef(navigationWarningsVisible);
 
   useEffect(() => {
     if (!elementRef.current || providerRef.current) return;
@@ -52,6 +60,9 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
       } else if (layerId === KHOA_TRAINING_FIRING_ZONE_LAYER_ID) {
         const trainingFiringZone = parseKhoaTrainingFiringZoneFeatureProperties(properties);
         if (trainingFiringZone) trainingFiringZoneSelectRef.current(trainingFiringZone);
+      } else if (layerId === KHOA_NAVIGATION_WARNINGS_LAYER_ID) {
+        const warning = parseKhoaNavigationWarningFeatureProperties(properties);
+        if (warning) navigationWarningSelectRef.current(warning);
       }
     });
     const resizeObserver = new ResizeObserver(() => provider.resize());
@@ -157,6 +168,31 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   }, [onTrainingFiringZoneStateChange]);
 
   useEffect(() => {
+    const controller = new AbortController();
+    onNavigationWarningsStateChange("loading");
+    fetch(KHOA_NAVIGATION_WARNINGS_DATA_URL, { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error(`KHOA navigation-warning request failed: ${response.status}`);
+        return response.json() as Promise<unknown>;
+      })
+      .then((value) => {
+        const data = parseKhoaNavigationWarningsResponse(value);
+        providerRef.current?.addMarineLayer(createKhoaNavigationWarningsLayerConfig(data.geoJson, navigationWarningsVisibleRef.current));
+        onNavigationWarningsDataChange(data);
+        onNavigationWarningsStateChange("ready");
+      })
+      .catch((error: unknown) => {
+        if (error instanceof DOMException && error.name === "AbortError") return;
+        onNavigationWarningsDataChange(null);
+        onNavigationWarningsStateChange("failed");
+      });
+    return () => {
+      controller.abort();
+      providerRef.current?.removeMarineLayer(KHOA_NAVIGATION_WARNINGS_LAYER_ID);
+    };
+  }, [onNavigationWarningsDataChange, onNavigationWarningsStateChange]);
+
+  useEffect(() => {
     pointSelectRef.current = onPointSelect;
     providerRef.current?.setPointSelectHandler(onPointSelect);
   }, [onPointSelect]);
@@ -178,6 +214,10 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   }, [onTrainingFiringZoneSelect]);
 
   useEffect(() => {
+    navigationWarningSelectRef.current = onNavigationWarningSelect;
+  }, [onNavigationWarningSelect]);
+
+  useEffect(() => {
     deepWaterRouteVisibleRef.current = deepWaterRouteVisible;
     providerRef.current?.setMarineLayerVisibility(KHOA_DEEP_WATER_ROUTE_LAYER_ID, deepWaterRouteVisible);
   }, [deepWaterRouteVisible]);
@@ -196,6 +236,15 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
     trainingFiringZoneVisibleRef.current = trainingFiringZoneVisible;
     providerRef.current?.setMarineLayerVisibility(KHOA_TRAINING_FIRING_ZONE_LAYER_ID, trainingFiringZoneVisible);
   }, [trainingFiringZoneVisible]);
+
+  useEffect(() => {
+    navigationWarningsVisibleRef.current = navigationWarningsVisible;
+    providerRef.current?.setMarineLayerVisibility(KHOA_NAVIGATION_WARNINGS_LAYER_ID, navigationWarningsVisible);
+  }, [navigationWarningsVisible]);
+
+  useEffect(() => {
+    if (navigationWarningFocus) providerRef.current?.focus(warningGeometryPoints(navigationWarningFocus.geometry));
+  }, [navigationWarningFocus]);
 
   useEffect(() => {
     providerRef.current?.setPresentation(presentation);

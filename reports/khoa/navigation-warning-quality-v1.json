@@ -1,0 +1,88 @@
+{
+  "reportVersion": "1.0",
+  "generatedAt": "2026-09-06T03:47:36.246Z",
+  "source": "국립해양조사원(KHOA)",
+  "credentialConfigured": true,
+  "credentialLogged": false,
+  "requestUrlLogged": false,
+  "auditWindow": {
+    "days": 80,
+    "from": "20260619",
+    "to": "20260906"
+  },
+  "live": {
+    "http": 200,
+    "resultCodes": [
+      "00"
+    ],
+    "listObservations": 589,
+    "availableOnLatestRequest": 5
+  },
+  "fetchedListCount": 589,
+  "auditedDetailDocumentCount": 112,
+  "auditedDetailRecordCount": 916,
+  "uniqueDocumentNumberCount": 112,
+  "duplicateDocumentNumberCount": 85,
+  "uniqueDocumentAreaCount": 916,
+  "repeatedDetailRecordCount": 0,
+  "detailJoinCount": 102,
+  "noDetailDocumentCount": 10,
+  "positionPresentCount": 916,
+  "positionMissingCount": 0,
+  "geometryPointCount": 219,
+  "geometryLineCount": 0,
+  "geometryPolygonCount": 692,
+  "geometryNullCount": 15,
+  "malformedPositionCount": 5,
+  "missingTitleCount": 0,
+  "missingContentCount": 0,
+  "missingAreaCount": 10,
+  "missingAlarmDateCount": 0,
+  "missingAlarmTimeCount": 0,
+  "unknownLifecycleCount": 926,
+  "inferredLifecycleCount": 0,
+  "observedListFields": [
+    "app_cat",
+    "area",
+    "basic",
+    "content",
+    "doc_num",
+    "doc_type",
+    "gov_cd",
+    "noti_cat",
+    "title"
+  ],
+  "observedDetailFields": [
+    "alarm_date",
+    "alarm_time",
+    "area",
+    "doc_num",
+    "position",
+    "position_desc",
+    "position_nm",
+    "sea_pos"
+  ],
+  "positionFormats": {
+    "dmsSuffix": 913,
+    "decimal": 0,
+    "textOnly": 0,
+    "empty": 0
+  },
+  "sampleRawPositionPatterns": [
+    "37-04-35N, 126-32-30E&#xD;\n37-04-35N, 126-33-23E&#xD;\n37-02-58N, 126-33-23E&#xD;\n37-02-58N, 126-32-30E",
+    "34-09-41N,128-00-00E&#xD;\n34-18-01N,128-11-27E&#xD;\n34-18-00N,128-35-00E&#xD;\n34-20-12N,128-35-14E&#xD;\n34-09-13N,128-43-11E&#xD;\n34-00-00N,128-35-00E&#xD;\n34-00-00N,128-00-00E&#xD;",
+    "36-18-39.0N,126-33-02.0E&#xD;\n36-14-00.0N,126-38-00.0E&#xD;\n36-06-23.0N,126-32-11.0E&#xD;\n36-13-49.0N,126-25-00.0E&#xD;"
+  ],
+  "lifecycle": {
+    "defaultStatus": "UNKNOWN",
+    "structuredStatusFieldsObserved": false
+  },
+  "geometryPolicy": {
+    "point": "one parsed coordinate",
+    "line": "two coordinates only with explicit sequential-line description",
+    "polygon": "three or more coordinates only with explicit sequential enclosed-area description",
+    "ambiguous": "geometry=null",
+    "convexHull": false,
+    "inferredBuffer": false
+  }
+}
