@@ -8,10 +8,11 @@ import { createKhoaNavigationAidsLayerConfig, KHOA_NAVIGATION_AIDS_DATA_URL, KHO
 import { createKhoaTrainingFiringZoneLayerConfig, KHOA_TRAINING_FIRING_ZONE_DATA_URL, KHOA_TRAINING_FIRING_ZONE_LAYER_ID, parseKhoaTrainingFiringZoneFeatureProperties, parseKhoaTrainingFiringZoneGeoJson, type KhoaTrainingFiringZoneProperties } from "@/lib/marine-navigation/adapters/khoa-training-firing-zone";
 import { createKhoaNavigationWarningsLayerConfig, KHOA_NAVIGATION_WARNINGS_DATA_URL, KHOA_NAVIGATION_WARNINGS_LAYER_ID, parseKhoaNavigationWarningFeatureProperties, parseKhoaNavigationWarningsResponse, warningGeometryPoints, type KhoaNavigationWarning, type KhoaNavigationWarningsResponse } from "@/lib/marine-navigation/adapters/khoa-navigation-warnings";
 import { createKhoaTideStationsLayerConfig, KHOA_TIDE_STATIONS_DATA_URL, KHOA_TIDE_STATIONS_LAYER_ID, parseKhoaTideStationFeatureProperties, parseKhoaTideStationsResponse, type KhoaTideStation } from "@/lib/marine-navigation/adapters/khoa-tide-stations";
+import { createKmaMarineWeatherLayerConfig, KMA_MARINE_WEATHER_LAYER_ID, parseKmaMarineWeatherFeatureProperties, type KmaMarineWeatherForecastZone } from "@/lib/marine-navigation/adapters/kma-marine-weather";
 import type { GeoPoint } from "@/lib/marine-navigation/types";
 import { MapLibreNavigationProvider } from "./MapLibreNavigationProvider";
 
-export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisible, harborZoneVisible, navigationAidsVisible, trainingFiringZoneVisible, navigationWarningsVisible, tideStationsVisible, navigationWarningFocus, onPointSelect, onDeepWaterRouteSelect, onHarborZoneSelect, onNavigationAidSelect, onTrainingFiringZoneSelect, onNavigationWarningSelect, onTideStationSelect, onDeepWaterRouteStateChange, onHarborZoneStateChange, onNavigationAidsStateChange, onTrainingFiringZoneStateChange, onNavigationWarningsStateChange, onTideStationsStateChange, onNavigationWarningsDataChange }: {
+export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisible, harborZoneVisible, navigationAidsVisible, trainingFiringZoneVisible, navigationWarningsVisible, tideStationsVisible, marineWeatherVisible, navigationWarningFocus, onPointSelect, onDeepWaterRouteSelect, onHarborZoneSelect, onNavigationAidSelect, onTrainingFiringZoneSelect, onNavigationWarningSelect, onTideStationSelect, onMarineWeatherSelect, onDeepWaterRouteStateChange, onHarborZoneStateChange, onNavigationAidsStateChange, onTrainingFiringZoneStateChange, onNavigationWarningsStateChange, onTideStationsStateChange, onMarineWeatherStateChange, onNavigationWarningsDataChange }: {
   presentation: MapPresentation;
   deepWaterRouteVisible: boolean;
   harborZoneVisible: boolean;
@@ -19,6 +20,7 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   trainingFiringZoneVisible: boolean;
   navigationWarningsVisible: boolean;
   tideStationsVisible: boolean;
+  marineWeatherVisible: boolean;
   navigationWarningFocus: KhoaNavigationWarning | null;
   onPointSelect: (point: GeoPoint) => void;
   onDeepWaterRouteSelect: (feature: KhoaDeepWaterRouteProperties) => void;
@@ -27,12 +29,14 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   onTrainingFiringZoneSelect: (feature: KhoaTrainingFiringZoneProperties) => void;
   onNavigationWarningSelect: (feature: KhoaNavigationWarning) => void;
   onTideStationSelect: (feature: KhoaTideStation) => void;
+  onMarineWeatherSelect: (feature: KmaMarineWeatherForecastZone) => void;
   onDeepWaterRouteStateChange: (state: "loading" | "ready" | "failed") => void;
   onHarborZoneStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationAidsStateChange: (state: "loading" | "ready" | "failed") => void;
   onTrainingFiringZoneStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationWarningsStateChange: (state: "loading" | "ready" | "failed") => void;
   onTideStationsStateChange: (state: "loading" | "ready" | "failed") => void;
+  onMarineWeatherStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationWarningsDataChange: (data: KhoaNavigationWarningsResponse | null) => void;
 }) {
   const elementRef = useRef<HTMLDivElement>(null);
@@ -44,12 +48,14 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   const trainingFiringZoneSelectRef = useRef(onTrainingFiringZoneSelect);
   const navigationWarningSelectRef = useRef(onNavigationWarningSelect);
   const tideStationSelectRef = useRef(onTideStationSelect);
+  const marineWeatherSelectRef = useRef(onMarineWeatherSelect);
   const deepWaterRouteVisibleRef = useRef(deepWaterRouteVisible);
   const harborZoneVisibleRef = useRef(harborZoneVisible);
   const navigationAidsVisibleRef = useRef(navigationAidsVisible);
   const trainingFiringZoneVisibleRef = useRef(trainingFiringZoneVisible);
   const navigationWarningsVisibleRef = useRef(navigationWarningsVisible);
   const tideStationsVisibleRef = useRef(tideStationsVisible);
+  const marineWeatherVisibleRef = useRef(marineWeatherVisible);
 
   useEffect(() => {
     if (!elementRef.current || providerRef.current) return;
@@ -72,6 +78,9 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
       } else if (layerId === KHOA_TIDE_STATIONS_LAYER_ID) {
         const station = parseKhoaTideStationFeatureProperties(properties);
         if (station) tideStationSelectRef.current(station);
+      } else if (layerId === KMA_MARINE_WEATHER_LAYER_ID) {
+        const zone = parseKmaMarineWeatherFeatureProperties(properties);
+        if (zone) marineWeatherSelectRef.current(zone);
       }
     });
     const resizeObserver = new ResizeObserver(() => provider.resize());
@@ -225,6 +234,17 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   }, [onTideStationsStateChange]);
 
   useEffect(() => {
+    onMarineWeatherStateChange("loading");
+    try {
+      providerRef.current?.addMarineLayer(createKmaMarineWeatherLayerConfig(undefined, marineWeatherVisibleRef.current));
+      onMarineWeatherStateChange("ready");
+    } catch {
+      onMarineWeatherStateChange("failed");
+    }
+    return () => providerRef.current?.removeMarineLayer(KMA_MARINE_WEATHER_LAYER_ID);
+  }, [onMarineWeatherStateChange]);
+
+  useEffect(() => {
     pointSelectRef.current = onPointSelect;
     providerRef.current?.setPointSelectHandler(onPointSelect);
   }, [onPointSelect]);
@@ -252,6 +272,10 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   useEffect(() => {
     tideStationSelectRef.current = onTideStationSelect;
   }, [onTideStationSelect]);
+
+  useEffect(() => {
+    marineWeatherSelectRef.current = onMarineWeatherSelect;
+  }, [onMarineWeatherSelect]);
 
   useEffect(() => {
     deepWaterRouteVisibleRef.current = deepWaterRouteVisible;
@@ -282,6 +306,11 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
     tideStationsVisibleRef.current = tideStationsVisible;
     providerRef.current?.setMarineLayerVisibility(KHOA_TIDE_STATIONS_LAYER_ID, tideStationsVisible);
   }, [tideStationsVisible]);
+
+  useEffect(() => {
+    marineWeatherVisibleRef.current = marineWeatherVisible;
+    providerRef.current?.setMarineLayerVisibility(KMA_MARINE_WEATHER_LAYER_ID, marineWeatherVisible);
+  }, [marineWeatherVisible]);
 
   useEffect(() => {
     if (navigationWarningFocus) providerRef.current?.focus(warningGeometryPoints(navigationWarningFocus.geometry));

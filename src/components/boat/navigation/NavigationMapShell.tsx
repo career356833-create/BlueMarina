@@ -8,6 +8,7 @@ import type { KhoaNavigationAid } from "@/lib/marine-navigation/adapters/khoa-na
 import type { KhoaTrainingFiringZoneProperties } from "@/lib/marine-navigation/adapters/khoa-training-firing-zone";
 import type { KhoaNavigationWarning, KhoaNavigationWarningsResponse } from "@/lib/marine-navigation/adapters/khoa-navigation-warnings";
 import type { KhoaTideStation } from "@/lib/marine-navigation/adapters/khoa-tide-stations";
+import type { KmaMarineWeatherForecastZone } from "@/lib/marine-navigation/adapters/kma-marine-weather";
 import type { GeoPoint } from "@/lib/marine-navigation/types";
 
 const MapLibreMap = dynamic(() => import("./adapters/MapLibreNavigationMap"), { ssr: false, loading: () => <div className="h-full w-full animate-pulse bg-[#17363a]" aria-label="지도를 불러오는 중" /> });
@@ -20,6 +21,7 @@ export function NavigationMapShell(props: {
   trainingFiringZoneVisible: boolean;
   navigationWarningsVisible: boolean;
   tideStationsVisible: boolean;
+  marineWeatherVisible: boolean;
   navigationWarningFocus: KhoaNavigationWarning | null;
   onPointSelect: (point: GeoPoint) => void;
   onDeepWaterRouteSelect: (feature: KhoaDeepWaterRouteProperties) => void;
@@ -28,12 +30,14 @@ export function NavigationMapShell(props: {
   onTrainingFiringZoneSelect: (feature: KhoaTrainingFiringZoneProperties) => void;
   onNavigationWarningSelect: (feature: KhoaNavigationWarning) => void;
   onTideStationSelect: (feature: KhoaTideStation) => void;
+  onMarineWeatherSelect: (feature: KmaMarineWeatherForecastZone) => void;
   onDeepWaterRouteStateChange: (state: "loading" | "ready" | "failed") => void;
   onHarborZoneStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationAidsStateChange: (state: "loading" | "ready" | "failed") => void;
   onTrainingFiringZoneStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationWarningsStateChange: (state: "loading" | "ready" | "failed") => void;
   onTideStationsStateChange: (state: "loading" | "ready" | "failed") => void;
+  onMarineWeatherStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationWarningsDataChange: (data: KhoaNavigationWarningsResponse | null) => void;
 }) {
   return <MapLibreMap {...props} />;

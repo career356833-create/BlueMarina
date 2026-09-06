@@ -47,6 +47,13 @@ export type KmaMarineForecastParseResult =
 const REQUIRED_FIELDS = ["tma_fc", "tma_ef", "Lzone", "Szone"] as const;
 const NUMERIC_FIELDS = new Set(["wh_sig", "wvprd_max", "wvdr", "ws", "wd", "vs", "rain", "tw"]);
 
+function normalizeHeaderField(value: string) {
+  const normalized = value.trim().toLowerCase();
+  if (normalized === "lzone") return "Lzone";
+  if (normalized === "szone") return "Szone";
+  return normalized;
+}
+
 function pad2(value: number) {
   return String(value).padStart(2, "0");
 }
@@ -139,6 +146,9 @@ function parseSwellRisk(value: string | undefined) {
 }
 
 function splitCsvLine(line: string) {
+  if (!line.includes(",")) {
+    return line.replace(/^#\s*/, "").trim().split(/\s+/).filter(Boolean);
+  }
   const values: string[] = [];
   let current = "";
   let quoted = false;
@@ -207,7 +217,7 @@ export function parseKmaMarineForecastCsv(csvText: string, lzone: number, szone:
   }
 
   const headerIndex = lines.findIndex((line) => {
-    const fields = splitCsvLine(line);
+    const fields = splitCsvLine(line).map(normalizeHeaderField);
     return fields.includes("tma_fc") && fields.includes("tma_ef") && fields.includes("Lzone") && fields.includes("Szone");
   });
 
@@ -219,7 +229,7 @@ export function parseKmaMarineForecastCsv(csvText: string, lzone: number, szone:
     };
   }
 
-  const header = splitCsvLine(lines[headerIndex]);
+  const header = splitCsvLine(lines[headerIndex]).map(normalizeHeaderField);
   for (const field of REQUIRED_FIELDS) {
     if (!header.includes(field)) {
       return {

@@ -36,6 +36,9 @@ type KmaMarineForecastApiErrorBody = {
 type KmaMarineForecastApiSuccessBody = {
   ok: true;
   data: KmaMarineForecast;
+  freshness: "fresh" | "stale";
+  fetchedAt: string;
+  lastSuccessfulFetchAt: string;
   request: {
     tma_fc: string;
     tma_ef: string;
@@ -50,6 +53,9 @@ type KmaMarineForecastApiSuccessBody = {
 
 const KMA_MARINE_FORECAST_ENDPOINT = "https://apihub.kma.go.kr/api/typ06/url/marine_small_zone.php";
 const UPSTREAM_TIMEOUT_MS = 8000;
+const FRESH_CACHE_MS = 30 * 60 * 1000;
+const STALE_CACHE_MS = 18 * 60 * 60 * 1000;
+const forecastCache = new Map<string, KmaMarineForecastApiSuccessBody>();
 
 function errorResponse(body: KmaMarineForecastApiErrorBody, status: number) {
   return NextResponse.json(body, { status });
@@ -136,6 +142,13 @@ export async function GET(request: Request) {
     );
   }
 
+  const cacheKey = `${tma_fc}:${tma_ef}:${zone.lzone}:${zone.szone}`;
+  const cached = forecastCache.get(cacheKey);
+  const now = Date.now();
+  if (cached && now - Date.parse(cached.lastSuccessfulFetchAt) <= FRESH_CACHE_MS) {
+    return NextResponse.json(cached);
+  }
+
   try {
     const response = await fetch(
       buildUpstreamUrl({
@@ -152,36 +165,22 @@ export async function GET(request: Request) {
     );
 
     if (!response.ok) {
-      return errorResponse(
-        {
-          ok: false,
-          code: "UPSTREAM_ERROR",
-          message: "기상청 소해구별 예측데이터 응답 상태가 비정상입니다."
-        },
-        502
-      );
+      throw new Error("UPSTREAM_HTTP_ERROR");
     }
 
     const csvText = await decodeUpstreamText(response);
     const parsed = parseKmaMarineForecastCsv(csvText, zone.lzone, zone.szone);
     if (!parsed.ok) {
-      return errorResponse(
-        {
-          ok: false,
-          code: parsed.code,
-          message: parsed.message,
-          meta: {
-            header: parsed.header,
-            rowCount: parsed.rowCount
-          }
-        },
-        502
-      );
+      throw new Error(parsed.code);
     }
 
-    return NextResponse.json({
+    const fetchedAt = new Date().toISOString();
+    const payload = {
       ok: true,
       data: parsed.data,
+      freshness: "fresh",
+      fetchedAt,
+      lastSuccessfulFetchAt: fetchedAt,
       request: {
         tma_fc,
         tma_ef,
@@ -192,8 +191,13 @@ export async function GET(request: Request) {
         header: parsed.header,
         rowCount: parsed.rowCount
       }
-    } satisfies KmaMarineForecastApiSuccessBody);
+    } satisfies KmaMarineForecastApiSuccessBody;
+    forecastCache.set(cacheKey, payload);
+    return NextResponse.json(payload);
   } catch (error) {
+    if (cached && now - Date.parse(cached.lastSuccessfulFetchAt) <= STALE_CACHE_MS) {
+      return NextResponse.json({ ...cached, freshness: "stale", fetchedAt: new Date().toISOString() });
+    }
     if (isAbortLikeError(error)) {
       return errorResponse(
         {

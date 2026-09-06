@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-06T20:22:58.329Z",
+  "status": "CONNECTED_FORECAST_MODEL",
+  "selectedSource": {
+    "provider": "KMA",
+    "name": "Small-zone marine forecast",
+    "endpoint": "https://apihub.kma.go.kr/api/typ06/url/marine_small_zone.php",
+    "kind": "MODEL_FORECAST",
+    "format": "TEXT_CSV_OR_WHITESPACE",
+    "timezone": "UTC",
+    "issueCadence": "00_AND_12_UTC",
+    "forecastStepHours": 3,
+    "forecastHorizonHours": 75
+  },
+  "liveSmoke": {
+    "httpStatus": 200,
+    "headerDetected": true,
+    "itemCount": 1,
+    "normalizedStatus": "ready",
+    "freshness": "fresh",
+    "missingSignificantWaveHeight": 0,
+    "missingWind": 0,
+    "missingWaterTemperature": 1,
+    "missingVisibility": 0,
+    "issuedAtPresent": true,
+    "forecastAtPresent": true,
+    "credentialRejected": false,
+    "rawResponseStored": false,
+    "keyExposed": false
+  },
+  "mapGeometry": {
+    "sourceRows": 1331,
+    "uniqueLargeZones": 1330,
+    "representativePoints": 1329,
+    "validCoordinates": 1329,
+    "invalidCoordinates": 0,
+    "duplicateZoneIds": 0,
+    "excludedAmbiguousLargeZoneIds": [7432],
+    "fullSmallZoneCoverage": false
+  },
+  "availability": {
+    "forecast": "AVAILABLE",
+    "observation": "BLOCKED_CREDENTIAL",
+    "stationMetadata": "BLOCKED_CREDENTIAL"
+  },
+  "fields": {
+    "significantWaveHeight": { "sourceField": "wh_sig", "unit": "m", "status": "DOCUMENTED" },
+    "maximumWavePeriod": { "sourceField": "wvprd_max", "unit": "sec", "status": "DOCUMENTED" },
+    "waveDirection": { "sourceField": "wvdr", "unit": "degree", "status": "DOCUMENTED" },
+    "windSpeed": { "sourceField": "ws", "unit": "m/s", "status": "DOCUMENTED" },
+    "windDirection": { "sourceField": "wd", "unit": "degree", "status": "DOCUMENTED" },
+    "visibility": { "sourceField": "vs", "unit": "m", "status": "DOCUMENTED" },
+    "precipitation": { "sourceField": "rain", "unit": "mm", "status": "DOCUMENTED" },
+    "waterTemperature": { "sourceField": "tw", "unit": "C", "depth": "NOT_DOCUMENTED" },
+    "pressure": { "sourceField": null, "unit": null, "status": "NOT_IN_SELECTED_SOURCE" }
+  },
+  "timestamps": {
+    "issuedAt": "tma_fc",
+    "forecastAt": "tma_ef",
+    "observedAt": null,
+    "timezone": "UTC",
+    "status": "DOCUMENTED"
+  },
+  "missingValuePolicy": {
+    "sentinels": [-999, -999.0],
+    "empty": null,
+    "zeroPreserved": true
+  },
+  "cache": {
+    "freshSeconds": 1800,
+    "staleFallbackSeconds": 64800,
+    "states": ["fresh", "stale", "unavailable"]
+  },
+  "safety": {
+    "severityInference": false,
+    "departureJudgement": false,
+    "weatherRouting": false,
+    "safeRouting": false
+  }
+}
