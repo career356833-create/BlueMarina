@@ -17,6 +17,7 @@ const dataPath = path.join(root, "src/data/khoa-tide-stations.ts");
 const contractPath = path.join(root, "src/lib/marine-navigation/adapters/khoa-tide-stations.ts");
 const routePath = path.join(root, "src/app/api/sea-info/tide/route.ts");
 const stationRoutePath = path.join(root, "src/app/api/sea-info/tide/stations/route.ts");
+const observationRoutePath = path.join(root, "src/app/api/sea-info/tide/observation/route.ts");
 const mapPath = path.join(root, "src/components/boat/navigation/adapters/MapLibreNavigationMap.tsx");
 const controlPath = path.join(root, "src/components/boat/navigation/MarineLayerControl.tsx");
 const detailsPath = path.join(root, "src/components/boat/navigation/TideStationDetails.tsx");
@@ -63,6 +64,17 @@ test("server boundaries keep station metadata long-lived and predictions fresh/s
   assert.match(tideRoute, /STALE_CACHE_MS/);
   assert.match(tideRoute, /freshness: "stale"/);
   assert.match(tideRoute, /parseKhoaTidePayload/);
+  assert.match(tideRoute, /tideFcstHghLw\/GetTideFcstHghLwApiService/);
+});
+
+test("observation boundary is dedicated-key, explicitly enabled, and fail-closed", () => {
+  const route = fs.readFileSync(observationRoutePath, "utf8");
+  assert.match(route, /KHOA_TIDE_OBSERVATION_ENABLED/);
+  assert.match(route, /KHOA_TIDE_OBSERVATION_API_KEY/);
+  assert.match(route, /surveyTideLevel\/GetSurveyTideLevelApiService/);
+  assert.doesNotMatch(route, /process\.env\.KHOA_API_KEY/);
+  assert.match(route, /FRESH_CACHE_MS = 10 \* 60/);
+  assert.match(route, /STALE_CACHE_MS = 60 \* 60/);
 });
 
 test("MapLibre and controls wire an isolated default-off tide layer", () => {
@@ -75,14 +87,15 @@ test("MapLibre and controls wire an isolated default-off tide layer", () => {
   assert.match(control, /기본 OFF/);
 });
 
-test("detail panel separates unavailable observations from official predictions", () => {
+test("detail panel separates observations from official predictions and uses the documented cm unit", () => {
   const details = fs.readFileSync(detailsPath, "utf8");
   assert.match(details, /최근 실측 조위/);
-  assert.match(details, /현재 연결된 공식 계약에서 제공하지 않음/);
+  assert.match(details, /실측 조위 연결 대기/);
   assert.match(details, /공식 고·저조 예측/);
-  assert.match(details, /원문값/);
+  assert.match(details, /KHOA_TIDE_STATION_LEVEL_UNIT/);
   assert.match(details, /KHOA_TIDE_STATION_DATUM_STATUS/);
   assert.equal(contract.KHOA_TIDE_STATION_DATUM_STATUS, "DATUM_NOT_DOCUMENTED");
+  assert.equal(contract.KHOA_TIDE_STATION_LEVEL_UNIT, "cm");
   assert.match(details, /KHOA_TIDE_STATION_SAFETY_NOTICE/);
   assert.match(contract.KHOA_TIDE_STATION_SAFETY_NOTICE, /실제 항해 수심/);
   assert.doesNotMatch(details, /actual depth|under-keel|safe routing/i);

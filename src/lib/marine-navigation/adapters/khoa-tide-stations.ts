@@ -6,6 +6,7 @@ export const KHOA_TIDE_STATIONS_DATA_URL = "/api/sea-info/tide/stations";
 export const KHOA_TIDE_STATIONS_LAYER_ID = "khoa-tide-stations";
 export const KHOA_TIDE_STATION_SAFETY_NOTICE = "조위 예측 정보는 참고용이며 실제 항해 수심, 통항 가능 여부 또는 공식 항법장비를 대체하지 않습니다.";
 export const KHOA_TIDE_STATION_DATUM_STATUS = "DATUM_NOT_DOCUMENTED" as const;
+export const KHOA_TIDE_STATION_LEVEL_UNIT = "cm" as const;
 
 export type KhoaTideStation = KhoaTideStationSnapshot & {
   source: "KHOA";

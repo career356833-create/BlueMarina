@@ -14,11 +14,12 @@ Blue Marina reuses the existing server-only high/low tide forecast route:
 
 - Blue Marina: `GET /api/sea-info/tide?stationId=<DT_CODE>&date=<yyyy-MM-dd>`
 - Upstream: `GetTideFcstHghLwApiService`
+- Replacement catalog: data.go.kr `15156018`, 조석예보(고, 저조)
 - Authentication: server-only `KHOA_API_KEY`
 - Upstream format: JSON
 - Existing parser: `parseKhoaTidePayload`
 
-KHOA's 2026 public-data notice lists this legacy forecast family among APIs being retired in favor of national-focus replacements. V1 therefore treats it as a transitional boundary and records failures without degrading the rest of navigation.
+KHOA's 2026 replacement notice maps the retired legacy forecast family to data.go.kr `15156018`. The endpoint already used by Blue Marina is that active national-focus replacement API, so prediction no longer depends on the retired contract.
 
 ## Station catalog
 
@@ -26,9 +27,9 @@ The station endpoint `/api/sea-info/tide/stations` serves a source-backed snapsh
 
 ## Observation and prediction
 
-- Current/recent observation: not connected by the verified existing contract; the UI says unavailable.
+- Current/recent observation: a fail-closed server boundary is prepared for data.go.kr `15142507` and remains disabled by default. A dedicated local credential reached HTTP 200 and `resultCode=00`, but live item validation is still pending because subsequent probes ended during unstable TLS connections.
 - Prediction: official high/low event time and raw predicted value from the existing normalizer.
-- Prediction unit: not confirmed in the verified contract, so the UI does not append `cm` or `m`.
+- Prediction unit: `cm`, confirmed by the official replacement API guide for `predcTdlvVl`.
 - High/low labels: source-backed; no local extrema inference.
 - Horizon: the requested calendar day, as supported by the existing route.
 
@@ -42,6 +43,7 @@ The verified contract did not establish the vertical datum. Blue Marina must not
 
 - Station metadata: server/CDN cache for 24 hours with stale revalidation.
 - Prediction: in-process fresh cache for 1 hour and stale fallback for up to 24 hours after an upstream failure.
+- Observation boundary: fresh cache for 10 minutes and stale fallback for 60 minutes when enabled.
 - The panel distinguishes fresh and stale data and shows the last successful fetch time.
 - An unavailable prediction affects only the selected tide station; station markers and all other navigation layers remain usable.
 

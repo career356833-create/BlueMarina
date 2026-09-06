@@ -11,7 +11,7 @@
   "observationAvailability": { "available": 0, "total": 27, "status": "NOT_CONNECTED" },
   "predictionAvailability": { "available": 27, "total": 27, "eventsObserved": 92 },
   "datumStatus": "DATUM_NOT_DOCUMENTED",
-  "predictionUnitStatus": "NOT_DOCUMENTED_IN_VERIFIED_CONTRACT",
+  "predictionUnitStatus": "CONFIRMED_CM_IN_REPLACEMENT_CONTRACT",
   "sourceUpdateObservation": "All 27 verified station requests returned resultCode 00 during the 2026-09-06 contract audit.",
   "apiFailures": 0,
   "anomalies": [

@@ -1,0 +1,42 @@
+{
+  "reportVersion": "1.0",
+  "auditedAt": "2026-09-06T00:00:00+09:00",
+  "replacementNotice": "NOTICE_0000000004473",
+  "prediction": {
+    "dataGoKrId": "15156018",
+    "operation": "GetTideFcstHghLwApiService",
+    "alreadyUsedByApplication": true,
+    "liveContract": "PASS",
+    "unit": "cm"
+  },
+  "observation": {
+    "primaryDataGoKrId": "15142507",
+    "operation": "GetSurveyTideLevelApiService",
+    "alternativeLatestDataGoKrId": "15155508",
+    "boundaryImplemented": true,
+    "enabledByDefault": false,
+    "dedicatedCredentialPresent": true,
+    "currentCredentialLiveResult": "HTTP_200_RESULT_00_NO_ITEMS_THEN_NETWORK_INCONCLUSIVE",
+    "currentCredentialReasonCode": null,
+    "liveConnected": false,
+    "liveItemVerified": false,
+    "latestProbe": {
+      "classification": "NETWORK_INCONCLUSIVE",
+      "attempts": 6,
+      "httpResponses": 0,
+      "dnsPassed": true,
+      "tcpPassed": true,
+      "tlsUnstable": true
+    },
+    "timestampField": "obsrvnDt",
+    "valueField": "bscTdlvHgt",
+    "unit": "cm"
+  },
+  "datumStatus": "DATUM_NOT_DOCUMENTED",
+  "catalogStatus": "STATION_CONNECTED_DATA_PARTIAL",
+  "bathymetryCombined": false,
+  "actualDepthCalculated": false,
+  "clearanceCalculated": false,
+  "safeRoutingEnabled": false,
+  "secretIncluded": false
+}

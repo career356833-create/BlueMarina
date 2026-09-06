@@ -63,6 +63,29 @@ export type TideForecastResponse = {
   metadata: {
     sourceOrganization: "국립해양조사원";
     sourceName: "조석예보(고·저조)";
+    levelUnit: "cm";
+    datumStatus: "DATUM_NOT_DOCUMENTED";
+    updatedAt: string;
+    isMock: false;
+  };
+};
+
+export type TideObservationResponse = {
+  status: "ready" | "unavailable";
+  station: {
+    obsCode: string;
+    name?: string;
+  };
+  date: string;
+  observation?: {
+    observedAt: string;
+    levelCm: number;
+  };
+  metadata: {
+    sourceOrganization: "국립해양조사원";
+    sourceName: "조위관측소 실측·예측 조위";
+    levelUnit: "cm";
+    datumStatus: "DATUM_NOT_DOCUMENTED";
     updatedAt: string;
     isMock: false;
   };

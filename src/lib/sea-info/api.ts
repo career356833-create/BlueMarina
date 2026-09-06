@@ -1,4 +1,4 @@
-import type { TideForecastResponse } from "@/lib/sea-info/types";
+import type { TideForecastResponse, TideObservationResponse } from "@/lib/sea-info/types";
 
 export type TideInfoResult =
   | {
@@ -17,6 +17,21 @@ export type TideInfoResult =
       message: string;
       stationId?: string;
       date?: string;
+    };
+
+export type TideObservationResult =
+  | {
+      ok: true;
+      status: number;
+      data: TideObservationResponse;
+      freshness: "fresh" | "stale";
+      lastSuccessfulFetchAt: string;
+    }
+  | {
+      ok: false;
+      status: number;
+      code: string;
+      message: string;
     };
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -87,5 +102,28 @@ export async function fetchTideInfo(stationId: string, date: string): Promise<Ti
       stationId,
       date
     };
+  }
+}
+
+export async function fetchTideObservation(stationId: string, date: string): Promise<TideObservationResult> {
+  if (!stationId || !date) return { ok: false, status: 400, code: "INVALID_REQUEST", message: "관측소와 날짜가 필요합니다." };
+  const params = new URLSearchParams({ stationId, date });
+  try {
+    const response = await fetch(`/api/sea-info/tide/observation?${params.toString()}`, { cache: "no-store" });
+    const payload: unknown = await response.json().catch(() => null);
+    if (response.ok && isRecord(payload) && payload.ok === true && isRecord(payload.data)) {
+      return {
+        ok: true,
+        status: response.status,
+        data: payload.data as TideObservationResponse,
+        freshness: payload.freshness === "stale" ? "stale" : "fresh",
+        lastSuccessfulFetchAt: getString(payload.lastSuccessfulFetchAt) || (payload.data as TideObservationResponse).metadata.updatedAt,
+      };
+    }
+    return isRecord(payload)
+      ? { ok: false, status: response.status, code: getString(payload.code) || "API_ERROR", message: getString(payload.message) || "실측 조위를 가져오지 못했습니다." }
+      : { ok: false, status: response.status, code: "INVALID_RESPONSE", message: "실측 조위 응답 형식이 올바르지 않습니다." };
+  } catch {
+    return { ok: false, status: 0, code: "NETWORK_ERROR", message: "실측 조위 요청 중 네트워크 오류가 발생했습니다." };
   }
 }

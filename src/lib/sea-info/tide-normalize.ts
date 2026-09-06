@@ -372,6 +372,8 @@ export function parseKhoaTidePayload(payload: unknown, obsCode: string, reqDate:
         metadata: {
           sourceOrganization: "국립해양조사원",
           sourceName: "조석예보(고·저조)",
+          levelUnit: "cm",
+          datumStatus: "DATUM_NOT_DOCUMENTED",
           updatedAt: new Date().toISOString(),
           isMock: false
         }
@@ -436,6 +438,8 @@ export function parseKhoaTidePayload(payload: unknown, obsCode: string, reqDate:
       metadata: {
         sourceOrganization: "국립해양조사원",
         sourceName: "조석예보(고·저조)",
+        levelUnit: "cm",
+        datumStatus: "DATUM_NOT_DOCUMENTED",
         updatedAt: new Date().toISOString(),
         isMock: false
       }
