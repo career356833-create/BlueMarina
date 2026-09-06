@@ -1,0 +1,22 @@
+{
+  "reportVersion": "1.0",
+  "auditedAt": "2026-09-06T00:00:00+09:00",
+  "source": "KHOA high/low tide forecast API",
+  "stationTotal": 27,
+  "validCoordinates": 27,
+  "invalidCoordinates": 0,
+  "duplicateStationIds": 0,
+  "sameIdCoordinateConflicts": 0,
+  "missingStationNames": 0,
+  "observationAvailability": { "available": 0, "total": 27, "status": "NOT_CONNECTED" },
+  "predictionAvailability": { "available": 27, "total": 27, "eventsObserved": 92 },
+  "datumStatus": "DATUM_NOT_DOCUMENTED",
+  "predictionUnitStatus": "NOT_DOCUMENTED_IN_VERIFIED_CONTRACT",
+  "sourceUpdateObservation": "All 27 verified station requests returned resultCode 00 during the 2026-09-06 contract audit.",
+  "apiFailures": 0,
+  "anomalies": [
+    "The upstream endpoint is listed in the provider's 2026 deprecation notice and is retained as a transitional existing boundary.",
+    "Fourteen pre-existing local observatory coordinates differed from the live response by more than 0.02 degrees; the overlay snapshot uses the audited live response coordinates."
+  ],
+  "secretIncluded": false
+}

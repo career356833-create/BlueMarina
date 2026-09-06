@@ -31,14 +31,24 @@ type TideApiSuccessBody = {
   obsCode: string;
   date: string;
   data: TideForecastResponse;
+  freshness: "fresh" | "stale";
+  lastSuccessfulFetchAt: string;
 };
 
 const KHOA_TIDE_ENDPOINT = "https://apis.data.go.kr/1192136/tideFcstHghLw/GetTideFcstHghLwApiService";
 const UPSTREAM_TIMEOUT_MS = 8000;
 const UPSTREAM_SOURCE = "국립해양조사원 조석예보(고·저조)";
+const FRESH_CACHE_MS = 60 * 60 * 1000;
+const STALE_CACHE_MS = 24 * 60 * 60 * 1000;
+const tideCache = new Map<string, { data: TideForecastResponse; fetchedAt: string; expiresAt: number; staleUntil: number }>();
 
 function errorResponse(body: TideApiErrorBody, status: number) {
   return NextResponse.json(body, { status });
+}
+
+function staleResponse(cached: { data: TideForecastResponse; fetchedAt: string; staleUntil: number } | undefined, stationId: string, obsCode: string, date: string) {
+  if (!cached || Date.now() > cached.staleUntil) return null;
+  return NextResponse.json({ ok: true, stationId, obsCode, date, data: cached.data, freshness: "stale", lastSuccessfulFetchAt: cached.fetchedAt } satisfies TideApiSuccessBody);
 }
 
 function isAbortLikeError(error: unknown) {
@@ -103,6 +113,20 @@ export async function GET(request: Request) {
     );
   }
 
+  const cacheKey = `${obsCode}:${reqDate}`;
+  const cached = tideCache.get(cacheKey);
+  if (cached && Date.now() <= cached.expiresAt) {
+    return NextResponse.json({
+      ok: true,
+      stationId,
+      obsCode,
+      date: reqDate,
+      data: cached.data,
+      freshness: "fresh",
+      lastSuccessfulFetchAt: cached.fetchedAt
+    } satisfies TideApiSuccessBody);
+  }
+
   try {
     const response = await fetch(buildUpstreamUrl(obsCode, reqDate, apiKey), {
       cache: "no-store",
@@ -110,6 +134,8 @@ export async function GET(request: Request) {
     });
 
     if (!response.ok) {
+      const stale = staleResponse(cached, stationId, obsCode, reqDate);
+      if (stale) return stale;
       return errorResponse(
         {
           ok: false,
@@ -125,6 +151,8 @@ export async function GET(request: Request) {
 
     const payload = await response.json().catch(() => null);
     if (payload === null) {
+      const stale = staleResponse(cached, stationId, obsCode, reqDate);
+      if (stale) return stale;
       return errorResponse(
         {
           ok: false,
@@ -140,6 +168,8 @@ export async function GET(request: Request) {
 
     const parsed = parseKhoaTidePayload(payload, obsCode, reqDate);
     if (!parsed.ok) {
+      const stale = staleResponse(cached, stationId, obsCode, reqDate);
+      if (stale) return stale;
       return errorResponse(
         {
           ok: false,
@@ -154,14 +184,25 @@ export async function GET(request: Request) {
       );
     }
 
+    const fetchedAt = new Date().toISOString();
+    tideCache.set(cacheKey, {
+      data: parsed.data,
+      fetchedAt,
+      expiresAt: Date.now() + FRESH_CACHE_MS,
+      staleUntil: Date.now() + STALE_CACHE_MS
+    });
     return NextResponse.json({
       ok: true,
       stationId,
       obsCode,
       date: reqDate,
-      data: parsed.data
+      data: parsed.data,
+      freshness: "fresh",
+      lastSuccessfulFetchAt: fetchedAt
     } satisfies TideApiSuccessBody);
   } catch (error) {
+    const stale = staleResponse(cached, stationId, obsCode, reqDate);
+    if (stale) return stale;
     if (isAbortLikeError(error)) {
       return errorResponse(
         {

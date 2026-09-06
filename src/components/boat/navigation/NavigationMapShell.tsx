@@ -7,6 +7,7 @@ import type { KhoaHarborZoneProperties } from "@/lib/marine-navigation/adapters/
 import type { KhoaNavigationAid } from "@/lib/marine-navigation/adapters/khoa-navigation-aids";
 import type { KhoaTrainingFiringZoneProperties } from "@/lib/marine-navigation/adapters/khoa-training-firing-zone";
 import type { KhoaNavigationWarning, KhoaNavigationWarningsResponse } from "@/lib/marine-navigation/adapters/khoa-navigation-warnings";
+import type { KhoaTideStation } from "@/lib/marine-navigation/adapters/khoa-tide-stations";
 import type { GeoPoint } from "@/lib/marine-navigation/types";
 
 const MapLibreMap = dynamic(() => import("./adapters/MapLibreNavigationMap"), { ssr: false, loading: () => <div className="h-full w-full animate-pulse bg-[#17363a]" aria-label="지도를 불러오는 중" /> });
@@ -18,6 +19,7 @@ export function NavigationMapShell(props: {
   navigationAidsVisible: boolean;
   trainingFiringZoneVisible: boolean;
   navigationWarningsVisible: boolean;
+  tideStationsVisible: boolean;
   navigationWarningFocus: KhoaNavigationWarning | null;
   onPointSelect: (point: GeoPoint) => void;
   onDeepWaterRouteSelect: (feature: KhoaDeepWaterRouteProperties) => void;
@@ -25,11 +27,13 @@ export function NavigationMapShell(props: {
   onNavigationAidSelect: (feature: KhoaNavigationAid) => void;
   onTrainingFiringZoneSelect: (feature: KhoaTrainingFiringZoneProperties) => void;
   onNavigationWarningSelect: (feature: KhoaNavigationWarning) => void;
+  onTideStationSelect: (feature: KhoaTideStation) => void;
   onDeepWaterRouteStateChange: (state: "loading" | "ready" | "failed") => void;
   onHarborZoneStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationAidsStateChange: (state: "loading" | "ready" | "failed") => void;
   onTrainingFiringZoneStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationWarningsStateChange: (state: "loading" | "ready" | "failed") => void;
+  onTideStationsStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationWarningsDataChange: (data: KhoaNavigationWarningsResponse | null) => void;
 }) {
   return <MapLibreMap {...props} />;

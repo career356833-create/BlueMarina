@@ -7,16 +7,18 @@ import { createKhoaHarborZoneLayerConfig, KHOA_HARBOR_ZONE_DATA_URL, KHOA_HARBOR
 import { createKhoaNavigationAidsLayerConfig, KHOA_NAVIGATION_AIDS_DATA_URL, KHOA_NAVIGATION_AIDS_LAYER_ID, parseKhoaNavigationAidFeatureProperties, parseKhoaNavigationAidsGeoJson, type KhoaNavigationAid } from "@/lib/marine-navigation/adapters/khoa-navigation-aids";
 import { createKhoaTrainingFiringZoneLayerConfig, KHOA_TRAINING_FIRING_ZONE_DATA_URL, KHOA_TRAINING_FIRING_ZONE_LAYER_ID, parseKhoaTrainingFiringZoneFeatureProperties, parseKhoaTrainingFiringZoneGeoJson, type KhoaTrainingFiringZoneProperties } from "@/lib/marine-navigation/adapters/khoa-training-firing-zone";
 import { createKhoaNavigationWarningsLayerConfig, KHOA_NAVIGATION_WARNINGS_DATA_URL, KHOA_NAVIGATION_WARNINGS_LAYER_ID, parseKhoaNavigationWarningFeatureProperties, parseKhoaNavigationWarningsResponse, warningGeometryPoints, type KhoaNavigationWarning, type KhoaNavigationWarningsResponse } from "@/lib/marine-navigation/adapters/khoa-navigation-warnings";
+import { createKhoaTideStationsLayerConfig, KHOA_TIDE_STATIONS_DATA_URL, KHOA_TIDE_STATIONS_LAYER_ID, parseKhoaTideStationFeatureProperties, parseKhoaTideStationsResponse, type KhoaTideStation } from "@/lib/marine-navigation/adapters/khoa-tide-stations";
 import type { GeoPoint } from "@/lib/marine-navigation/types";
 import { MapLibreNavigationProvider } from "./MapLibreNavigationProvider";
 
-export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisible, harborZoneVisible, navigationAidsVisible, trainingFiringZoneVisible, navigationWarningsVisible, navigationWarningFocus, onPointSelect, onDeepWaterRouteSelect, onHarborZoneSelect, onNavigationAidSelect, onTrainingFiringZoneSelect, onNavigationWarningSelect, onDeepWaterRouteStateChange, onHarborZoneStateChange, onNavigationAidsStateChange, onTrainingFiringZoneStateChange, onNavigationWarningsStateChange, onNavigationWarningsDataChange }: {
+export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisible, harborZoneVisible, navigationAidsVisible, trainingFiringZoneVisible, navigationWarningsVisible, tideStationsVisible, navigationWarningFocus, onPointSelect, onDeepWaterRouteSelect, onHarborZoneSelect, onNavigationAidSelect, onTrainingFiringZoneSelect, onNavigationWarningSelect, onTideStationSelect, onDeepWaterRouteStateChange, onHarborZoneStateChange, onNavigationAidsStateChange, onTrainingFiringZoneStateChange, onNavigationWarningsStateChange, onTideStationsStateChange, onNavigationWarningsDataChange }: {
   presentation: MapPresentation;
   deepWaterRouteVisible: boolean;
   harborZoneVisible: boolean;
   navigationAidsVisible: boolean;
   trainingFiringZoneVisible: boolean;
   navigationWarningsVisible: boolean;
+  tideStationsVisible: boolean;
   navigationWarningFocus: KhoaNavigationWarning | null;
   onPointSelect: (point: GeoPoint) => void;
   onDeepWaterRouteSelect: (feature: KhoaDeepWaterRouteProperties) => void;
@@ -24,11 +26,13 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   onNavigationAidSelect: (feature: KhoaNavigationAid) => void;
   onTrainingFiringZoneSelect: (feature: KhoaTrainingFiringZoneProperties) => void;
   onNavigationWarningSelect: (feature: KhoaNavigationWarning) => void;
+  onTideStationSelect: (feature: KhoaTideStation) => void;
   onDeepWaterRouteStateChange: (state: "loading" | "ready" | "failed") => void;
   onHarborZoneStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationAidsStateChange: (state: "loading" | "ready" | "failed") => void;
   onTrainingFiringZoneStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationWarningsStateChange: (state: "loading" | "ready" | "failed") => void;
+  onTideStationsStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationWarningsDataChange: (data: KhoaNavigationWarningsResponse | null) => void;
 }) {
   const elementRef = useRef<HTMLDivElement>(null);
@@ -39,11 +43,13 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   const navigationAidSelectRef = useRef(onNavigationAidSelect);
   const trainingFiringZoneSelectRef = useRef(onTrainingFiringZoneSelect);
   const navigationWarningSelectRef = useRef(onNavigationWarningSelect);
+  const tideStationSelectRef = useRef(onTideStationSelect);
   const deepWaterRouteVisibleRef = useRef(deepWaterRouteVisible);
   const harborZoneVisibleRef = useRef(harborZoneVisible);
   const navigationAidsVisibleRef = useRef(navigationAidsVisible);
   const trainingFiringZoneVisibleRef = useRef(trainingFiringZoneVisible);
   const navigationWarningsVisibleRef = useRef(navigationWarningsVisible);
+  const tideStationsVisibleRef = useRef(tideStationsVisible);
 
   useEffect(() => {
     if (!elementRef.current || providerRef.current) return;
@@ -63,6 +69,9 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
       } else if (layerId === KHOA_NAVIGATION_WARNINGS_LAYER_ID) {
         const warning = parseKhoaNavigationWarningFeatureProperties(properties);
         if (warning) navigationWarningSelectRef.current(warning);
+      } else if (layerId === KHOA_TIDE_STATIONS_LAYER_ID) {
+        const station = parseKhoaTideStationFeatureProperties(properties);
+        if (station) tideStationSelectRef.current(station);
       }
     });
     const resizeObserver = new ResizeObserver(() => provider.resize());
@@ -193,6 +202,29 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   }, [onNavigationWarningsDataChange, onNavigationWarningsStateChange]);
 
   useEffect(() => {
+    const controller = new AbortController();
+    onTideStationsStateChange("loading");
+    fetch(KHOA_TIDE_STATIONS_DATA_URL, { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error(`KHOA tide-station request failed: ${response.status}`);
+        return response.json() as Promise<unknown>;
+      })
+      .then((value) => {
+        const data = parseKhoaTideStationsResponse(value);
+        providerRef.current?.addMarineLayer(createKhoaTideStationsLayerConfig(data.geoJson, tideStationsVisibleRef.current));
+        onTideStationsStateChange("ready");
+      })
+      .catch((error: unknown) => {
+        if (error instanceof DOMException && error.name === "AbortError") return;
+        onTideStationsStateChange("failed");
+      });
+    return () => {
+      controller.abort();
+      providerRef.current?.removeMarineLayer(KHOA_TIDE_STATIONS_LAYER_ID);
+    };
+  }, [onTideStationsStateChange]);
+
+  useEffect(() => {
     pointSelectRef.current = onPointSelect;
     providerRef.current?.setPointSelectHandler(onPointSelect);
   }, [onPointSelect]);
@@ -218,6 +250,10 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   }, [onNavigationWarningSelect]);
 
   useEffect(() => {
+    tideStationSelectRef.current = onTideStationSelect;
+  }, [onTideStationSelect]);
+
+  useEffect(() => {
     deepWaterRouteVisibleRef.current = deepWaterRouteVisible;
     providerRef.current?.setMarineLayerVisibility(KHOA_DEEP_WATER_ROUTE_LAYER_ID, deepWaterRouteVisible);
   }, [deepWaterRouteVisible]);
@@ -241,6 +277,11 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
     navigationWarningsVisibleRef.current = navigationWarningsVisible;
     providerRef.current?.setMarineLayerVisibility(KHOA_NAVIGATION_WARNINGS_LAYER_ID, navigationWarningsVisible);
   }, [navigationWarningsVisible]);
+
+  useEffect(() => {
+    tideStationsVisibleRef.current = tideStationsVisible;
+    providerRef.current?.setMarineLayerVisibility(KHOA_TIDE_STATIONS_LAYER_ID, tideStationsVisible);
+  }, [tideStationsVisible]);
 
   useEffect(() => {
     if (navigationWarningFocus) providerRef.current?.focus(warningGeometryPoints(navigationWarningFocus.geometry));

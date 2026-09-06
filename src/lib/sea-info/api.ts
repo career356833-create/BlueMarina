@@ -7,6 +7,8 @@ export type TideInfoResult =
       stationId: string;
       date: string;
       data: TideForecastResponse;
+      freshness: "fresh" | "stale";
+      lastSuccessfulFetchAt: string;
     }
   | {
       ok: false;
@@ -51,7 +53,9 @@ export async function fetchTideInfo(stationId: string, date: string): Promise<Ti
         status: response.status,
         stationId: getString(payload.stationId) || stationId,
         date: getString(payload.date) || date,
-        data: payload.data as TideForecastResponse
+        data: payload.data as TideForecastResponse,
+        freshness: payload.freshness === "stale" ? "stale" : "fresh",
+        lastSuccessfulFetchAt: getString(payload.lastSuccessfulFetchAt) || (payload.data as TideForecastResponse).metadata.updatedAt
       };
     }
 
