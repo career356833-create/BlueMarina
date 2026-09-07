@@ -8,8 +8,10 @@ import type { KhoaTideStation } from "@/lib/marine-navigation/adapters/khoa-tide
 import type { KmaMarineWeatherForecastZone } from "@/lib/marine-navigation/adapters/kma-marine-weather";
 import { KMA_MARINE_WEATHER_WARNING_SAFETY_NOTICE, type KmaMarineWeatherWarningsResponse } from "@/lib/marine-navigation/adapters/kma-marine-weather-warnings";
 import type { KmaMarineStation } from "@/lib/sea-info/kma-marine-observation";
+import type { KhoaRomsPoint } from "@/lib/sea-info/khoa-roms";
 import { MarineObservationDetails } from "./MarineObservationDetails";
 import { MarineWeatherDetails } from "./MarineWeatherDetails";
+import { OceanCurrentModelDetails } from "./OceanCurrentModelDetails";
 import { TideStationDetails } from "./TideStationDetails";
 
 export type MarineLayerState = "loading" | "ready" | "failed";
@@ -21,8 +23,9 @@ export type SelectedMarineFeature =
   | { kind: "navigation-warning"; properties: KhoaNavigationWarning }
   | { kind: "tide-station"; properties: KhoaTideStation }
   | { kind: "marine-weather"; properties: KmaMarineWeatherForecastZone }
-  | { kind: "marine-observation"; properties: KmaMarineStation };
-type GenericMarineFeature = Exclude<SelectedMarineFeature, { kind: "tide-station" } | { kind: "marine-weather" } | { kind: "marine-observation" }>;
+  | { kind: "marine-observation"; properties: KmaMarineStation }
+  | { kind: "ocean-current-model"; properties: KhoaRomsPoint };
+type GenericMarineFeature = Exclude<SelectedMarineFeature, { kind: "tide-station" } | { kind: "marine-weather" } | { kind: "marine-observation" } | { kind: "ocean-current-model" }>;
 
 function stateLabel(state: MarineLayerState, provider: "KHOA" | "KMA") {
   return state === "loading" ? "LOADING" : state === "failed" ? "UNAVAILABLE" : provider;
@@ -40,7 +43,7 @@ function LayerToggle({ label, description, visible, state, onChange, icon, provi
   const Icon = icon === "anchor" ? Anchor : icon === "navigation" ? Navigation : icon === "warning" ? ShieldAlert : icon === "tide" ? Waves : icon === "weather" ? CloudSun : Layers3;
   return (
     <label className="flex cursor-pointer items-start gap-2.5 border-b border-white/10 py-1.5 last:border-b-0 sm:py-2.5">
-      <input type="checkbox" checked={visible} disabled={state === "failed"} onChange={(event) => onChange(event.target.checked)} className="mt-0.5 size-4 accent-[#c8a66c]" />
+      <input type="checkbox" checked={visible} disabled={state === "failed" && !visible} onChange={(event) => onChange(event.target.checked)} className="mt-0.5 size-4 accent-[#c8a66c]" />
       <Icon size={15} className="mt-0.5 text-[#d2b178]" aria-hidden="true" />
       <span className="min-w-0 flex-1">
         <span className="block text-xs">{label}</span>
@@ -159,7 +162,7 @@ function WeatherWarningList({ data }: { data: KmaMarineWeatherWarningsResponse }
   );
 }
 
-export function MarineLayerControl({ deepWaterRouteVisible, deepWaterRouteState, harborZoneVisible, harborZoneState, navigationAidsVisible, navigationAidsState, trainingFiringZoneVisible, trainingFiringZoneState, navigationWarningsVisible, navigationWarningsState, navigationWarningsData, tideStationsVisible, tideStationsState, marineWeatherVisible, marineWeatherState, marineObservationsVisible, marineObservationsState, weatherWarningsVisible, weatherWarningsState, weatherWarningsData, selected, onDeepWaterRouteVisibleChange, onHarborZoneVisibleChange, onNavigationAidsVisibleChange, onTrainingFiringZoneVisibleChange, onNavigationWarningsVisibleChange, onTideStationsVisibleChange, onMarineWeatherVisibleChange, onMarineObservationsVisibleChange, onWeatherWarningsVisibleChange, onNavigationWarningFocus, onCloseFeature }: {
+export function MarineLayerControl({ deepWaterRouteVisible, deepWaterRouteState, harborZoneVisible, harborZoneState, navigationAidsVisible, navigationAidsState, trainingFiringZoneVisible, trainingFiringZoneState, navigationWarningsVisible, navigationWarningsState, navigationWarningsData, tideStationsVisible, tideStationsState, marineWeatherVisible, marineWeatherState, marineObservationsVisible, marineObservationsState, oceanCurrentModelVisible, oceanCurrentModelState, weatherWarningsVisible, weatherWarningsState, weatherWarningsData, selected, onDeepWaterRouteVisibleChange, onHarborZoneVisibleChange, onNavigationAidsVisibleChange, onTrainingFiringZoneVisibleChange, onNavigationWarningsVisibleChange, onTideStationsVisibleChange, onMarineWeatherVisibleChange, onMarineObservationsVisibleChange, onOceanCurrentModelVisibleChange, onWeatherWarningsVisibleChange, onNavigationWarningFocus, onCloseFeature }: {
   deepWaterRouteVisible: boolean;
   deepWaterRouteState: MarineLayerState;
   harborZoneVisible: boolean;
@@ -177,6 +180,8 @@ export function MarineLayerControl({ deepWaterRouteVisible, deepWaterRouteState,
   marineWeatherState: MarineLayerState;
   marineObservationsVisible: boolean;
   marineObservationsState: MarineLayerState;
+  oceanCurrentModelVisible: boolean;
+  oceanCurrentModelState: MarineLayerState;
   weatherWarningsVisible: boolean;
   weatherWarningsState: MarineLayerState;
   weatherWarningsData: KmaMarineWeatherWarningsResponse | null;
@@ -189,13 +194,14 @@ export function MarineLayerControl({ deepWaterRouteVisible, deepWaterRouteState,
   onTideStationsVisibleChange: (visible: boolean) => void;
   onMarineWeatherVisibleChange: (visible: boolean) => void;
   onMarineObservationsVisibleChange: (visible: boolean) => void;
+  onOceanCurrentModelVisibleChange: (visible: boolean) => void;
   onWeatherWarningsVisibleChange: (visible: boolean) => void;
   onNavigationWarningFocus: (warning: KhoaNavigationWarning) => void;
   onCloseFeature: () => void;
 }) {
   return (
     <div className="bm-navigation-scrollbar absolute right-3 top-14 z-[500] max-h-[calc(100%-13rem)] w-[min(292px,calc(100vw-24px))] overflow-y-auto text-[#f2eee3]">
-      {selected?.kind !== "tide-station" && selected?.kind !== "marine-weather" && selected?.kind !== "marine-observation" ? <div className="border border-white/15 bg-[#06131a]/94 px-3 shadow-xl backdrop-blur-md" aria-label="해양 레이어">
+      {selected?.kind !== "tide-station" && selected?.kind !== "marine-weather" && selected?.kind !== "marine-observation" && selected?.kind !== "ocean-current-model" ? <div className="border border-white/15 bg-[#06131a]/94 px-3 shadow-xl backdrop-blur-md" aria-label="해양 레이어">
         <LayerToggle label="깊은수심 항로" description="국립해양조사원 공개 공간정보" visible={deepWaterRouteVisible} state={deepWaterRouteState} onChange={onDeepWaterRouteVisibleChange} icon="layers" />
         <LayerToggle label="항만구역" description="전자해도 기반 항만 면형정보" visible={harborZoneVisible} state={harborZoneState} onChange={onHarborZoneVisibleChange} icon="anchor" />
         <LayerToggle label="항행표지" description="전국 항로표지 · 기본 OFF" visible={navigationAidsVisible} state={navigationAidsState} onChange={onNavigationAidsVisibleChange} icon="navigation" />
@@ -204,11 +210,12 @@ export function MarineLayerControl({ deepWaterRouteVisible, deepWaterRouteState,
         <LayerToggle label="조석 관측소" description="공식 고·저조 예측 · 기본 OFF" visible={tideStationsVisible} state={tideStationsState} onChange={onTideStationsVisibleChange} icon="tide" />
         <LayerToggle label="해양기상 예보" description="KMA 소해구 모델 예측 · 기본 OFF" visible={marineWeatherVisible} state={marineWeatherState} onChange={onMarineWeatherVisibleChange} icon="weather" provider="KMA" />
         <LayerToggle label="해양기상 관측" description="KMA 실측 관측소 · 기본 OFF" visible={marineObservationsVisible} state={marineObservationsState} onChange={onMarineObservationsVisibleChange} icon="weather" provider="KMA" />
+        <LayerToggle label="ROMS 해류 모델" description="KHOA 모델 격자 · zoom 8+ · 기본 OFF" visible={oceanCurrentModelVisible} state={oceanCurrentModelState} onChange={onOceanCurrentModelVisibleChange} icon="tide" />
         <LayerToggle label="해상특보" description="KMA 공식 특보 · 패널 전용 · 기본 OFF" visible={weatherWarningsVisible} state={weatherWarningsState} onChange={onWeatherWarningsVisibleChange} icon="warning" provider="KMA" />
       </div> : null}
       {navigationWarningsVisible && navigationWarningsData && !selected ? <NavigationWarningList data={navigationWarningsData} onFocus={onNavigationWarningFocus} /> : null}
       {weatherWarningsVisible && weatherWarningsData && !selected ? <WeatherWarningList data={weatherWarningsData} /> : null}
-      {selected?.kind === "tide-station" ? <TideStationDetails station={selected.properties} onClose={onCloseFeature} /> : selected?.kind === "marine-weather" ? <MarineWeatherDetails zone={selected.properties} onClose={onCloseFeature} /> : selected?.kind === "marine-observation" ? <MarineObservationDetails station={selected.properties} onClose={onCloseFeature} /> : selected ? <FeatureDetails selected={selected} onClose={onCloseFeature} /> : null}
+      {selected?.kind === "tide-station" ? <TideStationDetails station={selected.properties} onClose={onCloseFeature} /> : selected?.kind === "marine-weather" ? <MarineWeatherDetails zone={selected.properties} onClose={onCloseFeature} /> : selected?.kind === "marine-observation" ? <MarineObservationDetails station={selected.properties} onClose={onCloseFeature} /> : selected?.kind === "ocean-current-model" ? <OceanCurrentModelDetails point={selected.properties} onClose={onCloseFeature} /> : selected ? <FeatureDetails selected={selected} onClose={onCloseFeature} /> : null}
     </div>
   );
 }

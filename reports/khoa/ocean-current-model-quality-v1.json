@@ -1,0 +1,103 @@
+{
+  "reportVersion": "1.1",
+  "auditedAt": "2026-09-08T00:00:00+09:00",
+  "provider": "KHOA",
+  "replacement": {
+    "status": "REPLACEMENT_VERIFIED",
+    "retiredService": "해양수산부 국립해양조사원_황동중국해(모델) 예측 유향 유속",
+    "retiredDataGoKrId": "15039004",
+    "noticeId": "NOTICE_0000000004473",
+    "replacementService": "해양수산부 국립해양조사원_ROMS 수치예측모델 조회",
+    "replacementDataGoKrId": "15142227"
+  },
+  "credential": {
+    "requiredEnvironmentVariable": "KHOA_ROMS_API_KEY",
+    "enabledEnvironmentVariable": "KHOA_ROMS_ENABLED",
+    "dedicatedCredentialPresent": true,
+    "genericCredentialFallbackUsed": false,
+    "secretIncluded": false
+  },
+  "live": {
+    "status": "LIVE_PASS",
+    "httpStatus": 200,
+    "resultCode": "00",
+    "resultMessage": "NORMAL_SERVICE",
+    "firstPageRows": 300,
+    "totalRows": 2136,
+    "requestCount": 8,
+    "firstPageLatencyMs": 329,
+    "pageLatenciesMs": [158, 131, 66, 65, 77, 65, 66, 44],
+    "actualFields": ["predcDt", "lat", "lot", "crdir", "crsp", "wtem"]
+  },
+  "grid": {
+    "bbox": { "ymin": 34.0, "ymax": 34.1, "xmin": 123.2, "xmax": 123.3 },
+    "rawRows": 2136,
+    "uniqueSpatialPoints": 12,
+    "uniqueLatitudes": 3,
+    "uniqueLongitudes": 4,
+    "observedLatitudeSpacingDegrees": 0.02899,
+    "observedLongitudeSpacingDegrees": 0.03197,
+    "spatialResolutionClaimed": false,
+    "validCoordinates": 2136,
+    "invalidCoordinates": 0,
+    "duplicateCoordinateTimeRows": 0,
+    "rawPayloadBytes": 225068,
+    "normalizedAuditBytes": 306498
+  },
+  "coverage": {
+    "currentSpeedPresent": 2136,
+    "currentDirectionPresent": 2136,
+    "modelWaterTemperaturePresent": 2136,
+    "missingRequiredValues": 0
+  },
+  "time": {
+    "field": "predcDt",
+    "semantic": "UNKNOWN",
+    "timezone": "UNSPECIFIED",
+    "modelRunAt": null,
+    "earliest": "2026-09-07 00:00:00",
+    "latest": "2026-09-14 09:00:00",
+    "stepHours": 1,
+    "availableTimes": 178,
+    "observedSpanHours": 177,
+    "officialHorizonStatus": "CONTRACT_INCONSISTENT"
+  },
+  "direction": {
+    "field": "crdir",
+    "unit": "deg",
+    "officialConvention": "NOT_DOCUMENTED",
+    "towardOrFrom": "UNKNOWN",
+    "arrowAllowed": false
+  },
+  "mapLibre": {
+    "connected": true,
+    "status": "CONNECTED_MODEL_DIRECTION_LIMITED",
+    "layerId": "khoa-ocean-current-model",
+    "rendering": "SCALAR_POINTS",
+    "defaultEnabled": false,
+    "minimumZoom": 8,
+    "serverRoute": "/api/sea-info/ocean-current",
+    "renderSampleCountPerSelectedTime": 12
+  },
+  "quotaStrategy": {
+    "viewportSampleSpanDegrees": 0.1,
+    "maximumChunksPerLoad": 1,
+    "maximumPages": 8,
+    "maximumRows": 2400,
+    "maximumRawResponseBytes": 400000,
+    "minimumChangedCellRequestIntervalSeconds": 15,
+    "freshCacheMinutes": 30,
+    "staleFallbackMinutes": 120
+  },
+  "safety": {
+    "observationClaim": false,
+    "routingInput": false,
+    "etaAdjustment": false,
+    "driftPrediction": false,
+    "safeRouting": false,
+    "tideMerged": false,
+    "weatherRiskMerged": false,
+    "bathymetryCombined": false
+  },
+  "catalogStatus": "CONNECTED_MODEL_DIRECTION_LIMITED"
+}

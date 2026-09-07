@@ -156,6 +156,25 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
     }
   }
 
+  setMarineLayerData(id: string, data: GeoJSON.GeoJSON) {
+    if (!this.loaded) return;
+    const source = this.map.getSource(`marine-source:${id}`) as GeoJSONSource | undefined;
+    source?.setData(data);
+  }
+
+  getViewportSnapshot() {
+    const center = this.map.getCenter();
+    return { longitude: center.lng, latitude: center.lat, zoom: this.map.getZoom() };
+  }
+
+  onViewportChange(handler: (viewport: { longitude: number; latitude: number; zoom: number }) => void) {
+    const notify = () => handler(this.getViewportSnapshot());
+    this.map.on("moveend", notify);
+    if (this.loaded) notify();
+    else this.map.once("load", notify);
+    return () => this.map.off("moveend", notify);
+  }
+
   resize() {
     this.map.resize();
   }

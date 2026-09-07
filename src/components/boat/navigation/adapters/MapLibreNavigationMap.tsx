@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { MapPresentation } from "@/lib/marine-navigation/adapters/navigation-map-adapter";
 import { createKhoaDeepWaterRouteLayerConfig, KHOA_DEEP_WATER_ROUTE_DATA_URL, KHOA_DEEP_WATER_ROUTE_LAYER_ID, parseKhoaDeepWaterRouteFeatureProperties, parseKhoaDeepWaterRouteGeoJson, type KhoaDeepWaterRouteProperties } from "@/lib/marine-navigation/adapters/khoa-deep-water-route";
 import { createKhoaHarborZoneLayerConfig, KHOA_HARBOR_ZONE_DATA_URL, KHOA_HARBOR_ZONE_LAYER_ID, parseKhoaHarborZoneFeatureProperties, parseKhoaHarborZoneGeoJson, type KhoaHarborZoneProperties } from "@/lib/marine-navigation/adapters/khoa-harbor-zone";
@@ -10,11 +10,13 @@ import { createKhoaNavigationWarningsLayerConfig, KHOA_NAVIGATION_WARNINGS_DATA_
 import { createKhoaTideStationsLayerConfig, KHOA_TIDE_STATIONS_DATA_URL, KHOA_TIDE_STATIONS_LAYER_ID, parseKhoaTideStationFeatureProperties, parseKhoaTideStationsResponse, type KhoaTideStation } from "@/lib/marine-navigation/adapters/khoa-tide-stations";
 import { createKmaMarineWeatherLayerConfig, KMA_MARINE_WEATHER_LAYER_ID, parseKmaMarineWeatherFeatureProperties, type KmaMarineWeatherForecastZone } from "@/lib/marine-navigation/adapters/kma-marine-weather";
 import { createKmaMarineObservationsLayerConfig, KMA_MARINE_OBSERVATIONS_LAYER_ID, KMA_MARINE_OBSERVATIONS_STATIONS_URL, parseKmaMarineStationFeatureProperties, parseKmaMarineStationsResponse } from "@/lib/marine-navigation/adapters/kma-marine-observations";
+import { createKhoaRomsLayerConfig, KHOA_OCEAN_CURRENT_MODEL_LAYER_ID, KHOA_OCEAN_CURRENT_MODEL_MIN_ZOOM, parseKhoaRomsApiResponse, parseKhoaRomsFeatureProperties } from "@/lib/marine-navigation/adapters/khoa-ocean-current-model";
 import type { KmaMarineStation } from "@/lib/sea-info/kma-marine-observation";
+import { buildViewportSampleBbox, type KhoaRomsPoint } from "@/lib/sea-info/khoa-roms";
 import type { GeoPoint } from "@/lib/marine-navigation/types";
 import { MapLibreNavigationProvider } from "./MapLibreNavigationProvider";
 
-export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisible, harborZoneVisible, navigationAidsVisible, trainingFiringZoneVisible, navigationWarningsVisible, tideStationsVisible, marineWeatherVisible, marineObservationsVisible, navigationWarningFocus, onPointSelect, onDeepWaterRouteSelect, onHarborZoneSelect, onNavigationAidSelect, onTrainingFiringZoneSelect, onNavigationWarningSelect, onTideStationSelect, onMarineWeatherSelect, onMarineObservationSelect, onDeepWaterRouteStateChange, onHarborZoneStateChange, onNavigationAidsStateChange, onTrainingFiringZoneStateChange, onNavigationWarningsStateChange, onTideStationsStateChange, onMarineWeatherStateChange, onMarineObservationsStateChange, onNavigationWarningsDataChange }: {
+export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisible, harborZoneVisible, navigationAidsVisible, trainingFiringZoneVisible, navigationWarningsVisible, tideStationsVisible, marineWeatherVisible, marineObservationsVisible, oceanCurrentModelVisible, navigationWarningFocus, onPointSelect, onDeepWaterRouteSelect, onHarborZoneSelect, onNavigationAidSelect, onTrainingFiringZoneSelect, onNavigationWarningSelect, onTideStationSelect, onMarineWeatherSelect, onMarineObservationSelect, onOceanCurrentModelSelect, onDeepWaterRouteStateChange, onHarborZoneStateChange, onNavigationAidsStateChange, onTrainingFiringZoneStateChange, onNavigationWarningsStateChange, onTideStationsStateChange, onMarineWeatherStateChange, onMarineObservationsStateChange, onOceanCurrentModelStateChange, onNavigationWarningsDataChange }: {
   presentation: MapPresentation;
   deepWaterRouteVisible: boolean;
   harborZoneVisible: boolean;
@@ -24,6 +26,7 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   tideStationsVisible: boolean;
   marineWeatherVisible: boolean;
   marineObservationsVisible: boolean;
+  oceanCurrentModelVisible: boolean;
   navigationWarningFocus: KhoaNavigationWarning | null;
   onPointSelect: (point: GeoPoint) => void;
   onDeepWaterRouteSelect: (feature: KhoaDeepWaterRouteProperties) => void;
@@ -34,6 +37,7 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   onTideStationSelect: (feature: KhoaTideStation) => void;
   onMarineWeatherSelect: (feature: KmaMarineWeatherForecastZone) => void;
   onMarineObservationSelect: (feature: KmaMarineStation) => void;
+  onOceanCurrentModelSelect: (feature: KhoaRomsPoint) => void;
   onDeepWaterRouteStateChange: (state: "loading" | "ready" | "failed") => void;
   onHarborZoneStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationAidsStateChange: (state: "loading" | "ready" | "failed") => void;
@@ -42,6 +46,7 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   onTideStationsStateChange: (state: "loading" | "ready" | "failed") => void;
   onMarineWeatherStateChange: (state: "loading" | "ready" | "failed") => void;
   onMarineObservationsStateChange: (state: "loading" | "ready" | "failed") => void;
+  onOceanCurrentModelStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationWarningsDataChange: (data: KhoaNavigationWarningsResponse | null) => void;
 }) {
   const elementRef = useRef<HTMLDivElement>(null);
@@ -55,6 +60,7 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   const tideStationSelectRef = useRef(onTideStationSelect);
   const marineWeatherSelectRef = useRef(onMarineWeatherSelect);
   const marineObservationSelectRef = useRef(onMarineObservationSelect);
+  const oceanCurrentModelSelectRef = useRef(onOceanCurrentModelSelect);
   const deepWaterRouteVisibleRef = useRef(deepWaterRouteVisible);
   const harborZoneVisibleRef = useRef(harborZoneVisible);
   const navigationAidsVisibleRef = useRef(navigationAidsVisible);
@@ -63,6 +69,10 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   const tideStationsVisibleRef = useRef(tideStationsVisible);
   const marineWeatherVisibleRef = useRef(marineWeatherVisible);
   const marineObservationsVisibleRef = useRef(marineObservationsVisible);
+  const requestedRomsValidAtRef = useRef("");
+  const [romsValidTimes, setRomsValidTimes] = useState<string[]>([]);
+  const [romsSelectedValidAt, setRomsSelectedValidAt] = useState("");
+  const [romsTimeRevision, setRomsTimeRevision] = useState(0);
 
   useEffect(() => {
     if (!elementRef.current || providerRef.current) return;
@@ -91,6 +101,9 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
       } else if (layerId === KMA_MARINE_OBSERVATIONS_LAYER_ID) {
         const station = parseKmaMarineStationFeatureProperties(properties);
         if (station) marineObservationSelectRef.current(station);
+      } else if (layerId === KHOA_OCEAN_CURRENT_MODEL_LAYER_ID) {
+        const point = parseKhoaRomsFeatureProperties(properties);
+        if (point) oceanCurrentModelSelectRef.current(point);
       }
     });
     const resizeObserver = new ResizeObserver(() => provider.resize());
@@ -278,6 +291,61 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   }, [onMarineObservationsStateChange]);
 
   useEffect(() => {
+    providerRef.current?.addMarineLayer(createKhoaRomsLayerConfig(undefined, false));
+    onOceanCurrentModelStateChange("ready");
+    return () => providerRef.current?.removeMarineLayer(KHOA_OCEAN_CURRENT_MODEL_LAYER_ID);
+  }, [onOceanCurrentModelStateChange]);
+
+  useEffect(() => {
+    const provider = providerRef.current;
+    if (!provider) return;
+    provider.setMarineLayerVisibility(KHOA_OCEAN_CURRENT_MODEL_LAYER_ID, oceanCurrentModelVisible);
+    if (!oceanCurrentModelVisible) {
+      onOceanCurrentModelStateChange("ready");
+      return;
+    }
+    let controller: AbortController | null = null;
+    let lastCell = "";
+    let lastRequestAt = 0;
+    const load = ({ longitude, latitude, zoom }: { longitude: number; latitude: number; zoom: number }) => {
+      if (zoom < KHOA_OCEAN_CURRENT_MODEL_MIN_ZOOM) {
+        onOceanCurrentModelStateChange("ready");
+        provider.setMarineLayerData(KHOA_OCEAN_CURRENT_MODEL_LAYER_ID, { type: "FeatureCollection", features: [] });
+        return;
+      }
+      const bbox = buildViewportSampleBbox(longitude, latitude);
+      const cell = `${bbox.ymin}:${bbox.ymax}:${bbox.xmin}:${bbox.xmax}`;
+      if (cell === lastCell || Date.now() - lastRequestAt < 15_000) return;
+      lastCell = cell;
+      lastRequestAt = Date.now();
+      controller?.abort();
+      controller = new AbortController();
+      onOceanCurrentModelStateChange("loading");
+      const params = new URLSearchParams(Object.entries(bbox).map(([key, value]) => [key, String(value)]));
+      if (requestedRomsValidAtRef.current) params.set("validAt", requestedRomsValidAtRef.current);
+      fetch(`/api/sea-info/ocean-current?${params}`, { signal: controller.signal, headers: { accept: "application/json" } })
+        .then((response) => {
+          if (!response.ok) throw new Error(`KHOA ROMS request failed: ${response.status}`);
+          return response.json() as Promise<unknown>;
+        })
+        .then((value) => {
+          const data = parseKhoaRomsApiResponse(value);
+          provider.setMarineLayerData(KHOA_OCEAN_CURRENT_MODEL_LAYER_ID, data.data);
+          setRomsValidTimes(data.validTimes);
+          setRomsSelectedValidAt(data.selectedValidAt);
+          onOceanCurrentModelStateChange("ready");
+        })
+        .catch((error: unknown) => {
+          if (error instanceof DOMException && error.name === "AbortError") return;
+          provider.setMarineLayerData(KHOA_OCEAN_CURRENT_MODEL_LAYER_ID, { type: "FeatureCollection", features: [] });
+          onOceanCurrentModelStateChange("failed");
+        });
+    };
+    const unsubscribe = provider.onViewportChange(load);
+    return () => { controller?.abort(); unsubscribe(); };
+  }, [oceanCurrentModelVisible, onOceanCurrentModelStateChange, romsTimeRevision]);
+
+  useEffect(() => {
     pointSelectRef.current = onPointSelect;
     providerRef.current?.setPointSelectHandler(onPointSelect);
   }, [onPointSelect]);
@@ -313,6 +381,10 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   useEffect(() => {
     marineObservationSelectRef.current = onMarineObservationSelect;
   }, [onMarineObservationSelect]);
+
+  useEffect(() => {
+    oceanCurrentModelSelectRef.current = onOceanCurrentModelSelect;
+  }, [onOceanCurrentModelSelect]);
 
   useEffect(() => {
     deepWaterRouteVisibleRef.current = deepWaterRouteVisible;
@@ -362,5 +434,5 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
     providerRef.current?.setPresentation(presentation);
   }, [presentation]);
 
-  return <div ref={elementRef} className="bm-navigation-map h-full w-full" aria-label="MapLibre marine navigation map" />;
+  return <div className="relative h-full w-full"><div ref={elementRef} className="bm-navigation-map h-full w-full" aria-label="MapLibre marine navigation map" />{oceanCurrentModelVisible && romsValidTimes.length > 0 ? <label className="absolute left-3 top-20 z-[450] border border-white/20 bg-[#06131a]/92 px-2.5 py-2 text-[9px] text-[#d9d3c5] shadow-lg backdrop-blur-md"><span className="mb-1 block text-[#d2b178]">KHOA ROMS MODEL · 유효 시각 원문</span><select value={romsSelectedValidAt} onChange={(event) => { requestedRomsValidAtRef.current = event.target.value; setRomsSelectedValidAt(event.target.value); setRomsTimeRevision((value) => value + 1); }} className="h-8 max-w-[220px] border border-white/15 bg-[#07161b] px-2 text-[10px] text-[#f2eee3] outline-none"><option value={romsSelectedValidAt}>{romsSelectedValidAt}</option>{romsValidTimes.filter((value) => value !== romsSelectedValidAt).map((value) => <option key={value} value={value}>{value}</option>)}</select><span className="mt-1 block text-[#899793]">시간대·모델 lead 미명시</span></label> : null}</div>;
 }
