@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-08T00:00:00+09:00",
+  "status": "CONNECTED_WARNING_PANEL_ONLY",
+  "selectedSource": {
+    "provider": "KMA",
+    "currentEndpoint": "wrn_now_data_new.php",
+    "historyEndpoint": "wrn_met_data.php",
+    "zoneEndpoint": "wrn_reg.php",
+    "currentFormat": "JSON",
+    "historyFormat": "EUC-KR_CSV_TEXT",
+    "zoneFormat": "EUC-KR_FIXED_WIDTH_TEXT",
+    "timezone": "KST"
+  },
+  "liveSmoke": {
+    "current": { "httpStatus": 200, "latencyMs": 223, "items": 6 },
+    "history": { "httpStatus": 200, "items": 59, "range": "PREVIOUS_24_HOURS" },
+    "zones": { "httpStatus": 200, "items": 414 },
+    "normalizedRoute": { "httpStatus": 200, "latencyMs": 2456 },
+    "credentialAccepted": true,
+    "rawResponseStored": false,
+    "keyExposed": false
+  },
+  "warnings": {
+    "currentRows": 6,
+    "marineRelevantRows": 6,
+    "excludedLandRows": 0,
+    "uniqueRegionIds": 6,
+    "typeDistribution": { "V": 6 },
+    "levelDistribution": { "2": 6 },
+    "commandDistribution": { "5": 6 },
+    "lifecycleDistribution": { "UPCOMING": 0, "ACTIVE": 6, "ENDED": 0, "CANCELLED": 0, "UNKNOWN": 0 },
+    "metadataJoinCount": 6,
+    "metadataJoinRate": 1,
+    "geometryCoverage": 0,
+    "panelOnlyCount": 6,
+    "missingIssuedTime": 0,
+    "missingEffectiveTime": 0,
+    "freshness": "fresh",
+    "anomalies": []
+  },
+  "zones": {
+    "rows": 414,
+    "officialSeaCodeRows": 113,
+    "classification": "OFFICIAL_REG_ID_S_L_CODE_FAMILY",
+    "publicGeometryFields": false,
+    "forecastAreaEquivalenceVerified": false,
+    "forecastAreaMapping": "NO_AUTO_MAPPING"
+  },
+  "implementation": {
+    "serverRoute": "/api/sea-info/weather-warnings",
+    "logicalLayerId": "kma-marine-weather-warnings",
+    "defaultVisible": false,
+    "panelOnly": true,
+    "geometryCount": 0,
+    "keyBrowserExposure": false,
+    "currentCacheSeconds": 300,
+    "currentStaleSeconds": 3600,
+    "historyCacheSeconds": 1200,
+    "zoneCacheSeconds": 86400
+  },
+  "independence": {
+    "khoaNavigationWarning": true,
+    "kmaObservation": true,
+    "kmaForecast": true
+  },
+  "safety": {
+    "departureJudgement": false,
+    "severityScore": false,
+    "routeBlocking": false,
+    "automaticReroute": false,
+    "safeRouting": false
+  },
+  "limitations": [
+    "The public warning-zone response does not expose polygon or point geometry.",
+    "The public zone response carries the official REG_ID S/L code family but does not repeat the REG_TYPE column.",
+    "REG_ID is not automatically mapped to forecast FCT_ID."
+  ]
+}

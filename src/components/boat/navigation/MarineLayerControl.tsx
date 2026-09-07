@@ -6,6 +6,7 @@ import { KHOA_TRAINING_FIRING_ZONE_WARNING, type KhoaTrainingFiringZonePropertie
 import { KHOA_NAVIGATION_WARNING_SAFETY_NOTICE, type KhoaNavigationWarning, type KhoaNavigationWarningsResponse } from "@/lib/marine-navigation/adapters/khoa-navigation-warnings";
 import type { KhoaTideStation } from "@/lib/marine-navigation/adapters/khoa-tide-stations";
 import type { KmaMarineWeatherForecastZone } from "@/lib/marine-navigation/adapters/kma-marine-weather";
+import { KMA_MARINE_WEATHER_WARNING_SAFETY_NOTICE, type KmaMarineWeatherWarningsResponse } from "@/lib/marine-navigation/adapters/kma-marine-weather-warnings";
 import type { KmaMarineStation } from "@/lib/sea-info/kma-marine-observation";
 import { MarineObservationDetails } from "./MarineObservationDetails";
 import { MarineWeatherDetails } from "./MarineWeatherDetails";
@@ -135,7 +136,30 @@ function NavigationWarningList({ data, onFocus }: { data: KhoaNavigationWarnings
   );
 }
 
-export function MarineLayerControl({ deepWaterRouteVisible, deepWaterRouteState, harborZoneVisible, harborZoneState, navigationAidsVisible, navigationAidsState, trainingFiringZoneVisible, trainingFiringZoneState, navigationWarningsVisible, navigationWarningsState, navigationWarningsData, tideStationsVisible, tideStationsState, marineWeatherVisible, marineWeatherState, marineObservationsVisible, marineObservationsState, selected, onDeepWaterRouteVisibleChange, onHarborZoneVisibleChange, onNavigationAidsVisibleChange, onTrainingFiringZoneVisibleChange, onNavigationWarningsVisibleChange, onTideStationsVisibleChange, onMarineWeatherVisibleChange, onMarineObservationsVisibleChange, onNavigationWarningFocus, onCloseFeature }: {
+function WeatherWarningList({ data }: { data: KmaMarineWeatherWarningsResponse }) {
+  const freshnessLabel = data.freshness === "fresh" ? "최신" : data.freshness === "stale" ? "갱신 지연" : "사용 불가";
+  return (
+    <section className="mt-2 border border-[#d2b178]/35 bg-[#06131a]/96 p-3 shadow-xl backdrop-blur-md" aria-label="기상청 해상특보 목록">
+      <div className="flex items-center justify-between gap-3 border-b border-white/10 pb-2">
+        <div><p className="text-[9px] tracking-[0.12em] text-[#d2b178]">KMA WEATHER WARNING</p><p className="mt-0.5 text-xs">현재 해상특보 {data.warnings.length}건</p></div>
+        <span className={`text-[9px] ${data.freshness === "fresh" ? "text-[#8bbca9]" : "text-[#d6a878]"}`}>{freshnessLabel}</span>
+      </div>
+      <div className="bm-navigation-scrollbar max-h-52 overflow-y-auto">
+        {data.warnings.length === 0 ? <p className="py-4 text-center text-[10px] text-[#9ba6a1]">현재 발효중인 해상특보 없음</p> : data.warnings.map((warning) => (
+          <article key={warning.id} className="border-b border-white/8 py-2 last:border-0">
+            <div className="flex items-center justify-between gap-2"><strong className="text-[10px] font-medium">{warning.warningType} · {warning.warningLevel}</strong><span className="text-[9px] text-[#d2b178]">{warning.status}</span></div>
+            <p className="mt-1 truncate text-[9px] text-[#aab4af]">{warning.areaName ?? warning.regionId}</p>
+            <p className="mt-1 text-[8px] leading-3 text-[#7f918c]">발표 {warning.issuedAt ? new Date(warning.issuedAt).toLocaleString("ko-KR") : "미제공"}<br />발효 {warning.effectiveAt ? new Date(warning.effectiveAt).toLocaleString("ko-KR") : "미제공"} · {warning.command}</p>
+          </article>
+        ))}
+      </div>
+      <p className="mt-2 border-t border-white/10 pt-2 text-[8px] leading-3 text-[#899793]">최근 수신 {new Date(data.lastSuccessfulFetchAt).toLocaleString("ko-KR")} · 출처: 기상청(KMA)</p>
+      <p className="mt-2 border-l-2 border-[#d0a064] bg-[#d0a064]/8 px-2 py-1.5 text-[8px] leading-3 text-[#dbc8a9]">{KMA_MARINE_WEATHER_WARNING_SAFETY_NOTICE}</p>
+    </section>
+  );
+}
+
+export function MarineLayerControl({ deepWaterRouteVisible, deepWaterRouteState, harborZoneVisible, harborZoneState, navigationAidsVisible, navigationAidsState, trainingFiringZoneVisible, trainingFiringZoneState, navigationWarningsVisible, navigationWarningsState, navigationWarningsData, tideStationsVisible, tideStationsState, marineWeatherVisible, marineWeatherState, marineObservationsVisible, marineObservationsState, weatherWarningsVisible, weatherWarningsState, weatherWarningsData, selected, onDeepWaterRouteVisibleChange, onHarborZoneVisibleChange, onNavigationAidsVisibleChange, onTrainingFiringZoneVisibleChange, onNavigationWarningsVisibleChange, onTideStationsVisibleChange, onMarineWeatherVisibleChange, onMarineObservationsVisibleChange, onWeatherWarningsVisibleChange, onNavigationWarningFocus, onCloseFeature }: {
   deepWaterRouteVisible: boolean;
   deepWaterRouteState: MarineLayerState;
   harborZoneVisible: boolean;
@@ -153,6 +177,9 @@ export function MarineLayerControl({ deepWaterRouteVisible, deepWaterRouteState,
   marineWeatherState: MarineLayerState;
   marineObservationsVisible: boolean;
   marineObservationsState: MarineLayerState;
+  weatherWarningsVisible: boolean;
+  weatherWarningsState: MarineLayerState;
+  weatherWarningsData: KmaMarineWeatherWarningsResponse | null;
   selected: SelectedMarineFeature | null;
   onDeepWaterRouteVisibleChange: (visible: boolean) => void;
   onHarborZoneVisibleChange: (visible: boolean) => void;
@@ -162,6 +189,7 @@ export function MarineLayerControl({ deepWaterRouteVisible, deepWaterRouteState,
   onTideStationsVisibleChange: (visible: boolean) => void;
   onMarineWeatherVisibleChange: (visible: boolean) => void;
   onMarineObservationsVisibleChange: (visible: boolean) => void;
+  onWeatherWarningsVisibleChange: (visible: boolean) => void;
   onNavigationWarningFocus: (warning: KhoaNavigationWarning) => void;
   onCloseFeature: () => void;
 }) {
@@ -176,8 +204,10 @@ export function MarineLayerControl({ deepWaterRouteVisible, deepWaterRouteState,
         <LayerToggle label="조석 관측소" description="공식 고·저조 예측 · 기본 OFF" visible={tideStationsVisible} state={tideStationsState} onChange={onTideStationsVisibleChange} icon="tide" />
         <LayerToggle label="해양기상 예보" description="KMA 소해구 모델 예측 · 기본 OFF" visible={marineWeatherVisible} state={marineWeatherState} onChange={onMarineWeatherVisibleChange} icon="weather" provider="KMA" />
         <LayerToggle label="해양기상 관측" description="KMA 실측 관측소 · 기본 OFF" visible={marineObservationsVisible} state={marineObservationsState} onChange={onMarineObservationsVisibleChange} icon="weather" provider="KMA" />
+        <LayerToggle label="해상특보" description="KMA 공식 특보 · 패널 전용 · 기본 OFF" visible={weatherWarningsVisible} state={weatherWarningsState} onChange={onWeatherWarningsVisibleChange} icon="warning" provider="KMA" />
       </div> : null}
       {navigationWarningsVisible && navigationWarningsData && !selected ? <NavigationWarningList data={navigationWarningsData} onFocus={onNavigationWarningFocus} /> : null}
+      {weatherWarningsVisible && weatherWarningsData && !selected ? <WeatherWarningList data={weatherWarningsData} /> : null}
       {selected?.kind === "tide-station" ? <TideStationDetails station={selected.properties} onClose={onCloseFeature} /> : selected?.kind === "marine-weather" ? <MarineWeatherDetails zone={selected.properties} onClose={onCloseFeature} /> : selected?.kind === "marine-observation" ? <MarineObservationDetails station={selected.properties} onClose={onCloseFeature} /> : selected ? <FeatureDetails selected={selected} onClose={onCloseFeature} /> : null}
     </div>
   );
