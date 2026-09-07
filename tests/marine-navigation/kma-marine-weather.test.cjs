@@ -95,7 +95,7 @@ test("MapLibre and controls wire an isolated default-off weather forecast layer"
   assert.match(map, /KMA_MARINE_WEATHER_LAYER_ID/);
   assert.match(map, /onMarineWeatherStateChange\("failed"\)/);
   assert.doesNotMatch(map, /KMA_APIHUB_KEY|authKey/);
-  assert.match(control, /label="해양기상"/);
+  assert.match(control, /label="해양기상 예보"/);
   assert.match(control, /KMA 소해구 모델 예측 · 기본 OFF/);
 });
 
