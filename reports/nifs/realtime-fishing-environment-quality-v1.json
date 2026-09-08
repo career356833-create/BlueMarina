@@ -1,0 +1,88 @@
+{
+  "reportVersion": "1.0",
+  "generatedAt": "2026-09-08T15:22:51.465Z",
+  "status": "NIFS_RISA_RUNTIME_CONNECTED",
+  "source": {
+    "provider": "NIFS",
+    "sourceId": "nifs-risa",
+    "service": "실시간어장정보",
+    "operations": ["risaCode", "risaList"],
+    "responseFormat": "JSON",
+    "qualityClass": "OBSERVED",
+    "credentialVariable": "NIFS_RISA_API_KEY",
+    "credentialExposed": false
+  },
+  "precheck": {
+    "branch": "main",
+    "head": "1adef38fbef333abe3e25f855be1f6612e59c727",
+    "originMain": "1adef38fbef333abe3e25f855be1f6612e59c727",
+    "existingWorktreeEntries": 329,
+    "existingWorktreePreserved": true
+  },
+  "live": {
+    "http": 200,
+    "resultCode": "00",
+    "resultMsg": "success",
+    "routeHttp": 200,
+    "coldRouteLatencyMs": 3346,
+    "normalizedResponseBytes": 23632,
+    "upstreamObservationResponseBytes": 10055
+  },
+  "stations": {
+    "metadataRows": 41,
+    "active": 41,
+    "observationRows": 65,
+    "distinctObservationStations": 41,
+    "exactIdJoins": 41,
+    "coordinates": 41,
+    "missingMetadata": 0,
+    "previousReportedActiveCount": 82,
+    "previousCountResolution": "REPLACED_BY_CURRENT_SINGLE_RESPONSE_COUNT_41; 82 was not reproducible and was consistent with duplicate aggregation"
+  },
+  "depth": {
+    "representation": "ONE_ROW_PER_STATION_TIMESTAMP_DEPTH_LAYER",
+    "layerCodes": {"1": "SURFACE", "2": "MIDDLE", "3": "BOTTOM"},
+    "surfaceRows": 41,
+    "middleRows": 17,
+    "bottomRows": 7,
+    "unknownRows": 0,
+    "groupedStationTimestamps": 41,
+    "duplicateStationTimestampLayers": 0
+  },
+  "temperature": {
+    "present": 65,
+    "missing": 0,
+    "unit": "degC",
+    "unitEvidence": "NIFS RISA observation UI; OpenAPI field table labels water temperature but omits the unit",
+    "zeroPreserved": true,
+    "observedSentinels": {},
+    "inventedSentinels": false
+  },
+  "maintenance": {
+    "normalRows": 63,
+    "maintenanceRows": 2,
+    "unknownRows": 0,
+    "repairRequestedRows": 0
+  },
+  "time": {
+    "fields": ["obs_dat", "obs_tim"],
+    "oldestObservedAt": "2026-04-16T10:30:00",
+    "newestObservedAt": "2026-09-09T00:00:00",
+    "medianAgeMinutesAtSnapshot": 23,
+    "timezone": "UNSPECIFIED_BY_NIFS",
+    "timezoneInvented": false,
+    "freshnessOperationalClock": "Asia/Seoul",
+    "freshnessThresholdsMinutes": {"freshMax": 45, "staleMax": 120},
+    "freshnessDistribution": {"fresh": 39, "stale": 0, "unavailable": 2}
+  },
+  "runtime": {
+    "route": "/api/fishing-condition/environment/realtime",
+    "navigationApiSeparated": true,
+    "cacheSeconds": 600,
+    "staleFallbackSeconds": 7200,
+    "rawPayloadReturned": false,
+    "databaseWrites": 0,
+    "supabaseChanges": 0,
+    "predictionImplemented": false
+  }
+}
