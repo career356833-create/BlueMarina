@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-09-09T00:00:00+09:00",
+  "status": "CONNECTED_RUNTIME_SOURCE_PERIODIC",
+  "source": {
+    "provider": "NIFS",
+    "sourceId": "nifs-femo-sea",
+    "qualityClass": "OBSERVED_PERIODIC_ENVIRONMENT",
+    "operation": "femoSeaList",
+    "credentialVariable": "NIFS_FEMO_API_KEY",
+    "credentialExposed": false,
+    "freshwaterRequested": false
+  },
+  "request": {
+    "startDate": "20250909",
+    "endDate": "20260909",
+    "httpStatus": 200,
+    "resultCode": "00",
+    "resultMessage": "success",
+    "latencyMs": 293,
+    "responseBytes": 180193
+  },
+  "identity": {
+    "rawRows": 255,
+    "returnedSamples": 253,
+    "uniqueSites": 253,
+    "uniqueFisheries": 59,
+    "identityFields": ["FISHERY", "LOCATION_POINT"],
+    "sourceRecordAdds": ["DATE_Y", "DATE_M", "DATE_D", "TIME_H", "TIME_I"],
+    "exactDuplicateRows": 2,
+    "conflictingDuplicateRows": 0,
+    "fuzzyMatching": false
+  },
+  "coordinates": {
+    "rawRowsWithCoordinates": 255,
+    "normalizedCoverage": "253/253",
+    "format": "DMS",
+    "crs": "CRS_NOT_DOCUMENTED"
+  },
+  "depth": {
+    "structure": "SURFACE_BOTTOM_PAIR_WITH_WATER_DEPTH",
+    "rowsWithWaterDepth": 255,
+    "minimumWaterDepthM": 1,
+    "maximumWaterDepthM": 126,
+    "exactSamplingDepthInvented": false
+  },
+  "time": {
+    "sourceFields": ["DATE_Y", "DATE_M", "DATE_D", "TIME_H", "TIME_I"],
+    "sourceTimezone": "UNSPECIFIED_BY_NIFS",
+    "earliestSampledAt": "2025-09-25T14:10:00",
+    "latestSampledAt": "2025-11-05T10:10:00",
+    "documentedCadence": "2-3 months",
+    "freshnessThresholdDays": { "freshMax": 120, "staleMax": 365 },
+    "freshnessDistribution": { "fresh": 0, "stale": 253, "unavailable": 0 }
+  },
+  "coverage": {
+    "basis": "255 raw rows; runtime returns 253 samples after removing 2 exact duplicates",
+    "waterTemperature": { "surface": 255, "bottom": 255, "unit": "degC" },
+    "salinity": { "surface": 255, "bottom": 255, "unit": "UNIT_NOT_DOCUMENTED" },
+    "ph": { "surface": 255, "bottom": 255, "unit": "pH" },
+    "dissolvedOxygen": { "surface": 255, "bottom": 255, "unit": "mg/L" },
+    "chemicalOxygenDemand": { "surface": 255, "bottom": 255, "unit": "mg/L" },
+    "ammoniaNitrogen": { "surface": 255, "bottom": 255, "unit": "mg/L" },
+    "nitrateNitrogen": { "surface": 255, "bottom": 255, "unit": "mg/L" },
+    "nitriteNitrogen": { "surface": 255, "bottom": 255, "unit": "mg/L" },
+    "dissolvedInorganicNitrogen": { "surface": 255, "bottom": 255, "unit": "mg/L" },
+    "totalNitrogen": { "surface": 255, "bottom": 255, "unit": "mg/L" },
+    "dissolvedInorganicPhosphorus": { "surface": 255, "bottom": 255, "unit": "mg/L" },
+    "totalPhosphorus": { "surface": 255, "bottom": 255, "unit": "mg/L" },
+    "silicateSilicon": { "surface": 255, "bottom": 255, "unit": "mg/L" },
+    "chlorophyllA": { "surface": 255, "bottom": 255, "unit": "ug/L" },
+    "suspendedSolids": { "surface": 255, "bottom": 255, "unit": "mg/L" }
+  },
+  "missingness": {
+    "blankOrNullMeasurements": 0,
+    "observedSentinels": {},
+    "sentinelPolicy": "OBSERVED_ONLY",
+    "zeroPreserved": true
+  },
+  "runtime": {
+    "route": "/api/fishing-condition/environment/fishery",
+    "serverCacheSeconds": 86400,
+    "staleFallbackSeconds": 604800,
+    "liveRouteHttpStatus": 200,
+    "liveRouteLatencyMs": 3472,
+    "normalizedResponseBytes": 422298,
+    "normalizedSamples": 253,
+    "normalizedFeatureCoveragePerDepth": 253,
+    "rawPayloadReturned": false,
+    "predictionImplemented": false,
+    "databaseWrites": 0,
+    "supabaseChanges": 0
+  }
+}
