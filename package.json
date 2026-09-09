@@ -18,6 +18,7 @@
     "dry-run:nifs-import": "node tools/nifs-importer/dry-run.cjs --input tools/nifs-importer/fixtures/manifests --baseline tools/nifs-importer/fixtures/current-source-records.json",
     "dry-run:nifs-import:manifest": "node tools/nifs-importer/dry-run.cjs --input data-import/nifs/manifest --output data-import/nifs/reports",
     "build:nifs-manifest": "node tools/nifs-importer/build-manifest.cjs --input data/nifs/raw --output data-import/nifs/manifest --report-dir data-import/nifs/reports",
+    "build:nifs-soo-climatology": "node tools/nifs/build-ocean-section-climatology.cjs",
     "test:nifs-manifest": "node --test tools/nifs-importer/build-manifest.test.cjs",
     "diff:nifs-staging": "node tools/nifs-importer/staging-schema-diff.cjs --input data-import/nifs/manifest --output-json reports/nifs-staging-schema-diff.json --output-md reports/nifs-staging-schema-diff.md --review-queue reports/nifs-review-queue.json",
     "test:nifs-staging-diff": "node --test tools/nifs-importer/staging-schema-diff.test.cjs",

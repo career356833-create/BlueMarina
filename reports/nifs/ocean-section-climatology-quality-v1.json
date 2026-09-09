@@ -1,0 +1,258 @@
+{
+  "reportVersion": "1.0",
+  "generatedAt": "2026-09-09T15:21:17.298Z",
+  "status": "MONTHLY_DEPTH_CLIMATOLOGY_V1_READY_ANOMALY_BLOCKED",
+  "historyWindow": {
+    "startYear": 2016,
+    "endYear": 2025,
+    "years": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "selectionReason": "LATEST_TEN_COMPLETE_CALENDAR_YEARS_FOR_STATION_CONTINUITY_COST_CONTROL_AND_CURRENT_CLIMATE_RELEVANCE"
+  },
+  "fetch": {
+    "strategy": "SEQUENTIAL_ONE_CALENDAR_YEAR_PER_REQUEST_NO_RETRY",
+    "delayMs": 250,
+    "metadata": [
+      {
+        "region": "E",
+        "rows": 150,
+        "latencyMs": 140,
+        "responseBytes": 22511
+      },
+      {
+        "region": "W",
+        "rows": 92,
+        "latencyMs": 27,
+        "responseBytes": 13670
+      },
+      {
+        "region": "S",
+        "rows": 74,
+        "latencyMs": 38,
+        "responseBytes": 10949
+      },
+      {
+        "region": "EC",
+        "rows": 42,
+        "latencyMs": 31,
+        "responseBytes": 6385
+      }
+    ],
+    "annual": [
+      {
+        "year": 2016,
+        "startDate": "20160101",
+        "endDate": "20161231",
+        "rows": 8772,
+        "profiles": 1148,
+        "latencyMs": 833,
+        "responseBytes": 3037772
+      },
+      {
+        "year": 2017,
+        "startDate": "20170101",
+        "endDate": "20171231",
+        "rows": 8843,
+        "profiles": 1152,
+        "latencyMs": 1081,
+        "responseBytes": 3045715
+      },
+      {
+        "year": 2018,
+        "startDate": "20180101",
+        "endDate": "20181231",
+        "rows": 8577,
+        "profiles": 1150,
+        "latencyMs": 1475,
+        "responseBytes": 2966481
+      },
+      {
+        "year": 2019,
+        "startDate": "20190101",
+        "endDate": "20191231",
+        "rows": 8268,
+        "profiles": 1118,
+        "latencyMs": 927,
+        "responseBytes": 2868115
+      },
+      {
+        "year": 2020,
+        "startDate": "20200101",
+        "endDate": "20201231",
+        "rows": 8655,
+        "profiles": 1154,
+        "latencyMs": 935,
+        "responseBytes": 3021408
+      },
+      {
+        "year": 2021,
+        "startDate": "20210101",
+        "endDate": "20211231",
+        "rows": 8653,
+        "profiles": 1154,
+        "latencyMs": 1123,
+        "responseBytes": 2996084
+      },
+      {
+        "year": 2022,
+        "startDate": "20220101",
+        "endDate": "20221231",
+        "rows": 8459,
+        "profiles": 1133,
+        "latencyMs": 856,
+        "responseBytes": 2925739
+      },
+      {
+        "year": 2023,
+        "startDate": "20230101",
+        "endDate": "20231231",
+        "rows": 8643,
+        "profiles": 1153,
+        "latencyMs": 1401,
+        "responseBytes": 2983007
+      },
+      {
+        "year": 2024,
+        "startDate": "20240101",
+        "endDate": "20241231",
+        "rows": 8445,
+        "profiles": 1145,
+        "latencyMs": 1181,
+        "responseBytes": 2880764
+      },
+      {
+        "year": 2025,
+        "startDate": "20250101",
+        "endDate": "20251231",
+        "rows": 11835,
+        "profiles": 1632,
+        "latencyMs": 1886,
+        "responseBytes": 4019612
+      }
+    ],
+    "errors": []
+  },
+  "source": {
+    "rawRows": 89150,
+    "profiles": 11939,
+    "normalizedDepthRows": 89150,
+    "stations": 207,
+    "exactDuplicateRows": 0,
+    "conflictingDuplicateRows": 0,
+    "invalidRows": 0
+  },
+  "climatology": {
+    "inputProfiles": 11939,
+    "inputDepthSamples": 89150,
+    "temperaturePresent": 85812,
+    "temperatureMissing": 3338,
+    "candidateCells": 13015,
+    "emittedCells": 9336,
+    "excludedLowSampleCells": 3679,
+    "stations": 207,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "depthValues": [
+      0,
+      10,
+      20,
+      30,
+      50,
+      75,
+      100,
+      125,
+      150,
+      200,
+      250,
+      300,
+      400,
+      500
+    ],
+    "exactDuplicateSamples": 0,
+    "conflictingDuplicateSamples": 0,
+    "standardDeviationCells": 9336,
+    "sampleCountDistribution": {
+      "3": 378,
+      "4": 315,
+      "5": 116,
+      "6": 437,
+      "7": 384,
+      "8": 973,
+      "9": 2448,
+      "10": 4285
+    },
+    "yearCountDistribution": {
+      "3": 378,
+      "4": 315,
+      "5": 116,
+      "6": 437,
+      "7": 384,
+      "8": 973,
+      "9": 2448,
+      "10": 4285
+    },
+    "inputQcRawDistribution": {
+      "2": 85812
+    },
+    "qcRawDistribution": {
+      "2": 80950
+    }
+  },
+  "policy": {
+    "key": "stationId+calendarMonth+exactSourceDepth",
+    "minSamples": 3,
+    "standardDeviation": "SAMPLE_N_MINUS_1",
+    "qcFiltering": false,
+    "qcReason": "NIFS_QC_DICTIONARY_NOT_CONFIRMED",
+    "unit": "UNIT_NOT_DOCUMENTED",
+    "salinityBaselineEmitted": false,
+    "dissolvedOxygenBaselineEmitted": false
+  },
+  "mapping": {
+    "risaToSooStation": "ANOMALY_MAPPING_BLOCKED",
+    "reason": "NO_OFFICIAL_EXACT_CROSSWALK",
+    "depth": "DEPTH_MAPPING_BLOCKED",
+    "depthReason": "RISA_LAYER_TO_SOO_EXACT_DEPTH_CROSSWALK_NOT_FOUND",
+    "unitCompatibility": "UNIT_COMPATIBILITY_BLOCKED",
+    "unitReason": "RISA_DEGC_BUT_SOO_TEMPERATURE_UNIT_NOT_DOCUMENTED",
+    "anomalyEnabled": false
+  },
+  "artifact": {
+    "format": "MONTH_CHUNKED_NDJSON_WITH_JSON_MANIFEST",
+    "files": 13,
+    "cells": 9336,
+    "bytes": 6009676,
+    "sha256": "6e0bbdfae03309ef44ce62fdd425fcb264274121c0f84bebc0b8b801d31b1be5",
+    "root": "data/nifs/fishing-condition/ocean-section/climatology/v1"
+  },
+  "build": {
+    "durationMs": 16580,
+    "reproducible": true,
+    "rawOfficialPayloadPersisted": false,
+    "databaseWrites": 0,
+    "supabaseChanges": 0,
+    "scoreImplemented": false,
+    "recommendationImplemented": false
+  }
+}

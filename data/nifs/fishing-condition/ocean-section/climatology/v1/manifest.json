@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-09-09T15:21:17.298Z",
+  "source": {
+    "provider": "NIFS",
+    "sourceId": "nifs-soo-climatology",
+    "qualityClass": "DERIVED_HISTORICAL_BASELINE",
+    "derivedFrom": "nifs-soo"
+  },
+  "historyWindow": {
+    "startYear": 2016,
+    "endYear": 2025,
+    "years": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  "minSamples": 3,
+  "cellCount": 9336,
+  "files": [
+    {
+      "month": 1,
+      "path": "month-01.ndjson",
+      "cells": 62,
+      "bytes": 40070,
+      "sha256": "02a5b018af14665e3ee663cad71fdc90ce514ab6d282b81bebc39b70ea087ff6"
+    },
+    {
+      "month": 2,
+      "path": "month-02.ndjson",
+      "cells": 1563,
+      "bytes": 1002757,
+      "sha256": "4411992b80ff6243d7a90dd998f66d347de74bcd04c65082b9788e958da66796"
+    },
+    {
+      "month": 3,
+      "path": "month-03.ndjson",
+      "cells": 396,
+      "bytes": 253667,
+      "sha256": "f8c986d4a0ae83875c393e7846d3c771859b235ae7082bece9f87573273fee38"
+    },
+    {
+      "month": 4,
+      "path": "month-04.ndjson",
+      "cells": 1301,
+      "bytes": 835338,
+      "sha256": "87fa37a3a8708ec32688342f600b0051113b825f5eb79a46ed32d28f9df74fe4"
+    },
+    {
+      "month": 5,
+      "path": "month-05.ndjson",
+      "cells": 178,
+      "bytes": 115095,
+      "sha256": "85fc0d91d48819d5415c3304897ad742e121b8e15694450101d0b99d6c6d7979"
+    },
+    {
+      "month": 6,
+      "path": "month-06.ndjson",
+      "cells": 1302,
+      "bytes": 837065,
+      "sha256": "11330c3916102215ada0501a4e5cfeb0cb409348f2a9bf24fd644e0e590e470d"
+    },
+    {
+      "month": 7,
+      "path": "month-07.ndjson",
+      "cells": 0,
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "month": 8,
+      "path": "month-08.ndjson",
+      "cells": 1566,
+      "bytes": 1008192,
+      "sha256": "ecb00e77e68f64cf8ea509909bfd6b8f34032833c61dd6a02c829a3292fd6452"
+    },
+    {
+      "month": 9,
+      "path": "month-09.ndjson",
+      "cells": 110,
+      "bytes": 70997,
+      "sha256": "c1ca3768e2f5617275d6d5e58c6ad27e8a28b3cf93ec1e2433d67a4825eae7fc"
+    },
+    {
+      "month": 10,
+      "path": "month-10.ndjson",
+      "cells": 1300,
+      "bytes": 838314,
+      "sha256": "de55d2180117e2f148df185fb38c1ac583bf58052110eee46ac3899782200f0a"
+    },
+    {
+      "month": 11,
+      "path": "month-11.ndjson",
+      "cells": 257,
+      "bytes": 165925,
+      "sha256": "ab2ae289e9c914588437db14abf8e952f1c13ab78e37851c45d01625168cfa64"
+    },
+    {
+      "month": 12,
+      "path": "month-12.ndjson",
+      "cells": 1301,
+      "bytes": 839381,
+      "sha256": "7c7db06404aa6f1c7c8b3154656ba1711ac1d1ca262e89525ed7665bfd58a9a8"
+    }
+  ],
+  "artifactSha256": "6e0bbdfae03309ef44ce62fdd425fcb264274121c0f84bebc0b8b801d31b1be5"
+}

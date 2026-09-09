@@ -2,9 +2,9 @@
 
 ## Decision
 
-`NIFS_RISA_FEMO_AND_SOO_RUNTIME_CONNECTED`
+`NIFS_RISA_FEMO_SOO_AND_SOO_CLIMATOLOGY_CONNECTED`
 
-The NIFS real-time fishing-ground observation service, periodic fishery-environment observations, and historical serial-ocean vertical profiles are connected runtime inputs. Environmental time series remain outside canonical Fish and Marine Organism records.
+The NIFS real-time fishing-ground observation service, periodic fishery-environment observations, historical serial-ocean vertical profiles, and a derived 2016-2025 monthly exact-depth water-temperature climatology are connected runtime inputs. Environmental time series remain outside canonical Fish and Marine Organism records.
 
 ## Source status
 
@@ -12,7 +12,7 @@ The NIFS real-time fishing-ground observation service, periodic fishery-environm
 | --- | --- | --- | --- | --- |
 | NIFS `risaCode` + `risaList` | OBSERVED | CONNECTED | Surface/middle/bottom water temperature | Source timezone not documented; 2 current station snapshots unavailable by age |
 | NIFS coastal stationary observations | OBSERVED | LIVE_VALIDATED | Candidate later-phase source | Not connected in this phase |
-| NIFS `sooCode` + `sooList` serial ocean observations | HISTORICAL_OCEANOGRAPHIC_PROFILE | CONNECTED_HISTORICAL_PROFILE_SOURCE | Historical vertical profiles; future climatology foundation | Units, timezone, and QC meanings are not documented; no climatology or score yet |
+| NIFS `sooCode` + `sooList` serial ocean observations | HISTORICAL_OCEANOGRAPHIC_PROFILE | CONNECTED_HISTORICAL_PROFILE_SOURCE | Historical vertical profiles and derived monthly exact-depth temperature baseline | Units, timezone, and QC meanings are not documented; anomaly and score remain blocked |
 | NIFS `femoSeaList` seawater | OBSERVED_PERIODIC_ENVIRONMENT | CONNECTED_RUNTIME_SOURCE_PERIODIC | Surface/bottom environmental samples | 2-3 month cadence; source timezone and salinity unit are not documented |
 | NIFS red tide | EVENT | LIVE_VALIDATED_CONTRACT_DRIFT | Candidate hazard input | Current detail uses `cod_news`, not legacy `srcode` |
 | NIFS jellyfish | EVENT | LIVE_PARTIAL | Candidate hazard input | Current weekly list/detail join is limited |
@@ -60,4 +60,18 @@ This source does not share RISA freshness rules and does not add a score or reco
 - source metadata: `NIFS`, `nifs-soo`, `HISTORICAL_OCEANOGRAPHIC_PROFILE`
 - cache: 12 hours for profile windows, 24 hours for metadata, bounded seven-day stale fallback
 
-All 11 numerical field units and the source timezone remain explicitly undocumented. The source is registered for future historical baselines only; V2 does not compute climatology, anomaly, suitability, score, probability, ranking, or recommendation. See `NIFS_OCEAN_SECTION_V1.md` and `reports/nifs/ocean-section-quality-v1.json`.
+All 11 numerical field units and the source timezone remain explicitly undocumented. See `NIFS_OCEAN_SECTION_V1.md` and `reports/nifs/ocean-section-quality-v1.json`.
+
+## Derived monthly depth climatology
+
+- history window: ten complete calendar years, 2016-2025
+- key: exact `stationId + calendarMonth + source depth value`
+- public variable: water temperature
+- metrics: mean, median, min, max, sample standard deviation (`n - 1`), sample count, and year count
+- availability gate: at least three distinct observation events
+- QC: raw code distributions retained; no undocumented QC interpretation or filtering
+- artifact: month-chunked NDJSON with a checksum manifest
+- route: `/api/fishing-condition/climatology/ocean-section`
+- source metadata: `NIFS`, `nifs-soo-climatology`, `DERIVED_HISTORICAL_BASELINE`, derived from `nifs-soo`
+
+The derived contract uses `depthValue` rather than claiming meters because the official unit remains undocumented. RISA-to-SOO station mapping, RISA layer-to-exact-depth mapping, and unit compatibility are all unverified, so temperature anomaly remains `ANOMALY_MAPPING_BLOCKED` and no anomaly route exists. No suitability, score, probability, ranking, recommendation, database write, or Supabase change is part of this feature. See `NIFS_OCEAN_SECTION_CLIMATOLOGY_V1.md` and `reports/nifs/ocean-section-climatology-quality-v1.json`.

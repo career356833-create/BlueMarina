@@ -1,3 +1,4 @@
 data/mbris/normalized/taxonomy-master.json filter=lfs diff=lfs merge=lfs -text
 data/mbris/normalized/taxonomy-master.csv filter=lfs diff=lfs merge=lfs -text
 data/mbris/raw/catalog/original/mbris-national-species-catalog.xlsx filter=lfs diff=lfs merge=lfs -text
+data/nifs/fishing-condition/ocean-section/climatology/v1/* -text
