@@ -2,9 +2,9 @@
 
 ## Decision
 
-`NIFS_RISA_AND_FEMO_RUNTIME_CONNECTED`
+`NIFS_RISA_FEMO_AND_SOO_RUNTIME_CONNECTED`
 
-The NIFS real-time fishing-ground observation service and periodic fishery-environment seawater observations are connected runtime inputs. Environmental time series remain outside canonical Fish and Marine Organism records.
+The NIFS real-time fishing-ground observation service, periodic fishery-environment observations, and historical serial-ocean vertical profiles are connected runtime inputs. Environmental time series remain outside canonical Fish and Marine Organism records.
 
 ## Source status
 
@@ -12,7 +12,7 @@ The NIFS real-time fishing-ground observation service and periodic fishery-envir
 | --- | --- | --- | --- | --- |
 | NIFS `risaCode` + `risaList` | OBSERVED | CONNECTED | Surface/middle/bottom water temperature | Source timezone not documented; 2 current station snapshots unavailable by age |
 | NIFS coastal stationary observations | OBSERVED | LIVE_VALIDATED | Candidate later-phase source | Not connected in this phase |
-| NIFS serial ocean observations | OBSERVED | LIVE_VALIDATED | Candidate later-phase source | Not connected in this phase |
+| NIFS `sooCode` + `sooList` serial ocean observations | HISTORICAL_OCEANOGRAPHIC_PROFILE | CONNECTED_HISTORICAL_PROFILE_SOURCE | Historical vertical profiles; future climatology foundation | Units, timezone, and QC meanings are not documented; no climatology or score yet |
 | NIFS `femoSeaList` seawater | OBSERVED_PERIODIC_ENVIRONMENT | CONNECTED_RUNTIME_SOURCE_PERIODIC | Surface/bottom environmental samples | 2-3 month cadence; source timezone and salinity unit are not documented |
 | NIFS red tide | EVENT | LIVE_VALIDATED_CONTRACT_DRIFT | Candidate hazard input | Current detail uses `cod_news`, not legacy `srcode` |
 | NIFS jellyfish | EVENT | LIVE_PARTIAL | Candidate hazard input | Current weekly list/detail join is limited |
@@ -48,3 +48,16 @@ See `NIFS_REALTIME_FISHING_ENVIRONMENT_V1.md` and `reports/nifs/realtime-fishing
 - cache: 24 hours; stale-delivery fallback: seven days
 
 This source does not share RISA freshness rules and does not add a score or recommendation. See `NIFS_FISHERY_ENVIRONMENT_V1.md` and `reports/nifs/fishery-environment-quality-v1.json`.
+
+## Historical ocean-section source
+
+- metadata: 358 exact station pairs across 33 historical line codes; 212 end-date-unset and 146 ended records
+- modern bounded profile window: 207 stations, 8,912 rows grouped into 1,417 vertical profiles
+- depths: 14 source values from 0 through 500; 947 valid zero-depth rows
+- identity: exact `sln_cde + sta_cde`; no name or coordinate matching
+- QC: `qc_wtr`, `qc_sal`, and `qc_dox` retained raw; no undocumented interpretation
+- route: `/api/fishing-condition/environment/ocean-section`
+- source metadata: `NIFS`, `nifs-soo`, `HISTORICAL_OCEANOGRAPHIC_PROFILE`
+- cache: 12 hours for profile windows, 24 hours for metadata, bounded seven-day stale fallback
+
+All 11 numerical field units and the source timezone remain explicitly undocumented. The source is registered for future historical baselines only; V2 does not compute climatology, anomaly, suitability, score, probability, ranking, or recommendation. See `NIFS_OCEAN_SECTION_V1.md` and `reports/nifs/ocean-section-quality-v1.json`.
