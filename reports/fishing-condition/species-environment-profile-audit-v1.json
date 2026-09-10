@@ -1,0 +1,140 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-10T13:32:55.347Z",
+  "sourceId": "blue-marina-species-environment-v1",
+  "artifact": {
+    "path": "data/fishing-condition/species-environment/v1/species-environment-profiles.json",
+    "bytes": 32974,
+    "sha256": "095f481cad0f7350b75d6264231443cca576ff161edaf9290418a2610184d99f"
+  },
+  "species": {
+    "total": 10,
+    "complete": 0,
+    "partial": 9,
+    "conflictReviewRequired": 1,
+    "canonicalMatches": 10,
+    "missingSpecies": []
+  },
+  "coverage": {
+    "temperature": 3,
+    "depth": 10,
+    "salinity": 3,
+    "dissolvedOxygen": 1,
+    "habitat": 10,
+    "spawning": 6,
+    "migration": 9,
+    "activity": 4
+  },
+  "sources": {
+    "MBRIS": 9,
+    "FISHBASE": 8,
+    "PAPER": 4,
+    "OTHER_OFFICIAL": 1
+  },
+  "sourcesPerSpecies": {
+    "BM-SPECIES-000755": 2,
+    "BM-SPECIES-000751": 2,
+    "BM-SPECIES-000188": 2,
+    "BM-SPECIES-000012": 2,
+    "BM-SPECIES-000465": 2,
+    "BM-SPECIES-000444": 2,
+    "BM-SPECIES-000417": 2,
+    "BM-SPECIES-000501": 2,
+    "BM-SPECIES-003107": 2,
+    "BM-SPECIES-003111": 4
+  },
+  "confidenceDistribution": {
+    "HIGH": 7,
+    "MEDIUM": 3
+  },
+  "conflicts": [
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "koreanName": "방어",
+      "field": "depth.observed",
+      "status": "CONFLICT_REVIEW_REQUIRED",
+      "evidenceIds": [
+        "amberjack-mbris",
+        "amberjack-fishbase"
+      ],
+      "summary": "한국 MBRIS는 200m 이내, FishBase는 최대 100m를 제시한다. 범위·지역 차이를 평균하지 않고 canonical depth를 비워 둔다."
+    }
+  ],
+  "unsupportedFields": {
+    "BM-SPECIES-000755": [
+      "temperature.observed",
+      "temperature.preferred",
+      "temperature.spawning",
+      "salinity",
+      "dissolvedOxygen",
+      "activityPeriod"
+    ],
+    "BM-SPECIES-000751": [
+      "temperature",
+      "salinity.numeric",
+      "dissolvedOxygen",
+      "activityPeriod"
+    ],
+    "BM-SPECIES-000188": [
+      "temperature",
+      "depth.maximum",
+      "salinity.numeric",
+      "dissolvedOxygen",
+      "activityPeriod"
+    ],
+    "BM-SPECIES-000012": [
+      "temperature",
+      "salinity",
+      "dissolvedOxygen",
+      "spawning",
+      "feeding"
+    ],
+    "BM-SPECIES-000465": [
+      "temperature.observed",
+      "temperature.preferred",
+      "salinity",
+      "dissolvedOxygen",
+      "activityPeriod"
+    ],
+    "BM-SPECIES-000444": [
+      "temperature",
+      "salinity",
+      "dissolvedOxygen",
+      "spawning",
+      "preyCategories"
+    ],
+    "BM-SPECIES-000417": [
+      "salinity",
+      "dissolvedOxygen",
+      "spawning.months"
+    ],
+    "BM-SPECIES-000501": [
+      "temperature",
+      "salinity",
+      "dissolvedOxygen",
+      "spawning",
+      "activityPeriod"
+    ],
+    "BM-SPECIES-003107": [
+      "temperature.wild",
+      "temperature.preferred",
+      "salinity.wild",
+      "dissolvedOxygen.threshold",
+      "migration",
+      "feeding"
+    ],
+    "BM-SPECIES-003111": [
+      "temperature.canonical",
+      "salinity",
+      "dissolvedOxygen",
+      "spawning",
+      "activityPeriod"
+    ]
+  },
+  "boundaries": {
+    "suitabilityScoreImplemented": false,
+    "fishingProbabilityImplemented": false,
+    "recommendationRankImplemented": false,
+    "observationComparisonImplemented": false
+  }
+}
