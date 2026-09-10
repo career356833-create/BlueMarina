@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-10T14:44:51.492Z",
+  "qualityClass": "DERIVED_COMPARISON",
+  "supportedEnvironmentSources": [
+    "nifs-risa",
+    "nifs-femo-sea"
+  ],
+  "species": {
+    "total": 10,
+    "profileSource": "blue-marina-species-environment-v1"
+  },
+  "comparability": {
+    "temperature": 2,
+    "temperaturePreferred": 1,
+    "temperatureObservedFallback": 1,
+    "salinityProfileCanonical": 0,
+    "salinityRuntime": 0,
+    "dissolvedOxygen": 0,
+    "seasonality": 5
+  },
+  "unsupported": {
+    "temperatureProfiles": 8,
+    "salinityProfiles": 10,
+    "dissolvedOxygenProfiles": 10,
+    "chlorophyllAProfiles": 10,
+    "habitatEnvironment": 10
+  },
+  "conflicts": {
+    "species": 1,
+    "fields": 1,
+    "fieldNames": [
+      "depth.observed"
+    ]
+  },
+  "unitGates": {
+    "temperature": "degC compatible",
+    "salinity": "UNIT_UNVERIFIED for nifs-femo-sea",
+    "dissolvedOxygen": "mg/L compatible when a canonical species minimum exists",
+    "failuresInCurrentProfiles": 1
+  },
+  "qualityCases": {
+    "missingEnvironment": 1,
+    "stale": 1,
+    "stalePolicy": "RELATION_RETAINED_WITH_LIMITED_USABILITY"
+  },
+  "routeContractTests": {
+    "postOnly": true,
+    "explicitStationOrSiteRequired": true,
+    "explicitDepthContextRequired": true,
+    "nearestLookup": false,
+    "readOnly": true
+  },
+  "boundedLiveVerification": {
+    "sourceId": "nifs-risa",
+    "stationId": "b***a",
+    "depthContext": "SURFACE",
+    "freshness": "fresh",
+    "currentTemperatureC": 25.5,
+    "cases": [
+      {
+        "speciesId": "BM-SPECIES-000417",
+        "koreanName": "고등어",
+        "rangeType": "PREFERRED",
+        "relation": "ABOVE_RANGE"
+      },
+      {
+        "speciesId": "BM-SPECIES-003107",
+        "koreanName": "주꾸미",
+        "rangeType": "OBSERVED",
+        "relation": "ABOVE_RANGE"
+      },
+      {
+        "speciesId": "BM-SPECIES-000755",
+        "koreanName": "참돔",
+        "rangeType": null,
+        "relation": "UNSUPPORTED_PROFILE"
+      }
+    ],
+    "scorePresent": false,
+    "recommendationPresent": false,
+    "interpretation": null
+  },
+  "invariants": {
+    "compositeScore": false,
+    "fishingProbability": false,
+    "recommendation": false,
+    "ranking": false,
+    "locationRecommendation": false,
+    "anomalyRuntimeEnabled": false,
+    "databaseWrite": false
+  }
+}
