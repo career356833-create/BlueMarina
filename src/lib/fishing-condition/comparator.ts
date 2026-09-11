@@ -78,6 +78,12 @@ function fieldHasConflict(profile: SpeciesEnvironmentProfile, field: string) {
   return profile.conflicts.some((conflict) => conflict.field === field || conflict.field.startsWith(`${field}.`));
 }
 
+function fieldConflictEvidence(profile: SpeciesEnvironmentProfile, field: string) {
+  return [...new Set(profile.conflicts
+    .filter((conflict) => conflict.field === field || conflict.field.startsWith(`${field}.`))
+    .flatMap((conflict) => conflict.evidenceIds))];
+}
+
 function usabilityForFreshness(freshness: ComparatorEnvironment["freshness"]): ComparisonUsability {
   if (freshness === "fresh") return "USABLE";
   if (freshness === "stale") return "LIMITED";
@@ -120,7 +126,9 @@ function compareTemperature(profile: SpeciesEnvironmentProfile, environment: Com
   if (environment.freshness === "unavailable" || current === null) return unavailableNumeric("MISSING_ENVIRONMENT", current, unit);
   if (unit === null) return unavailableNumeric("UNIT_UNVERIFIED", current, unit);
   if (unit !== "degC") return unavailableNumeric("UNIT_MISMATCH", current, unit);
-  if (fieldHasConflict(profile, "temperature")) return unavailableNumeric("CONFLICT_REVIEW_REQUIRED", current, unit);
+  if (fieldHasConflict(profile, "temperature")) {
+    return { ...unavailableNumeric("CONFLICT_REVIEW_REQUIRED", current, unit), evidenceIds: fieldConflictEvidence(profile, "temperature") };
+  }
   const range = completeTemperatureRange(profile);
   if (!range) return unavailableNumeric("UNSUPPORTED_PROFILE", current, unit);
   return {
@@ -143,7 +151,9 @@ function compareSalinity(profile: SpeciesEnvironmentProfile, environment: Compar
   const unit = environment.salinity.unit;
   if (environment.freshness === "unavailable" || current === null) return unavailableNumeric("MISSING_ENVIRONMENT", current, unit);
   if (unit === null || unit === "UNIT_NOT_DOCUMENTED") return unavailableNumeric("UNIT_UNVERIFIED", current, unit);
-  if (fieldHasConflict(profile, "salinity")) return unavailableNumeric("CONFLICT_REVIEW_REQUIRED", current, unit);
+  if (fieldHasConflict(profile, "salinity")) {
+    return { ...unavailableNumeric("CONFLICT_REVIEW_REQUIRED", current, unit), evidenceIds: fieldConflictEvidence(profile, "salinity") };
+  }
   const min = profile.salinity.canonicalMin;
   const max = profile.salinity.canonicalMax;
   const profileUnit = profile.salinity.unit;
@@ -171,7 +181,9 @@ function compareDissolvedOxygen(profile: SpeciesEnvironmentProfile, environment:
   const unit = environment.dissolvedOxygen.unit;
   if (environment.freshness === "unavailable" || current === null) return unavailableNumeric("MISSING_ENVIRONMENT", current, unit);
   if (unit === null) return unavailableNumeric("UNIT_UNVERIFIED", current, unit);
-  if (fieldHasConflict(profile, "dissolvedOxygen")) return unavailableNumeric("CONFLICT_REVIEW_REQUIRED", current, unit);
+  if (fieldHasConflict(profile, "dissolvedOxygen")) {
+    return { ...unavailableNumeric("CONFLICT_REVIEW_REQUIRED", current, unit), evidenceIds: fieldConflictEvidence(profile, "dissolvedOxygen") };
+  }
   const minimum = profile.dissolvedOxygen.minimumMgL;
   if (minimum === null) return unavailableNumeric("UNSUPPORTED_PROFILE", current, unit);
   if (unit !== "mg/L") return unavailableNumeric("UNIT_MISMATCH", current, unit);
@@ -194,7 +206,9 @@ function compareDissolvedOxygen(profile: SpeciesEnvironmentProfile, environment:
 
 function compareDepth(profile: SpeciesEnvironmentProfile, environment: ComparatorEnvironment): NumericComparison {
   const current = environment.exactDepthM;
-  if (fieldHasConflict(profile, "depth")) return unavailableNumeric("CONFLICT_REVIEW_REQUIRED", current, "m");
+  if (fieldHasConflict(profile, "depth")) {
+    return { ...unavailableNumeric("CONFLICT_REVIEW_REQUIRED", current, "m"), evidenceIds: fieldConflictEvidence(profile, "depth") };
+  }
   if (current === null) return unavailableNumeric("DEPTH_CONTEXT_UNRESOLVED", current, "m");
   const min = profile.depth.canonicalObservedMinM;
   const max = profile.depth.canonicalObservedMaxM;

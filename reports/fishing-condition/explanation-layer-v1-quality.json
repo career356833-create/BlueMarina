@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-10T22:04:30.216Z",
+  "locale": "ko-KR",
+  "qualityClass": "DERIVED_EXPLANATION",
+  "dependency": {
+    "route": "POST /api/fishing-condition/compare",
+    "qualityClass": "DERIVED_COMPARISON",
+    "comparisonMutation": false
+  },
+  "templates": {
+    "temperature": 11,
+    "seasonality": 3,
+    "unsupported": 2,
+    "unitBlock": 2,
+    "conflict": 1,
+    "freshness": 3,
+    "relations": [
+      "WITHIN_RANGE",
+      "BELOW_RANGE",
+      "ABOVE_RANGE",
+      "MATCH",
+      "MISMATCH",
+      "UNSUPPORTED_PROFILE",
+      "UNSUPPORTED_ENVIRONMENT",
+      "MISSING_ENVIRONMENT",
+      "UNIT_MISMATCH",
+      "UNIT_UNVERIFIED",
+      "DEPTH_CONTEXT_UNRESOLVED",
+      "CONFLICT_REVIEW_REQUIRED",
+      "UNKNOWN"
+    ]
+  },
+  "profileCoverage": {
+    "temperatureComparable": 2,
+    "seasonalityComparable": 5,
+    "salinityRuntimeComparable": 0,
+    "dissolvedOxygenRuntimeComparable": 0
+  },
+  "stability": {
+    "deterministic": true,
+    "externalAiCalls": 0,
+    "repeatOutputEqual": true
+  },
+  "boundedLiveVerification": {
+    "sourceId": "nifs-risa",
+    "stationId": "b***a",
+    "depthContext": "SURFACE",
+    "freshness": "fresh",
+    "currentTemperatureC": 25.5,
+    "cases": [
+      {
+        "speciesId": "BM-SPECIES-000417",
+        "relation": "ABOVE_RANGE",
+        "evidenceRefs": ["mackerel-mbris"],
+        "httpStatus": 200
+      },
+      {
+        "speciesId": "BM-SPECIES-003107",
+        "relation": "ABOVE_RANGE",
+        "evidenceRefs": ["webfoot-paper-2026"],
+        "httpStatus": 200
+      },
+      {
+        "speciesId": "BM-SPECIES-000755",
+        "relation": "UNSUPPORTED_PROFILE",
+        "evidenceRefs": [],
+        "httpStatus": 200
+      }
+    ],
+    "scorePresent": false,
+    "recommendationPresent": false
+  },
+  "forbiddenPhraseScan": {
+    "runtimeTemplateMatches": 0,
+    "phrases": [
+      "조황이 좋",
+      "잘 잡",
+      "추천",
+      "확률",
+      "적합도",
+      "최적",
+      "유리",
+      "불리",
+      "대박",
+      "위험도"
+    ]
+  },
+  "outputFields": {
+    "score": 0,
+    "probability": 0,
+    "recommendation": 0,
+    "ranking": 0
+  },
+  "boundaries": {
+    "databaseWrites": 0,
+    "historyPersistence": 0,
+    "newEnvironmentFetchers": 0,
+    "anomalyGateBypass": false,
+    "compositeExplanation": false
+  }
+}
