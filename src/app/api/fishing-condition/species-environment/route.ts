@@ -1,5 +1,5 @@
 import { type NextRequest, NextResponse } from "next/server";
-import { findSpeciesEnvironmentProfile, SPECIES_ENVIRONMENT_SOURCE_ID } from "@/lib/fishing-condition/species-environment";
+import { findSpeciesEnvironmentProfile, SPECIES_ENVIRONMENT_SOURCE_ID, SPECIES_ENVIRONMENT_VERSION } from "@/lib/fishing-condition/species-environment";
 
 export const dynamic = "force-dynamic";
 
@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
   }
   const profile = findSpeciesEnvironmentProfile({ speciesId, slug });
   if (!profile) return NextResponse.json({ ok: false, sourceId: SPECIES_ENVIRONMENT_SOURCE_ID, code: "PROFILE_NOT_FOUND" }, { status: 404 });
-  return NextResponse.json({ ok: true, sourceId: SPECIES_ENVIRONMENT_SOURCE_ID, profile }, {
+  return NextResponse.json({ ok: true, version: SPECIES_ENVIRONMENT_VERSION, sourceId: SPECIES_ENVIRONMENT_SOURCE_ID, profile }, {
     headers: { "Cache-Control": "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800" },
   });
 }

@@ -1,9 +1,10 @@
-import artifactJson from "../../../data/fishing-condition/species-environment/v1/species-environment-profiles.json";
+import artifactJson from "../../../data/fishing-condition/species-environment/v2/species-environment-profiles.json";
 
-export const SPECIES_ENVIRONMENT_SOURCE_ID = "blue-marina-species-environment-v1" as const;
+export const SPECIES_ENVIRONMENT_SOURCE_ID = "blue-marina-species-environment-v2" as const;
+export const SPECIES_ENVIRONMENT_VERSION = "v2" as const;
 export const SPECIES_ENVIRONMENT_ACTIVITY_PERIODS = ["DIURNAL", "NOCTURNAL", "CREPUSCULAR", "MIXED", "UNKNOWN"] as const;
 export const SPECIES_ENVIRONMENT_CONFIDENCE = ["HIGH", "MEDIUM", "LOW", "UNKNOWN"] as const;
-export const SPECIES_ENVIRONMENT_PROFILE_STATUSES = ["COMPLETE", "PARTIAL", "CONFLICT_REVIEW_REQUIRED"] as const;
+export const SPECIES_ENVIRONMENT_PROFILE_STATUSES = ["PARTIAL", "EVIDENCE_ENRICHED", "CONFLICT_REVIEW_REQUIRED"] as const;
 
 export type SpeciesEnvironmentActivityPeriod = (typeof SPECIES_ENVIRONMENT_ACTIVITY_PERIODS)[number];
 export type SpeciesEnvironmentConfidence = (typeof SPECIES_ENVIRONMENT_CONFIDENCE)[number];
@@ -29,6 +30,9 @@ export type SpeciesEnvironmentEvidence = {
   regionScope: string | null;
   evidenceType: string;
   quoteOrSummary: string;
+  accessedAt?: string;
+  doi?: string | null;
+  officialDatasetId?: string;
 };
 
 export type SpeciesEnvironmentProfile = {
@@ -83,12 +87,20 @@ export type SpeciesEnvironmentProfile = {
 };
 
 export type SpeciesEnvironmentArtifact = {
-  schemaVersion: "1.0.0";
+  schemaVersion: "2.0.0";
   sourceId: typeof SPECIES_ENVIRONMENT_SOURCE_ID;
   generatedAt: string;
   identitySource: "MBRIS_INTERNAL_ID_REGISTRY";
   profileCount: number;
   noScoreBoundary: true;
+  baseSourceId: "blue-marina-species-environment-v1";
+  baseArtifactSha256: string;
+  enrichmentPolicy: {
+    sourceBackedOnly: true;
+    preserveRegionalAndLifeStageContext: true;
+    noInterpolation: true;
+    noScoreBoundary: true;
+  };
   profiles: SpeciesEnvironmentProfile[];
 };
 

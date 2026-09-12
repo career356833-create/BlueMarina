@@ -147,7 +147,7 @@ test("seasonality preserves context and activity does not invent clock rules", (
 test("response preserves lineage, null interpretation and no composite score", () => {
   const result = comparator.compareFishingCondition(profile(), environment());
   assert.equal(result.qualityClass, "DERIVED_COMPARISON");
-  assert.equal(result.sourceLineage.speciesProfileSource, "blue-marina-species-environment-v1");
+  assert.equal(result.sourceLineage.speciesProfileSource, "blue-marina-species-environment-v2");
   assert.equal(result.sourceLineage.environmentSource, "nifs-risa");
   assert.equal(result.interpretation, null);
   assert.equal("score" in result, false);

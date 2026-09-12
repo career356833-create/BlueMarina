@@ -166,7 +166,7 @@ test("output is deterministic and retains comparator and explanation lineage", (
   assert.equal(first.qualityClass, "DERIVED_EXPLANATION");
   assert.equal(first.comparison.qualityClass, "DERIVED_COMPARISON");
   assert.equal(first.explanationLineage.environment, "nifs-risa");
-  assert.equal(first.explanationLineage.speciesProfile, "blue-marina-species-environment-v1");
+  assert.equal(first.explanationLineage.speciesProfile, "blue-marina-species-environment-v2");
 });
 
 test("runtime templates contain no score, probability, recommendation or uplift phrases", () => {

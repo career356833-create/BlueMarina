@@ -297,7 +297,7 @@ export function compareFishingCondition(profile: SpeciesEnvironmentProfile, envi
       activity: { relation: "UNSUPPORTED_ENVIRONMENT" as ComparisonRelation, usability: "UNAVAILABLE" as ComparisonUsability, profileActivityPeriod: profile.activityPeriod },
     },
     sourceLineage: {
-      speciesProfileSource: "blue-marina-species-environment-v1" as const,
+      speciesProfileSource: "blue-marina-species-environment-v2" as const,
       environmentSource: environment.sourceId,
       quality: {
         species: "PROFILE" as const,

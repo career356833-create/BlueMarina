@@ -1,0 +1,458 @@
+{
+  "schemaVersion": "2.0.0",
+  "generatedAt": "2026-09-11T00:00:00.000Z",
+  "sourceId": "blue-marina-species-environment-v2",
+  "artifact": {
+    "path": "data/fishing-condition/species-environment/v2/species-environment-profiles.json",
+    "bytes": 58271,
+    "sha256": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
+    "v1Sha256": "095f481cad0f7350b75d6264231443cca576ff161edaf9290418a2610184d99f"
+  },
+  "species": {
+    "total": 10,
+    "canonicalMatches": 10,
+    "statusDistribution": {
+      "PARTIAL": 2,
+      "EVIDENCE_ENRICHED": 7,
+      "CONFLICT_REVIEW_REQUIRED": 1
+    }
+  },
+  "evidence": {
+    "v1Total": 22,
+    "v2Total": 32,
+    "added": 10,
+    "sourceDistribution": {
+      "FAO": 1,
+      "FISHBASE": 14,
+      "MBRIS": 9,
+      "OTHER_OFFICIAL": 1,
+      "PAPER": 7
+    }
+  },
+  "coverage": {
+    "before": {
+      "temperature": 3,
+      "salinity": 3,
+      "dissolvedOxygen": 1,
+      "activity": 4,
+      "seasonalityMonthComparable": 5,
+      "spawning": 6
+    },
+    "after": {
+      "temperature": 9,
+      "salinity": 5,
+      "dissolvedOxygen": 3,
+      "activity": 4,
+      "seasonalityMonthComparable": 6,
+      "spawning": 7
+    }
+  },
+  "comparator": {
+    "temperatureComparableBefore": 2,
+    "temperatureComparableAfter": 9,
+    "salinityProfileComparable": 1,
+    "salinityRuntimeComparable": 0,
+    "salinityRuntimeBlocker": "NIFS FEMO salinity unit remains UNIT_NOT_DOCUMENTED",
+    "dissolvedOxygenComparable": 1
+  },
+  "conflicts": {
+    "existing": 1,
+    "new": 0,
+    "resolved": 0,
+    "unresolved": 1,
+    "items": [
+      {
+        "speciesId": "BM-SPECIES-000501",
+        "koreanName": "방어",
+        "field": "depth.observed",
+        "status": "CONFLICT_REVIEW_REQUIRED",
+        "evidenceIds": [
+          "amberjack-mbris",
+          "amberjack-fishbase"
+        ],
+        "summary": "한국 MBRIS는 200m 이내, FishBase는 최대 100m를 제시한다. 범위·지역 차이를 평균하지 않고 canonical depth를 비워 둔다."
+      }
+    ]
+  },
+  "confidenceDistribution": {
+    "HIGH": 7,
+    "MEDIUM": 3,
+    "LOW": 0,
+    "UNKNOWN": 0
+  },
+  "unsupportedFields": {
+    "BM-SPECIES-000755": [
+      "salinity",
+      "dissolvedOxygen",
+      "activityPeriod"
+    ],
+    "BM-SPECIES-000751": [
+      "salinity.numeric",
+      "dissolvedOxygen",
+      "activityPeriod"
+    ],
+    "BM-SPECIES-000188": [
+      "depth.maximum",
+      "salinity.numeric",
+      "dissolvedOxygen",
+      "activityPeriod"
+    ],
+    "BM-SPECIES-000012": [
+      "salinity",
+      "dissolvedOxygen",
+      "spawning",
+      "feeding"
+    ],
+    "BM-SPECIES-000465": [
+      "salinity",
+      "dissolvedOxygen",
+      "activityPeriod"
+    ],
+    "BM-SPECIES-000444": [
+      "temperature",
+      "salinity",
+      "dissolvedOxygen",
+      "spawning",
+      "preyCategories"
+    ],
+    "BM-SPECIES-000417": [
+      "salinity",
+      "dissolvedOxygen",
+      "spawning.months"
+    ],
+    "BM-SPECIES-000501": [
+      "activityPeriod"
+    ],
+    "BM-SPECIES-003107": [
+      "temperature.wild",
+      "temperature.preferred",
+      "salinity.wild",
+      "dissolvedOxygen.threshold",
+      "migration",
+      "feeding"
+    ],
+    "BM-SPECIES-003111": [
+      "salinity",
+      "dissolvedOxygen",
+      "spawning",
+      "activityPeriod"
+    ]
+  },
+  "searchedButUnresolvedCount": 10,
+  "searchLog": [
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "koreanName": "참돔",
+      "searchedFields": [
+        "temperature",
+        "salinity",
+        "dissolvedOxygen",
+        "activity",
+        "seasonality"
+      ],
+      "searchedSources": [
+        "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000012524",
+        "https://www.fishbase.se/summary/Pagrus-major.html"
+      ],
+      "foundEvidence": [
+        "pagrus-fishbase-temperature-v2"
+      ],
+      "rejectedEvidence": [
+        {
+          "field": "salinity",
+          "reason": "No wild numeric preference with a runtime-compatible documented unit"
+        },
+        {
+          "field": "dissolvedOxygen",
+          "reason": "No species threshold in mg/L; husbandry values were not promoted"
+        },
+        {
+          "field": "activity",
+          "reason": "No species-specific diel classification found in reviewed authority sources"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000751",
+      "koreanName": "감성돔",
+      "searchedFields": [
+        "temperature",
+        "salinity",
+        "dissolvedOxygen",
+        "activity",
+        "seasonality"
+      ],
+      "searchedSources": [
+        "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000000084",
+        "https://www.fishbase.se/summary/SpeciesSummary.php?ID=6531",
+        "https://www.fishbase.se/summary/6531"
+      ],
+      "foundEvidence": [
+        "blackporgy-fishbase-temperature-v2"
+      ],
+      "rejectedEvidence": [
+        {
+          "field": "salinity",
+          "reason": "No wild numeric preference with a runtime-compatible documented unit"
+        },
+        {
+          "field": "dissolvedOxygen",
+          "reason": "No species threshold in mg/L; husbandry values were not promoted"
+        },
+        {
+          "field": "activity",
+          "reason": "No species-specific diel classification found in reviewed authority sources"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000188",
+      "koreanName": "농어",
+      "searchedFields": [
+        "temperature",
+        "salinity",
+        "dissolvedOxygen",
+        "activity",
+        "seasonality"
+      ],
+      "searchedSources": [
+        "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000009286",
+        "https://www.fishbase.se/summary/Lateolabrax-japonicus.html"
+      ],
+      "foundEvidence": [
+        "seabass-fishbase-temperature-v2"
+      ],
+      "rejectedEvidence": [
+        {
+          "field": "salinity",
+          "reason": "No wild numeric preference with a runtime-compatible documented unit"
+        },
+        {
+          "field": "dissolvedOxygen",
+          "reason": "No species threshold in mg/L; husbandry values were not promoted"
+        },
+        {
+          "field": "activity",
+          "reason": "No species-specific diel classification found in reviewed authority sources"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "koreanName": "조피볼락",
+      "searchedFields": [
+        "temperature",
+        "salinity",
+        "dissolvedOxygen",
+        "activity",
+        "seasonality"
+      ],
+      "searchedSources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4556453/",
+        "https://fishbase.se/Ecology/Sebastes_schlegelii",
+        "https://www.fishbase.se/summary/6534"
+      ],
+      "foundEvidence": [
+        "rockfish-fishbase-temperature-v2"
+      ],
+      "rejectedEvidence": [
+        {
+          "field": "salinity",
+          "reason": "No wild numeric preference with a runtime-compatible documented unit"
+        },
+        {
+          "field": "dissolvedOxygen",
+          "reason": "No species threshold in mg/L; husbandry values were not promoted"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000465",
+      "koreanName": "넙치",
+      "searchedFields": [
+        "temperature",
+        "salinity",
+        "dissolvedOxygen",
+        "activity",
+        "seasonality"
+      ],
+      "searchedSources": [
+        "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000012842",
+        "https://www.fishbase.se/summary/Paralichthys-olivaceus.html",
+        "https://www.fishbase.se/summary/Paralichthys_olivaceus.html"
+      ],
+      "foundEvidence": [
+        "flounder-fishbase-temperature-v2"
+      ],
+      "rejectedEvidence": [
+        {
+          "field": "salinity",
+          "reason": "No wild numeric preference with a runtime-compatible documented unit"
+        },
+        {
+          "field": "dissolvedOxygen",
+          "reason": "No species threshold in mg/L; husbandry values were not promoted"
+        },
+        {
+          "field": "activity",
+          "reason": "No species-specific diel classification found in reviewed authority sources"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000444",
+      "koreanName": "갈치",
+      "searchedFields": [
+        "temperature",
+        "salinity",
+        "dissolvedOxygen",
+        "activity",
+        "seasonality"
+      ],
+      "searchedSources": [
+        "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000018232",
+        "https://fishbase.se/summary/69710"
+      ],
+      "foundEvidence": [],
+      "rejectedEvidence": [
+        {
+          "field": "temperature",
+          "reason": "No source-backed complete range found"
+        },
+        {
+          "field": "salinity",
+          "reason": "No wild numeric preference with a runtime-compatible documented unit"
+        },
+        {
+          "field": "dissolvedOxygen",
+          "reason": "No species threshold in mg/L; husbandry values were not promoted"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000417",
+      "koreanName": "고등어",
+      "searchedFields": [
+        "temperature",
+        "salinity",
+        "dissolvedOxygen",
+        "activity",
+        "seasonality"
+      ],
+      "searchedSources": [
+        "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016166",
+        "https://www.fishbase.se/summary/Scomber-japonicus.html"
+      ],
+      "foundEvidence": [
+        "mackerel-fishbase-temperature-v2"
+      ],
+      "rejectedEvidence": [
+        {
+          "field": "salinity",
+          "reason": "No wild numeric preference with a runtime-compatible documented unit"
+        },
+        {
+          "field": "dissolvedOxygen",
+          "reason": "No species threshold in mg/L; husbandry values were not promoted"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "koreanName": "방어",
+      "searchedFields": [
+        "temperature",
+        "salinity",
+        "dissolvedOxygen",
+        "activity",
+        "seasonality"
+      ],
+      "searchedSources": [
+        "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016343",
+        "https://www.fishbase.se/summary/Seriola-quinqueradiata.html",
+        "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_japaneseamberjack.htm"
+      ],
+      "foundEvidence": [
+        "amberjack-fao-aquaculture-v2"
+      ],
+      "rejectedEvidence": [
+        {
+          "field": "activity",
+          "reason": "No species-specific diel classification found in reviewed authority sources"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-003107",
+      "koreanName": "주꾸미",
+      "searchedFields": [
+        "temperature",
+        "salinity",
+        "dissolvedOxygen",
+        "activity",
+        "seasonality"
+      ],
+      "searchedSources": [
+        "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000000911",
+        "https://onlinelibrary.wiley.com/doi/10.1111/jwas.70101"
+      ],
+      "foundEvidence": [],
+      "rejectedEvidence": [
+        {
+          "field": "salinity",
+          "reason": "No wild numeric preference with a runtime-compatible documented unit"
+        },
+        {
+          "field": "dissolvedOxygen",
+          "reason": "No species threshold in mg/L; husbandry values were not promoted"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-003111",
+      "koreanName": "문어",
+      "searchedFields": [
+        "temperature",
+        "salinity",
+        "dissolvedOxygen",
+        "activity",
+        "seasonality"
+      ],
+      "searchedSources": [
+        "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000006090",
+        "https://doi.org/10.1046/j.1439-0485.2002.02776.x",
+        "https://doi.org/10.2331/suisan.16-00058",
+        "https://www.marinespecies.org/aphia.php?id=341966&p=taxdetails",
+        "https://eprints.lib.hokudai.ac.jp/dspace/bitstream/2115/52601/3/PatriciaRRigby_2004.pdf",
+        "https://www.jstage.jst.go.jp/article/suisan/92/4/92_25-00036/_article/-char/en",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10385140/"
+      ],
+      "foundEvidence": [
+        "gpo-hokkaido-temperature-v2",
+        "gpo-seasonal-migration-temperature-v2",
+        "gpo-husbandry-water-quality-v2"
+      ],
+      "rejectedEvidence": [
+        {
+          "field": "salinity",
+          "reason": "No wild numeric preference with a runtime-compatible documented unit"
+        },
+        {
+          "field": "dissolvedOxygen",
+          "reason": "No species threshold in mg/L; husbandry values were not promoted"
+        },
+        {
+          "field": "activity",
+          "reason": "No species-specific diel classification found in reviewed authority sources"
+        }
+      ]
+    }
+  ],
+  "boundaries": {
+    "suitabilityScore": false,
+    "fishingProbability": false,
+    "ranking": false,
+    "recommendation": false,
+    "databaseWrites": false
+  }
+}
