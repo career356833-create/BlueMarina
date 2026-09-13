@@ -1,0 +1,881 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-13T12:00:00.000Z",
+  "dataset": "PREFERRED_WILD_TEMPERATURE_DEEP_RESEARCH_BATCH1_V1",
+  "purpose": "Research-only evidence candidates; no canonical or runtime promotion.",
+  "strictCriteria": [
+    "numeric min/max",
+    "confirmed degC",
+    "wild context",
+    "preferred or selected semantics",
+    "adult or general applicability",
+    "non-aquaculture",
+    "non-captive-only",
+    "non-spawning-only",
+    "authoritative reference",
+    "no unresolved preferred conflict"
+  ],
+  "species": [
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "speciesName": "참돔",
+      "scientificName": "Pagrus major",
+      "currentRange": {
+        "min": 18.4,
+        "max": 25.4,
+        "unit": "degC",
+        "context": "juvenile wild-origin laboratory acclimation"
+      },
+      "promotionDecision": "PROMISING_BUT_LIMITED",
+      "bestEvidenceId": "pagrus-mitsunaga-1999-wild-adult-telemetry",
+      "remainingGap": "Adult wild telemetry provides an encountered range, but the study reports little behavioral response to temperature and does not estimate selection or preference."
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "speciesName": "조피볼락",
+      "scientificName": "Sebastes schlegelii",
+      "currentRange": {
+        "min": 17.8,
+        "max": 22.8,
+        "unit": "degC",
+        "context": "young-fish laboratory preference"
+      },
+      "promotionDecision": "PROMISING_BUT_LIMITED",
+      "bestEvidenceId": "sebastes-kim-2026-minipat-observed",
+      "remainingGap": "Korean field tags recorded adult-sized fish temperatures, but only individual means and variability were reported; no population min/max selection function was estimated."
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "speciesName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "currentRange": {
+        "min": 20.8,
+        "max": 27.2,
+        "unit": "degC",
+        "context": "juvenile wild-origin laboratory acclimation"
+      },
+      "promotionDecision": "PROMISING_BUT_LIMITED",
+      "bestEvidenceId": "seriola-hatanaka-1958-selected-coastal-water",
+      "remainingGap": "A peer-reviewed paper states that schools select 10-20 degC coastal water, but the statement is background context rather than a documented adult selection analysis; modern adult tags report exposure and cold avoidance without a selected min/max range."
+    }
+  ],
+  "evidence": [
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "speciesName": "참돔",
+      "scientificName": "Pagrus major",
+      "evidenceId": "pagrus-mitsunaga-1999-wild-adult-telemetry",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Estimation of the Metabolic Rate of Wild Red Sea Bream Pagrus major in Different Water Temperatures",
+      "authors": [
+        "Yasushi Mitsunaga",
+        "Wataru Sakamoto",
+        "Nobuaki Arai",
+        "Akihide Kasai"
+      ],
+      "year": 1999,
+      "publisherOrJournal": "Nippon Suisan Gakkaishi 65(1):48-54",
+      "sourceType": "PEER_REVIEWED_FIELD_TELEMETRY",
+      "urlOrDoi": "https://www.miyagi.kopas.co.jp/JSFS/jsfs-english/E-PUB/65-1/p048.html",
+      "geographicContext": "Japan, open sea shoal",
+      "lifeStage": "adult",
+      "wildCaptiveContext": "wild",
+      "method": "One wild adult tracked for 28 days with an ultrasonic transmitter; ambient temperature and vertical movement recorded.",
+      "temperature": {
+        "min": 18.5,
+        "max": 22.9,
+        "point": null,
+        "unit": "degC"
+      },
+      "semanticClass": "WILD_OBSERVED",
+      "sourceStatementSummary": "The fish encountered 18.5-22.9 degC and stayed near a shoal; temperature fluctuation appeared to have little effect on swimming behavior.",
+      "rejectionReason": "Encountered temperature is not a selected or preferred range; n=1.",
+      "limitations": [
+        "single fish",
+        "observed exposure only",
+        "Japan-only",
+        "no resource-selection model"
+      ],
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "speciesName": "참돔",
+      "scientificName": "Pagrus major",
+      "evidenceId": "pagrus-yamamoto-2020-winter-catch",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Correlation of changes in seasonal distribution and catch of red sea bream Pagrus major with winter temperature in the eastern Seto Inland Sea, Japan (1972-2010)",
+      "authors": [
+        "Masayuki Yamamoto"
+      ],
+      "year": 2020,
+      "publisherOrJournal": "Fisheries Oceanography 29(1):1-9",
+      "sourceType": "PEER_REVIEWED_FISHERIES_TIME_SERIES",
+      "urlOrDoi": "https://doi.org/10.1111/fog.12432",
+      "geographicContext": "Eastern Seto Inland Sea, Japan",
+      "lifeStage": "mixed",
+      "wildCaptiveContext": "wild fisheries",
+      "method": "Long-term catch and seasonal distribution correlated with winter temperature at 10 m.",
+      "temperature": {
+        "min": null,
+        "max": null,
+        "point": 8,
+        "unit": "degC"
+      },
+      "semanticClass": "FIELD_OCCURRENCE",
+      "sourceStatementSummary": "Winter distribution and catch expanded in warmer years; temperatures below roughly 8 degC were unfavorable.",
+      "rejectionReason": "Catch correlation and a lower threshold do not define a preferred min/max range.",
+      "limitations": [
+        "fishery-dependent",
+        "single threshold",
+        "life stages mixed",
+        "no behavioral selection"
+      ],
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "speciesName": "참돔",
+      "scientificName": "Pagrus major",
+      "evidenceId": "pagrus-shin-2004-artificial-reef-telemetry",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Acoustic Telemetrical Tracking of the Response Behavior of Red Seabream to Artificial Reefs",
+      "authors": [
+        "Hyeon-Ok Shin",
+        "Jong-Wan Tae",
+        "Kyoung-Mi Kang"
+      ],
+      "year": 2004,
+      "publisherOrJournal": "Korean Journal of Fisheries and Aquatic Sciences 37(5):433-439",
+      "sourceType": "PEER_REVIEWED_FIELD_TELEMETRY",
+      "urlOrDoi": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001115381",
+      "geographicContext": "Tongyeong marine ranch, Korea",
+      "lifeStage": "unknown",
+      "wildCaptiveContext": "field release; origin not established in accessible contract",
+      "method": "Acoustic telemetry of movement and diel behavior around artificial reefs.",
+      "semanticClass": "WILD_OBSERVED",
+      "sourceStatementSummary": "The study reports movement between deep and shallow water and reef response, not thermal selection.",
+      "rejectionReason": "No numeric temperature range and no temperature-selection analysis.",
+      "limitations": [
+        "temperature absent",
+        "life stage unclear",
+        "origin unclear"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "point": null,
+        "unit": "degC"
+      },
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "speciesName": "참돔",
+      "scientificName": "Pagrus major",
+      "evidenceId": "pagrus-heo-2021-byeonsan-telemetry",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Movement range and behavior characteristics of Pagrus major by acoustic telemetry in Byeonsan Peninsular, Korea",
+      "authors": [
+        "Gyeom Heo",
+        "Min-A Heo",
+        "Kyoung Mi Kang",
+        "Doo Jin Hwang",
+        "Hyeon Ok Shin"
+      ],
+      "year": 2021,
+      "publisherOrJournal": "Journal of the Korean Society of Fisheries and Ocean Technology 57(1):34-44",
+      "sourceType": "PEER_REVIEWED_FIELD_TELEMETRY",
+      "urlOrDoi": "https://doi.org/10.3796/KSFOT.2021.57.1.034",
+      "geographicContext": "Byeonsan Peninsula, Korea",
+      "lifeStage": "juvenile_or_immature",
+      "wildCaptiveContext": "cultured fish released to field",
+      "method": "Four cultured fish, mean TL 27.1 cm, tracked around pile-driving work.",
+      "semanticClass": "CAPTIVE",
+      "sourceStatementSummary": "The experiment addresses movement response to construction activity.",
+      "rejectionReason": "Cultured fish, short tracking, no preferred-temperature range.",
+      "limitations": [
+        "cultured origin",
+        "small sample",
+        "temperature selection absent"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "point": null,
+        "unit": "degC"
+      },
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "speciesName": "참돔",
+      "scientificName": "Pagrus major",
+      "evidenceId": "pagrus-karama-2021-goto-telemetry",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Movement pattern of red seabream Pagrus major and yellowtail Seriola quinqueradiata around Offshore Wind Turbine and neighboring habitats",
+      "authors": [
+        "Khyria S. Karama",
+        "Yoshiki Matsushita",
+        "Masahiro Inoue",
+        "Kenta Kojima",
+        "Kazuki Tone",
+        "Itsumi Nakamura",
+        "Ryo Kawabe"
+      ],
+      "year": 2021,
+      "publisherOrJournal": "Aquaculture and Fisheries 6(3):300-308",
+      "sourceType": "PEER_REVIEWED_FIELD_TELEMETRY",
+      "urlOrDoi": "https://doi.org/10.1016/j.aaf.2020.04.005",
+      "geographicContext": "Goto Islands, Japan",
+      "lifeStage": "mixed",
+      "wildCaptiveContext": "field-tagged; origin not sufficient for strict transfer",
+      "method": "Acoustic telemetry around offshore wind turbine and adjacent habitats in winter and summer.",
+      "semanticClass": "WILD_OBSERVED",
+      "sourceStatementSummary": "Residency and movement around structures were measured.",
+      "rejectionReason": "No numeric temperature range or thermal selection analysis.",
+      "limitations": [
+        "structure-use focus",
+        "temperature absent",
+        "life-stage applicability unclear"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "point": null,
+        "unit": "degC"
+      },
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "speciesName": "참돔",
+      "scientificName": "Pagrus major",
+      "evidenceId": "pagrus-kaiseiken-2002-juvenile-preference",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Experimental study on temperature preference of Japanese marine fish",
+      "authors": [
+        "Marine Ecology Research Institute researchers"
+      ],
+      "year": 2002,
+      "publisherOrJournal": "Marine Ecology Research Institute report",
+      "sourceType": "INSTITUTIONAL_EXPERIMENT_REPORT",
+      "urlOrDoi": "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf",
+      "geographicContext": "Japan",
+      "lifeStage": "juvenile",
+      "wildCaptiveContext": "wild-origin, laboratory-acclimated",
+      "method": "Horizontal temperature-gradient preference experiment across acclimation treatments.",
+      "temperature": {
+        "min": 18.4,
+        "max": 25.4,
+        "point": 25.3,
+        "unit": "degC"
+      },
+      "semanticClass": "LAB_PREFERENCE",
+      "sourceStatementSummary": "Explicit acclimation-dependent preference range and final preferendum were reported.",
+      "rejectionReason": "Juvenile-only laboratory evidence cannot establish adult general wild preference.",
+      "limitations": [
+        "juvenile",
+        "laboratory acclimation",
+        "Japan-only"
+      ],
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "speciesName": "참돔",
+      "scientificName": "Pagrus major",
+      "evidenceId": "pagrus-shin-2018-low-temperature-tolerance",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Survival and Physiological Responses of Red Sea Bream Pagrus major with Decreasing Sea Water Temperature",
+      "authors": [
+        "Yun Kyung Shin",
+        "Young Dae Kim",
+        "Won Jin Kim"
+      ],
+      "year": 2018,
+      "publisherOrJournal": "Korean Journal of Ichthyology 30(3):131-136",
+      "sourceType": "PEER_REVIEWED_CAPTIVE_EXPERIMENT",
+      "urlOrDoi": "https://doi.org/10.35399/isk.30.3.1",
+      "geographicContext": "Korea",
+      "lifeStage": "unknown",
+      "wildCaptiveContext": "captive aquaculture experiment",
+      "method": "Progressive cooling and seven-day lethal-temperature analysis.",
+      "temperature": {
+        "min": null,
+        "max": null,
+        "point": 6.54,
+        "unit": "degC"
+      },
+      "semanticClass": "CAPTIVE",
+      "sourceStatementSummary": "Seven-day LT50 was 6.54 degC.",
+      "rejectionReason": "Lethal tolerance in captivity is not preference.",
+      "limitations": [
+        "lethal endpoint",
+        "captive",
+        "no preferred range"
+      ],
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "speciesName": "조피볼락",
+      "scientificName": "Sebastes schlegelii",
+      "evidenceId": "sebastes-tsuchida-1997-young-preference",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Temperature Responses of Young Schlegel's Black Rockfish Sebastes schlegelii",
+      "authors": [
+        "Shuji Tsuchida",
+        "Takumi Setoguma"
+      ],
+      "year": 1997,
+      "publisherOrJournal": "Nippon Suisan Gakkaishi 63(3):317-325",
+      "sourceType": "PEER_REVIEWED_LAB_EXPERIMENT",
+      "urlOrDoi": "https://doi.org/10.2331/suisan.63.317",
+      "geographicContext": "Japan",
+      "lifeStage": "young fish",
+      "wildCaptiveContext": "laboratory",
+      "method": "Horizontal temperature-gradient preference test across 15-28 degC acclimation groups.",
+      "temperature": {
+        "min": 17.8,
+        "max": 22.8,
+        "point": 20.5,
+        "unit": "degC"
+      },
+      "semanticClass": "LAB_PREFERENCE",
+      "sourceStatementSummary": "Preferred temperature was 17.8-22.8 degC and final preferendum about 20.5 degC.",
+      "rejectionReason": "Young-fish laboratory scope does not establish adult wild preference.",
+      "limitations": [
+        "young fish",
+        "laboratory",
+        "Japan-only"
+      ],
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "speciesName": "조피볼락",
+      "scientificName": "Sebastes schlegelii",
+      "evidenceId": "sebastes-zhang-2015-acoustic-habitat",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Short-Term Fidelity, Habitat Use and Vertical Movement Behavior of the Black Rockfish Sebastes schlegelii as Determined by Acoustic Telemetry",
+      "authors": [
+        "Yingqiu Zhang",
+        "Qiang Xu",
+        "Josep Alos",
+        "Hui Liu",
+        "Qinzeng Xu",
+        "Hongsheng Yang"
+      ],
+      "year": 2015,
+      "publisherOrJournal": "PLOS ONE 10(8):e0134381",
+      "sourceType": "PEER_REVIEWED_FIELD_TELEMETRY",
+      "urlOrDoi": "https://doi.org/10.1371/journal.pone.0134381",
+      "geographicContext": "Haizhou Bay, Yellow Sea, China",
+      "lifeStage": "adult_or_general",
+      "wildCaptiveContext": "wild-caught and field released",
+      "method": "Acoustic telemetry and habitat selection index over up to 46 days.",
+      "semanticClass": "WILD_SELECTED_HABITAT",
+      "sourceStatementSummary": "Selection was demonstrated for reef and substrate classes, not for temperature.",
+      "rejectionReason": "The selected variable was substrate; no numeric selected-temperature range was estimated.",
+      "limitations": [
+        "short term",
+        "temperature not a selection covariate",
+        "China site"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "point": null,
+        "unit": "degC"
+      },
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "speciesName": "조피볼락",
+      "scientificName": "Sebastes schlegelii",
+      "evidenceId": "sebastes-kang-shin-2008-homing",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Home ranges and homing routes of black rockfish Sebastes schlegelii measured by acoustic telemetry",
+      "authors": [
+        "Kyoung-Mi Kang",
+        "Hyeon-Ok Shin"
+      ],
+      "year": 2008,
+      "publisherOrJournal": "Korean Journal of Fisheries and Aquatic Sciences 41(3):221-227",
+      "sourceType": "PEER_REVIEWED_FIELD_TELEMETRY",
+      "urlOrDoi": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001255238",
+      "geographicContext": "Tongyeong marine ranch, Korea",
+      "lifeStage": "mixed_or_unknown",
+      "wildCaptiveContext": "field release",
+      "method": "Twenty-four fish released at five distances and tracked acoustically for homing.",
+      "semanticClass": "WILD_OBSERVED",
+      "sourceStatementSummary": "Homing range and routes were evaluated.",
+      "rejectionReason": "No numeric preferred-temperature range or selection analysis.",
+      "limitations": [
+        "temperature absent",
+        "life stage unclear",
+        "movement objective"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "point": null,
+        "unit": "degC"
+      },
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "speciesName": "조피볼락",
+      "scientificName": "Sebastes schlegelii",
+      "evidenceId": "sebastes-kim-2026-minipat-observed",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Short-Term Movement of MiniPAT-Tagged Coastal Fishes in the Yellow Sea: Case Studies on Korean Rockfish and Spotted Sea Bass",
+      "authors": [
+        "Young Uk Kim",
+        "Yun Jeong Seo",
+        "Won Young Lee",
+        "Sung-Yong Oh"
+      ],
+      "year": 2026,
+      "publisherOrJournal": "Ocean Science Journal 61(1):11",
+      "sourceType": "PEER_REVIEWED_FIELD_TAGGING",
+      "urlOrDoi": "https://doi.org/10.1007/s12601-025-00258-2",
+      "geographicContext": "Southwestern Korean coast, Yellow Sea",
+      "lifeStage": "adult_sized_unknown_maturity",
+      "wildCaptiveContext": "field-tagged; capture/origin context not sufficient in accessible abstract",
+      "method": "Two 33.0-34.1 cm Korean rockfish tracked with external miniPATs for 5-12 days.",
+      "temperature": {
+        "min": null,
+        "max": null,
+        "point": 24.15,
+        "unit": "degC"
+      },
+      "semanticClass": "WILD_OBSERVED",
+      "sourceStatementSummary": "Individuals experienced mean ambient temperatures of 24.15 +/- 1.20 and 17.99 +/- 2.68 degC.",
+      "rejectionReason": "Individual means are observed exposure, not a selected population min/max range.",
+      "limitations": [
+        "n=2",
+        "5-12 days",
+        "means not bounds",
+        "selection not tested"
+      ],
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "speciesName": "조피볼락",
+      "scientificName": "Sebastes schlegelii",
+      "evidenceId": "sebastes-chen-2021-sdm",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Predicting current and future global distribution of black rockfish Sebastes schlegelii under changing climate",
+      "authors": [
+        "Yunlong Chen",
+        "Xiujuan Shan",
+        "Daniel Ovando",
+        "Tao Yang",
+        "Fangqun Dai",
+        "Xianshi Jin"
+      ],
+      "year": 2021,
+      "publisherOrJournal": "Ecological Indicators 129:107799",
+      "sourceType": "PEER_REVIEWED_SPECIES_DISTRIBUTION_MODEL",
+      "urlOrDoi": "https://doi.org/10.1016/j.ecolind.2021.107799",
+      "geographicContext": "China, Korea and Japan",
+      "lifeStage": "mixed",
+      "wildCaptiveContext": "occurrence records and environmental layers",
+      "method": "Ensemble species-distribution models using bottom temperature and other predictors.",
+      "semanticClass": "MODELLED_DISTRIBUTION",
+      "sourceStatementSummary": "Bottom temperature was the most important predictor of modelled habitat suitability.",
+      "rejectionReason": "Modelled distribution is not observed behavioral preference.",
+      "limitations": [
+        "model-derived",
+        "presence-data bias",
+        "no direct selection range"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "point": null,
+        "unit": "degC"
+      },
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "speciesName": "조피볼락",
+      "scientificName": "Sebastes schlegelii",
+      "evidenceId": "sebastes-hu-2018-thermal-stress",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Deep Transcriptomic Analysis of Black Rockfish Sebastes schlegelii Provides New Insights on Responses to Acute Temperature Stress",
+      "authors": [
+        "Peng Hu",
+        "Jing Liu",
+        "Shanshan Kang",
+        "Jie Chen",
+        "Yunlong Zhang",
+        "et al."
+      ],
+      "year": 2018,
+      "publisherOrJournal": "Scientific Reports 8:9113",
+      "sourceType": "PEER_REVIEWED_CAPTIVE_EXPERIMENT",
+      "urlOrDoi": "https://doi.org/10.1038/s41598-018-27013-z",
+      "geographicContext": "Northern Yellow Sea, China",
+      "lifeStage": "adult",
+      "wildCaptiveContext": "cage-cultured adults, laboratory stress experiment",
+      "method": "Acute low/control/high temperature challenge with liver transcriptomics.",
+      "temperature": {
+        "min": 18,
+        "max": 24,
+        "point": null,
+        "unit": "degC"
+      },
+      "semanticClass": "CAPTIVE",
+      "sourceStatementSummary": "The paper cites 18-24 degC as an optimal range while testing acute thermal stress in cultured adults.",
+      "rejectionReason": "Secondary aquaculture optimum and captive stress response are not wild selection.",
+      "limitations": [
+        "cultured adults",
+        "secondary range",
+        "stress endpoint"
+      ],
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "speciesName": "조피볼락",
+      "scientificName": "Sebastes schlegelii",
+      "evidenceId": "sebastes-nakagawa-2007-rearing",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Effect of Rearing Temperature on Growth and Maturation of Black Rockfish Sebastes schlegelii",
+      "authors": [
+        "Masahiro Nakagawa"
+      ],
+      "year": 2007,
+      "publisherOrJournal": "Aquaculture Science 55(1):83-89",
+      "sourceType": "PEER_REVIEWED_AQUACULTURE_EXPERIMENT",
+      "urlOrDoi": "https://doi.org/10.11233/aquaculturesci1953.55.83",
+      "geographicContext": "Japan",
+      "lifeStage": "juvenile_to_adult",
+      "wildCaptiveContext": "captive rearing",
+      "method": "Fish reared from 7 to 48 months under natural, 12 degC, and 15 degC winter-spring conditions.",
+      "temperature": {
+        "min": 12,
+        "max": 15,
+        "point": null,
+        "unit": "degC"
+      },
+      "semanticClass": "AQUACULTURE",
+      "sourceStatementSummary": "Growth and maturation responses to managed rearing temperatures were tested.",
+      "rejectionReason": "Managed rearing treatments do not establish wild preference.",
+      "limitations": [
+        "captive",
+        "treatment temperatures",
+        "growth/maturation endpoint"
+      ],
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "speciesName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "evidenceId": "seriola-furukawa-2020-adult-archival",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Horizontal and vertical movement of yellowtails Seriola quinqueradiata during summer to early winter recorded by archival tags in the northeastern Japan Sea",
+      "authors": [
+        "Shingo Furukawa",
+        "Shingo Ino",
+        "Akira Nitta",
+        "et al."
+      ],
+      "year": 2020,
+      "publisherOrJournal": "Marine Ecology Progress Series 636:139-156",
+      "sourceType": "PEER_REVIEWED_WILD_ARCHIVAL_TAGGING",
+      "urlOrDoi": "https://doi.org/10.3354/meps13226",
+      "geographicContext": "Northeastern Japan Sea",
+      "lifeStage": "adult",
+      "wildCaptiveContext": "wild",
+      "method": "Twenty-six adults 61-90 cm FL tagged; eight recaptured after more than two months with temperature records every 60 or 120 seconds.",
+      "semanticClass": "WILD_OBSERVED",
+      "sourceStatementSummary": "Fish primarily occupied the mixed layer, made dives, and avoided cold offshore water during southward movement.",
+      "rejectionReason": "Cold avoidance and encountered temperatures were not converted by the study into an explicit selected min/max range.",
+      "limitations": [
+        "no explicit preferred bounds",
+        "seasonal scope",
+        "Japan Sea"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "point": null,
+        "unit": "degC"
+      },
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "speciesName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "evidenceId": "seriola-ino-2008-adult-migration",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Migration of the adult yellowtail Seriola quinqueradiata as estimated by archival tagging experiments in the Tsushima Warm Current",
+      "authors": [
+        "Shingo Ino",
+        "Akira Nitta",
+        "Nobuhisa Kohno",
+        "Toshihiro Tsuji",
+        "Junichi Okuno",
+        "Toshihiro Yamamoto"
+      ],
+      "year": 2008,
+      "publisherOrJournal": "Bulletin of the Japanese Society of Fisheries Oceanography 72(2):92-100",
+      "sourceType": "PEER_REVIEWED_WILD_ARCHIVAL_TAGGING",
+      "urlOrDoi": "https://doi.org/10.34423/jsfo.72.2_92",
+      "geographicContext": "Tsushima Warm Current, Japan Sea and East China Sea",
+      "lifeStage": "adult_age_4_plus",
+      "wildCaptiveContext": "wild",
+      "method": "138 tagged; positions estimated for 26 recaptured fish aged four years and older.",
+      "semanticClass": "WILD_OBSERVED",
+      "sourceStatementSummary": "Three adult migration patterns and likely spawning movements were identified.",
+      "rejectionReason": "Accessible full contract does not provide a numeric selected-temperature range.",
+      "limitations": [
+        "migration focus",
+        "temperature bounds absent",
+        "selection not quantified"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "point": null,
+        "unit": "degC"
+      },
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "speciesName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "evidenceId": "seriola-kim-2024-east-sea-psat",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Horizontal and vertical movement patterns of yellowtail Seriola quinqueradiata in the East Sea of Korea",
+      "authors": [
+        "Korean Institute of Ocean Science and Technology research team"
+      ],
+      "year": 2024,
+      "publisherOrJournal": "Fisheries and Aquatic Sciences 27(2):76-86",
+      "sourceType": "PEER_REVIEWED_FIELD_TAGGING",
+      "urlOrDoi": "https://www.e-fas.org/archive/view_article_pubreader?pid=fas-27-2-76",
+      "geographicContext": "South and East Seas of Korea",
+      "lifeStage": "adult_sized",
+      "wildCaptiveContext": "commercially sourced and sea-cage held before field release",
+      "method": "Two 8.7 and 9.5 kg fish monitored by PSAT; one record lasted 82 days.",
+      "temperature": {
+        "min": null,
+        "max": null,
+        "point": 16.52,
+        "unit": "degC"
+      },
+      "semanticClass": "WILD_OBSERVED",
+      "sourceStatementSummary": "The long record had mean ambient temperature 16.52 +/- 1.86 degC; a 12-day fish averaged 20.65 +/- 0.36 degC.",
+      "rejectionReason": "Observed means from two pre-held fish are not a preferred min/max range.",
+      "limitations": [
+        "n=2",
+        "pre-release captivity",
+        "means not bounds",
+        "season-specific"
+      ],
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "speciesName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "evidenceId": "seriola-hatanaka-1958-selected-coastal-water",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Growth and Food Consumption in Young Amber-Fish, Seriola quinqueradiata",
+      "authors": [
+        "Masayoshi Hatanaka",
+        "Goro Murakawa"
+      ],
+      "year": 1958,
+      "publisherOrJournal": "Tohoku Journal of Agricultural Research",
+      "sourceType": "PEER_REVIEWED_FISHERIES_AND_FEEDING_STUDY",
+      "urlOrDoi": "https://tohoku.repo.nii.ac.jp/record/64656/files/KJ00000713873.pdf",
+      "geographicContext": "Coastal Japan",
+      "lifeStage": "general_statement; study focuses young fish",
+      "wildCaptiveContext": "wild fisheries context plus feeding experiments",
+      "method": "Field samples and feeding experiments; introduction states schools select coastal waters of 10-20 degC.",
+      "temperature": {
+        "min": 10,
+        "max": 20,
+        "point": null,
+        "unit": "degC"
+      },
+      "semanticClass": "WILD_SELECTED_HABITAT",
+      "sourceStatementSummary": "The paper explicitly states that the species usually migrates in schools selecting 10-20 degC coastal waters.",
+      "rejectionReason": "The range is a background assertion without a documented selection analysis or clear adult/general derivation in the paper.",
+      "limitations": [
+        "1958 secondary assertion",
+        "supporting reference trail unclear",
+        "study focus young fish",
+        "no selection model"
+      ],
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "speciesName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "evidenceId": "seriola-tian-2012-distribution-model",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Response of yellowtail, Seriola quinqueradiata, to sea water temperature over the last century and potential effects of global warming",
+      "authors": [
+        "Yongjun Tian",
+        "Hideaki Kidokoro",
+        "Takeshi Watanabe",
+        "Yutaka Igeta",
+        "Hiroshi Sakaji",
+        "Shingo Ino"
+      ],
+      "year": 2012,
+      "publisherOrJournal": "Journal of Marine Systems 91:1-10",
+      "sourceType": "PEER_REVIEWED_DISTRIBUTION_MODEL",
+      "urlOrDoi": "https://doi.org/10.1016/j.jmarsys.2011.09.002",
+      "geographicContext": "Japan Sea",
+      "lifeStage": "mixed",
+      "wildCaptiveContext": "fishery records and environmental data",
+      "method": "Long-term catch/distribution analysis and habitat mapping against sea temperature.",
+      "semanticClass": "MODELLED_DISTRIBUTION",
+      "sourceStatementSummary": "Yellowtail abundance and distribution were associated with temperature and projected warming.",
+      "rejectionReason": "Modelled suitable habitat and catch response are not direct behavioral preference.",
+      "limitations": [
+        "modelled",
+        "fishery-dependent",
+        "no direct adult selection range"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "point": null,
+        "unit": "degC"
+      },
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "speciesName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "evidenceId": "seriola-karama-2021-goto-telemetry",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Movement pattern of red seabream Pagrus major and yellowtail Seriola quinqueradiata around Offshore Wind Turbine and neighboring habitats",
+      "authors": [
+        "Khyria S. Karama",
+        "Yoshiki Matsushita",
+        "Masahiro Inoue",
+        "Kenta Kojima",
+        "Kazuki Tone",
+        "Itsumi Nakamura",
+        "Ryo Kawabe"
+      ],
+      "year": 2021,
+      "publisherOrJournal": "Aquaculture and Fisheries 6(3):300-308",
+      "sourceType": "PEER_REVIEWED_FIELD_TELEMETRY",
+      "urlOrDoi": "https://doi.org/10.1016/j.aaf.2020.04.005",
+      "geographicContext": "Goto Islands, Japan",
+      "lifeStage": "unknown_or_mixed",
+      "wildCaptiveContext": "field-tagged; origin not sufficient in abstract",
+      "method": "Twenty yellowtail acoustically tracked around an offshore wind turbine and neighboring reefs/FADs in summer.",
+      "semanticClass": "WILD_OBSERVED",
+      "sourceStatementSummary": "Residence time and structure use were measured.",
+      "rejectionReason": "No numeric temperature range or temperature-selection analysis.",
+      "limitations": [
+        "short residency",
+        "temperature absent",
+        "life stage unclear"
+      ],
+      "temperature": {
+        "min": null,
+        "max": null,
+        "point": null,
+        "unit": "degC"
+      },
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "speciesName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "evidenceId": "seriola-kaiseiken-2002-juvenile-preference",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Experimental study on temperature preference of Japanese marine fish",
+      "authors": [
+        "Marine Ecology Research Institute researchers"
+      ],
+      "year": 2002,
+      "publisherOrJournal": "Marine Ecology Research Institute report",
+      "sourceType": "INSTITUTIONAL_EXPERIMENT_REPORT",
+      "urlOrDoi": "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf",
+      "geographicContext": "Japan",
+      "lifeStage": "juvenile",
+      "wildCaptiveContext": "wild-origin, laboratory-acclimated",
+      "method": "Horizontal temperature-gradient preference experiment across acclimation treatments.",
+      "temperature": {
+        "min": 20.8,
+        "max": 27.2,
+        "point": 26.9,
+        "unit": "degC"
+      },
+      "semanticClass": "LAB_PREFERENCE",
+      "sourceStatementSummary": "Explicit acclimation-dependent preference range and final preferendum were reported.",
+      "rejectionReason": "Juvenile-only laboratory evidence cannot establish adult general wild preference.",
+      "limitations": [
+        "juvenile",
+        "laboratory acclimation",
+        "Japan-only"
+      ],
+      "strictEligible": false
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "speciesName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "evidenceId": "seriola-fao-aquaculture-optimum",
+      "accessDate": "2026-09-13",
+      "sourceTitle": "Cultured Aquatic Species Information Programme: Seriola quinqueradiata",
+      "authors": [
+        "FAO Fisheries and Aquaculture Department"
+      ],
+      "year": 2009,
+      "publisherOrJournal": "Food and Agriculture Organization of the United Nations",
+      "sourceType": "OFFICIAL_AQUACULTURE_FACT_SHEET",
+      "urlOrDoi": "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_japaneseamberjack.htm",
+      "geographicContext": "Japan and adjacent waters",
+      "lifeStage": "culture_cycle",
+      "wildCaptiveContext": "aquaculture",
+      "method": "Culture-practice synthesis.",
+      "temperature": {
+        "min": 20,
+        "max": 29,
+        "point": null,
+        "unit": "degC"
+      },
+      "semanticClass": "AQUACULTURE",
+      "sourceStatementSummary": "The fact sheet identifies 20-29 degC as optimum rearing temperature.",
+      "rejectionReason": "Rearing optimum is not adult wild preference.",
+      "limitations": [
+        "aquaculture",
+        "husbandry synthesis",
+        "not behavioral selection"
+      ],
+      "strictEligible": false
+    }
+  ],
+  "boundaries": {
+    "v2Modified": false,
+    "v3Modified": false,
+    "runtimeImport": false,
+    "canonicalPromotion": false,
+    "scoring": false
+  }
+}
