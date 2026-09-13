@@ -1,0 +1,452 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-13T10:45:49.100Z",
+  "audit": "PREFERRED_WILD_TEMPERATURE_EVIDENCE_ENRICHMENT_V1",
+  "decision": "LIMITED_EVIDENCE_ONLY",
+  "decisionRationale": "Five explicit thermal-preference experiments were found, but all are restricted by life stage, laboratory acclimation, laboratory origin, or approximate final-preferendum reporting; none establishes a general wild preferred range for a new strict candidate.",
+  "speciesCount": 10,
+  "v2Sha256Before": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
+  "v2Sha256After": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
+  "evidence": {
+    "before": 32,
+    "after": 37,
+    "added": 5,
+    "preferredBefore": 10,
+    "preferredAfter": 15,
+    "addedSourceDistribution": {
+      "RESEARCH_INSTITUTE_REPORT": 4,
+      "PEER_REVIEWED_PAPER": 1
+    }
+  },
+  "readiness": {
+    "before": {
+      "strict": 1,
+      "limited": 6,
+      "notReady": 3
+    },
+    "after": {
+      "strict": 1,
+      "limited": 7,
+      "notReady": 2
+    },
+    "newlyStrictSpecies": [],
+    "newlyLimitedSpecies": [
+      "방어"
+    ]
+  },
+  "species": [
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "slug": "pagrus-major",
+      "koreanName": "참돔",
+      "scientificName": "Pagrus major",
+      "sourcesChecked": [
+        "MBRIS",
+        "FishBase/AquaMaps",
+        "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf"
+      ],
+      "addedEvidence": [
+        {
+          "id": "pagrus-kaiseiken-preference-2002",
+          "sourceName": "Marine Ecology Research Institute",
+          "sourceType": "RESEARCH_INSTITUTE_REPORT",
+          "title": "Experimental study on temperature preference of Japanese marine fish",
+          "url": "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf",
+          "year": 2002,
+          "species": "참돔",
+          "scientificName": "Pagrus major",
+          "temperature": {
+            "min": 18.4,
+            "max": 25.4,
+            "unit": "degC"
+          },
+          "rangeType": "EXPERIMENTAL_PREFERRED_ACCLIMATION_DEPENDENT",
+          "lifeStage": "JUVENILE",
+          "geographicContext": "Japan; wild-origin fish subsequently held and acclimated in laboratory",
+          "seasonContext": null,
+          "evidenceStrength": "MEDIUM",
+          "notes": "Temperature-gradient preference range across acclimation treatments; source reports 25.3 degC final preferendum. Not a general wild field range."
+        }
+      ],
+      "canonicalRangeBefore": {
+        "min": 17,
+        "max": 24.4,
+        "unit": "degC"
+      },
+      "canonicalRangeAfter": {
+        "min": 17,
+        "max": 24.4,
+        "unit": "degC"
+      },
+      "canonicalChanged": false,
+      "readinessBefore": "LIMITED",
+      "readinessAfter": "LIMITED",
+      "status": "PREFERRED_EVIDENCE_ENRICHED",
+      "reason": "NEW_EXPERIMENTAL_PREFERENCE_IS_JUVENILE_AND_LAB_ACCLIMATED"
+    },
+    {
+      "speciesId": "BM-SPECIES-000751",
+      "slug": "acanthopagrus-schlegelii",
+      "koreanName": "감성돔",
+      "scientificName": "Acanthopagrus schlegelii",
+      "sourcesChecked": [
+        "MBRIS",
+        "FishBase/AquaMaps",
+        "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf"
+      ],
+      "addedEvidence": [
+        {
+          "id": "blackporgy-kaiseiken-preference-2002",
+          "sourceName": "Marine Ecology Research Institute",
+          "sourceType": "RESEARCH_INSTITUTE_REPORT",
+          "title": "Experimental study on temperature preference of Japanese marine fish",
+          "url": "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf",
+          "year": 2002,
+          "species": "감성돔",
+          "scientificName": "Acanthopagrus schlegelii",
+          "temperature": {
+            "min": 29,
+            "max": 30,
+            "unit": "degC"
+          },
+          "rangeType": "EXPERIMENTAL_FINAL_PREFERENDUM_APPROXIMATE",
+          "lifeStage": "JUVENILE",
+          "geographicContext": "Japan; laboratory-reared from eyed eggs",
+          "seasonContext": null,
+          "evidenceStrength": "MEDIUM",
+          "notes": "Narrative reports an approximately 29-30 degC final preferendum. Laboratory origin and life-stage scope prohibit general wild promotion."
+        }
+      ],
+      "canonicalRangeBefore": {
+        "min": 13.1,
+        "max": 25.4,
+        "unit": "degC"
+      },
+      "canonicalRangeAfter": {
+        "min": 13.1,
+        "max": 25.4,
+        "unit": "degC"
+      },
+      "canonicalChanged": false,
+      "readinessBefore": "LIMITED",
+      "readinessAfter": "LIMITED",
+      "status": "PREFERRED_EVIDENCE_ENRICHED",
+      "reason": "NEW_FINAL_PREFERENDUM_IS_APPROXIMATE_AND_LAB_REARED_JUVENILE"
+    },
+    {
+      "speciesId": "BM-SPECIES-000188",
+      "slug": "lateolabrax-japonicus",
+      "koreanName": "농어",
+      "scientificName": "Lateolabrax japonicus",
+      "sourcesChecked": [
+        "MBRIS",
+        "FishBase/AquaMaps",
+        "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf"
+      ],
+      "addedEvidence": [
+        {
+          "id": "seabass-kaiseiken-preference-2002",
+          "sourceName": "Marine Ecology Research Institute",
+          "sourceType": "RESEARCH_INSTITUTE_REPORT",
+          "title": "Experimental study on temperature preference of Japanese marine fish",
+          "url": "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf",
+          "year": 2002,
+          "species": "농어",
+          "scientificName": "Lateolabrax japonicus",
+          "temperature": {
+            "min": 29,
+            "max": 30,
+            "unit": "degC"
+          },
+          "rangeType": "EXPERIMENTAL_FINAL_PREFERENDUM_APPROXIMATE",
+          "lifeStage": "JUVENILE",
+          "geographicContext": "Japan; laboratory-reared after artificial fertilization",
+          "seasonContext": null,
+          "evidenceStrength": "MEDIUM",
+          "notes": "Narrative reports an approximately 29-30 degC final preferendum. Oxygen and acclimation affect preference; not a general wild range."
+        }
+      ],
+      "canonicalRangeBefore": {
+        "min": 12.7,
+        "max": 26.3,
+        "unit": "degC"
+      },
+      "canonicalRangeAfter": {
+        "min": 12.7,
+        "max": 26.3,
+        "unit": "degC"
+      },
+      "canonicalChanged": false,
+      "readinessBefore": "LIMITED",
+      "readinessAfter": "LIMITED",
+      "status": "PREFERRED_EVIDENCE_ENRICHED",
+      "reason": "NEW_FINAL_PREFERENDUM_IS_APPROXIMATE_AND_LAB_REARED_JUVENILE"
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "slug": "sebastes-schlegelii",
+      "koreanName": "조피볼락",
+      "scientificName": "Sebastes schlegelii",
+      "sourcesChecked": [
+        "FishBase/AquaMaps",
+        "https://www.jstage.jst.go.jp/article/suisan1932/63/3/63_3_317/_article/-char/en",
+        "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf"
+      ],
+      "addedEvidence": [
+        {
+          "id": "rockfish-jstage-preference-1997",
+          "sourceName": "Japanese Society of Fisheries Science",
+          "sourceType": "PEER_REVIEWED_PAPER",
+          "title": "Temperature Responses of Young Schlegel's Black Rockfish Sebastes schlegelii",
+          "url": "https://www.jstage.jst.go.jp/article/suisan1932/63/3/63_3_317/_article/-char/en",
+          "year": 1997,
+          "species": "조피볼락",
+          "scientificName": "Sebastes schlegelii",
+          "temperature": {
+            "min": 17.8,
+            "max": 22.8,
+            "unit": "degC"
+          },
+          "rangeType": "EXPERIMENTAL_PREFERRED_TEMPERATURE",
+          "lifeStage": "YOUNG",
+          "geographicContext": "Japan; laboratory temperature-gradient experiment",
+          "seasonContext": null,
+          "evidenceStrength": "MEDIUM",
+          "notes": "Explicit preference test across 15-28 degC acclimation; final preferendum estimated near 20.5 degC. Young-fish experimental scope prevents general wild promotion."
+        }
+      ],
+      "canonicalRangeBefore": {
+        "min": 8,
+        "max": 21.3,
+        "unit": "degC"
+      },
+      "canonicalRangeAfter": {
+        "min": 8,
+        "max": 21.3,
+        "unit": "degC"
+      },
+      "canonicalChanged": false,
+      "readinessBefore": "LIMITED",
+      "readinessAfter": "LIMITED",
+      "status": "PREFERRED_EVIDENCE_ENRICHED",
+      "reason": "NEW_EXPLICIT_PREFERENCE_IS_YOUNG_FISH_LAB_EXPERIMENT"
+    },
+    {
+      "speciesId": "BM-SPECIES-000465",
+      "slug": "paralichthys-olivaceus",
+      "koreanName": "넙치",
+      "scientificName": "Paralichthys olivaceus",
+      "sourcesChecked": [
+        "MBRIS",
+        "FishBase/AquaMaps",
+        "https://www.jstage.jst.go.jp/article/fishsci1994/60/5/60_5_527/_article"
+      ],
+      "addedEvidence": [],
+      "canonicalRangeBefore": {
+        "min": 8.6,
+        "max": 25,
+        "unit": "degC"
+      },
+      "canonicalRangeAfter": {
+        "min": 8.6,
+        "max": 25,
+        "unit": "degC"
+      },
+      "canonicalChanged": false,
+      "readinessBefore": "LIMITED",
+      "readinessAfter": "LIMITED",
+      "status": "PARTIAL",
+      "reason": "AVAILABLE_20_25_DEGC_RANGE_IS_AQUACULTURE_GROWTH_OPTIMUM"
+    },
+    {
+      "speciesId": "BM-SPECIES-000444",
+      "slug": "trichiurus-japonicus",
+      "koreanName": "갈치",
+      "scientificName": "Trichiurus japonicus",
+      "sourcesChecked": [
+        "MBRIS",
+        "FishBase",
+        "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2021.779144/full"
+      ],
+      "addedEvidence": [],
+      "canonicalRangeBefore": {
+        "min": null,
+        "max": null,
+        "unit": "degC"
+      },
+      "canonicalRangeAfter": {
+        "min": null,
+        "max": null,
+        "unit": "degC"
+      },
+      "canonicalChanged": false,
+      "readinessBefore": "NOT_READY",
+      "readinessAfter": "NOT_READY",
+      "status": "PREFERRED_NOT_FOUND",
+      "reason": "NURSERY_OCCURRENCE_AND_MODEL_OPTIMA_ARE_NOT_THERMAL_PREFERENCE"
+    },
+    {
+      "speciesId": "BM-SPECIES-000417",
+      "slug": "scomber-japonicus",
+      "koreanName": "고등어",
+      "scientificName": "Scomber japonicus",
+      "sourcesChecked": [
+        "MBRIS",
+        "FishBase/AquaMaps",
+        "https://meetings.pices.int/publications/book-of-abstracts/PICES-2022-Book-of-Abstracts.pdf"
+      ],
+      "addedEvidence": [],
+      "canonicalRangeBefore": {
+        "min": 15,
+        "max": 16,
+        "unit": "degC"
+      },
+      "canonicalRangeAfter": {
+        "min": 15,
+        "max": 16,
+        "unit": "degC"
+      },
+      "canonicalChanged": false,
+      "readinessBefore": "STRICT",
+      "readinessAfter": "STRICT",
+      "status": "PREFERRED_EVIDENCE_ENRICHED",
+      "reason": "EXISTING_KOREAN_MBRIS_PREFERRED_RANGE_REMAINS_CANONICAL"
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "slug": "seriola-quinqueradiata",
+      "koreanName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "sourcesChecked": [
+        "MBRIS",
+        "FAO aquaculture",
+        "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf"
+      ],
+      "addedEvidence": [
+        {
+          "id": "yellowtail-kaiseiken-preference-2002",
+          "sourceName": "Marine Ecology Research Institute",
+          "sourceType": "RESEARCH_INSTITUTE_REPORT",
+          "title": "Experimental study on temperature preference of Japanese marine fish",
+          "url": "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf",
+          "year": 2002,
+          "species": "방어",
+          "scientificName": "Seriola quinqueradiata",
+          "temperature": {
+            "min": 20.8,
+            "max": 27.2,
+            "unit": "degC"
+          },
+          "rangeType": "EXPERIMENTAL_PREFERRED_ACCLIMATION_DEPENDENT",
+          "lifeStage": "JUVENILE",
+          "geographicContext": "Japan; wild-origin fish subsequently held and acclimated in laboratory",
+          "seasonContext": null,
+          "evidenceStrength": "MEDIUM",
+          "notes": "Temperature-gradient preference range across acclimation treatments; source reports 26.9 degC final preferendum. Life-stage and acclimation limits prevent general wild promotion."
+        }
+      ],
+      "canonicalRangeBefore": {
+        "min": 20,
+        "max": 26,
+        "unit": "degC"
+      },
+      "canonicalRangeAfter": {
+        "min": 20,
+        "max": 26,
+        "unit": "degC"
+      },
+      "canonicalChanged": false,
+      "readinessBefore": "NOT_READY",
+      "readinessAfter": "LIMITED",
+      "status": "CONFLICT_REVIEW_REQUIRED",
+      "reason": "NEW_EXPERIMENTAL_PREFERENCE_IS_JUVENILE_AND_LAB_ACCLIMATED"
+    },
+    {
+      "speciesId": "BM-SPECIES-003107",
+      "slug": "webfoot-octopus",
+      "koreanName": "주꾸미",
+      "scientificName": "Amphioctopus fangsiao",
+      "sourcesChecked": [
+        "MBRIS",
+        "FishBase",
+        "https://doi.org/10.1016/j.fishres.2019.105479"
+      ],
+      "addedEvidence": [],
+      "canonicalRangeBefore": {
+        "min": null,
+        "max": null,
+        "unit": "degC"
+      },
+      "canonicalRangeAfter": {
+        "min": null,
+        "max": null,
+        "unit": "degC"
+      },
+      "canonicalChanged": false,
+      "readinessBefore": "NOT_READY",
+      "readinessAfter": "NOT_READY",
+      "status": "PREFERRED_NOT_FOUND",
+      "reason": "AVAILABLE_NUMERIC_RANGE_IS_CAPTIVE_EMBRYONIC_DEVELOPMENT"
+    },
+    {
+      "speciesId": "BM-SPECIES-003111",
+      "slug": "enteroctopus-dofleini",
+      "koreanName": "문어",
+      "scientificName": "Enteroctopus dofleini",
+      "sourcesChecked": [
+        "MBRIS",
+        "FishBase/SeaLifeBase",
+        "https://www.jstage.jst.go.jp/article/suisan/92/4/92_25-00036/_article/-char/en"
+      ],
+      "addedEvidence": [],
+      "canonicalRangeBefore": {
+        "min": null,
+        "max": null,
+        "unit": "degC"
+      },
+      "canonicalRangeAfter": {
+        "min": null,
+        "max": null,
+        "unit": "degC"
+      },
+      "canonicalChanged": false,
+      "readinessBefore": "LIMITED",
+      "readinessAfter": "LIMITED",
+      "status": "PARTIAL",
+      "reason": "WILD_IMMATURE_EXPOSURE_AND_CAPTIVE_HUSBANDRY_ARE_NOT_GENERAL_PREFERENCE"
+    }
+  ],
+  "conflicts": [
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "koreanName": "방어",
+      "field": "depth.observed",
+      "status": "CONFLICT_REVIEW_REQUIRED",
+      "evidenceIds": [
+        "amberjack-mbris",
+        "amberjack-fishbase"
+      ],
+      "summary": "한국 MBRIS는 200m 이내, FishBase는 최대 100m를 제시한다. 범위·지역 차이를 평균하지 않고 canonical depth를 비워 둔다."
+    }
+  ],
+  "preferredNotFound": [
+    {
+      "speciesId": "BM-SPECIES-000444",
+      "koreanName": "갈치",
+      "reason": "NURSERY_OCCURRENCE_AND_MODEL_OPTIMA_ARE_NOT_THERMAL_PREFERENCE"
+    },
+    {
+      "speciesId": "BM-SPECIES-003107",
+      "koreanName": "주꾸미",
+      "reason": "AVAILABLE_NUMERIC_RANGE_IS_CAPTIVE_EMBRYONIC_DEVELOPMENT"
+    }
+  ],
+  "scoringBoundary": {
+    "normalization": "NORMALIZATION_NOT_JUSTIFIED",
+    "productionApproval": false,
+    "runtimeChanges": false,
+    "databaseWrites": false,
+    "supabaseChanges": false,
+    "externalAiCalls": false
+  }
+}
