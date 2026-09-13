@@ -1,0 +1,775 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-13T11:13:22.613Z",
+  "audit": "WILD_PREFERRED_TEMPERATURE_SOURCE_GAP_AUDIT_V1",
+  "decision": "CLEAR_RESEARCH_TARGETS_IDENTIFIED",
+  "decisionRationale": "Every non-strict species has an explicit evidence gap and conversion requirement; three commercially relevant species with direct experimental preference evidence have bounded next-search targets, while no evidence is promoted or merged.",
+  "speciesTotal": 10,
+  "strictControlCount": 1,
+  "auditedNonStrictCount": 9,
+  "gapDimensionCounts": {
+    "sourceGaps": 9,
+    "semanticGaps": 4,
+    "applicabilityGaps": 8,
+    "conflictGaps": 0
+  },
+  "blockerCountsByCategory": {
+    "EXPERIMENTAL_ONLY": 5,
+    "JUVENILE_ONLY": 4,
+    "LIFE_STAGE_RESTRICTED": 7,
+    "GEOGRAPHICALLY_LIMITED": 6,
+    "COMPARATOR_POLICY_BLOCKED": 9,
+    "CAPTIVE_ONLY": 4,
+    "RANGE_SEMANTIC_AMBIGUOUS": 4,
+    "MODELLED_ONLY": 2,
+    "AQUACULTURE_ONLY": 2,
+    "SPAWNING_ONLY": 1,
+    "NO_PREFERRED_EVIDENCE": 3,
+    "OBSERVED_ONLY": 1
+  },
+  "strictCriteria": [
+    "NUMERIC_MIN_MAX",
+    "UNIT_CONFIRMED_DEGC",
+    "EXPLICIT_PREFERRED_SEMANTICS",
+    "WILD_CONTEXT",
+    "GENERAL_APPLICABILITY",
+    "NON_AQUACULTURE",
+    "NON_CAPTIVE",
+    "EVIDENCE_REFERENCE",
+    "SUFFICIENT_SOURCE_AUTHORITY",
+    "NO_UNRESOLVED_TEMPERATURE_CONFLICT",
+    "COMPARATOR_COMPATIBLE_SOURCE",
+    "SOURCE_POLICY_AND_GATES_USABLE"
+  ],
+  "nextResearchBatch": [
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "koreanName": "참돔",
+      "priority": "HIGH",
+      "reason": "Explicit wild-origin preference evidence exists; adult or field applicability is the bounded missing link."
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "koreanName": "조피볼락",
+      "priority": "HIGH",
+      "reason": "Explicit thermal preference is available for young fish; adult Korean field applicability is the bounded missing link."
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "koreanName": "방어",
+      "priority": "HIGH",
+      "reason": "Commercially important species with explicit wild-origin juvenile preference evidence and plausible tagging literature targets."
+    }
+  ],
+  "species": [
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "slug": "pagrus-major",
+      "koreanName": "참돔",
+      "scientificName": "Pagrus major",
+      "role": "NON_STRICT_AUDIT_TARGET",
+      "currentState": "Modelled global range plus explicit preference experiment on wild-origin, laboratory-acclimated Japanese juveniles.",
+      "currentEvidence": {
+        "canonical": {
+          "min": 17,
+          "max": 24.4,
+          "unit": "degC"
+        },
+        "preferred": [
+          {
+            "minC": 17,
+            "maxC": 24.4,
+            "context": "MODELLED_PREFERRED_TEMPERATURE_AQUAMAPS",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "pagrus-fishbase-temperature-v2"
+            ]
+          },
+          {
+            "minC": 18.4,
+            "maxC": 25.4,
+            "context": "EXPERIMENTAL_TEMPERATURE_PREFERENCE_ACCLIMATION_DEPENDENT",
+            "lifeStage": "JUVENILE",
+            "regionScope": "JAPAN_WILD_ORIGIN_LAB_ACCLIMATED",
+            "evidenceIds": [
+              "pagrus-kaiseiken-preference-2002"
+            ]
+          }
+        ],
+        "observed": [],
+        "spawning": []
+      },
+      "gapCategories": [
+        "EXPERIMENTAL_ONLY",
+        "JUVENILE_ONLY",
+        "LIFE_STAGE_RESTRICTED",
+        "GEOGRAPHICALLY_LIMITED",
+        "COMPARATOR_POLICY_BLOCKED"
+      ],
+      "gapDimensions": {
+        "sourceGap": true,
+        "semanticGap": false,
+        "applicabilityGap": true,
+        "conflictGap": false
+      },
+      "strictBlocker": "The preference experiment is juvenile-only and acclimation-dependent; it does not establish a general wild Korean or Northwest Pacific range.",
+      "strictConversionRequirement": "A source-backed general wild range from Korean or Northwest Pacific field selection, telemetry, or wild-origin adult preference research.",
+      "searchTargets": [
+        "Pagrus major adult wild thermal preference",
+        "Pagrus major field habitat temperature selection Korea",
+        "Pagrus major telemetry seasonal temperature preference"
+      ],
+      "preferredSourceOrder": [
+        "NIFS",
+        "MBRIS",
+        "PEER_REVIEWED_FIELD_ECOLOGY_OR_FISHERIES",
+        "TELEMETRY_OR_TAGGING_STUDY",
+        "BEHAVIORAL_PREFERENCE_EXPERIMENT_WILD_ORIGIN_ADULT",
+        "FAO_ICES_NOAA_J_STAGE_AUTHORITY",
+        "FISHBASE_PRIMARY_SOURCE_TRAIL"
+      ],
+      "researchCost": "MEDIUM",
+      "researchPriority": "HIGH",
+      "conversionOutlook": "STRICT_LIKELY_WITH_FIELD_SOURCE"
+    },
+    {
+      "speciesId": "BM-SPECIES-000751",
+      "slug": "acanthopagrus-schlegelii",
+      "koreanName": "감성돔",
+      "scientificName": "Acanthopagrus schlegelii",
+      "role": "NON_STRICT_AUDIT_TARGET",
+      "currentState": "Modelled global range plus an approximate final preferendum from laboratory-reared Japanese juveniles.",
+      "currentEvidence": {
+        "canonical": {
+          "min": 13.1,
+          "max": 25.4,
+          "unit": "degC"
+        },
+        "preferred": [
+          {
+            "minC": 13.1,
+            "maxC": 25.4,
+            "context": "MODELLED_PREFERRED_TEMPERATURE_AQUAMAPS",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "blackporgy-fishbase-temperature-v2"
+            ]
+          },
+          {
+            "minC": 29,
+            "maxC": 30,
+            "context": "EXPERIMENTAL_FINAL_PREFERENDUM_APPROXIMATE",
+            "lifeStage": "JUVENILE",
+            "regionScope": "JAPAN_LAB_REARED",
+            "evidenceIds": [
+              "blackporgy-kaiseiken-preference-2002"
+            ]
+          }
+        ],
+        "observed": [],
+        "spawning": []
+      },
+      "gapCategories": [
+        "CAPTIVE_ONLY",
+        "EXPERIMENTAL_ONLY",
+        "JUVENILE_ONLY",
+        "LIFE_STAGE_RESTRICTED",
+        "GEOGRAPHICALLY_LIMITED",
+        "RANGE_SEMANTIC_AMBIGUOUS",
+        "COMPARATOR_POLICY_BLOCKED"
+      ],
+      "gapDimensions": {
+        "sourceGap": true,
+        "semanticGap": false,
+        "applicabilityGap": true,
+        "conflictGap": false
+      },
+      "strictBlocker": "The only explicit preferendum is approximate, juvenile-only, and based on fish reared from eggs in a laboratory.",
+      "strictConversionRequirement": "A numeric adult wild preferred range with explicit selection semantics, confirmed degrees Celsius, and Korean or Northwest Pacific applicability.",
+      "searchTargets": [
+        "Acanthopagrus schlegelii adult wild thermal preference",
+        "black sea bream field temperature selection",
+        "Acanthopagrus schlegelii telemetry habitat temperature Korea"
+      ],
+      "preferredSourceOrder": [
+        "NIFS",
+        "MBRIS",
+        "PEER_REVIEWED_FIELD_ECOLOGY_OR_FISHERIES",
+        "TELEMETRY_OR_TAGGING_STUDY",
+        "BEHAVIORAL_PREFERENCE_EXPERIMENT_WILD_ORIGIN_ADULT",
+        "FAO_ICES_NOAA_J_STAGE_AUTHORITY",
+        "FISHBASE_PRIMARY_SOURCE_TRAIL"
+      ],
+      "researchCost": "HIGH",
+      "researchPriority": "MEDIUM",
+      "conversionOutlook": "STRICT_LIKELY_WITH_ADULT_PREFERENCE_STUDY"
+    },
+    {
+      "speciesId": "BM-SPECIES-000188",
+      "slug": "lateolabrax-japonicus",
+      "koreanName": "농어",
+      "scientificName": "Lateolabrax japonicus",
+      "role": "NON_STRICT_AUDIT_TARGET",
+      "currentState": "Modelled global range plus an approximate final preferendum from laboratory-reared Japanese juveniles.",
+      "currentEvidence": {
+        "canonical": {
+          "min": 12.7,
+          "max": 26.3,
+          "unit": "degC"
+        },
+        "preferred": [
+          {
+            "minC": 12.7,
+            "maxC": 26.3,
+            "context": "MODELLED_PREFERRED_TEMPERATURE_AQUAMAPS",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "seabass-fishbase-temperature-v2"
+            ]
+          },
+          {
+            "minC": 29,
+            "maxC": 30,
+            "context": "EXPERIMENTAL_FINAL_PREFERENDUM_APPROXIMATE",
+            "lifeStage": "JUVENILE",
+            "regionScope": "JAPAN_LAB_REARED",
+            "evidenceIds": [
+              "seabass-kaiseiken-preference-2002"
+            ]
+          }
+        ],
+        "observed": [],
+        "spawning": []
+      },
+      "gapCategories": [
+        "CAPTIVE_ONLY",
+        "EXPERIMENTAL_ONLY",
+        "JUVENILE_ONLY",
+        "LIFE_STAGE_RESTRICTED",
+        "GEOGRAPHICALLY_LIMITED",
+        "RANGE_SEMANTIC_AMBIGUOUS",
+        "COMPARATOR_POLICY_BLOCKED"
+      ],
+      "gapDimensions": {
+        "sourceGap": true,
+        "semanticGap": false,
+        "applicabilityGap": true,
+        "conflictGap": false
+      },
+      "strictBlocker": "The explicit preferendum is approximate and limited to laboratory-reared juveniles; oxygen and acclimation context also constrain transfer.",
+      "strictConversionRequirement": "A general adult wild preferred range from field habitat selection, telemetry, or a wild-origin adult behavioral experiment.",
+      "searchTargets": [
+        "Lateolabrax japonicus adult wild thermal preference",
+        "Japanese sea bass telemetry water temperature selection",
+        "Lateolabrax japonicus seasonal habitat temperature Korea"
+      ],
+      "preferredSourceOrder": [
+        "NIFS",
+        "MBRIS",
+        "PEER_REVIEWED_FIELD_ECOLOGY_OR_FISHERIES",
+        "TELEMETRY_OR_TAGGING_STUDY",
+        "BEHAVIORAL_PREFERENCE_EXPERIMENT_WILD_ORIGIN_ADULT",
+        "FAO_ICES_NOAA_J_STAGE_AUTHORITY",
+        "FISHBASE_PRIMARY_SOURCE_TRAIL"
+      ],
+      "researchCost": "HIGH",
+      "researchPriority": "MEDIUM",
+      "conversionOutlook": "STRICT_LIKELY_WITH_ADULT_PREFERENCE_STUDY"
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "slug": "sebastes-schlegelii",
+      "koreanName": "조피볼락",
+      "scientificName": "Sebastes schlegelii",
+      "role": "NON_STRICT_AUDIT_TARGET",
+      "currentState": "Modelled global range plus an explicit temperature-gradient preference result for young fish in Japan.",
+      "currentEvidence": {
+        "canonical": {
+          "min": 8,
+          "max": 21.3,
+          "unit": "degC"
+        },
+        "preferred": [
+          {
+            "minC": 8,
+            "maxC": 21.3,
+            "context": "MODELLED_PREFERRED_TEMPERATURE_AQUAMAPS",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "rockfish-fishbase-temperature-v2"
+            ]
+          },
+          {
+            "minC": 17.8,
+            "maxC": 22.8,
+            "context": "EXPERIMENTAL_TEMPERATURE_PREFERENCE_ACCLIMATION_INDEPENDENT",
+            "lifeStage": "YOUNG",
+            "regionScope": "JAPAN_LAB_EXPERIMENT",
+            "evidenceIds": [
+              "rockfish-jstage-preference-1997"
+            ]
+          }
+        ],
+        "observed": [],
+        "spawning": []
+      },
+      "gapCategories": [
+        "EXPERIMENTAL_ONLY",
+        "LIFE_STAGE_RESTRICTED",
+        "GEOGRAPHICALLY_LIMITED",
+        "COMPARATOR_POLICY_BLOCKED"
+      ],
+      "gapDimensions": {
+        "sourceGap": true,
+        "semanticGap": false,
+        "applicabilityGap": true,
+        "conflictGap": false
+      },
+      "strictBlocker": "The experiment establishes young-fish preference, not general wild adult applicability or a Korean field range.",
+      "strictConversionRequirement": "Adult or life-stage-general wild field selection evidence, ideally Korean, with an explicit numeric preferred range.",
+      "searchTargets": [
+        "Sebastes schlegelii adult wild thermal preference",
+        "Sebastes schlegelii telemetry temperature selection Korea",
+        "black rockfish seasonal habitat temperature field study"
+      ],
+      "preferredSourceOrder": [
+        "NIFS",
+        "MBRIS",
+        "PEER_REVIEWED_FIELD_ECOLOGY_OR_FISHERIES",
+        "TELEMETRY_OR_TAGGING_STUDY",
+        "BEHAVIORAL_PREFERENCE_EXPERIMENT_WILD_ORIGIN_ADULT",
+        "FAO_ICES_NOAA_J_STAGE_AUTHORITY",
+        "FISHBASE_PRIMARY_SOURCE_TRAIL"
+      ],
+      "researchCost": "MEDIUM",
+      "researchPriority": "HIGH",
+      "conversionOutlook": "STRICT_LIKELY_WITH_FIELD_SOURCE"
+    },
+    {
+      "speciesId": "BM-SPECIES-000465",
+      "slug": "paralichthys-olivaceus",
+      "koreanName": "넙치",
+      "scientificName": "Paralichthys olivaceus",
+      "role": "NON_STRICT_AUDIT_TARGET",
+      "currentState": "AquaMaps modelled range, Korean spawning range, and aquaculture growth-optimum literature; none is general wild preference.",
+      "currentEvidence": {
+        "canonical": {
+          "min": 8.6,
+          "max": 25,
+          "unit": "degC"
+        },
+        "preferred": [
+          {
+            "minC": 8.6,
+            "maxC": 25,
+            "context": "MODELLED_PREFERRED_TEMPERATURE_AQUAMAPS",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "flounder-fishbase-temperature-v2"
+            ]
+          }
+        ],
+        "observed": [],
+        "spawning": [
+          {
+            "minC": 11,
+            "maxC": 17,
+            "context": "SPAWNING_TEMPERATURE",
+            "lifeStage": "ADULT",
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "flounder-mbris"
+            ]
+          }
+        ]
+      },
+      "gapCategories": [
+        "MODELLED_ONLY",
+        "AQUACULTURE_ONLY",
+        "SPAWNING_ONLY",
+        "RANGE_SEMANTIC_AMBIGUOUS",
+        "COMPARATOR_POLICY_BLOCKED"
+      ],
+      "gapDimensions": {
+        "sourceGap": true,
+        "semanticGap": true,
+        "applicabilityGap": true,
+        "conflictGap": false
+      },
+      "strictBlocker": "Modelled distribution, spawning temperature, and culture growth optimum have different meanings from wild behavioral preference.",
+      "strictConversionRequirement": "Wild adult habitat-temperature selection or telemetry evidence that explicitly identifies a preferred range outside spawning-only context.",
+      "searchTargets": [
+        "Paralichthys olivaceus wild preferred temperature",
+        "olive flounder telemetry habitat temperature selection",
+        "Paralichthys olivaceus adult field thermal habitat Korea"
+      ],
+      "preferredSourceOrder": [
+        "NIFS",
+        "MBRIS",
+        "PEER_REVIEWED_FIELD_ECOLOGY_OR_FISHERIES",
+        "TELEMETRY_OR_TAGGING_STUDY",
+        "BEHAVIORAL_PREFERENCE_EXPERIMENT_WILD_ORIGIN_ADULT",
+        "FAO_ICES_NOAA_J_STAGE_AUTHORITY",
+        "FISHBASE_PRIMARY_SOURCE_TRAIL"
+      ],
+      "researchCost": "HIGH",
+      "researchPriority": "MEDIUM",
+      "conversionOutlook": "STRICT_LIKELY_WITH_FIELD_SOURCE"
+    },
+    {
+      "speciesId": "BM-SPECIES-000444",
+      "slug": "trichiurus-japonicus",
+      "koreanName": "갈치",
+      "scientificName": "Trichiurus japonicus",
+      "role": "NON_STRICT_AUDIT_TARGET",
+      "currentState": "Species and habitat records exist, but reviewed occurrence and distribution modelling do not provide an explicit preferred-temperature range.",
+      "currentEvidence": {
+        "canonical": {
+          "min": null,
+          "max": null,
+          "unit": "degC"
+        },
+        "preferred": [],
+        "observed": [],
+        "spawning": []
+      },
+      "gapCategories": [
+        "NO_PREFERRED_EVIDENCE",
+        "MODELLED_ONLY",
+        "RANGE_SEMANTIC_AMBIGUOUS",
+        "COMPARATOR_POLICY_BLOCKED"
+      ],
+      "gapDimensions": {
+        "sourceGap": true,
+        "semanticGap": true,
+        "applicabilityGap": false,
+        "conflictGap": false
+      },
+      "strictBlocker": "No numeric source states thermal preference; nursery occurrence and model optima cannot be relabelled as preference.",
+      "strictConversionRequirement": "An explicit wild thermal-selection range from tagging, field habitat selection, or behavioral preference work with confirmed species identity.",
+      "searchTargets": [
+        "Trichiurus japonicus wild thermal preference",
+        "largehead hairtail telemetry temperature selection",
+        "Trichiurus japonicus seasonal habitat temperature preference"
+      ],
+      "preferredSourceOrder": [
+        "NIFS",
+        "MBRIS",
+        "PEER_REVIEWED_FIELD_ECOLOGY_OR_FISHERIES",
+        "TELEMETRY_OR_TAGGING_STUDY",
+        "BEHAVIORAL_PREFERENCE_EXPERIMENT_WILD_ORIGIN_ADULT",
+        "FAO_ICES_NOAA_J_STAGE_AUTHORITY",
+        "FISHBASE_PRIMARY_SOURCE_TRAIL"
+      ],
+      "researchCost": "VERY_HIGH",
+      "researchPriority": "MEDIUM",
+      "conversionOutlook": "STRICT_UNCERTAIN"
+    },
+    {
+      "speciesId": "BM-SPECIES-000417",
+      "slug": "scomber-japonicus",
+      "koreanName": "고등어",
+      "scientificName": "Scomber japonicus",
+      "role": "STRICT_CONTROL",
+      "currentEvidence": {
+        "canonical": {
+          "min": 15,
+          "max": 16,
+          "unit": "degC"
+        },
+        "preferred": [
+          {
+            "minC": 15,
+            "maxC": 16,
+            "context": "PREFERRED_TEMPERATURE",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "mackerel-mbris"
+            ]
+          },
+          {
+            "minC": 9.3,
+            "maxC": 27.7,
+            "context": "MODELLED_PREFERRED_TEMPERATURE_AQUAMAPS_SECONDARY",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "mackerel-fishbase-temperature-v2"
+            ]
+          }
+        ],
+        "observed": [],
+        "spawning": [
+          {
+            "minC": 15,
+            "maxC": 20,
+            "context": "SPAWNING_TEMPERATURE",
+            "lifeStage": "ADULT",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "mackerel-fishbase"
+            ]
+          }
+        ]
+      },
+      "gapCategories": [],
+      "strictBlocker": null,
+      "strictConversionRequirement": null,
+      "researchCost": null,
+      "researchPriority": null,
+      "conversionOutlook": "STRICT_CONTROL_PRESERVED"
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "slug": "seriola-quinqueradiata",
+      "koreanName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "role": "NON_STRICT_AUDIT_TARGET",
+      "currentState": "Aquaculture adult and juvenile growth optima plus a wild-origin juvenile laboratory acclimation preference experiment.",
+      "currentEvidence": {
+        "canonical": {
+          "min": 20,
+          "max": 26,
+          "unit": "degC"
+        },
+        "preferred": [
+          {
+            "minC": 20,
+            "maxC": 26,
+            "context": "AQUACULTURE_ADULT_OPTIMUM_GROWTH_NOT_WILD_PREFERENCE",
+            "lifeStage": "ADULT",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "evidenceIds": [
+              "amberjack-fao-aquaculture-v2"
+            ]
+          },
+          {
+            "minC": 22,
+            "maxC": 27,
+            "context": "AQUACULTURE_JUVENILE_MAXIMUM_GROWTH_NOT_WILD_PREFERENCE",
+            "lifeStage": "JUVENILE",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "evidenceIds": [
+              "amberjack-fao-aquaculture-v2"
+            ]
+          },
+          {
+            "minC": 20.8,
+            "maxC": 27.2,
+            "context": "EXPERIMENTAL_TEMPERATURE_PREFERENCE_ACCLIMATION_DEPENDENT",
+            "lifeStage": "JUVENILE",
+            "regionScope": "JAPAN_WILD_ORIGIN_LAB_ACCLIMATED",
+            "evidenceIds": [
+              "yellowtail-kaiseiken-preference-2002"
+            ]
+          }
+        ],
+        "observed": [],
+        "spawning": []
+      },
+      "gapCategories": [
+        "AQUACULTURE_ONLY",
+        "EXPERIMENTAL_ONLY",
+        "JUVENILE_ONLY",
+        "LIFE_STAGE_RESTRICTED",
+        "GEOGRAPHICALLY_LIMITED",
+        "COMPARATOR_POLICY_BLOCKED"
+      ],
+      "gapDimensions": {
+        "sourceGap": true,
+        "semanticGap": false,
+        "applicabilityGap": true,
+        "conflictGap": false
+      },
+      "strictBlocker": "The explicit preference evidence is juvenile and acclimation-dependent; aquaculture optima cannot supply general wild semantics.",
+      "strictConversionRequirement": "A general wild adult or multi-life-stage preferred range from Northwest Pacific telemetry, field selection, or wild-origin adult experiments.",
+      "searchTargets": [
+        "Seriola quinqueradiata adult wild thermal preference",
+        "yellowtail archival tag preferred temperature",
+        "Seriola quinqueradiata seasonal migration habitat temperature Japan Korea"
+      ],
+      "preferredSourceOrder": [
+        "NIFS",
+        "MBRIS",
+        "PEER_REVIEWED_FIELD_ECOLOGY_OR_FISHERIES",
+        "TELEMETRY_OR_TAGGING_STUDY",
+        "BEHAVIORAL_PREFERENCE_EXPERIMENT_WILD_ORIGIN_ADULT",
+        "FAO_ICES_NOAA_J_STAGE_AUTHORITY",
+        "FISHBASE_PRIMARY_SOURCE_TRAIL"
+      ],
+      "researchCost": "MEDIUM",
+      "researchPriority": "HIGH",
+      "conversionOutlook": "STRICT_LIKELY_WITH_FIELD_SOURCE"
+    },
+    {
+      "speciesId": "BM-SPECIES-003107",
+      "slug": "webfoot-octopus",
+      "koreanName": "주꾸미",
+      "scientificName": "Amphioctopus fangsiao",
+      "role": "NON_STRICT_AUDIT_TARGET",
+      "currentState": "The numeric range is a captive broodstock and hatchling rearing condition, not adult wild preference.",
+      "currentEvidence": {
+        "canonical": {
+          "min": null,
+          "max": null,
+          "unit": "degC"
+        },
+        "preferred": [],
+        "observed": [
+          {
+            "minC": 21.5,
+            "maxC": 25,
+            "context": "CAPTIVE_REARING_CONDITIONS_NOT_WILD_PREFERENCE",
+            "lifeStage": "BROODSTOCK_AND_HATCHLINGS",
+            "regionScope": "REGIONAL_OTHER",
+            "evidenceIds": [
+              "webfoot-paper-2026"
+            ]
+          }
+        ],
+        "spawning": []
+      },
+      "gapCategories": [
+        "NO_PREFERRED_EVIDENCE",
+        "CAPTIVE_ONLY",
+        "LIFE_STAGE_RESTRICTED",
+        "COMPARATOR_POLICY_BLOCKED"
+      ],
+      "gapDimensions": {
+        "sourceGap": true,
+        "semanticGap": true,
+        "applicabilityGap": true,
+        "conflictGap": false
+      },
+      "strictBlocker": "Captive embryonic and hatchling development conditions cannot represent adult wild selection.",
+      "strictConversionRequirement": "Adult wild field occurrence with explicit selection analysis or a behavioral thermal-preference study using wild-origin adults.",
+      "searchTargets": [
+        "Amphioctopus fangsiao adult wild thermal preference",
+        "webfoot octopus field habitat temperature selection",
+        "Amphioctopus fangsiao seasonal temperature habitat Korea"
+      ],
+      "preferredSourceOrder": [
+        "NIFS",
+        "MBRIS",
+        "PEER_REVIEWED_FIELD_ECOLOGY_OR_FISHERIES",
+        "TELEMETRY_OR_TAGGING_STUDY",
+        "BEHAVIORAL_PREFERENCE_EXPERIMENT_WILD_ORIGIN_ADULT",
+        "FAO_ICES_NOAA_J_STAGE_AUTHORITY",
+        "FISHBASE_PRIMARY_SOURCE_TRAIL"
+      ],
+      "researchCost": "HIGH",
+      "researchPriority": "MEDIUM",
+      "conversionOutlook": "STRICT_UNCERTAIN"
+    },
+    {
+      "speciesId": "BM-SPECIES-003111",
+      "slug": "enteroctopus-dofleini",
+      "koreanName": "문어",
+      "scientificName": "Enteroctopus dofleini",
+      "role": "NON_STRICT_AUDIT_TARGET",
+      "currentState": "Wild immature occurrence temperatures and captive husbandry guidance are preserved separately; neither is general adult wild preference.",
+      "currentEvidence": {
+        "canonical": {
+          "min": null,
+          "max": null,
+          "unit": "degC"
+        },
+        "preferred": [
+          {
+            "minC": 6,
+            "maxC": 12,
+            "context": "CAPTIVE_HUSBANDRY_RECOMMENDED_NOT_WILD_PREFERENCE",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "gpo-husbandry-water-quality-v2"
+            ]
+          }
+        ],
+        "observed": [
+          {
+            "minC": 5,
+            "maxC": 14,
+            "context": "WILD_IMMATURE_OCCURRENCE_TEMPERATURE",
+            "lifeStage": "IMMATURE",
+            "regionScope": "OTHER_REGIONAL",
+            "evidenceIds": [
+              "gpo-hokkaido-temperature-v2"
+            ]
+          }
+        ],
+        "spawning": []
+      },
+      "gapCategories": [
+        "NO_PREFERRED_EVIDENCE",
+        "OBSERVED_ONLY",
+        "CAPTIVE_ONLY",
+        "LIFE_STAGE_RESTRICTED",
+        "GEOGRAPHICALLY_LIMITED",
+        "COMPARATOR_POLICY_BLOCKED"
+      ],
+      "gapDimensions": {
+        "sourceGap": true,
+        "semanticGap": true,
+        "applicabilityGap": true,
+        "conflictGap": false
+      },
+      "strictBlocker": "Observed exposure does not prove selection, the wild data are immature and regional, and husbandry guidance is captive context.",
+      "strictConversionRequirement": "Adult wild telemetry or field selection evidence with explicit preferred-temperature semantics and a numeric range.",
+      "searchTargets": [
+        "Enteroctopus dofleini adult wild thermal preference",
+        "giant Pacific octopus telemetry temperature selection adult",
+        "Enteroctopus dofleini field habitat temperature preference"
+      ],
+      "preferredSourceOrder": [
+        "NIFS",
+        "MBRIS",
+        "PEER_REVIEWED_FIELD_ECOLOGY_OR_FISHERIES",
+        "TELEMETRY_OR_TAGGING_STUDY",
+        "BEHAVIORAL_PREFERENCE_EXPERIMENT_WILD_ORIGIN_ADULT",
+        "FAO_ICES_NOAA_J_STAGE_AUTHORITY",
+        "FISHBASE_PRIMARY_SOURCE_TRAIL"
+      ],
+      "researchCost": "VERY_HIGH",
+      "researchPriority": "LOW",
+      "conversionOutlook": "STRICT_UNLIKELY_WITH_CURRENT_EVIDENCE"
+    }
+  ],
+  "existingConflictNote": {
+    "speciesId": "BM-SPECIES-000501",
+    "field": "depth.observed",
+    "status": "CONFLICT_REVIEW_REQUIRED",
+    "temperatureEligibilityEffect": "FIELD_SEPARATE_NO_AUTOMATIC_TEMPERATURE_BLOCK",
+    "note": "The MBRIS <=200m and FishBase <=100m depth conflict remains unresolved and canonical depth remains null. It is not a temperature conflict."
+  },
+  "immutableInputs": {
+    "v2": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
+    "v3": "880066b3eefd2100ea870a674504492b8d70da9700a660350fb296ea5bc7a376",
+    "sourcePolicy": "1d6c206854dab0b1ad2b19531b3a5da1be93afeaf14fe3cdb2ffc875975de41d",
+    "suitabilityRule": "29c6a93c5b1af869080ec6a91f388c87c013b19e6746fb54ad2acfab695d3304",
+    "scoringReadiness": "0c09c55d6e207dcb9419d056bbc8da811d16cc2ae99ae5d55b384e1c5af724bb",
+    "temperatureExperiment": "c5294b6b36c1fc7021898067467d4ddee2b3e8d650c60302d0821d3bfe559ad8"
+  },
+  "boundaries": {
+    "evidenceAdded": false,
+    "preferredRangeAdded": false,
+    "canonicalRangeChanged": false,
+    "v3Activated": false,
+    "runtimeChanged": false,
+    "databaseChanged": false,
+    "supabaseChanged": false,
+    "externalAiCalled": false,
+    "numericScoringAllowed": false,
+    "normalization": "NORMALIZATION_NOT_JUSTIFIED",
+    "weightingAllowed": false,
+    "probabilityAllowed": false,
+    "orderingAllowed": false,
+    "productAdviceAllowed": false
+  }
+}
