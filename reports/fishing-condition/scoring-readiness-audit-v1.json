@@ -1,0 +1,667 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-13T09:53:20.372Z",
+  "auditType": "SCORING_READINESS_ONLY",
+  "decision": "READY_FOR_LIMITED_SINGLE_FIELD_EXPERIMENT",
+  "decisionRationale": "Only Korean source-backed preferred temperature for one species satisfies the strict candidate contract; six temperature profiles and one dissolved-oxygen profile remain limited, while all other variables are blocked, contextual, baseline-only, categorical, or insufficient.",
+  "sourceArtifacts": {
+    "speciesProfile": {
+      "path": "data/fishing-condition/species-environment/v2/species-environment-profiles.json",
+      "schemaVersion": "2.0.0",
+      "sha256": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98"
+    },
+    "sourcePolicy": {
+      "path": "data/fishing-condition/source-policy/v1/source-policy.json",
+      "schemaVersion": "1.0.0",
+      "sha256": "1d6c206854dab0b1ad2b19531b3a5da1be93afeaf14fe3cdb2ffc875975de41d"
+    },
+    "suitabilityRule": {
+      "path": "data/fishing-condition/suitability-rule/v1/suitability-rules.json",
+      "schemaVersion": "1.0.0",
+      "sha256": "29c6a93c5b1af869080ec6a91f388c87c013b19e6746fb54ad2acfab695d3304"
+    }
+  },
+  "speciesCount": 10,
+  "variableCount": 13,
+  "candidateCounts": {
+    "strictFields": 1,
+    "limitedFields": 7,
+    "speciesWithStrictCandidate": 1,
+    "speciesWithLimitedCandidate": 7
+  },
+  "coverage": {
+    "temperature": 9,
+    "salinity": 5,
+    "dissolvedOxygen": 3,
+    "seasonalityMonthComparable": 6,
+    "activity": 4,
+    "spawning": 7
+  },
+  "variables": [
+    {
+      "variable": "temperature",
+      "profileCoverage": 9,
+      "source": "nifs-risa|nifs-femo-sea",
+      "policy": "COMPARISON_ALLOWED|COMPARISON_ALLOWED_WITH_LIMITS",
+      "gateStatus": "CONDITIONALLY_PASSABLE",
+      "unitReadiness": "CONFIRMED",
+      "depthReadiness": "EXPLICIT_BINDING_REQUIRED",
+      "freshnessReadiness": "RUNTIME_DEPENDENT",
+      "comparatorAvailability": 9,
+      "interpretationAvailability": 9,
+      "readiness": "LIMITED_CANDIDATE",
+      "strictCandidates": 1,
+      "limitedCandidates": 6,
+      "limitations": [
+        "PREFERRED_OBSERVED_MODELLED_AND_CAPTIVE_RANGES_ARE_NOT_EQUIVALENT"
+      ]
+    },
+    {
+      "variable": "salinity",
+      "profileCoverage": 5,
+      "source": "nifs-femo-sea",
+      "policy": "BLOCKED",
+      "gateStatus": "UNIT_CONFIRMED_FAILED",
+      "unitReadiness": "UNVERIFIED",
+      "depthReadiness": "RUNTIME_DEPENDENT",
+      "freshnessReadiness": "RUNTIME_DEPENDENT",
+      "comparatorAvailability": 0,
+      "interpretationAvailability": 0,
+      "readiness": "BLOCKED",
+      "limitations": [
+        "SOURCE_UNIT_NOT_DOCUMENTED"
+      ]
+    },
+    {
+      "variable": "dissolvedOxygen",
+      "profileCoverage": 3,
+      "source": "nifs-femo-sea",
+      "policy": "COMPARISON_ALLOWED_WITH_LIMITS",
+      "gateStatus": "SPECIES_PROFILE_SPARSE",
+      "unitReadiness": "CONFIRMED_MG_L_SOURCE",
+      "depthReadiness": "EXPLICIT_BINDING_REQUIRED",
+      "freshnessReadiness": "PERIODIC_RUNTIME_DEPENDENT",
+      "comparatorAvailability": 1,
+      "interpretationAvailability": 1,
+      "readiness": "LIMITED_CANDIDATE",
+      "limitations": [
+        "ONE_COMPARATOR_PROFILE",
+        "AQUACULTURE_THRESHOLD_NOT_WILD_MINIMUM"
+      ]
+    },
+    {
+      "variable": "seasonality",
+      "profileCoverage": 6,
+      "source": "species-profile-v2",
+      "policy": "NO_NUMERIC_POLICY",
+      "gateStatus": "CONTEXT_SEPARATION_REQUIRED",
+      "unitReadiness": "NOT_APPLICABLE",
+      "depthReadiness": "NOT_APPLICABLE",
+      "freshnessReadiness": "TIME_CONTEXT_DEPENDENT",
+      "comparatorAvailability": 6,
+      "interpretationAvailability": 6,
+      "readiness": "NOT_READY",
+      "limitations": [
+        "MATCH_MISMATCH_NOT_NUMERICALLY_CONVERTED",
+        "CONTEXTS_MUST_REMAIN_SEPARATE"
+      ]
+    },
+    {
+      "variable": "activity",
+      "profileCoverage": 4,
+      "source": "species-profile-v2",
+      "policy": "NO_RUNTIME_ENVIRONMENT_POLICY",
+      "gateStatus": "TIME_CONTEXT_REQUIRED",
+      "unitReadiness": "NOT_APPLICABLE",
+      "depthReadiness": "NOT_APPLICABLE",
+      "freshnessReadiness": "TIME_CONTEXT_DEPENDENT",
+      "comparatorAvailability": 0,
+      "interpretationAvailability": 0,
+      "readiness": "NOT_READY",
+      "limitations": [
+        "NO_RUNTIME_TIME_COMPARATOR",
+        "NO_SUNRISE_SUNSET_INFERENCE"
+      ]
+    },
+    {
+      "variable": "habitat",
+      "profileCoverage": 0,
+      "source": "none",
+      "policy": "CONTEXT_ONLY",
+      "gateStatus": "ENVIRONMENT_COMPARATOR_MISSING",
+      "unitReadiness": "NOT_APPLICABLE",
+      "depthReadiness": "NOT_APPLICABLE",
+      "freshnessReadiness": "NOT_APPLICABLE",
+      "comparatorAvailability": 0,
+      "interpretationAvailability": 0,
+      "readiness": "CONTEXT_ONLY",
+      "limitations": [
+        "NO_HABITAT_ENVIRONMENT_COMPARISON"
+      ]
+    },
+    {
+      "variable": "wave",
+      "profileCoverage": 0,
+      "source": "kma-observation|kma-forecast",
+      "policy": "CONTEXT_ONLY",
+      "gateStatus": "SPECIES_PROFILE_MISSING",
+      "unitReadiness": "CONFIRMED",
+      "depthReadiness": "NOT_APPLICABLE",
+      "freshnessReadiness": "RUNTIME_DEPENDENT",
+      "comparatorAvailability": 0,
+      "interpretationAvailability": 0,
+      "readiness": "CONTEXT_ONLY",
+      "limitations": [
+        "OPERATIONAL_CONTEXT_NOT_SPECIES_MATCH"
+      ]
+    },
+    {
+      "variable": "wind",
+      "profileCoverage": 0,
+      "source": "kma-observation|kma-forecast",
+      "policy": "CONTEXT_ONLY",
+      "gateStatus": "SPECIES_PROFILE_MISSING",
+      "unitReadiness": "CONFIRMED",
+      "depthReadiness": "NOT_APPLICABLE",
+      "freshnessReadiness": "RUNTIME_DEPENDENT",
+      "comparatorAvailability": 0,
+      "interpretationAvailability": 0,
+      "readiness": "CONTEXT_ONLY",
+      "limitations": [
+        "OPERATIONAL_CONTEXT_NOT_SPECIES_MATCH"
+      ]
+    },
+    {
+      "variable": "pressure",
+      "profileCoverage": 0,
+      "source": "kma-observation",
+      "policy": "CONTEXT_ONLY",
+      "gateStatus": "SPECIES_PROFILE_MISSING",
+      "unitReadiness": "CONFIRMED",
+      "depthReadiness": "NOT_APPLICABLE",
+      "freshnessReadiness": "RUNTIME_DEPENDENT",
+      "comparatorAvailability": 0,
+      "interpretationAvailability": 0,
+      "readiness": "CONTEXT_ONLY",
+      "limitations": [
+        "OPERATIONAL_CONTEXT_NOT_SPECIES_MATCH"
+      ]
+    },
+    {
+      "variable": "currentSpeed",
+      "profileCoverage": 0,
+      "source": "khoa-ocean-current-model",
+      "policy": "CONTEXT_ONLY",
+      "gateStatus": "MODEL_CONTEXT_ONLY",
+      "unitReadiness": "CONFIRMED",
+      "depthReadiness": "NOT_APPLICABLE",
+      "freshnessReadiness": "MODEL_VALID_TIME_LIMITED",
+      "comparatorAvailability": 0,
+      "interpretationAvailability": 0,
+      "readiness": "CONTEXT_ONLY",
+      "limitations": [
+        "MODEL_NOT_OBSERVATION"
+      ]
+    },
+    {
+      "variable": "currentDirection",
+      "profileCoverage": 0,
+      "source": "khoa-ocean-current-model",
+      "policy": "BLOCKED",
+      "gateStatus": "DIRECTION_CONVENTION_CONFIRMED_FAILED",
+      "unitReadiness": "CONFIRMED",
+      "depthReadiness": "NOT_APPLICABLE",
+      "freshnessReadiness": "MODEL_VALID_TIME_LIMITED",
+      "comparatorAvailability": 0,
+      "interpretationAvailability": 0,
+      "readiness": "BLOCKED",
+      "limitations": [
+        "DIRECTION_CONVENTION_UNCONFIRMED"
+      ]
+    },
+    {
+      "variable": "tide",
+      "profileCoverage": 0,
+      "source": "khoa-tide-prediction",
+      "policy": "CONTEXT_ONLY",
+      "gateStatus": "SPECIES_PROFILE_MISSING",
+      "unitReadiness": "CONFIRMED",
+      "depthReadiness": "DATUM_NOT_DOCUMENTED",
+      "freshnessReadiness": "PREDICTION_TIME_DEPENDENT",
+      "comparatorAvailability": 0,
+      "interpretationAvailability": 0,
+      "readiness": "CONTEXT_ONLY",
+      "limitations": [
+        "NO_SPECIES_TIDE_PREFERENCE",
+        "PREDICTION_NOT_OBSERVATION"
+      ]
+    },
+    {
+      "variable": "climatologyAnomaly",
+      "profileCoverage": 0,
+      "source": "nifs-soo-climatology",
+      "policy": "BASELINE_ONLY",
+      "gateStatus": "ANOMALY_MAPPING_AVAILABLE_FAILED",
+      "unitReadiness": "SOURCE_BACKED",
+      "depthReadiness": "MAPPING_BLOCKED",
+      "freshnessReadiness": "HISTORICAL_BASELINE",
+      "comparatorAvailability": 0,
+      "interpretationAvailability": 0,
+      "readiness": "BASELINE_ONLY",
+      "limitations": [
+        "RISA_SOO_MAPPING_BLOCKED",
+        "NOT_CURRENT_ENVIRONMENT"
+      ]
+    }
+  ],
+  "species": [
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "name": "참돔",
+      "scientificName": "Pagrus major",
+      "profileStatus": "EVIDENCE_ENRICHED",
+      "evidenceConfidence": "HIGH",
+      "temperatureReadiness": "LIMITED_CANDIDATE",
+      "temperatureEvidenceRefs": [
+        "pagrus-fishbase-temperature-v2"
+      ],
+      "temperatureLimitations": [
+        "AQUAMAPS_MODELLED_RANGE",
+        "GLOBAL_RANGE_NOT_KOREAN_FIELD_OBSERVATION"
+      ],
+      "salinityReadiness": "BLOCKED",
+      "salinityLimitations": [
+        "FEMO_UNIT_UNVERIFIED",
+        "RUNTIME_COMPARISON_PROHIBITED"
+      ],
+      "dissolvedOxygenReadiness": "INSUFFICIENT_EVIDENCE",
+      "dissolvedOxygenEvidenceRefs": [],
+      "dissolvedOxygenLimitations": [
+        "MG_L_SPECIES_THRESHOLD_MISSING"
+      ],
+      "seasonalityReadiness": "NOT_READY",
+      "seasonalityContextCoverage": true,
+      "activityReadiness": "INSUFFICIENT_EVIDENCE",
+      "activityProfileCoverage": false,
+      "candidateFieldCount": 0,
+      "limitedFieldCount": 1,
+      "blockedFieldCount": 2,
+      "overallAuditStatus": "PARTIAL",
+      "unresolvedConflicts": []
+    },
+    {
+      "speciesId": "BM-SPECIES-000751",
+      "name": "감성돔",
+      "scientificName": "Acanthopagrus schlegelii",
+      "profileStatus": "EVIDENCE_ENRICHED",
+      "evidenceConfidence": "HIGH",
+      "temperatureReadiness": "LIMITED_CANDIDATE",
+      "temperatureEvidenceRefs": [
+        "blackporgy-fishbase-temperature-v2"
+      ],
+      "temperatureLimitations": [
+        "AQUAMAPS_MODELLED_RANGE",
+        "GLOBAL_RANGE_NOT_KOREAN_FIELD_OBSERVATION"
+      ],
+      "salinityReadiness": "BLOCKED",
+      "salinityLimitations": [
+        "FEMO_UNIT_UNVERIFIED",
+        "RUNTIME_COMPARISON_PROHIBITED"
+      ],
+      "dissolvedOxygenReadiness": "INSUFFICIENT_EVIDENCE",
+      "dissolvedOxygenEvidenceRefs": [],
+      "dissolvedOxygenLimitations": [
+        "MG_L_SPECIES_THRESHOLD_MISSING"
+      ],
+      "seasonalityReadiness": "NOT_READY",
+      "seasonalityContextCoverage": true,
+      "activityReadiness": "INSUFFICIENT_EVIDENCE",
+      "activityProfileCoverage": false,
+      "candidateFieldCount": 0,
+      "limitedFieldCount": 1,
+      "blockedFieldCount": 2,
+      "overallAuditStatus": "PARTIAL",
+      "unresolvedConflicts": []
+    },
+    {
+      "speciesId": "BM-SPECIES-000188",
+      "name": "농어",
+      "scientificName": "Lateolabrax japonicus",
+      "profileStatus": "EVIDENCE_ENRICHED",
+      "evidenceConfidence": "HIGH",
+      "temperatureReadiness": "LIMITED_CANDIDATE",
+      "temperatureEvidenceRefs": [
+        "seabass-fishbase-temperature-v2"
+      ],
+      "temperatureLimitations": [
+        "AQUAMAPS_MODELLED_RANGE",
+        "GLOBAL_RANGE_NOT_KOREAN_FIELD_OBSERVATION"
+      ],
+      "salinityReadiness": "BLOCKED",
+      "salinityLimitations": [
+        "FEMO_UNIT_UNVERIFIED",
+        "RUNTIME_COMPARISON_PROHIBITED"
+      ],
+      "dissolvedOxygenReadiness": "INSUFFICIENT_EVIDENCE",
+      "dissolvedOxygenEvidenceRefs": [],
+      "dissolvedOxygenLimitations": [
+        "MG_L_SPECIES_THRESHOLD_MISSING"
+      ],
+      "seasonalityReadiness": "INSUFFICIENT_EVIDENCE",
+      "seasonalityContextCoverage": false,
+      "activityReadiness": "INSUFFICIENT_EVIDENCE",
+      "activityProfileCoverage": false,
+      "candidateFieldCount": 0,
+      "limitedFieldCount": 1,
+      "blockedFieldCount": 2,
+      "overallAuditStatus": "PARTIAL",
+      "unresolvedConflicts": []
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "name": "조피볼락",
+      "scientificName": "Sebastes schlegelii",
+      "profileStatus": "EVIDENCE_ENRICHED",
+      "evidenceConfidence": "MEDIUM",
+      "temperatureReadiness": "LIMITED_CANDIDATE",
+      "temperatureEvidenceRefs": [
+        "rockfish-fishbase-temperature-v2"
+      ],
+      "temperatureLimitations": [
+        "AQUAMAPS_MODELLED_RANGE",
+        "GLOBAL_RANGE_NOT_KOREAN_FIELD_OBSERVATION"
+      ],
+      "salinityReadiness": "BLOCKED",
+      "salinityLimitations": [
+        "FEMO_UNIT_UNVERIFIED",
+        "RUNTIME_COMPARISON_PROHIBITED"
+      ],
+      "dissolvedOxygenReadiness": "INSUFFICIENT_EVIDENCE",
+      "dissolvedOxygenEvidenceRefs": [],
+      "dissolvedOxygenLimitations": [
+        "MG_L_SPECIES_THRESHOLD_MISSING"
+      ],
+      "seasonalityReadiness": "INSUFFICIENT_EVIDENCE",
+      "seasonalityContextCoverage": false,
+      "activityReadiness": "NOT_READY",
+      "activityProfileCoverage": true,
+      "candidateFieldCount": 0,
+      "limitedFieldCount": 1,
+      "blockedFieldCount": 2,
+      "overallAuditStatus": "PARTIAL",
+      "unresolvedConflicts": []
+    },
+    {
+      "speciesId": "BM-SPECIES-000465",
+      "name": "넙치",
+      "scientificName": "Paralichthys olivaceus",
+      "profileStatus": "EVIDENCE_ENRICHED",
+      "evidenceConfidence": "HIGH",
+      "temperatureReadiness": "LIMITED_CANDIDATE",
+      "temperatureEvidenceRefs": [
+        "flounder-fishbase-temperature-v2"
+      ],
+      "temperatureLimitations": [
+        "AQUAMAPS_MODELLED_RANGE",
+        "GLOBAL_RANGE_NOT_KOREAN_FIELD_OBSERVATION"
+      ],
+      "salinityReadiness": "BLOCKED",
+      "salinityLimitations": [
+        "FEMO_UNIT_UNVERIFIED",
+        "RUNTIME_COMPARISON_PROHIBITED"
+      ],
+      "dissolvedOxygenReadiness": "INSUFFICIENT_EVIDENCE",
+      "dissolvedOxygenEvidenceRefs": [],
+      "dissolvedOxygenLimitations": [
+        "MG_L_SPECIES_THRESHOLD_MISSING"
+      ],
+      "seasonalityReadiness": "NOT_READY",
+      "seasonalityContextCoverage": true,
+      "activityReadiness": "INSUFFICIENT_EVIDENCE",
+      "activityProfileCoverage": false,
+      "candidateFieldCount": 0,
+      "limitedFieldCount": 1,
+      "blockedFieldCount": 2,
+      "overallAuditStatus": "PARTIAL",
+      "unresolvedConflicts": []
+    },
+    {
+      "speciesId": "BM-SPECIES-000444",
+      "name": "갈치",
+      "scientificName": "Trichiurus japonicus",
+      "profileStatus": "PARTIAL",
+      "evidenceConfidence": "MEDIUM",
+      "temperatureReadiness": "INSUFFICIENT_EVIDENCE",
+      "temperatureEvidenceRefs": [],
+      "temperatureLimitations": [
+        "COMPLETE_NUMERIC_RANGE_MISSING"
+      ],
+      "salinityReadiness": "BLOCKED",
+      "salinityLimitations": [
+        "FEMO_UNIT_UNVERIFIED",
+        "RUNTIME_COMPARISON_PROHIBITED"
+      ],
+      "dissolvedOxygenReadiness": "INSUFFICIENT_EVIDENCE",
+      "dissolvedOxygenEvidenceRefs": [],
+      "dissolvedOxygenLimitations": [
+        "MG_L_SPECIES_THRESHOLD_MISSING"
+      ],
+      "seasonalityReadiness": "INSUFFICIENT_EVIDENCE",
+      "seasonalityContextCoverage": false,
+      "activityReadiness": "NOT_READY",
+      "activityProfileCoverage": true,
+      "candidateFieldCount": 0,
+      "limitedFieldCount": 0,
+      "blockedFieldCount": 2,
+      "overallAuditStatus": "NOT_READY",
+      "unresolvedConflicts": []
+    },
+    {
+      "speciesId": "BM-SPECIES-000417",
+      "name": "고등어",
+      "scientificName": "Scomber japonicus",
+      "profileStatus": "EVIDENCE_ENRICHED",
+      "evidenceConfidence": "HIGH",
+      "temperatureReadiness": "SCORING_CANDIDATE",
+      "temperatureEvidenceRefs": [
+        "mackerel-mbris",
+        "mackerel-fishbase-temperature-v2"
+      ],
+      "temperatureLimitations": [],
+      "salinityReadiness": "BLOCKED",
+      "salinityLimitations": [
+        "FEMO_UNIT_UNVERIFIED",
+        "RUNTIME_COMPARISON_PROHIBITED"
+      ],
+      "dissolvedOxygenReadiness": "INSUFFICIENT_EVIDENCE",
+      "dissolvedOxygenEvidenceRefs": [],
+      "dissolvedOxygenLimitations": [
+        "MG_L_SPECIES_THRESHOLD_MISSING"
+      ],
+      "seasonalityReadiness": "NOT_READY",
+      "seasonalityContextCoverage": true,
+      "activityReadiness": "NOT_READY",
+      "activityProfileCoverage": true,
+      "candidateFieldCount": 1,
+      "limitedFieldCount": 0,
+      "blockedFieldCount": 2,
+      "overallAuditStatus": "READY_FOR_SINGLE_FIELD_EXPERIMENT",
+      "unresolvedConflicts": []
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "name": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "profileStatus": "CONFLICT_REVIEW_REQUIRED",
+      "evidenceConfidence": "MEDIUM",
+      "temperatureReadiness": "NOT_READY",
+      "temperatureEvidenceRefs": [
+        "amberjack-fao-aquaculture-v2"
+      ],
+      "temperatureLimitations": [
+        "CAPTIVE_OR_AQUACULTURE_NOT_WILD_PREFERENCE"
+      ],
+      "salinityReadiness": "BLOCKED",
+      "salinityLimitations": [
+        "FEMO_UNIT_UNVERIFIED",
+        "RUNTIME_COMPARISON_PROHIBITED"
+      ],
+      "dissolvedOxygenReadiness": "LIMITED_CANDIDATE",
+      "dissolvedOxygenEvidenceRefs": [
+        "amberjack-fao-aquaculture-v2"
+      ],
+      "dissolvedOxygenLimitations": [
+        "AQUACULTURE_THRESHOLD_NOT_WILD_MINIMUM",
+        "PERIODIC_SOURCE"
+      ],
+      "seasonalityReadiness": "INSUFFICIENT_EVIDENCE",
+      "seasonalityContextCoverage": false,
+      "activityReadiness": "INSUFFICIENT_EVIDENCE",
+      "activityProfileCoverage": false,
+      "candidateFieldCount": 0,
+      "limitedFieldCount": 1,
+      "blockedFieldCount": 1,
+      "overallAuditStatus": "PARTIAL",
+      "unresolvedConflicts": [
+        {
+          "field": "depth.observed",
+          "status": "CONFLICT_REVIEW_REQUIRED",
+          "evidenceIds": [
+            "amberjack-mbris",
+            "amberjack-fishbase"
+          ]
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-003107",
+      "name": "주꾸미",
+      "scientificName": "Amphioctopus fangsiao",
+      "profileStatus": "PARTIAL",
+      "evidenceConfidence": "HIGH",
+      "temperatureReadiness": "NOT_READY",
+      "temperatureEvidenceRefs": [
+        "webfoot-paper-2026"
+      ],
+      "temperatureLimitations": [
+        "CAPTIVE_OR_AQUACULTURE_NOT_WILD_PREFERENCE"
+      ],
+      "salinityReadiness": "BLOCKED",
+      "salinityLimitations": [
+        "FEMO_UNIT_UNVERIFIED",
+        "RUNTIME_COMPARISON_PROHIBITED"
+      ],
+      "dissolvedOxygenReadiness": "INSUFFICIENT_EVIDENCE",
+      "dissolvedOxygenEvidenceRefs": [
+        "webfoot-paper-2026"
+      ],
+      "dissolvedOxygenLimitations": [
+        "MG_L_SPECIES_THRESHOLD_MISSING"
+      ],
+      "seasonalityReadiness": "NOT_READY",
+      "seasonalityContextCoverage": true,
+      "activityReadiness": "NOT_READY",
+      "activityProfileCoverage": true,
+      "candidateFieldCount": 0,
+      "limitedFieldCount": 0,
+      "blockedFieldCount": 2,
+      "overallAuditStatus": "NOT_READY",
+      "unresolvedConflicts": []
+    },
+    {
+      "speciesId": "BM-SPECIES-003111",
+      "name": "문어",
+      "scientificName": "Enteroctopus dofleini",
+      "profileStatus": "EVIDENCE_ENRICHED",
+      "evidenceConfidence": "HIGH",
+      "temperatureReadiness": "LIMITED_CANDIDATE",
+      "temperatureEvidenceRefs": [
+        "gpo-husbandry-water-quality-v2",
+        "gpo-hokkaido-temperature-v2"
+      ],
+      "temperatureLimitations": [
+        "LIFE_STAGE_OR_REGION_SCOPE_LIMITED",
+        "OBSERVED_RANGE_NOT_PREFERRED_RANGE"
+      ],
+      "salinityReadiness": "BLOCKED",
+      "salinityLimitations": [
+        "FEMO_UNIT_UNVERIFIED",
+        "RUNTIME_COMPARISON_PROHIBITED"
+      ],
+      "dissolvedOxygenReadiness": "INSUFFICIENT_EVIDENCE",
+      "dissolvedOxygenEvidenceRefs": [
+        "gpo-husbandry-water-quality-v2"
+      ],
+      "dissolvedOxygenLimitations": [
+        "MG_L_SPECIES_THRESHOLD_MISSING"
+      ],
+      "seasonalityReadiness": "NOT_READY",
+      "seasonalityContextCoverage": true,
+      "activityReadiness": "INSUFFICIENT_EVIDENCE",
+      "activityProfileCoverage": false,
+      "candidateFieldCount": 0,
+      "limitedFieldCount": 1,
+      "blockedFieldCount": 2,
+      "overallAuditStatus": "PARTIAL",
+      "unresolvedConflicts": []
+    }
+  ],
+  "blockers": [
+    "FEMO_SALINITY_UNIT_UNVERIFIED",
+    "DISSOLVED_OXYGEN_COMPARATOR_COVERAGE_ONE_OF_TEN",
+    "EVIDENCE_CONTEXTS_NOT_EQUIVALENT",
+    "WEIGHTING_SCIENTIFIC_BASIS_MISSING",
+    "COMMON_NORMALIZATION_CONTRACT_MISSING",
+    "SOURCE_CLASS_MISMATCH",
+    "RISA_SOO_ANOMALY_MAPPING_BLOCKED",
+    "ROMS_DIRECTION_CONVENTION_UNCONFIRMED"
+  ],
+  "compositeRisks": [
+    "VARIABLE_COVERAGE_IMBALANCE",
+    "SPECIES_MISSING_DATA_DENOMINATOR_BIAS",
+    "PREFERRED_OBSERVED_MODELLED_AND_CAPTIVE_EVIDENCE_MISMATCH",
+    "OBSERVED_PERIODIC_FORECAST_MODEL_AND_BASELINE_CLASS_MISMATCH",
+    "FRESH_STALE_AND_UNAVAILABLE_INPUT_MISMATCH",
+    "DEPTH_AND_REGION_CONTEXT_MISMATCH"
+  ],
+  "weightingReadiness": "WEIGHTING_NOT_READY",
+  "normalizationReadiness": "NORMALIZATION_NOT_READY",
+  "normalizationBlockers": [
+    "RANGE_WIDTHS_DIFFER",
+    "DISTANCE_FROM_RANGE_HAS_NO_APPROVED_MEANING",
+    "CATEGORICAL_RELATIONS_ARE_NOT_NUMERIC",
+    "STALE_LIMITATION_HAS_NO_APPROVED_NUMERIC_TREATMENT"
+  ],
+  "scoringDomainsForFutureReview": [
+    "SPECIES_ENVIRONMENT_MATCH",
+    "OPERATIONAL_SEA_CONDITION",
+    "SEASONAL_CONTEXT",
+    "HISTORICAL_CONTEXT"
+  ],
+  "minimumSafeExperiment": {
+    "candidate": "TEMPERATURE_ONLY_RELATION_DISTANCE_RESEARCH_EXPERIMENT",
+    "speciesIds": [
+      "BM-SPECIES-000417"
+    ],
+    "productionReady": false,
+    "limitations": [
+      "OFFLINE_ONLY",
+      "ONE_SPECIES_ONLY",
+      "NO_SHARED_NORMALIZATION",
+      "NO_COMPOSITE_RESULT",
+      "NO_USER_FACING_DECISION"
+    ]
+  },
+  "recommendedNextPrerequisite": "Acquire comparable Korean wild preferred-temperature evidence for more species and validate a scientific normalization contract before any numeric implementation.",
+  "invariants": {
+    "runtimeNumericOutput": false,
+    "coefficients": false,
+    "probabilityOutput": false,
+    "orderingOutput": false,
+    "adviceOutput": false,
+    "formulaImplementation": false,
+    "databaseWrites": false,
+    "supabaseChanges": false,
+    "externalAiCalls": false
+  }
+}
