@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-13T13:00:00.000Z",
+  "report": "YELLOWTAIL_TEMPERATURE_SOURCE_LINEAGE_REVIEW_V1",
+  "species": {
+    "speciesId": "BM-SPECIES-000501",
+    "koreanName": "방어",
+    "scientificName": "Seriola quinqueradiata"
+  },
+  "reviewQuestion": "Does direct original research show that wild adult Seriola quinqueradiata selected or preferred a 10-20 degC temperature range?",
+  "startingClaim": {
+    "sourceId": "hatanaka-murakawa-1958",
+    "authors": [
+      "Masayoshi Hatanaka",
+      "Goro Murakawa"
+    ],
+    "year": 1958,
+    "title": "Growth and Food Consumption in Young Amber-Fish, Seriola quinqueradiata (T. et S.)",
+    "publisherOrJournal": "Tohoku Journal of Agricultural Research 9(2):69-79",
+    "url": "https://tohoku.repo.nii.ac.jp/record/64656/files/KJ00000713873.pdf",
+    "sourceType": "UNCITED_STATEMENT",
+    "authority": "MEDIUM",
+    "location": "Page 69, opening background paragraph",
+    "exactWording": "It usually migrates in schools, selecting coastal waters having a temperature of 10 deg to 20 degC.",
+    "numericRange": {
+      "min": 10,
+      "max": 20,
+      "unit": "degC",
+      "precisionQualifier": "EXACT_IN_PRINT_NO_APPROXIMATION_QUALIFIER"
+    },
+    "citationAttachedToClaim": false,
+    "nextSentenceCitation": {
+      "referenceNumber": 4,
+      "appliesTo": "Japan fisheries catch statistics for 1952-1956",
+      "doesNotSupportTemperatureClaim": true
+    }
+  },
+  "citationChain": [
+    {
+      "nodeId": "hatanaka-murakawa-1958",
+      "sourceType": "UNCITED_STATEMENT",
+      "authority": "MEDIUM",
+      "originality": "The authors print the 10-20 degC assertion as background context, not as a result of the reported study.",
+      "nextUpstreamSource": null,
+      "traceStatus": "NO_CITATION_ATTACHED"
+    }
+  ],
+  "bibliographyAudit": {
+    "referenceCount": 7,
+    "temperatureClaimReferenceNumber": null,
+    "finding": "The temperature sentence has no citation marker. The only nearby marker, reference 4, grammatically follows and documents the separate fisheries-statistics sentence.",
+    "referencesCannotBeAssignedByProximity": true,
+    "upstreamPrimarySourceIdentified": false
+  },
+  "semanticAnalysis": {
+    "language": "English",
+    "operativeTerm": "selecting",
+    "literalSemanticCandidate": "SELECTED_HABITAT",
+    "validatedSemanticClass": "UNCITED_SELECTED_WORDING",
+    "preferredOrSelected": "WORDING_PRESENT_METHOD_NOT_ESTABLISHED",
+    "notEquivalentTo": [
+      "experimentally estimated preference",
+      "resource-selection function",
+      "telemetry-derived selection bounds",
+      "adult population thermal optimum"
+    ],
+    "japaneseTerminology": {
+      "applicable": false,
+      "finding": "The claim appears in English. No cited Japanese original was identified, so terms such as 選好, 選択, 好適, 分布水温, or 漁獲水温 cannot be assigned."
+    }
+  },
+  "studyScope": {
+    "reportedPurpose": "Growth, stomach contents, feeding rate, and food consumption of young amber-fish.",
+    "fieldMaterial": "62 samples comprising 1,371 specimens, mainly from coastal Miyagi Prefecture in 1956-1957.",
+    "experimentalMaterial": "Young fish weighing 28-1,530 g, held three to six at a time in concrete aquaria.",
+    "experimentalTemperatureRange": {
+      "min": 10.8,
+      "max": 24.1,
+      "unit": "degC",
+      "meaning": "Temperatures at which feeding experiments occurred; not a preference or selection result."
+    },
+    "selectionMethod": null,
+    "selectionAnalysisPerformed": false,
+    "methodsChecked": {
+      "telemetry": false,
+      "tagging": false,
+      "resourceSelectionAnalysis": false,
+      "temperatureGradientChoice": false,
+      "catchDistributionForTemperatureBounds": false,
+      "feedingExperiment": true,
+      "seasonalGrowthAndStomachSampling": true
+    }
+  },
+  "applicability": {
+    "lifeStage": "UNKNOWN_FOR_CLAIM_STUDY_FOCUSES_YOUNG_AND_ZERO_YEAR_FISH",
+    "adultApplicability": "NOT_ESTABLISHED",
+    "wildFieldStatus": "BACKGROUND_STATEMENT_IN_MIXED_FIELD_AND_CAPTIVE_PAPER",
+    "strictWildSelectionEvidence": false,
+    "geography": "Broad introductory statement for coastal Japan from Hokkaido to Formosa; empirical sampling was mainly Miyagi Prefecture.",
+    "season": "NOT_SPECIFIED_FOR_10_20_RANGE",
+    "koreanGeneralization": "NOT_JUSTIFIED"
+  },
+  "rangeOrigin": {
+    "min10Origin": "UNDOCUMENTED",
+    "max20Origin": "UNDOCUMENTED",
+    "observedMinMax": false,
+    "selectedRangeFromAnalysis": false,
+    "seasonalRange": "NOT_DOCUMENTED",
+    "fisheryCatchRange": "NOT_DOCUMENTED",
+    "literatureSynthesis": "POSSIBLE_BUT_UNTRACEABLE",
+    "precision": "Numerically exact in the printed sentence, but evidential precision is unsupported because no data, calculation, citation, or uncertainty accompanies either endpoint."
+  },
+  "modernCorroboration": [
+    {
+      "sourceId": "furukawa-et-al-2020",
+      "title": "Horizontal and vertical movement of yellowtails Seriola quinqueradiata during summer to early winter recorded by archival tags in the northeastern Japan Sea",
+      "url": "https://doi.org/10.3354/meps13226",
+      "sourceType": "PRIMARY_OBSERVATIONAL",
+      "authority": "HIGH",
+      "lifeStage": "adult, 61-90 cm fork length",
+      "context": "WILD_FIELD",
+      "method": "Archival tagging of 26 adults; eight recaptured with ambient temperature records.",
+      "finding": "Seasonal movement, mixed-layer occupancy, dives through the thermocline, and avoidance of cold offshore water were observed.",
+      "limitation": "No explicit adult selected/preferred 10-20 degC min-max range was estimated."
+    },
+    {
+      "sourceId": "ino-et-al-2008",
+      "title": "Migration of the adult yellowtail Seriola quinqueradiata as estimated by archival tagging experiments in the Tsushima Warm Current",
+      "url": "https://doi.org/10.34423/jsfo.72.2_92",
+      "sourceType": "PRIMARY_OBSERVATIONAL",
+      "authority": "HIGH",
+      "lifeStage": "adult, age 4 years and over",
+      "context": "WILD_FIELD",
+      "method": "Archival tags; 138 released and 26 recaptured positions analyzed.",
+      "finding": "Adult migration patterns and likely spawning movements were identified.",
+      "limitation": "The study does not establish a numeric selected-temperature range."
+    },
+    {
+      "sourceId": "park-et-al-2024",
+      "title": "Horizontal and vertical movement patterns of yellowtail Seriola quinqueradiata in the East Sea of Korea",
+      "url": "https://doi.org/10.47853/FAS.2024.e9",
+      "sourceType": "PRIMARY_OBSERVATIONAL",
+      "authority": "MEDIUM",
+      "lifeStage": "adult-sized, 8.7 and 9.5 kg",
+      "context": "FIELD_RELEASE_AFTER_SEA_CAGE_HOLDING",
+      "method": "Two PSAT-tagged fish; one 12-day record and one 82-day record.",
+      "finding": "Mean ambient temperatures were 20.65 +/- 0.36 degC and 16.52 +/- 1.86 degC, with seasonal migration and depth patterns.",
+      "limitation": "Individual observed means are not preference bounds, and pre-release captivity plus n=2 limit generalization."
+    },
+    {
+      "sourceId": "tian-et-al-2012",
+      "title": "Response of yellowtail, Seriola quinqueradiata, to sea water temperature over the last century and potential effects of global warming",
+      "url": "https://doi.org/10.1016/j.jmarsys.2011.09.002",
+      "sourceType": "PRIMARY_OBSERVATIONAL",
+      "authority": "HIGH",
+      "lifeStage": "mixed fishery population",
+      "context": "FISHERY_CATCH",
+      "method": "Long-term catch, distribution, and sea-surface-temperature analysis.",
+      "finding": "Catch and distribution covaried with temperature and climate regimes.",
+      "limitation": "Fishery-dependent distribution association is not direct behavioral preference and does not validate 10-20 degC."
+    }
+  ],
+  "strictEligibility": {
+    "eligible": false,
+    "criteria": {
+      "primaryOrTraceableSource": false,
+      "wildContext": false,
+      "adultOrGeneralApplicability": false,
+      "explicitPreferenceOrSelectionSemantics": false,
+      "numericMinMax": true,
+      "unitConfirmed": true,
+      "methodSupportsSelectionClaim": false,
+      "semanticAmbiguityResolved": false,
+      "equalAuthorityConflictResolved": true
+    },
+    "blockers": [
+      "No citation or upstream empirical source is attached to the 1958 sentence.",
+      "The paper did not perform temperature-choice or habitat-selection analysis.",
+      "The claim's life stage is unspecified while the study focuses on young and zero-year fish.",
+      "The wild-field basis and season for the endpoints are undocumented.",
+      "The origins of both 10 degC and 20 degC are undocumented.",
+      "Modern studies corroborate temperature association or cold avoidance, not the claimed selected range."
+    ]
+  },
+  "unresolvedIssues": [
+    "Whether the authors relied on an uncited Japanese fisheries report, common fisheries knowledge, or personal synthesis.",
+    "Whether the range applies to adults, juveniles, mixed schools, a migration phase, or catch availability.",
+    "Whether 'selecting' was intended behaviorally or as informal distribution language."
+  ],
+  "finalLineageDecision": "LINEAGE_UNRESOLVED",
+  "decisionRationale": "The printed wording and numbers are exact, but the citation trail stops at an uncited introductory assertion. No method in the paper derives habitat selection or the 10 and 20 degC endpoints, and modern field studies do not independently validate that selected range.",
+  "promotion": {
+    "performed": false,
+    "deferred": true,
+    "canonicalTemperatureChanged": false
+  },
+  "immutableInputs": {
+    "v2Sha256": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
+    "v3Sha256": "880066b3eefd2100ea870a674504492b8d70da9700a660350fb296ea5bc7a376"
+  },
+  "existingDepthConflict": {
+    "status": "CONFLICT_REVIEW_REQUIRED",
+    "mbrisMaxM": 200,
+    "fishBaseMaxM": 100,
+    "canonicalDepth": null,
+    "changed": false
+  },
+  "boundaries": {
+    "v2Modified": false,
+    "v3Modified": false,
+    "runtimeImport": false,
+    "databaseWrite": false,
+    "supabaseChange": false,
+    "canonicalPromotion": false
+  },
+  "scoringBoundary": {
+    "normalization": "NORMALIZATION_NOT_JUSTIFIED",
+    "score": false,
+    "weight": false,
+    "probability": false,
+    "ranking": false,
+    "recommendation": false
+  }
+}
