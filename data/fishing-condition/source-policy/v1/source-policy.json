@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "1.0.0",
+  "qualityClass": "DERIVED_SOURCE_POLICY",
+  "sourceClasses": [
+    { "qualityClass": "OBSERVED", "allowedUse": "current_context_or_explicit_comparison", "limitations": ["SOURCE_SCOPE_AND_FRESHNESS_MUST_BE_DISCLOSED"] },
+    { "qualityClass": "FORECAST", "allowedUse": "future_context_only", "limitations": ["MUST_NOT_REPLACE_OBSERVATION"] },
+    { "qualityClass": "MODEL", "allowedUse": "model_context_only", "limitations": ["MUST_NOT_BE_PRESENTED_AS_OBSERVED"] },
+    { "qualityClass": "OBSERVED_PERIODIC_ENVIRONMENT", "allowedUse": "periodic_context_or_gated_comparison", "limitations": ["SAMPLING_TIME_AND_FRESHNESS_MUST_BE_DISCLOSED"] },
+    { "qualityClass": "HISTORICAL", "allowedUse": "baseline_or_research_only", "limitations": ["MUST_NOT_REPLACE_CURRENT_ENVIRONMENT"] },
+    { "qualityClass": "HISTORICAL_OCEANOGRAPHIC_PROFILE", "allowedUse": "baseline_or_research_only", "limitations": ["MUST_NOT_REPLACE_CURRENT_ENVIRONMENT"] },
+    { "qualityClass": "DERIVED_HISTORICAL_BASELINE", "allowedUse": "baseline_only", "limitations": ["ANOMALY_REQUIRES_EXPLICIT_MAPPING_GATES"] },
+    { "qualityClass": "PREDICTION", "allowedUse": "prediction_context_only", "limitations": ["MUST_NOT_BE_PRESENTED_AS_OBSERVED_DEPTH"] }
+  ],
+  "variables": [
+    {
+      "variable": "temperature",
+      "sources": [
+        { "sourceId": "nifs-risa", "sourceQualityClass": "OBSERVED", "action": "COMPARISON_ALLOWED", "reason": "SOURCE_AND_SPECIES_CONTRACT_SUPPORT_TEMPERATURE_COMPARISON", "requiredGates": ["UNIT_CONFIRMED", "SPECIES_PROFILE_SUPPORTED", "DEPTH_COMPATIBLE", "STATION_MAPPED", "TIME_SEMANTIC_KNOWN"], "limitations": ["FRESHNESS_MUST_BE_DISCLOSED"] },
+        { "sourceId": "nifs-femo-sea", "sourceQualityClass": "OBSERVED_PERIODIC_ENVIRONMENT", "action": "COMPARISON_ALLOWED_WITH_LIMITS", "reason": "PERIODIC_TEMPERATURE_SUPPORTS_GATED_COMPARISON", "requiredGates": ["UNIT_CONFIRMED", "SPECIES_PROFILE_SUPPORTED", "DEPTH_COMPATIBLE", "STATION_MAPPED", "TIME_SEMANTIC_KNOWN"], "limitations": ["PERIODIC_SAMPLE", "FRESHNESS_MUST_BE_DISCLOSED"] },
+        { "sourceId": "kma-marine-weather-observations", "sourceQualityClass": "OBSERVED", "action": "CONTEXT_ONLY", "reason": "WEATHER_STATION_SEA_TEMPERATURE_IS_NOT_A_SPECIES_COMPARATOR_INPUT", "requiredGates": [], "limitations": ["NO_SPECIES_COMPARISON"] },
+        { "sourceId": "kma-marine-weather-forecast", "sourceQualityClass": "FORECAST", "action": "CONTEXT_ONLY", "reason": "FORECAST_TEMPERATURE_IS_FUTURE_CONTEXT", "requiredGates": [], "limitations": ["NO_OBSERVED_VALUE_SUBSTITUTION"] },
+        { "sourceId": "khoa-ocean-current-model", "sourceQualityClass": "MODEL", "action": "CONTEXT_ONLY", "reason": "MODEL_TEMPERATURE_IS_CONTEXT_ONLY", "requiredGates": [], "limitations": ["MODEL_NOT_OBSERVATION"] },
+        { "sourceId": "nifs-soo", "sourceQualityClass": "HISTORICAL_OCEANOGRAPHIC_PROFILE", "action": "BASELINE_ONLY", "reason": "HISTORICAL_PROFILE_IS_NOT_CURRENT_ENVIRONMENT", "requiredGates": [], "limitations": ["RESEARCH_CONTEXT_ONLY"] },
+        { "sourceId": "nifs-soo-climatology", "sourceQualityClass": "DERIVED_HISTORICAL_BASELINE", "action": "BASELINE_ONLY", "reason": "CLIMATOLOGY_IS_A_BASELINE_NOT_A_CURRENT_VALUE", "requiredGates": [], "limitations": ["ANOMALY_MAPPING_BLOCKED"] }
+      ]
+    },
+    {
+      "variable": "salinity",
+      "sources": [
+        { "sourceId": "nifs-femo-sea", "sourceQualityClass": "OBSERVED_PERIODIC_ENVIRONMENT", "action": "BLOCKED", "reason": "SOURCE_UNIT_IS_NOT_DOCUMENTED", "requiredGates": ["UNIT_CONFIRMED"], "limitations": ["UNIT_UNVERIFIED", "RUNTIME_COMPARISON_PROHIBITED"] },
+        { "sourceId": "nifs-soo", "sourceQualityClass": "HISTORICAL_OCEANOGRAPHIC_PROFILE", "action": "BASELINE_ONLY", "reason": "HISTORICAL_SALINITY_IS_BASELINE_OR_RESEARCH_CONTEXT", "requiredGates": [], "limitations": ["MUST_NOT_REPLACE_CURRENT_SALINITY"] }
+      ]
+    },
+    {
+      "variable": "dissolvedOxygen",
+      "sources": [
+        { "sourceId": "nifs-femo-sea", "sourceQualityClass": "OBSERVED_PERIODIC_ENVIRONMENT", "action": "COMPARISON_ALLOWED_WITH_LIMITS", "reason": "DOCUMENTED_SOURCE_UNIT_REQUIRES_SPECIES_PROFILE_SUPPORT", "requiredGates": ["UNIT_CONFIRMED", "SPECIES_PROFILE_SUPPORTED", "DEPTH_COMPATIBLE", "STATION_MAPPED"], "limitations": ["PERIODIC_SAMPLE", "FRESHNESS_MUST_BE_DISCLOSED"] },
+        { "sourceId": "nifs-soo", "sourceQualityClass": "HISTORICAL_OCEANOGRAPHIC_PROFILE", "action": "BASELINE_ONLY", "reason": "HISTORICAL_DISSOLVED_OXYGEN_IS_RESEARCH_CONTEXT", "requiredGates": [], "limitations": ["MUST_NOT_REPLACE_CURRENT_DISSOLVED_OXYGEN"] }
+      ]
+    },
+    {
+      "variable": "chlorophyllA",
+      "sources": [
+        { "sourceId": "nifs-femo-sea", "sourceQualityClass": "OBSERVED_PERIODIC_ENVIRONMENT", "action": "CONTEXT_ONLY", "reason": "SPECIES_PROFILE_HAS_NO_CHLOROPHYLL_PREFERENCE_CONTRACT", "requiredGates": [], "limitations": ["NO_SPECIES_INTERPRETATION"] },
+        { "sourceId": "nifs-soo", "sourceQualityClass": "HISTORICAL_OCEANOGRAPHIC_PROFILE", "action": "BASELINE_ONLY", "reason": "HISTORICAL_CHLOROPHYLL_IS_RESEARCH_CONTEXT", "requiredGates": [], "limitations": ["NO_CURRENT_VALUE_SUBSTITUTION"] }
+      ]
+    },
+    {
+      "variable": "waveHeight",
+      "sources": [
+        { "sourceId": "kma-marine-weather-observations", "sourceQualityClass": "OBSERVED", "action": "CONTEXT_ONLY", "reason": "SPECIES_PROFILE_HAS_NO_WAVE_PREFERENCE_CONTRACT", "requiredGates": [], "limitations": ["NO_SPECIES_COMPARISON"] },
+        { "sourceId": "kma-marine-weather-forecast", "sourceQualityClass": "FORECAST", "action": "CONTEXT_ONLY", "reason": "FORECAST_WAVE_IS_FUTURE_CONTEXT", "requiredGates": [], "limitations": ["NO_OBSERVATION_SUBSTITUTION"] }
+      ]
+    },
+    {
+      "variable": "windSpeed",
+      "sources": [
+        { "sourceId": "kma-marine-weather-observations", "sourceQualityClass": "OBSERVED", "action": "CONTEXT_ONLY", "reason": "WIND_IS_ENVIRONMENT_CONTEXT_NOT_SPECIES_COMPARATOR_INPUT", "requiredGates": [], "limitations": ["NO_SPECIES_COMPARISON"] },
+        { "sourceId": "kma-marine-weather-forecast", "sourceQualityClass": "FORECAST", "action": "CONTEXT_ONLY", "reason": "FORECAST_WIND_IS_FUTURE_CONTEXT", "requiredGates": [], "limitations": ["NO_OBSERVATION_SUBSTITUTION"] }
+      ]
+    },
+    {
+      "variable": "windDirection",
+      "sources": [
+        { "sourceId": "kma-marine-weather-observations", "sourceQualityClass": "OBSERVED", "action": "CONTEXT_ONLY", "reason": "WIND_DIRECTION_IS_CONTEXT_ONLY", "requiredGates": [], "limitations": ["NO_SPECIES_COMPARISON"] },
+        { "sourceId": "kma-marine-weather-forecast", "sourceQualityClass": "FORECAST", "action": "CONTEXT_ONLY", "reason": "FORECAST_WIND_DIRECTION_IS_FUTURE_CONTEXT", "requiredGates": [], "limitations": ["NO_OBSERVATION_SUBSTITUTION"] }
+      ]
+    },
+    {
+      "variable": "pressure",
+      "sources": [
+        { "sourceId": "kma-marine-weather-observations", "sourceQualityClass": "OBSERVED", "action": "CONTEXT_ONLY", "reason": "PRESSURE_HAS_NO_SPECIES_PROFILE_COMPARISON_CONTRACT", "requiredGates": [], "limitations": ["NO_SPECIES_COMPARISON"] }
+      ]
+    },
+    {
+      "variable": "currentSpeed",
+      "sources": [
+        { "sourceId": "khoa-ocean-current-model", "sourceQualityClass": "MODEL", "action": "CONTEXT_ONLY", "reason": "MODEL_CURRENT_SPEED_IS_DISPLAY_CONTEXT_ONLY", "requiredGates": [], "limitations": ["ROUTING_ETA_AND_DRIFT_USE_PROHIBITED"] }
+      ]
+    },
+    {
+      "variable": "currentDirection",
+      "sources": [
+        { "sourceId": "khoa-ocean-current-model", "sourceQualityClass": "MODEL", "action": "BLOCKED", "reason": "TO_FROM_DIRECTION_CONVENTION_IS_UNCONFIRMED", "requiredGates": ["DIRECTION_CONVENTION_CONFIRMED"], "limitations": ["RAW_DIRECTION_CONTEXT_ONLY", "DIRECTIONAL_USE_PROHIBITED"] }
+      ]
+    },
+    {
+      "variable": "tide",
+      "sources": [
+        { "sourceId": "khoa-tide-prediction", "sourceQualityClass": "PREDICTION", "action": "CONTEXT_ONLY", "reason": "TIDE_PREDICTION_IS_CONTEXT_NOT_ACTUAL_DEPTH", "requiredGates": [], "limitations": ["ACTUAL_DEPTH_CALCULATION_PROHIBITED", "BATHYMETRY_AUTO_COMBINATION_PROHIBITED", "DATUM_NOT_DOCUMENTED"] }
+      ]
+    },
+    {
+      "variable": "historicalTemperatureBaseline",
+      "sources": [
+        { "sourceId": "nifs-soo", "sourceQualityClass": "HISTORICAL_OCEANOGRAPHIC_PROFILE", "action": "BASELINE_ONLY", "reason": "RAW_HISTORICAL_PROFILE_SUPPORTS_RESEARCH_BASELINE", "requiredGates": [], "limitations": ["NOT_CURRENT_ENVIRONMENT"] },
+        { "sourceId": "nifs-soo-climatology", "sourceQualityClass": "DERIVED_HISTORICAL_BASELINE", "action": "BASELINE_ONLY", "reason": "DERIVED_MONTH_DEPTH_CLIMATOLOGY_IS_BASELINE_ONLY", "requiredGates": ["ANOMALY_MAPPING_AVAILABLE", "DEPTH_COMPATIBLE", "UNIT_CONFIRMED", "STATION_MAPPED"], "limitations": ["ANOMALY_MAPPING_BLOCKED", "NOT_CURRENT_ENVIRONMENT"] }
+      ]
+    }
+  ]
+}

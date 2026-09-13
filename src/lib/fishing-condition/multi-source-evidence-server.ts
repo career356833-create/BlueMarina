@@ -4,11 +4,18 @@ import { runFishingConditionComparisonForEnvironment } from "./comparator-server
 import type { ComparatorDepthContext, ComparatorEnvironment } from "./comparator";
 import { buildConditionEvidenceBundle } from "./evidence-bundle";
 import { explainFishingCondition } from "./explanation";
-import { findSpeciesEnvironmentProfile } from "./species-environment";
+import { findSpeciesEnvironmentProfile, type SpeciesEnvironmentProfile } from "./species-environment";
 import { runSourceAlignment } from "./source-alignment-server";
 import type { AlignedSourceResult } from "./source-alignment";
 import { buildMultiSourceBranch, buildMultiSourceEvidenceResult, MULTI_SOURCE_EVIDENCE_PROFILE_VERSION } from "./multi-source-evidence";
 import type { MultiSourceEvidenceRequest } from "./multi-source-evidence-request";
+import {
+  evaluateSourcePolicy,
+  getSourcePolicyVariablesForSource,
+  sourcePolicyAllowsComparison,
+  type SourcePolicyGate,
+  type SourcePolicyVariable,
+} from "./source-policy";
 
 export class MultiSourceEvidenceError extends Error {
   constructor(public readonly code: "PROFILE_NOT_FOUND") { super(code); }
@@ -25,6 +32,45 @@ function unit(source: AlignedSourceResult, key: string) {
 
 function freshness(source: AlignedSourceResult): ComparatorEnvironment["freshness"] {
   return source.freshness === "fresh" || source.freshness === "stale" ? source.freshness : "unavailable";
+}
+
+function profileSupports(profile: SpeciesEnvironmentProfile, variable: SourcePolicyVariable) {
+  if (variable === "temperature") {
+    return (profile.temperature.canonicalPreferredMinC !== null && profile.temperature.canonicalPreferredMaxC !== null)
+      || profile.temperature.observed.some((range) => range.minC !== null && range.maxC !== null);
+  }
+  if (variable === "salinity") return profile.salinity.ranges.length > 0;
+  if (variable === "dissolvedOxygen") return profile.dissolvedOxygen.observations.length > 0;
+  return false;
+}
+
+const variableValuePatterns: Record<SourcePolicyVariable, RegExp> = {
+  temperature: /(?:waterTemperature|seaTemperature|\.temperature)(?:\.|$)/,
+  salinity: /\.salinity(?:\.|$)/,
+  dissolvedOxygen: /\.dissolvedOxygen(?:\.|$)/,
+  chlorophyllA: /\.chlorophyllA(?:\.|$)/,
+  waveHeight: /(?:significantWaveHeight|maximumWaveHeight)(?:\.|$)/,
+  windSpeed: /(?:windSpeed|gustSpeed)(?:\.|$)/,
+  windDirection: /\.windDirection(?:\.|$)/,
+  pressure: /\.seaLevelPressure(?:\.|$)/,
+  currentSpeed: /\.currentSpeed(?:\.|$)/,
+  currentDirection: /\.currentDirectionRaw(?:\.|$)/,
+  tide: /\.tide(?:\.|$)/,
+  historicalTemperatureBaseline: /\.historicalTemperatureBaseline(?:\.|$)/,
+};
+
+function evaluateBranchPolicy(source: AlignedSourceResult, profile: SpeciesEnvironmentProfile) {
+  return getSourcePolicyVariablesForSource(source.sourceId).map((variable) => {
+    const passedGates: SourcePolicyGate[] = [];
+    const values = Object.entries(source.values).filter(([key]) => variableValuePatterns[variable].test(key));
+    if (values.some(([, item]) => item.unitStatus === "CONFIRMED")) passedGates.push("UNIT_CONFIRMED");
+    if (profileSupports(profile, variable)) passedGates.push("SPECIES_PROFILE_SUPPORTED");
+    if (source.depthMatchStatus === "EXACT" || source.depthMatchStatus === "CATEGORY_MATCH") passedGates.push("DEPTH_COMPATIBLE");
+    if (source.status !== "UNAVAILABLE" && source.sourceBindingId) passedGates.push("STATION_MAPPED");
+    if (source.timeSemantic !== "UNKNOWN") passedGates.push("TIME_SEMANTIC_KNOWN");
+    if (source.freshness === "fresh") passedGates.push("FRESHNESS_ACCEPTABLE");
+    return evaluateSourcePolicy({ variable, sourceId: source.sourceId, context: { passedGates, limitations: source.limitations } });
+  });
 }
 
 function comparatorEnvironment(source: AlignedSourceResult, targetDepth: unknown): ComparatorEnvironment | null {
@@ -63,19 +109,21 @@ export async function runMultiSourceEvidence(request: MultiSourceEvidenceRequest
   if (!profile) throw new MultiSourceEvidenceError("PROFILE_NOT_FOUND");
 
   const branches = alignment.sources.map((source) => {
+    const sourcePolicy = evaluateBranchPolicy(source, profile);
     const environment = comparatorEnvironment(source, alignment.target.depthContext);
-    if (!environment) {
+    const temperaturePolicy = sourcePolicy.find((evaluation) => evaluation.variable === "temperature");
+    if (!environment || !temperaturePolicy || !sourcePolicyAllowsComparison(temperaturePolicy)) {
       const limitation = source.status !== "UNAVAILABLE" && (source.sourceId === "nifs-risa" || source.sourceId === "nifs-femo-sea")
-        ? ["COMPARATOR_DEPTH_CONTEXT_UNSUPPORTED"] : [];
-      return buildMultiSourceBranch(source, null, limitation);
+        ? [environment ? "SOURCE_POLICY_COMPARISON_BLOCKED" : "COMPARATOR_DEPTH_CONTEXT_UNSUPPORTED"] : [];
+      return buildMultiSourceBranch(source, null, limitation, sourcePolicy);
     }
     try {
       const comparison = runFishingConditionComparisonForEnvironment(request.speciesId, environment);
       const explanation = explainFishingCondition(comparison);
       const evidenceBundle = buildConditionEvidenceBundle(comparison, explanation, request.contexts);
-      return buildMultiSourceBranch(source, { comparison, explanation, evidenceBundle });
+      return buildMultiSourceBranch(source, { comparison, explanation, evidenceBundle }, [], sourcePolicy);
     } catch {
-      return buildMultiSourceBranch(source, null, ["COMPARISON_BRANCH_ERROR"]);
+      return buildMultiSourceBranch(source, null, ["COMPARISON_BRANCH_ERROR"], sourcePolicy);
     }
   });
 

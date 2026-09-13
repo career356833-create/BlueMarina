@@ -1,0 +1,51 @@
+{
+  "version": "v1",
+  "status": "SOURCE_POLICY_V1_PASS",
+  "qualityClass": "DERIVED_SOURCE_POLICY",
+  "artifact": "data/fishing-condition/source-policy/v1/source-policy.json",
+  "variables": 12,
+  "sources": 8,
+  "sourceClasses": 8,
+  "policyEntries": 25,
+  "actionCounts": {
+    "comparisonAllowed": 1,
+    "comparisonAllowedWithLimits": 2,
+    "contextOnly": 13,
+    "baselineOnly": 7,
+    "blocked": 2
+  },
+  "representativeEvaluations": [
+    { "variable": "temperature", "sourceId": "nifs-risa", "action": "COMPARISON_ALLOWED", "failedGates": [] },
+    { "variable": "temperature", "sourceId": "nifs-femo-sea", "action": "COMPARISON_ALLOWED_WITH_LIMITS", "failedGates": [] },
+    { "variable": "temperature", "sourceId": "kma-marine-weather-observations", "action": "CONTEXT_ONLY", "failedGates": [] },
+    { "variable": "salinity", "sourceId": "nifs-femo-sea", "action": "BLOCKED", "failedGates": ["UNIT_CONFIRMED"] },
+    { "variable": "dissolvedOxygen", "sourceId": "nifs-femo-sea", "action": "COMPARISON_ALLOWED_WITH_LIMITS", "failedGates": [] },
+    { "variable": "currentDirection", "sourceId": "khoa-ocean-current-model", "action": "BLOCKED", "failedGates": ["DIRECTION_CONVENTION_CONFIRMED"] },
+    { "variable": "historicalTemperatureBaseline", "sourceId": "nifs-soo-climatology", "action": "BASELINE_ONLY", "failedGates": ["ANOMALY_MAPPING_AVAILABLE", "DEPTH_COMPATIBLE", "UNIT_CONFIRMED", "STATION_MAPPED"] }
+  ],
+  "gateFailures": {
+    "salinityUnit": "UNIT_UNVERIFIED",
+    "romsDirection": "DIRECTION_CONVENTION_CONFIRMED",
+    "climatologyAnomaly": "ANOMALY_MAPPING_BLOCKED"
+  },
+  "orchestratorIntegration": {
+    "policyMetadataAdded": true,
+    "branchRemoval": false,
+    "automaticSourceSelection": false,
+    "contextSourceComparison": false
+  },
+  "invariants": {
+    "automaticFallback": false,
+    "sourceOverwrite": false,
+    "averaging": false,
+    "interpolation": false,
+    "weighting": false,
+    "sourceRanking": false,
+    "representativeValue": false,
+    "compositeScore": false,
+    "probability": false,
+    "recommendation": false
+  },
+  "databaseWrites": 0,
+  "externalAiCalls": 0
+}
