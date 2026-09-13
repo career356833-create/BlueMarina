@@ -1,0 +1,1215 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "blue-marina-fishery-occurrence-batch1-v1",
+  "generatedAt": "2026-09-14T00:00:00.000Z",
+  "researchOnly": true,
+  "productionPromotion": false,
+  "definition": "Source-backed monthly capture-fishery production records; not abundance, catchability, catch probability, condition quality, or advice.",
+  "sourceSnapshots": [
+    {
+      "year": 2023,
+      "fileNumber": "8044",
+      "fileName": "101_DT_1EW0004_M_2023.csv",
+      "sha256": "736fa286853c66491f4334fda05abe8362f16d9a3e62b2d75e6a6deda1ec89af",
+      "provider": "KOSIS",
+      "tableId": "DT_1EW0004",
+      "title": "어업별 품종별 통계",
+      "url": "https://kosis.kr/statisticsList/mass/mass_list.jsp?list_id=&org_id=101&process=statHtml&tbl_id=DT_1EW0004&vw_cd=",
+      "retrievedAt": "2026-09-14T00:00:00.000Z"
+    },
+    {
+      "year": 2024,
+      "fileNumber": "8439",
+      "fileName": "101_DT_1EW0004_M_2024.csv",
+      "sha256": "7bf1fe697d3d087a467bb793a039c113805167817a2215a69631350ad78acee3",
+      "provider": "KOSIS",
+      "tableId": "DT_1EW0004",
+      "title": "어업별 품종별 통계",
+      "url": "https://kosis.kr/statisticsList/mass/mass_list.jsp?list_id=&org_id=101&process=statHtml&tbl_id=DT_1EW0004&vw_cd=",
+      "retrievedAt": "2026-09-14T00:00:00.000Z"
+    },
+    {
+      "year": 2025,
+      "fileNumber": "8722",
+      "fileName": "101_DT_1EW0004_M_2025.csv",
+      "sha256": "69dd40974e66eead37dcce5ecc37ed66c61c7adbfefa640cc5259324ddc58ff9",
+      "provider": "KOSIS",
+      "tableId": "DT_1EW0004",
+      "title": "어업별 품종별 통계",
+      "url": "https://kosis.kr/statisticsList/mass/mass_list.jsp?list_id=&org_id=101&process=statHtml&tbl_id=DT_1EW0004&vw_cd=",
+      "retrievedAt": "2026-09-14T00:00:00.000Z"
+    }
+  ],
+  "species": [
+    {
+      "canonicalSpeciesId": "BM-SPECIES-000417",
+      "canonicalKoreanName": "고등어",
+      "scientificName": "Scomber japonicus",
+      "sourceSpeciesName": "고등어",
+      "sourceSpeciesCode": "110015",
+      "matchStatus": "EXACT",
+      "nifsIdentity": {
+        "sourceId": "fish_1571803943319",
+        "scientificName": "Scomber japonicus",
+        "matchStatus": "EXACT"
+      },
+      "relatedKosisLabelsExcluded": [
+        "망치고등어 (110016)",
+        "고등어류 (310040)",
+        "해면양식업 고등어 (210015)"
+      ],
+      "evidenceClass": "STRICT_OCCURRENCE_CANDIDATE",
+      "promotionDecision": "STRICT_OCCURRENCE_EVIDENCE_FOUND",
+      "limitations": [
+        "LANDING_OR_PRODUCTION_IS_NOT_ABUNDANCE",
+        "EFFORT_UNKNOWN",
+        "FLEET_COMPOSITION_CHANGED",
+        "GEAR_SPECIFIC",
+        "REGULATION_AFFECTED",
+        "QUOTA_AFFECTED"
+      ],
+      "regulationReview": "Annual closure dates, minimum-size rules, TAC, and large-purse-seine exemptions can shape monthly production. The 2025 closure was 12 April through 12 May, with a separate April rule for small purse seine and Jeju set nets.",
+      "source": {
+        "sourceId": "kosis-dt-1ew0004-110015-2023-2025",
+        "provider": "KOSIS",
+        "sourceType": "MONTHLY_CATCH_DATA",
+        "title": "어업별 품종별 통계",
+        "url": "https://kosis.kr/statisticsList/mass/mass_list.jsp?list_id=&org_id=101&process=statHtml&tbl_id=DT_1EW0004&vw_cd=",
+        "retrievedAt": "2026-09-14T00:00:00.000Z",
+        "speciesIdentity": {
+          "canonicalSpeciesId": "BM-SPECIES-000417",
+          "canonicalKoreanName": "고등어",
+          "scientificName": "Scomber japonicus",
+          "sourceSpeciesName": "고등어",
+          "sourceSpeciesCode": "110015",
+          "matchStatus": "EXACT"
+        },
+        "temporalResolution": "MONTH",
+        "geographicResolution": "NATIONAL_TOTAL_WITH_PROVINCE_DIMENSION_AVAILABLE",
+        "fisheryResolution": "CAPTURE_FISHERY_AGGREGATE",
+        "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+        "unit": "METRIC_TON",
+        "startDate": "2023-01",
+        "endDate": "2025-12",
+        "records": [
+          {
+            "period": "2023-01",
+            "value": 23124.8641,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-02",
+            "value": 2236.0538,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-03",
+            "value": 10321.3542,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-04",
+            "value": 7785.1847,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-05",
+            "value": 1836.3609,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-06",
+            "value": 4294.2072,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-07",
+            "value": 12012.1745,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-08",
+            "value": 8229.4237,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-09",
+            "value": 13330.8997,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-10",
+            "value": 12649.223,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-11",
+            "value": 15703.4225,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-12",
+            "value": 8593.3155,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-01",
+            "value": 8486.3177,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-02",
+            "value": 9060.6527,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-03",
+            "value": 3604.6339,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-04",
+            "value": 8592.6004,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-05",
+            "value": 1523.4079,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-06",
+            "value": 6330.2715,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-07",
+            "value": 11848.9183,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-08",
+            "value": 12228.1391,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-09",
+            "value": 20697.7446,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-10",
+            "value": 18174.9317,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-11",
+            "value": 18962.7828,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-12",
+            "value": 5419.2512,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-01",
+            "value": 20381.4754,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-02",
+            "value": 6180.6485,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-03",
+            "value": 9509.7811,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-04",
+            "value": 7018.1377,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-05",
+            "value": 1647.6949,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-06",
+            "value": 9649.4581,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-07",
+            "value": 24395.7423,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-08",
+            "value": 22027.4382,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-09",
+            "value": 20536.1019,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-10",
+            "value": 9770.9942,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-11",
+            "value": 31855.5189,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-12",
+            "value": 39581.1018,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          }
+        ],
+        "missingPeriods": [],
+        "limitations": [
+          "LANDING_OR_PRODUCTION_IS_NOT_ABUNDANCE",
+          "EFFORT_UNKNOWN",
+          "FLEET_COMPOSITION_CHANGED",
+          "GEAR_SPECIFIC",
+          "REGULATION_AFFECTED",
+          "QUOTA_AFFECTED"
+        ]
+      }
+    },
+    {
+      "canonicalSpeciesId": "BM-SPECIES-000444",
+      "canonicalKoreanName": "갈치",
+      "scientificName": "Trichiurus japonicus",
+      "sourceSpeciesName": "갈치",
+      "sourceSpeciesCode": "110009",
+      "matchStatus": "COMMERCIAL_CATEGORY",
+      "nifsIdentity": {
+        "sourceId": "fish_1571806850754",
+        "scientificName": "Trichiurus lepturus",
+        "matchStatus": "AMBIGUOUS"
+      },
+      "relatedKosisLabelsExcluded": [],
+      "evidenceClass": "LIMITED_OCCURRENCE_EVIDENCE",
+      "promotionDecision": "LIMITED_OCCURRENCE_EVIDENCE_FOUND",
+      "limitations": [
+        "COMMERCIAL_CATEGORY",
+        "TAXONOMIC_IDENTITY_UNRESOLVED",
+        "LANDING_OR_PRODUCTION_IS_NOT_ABUNDANCE",
+        "EFFORT_UNKNOWN",
+        "FLEET_COMPOSITION_CHANGED",
+        "GEAR_SPECIFIC",
+        "REGULATION_AFFECTED",
+        "QUOTA_AFFECTED"
+      ],
+      "regulationReview": "The July closure, minimum-size rule, fishery exemptions, and TAC participation can shape monthly production. The statistical product label does not resolve Trichiurus japonicus versus the NIFS Trichiurus lepturus record.",
+      "source": {
+        "sourceId": "kosis-dt-1ew0004-110009-2023-2025",
+        "provider": "KOSIS",
+        "sourceType": "MONTHLY_CATCH_DATA",
+        "title": "어업별 품종별 통계",
+        "url": "https://kosis.kr/statisticsList/mass/mass_list.jsp?list_id=&org_id=101&process=statHtml&tbl_id=DT_1EW0004&vw_cd=",
+        "retrievedAt": "2026-09-14T00:00:00.000Z",
+        "speciesIdentity": {
+          "canonicalSpeciesId": "BM-SPECIES-000444",
+          "canonicalKoreanName": "갈치",
+          "scientificName": "Trichiurus japonicus",
+          "sourceSpeciesName": "갈치",
+          "sourceSpeciesCode": "110009",
+          "matchStatus": "COMMERCIAL_CATEGORY"
+        },
+        "temporalResolution": "MONTH",
+        "geographicResolution": "NATIONAL_TOTAL_WITH_PROVINCE_DIMENSION_AVAILABLE",
+        "fisheryResolution": "CAPTURE_FISHERY_AGGREGATE",
+        "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+        "unit": "METRIC_TON",
+        "startDate": "2023-01",
+        "endDate": "2025-12",
+        "records": [
+          {
+            "period": "2023-01",
+            "value": 5147.3815,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-02",
+            "value": 4522.3505,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-03",
+            "value": 3754.0211,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-04",
+            "value": 2234.6433,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-05",
+            "value": 1821.9479,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-06",
+            "value": 4779.7231,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-07",
+            "value": 4243.4074,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-08",
+            "value": 6801.1202,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-09",
+            "value": 8025.6697,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-10",
+            "value": 5923.3764,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-11",
+            "value": 7528.5575,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-12",
+            "value": 5889.1823,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-01",
+            "value": 4100.4492,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-02",
+            "value": 2064.889,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-03",
+            "value": 1041.895,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-04",
+            "value": 2045.703,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-05",
+            "value": 915.0965,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-06",
+            "value": 2288.5888,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-07",
+            "value": 3272.7775,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-08",
+            "value": 5128.9837,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-09",
+            "value": 4488.0455,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-10",
+            "value": 6159.9414,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-11",
+            "value": 6621.5755,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-12",
+            "value": 6378.5284,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-01",
+            "value": 4671.8282,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-02",
+            "value": 987.163,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-03",
+            "value": 1140.0551,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-04",
+            "value": 1420.5058,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-05",
+            "value": 1161.6862,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-06",
+            "value": 3482.5977,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-07",
+            "value": 3452.4764,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-08",
+            "value": 5328.4393,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-09",
+            "value": 6689.8838,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-10",
+            "value": 5322.3426,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-11",
+            "value": 5958.1239,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-12",
+            "value": 4864.5595,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          }
+        ],
+        "missingPeriods": [],
+        "limitations": [
+          "COMMERCIAL_CATEGORY",
+          "TAXONOMIC_IDENTITY_UNRESOLVED",
+          "LANDING_OR_PRODUCTION_IS_NOT_ABUNDANCE",
+          "EFFORT_UNKNOWN",
+          "FLEET_COMPOSITION_CHANGED",
+          "GEAR_SPECIFIC",
+          "REGULATION_AFFECTED",
+          "QUOTA_AFFECTED"
+        ]
+      }
+    },
+    {
+      "canonicalSpeciesId": "BM-SPECIES-003107",
+      "canonicalKoreanName": "주꾸미",
+      "scientificName": "Amphioctopus fangsiao",
+      "sourceSpeciesName": "주꾸미",
+      "sourceSpeciesCode": "140415",
+      "matchStatus": "EXACT",
+      "nifsIdentity": {
+        "sourceId": "fish_1576639605227",
+        "scientificName": "Amphioctopus fangsiao",
+        "matchStatus": "EXACT"
+      },
+      "relatedKosisLabelsExcluded": [],
+      "evidenceClass": "STRICT_OCCURRENCE_CANDIDATE",
+      "promotionDecision": "STRICT_OCCURRENCE_EVIDENCE_FOUND",
+      "limitations": [
+        "LANDING_OR_PRODUCTION_IS_NOT_ABUNDANCE",
+        "EFFORT_UNKNOWN",
+        "GEAR_SPECIFIC",
+        "LANDING_PORT_BIAS",
+        "REGULATION_AFFECTED",
+        "CLOSED_SEASON_AFFECTED",
+        "RECREATIONAL_CATCH_NOT_INCLUDED"
+      ],
+      "regulationReview": "The nationwide 11 May through 31 August closed season directly depresses legal landing records; a missing or low month cannot be interpreted as biological absence.",
+      "source": {
+        "sourceId": "kosis-dt-1ew0004-140415-2023-2025",
+        "provider": "KOSIS",
+        "sourceType": "MONTHLY_CATCH_DATA",
+        "title": "어업별 품종별 통계",
+        "url": "https://kosis.kr/statisticsList/mass/mass_list.jsp?list_id=&org_id=101&process=statHtml&tbl_id=DT_1EW0004&vw_cd=",
+        "retrievedAt": "2026-09-14T00:00:00.000Z",
+        "speciesIdentity": {
+          "canonicalSpeciesId": "BM-SPECIES-003107",
+          "canonicalKoreanName": "주꾸미",
+          "scientificName": "Amphioctopus fangsiao",
+          "sourceSpeciesName": "주꾸미",
+          "sourceSpeciesCode": "140415",
+          "matchStatus": "EXACT"
+        },
+        "temporalResolution": "MONTH",
+        "geographicResolution": "NATIONAL_TOTAL_WITH_PROVINCE_DIMENSION_AVAILABLE",
+        "fisheryResolution": "CAPTURE_FISHERY_AGGREGATE",
+        "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+        "unit": "METRIC_TON",
+        "startDate": "2023-01",
+        "endDate": "2025-12",
+        "records": [
+          {
+            "period": "2023-01",
+            "value": 110.4704,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-02",
+            "value": 212.0879,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-03",
+            "value": 859.3554,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-04",
+            "value": 398.5579,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-05",
+            "value": 86.4654,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-06",
+            "value": 1.764,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-07",
+            "value": 0.0683,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-09",
+            "value": 50.804,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-10",
+            "value": 107.9295,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-11",
+            "value": 175.4399,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2023-12",
+            "value": 201.0728,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-01",
+            "value": 118.9301,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-02",
+            "value": 230.1094,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-03",
+            "value": 685.334,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-04",
+            "value": 374.6015,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-05",
+            "value": 81.1871,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-06",
+            "value": 0.9659,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-07",
+            "value": 0.072,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-08",
+            "value": 1.2475,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-09",
+            "value": 92.5204,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-10",
+            "value": 275.3246,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-11",
+            "value": 300.4108,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2024-12",
+            "value": 213.6044,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-01",
+            "value": 227.6554,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-02",
+            "value": 90.8586,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-03",
+            "value": 424.4107,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-04",
+            "value": 360.7633,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-05",
+            "value": 74.8849,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-06",
+            "value": 0.3343,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-07",
+            "value": 0.0526,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-08",
+            "value": 0.1145,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-09",
+            "value": 118.6042,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-10",
+            "value": 157.0849,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-11",
+            "value": 162.7156,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          },
+          {
+            "period": "2025-12",
+            "value": 149.5442,
+            "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+            "unit": "METRIC_TON",
+            "fishery": "연근해어업",
+            "geography": "대한민국 전국 계",
+            "salesForm": "계"
+          }
+        ],
+        "missingPeriods": [
+          "2023-08"
+        ],
+        "limitations": [
+          "LANDING_OR_PRODUCTION_IS_NOT_ABUNDANCE",
+          "EFFORT_UNKNOWN",
+          "GEAR_SPECIFIC",
+          "LANDING_PORT_BIAS",
+          "REGULATION_AFFECTED",
+          "CLOSED_SEASON_AFFECTED",
+          "RECREATIONAL_CATCH_NOT_INCLUDED"
+        ]
+      }
+    }
+  ],
+  "boundaries": {
+    "landingIsAbundance": false,
+    "cpueIsCatchProbability": false,
+    "evidencePromoted": false,
+    "seasonalityArtifactModified": false,
+    "runtimeModified": false,
+    "numericScoring": false,
+    "probability": false,
+    "normalization": false,
+    "weighting": false,
+    "productOrdering": false,
+    "advice": false
+  },
+  "immutability": {
+    "seasonality": "923319a8f96a6960b41a67397d1beb3273e55333c8a540aca70011a8f79a6d1a",
+    "v2": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
+    "v3": "880066b3eefd2100ea870a674504492b8d70da9700a660350fb296ea5bc7a376"
+  }
+}

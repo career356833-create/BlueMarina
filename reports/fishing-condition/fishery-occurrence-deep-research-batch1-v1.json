@@ -1,0 +1,334 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "blue-marina-fishery-occurrence-deep-research-batch1-v1",
+  "generatedAt": "2026-09-14T00:00:00.000Z",
+  "decision": "OCCURRENCE_PROMOTION_CANDIDATES_FOUND",
+  "decisionRationale": "KOSIS provides explicit monthly, metric-ton, national capture-fishery records for exact 고등어 and 주꾸미 source codes. 갈치 remains limited because the commercial statistical label does not resolve the canonical Trichiurus identity.",
+  "coverage": {
+    "before": 0,
+    "strictCandidatesFound": 2,
+    "possibleAfterReview": 2,
+    "totalProfileSpecies": 10
+  },
+  "sourcesChecked": [
+    {
+      "provider": "KOSIS",
+      "tableId": "DT_1EW0004",
+      "result": "BOUNDED_RECORDS_RETAINED",
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "unit": "METRIC_TON",
+      "dimensions": [
+        "month",
+        "fishery",
+        "product",
+        "administrative region",
+        "sales form"
+      ]
+    },
+    {
+      "provider": "MOF_DATA_GO_KR",
+      "datasetId": "15012417",
+      "result": "CONTRACT_ONLY_NO_SPECIES_RECORD_RETAINED",
+      "fieldsVerified": [
+        "date",
+        "cooperative",
+        "landing market",
+        "product code",
+        "product name",
+        "fishery",
+        "quantity",
+        "weight",
+        "amount"
+      ]
+    },
+    {
+      "provider": "NIFS",
+      "result": "IDENTITY_CORROBORATION_AND_FORECAST_BOUNDARY",
+      "requiredClasses": [
+        "OBSERVATION",
+        "FORECAST",
+        "INTERPRETIVE_OUTLOOK"
+      ],
+      "automaticHistoricalOccurrenceConversion": false
+    }
+  ],
+  "identityMappings": [
+    {
+      "canonicalSpeciesId": "BM-SPECIES-000417",
+      "canonicalKoreanName": "고등어",
+      "scientificName": "Scomber japonicus",
+      "sourceSpeciesName": "고등어",
+      "sourceSpeciesCode": "110015",
+      "matchStatus": "EXACT",
+      "nifsIdentity": {
+        "sourceId": "fish_1571803943319",
+        "scientificName": "Scomber japonicus",
+        "matchStatus": "EXACT"
+      },
+      "relatedKosisLabelsExcluded": [
+        "망치고등어 (110016)",
+        "고등어류 (310040)",
+        "해면양식업 고등어 (210015)"
+      ]
+    },
+    {
+      "canonicalSpeciesId": "BM-SPECIES-000444",
+      "canonicalKoreanName": "갈치",
+      "scientificName": "Trichiurus japonicus",
+      "sourceSpeciesName": "갈치",
+      "sourceSpeciesCode": "110009",
+      "matchStatus": "COMMERCIAL_CATEGORY",
+      "nifsIdentity": {
+        "sourceId": "fish_1571806850754",
+        "scientificName": "Trichiurus lepturus",
+        "matchStatus": "AMBIGUOUS"
+      },
+      "relatedKosisLabelsExcluded": []
+    },
+    {
+      "canonicalSpeciesId": "BM-SPECIES-003107",
+      "canonicalKoreanName": "주꾸미",
+      "scientificName": "Amphioctopus fangsiao",
+      "sourceSpeciesName": "주꾸미",
+      "sourceSpeciesCode": "140415",
+      "matchStatus": "EXACT",
+      "nifsIdentity": {
+        "sourceId": "fish_1576639605227",
+        "scientificName": "Amphioctopus fangsiao",
+        "matchStatus": "EXACT"
+      },
+      "relatedKosisLabelsExcluded": []
+    }
+  ],
+  "species": [
+    {
+      "canonicalSpeciesId": "BM-SPECIES-000417",
+      "canonicalKoreanName": "고등어",
+      "scientificName": "Scomber japonicus",
+      "matchStatus": "EXACT",
+      "kosis": {
+        "classification": "STRICT_OCCURRENCE_CANDIDATE",
+        "sourceSpeciesCode": "110015",
+        "records": 36,
+        "monthsCovered": 12,
+        "years": [
+          2023,
+          2024,
+          2025
+        ],
+        "region": "대한민국 전국 계",
+        "fishery": "CAPTURE_FISHERY_AGGREGATE",
+        "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+        "unit": "METRIC_TON",
+        "missingPeriods": []
+      },
+      "mof": {
+        "classification": "REJECTED_FOR_OCCURRENCE",
+        "reason": "No product-code-level record retained in this batch."
+      },
+      "nifs": {
+        "classification": "REJECTED_FOR_OCCURRENCE",
+        "identity": {
+          "sourceId": "fish_1571803943319",
+          "scientificName": "Scomber japonicus",
+          "matchStatus": "EXACT"
+        },
+        "reason": "Taxonomy/reference and forecast material are not monthly historical occurrence evidence."
+      },
+      "limitations": [
+        "LANDING_OR_PRODUCTION_IS_NOT_ABUNDANCE",
+        "EFFORT_UNKNOWN",
+        "FLEET_COMPOSITION_CHANGED",
+        "GEAR_SPECIFIC",
+        "REGULATION_AFFECTED",
+        "QUOTA_AFFECTED"
+      ],
+      "regulationReview": "Annual closure dates, minimum-size rules, TAC, and large-purse-seine exemptions can shape monthly production. The 2025 closure was 12 April through 12 May, with a separate April rule for small purse seine and Jeju set nets.",
+      "promotionDecision": "STRICT_OCCURRENCE_EVIDENCE_FOUND"
+    },
+    {
+      "canonicalSpeciesId": "BM-SPECIES-000444",
+      "canonicalKoreanName": "갈치",
+      "scientificName": "Trichiurus japonicus",
+      "matchStatus": "COMMERCIAL_CATEGORY",
+      "kosis": {
+        "classification": "LIMITED_OCCURRENCE_EVIDENCE",
+        "sourceSpeciesCode": "110009",
+        "records": 36,
+        "monthsCovered": 12,
+        "years": [
+          2023,
+          2024,
+          2025
+        ],
+        "region": "대한민국 전국 계",
+        "fishery": "CAPTURE_FISHERY_AGGREGATE",
+        "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+        "unit": "METRIC_TON",
+        "missingPeriods": []
+      },
+      "mof": {
+        "classification": "REJECTED_FOR_OCCURRENCE",
+        "reason": "No product-code-level record retained in this batch."
+      },
+      "nifs": {
+        "classification": "REJECTED_FOR_OCCURRENCE",
+        "identity": {
+          "sourceId": "fish_1571806850754",
+          "scientificName": "Trichiurus lepturus",
+          "matchStatus": "AMBIGUOUS"
+        },
+        "reason": "Taxonomy/reference and forecast material are not monthly historical occurrence evidence."
+      },
+      "limitations": [
+        "COMMERCIAL_CATEGORY",
+        "TAXONOMIC_IDENTITY_UNRESOLVED",
+        "LANDING_OR_PRODUCTION_IS_NOT_ABUNDANCE",
+        "EFFORT_UNKNOWN",
+        "FLEET_COMPOSITION_CHANGED",
+        "GEAR_SPECIFIC",
+        "REGULATION_AFFECTED",
+        "QUOTA_AFFECTED"
+      ],
+      "regulationReview": "The July closure, minimum-size rule, fishery exemptions, and TAC participation can shape monthly production. The statistical product label does not resolve Trichiurus japonicus versus the NIFS Trichiurus lepturus record.",
+      "promotionDecision": "LIMITED_OCCURRENCE_EVIDENCE_FOUND"
+    },
+    {
+      "canonicalSpeciesId": "BM-SPECIES-003107",
+      "canonicalKoreanName": "주꾸미",
+      "scientificName": "Amphioctopus fangsiao",
+      "matchStatus": "EXACT",
+      "kosis": {
+        "classification": "STRICT_OCCURRENCE_CANDIDATE",
+        "sourceSpeciesCode": "140415",
+        "records": 35,
+        "monthsCovered": 12,
+        "years": [
+          2023,
+          2024,
+          2025
+        ],
+        "region": "대한민국 전국 계",
+        "fishery": "CAPTURE_FISHERY_AGGREGATE",
+        "metric": "CAPTURE_FISHERY_PRODUCTION_VOLUME",
+        "unit": "METRIC_TON",
+        "missingPeriods": [
+          "2023-08"
+        ]
+      },
+      "mof": {
+        "classification": "REJECTED_FOR_OCCURRENCE",
+        "reason": "No product-code-level record retained in this batch."
+      },
+      "nifs": {
+        "classification": "REJECTED_FOR_OCCURRENCE",
+        "identity": {
+          "sourceId": "fish_1576639605227",
+          "scientificName": "Amphioctopus fangsiao",
+          "matchStatus": "EXACT"
+        },
+        "reason": "Taxonomy/reference and forecast material are not monthly historical occurrence evidence."
+      },
+      "limitations": [
+        "LANDING_OR_PRODUCTION_IS_NOT_ABUNDANCE",
+        "EFFORT_UNKNOWN",
+        "GEAR_SPECIFIC",
+        "LANDING_PORT_BIAS",
+        "REGULATION_AFFECTED",
+        "CLOSED_SEASON_AFFECTED",
+        "RECREATIONAL_CATCH_NOT_INCLUDED"
+      ],
+      "regulationReview": "The nationwide 11 May through 31 August closed season directly depresses legal landing records; a missing or low month cannot be interpreted as biological absence.",
+      "promotionDecision": "STRICT_OCCURRENCE_EVIDENCE_FOUND"
+    }
+  ],
+  "evidence": {
+    "accepted": [
+      "kosis-dt-1ew0004-110015-2023-2025",
+      "kosis-dt-1ew0004-140415-2023-2025"
+    ],
+    "limited": [
+      "kosis-dt-1ew0004-110009-2023-2025"
+    ],
+    "rejected": [
+      {
+        "canonicalSpeciesId": "BM-SPECIES-000417",
+        "provider": "MOF_DATA_GO_KR",
+        "sourceType": "MARKET_LANDING_RECORD",
+        "classification": "REJECTED_FOR_OCCURRENCE",
+        "reason": "The official dated landing contract was verified, but no species-specific product-code record was retained in this bounded batch; schema capability is not evidence."
+      },
+      {
+        "canonicalSpeciesId": "BM-SPECIES-000417",
+        "provider": "NIFS",
+        "sourceType": "FORECAST",
+        "classification": "REJECTED_FOR_OCCURRENCE",
+        "reason": "Current weekly/monthly fishery outlook material is forecast or interpretive outlook, not a historical monthly occurrence record."
+      },
+      {
+        "canonicalSpeciesId": "BM-SPECIES-000444",
+        "provider": "MOF_DATA_GO_KR",
+        "sourceType": "MARKET_LANDING_RECORD",
+        "classification": "REJECTED_FOR_OCCURRENCE",
+        "reason": "The official dated landing contract was verified, but no species-specific product-code record was retained in this bounded batch; schema capability is not evidence."
+      },
+      {
+        "canonicalSpeciesId": "BM-SPECIES-000444",
+        "provider": "NIFS",
+        "sourceType": "FORECAST",
+        "classification": "REJECTED_FOR_OCCURRENCE",
+        "reason": "Current weekly/monthly fishery outlook material is forecast or interpretive outlook, not a historical monthly occurrence record."
+      },
+      {
+        "canonicalSpeciesId": "BM-SPECIES-003107",
+        "provider": "MOF_DATA_GO_KR",
+        "sourceType": "MARKET_LANDING_RECORD",
+        "classification": "REJECTED_FOR_OCCURRENCE",
+        "reason": "The official dated landing contract was verified, but no species-specific product-code record was retained in this bounded batch; schema capability is not evidence."
+      },
+      {
+        "canonicalSpeciesId": "BM-SPECIES-003107",
+        "provider": "NIFS",
+        "sourceType": "FORECAST",
+        "classification": "REJECTED_FOR_OCCURRENCE",
+        "reason": "Current weekly/monthly fishery outlook material is forecast or interpretive outlook, not a historical monthly occurrence record."
+      }
+    ],
+    "retainedRecords": 107
+  },
+  "sourceConflictPolicy": {
+    "mergeAcrossProviders": false,
+    "mergeMonthRanges": false,
+    "preserveIndependentSeries": true
+  },
+  "boundaries": {
+    "landingIsAbundance": false,
+    "cpueIsCatchProbability": false,
+    "evidencePromoted": false,
+    "seasonalityArtifactModified": false,
+    "runtimeModified": false,
+    "numericScoring": false,
+    "probability": false,
+    "normalization": false,
+    "weighting": false,
+    "productOrdering": false,
+    "advice": false
+  },
+  "immutability": {
+    "seasonality": "923319a8f96a6960b41a67397d1beb3273e55333c8a540aca70011a8f79a6d1a",
+    "v2": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
+    "v3": "880066b3eefd2100ea870a674504492b8d70da9700a660350fb296ea5bc7a376"
+  },
+  "operations": {
+    "databaseWrites": 0,
+    "supabaseChanges": 0,
+    "externalAiCalls": 0,
+    "gitAdd": 0,
+    "commit": 0,
+    "push": 0
+  }
+}
