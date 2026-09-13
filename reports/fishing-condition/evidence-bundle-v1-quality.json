@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-12T00:00:00.000Z",
+  "qualityClass": "DERIVED_EVIDENCE_BUNDLE",
+  "profileVersion": "v2",
+  "environmentSources": [
+    "nifs-risa",
+    "nifs-femo-sea"
+  ],
+  "speciesTested": [
+    "BM-SPECIES-000417",
+    "BM-SPECIES-003107",
+    "BM-SPECIES-000755",
+    "BM-SPECIES-000501"
+  ],
+  "fixtureCoverage": {
+    "scenarios": 4,
+    "statusOccurrences": {
+      "supported": 6,
+      "unsupported": 14,
+      "blocked": 2,
+      "limited": 2
+    },
+    "temperatureRelations": [
+      "WITHIN_RANGE",
+      "BELOW_RANGE",
+      "ABOVE_RANGE",
+      "UNSUPPORTED_PROFILE",
+      "MISSING_ENVIRONMENT"
+    ],
+    "seasonalityRelations": [
+      "MATCH",
+      "MISMATCH"
+    ]
+  },
+  "gates": {
+    "salinityRuntimeComparable": 0,
+    "salinityStatus": "UNIT_UNVERIFIED",
+    "dissolvedOxygenComparableSpecies": 1,
+    "habitatEnvironmentStatus": "UNSUPPORTED_ENVIRONMENT",
+    "activityWithoutTimeContext": "MISSING_ENVIRONMENT_CONTEXT",
+    "climatologyAnomalyEnabled": false
+  },
+  "stability": {
+    "deterministic": true,
+    "singleSourceOnly": true,
+    "comparatorCallsPerBundle": 1,
+    "explanationCallsPerBundle": 1
+  },
+  "forbiddenPhraseScan": {
+    "matches": 0
+  },
+  "outputFields": {
+    "score": 0,
+    "probability": 0,
+    "ranking": 0,
+    "recommendation": 0,
+    "favorableCount": 0,
+    "percentage": 0
+  },
+  "liveVerification": {
+    "status": "PASS",
+    "environmentContexts": [
+      "nifs-risa:bgj8a:SURFACE",
+      "nifs-femo-sea:explicit-site:SURFACE"
+    ],
+    "statusCounts": {
+      "supported": 6,
+      "unsupported": 15,
+      "blocked": 1,
+      "limited": 2
+    },
+    "species": [
+      {
+        "speciesId": "BM-SPECIES-000417",
+        "koreanName": "고등어",
+        "httpStatus": 200,
+        "temperatureStatus": "SUPPORTED",
+        "temperatureRelation": "ABOVE_RANGE",
+        "temperatureEvidenceRefs": [
+          "mackerel-mbris"
+        ]
+      },
+      {
+        "speciesId": "BM-SPECIES-003107",
+        "koreanName": "주꾸미",
+        "httpStatus": 200,
+        "temperatureStatus": "SUPPORTED",
+        "temperatureRelation": "ABOVE_RANGE",
+        "temperatureEvidenceRefs": [
+          "webfoot-paper-2026"
+        ]
+      },
+      {
+        "speciesId": "BM-SPECIES-000755",
+        "koreanName": "참돔",
+        "httpStatus": 200,
+        "temperatureStatus": "SUPPORTED",
+        "temperatureRelation": "ABOVE_RANGE",
+        "temperatureEvidenceRefs": [
+          "pagrus-fishbase-temperature-v2"
+        ]
+      }
+    ],
+    "salinityBlockedExample": {
+      "speciesId": "BM-SPECIES-000501",
+      "sourceId": "nifs-femo-sea",
+      "status": "UNIT_UNVERIFIED",
+      "relation": null
+    },
+    "dissolvedOxygenExample": {
+      "speciesId": "BM-SPECIES-000501",
+      "sourceId": "nifs-femo-sea",
+      "status": "LIMITED",
+      "relation": "WITHIN_RANGE",
+      "freshness": "stale"
+    },
+    "scoreFields": 0,
+    "recommendationFields": 0
+  },
+  "externalAiCalls": 0,
+  "databaseWrites": 0,
+  "supabaseWrites": 0
+}
