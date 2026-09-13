@@ -1,0 +1,62 @@
+{
+  "version": "v1",
+  "status": "SUITABILITY_RULE_V1_PASS",
+  "runtimeMeaning": "FIELD_RELATION_INTERPRETATION",
+  "qualityClass": "DERIVED_SUITABILITY_RULE",
+  "artifact": "data/fishing-condition/suitability-rule/v1/suitability-rules.json",
+  "service": "src/lib/fishing-condition/suitability-rule.ts",
+  "rulesCount": 12,
+  "variablesCovered": ["temperature", "salinity", "dissolvedOxygen", "seasonality", "activity", "habitat", "waveHeight", "windSpeed", "pressure", "currentSpeed", "currentDirection", "tide"],
+  "interpretableRelations": ["WITHIN_RANGE", "BELOW_RANGE", "ABOVE_RANGE", "MATCH", "MISMATCH"],
+  "representativeCases": {
+    "interpretable": 4,
+    "limited": 2,
+    "blockedByPolicy": 2,
+    "blockedByGate": 3,
+    "contextOnly": 4,
+    "baselineOnly": 1,
+    "missingContext": 1,
+    "unavailable": 1
+  },
+  "evidenceReferenceCoverage": "REQUIRED_FOR_RELATION_BASED_INTERPRETATION",
+  "deterministicStability": true,
+  "forbiddenVocabularyScan": "PASS",
+  "forbiddenKeyScan": "PASS",
+  "liveVerification": {
+    "status": "PASS",
+    "performedAt": "2026-09-13T09:24:30.6006387Z",
+    "httpStatus": 200,
+    "speciesId": "BM-SPECIES-000417",
+    "speciesName": "고등어",
+    "boundedSources": 5,
+    "risaTemperature": { "relation": "ABOVE_RANGE", "ruleStatus": "INTERPRETABLE_ABOVE", "evidenceRefsPresent": true },
+    "femoTemperature": { "relation": "ABOVE_RANGE", "ruleStatus": "LIMITED_INTERPRETATION", "evidenceRefsPresent": true },
+    "femoSalinity": { "relation": null, "ruleStatus": "BLOCKED_BY_POLICY" },
+    "femoDissolvedOxygen": { "relation": null, "ruleStatus": "BLOCKED_BY_GATE" },
+    "kmaObservation": { "ruleStatus": "CONTEXT_ONLY" },
+    "romsCurrentDirection": { "relation": null, "ruleStatus": "BLOCKED_BY_POLICY" },
+    "overallResultPresent": false,
+    "secretExposed": false
+  },
+  "orchestratorIntegration": {
+    "fieldMetadataAdded": true,
+    "branchRemoval": false,
+    "branchSorting": false,
+    "sourceSelection": false,
+    "overallResult": false
+  },
+  "invariants": {
+    "favorableSemantics": false,
+    "overallJudgment": false,
+    "score": false,
+    "probability": false,
+    "ranking": false,
+    "recommendation": false,
+    "sourceFallback": false,
+    "sourceAveraging": false,
+    "interpolation": false,
+    "weighting": false
+  },
+  "databaseWrites": 0,
+  "externalAiCalls": 0
+}

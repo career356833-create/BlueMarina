@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "1.0.0",
+  "runtimeMeaning": "FIELD_RELATION_INTERPRETATION",
+  "qualityClass": "DERIVED_SUITABILITY_RULE",
+  "statusPriority": [
+    "UNAVAILABLE",
+    "BLOCKED_BY_POLICY",
+    "BLOCKED_BY_GATE",
+    "UNSUPPORTED",
+    "CONTEXT_ONLY",
+    "BASELINE_ONLY",
+    "MISSING_CONTEXT",
+    "LIMITED_INTERPRETATION",
+    "INTERPRETABLE_MATCH",
+    "INTERPRETABLE_BELOW",
+    "INTERPRETABLE_ABOVE",
+    "INTERPRETABLE_MISMATCH"
+  ],
+  "rules": [
+    {
+      "variable": "temperature",
+      "allowedRelations": ["WITHIN_RANGE", "BELOW_RANGE", "ABOVE_RANGE"],
+      "requiredPolicyActions": ["COMPARISON_ALLOWED", "COMPARISON_ALLOWED_WITH_LIMITS"],
+      "requiredGates": ["UNIT_CONFIRMED", "SPECIES_PROFILE_SUPPORTED", "DEPTH_COMPATIBLE", "STATION_MAPPED", "TIME_SEMANTIC_KNOWN"],
+      "freshnessHandling": { "fresh": "RELATION_BASED", "stale": "LIMITED_INTERPRETATION", "unavailable": "UNAVAILABLE" },
+      "depthHandling": { "EXACT": "RELATION_BASED", "CATEGORY_MATCH": "RELATION_BASED", "UNRESOLVED": "BLOCKED_BY_GATE", "NOT_APPLICABLE": "BLOCKED_BY_GATE" },
+      "limitations": ["RELATION_REQUIRES_PROFILE_EVIDENCE"]
+    },
+    {
+      "variable": "salinity",
+      "allowedRelations": ["WITHIN_RANGE", "BELOW_RANGE", "ABOVE_RANGE"],
+      "requiredPolicyActions": ["COMPARISON_ALLOWED", "COMPARISON_ALLOWED_WITH_LIMITS"],
+      "requiredGates": ["UNIT_CONFIRMED", "SPECIES_PROFILE_SUPPORTED", "DEPTH_COMPATIBLE"],
+      "freshnessHandling": { "fresh": "RELATION_BASED", "stale": "LIMITED_INTERPRETATION", "unavailable": "UNAVAILABLE" },
+      "depthHandling": { "EXACT": "RELATION_BASED", "CATEGORY_MATCH": "RELATION_BASED", "UNRESOLVED": "BLOCKED_BY_GATE", "NOT_APPLICABLE": "BLOCKED_BY_GATE" },
+      "limitations": ["FEMO_UNIT_UNVERIFIED_IS_BLOCKED"]
+    },
+    {
+      "variable": "dissolvedOxygen",
+      "allowedRelations": ["WITHIN_RANGE", "BELOW_RANGE"],
+      "requiredPolicyActions": ["COMPARISON_ALLOWED_WITH_LIMITS"],
+      "requiredGates": ["UNIT_CONFIRMED", "SPECIES_PROFILE_SUPPORTED", "DEPTH_COMPATIBLE", "STATION_MAPPED"],
+      "freshnessHandling": { "fresh": "LIMITED_INTERPRETATION", "stale": "LIMITED_INTERPRETATION", "unavailable": "UNAVAILABLE" },
+      "depthHandling": { "EXACT": "RELATION_BASED", "CATEGORY_MATCH": "RELATION_BASED", "UNRESOLVED": "BLOCKED_BY_GATE", "NOT_APPLICABLE": "BLOCKED_BY_GATE" },
+      "limitations": ["PERIODIC_SAMPLE"]
+    },
+    {
+      "variable": "seasonality",
+      "allowedRelations": ["MATCH", "MISMATCH"],
+      "requiredPolicyActions": ["COMPARISON_ALLOWED", "COMPARISON_ALLOWED_WITH_LIMITS"],
+      "requiredGates": ["SPECIES_PROFILE_SUPPORTED", "TIME_SEMANTIC_KNOWN"],
+      "freshnessHandling": { "fresh": "RELATION_BASED", "stale": "LIMITED_INTERPRETATION", "unavailable": "UNAVAILABLE" },
+      "depthHandling": { "EXACT": "NOT_REQUIRED", "CATEGORY_MATCH": "NOT_REQUIRED", "UNRESOLVED": "NOT_REQUIRED", "NOT_APPLICABLE": "NOT_REQUIRED" },
+      "limitations": ["SPAWNING_MIGRATION_AND_FISHERY_OCCURRENCE_REMAIN_SEPARATE"]
+    },
+    {
+      "variable": "activity",
+      "allowedRelations": ["MATCH", "MISMATCH"],
+      "requiredPolicyActions": ["COMPARISON_ALLOWED", "COMPARISON_ALLOWED_WITH_LIMITS"],
+      "requiredGates": ["SPECIES_PROFILE_SUPPORTED", "TIME_SEMANTIC_KNOWN"],
+      "freshnessHandling": { "fresh": "RELATION_BASED", "stale": "LIMITED_INTERPRETATION", "unavailable": "UNAVAILABLE" },
+      "depthHandling": { "EXACT": "NOT_REQUIRED", "CATEGORY_MATCH": "NOT_REQUIRED", "UNRESOLVED": "NOT_REQUIRED", "NOT_APPLICABLE": "NOT_REQUIRED" },
+      "limitations": ["EXPLICIT_TIME_CONTEXT_REQUIRED", "NO_SUNRISE_OR_SUNSET_INFERENCE"]
+    },
+    {
+      "variable": "habitat",
+      "allowedRelations": [],
+      "requiredPolicyActions": ["CONTEXT_ONLY"],
+      "requiredGates": [],
+      "freshnessHandling": { "fresh": "CONTEXT_ONLY", "stale": "CONTEXT_ONLY", "unavailable": "UNAVAILABLE" },
+      "depthHandling": { "EXACT": "CONTEXT_ONLY", "CATEGORY_MATCH": "CONTEXT_ONLY", "UNRESOLVED": "CONTEXT_ONLY", "NOT_APPLICABLE": "CONTEXT_ONLY" },
+      "limitations": ["NO_HABITAT_COMPARISON_CONTRACT"]
+    },
+    {
+      "variable": "waveHeight",
+      "allowedRelations": [],
+      "requiredPolicyActions": ["CONTEXT_ONLY"],
+      "requiredGates": [],
+      "freshnessHandling": { "fresh": "CONTEXT_ONLY", "stale": "CONTEXT_ONLY", "unavailable": "UNAVAILABLE" },
+      "depthHandling": { "EXACT": "NOT_REQUIRED", "CATEGORY_MATCH": "NOT_REQUIRED", "UNRESOLVED": "NOT_REQUIRED", "NOT_APPLICABLE": "NOT_REQUIRED" },
+      "limitations": ["NO_SPECIES_COMPARISON"]
+    },
+    {
+      "variable": "windSpeed",
+      "allowedRelations": [],
+      "requiredPolicyActions": ["CONTEXT_ONLY"],
+      "requiredGates": [],
+      "freshnessHandling": { "fresh": "CONTEXT_ONLY", "stale": "CONTEXT_ONLY", "unavailable": "UNAVAILABLE" },
+      "depthHandling": { "EXACT": "NOT_REQUIRED", "CATEGORY_MATCH": "NOT_REQUIRED", "UNRESOLVED": "NOT_REQUIRED", "NOT_APPLICABLE": "NOT_REQUIRED" },
+      "limitations": ["NO_SPECIES_COMPARISON"]
+    },
+    {
+      "variable": "pressure",
+      "allowedRelations": [],
+      "requiredPolicyActions": ["CONTEXT_ONLY"],
+      "requiredGates": [],
+      "freshnessHandling": { "fresh": "CONTEXT_ONLY", "stale": "CONTEXT_ONLY", "unavailable": "UNAVAILABLE" },
+      "depthHandling": { "EXACT": "NOT_REQUIRED", "CATEGORY_MATCH": "NOT_REQUIRED", "UNRESOLVED": "NOT_REQUIRED", "NOT_APPLICABLE": "NOT_REQUIRED" },
+      "limitations": ["NO_SPECIES_COMPARISON"]
+    },
+    {
+      "variable": "currentSpeed",
+      "allowedRelations": [],
+      "requiredPolicyActions": ["CONTEXT_ONLY"],
+      "requiredGates": [],
+      "freshnessHandling": { "fresh": "CONTEXT_ONLY", "stale": "CONTEXT_ONLY", "unavailable": "UNAVAILABLE" },
+      "depthHandling": { "EXACT": "NOT_REQUIRED", "CATEGORY_MATCH": "NOT_REQUIRED", "UNRESOLVED": "NOT_REQUIRED", "NOT_APPLICABLE": "NOT_REQUIRED" },
+      "limitations": ["MODEL_CONTEXT_ONLY", "ROUTING_ETA_AND_DRIFT_USE_PROHIBITED"]
+    },
+    {
+      "variable": "currentDirection",
+      "allowedRelations": [],
+      "requiredPolicyActions": ["BLOCKED"],
+      "requiredGates": ["DIRECTION_CONVENTION_CONFIRMED"],
+      "freshnessHandling": { "fresh": "BLOCKED_BY_POLICY", "stale": "BLOCKED_BY_POLICY", "unavailable": "UNAVAILABLE" },
+      "depthHandling": { "EXACT": "NOT_REQUIRED", "CATEGORY_MATCH": "NOT_REQUIRED", "UNRESOLVED": "NOT_REQUIRED", "NOT_APPLICABLE": "NOT_REQUIRED" },
+      "limitations": ["DIRECTION_CONVENTION_UNCONFIRMED"]
+    },
+    {
+      "variable": "tide",
+      "allowedRelations": [],
+      "requiredPolicyActions": ["CONTEXT_ONLY"],
+      "requiredGates": [],
+      "freshnessHandling": { "fresh": "CONTEXT_ONLY", "stale": "CONTEXT_ONLY", "unavailable": "UNAVAILABLE" },
+      "depthHandling": { "EXACT": "NOT_REQUIRED", "CATEGORY_MATCH": "NOT_REQUIRED", "UNRESOLVED": "NOT_REQUIRED", "NOT_APPLICABLE": "NOT_REQUIRED" },
+      "limitations": ["PREDICTION_CONTEXT_ONLY", "ACTUAL_DEPTH_CALCULATION_PROHIBITED", "DATUM_NOT_DOCUMENTED"]
+    }
+  ]
+}

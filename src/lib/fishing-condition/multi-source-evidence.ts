@@ -3,6 +3,7 @@ import type { buildConditionEvidenceBundle } from "./evidence-bundle";
 import type { explainFishingCondition, FishingConditionExplanation } from "./explanation";
 import type { AlignedSourceResult, FishingConditionAlignmentContext } from "./source-alignment";
 import type { SourcePolicyEvaluation } from "./source-policy";
+import type { SuitabilityRuleResult } from "./suitability-rule";
 
 export const MULTI_SOURCE_EVIDENCE_QUALITY_CLASS = "DERIVED_MULTI_SOURCE_EVIDENCE" as const;
 export const MULTI_SOURCE_EVIDENCE_PROFILE_VERSION = "v2" as const;
@@ -24,6 +25,7 @@ export type MultiSourceEvidenceBranch = {
   explanations: FishingConditionExplanation[];
   evidenceBundle: EvidenceBundle | null;
   sourcePolicy: SourcePolicyEvaluation[];
+  interpretations: SuitabilityRuleResult[];
   branchMode: "COMPARABLE" | "CONTEXT_ONLY" | "UNAVAILABLE";
   limitations: string[];
   lineage: string[];
@@ -43,6 +45,7 @@ export function buildMultiSourceBranch(
   derived: { comparison: Comparison; explanation: ExplanationResult; evidenceBundle: EvidenceBundle } | null,
   extraLimitations: string[] = [],
   sourcePolicy: SourcePolicyEvaluation[] = [],
+  interpretations: SuitabilityRuleResult[] = [],
 ): MultiSourceEvidenceBranch {
   const unavailable = source.status === "UNAVAILABLE";
   const branchMode = unavailable ? "UNAVAILABLE" : derived ? "COMPARABLE" : "CONTEXT_ONLY";
@@ -66,6 +69,7 @@ export function buildMultiSourceBranch(
     explanations: derived?.explanation.explanations ?? [],
     evidenceBundle: derived?.evidenceBundle ?? null,
     sourcePolicy,
+    interpretations,
     branchMode,
     limitations: [...new Set([...source.limitations, ...extraLimitations])],
     lineage: derived

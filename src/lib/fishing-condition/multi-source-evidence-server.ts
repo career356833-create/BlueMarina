@@ -16,6 +16,7 @@ import {
   type SourcePolicyGate,
   type SourcePolicyVariable,
 } from "./source-policy";
+import { buildBranchSuitabilityRules } from "./suitability-rule";
 
 export class MultiSourceEvidenceError extends Error {
   constructor(public readonly code: "PROFILE_NOT_FOUND") { super(code); }
@@ -115,15 +116,18 @@ export async function runMultiSourceEvidence(request: MultiSourceEvidenceRequest
     if (!environment || !temperaturePolicy || !sourcePolicyAllowsComparison(temperaturePolicy)) {
       const limitation = source.status !== "UNAVAILABLE" && (source.sourceId === "nifs-risa" || source.sourceId === "nifs-femo-sea")
         ? [environment ? "SOURCE_POLICY_COMPARISON_BLOCKED" : "COMPARATOR_DEPTH_CONTEXT_UNSUPPORTED"] : [];
-      return buildMultiSourceBranch(source, null, limitation, sourcePolicy);
+      const interpretations = buildBranchSuitabilityRules({ sourcePolicy, comparison: null, freshness: freshness(source), depthStatus: source.depthMatchStatus });
+      return buildMultiSourceBranch(source, null, limitation, sourcePolicy, interpretations);
     }
     try {
       const comparison = runFishingConditionComparisonForEnvironment(request.speciesId, environment);
       const explanation = explainFishingCondition(comparison);
       const evidenceBundle = buildConditionEvidenceBundle(comparison, explanation, request.contexts);
-      return buildMultiSourceBranch(source, { comparison, explanation, evidenceBundle }, [], sourcePolicy);
+      const interpretations = buildBranchSuitabilityRules({ sourcePolicy, comparison, freshness: freshness(source), depthStatus: source.depthMatchStatus });
+      return buildMultiSourceBranch(source, { comparison, explanation, evidenceBundle }, [], sourcePolicy, interpretations);
     } catch {
-      return buildMultiSourceBranch(source, null, ["COMPARISON_BRANCH_ERROR"], sourcePolicy);
+      const interpretations = buildBranchSuitabilityRules({ sourcePolicy, comparison: null, freshness: freshness(source), depthStatus: source.depthMatchStatus });
+      return buildMultiSourceBranch(source, null, ["COMPARISON_BRANCH_ERROR"], sourcePolicy, interpretations);
     }
   });
 
