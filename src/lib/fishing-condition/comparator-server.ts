@@ -21,6 +21,12 @@ export class FishingConditionComparatorError extends Error {
   }
 }
 
+export function runFishingConditionComparisonForEnvironment(speciesId: string, environment: ComparatorEnvironment) {
+  const profile = findSpeciesEnvironmentProfile({ speciesId });
+  if (!profile) throw new FishingConditionComparatorError("PROFILE_NOT_FOUND");
+  return compareFishingCondition(profile, environment);
+}
+
 function environmentFromRisaStation(
   station: Awaited<ReturnType<typeof getNifsRealtimeFishingEnvironment>>["stations"][number],
   depthContext: ComparatorDepthContext,
@@ -74,9 +80,6 @@ function mapSourceError(error: unknown): never {
 }
 
 export async function runFishingConditionComparison(request: FishingConditionComparisonRequest) {
-  const profile = findSpeciesEnvironmentProfile({ speciesId: request.speciesId });
-  if (!profile) throw new FishingConditionComparatorError("PROFILE_NOT_FOUND");
-
   let environment: ComparatorEnvironment;
   try {
     if (request.environment.sourceId === "nifs-risa") {
@@ -99,5 +102,5 @@ export async function runFishingConditionComparison(request: FishingConditionCom
     mapSourceError(error);
   }
 
-  return compareFishingCondition(profile, environment);
+  return runFishingConditionComparisonForEnvironment(request.speciesId, environment);
 }

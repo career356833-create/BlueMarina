@@ -1,0 +1,60 @@
+{
+  "version": "v1",
+  "qualityClass": "DERIVED_MULTI_SOURCE_EVIDENCE",
+  "profileVersion": "v2",
+  "supportedSources": ["nifs-risa", "nifs-femo-sea", "kma-marine-weather-observations", "kma-marine-weather-forecast", "khoa-ocean-current-model"],
+  "comparableSources": ["nifs-risa", "nifs-femo-sea"],
+  "contextOnlySources": ["kma-marine-weather-observations", "kma-marine-weather-forecast", "khoa-ocean-current-model"],
+  "branchContract": {
+    "modes": ["COMPARABLE", "CONTEXT_ONLY", "UNAVAILABLE"],
+    "sourceFailureIsolation": true,
+    "alignmentExecutedOnce": true,
+    "singleSourceEvidenceBundlePerComparableBranch": true
+  },
+  "coverage": {
+    "risaComparableBranches": 1,
+    "femoComparableBranches": 1,
+    "kmaObservationContextBranches": 1,
+    "kmaForecastUnavailableBranches": 1,
+    "romsContextBranches": 1,
+    "limitedBranches": 3,
+    "lineageCompleteBranches": 5
+  },
+  "liveVerification": {
+    "status": "PASS_WITH_SOURCE_UNAVAILABLE",
+    "performedAt": "2026-09-13T05:05:05.0254316Z",
+    "httpStatus": 200,
+    "speciesId": "BM-SPECIES-000417",
+    "speciesName": "고등어",
+    "requestedSources": 5,
+    "comparableBranches": 2,
+    "contextOnlyBranches": 2,
+    "unavailableBranches": 1,
+    "limitedBranches": 3,
+    "branches": [
+      { "sourceId": "nifs-risa", "mode": "COMPARABLE", "alignmentStatus": "PARTIAL", "comparison": true, "evidenceBundle": true },
+      { "sourceId": "nifs-femo-sea", "mode": "COMPARABLE", "alignmentStatus": "UNIT_UNVERIFIED", "comparison": true, "evidenceBundle": true },
+      { "sourceId": "kma-marine-weather-observations", "mode": "CONTEXT_ONLY", "alignmentStatus": "ALIGNED", "comparison": false, "evidenceBundle": false },
+      { "sourceId": "kma-marine-weather-forecast", "mode": "UNAVAILABLE", "alignmentStatus": "UNAVAILABLE", "comparison": false, "evidenceBundle": false, "limitation": "CSV_HEADER_NOT_FOUND" },
+      { "sourceId": "khoa-ocean-current-model", "mode": "CONTEXT_ONLY", "alignmentStatus": "PARTIAL", "comparison": false, "evidenceBundle": false }
+    ],
+    "forbiddenKeysFound": 0,
+    "secretExposed": false
+  },
+  "stability": { "deterministicForIdenticalInputs": true },
+  "invariants": {
+    "averaging": false,
+    "interpolation": false,
+    "weighting": false,
+    "sourcePreference": false,
+    "representativeValue": false,
+    "majorityLogic": false,
+    "compositeConclusion": false,
+    "score": false,
+    "probability": false,
+    "ranking": false,
+    "recommendation": false
+  },
+  "databaseWrites": 0,
+  "externalAiCalls": 0
+}

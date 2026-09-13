@@ -48,6 +48,9 @@ export function alignRisa(request: SourceAlignmentRequest, station: Awaited<Retu
   else if (category === "MIDDLE") add("MIDDLE", station.waterTemperature.middleC);
   else if (category === "BOTTOM") add("BOTTOM", station.waterTemperature.bottomC);
   else { add("SURFACE", station.waterTemperature.surfaceC); add("MIDDLE", station.waterTemperature.middleC); add("BOTTOM", station.waterTemperature.bottomC); }
+  const depthKey = category?.toLowerCase() as "surface" | "middle" | "bottom" | undefined;
+  values[`nifs-risa.depth.${depthKey ?? "unknown"}`] = value(depthKey ? station.depthMeters[depthKey] : null, "m");
+  values["nifs-risa.stationWaterDepth"] = value(station.depthMeters.bottom, "m");
   return {
     sourceId: "nifs-risa", provider: station.provider, qualityClass: station.qualityClass, status: statusFor(limitations, depthStatus), sourceBindingId: station.stationId,
     sourceLocation: { latitude: station.latitude, longitude: station.longitude }, distanceMeters: haversineDistanceMeters(request.target, { latitude: station.latitude, longitude: station.longitude }),
@@ -73,6 +76,7 @@ export function alignFemo(request: SourceAlignmentRequest, sample: Awaited<Retur
       values[`nifs-femo-sea.${name}.bottom`] = value(measurement.bottom, measurement.unit, unitStatus);
     }
   }
+  values["nifs-femo-sea.stationWaterDepth"] = value(sample.depthContext.waterDepthM, "m");
   const limitations = limitationsFor(timezone, sample.freshness, depthStatus);
   if (hasUnverified) limitations.push("UNIT_UNVERIFIED");
   limitations.push("LATEST_SAMPLE_FOR_EXPLICIT_SITE");
