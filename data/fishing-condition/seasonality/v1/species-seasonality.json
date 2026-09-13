@@ -1,0 +1,828 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "blue-marina-seasonality-evidence-interpretation-v1",
+  "generatedAt": "2026-09-13T00:00:00.000Z",
+  "qualityClass": "DERIVED_SEASONALITY_INTERPRETATION",
+  "derivedFrom": {
+    "sourceId": "blue-marina-species-environment-v2",
+    "sourceSpeciesProfileVersion": "V2",
+    "path": "data/fishing-condition/species-environment/v2/species-environment-profiles.json",
+    "sha256": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98"
+  },
+  "boundaries": {
+    "explicitMonthInputOnly": true,
+    "numericScoring": false,
+    "probability": false,
+    "ranking": false,
+    "recommendation": false,
+    "overallSeasonGrade": false,
+    "automaticRegionMapping": false
+  },
+  "relationContract": {
+    "MATCH": "The requested month is present in one evidence entry for the requested biological context.",
+    "MISMATCH": "The requested month is absent from one evidence entry for the requested biological context.",
+    "multipleEvidence": "Each source entry remains independent; no union, intersection, averaging, or overall relation is produced."
+  },
+  "species": [
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "koreanName": "참돔",
+      "scientificName": "Pagrus major",
+      "entries": [
+        {
+          "entryId": "BM-SPECIES-000755:spawning:1:1",
+          "context": "SPAWNING",
+          "evidenceSemantic": "SPAWNING_OBSERVATION",
+          "precision": "MONTH_RESOLVED",
+          "interpretationStatus": "MONTH_RESOLVED",
+          "months": [
+            5,
+            6
+          ],
+          "seasons": [],
+          "startMonth": 5,
+          "endMonth": 6,
+          "crossesYearBoundary": false,
+          "geographicContext": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "movement": null,
+          "evidenceRefs": [
+            "pagrus-mbris"
+          ],
+          "sourceType": "MBRIS",
+          "limitations": [],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "spawning",
+            "sourceEntryIndex": 0,
+            "sourceStatement": null,
+            "originalMonths": [
+              5,
+              6
+            ],
+            "originalSeasons": []
+          }
+        },
+        {
+          "entryId": "BM-SPECIES-000755:migration:1:1",
+          "context": "MIGRATION",
+          "evidenceSemantic": "MIGRATION_OBSERVATION",
+          "precision": "SEASON_ONLY",
+          "interpretationStatus": "MONTH_UNRESOLVED",
+          "months": [],
+          "seasons": [
+            "SPRING",
+            "SUMMER"
+          ],
+          "startMonth": null,
+          "endMonth": null,
+          "crossesYearBoundary": false,
+          "geographicContext": "NORTHWEST_PACIFIC",
+          "lifeStage": "ADULT",
+          "movement": "INSHORE",
+          "evidenceRefs": [
+            "pagrus-fishbase"
+          ],
+          "sourceType": "FISHBASE",
+          "limitations": [
+            "MONTH_UNRESOLVED",
+            "REGIONAL_SCOPE_NORTHWEST_PACIFIC_NOT_AUTOMATICALLY_GENERALIZED",
+            "LIFE_STAGE_ADULT"
+          ],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "migration",
+            "sourceEntryIndex": 0,
+            "sourceStatement": "성어가 늦봄과 여름 산란기에 더 얕은 수역으로 이동한다.",
+            "originalMonths": [],
+            "originalSeasons": [
+              "SPRING",
+              "SUMMER"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000751",
+      "koreanName": "감성돔",
+      "scientificName": "Acanthopagrus schlegelii",
+      "entries": [
+        {
+          "entryId": "BM-SPECIES-000751:spawning:1:1",
+          "context": "SPAWNING",
+          "evidenceSemantic": "SPAWNING_OBSERVATION",
+          "precision": "MONTH_RESOLVED",
+          "interpretationStatus": "MONTH_RESOLVED",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "seasons": [],
+          "startMonth": 3,
+          "endMonth": 7,
+          "crossesYearBoundary": false,
+          "geographicContext": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "movement": null,
+          "evidenceRefs": [
+            "blackporgy-mbris"
+          ],
+          "sourceType": "MBRIS",
+          "limitations": [],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "spawning",
+            "sourceEntryIndex": 0,
+            "sourceStatement": null,
+            "originalMonths": [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "originalSeasons": []
+          }
+        },
+        {
+          "entryId": "BM-SPECIES-000751:migration:1:1",
+          "context": "MIGRATION",
+          "evidenceSemantic": "MIGRATION_OBSERVATION",
+          "precision": "SEASON_ONLY",
+          "interpretationStatus": "MONTH_UNRESOLVED",
+          "months": [],
+          "seasons": [
+            "WINTER"
+          ],
+          "startMonth": null,
+          "endMonth": null,
+          "crossesYearBoundary": false,
+          "geographicContext": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "movement": "OFFSHORE",
+          "evidenceRefs": [
+            "blackporgy-mbris"
+          ],
+          "sourceType": "MBRIS",
+          "limitations": [
+            "MONTH_UNRESOLVED"
+          ],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "migration",
+            "sourceEntryIndex": 0,
+            "sourceStatement": "내만성 어종이지만 겨울철에는 더 깊은 곳으로 이동한다.",
+            "originalMonths": [],
+            "originalSeasons": [
+              "WINTER"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000188",
+      "koreanName": "농어",
+      "scientificName": "Lateolabrax japonicus",
+      "entries": [
+        {
+          "entryId": "BM-SPECIES-000188:spawning:1:1",
+          "context": "SPAWNING",
+          "evidenceSemantic": "SPAWNING_OBSERVATION",
+          "precision": "SEASON_ONLY",
+          "interpretationStatus": "MONTH_UNRESOLVED",
+          "months": [],
+          "seasons": [
+            "AUTUMN",
+            "WINTER"
+          ],
+          "startMonth": null,
+          "endMonth": null,
+          "crossesYearBoundary": false,
+          "geographicContext": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "movement": null,
+          "evidenceRefs": [
+            "seabass-mbris"
+          ],
+          "sourceType": "MBRIS",
+          "limitations": [
+            "MONTH_UNRESOLVED"
+          ],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "spawning",
+            "sourceEntryIndex": 0,
+            "sourceStatement": null,
+            "originalMonths": [],
+            "originalSeasons": [
+              "AUTUMN",
+              "WINTER"
+            ]
+          }
+        },
+        {
+          "entryId": "BM-SPECIES-000188:migration:1:1",
+          "context": "MIGRATION",
+          "evidenceSemantic": "MIGRATION_OBSERVATION",
+          "precision": "SEASON_ONLY",
+          "interpretationStatus": "MONTH_UNRESOLVED",
+          "months": [],
+          "seasons": [
+            "SPRING",
+            "SUMMER",
+            "AUTUMN",
+            "WINTER"
+          ],
+          "startMonth": null,
+          "endMonth": null,
+          "crossesYearBoundary": false,
+          "geographicContext": "KOREA",
+          "lifeStage": "JUVENILE",
+          "movement": "INSHORE_OFFSHORE",
+          "evidenceRefs": [
+            "seabass-mbris",
+            "seabass-fishbase"
+          ],
+          "sourceType": "MBRIS+FISHBASE",
+          "limitations": [
+            "MONTH_UNRESOLVED",
+            "LIFE_STAGE_JUVENILE"
+          ],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "migration",
+            "sourceEntryIndex": 0,
+            "sourceStatement": "치어는 봄·여름 담수로 올라가고 가을·겨울 바다로 내려가 산란한다.",
+            "originalMonths": [],
+            "originalSeasons": [
+              "SPRING",
+              "SUMMER",
+              "AUTUMN",
+              "WINTER"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "koreanName": "조피볼락",
+      "scientificName": "Sebastes schlegelii",
+      "entries": [
+        {
+          "entryId": "BM-SPECIES-000012:migration:1:1",
+          "context": "MIGRATION",
+          "evidenceSemantic": "MIGRATION_OBSERVATION",
+          "precision": "UNRESOLVED",
+          "interpretationStatus": "MONTH_UNRESOLVED",
+          "months": [],
+          "seasons": [],
+          "startMonth": null,
+          "endMonth": null,
+          "crossesYearBoundary": false,
+          "geographicContext": "REGIONAL_OTHER",
+          "lifeStage": "ADULT",
+          "movement": "SITE_FIDELITY",
+          "evidenceRefs": [
+            "rockfish-paper-2015"
+          ],
+          "sourceType": "PAPER",
+          "limitations": [
+            "NO_MONTH_OR_SEASON_PRECISION",
+            "REGIONAL_SCOPE_REGIONAL_OTHER_NOT_AUTOMATICALLY_GENERALIZED",
+            "LIFE_STAGE_ADULT"
+          ],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "migration",
+            "sourceEntryIndex": 0,
+            "sourceStatement": "음향추적 연구에서 짧은 이동과 강한 서식지 충실성이 관찰됐다.",
+            "originalMonths": [],
+            "originalSeasons": []
+          }
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000465",
+      "koreanName": "넙치",
+      "scientificName": "Paralichthys olivaceus",
+      "entries": [
+        {
+          "entryId": "BM-SPECIES-000465:spawning:1:1",
+          "context": "SPAWNING",
+          "evidenceSemantic": "SPAWNING_OBSERVATION",
+          "precision": "MONTH_RESOLVED",
+          "interpretationStatus": "MONTH_RESOLVED",
+          "months": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "seasons": [],
+          "startMonth": 2,
+          "endMonth": 6,
+          "crossesYearBoundary": false,
+          "geographicContext": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "movement": null,
+          "evidenceRefs": [
+            "flounder-mbris"
+          ],
+          "sourceType": "MBRIS",
+          "limitations": [],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "spawning",
+            "sourceEntryIndex": 0,
+            "sourceStatement": null,
+            "originalMonths": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "originalSeasons": []
+          }
+        },
+        {
+          "entryId": "BM-SPECIES-000465:migration:1:1",
+          "context": "MIGRATION",
+          "evidenceSemantic": "MIGRATION_OBSERVATION",
+          "precision": "SEASON_ONLY",
+          "interpretationStatus": "MONTH_UNRESOLVED",
+          "months": [],
+          "seasons": [
+            "SPRING",
+            "AUTUMN",
+            "WINTER"
+          ],
+          "startMonth": null,
+          "endMonth": null,
+          "crossesYearBoundary": false,
+          "geographicContext": "KOREA_WEST_COAST",
+          "lifeStage": "UNSPECIFIED",
+          "movement": "NORTHWARD_SOUTHWARD",
+          "evidenceRefs": [
+            "flounder-mbris"
+          ],
+          "sourceType": "MBRIS",
+          "limitations": [
+            "MONTH_UNRESOLVED",
+            "REGIONAL_SCOPE_KOREA_WEST_COAST_NOT_AUTOMATICALLY_GENERALIZED"
+          ],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "migration",
+            "sourceEntryIndex": 0,
+            "sourceStatement": "서해에서 겨울 흑산도 서쪽 월동 후 봄 북상하고 가을 남하한다.",
+            "originalMonths": [],
+            "originalSeasons": [
+              "SPRING",
+              "AUTUMN",
+              "WINTER"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000444",
+      "koreanName": "갈치",
+      "scientificName": "Trichiurus japonicus",
+      "entries": [
+        {
+          "entryId": "BM-SPECIES-000444:migration:1:1",
+          "context": "MIGRATION",
+          "evidenceSemantic": "MIGRATION_OBSERVATION",
+          "precision": "UNRESOLVED",
+          "interpretationStatus": "MONTH_UNRESOLVED",
+          "months": [],
+          "seasons": [],
+          "startMonth": null,
+          "endMonth": null,
+          "crossesYearBoundary": false,
+          "geographicContext": "KOREA",
+          "lifeStage": "ADULT",
+          "movement": "DIEL_VERTICAL",
+          "evidenceRefs": [
+            "hairtail-mbris"
+          ],
+          "sourceType": "MBRIS",
+          "limitations": [
+            "NO_MONTH_OR_SEASON_PRECISION",
+            "LIFE_STAGE_ADULT"
+          ],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "migration",
+            "sourceEntryIndex": 0,
+            "sourceStatement": "성어는 낮에 수면 가까이에서 먹고 밤에는 저층으로 이동한다.",
+            "originalMonths": [],
+            "originalSeasons": []
+          }
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000417",
+      "koreanName": "고등어",
+      "scientificName": "Scomber japonicus",
+      "entries": [
+        {
+          "entryId": "BM-SPECIES-000417:spawning:1:1",
+          "context": "SPAWNING",
+          "evidenceSemantic": "SPAWNING_OBSERVATION",
+          "precision": "UNRESOLVED",
+          "interpretationStatus": "MONTH_UNRESOLVED",
+          "months": [],
+          "seasons": [],
+          "startMonth": null,
+          "endMonth": null,
+          "crossesYearBoundary": false,
+          "geographicContext": "GLOBAL",
+          "lifeStage": "UNSPECIFIED",
+          "movement": null,
+          "evidenceRefs": [
+            "mackerel-fishbase"
+          ],
+          "sourceType": "FISHBASE",
+          "limitations": [
+            "NO_MONTH_OR_SEASON_PRECISION",
+            "REGIONAL_SCOPE_GLOBAL_NOT_AUTOMATICALLY_GENERALIZED"
+          ],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "spawning",
+            "sourceEntryIndex": 0,
+            "sourceStatement": null,
+            "originalMonths": [],
+            "originalSeasons": []
+          }
+        },
+        {
+          "entryId": "BM-SPECIES-000417:migration:1:1",
+          "context": "MIGRATION",
+          "evidenceSemantic": "MIGRATION_OBSERVATION",
+          "precision": "MONTH_RESOLVED",
+          "interpretationStatus": "MONTH_RESOLVED",
+          "months": [
+            2,
+            3
+          ],
+          "seasons": [],
+          "startMonth": 2,
+          "endMonth": 3,
+          "crossesYearBoundary": false,
+          "geographicContext": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "movement": "NORTHWARD",
+          "evidenceRefs": [
+            "mackerel-mbris"
+          ],
+          "sourceType": "MBRIS",
+          "limitations": [],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "migration",
+            "sourceEntryIndex": 0,
+            "sourceStatement": "2~3월 제주도에서 동·서해로 북상",
+            "originalMonths": [
+              1,
+              2,
+              3,
+              9,
+              10,
+              11,
+              12
+            ],
+            "originalSeasons": []
+          }
+        },
+        {
+          "entryId": "BM-SPECIES-000417:migration:1:2",
+          "context": "MIGRATION",
+          "evidenceSemantic": "MIGRATION_OBSERVATION",
+          "precision": "MONTH_RESOLVED",
+          "interpretationStatus": "MONTH_RESOLVED",
+          "months": [
+            9,
+            10,
+            11,
+            12,
+            1
+          ],
+          "seasons": [],
+          "startMonth": 9,
+          "endMonth": 1,
+          "crossesYearBoundary": true,
+          "geographicContext": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "movement": "SOUTHWARD",
+          "evidenceRefs": [
+            "mackerel-mbris"
+          ],
+          "sourceType": "MBRIS",
+          "limitations": [],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "migration",
+            "sourceEntryIndex": 0,
+            "sourceStatement": "9월부터 이듬해 1월 남하",
+            "originalMonths": [
+              1,
+              2,
+              3,
+              9,
+              10,
+              11,
+              12
+            ],
+            "originalSeasons": []
+          }
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "koreanName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "entries": [
+        {
+          "entryId": "BM-SPECIES-000501:spawning:1:1",
+          "context": "SPAWNING",
+          "evidenceSemantic": "SPAWNING_OBSERVATION",
+          "precision": "UNRESOLVED",
+          "interpretationStatus": "MONTH_UNRESOLVED",
+          "months": [],
+          "seasons": [],
+          "startMonth": null,
+          "endMonth": null,
+          "crossesYearBoundary": false,
+          "geographicContext": "NORTHWEST_PACIFIC",
+          "lifeStage": "UNSPECIFIED",
+          "movement": null,
+          "evidenceRefs": [
+            "amberjack-fao-aquaculture-v2"
+          ],
+          "sourceType": "FAO",
+          "limitations": [
+            "NO_MONTH_OR_SEASON_PRECISION",
+            "REGIONAL_SCOPE_NORTHWEST_PACIFIC_NOT_AUTOMATICALLY_GENERALIZED"
+          ],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "spawning",
+            "sourceEntryIndex": 0,
+            "sourceStatement": null,
+            "originalMonths": [],
+            "originalSeasons": []
+          }
+        },
+        {
+          "entryId": "BM-SPECIES-000501:migration:1:1",
+          "context": "MIGRATION",
+          "evidenceSemantic": "MIGRATION_OBSERVATION",
+          "precision": "UNRESOLVED",
+          "interpretationStatus": "MONTH_UNRESOLVED",
+          "months": [],
+          "seasons": [],
+          "startMonth": null,
+          "endMonth": null,
+          "crossesYearBoundary": false,
+          "geographicContext": "NORTHWEST_PACIFIC",
+          "lifeStage": "UNSPECIFIED",
+          "movement": "OCEANODROMOUS",
+          "evidenceRefs": [
+            "amberjack-fishbase"
+          ],
+          "sourceType": "FISHBASE",
+          "limitations": [
+            "NO_MONTH_OR_SEASON_PRECISION",
+            "REGIONAL_SCOPE_NORTHWEST_PACIFIC_NOT_AUTOMATICALLY_GENERALIZED"
+          ],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "migration",
+            "sourceEntryIndex": 0,
+            "sourceStatement": "해양 회유성으로 분류되지만 V1 근거에는 한국 계절·방향 정보가 없다.",
+            "originalMonths": [],
+            "originalSeasons": []
+          }
+        },
+        {
+          "entryId": "BM-SPECIES-000501:migration:2:1",
+          "context": "MIGRATION",
+          "evidenceSemantic": "MIGRATION_OBSERVATION",
+          "precision": "UNRESOLVED",
+          "interpretationStatus": "MONTH_UNRESOLVED",
+          "months": [],
+          "seasons": [],
+          "startMonth": null,
+          "endMonth": null,
+          "crossesYearBoundary": false,
+          "geographicContext": "NORTHWEST_PACIFIC",
+          "lifeStage": "ADULT",
+          "movement": "SOUTHWARD_SPAWNING_MIGRATION",
+          "evidenceRefs": [
+            "amberjack-fao-aquaculture-v2"
+          ],
+          "sourceType": "FAO",
+          "limitations": [
+            "NO_MONTH_OR_SEASON_PRECISION",
+            "REGIONAL_SCOPE_NORTHWEST_PACIFIC_NOT_AUTOMATICALLY_GENERALIZED",
+            "LIFE_STAGE_ADULT"
+          ],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "migration",
+            "sourceEntryIndex": 1,
+            "sourceStatement": "성숙 개체가 산란을 위해 남하하는 생활사를 FAO가 기술한다.",
+            "originalMonths": [],
+            "originalSeasons": []
+          }
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-003107",
+      "koreanName": "주꾸미",
+      "scientificName": "Amphioctopus fangsiao",
+      "entries": [
+        {
+          "entryId": "BM-SPECIES-003107:spawning:1:1",
+          "context": "SPAWNING",
+          "evidenceSemantic": "SPAWNING_OBSERVATION",
+          "precision": "MONTH_RESOLVED",
+          "interpretationStatus": "MONTH_RESOLVED",
+          "months": [
+            12,
+            1,
+            2
+          ],
+          "seasons": [],
+          "startMonth": 12,
+          "endMonth": 2,
+          "crossesYearBoundary": true,
+          "geographicContext": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "movement": null,
+          "evidenceRefs": [
+            "webfoot-mbris"
+          ],
+          "sourceType": "MBRIS",
+          "limitations": [],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "spawning",
+            "sourceEntryIndex": 0,
+            "sourceStatement": null,
+            "originalMonths": [
+              12,
+              1,
+              2
+            ],
+            "originalSeasons": []
+          }
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-003111",
+      "koreanName": "문어",
+      "scientificName": "Enteroctopus dofleini",
+      "entries": [
+        {
+          "entryId": "BM-SPECIES-003111:migration:1:1",
+          "context": "MIGRATION",
+          "evidenceSemantic": "MIGRATION_OBSERVATION",
+          "precision": "SEASON_ONLY",
+          "interpretationStatus": "MONTH_UNRESOLVED",
+          "months": [],
+          "seasons": [
+            "SPRING",
+            "SUMMER",
+            "AUTUMN",
+            "WINTER"
+          ],
+          "startMonth": null,
+          "endMonth": null,
+          "crossesYearBoundary": false,
+          "geographicContext": "REGIONAL_OTHER",
+          "lifeStage": "IMMATURE",
+          "movement": "SEASONAL_VERTICAL",
+          "evidenceRefs": [
+            "gpo-paper-2017"
+          ],
+          "sourceType": "PAPER",
+          "limitations": [
+            "MONTH_UNRESOLVED",
+            "REGIONAL_SCOPE_REGIONAL_OTHER_NOT_AUTOMATICALLY_GENERALIZED",
+            "LIFE_STAGE_IMMATURE"
+          ],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "migration",
+            "sourceEntryIndex": 0,
+            "sourceStatement": "북부 홋카이도 어업자료에서 계절별 수심 분포 변화가 확인됐다. 한국 범위로 일반화하지 않는다.",
+            "originalMonths": [],
+            "originalSeasons": [
+              "SPRING",
+              "SUMMER",
+              "AUTUMN",
+              "WINTER"
+            ]
+          }
+        },
+        {
+          "entryId": "BM-SPECIES-003111:migration:2:1",
+          "context": "MIGRATION",
+          "evidenceSemantic": "MIGRATION_OBSERVATION",
+          "precision": "MONTH_RESOLVED",
+          "interpretationStatus": "MONTH_RESOLVED",
+          "months": [
+            12,
+            1,
+            2,
+            3,
+            4
+          ],
+          "seasons": [],
+          "startMonth": 12,
+          "endMonth": 4,
+          "crossesYearBoundary": true,
+          "geographicContext": "OTHER_REGIONAL",
+          "lifeStage": "IMMATURE",
+          "movement": "SHALLOW_COASTAL_RESIDENCE",
+          "evidenceRefs": [
+            "gpo-seasonal-migration-temperature-v2"
+          ],
+          "sourceType": "PAPER",
+          "limitations": [
+            "REGIONAL_SCOPE_OTHER_REGIONAL_NOT_AUTOMATICALLY_GENERALIZED",
+            "LIFE_STAGE_IMMATURE"
+          ],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "migration",
+            "sourceEntryIndex": 1,
+            "sourceStatement": "소야 해협 미성숙 개체는 12~4월 얕은 연안에 머물렀다.",
+            "originalMonths": [
+              12,
+              1,
+              2,
+              3,
+              4
+            ],
+            "originalSeasons": []
+          }
+        },
+        {
+          "entryId": "BM-SPECIES-003111:migration:3:1",
+          "context": "MIGRATION",
+          "evidenceSemantic": "MIGRATION_OBSERVATION",
+          "precision": "MONTH_RESOLVED",
+          "interpretationStatus": "MONTH_RESOLVED",
+          "months": [
+            6,
+            7
+          ],
+          "seasons": [],
+          "startMonth": 6,
+          "endMonth": 7,
+          "crossesYearBoundary": false,
+          "geographicContext": "OTHER_REGIONAL",
+          "lifeStage": "IMMATURE",
+          "movement": "OFFSHORE_DEEPER",
+          "evidenceRefs": [
+            "gpo-seasonal-migration-temperature-v2"
+          ],
+          "sourceType": "PAPER",
+          "limitations": [
+            "REGIONAL_SCOPE_OTHER_REGIONAL_NOT_AUTOMATICALLY_GENERALIZED",
+            "LIFE_STAGE_IMMATURE"
+          ],
+          "sourceSpeciesProfileVersion": "V2",
+          "sourceContext": {
+            "profileField": "migration",
+            "sourceEntryIndex": 2,
+            "sourceStatement": "연안 수온이 10~20°C로 상승한 6~7월 더 깊은 수역으로 이동했다.",
+            "originalMonths": [
+              6,
+              7
+            ],
+            "originalSeasons": []
+          }
+        }
+      ]
+    }
+  ]
+}

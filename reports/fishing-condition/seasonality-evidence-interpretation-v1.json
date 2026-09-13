@@ -1,0 +1,737 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-13T00:00:00.000Z",
+  "decision": "SEASONALITY_PARTIALLY_READY",
+  "rationale": "Six of ten profiles have month-resolved evidence, but fishery-occurrence coverage is absent and several migration records are season-only, region-limited, life-stage-limited, or month-unresolved.",
+  "source": {
+    "path": "data/fishing-condition/species-environment/v2/species-environment-profiles.json",
+    "sha256": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
+    "profileCount": 10
+  },
+  "coverage": {
+    "species": 10,
+    "contexts": {
+      "spawningSpecies": 7,
+      "migrationSpecies": 9,
+      "fisheryOccurrenceSpecies": 0
+    },
+    "entries": {
+      "total": 20,
+      "monthResolved": 8,
+      "seasonOnly": 6,
+      "monthUnresolved": 6
+    },
+    "monthResolvedSpecies": 6,
+    "unresolvedSpecies": 4,
+    "regionalLimitations": 10,
+    "lifeStageLimitations": 8,
+    "conflicts": 0,
+    "unsupported": {
+      "noContextSpecies": [],
+      "noMonthResolvedSpecies": [
+        "BM-SPECIES-000188",
+        "BM-SPECIES-000012",
+        "BM-SPECIES-000444",
+        "BM-SPECIES-000501"
+      ]
+    }
+  },
+  "species": [
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "koreanName": "참돔",
+      "contexts": [
+        "SPAWNING",
+        "MIGRATION"
+      ],
+      "monthResolvedEntries": 1,
+      "seasonOnlyEntries": 1,
+      "unresolvedEntries": 0,
+      "entries": [
+        {
+          "context": "SPAWNING",
+          "months": [
+            5,
+            6
+          ],
+          "seasons": [],
+          "region": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "evidenceRefs": [
+            "pagrus-mbris"
+          ],
+          "limitations": []
+        },
+        {
+          "context": "MIGRATION",
+          "months": [],
+          "seasons": [
+            "SPRING",
+            "SUMMER"
+          ],
+          "region": "NORTHWEST_PACIFIC",
+          "lifeStage": "ADULT",
+          "evidenceRefs": [
+            "pagrus-fishbase"
+          ],
+          "limitations": [
+            "MONTH_UNRESOLVED",
+            "REGIONAL_SCOPE_NORTHWEST_PACIFIC_NOT_AUTOMATICALLY_GENERALIZED",
+            "LIFE_STAGE_ADULT"
+          ]
+        }
+      ],
+      "evidenceRefs": [
+        "pagrus-mbris",
+        "pagrus-fishbase"
+      ],
+      "limitations": [
+        "MONTH_UNRESOLVED",
+        "REGIONAL_SCOPE_NORTHWEST_PACIFIC_NOT_AUTOMATICALLY_GENERALIZED",
+        "LIFE_STAGE_ADULT"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000751",
+      "koreanName": "감성돔",
+      "contexts": [
+        "SPAWNING",
+        "MIGRATION"
+      ],
+      "monthResolvedEntries": 1,
+      "seasonOnlyEntries": 1,
+      "unresolvedEntries": 0,
+      "entries": [
+        {
+          "context": "SPAWNING",
+          "months": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "seasons": [],
+          "region": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "evidenceRefs": [
+            "blackporgy-mbris"
+          ],
+          "limitations": []
+        },
+        {
+          "context": "MIGRATION",
+          "months": [],
+          "seasons": [
+            "WINTER"
+          ],
+          "region": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "evidenceRefs": [
+            "blackporgy-mbris"
+          ],
+          "limitations": [
+            "MONTH_UNRESOLVED"
+          ]
+        }
+      ],
+      "evidenceRefs": [
+        "blackporgy-mbris"
+      ],
+      "limitations": [
+        "MONTH_UNRESOLVED"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000188",
+      "koreanName": "농어",
+      "contexts": [
+        "SPAWNING",
+        "MIGRATION"
+      ],
+      "monthResolvedEntries": 0,
+      "seasonOnlyEntries": 2,
+      "unresolvedEntries": 0,
+      "entries": [
+        {
+          "context": "SPAWNING",
+          "months": [],
+          "seasons": [
+            "AUTUMN",
+            "WINTER"
+          ],
+          "region": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "evidenceRefs": [
+            "seabass-mbris"
+          ],
+          "limitations": [
+            "MONTH_UNRESOLVED"
+          ]
+        },
+        {
+          "context": "MIGRATION",
+          "months": [],
+          "seasons": [
+            "SPRING",
+            "SUMMER",
+            "AUTUMN",
+            "WINTER"
+          ],
+          "region": "KOREA",
+          "lifeStage": "JUVENILE",
+          "evidenceRefs": [
+            "seabass-mbris",
+            "seabass-fishbase"
+          ],
+          "limitations": [
+            "MONTH_UNRESOLVED",
+            "LIFE_STAGE_JUVENILE"
+          ]
+        }
+      ],
+      "evidenceRefs": [
+        "seabass-mbris",
+        "seabass-fishbase"
+      ],
+      "limitations": [
+        "MONTH_UNRESOLVED",
+        "LIFE_STAGE_JUVENILE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "koreanName": "조피볼락",
+      "contexts": [
+        "MIGRATION"
+      ],
+      "monthResolvedEntries": 0,
+      "seasonOnlyEntries": 0,
+      "unresolvedEntries": 1,
+      "entries": [
+        {
+          "context": "MIGRATION",
+          "months": [],
+          "seasons": [],
+          "region": "REGIONAL_OTHER",
+          "lifeStage": "ADULT",
+          "evidenceRefs": [
+            "rockfish-paper-2015"
+          ],
+          "limitations": [
+            "NO_MONTH_OR_SEASON_PRECISION",
+            "REGIONAL_SCOPE_REGIONAL_OTHER_NOT_AUTOMATICALLY_GENERALIZED",
+            "LIFE_STAGE_ADULT"
+          ]
+        }
+      ],
+      "evidenceRefs": [
+        "rockfish-paper-2015"
+      ],
+      "limitations": [
+        "NO_MONTH_OR_SEASON_PRECISION",
+        "REGIONAL_SCOPE_REGIONAL_OTHER_NOT_AUTOMATICALLY_GENERALIZED",
+        "LIFE_STAGE_ADULT"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000465",
+      "koreanName": "넙치",
+      "contexts": [
+        "SPAWNING",
+        "MIGRATION"
+      ],
+      "monthResolvedEntries": 1,
+      "seasonOnlyEntries": 1,
+      "unresolvedEntries": 0,
+      "entries": [
+        {
+          "context": "SPAWNING",
+          "months": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "seasons": [],
+          "region": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "evidenceRefs": [
+            "flounder-mbris"
+          ],
+          "limitations": []
+        },
+        {
+          "context": "MIGRATION",
+          "months": [],
+          "seasons": [
+            "SPRING",
+            "AUTUMN",
+            "WINTER"
+          ],
+          "region": "KOREA_WEST_COAST",
+          "lifeStage": "UNSPECIFIED",
+          "evidenceRefs": [
+            "flounder-mbris"
+          ],
+          "limitations": [
+            "MONTH_UNRESOLVED",
+            "REGIONAL_SCOPE_KOREA_WEST_COAST_NOT_AUTOMATICALLY_GENERALIZED"
+          ]
+        }
+      ],
+      "evidenceRefs": [
+        "flounder-mbris"
+      ],
+      "limitations": [
+        "MONTH_UNRESOLVED",
+        "REGIONAL_SCOPE_KOREA_WEST_COAST_NOT_AUTOMATICALLY_GENERALIZED"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000444",
+      "koreanName": "갈치",
+      "contexts": [
+        "MIGRATION"
+      ],
+      "monthResolvedEntries": 0,
+      "seasonOnlyEntries": 0,
+      "unresolvedEntries": 1,
+      "entries": [
+        {
+          "context": "MIGRATION",
+          "months": [],
+          "seasons": [],
+          "region": "KOREA",
+          "lifeStage": "ADULT",
+          "evidenceRefs": [
+            "hairtail-mbris"
+          ],
+          "limitations": [
+            "NO_MONTH_OR_SEASON_PRECISION",
+            "LIFE_STAGE_ADULT"
+          ]
+        }
+      ],
+      "evidenceRefs": [
+        "hairtail-mbris"
+      ],
+      "limitations": [
+        "NO_MONTH_OR_SEASON_PRECISION",
+        "LIFE_STAGE_ADULT"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000417",
+      "koreanName": "고등어",
+      "contexts": [
+        "SPAWNING",
+        "MIGRATION"
+      ],
+      "monthResolvedEntries": 2,
+      "seasonOnlyEntries": 0,
+      "unresolvedEntries": 1,
+      "entries": [
+        {
+          "context": "SPAWNING",
+          "months": [],
+          "seasons": [],
+          "region": "GLOBAL",
+          "lifeStage": "UNSPECIFIED",
+          "evidenceRefs": [
+            "mackerel-fishbase"
+          ],
+          "limitations": [
+            "NO_MONTH_OR_SEASON_PRECISION",
+            "REGIONAL_SCOPE_GLOBAL_NOT_AUTOMATICALLY_GENERALIZED"
+          ]
+        },
+        {
+          "context": "MIGRATION",
+          "months": [
+            2,
+            3
+          ],
+          "seasons": [],
+          "region": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "evidenceRefs": [
+            "mackerel-mbris"
+          ],
+          "limitations": []
+        },
+        {
+          "context": "MIGRATION",
+          "months": [
+            9,
+            10,
+            11,
+            12,
+            1
+          ],
+          "seasons": [],
+          "region": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "evidenceRefs": [
+            "mackerel-mbris"
+          ],
+          "limitations": []
+        }
+      ],
+      "evidenceRefs": [
+        "mackerel-fishbase",
+        "mackerel-mbris"
+      ],
+      "limitations": [
+        "NO_MONTH_OR_SEASON_PRECISION",
+        "REGIONAL_SCOPE_GLOBAL_NOT_AUTOMATICALLY_GENERALIZED"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "koreanName": "방어",
+      "contexts": [
+        "SPAWNING",
+        "MIGRATION"
+      ],
+      "monthResolvedEntries": 0,
+      "seasonOnlyEntries": 0,
+      "unresolvedEntries": 3,
+      "entries": [
+        {
+          "context": "SPAWNING",
+          "months": [],
+          "seasons": [],
+          "region": "NORTHWEST_PACIFIC",
+          "lifeStage": "UNSPECIFIED",
+          "evidenceRefs": [
+            "amberjack-fao-aquaculture-v2"
+          ],
+          "limitations": [
+            "NO_MONTH_OR_SEASON_PRECISION",
+            "REGIONAL_SCOPE_NORTHWEST_PACIFIC_NOT_AUTOMATICALLY_GENERALIZED"
+          ]
+        },
+        {
+          "context": "MIGRATION",
+          "months": [],
+          "seasons": [],
+          "region": "NORTHWEST_PACIFIC",
+          "lifeStage": "UNSPECIFIED",
+          "evidenceRefs": [
+            "amberjack-fishbase"
+          ],
+          "limitations": [
+            "NO_MONTH_OR_SEASON_PRECISION",
+            "REGIONAL_SCOPE_NORTHWEST_PACIFIC_NOT_AUTOMATICALLY_GENERALIZED"
+          ]
+        },
+        {
+          "context": "MIGRATION",
+          "months": [],
+          "seasons": [],
+          "region": "NORTHWEST_PACIFIC",
+          "lifeStage": "ADULT",
+          "evidenceRefs": [
+            "amberjack-fao-aquaculture-v2"
+          ],
+          "limitations": [
+            "NO_MONTH_OR_SEASON_PRECISION",
+            "REGIONAL_SCOPE_NORTHWEST_PACIFIC_NOT_AUTOMATICALLY_GENERALIZED",
+            "LIFE_STAGE_ADULT"
+          ]
+        }
+      ],
+      "evidenceRefs": [
+        "amberjack-fao-aquaculture-v2",
+        "amberjack-fishbase"
+      ],
+      "limitations": [
+        "NO_MONTH_OR_SEASON_PRECISION",
+        "REGIONAL_SCOPE_NORTHWEST_PACIFIC_NOT_AUTOMATICALLY_GENERALIZED",
+        "LIFE_STAGE_ADULT"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-003107",
+      "koreanName": "주꾸미",
+      "contexts": [
+        "SPAWNING"
+      ],
+      "monthResolvedEntries": 1,
+      "seasonOnlyEntries": 0,
+      "unresolvedEntries": 0,
+      "entries": [
+        {
+          "context": "SPAWNING",
+          "months": [
+            12,
+            1,
+            2
+          ],
+          "seasons": [],
+          "region": "KOREA",
+          "lifeStage": "UNSPECIFIED",
+          "evidenceRefs": [
+            "webfoot-mbris"
+          ],
+          "limitations": []
+        }
+      ],
+      "evidenceRefs": [
+        "webfoot-mbris"
+      ],
+      "limitations": []
+    },
+    {
+      "speciesId": "BM-SPECIES-003111",
+      "koreanName": "문어",
+      "contexts": [
+        "MIGRATION"
+      ],
+      "monthResolvedEntries": 2,
+      "seasonOnlyEntries": 1,
+      "unresolvedEntries": 0,
+      "entries": [
+        {
+          "context": "MIGRATION",
+          "months": [],
+          "seasons": [
+            "SPRING",
+            "SUMMER",
+            "AUTUMN",
+            "WINTER"
+          ],
+          "region": "REGIONAL_OTHER",
+          "lifeStage": "IMMATURE",
+          "evidenceRefs": [
+            "gpo-paper-2017"
+          ],
+          "limitations": [
+            "MONTH_UNRESOLVED",
+            "REGIONAL_SCOPE_REGIONAL_OTHER_NOT_AUTOMATICALLY_GENERALIZED",
+            "LIFE_STAGE_IMMATURE"
+          ]
+        },
+        {
+          "context": "MIGRATION",
+          "months": [
+            12,
+            1,
+            2,
+            3,
+            4
+          ],
+          "seasons": [],
+          "region": "OTHER_REGIONAL",
+          "lifeStage": "IMMATURE",
+          "evidenceRefs": [
+            "gpo-seasonal-migration-temperature-v2"
+          ],
+          "limitations": [
+            "REGIONAL_SCOPE_OTHER_REGIONAL_NOT_AUTOMATICALLY_GENERALIZED",
+            "LIFE_STAGE_IMMATURE"
+          ]
+        },
+        {
+          "context": "MIGRATION",
+          "months": [
+            6,
+            7
+          ],
+          "seasons": [],
+          "region": "OTHER_REGIONAL",
+          "lifeStage": "IMMATURE",
+          "evidenceRefs": [
+            "gpo-seasonal-migration-temperature-v2"
+          ],
+          "limitations": [
+            "REGIONAL_SCOPE_OTHER_REGIONAL_NOT_AUTOMATICALLY_GENERALIZED",
+            "LIFE_STAGE_IMMATURE"
+          ]
+        }
+      ],
+      "evidenceRefs": [
+        "gpo-paper-2017",
+        "gpo-seasonal-migration-temperature-v2"
+      ],
+      "limitations": [
+        "MONTH_UNRESOLVED",
+        "REGIONAL_SCOPE_REGIONAL_OTHER_NOT_AUTOMATICALLY_GENERALIZED",
+        "LIFE_STAGE_IMMATURE",
+        "REGIONAL_SCOPE_OTHER_REGIONAL_NOT_AUTOMATICALLY_GENERALIZED"
+      ]
+    }
+  ],
+  "deterministicChecks": {
+    "explicitMonthOnly": true,
+    "crossYearRangesSupported": true,
+    "multipleEvidencePreserved": true,
+    "conflictMerging": false,
+    "automaticRegionMapping": false,
+    "numericConversion": false,
+    "overallSeasonGrade": false
+  },
+  "representativeVerification": [
+    {
+      "species": "참돔",
+      "request": {
+        "speciesId": "BM-SPECIES-000755",
+        "context": "SPAWNING",
+        "month": 5
+      },
+      "result": {
+        "speciesId": "BM-SPECIES-000755",
+        "context": "SPAWNING",
+        "month": 5,
+        "geographicContext": null,
+        "evidence": [
+          {
+            "entryId": "BM-SPECIES-000755:spawning:1:1",
+            "status": "SEASONAL_MATCH",
+            "relation": "MATCH",
+            "explanation": "이 근거에서는 5~6월을 산란 시기로 제시합니다. 요청한 5월은 해당 산란 시기 범위에 포함됩니다. 산란 시기 정보는 어획 가능성을 의미하지 않습니다.",
+            "evidenceRefs": [
+              "pagrus-mbris"
+            ],
+            "limitations": []
+          }
+        ]
+      }
+    },
+    {
+      "species": "고등어",
+      "request": {
+        "speciesId": "BM-SPECIES-000417",
+        "context": "MIGRATION",
+        "month": 8
+      },
+      "result": {
+        "speciesId": "BM-SPECIES-000417",
+        "context": "MIGRATION",
+        "month": 8,
+        "geographicContext": null,
+        "evidence": [
+          {
+            "entryId": "BM-SPECIES-000417:migration:1:1",
+            "status": "SEASONAL_MISMATCH",
+            "relation": "MISMATCH",
+            "explanation": "이 근거에서는 2~3월을 이동 시기로 제시합니다. 요청한 8월은 해당 이동 시기 범위에 포함되지 않습니다. 이 근거는 어획 가능성이나 특정 지역 존재를 보장하지 않습니다.",
+            "evidenceRefs": [
+              "mackerel-mbris"
+            ],
+            "limitations": []
+          },
+          {
+            "entryId": "BM-SPECIES-000417:migration:1:2",
+            "status": "SEASONAL_MISMATCH",
+            "relation": "MISMATCH",
+            "explanation": "이 근거에서는 9~1월을 이동 시기로 제시합니다. 요청한 8월은 해당 이동 시기 범위에 포함되지 않습니다. 이 근거는 어획 가능성이나 특정 지역 존재를 보장하지 않습니다.",
+            "evidenceRefs": [
+              "mackerel-mbris"
+            ],
+            "limitations": []
+          }
+        ]
+      }
+    },
+    {
+      "species": "방어",
+      "request": {
+        "speciesId": "BM-SPECIES-000501",
+        "context": "MIGRATION",
+        "month": 5
+      },
+      "result": {
+        "speciesId": "BM-SPECIES-000501",
+        "context": "MIGRATION",
+        "month": 5,
+        "geographicContext": null,
+        "evidence": [
+          {
+            "entryId": "BM-SPECIES-000501:migration:1:1",
+            "status": "MONTH_UNRESOLVED",
+            "relation": null,
+            "explanation": "이 근거는 월 미확정 수준으로만 제시되어 월 단위 관계를 판정하지 않습니다.",
+            "evidenceRefs": [
+              "amberjack-fishbase"
+            ],
+            "limitations": [
+              "NO_MONTH_OR_SEASON_PRECISION",
+              "REGIONAL_SCOPE_NORTHWEST_PACIFIC_NOT_AUTOMATICALLY_GENERALIZED"
+            ]
+          },
+          {
+            "entryId": "BM-SPECIES-000501:migration:2:1",
+            "status": "MONTH_UNRESOLVED",
+            "relation": null,
+            "explanation": "이 근거는 월 미확정 수준으로만 제시되어 월 단위 관계를 판정하지 않습니다.",
+            "evidenceRefs": [
+              "amberjack-fao-aquaculture-v2"
+            ],
+            "limitations": [
+              "NO_MONTH_OR_SEASON_PRECISION",
+              "REGIONAL_SCOPE_NORTHWEST_PACIFIC_NOT_AUTOMATICALLY_GENERALIZED",
+              "LIFE_STAGE_ADULT"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "species": "주꾸미",
+      "request": {
+        "speciesId": "BM-SPECIES-003107",
+        "context": "SPAWNING",
+        "month": 1
+      },
+      "result": {
+        "speciesId": "BM-SPECIES-003107",
+        "context": "SPAWNING",
+        "month": 1,
+        "geographicContext": null,
+        "evidence": [
+          {
+            "entryId": "BM-SPECIES-003107:spawning:1:1",
+            "status": "SEASONAL_MATCH",
+            "relation": "MATCH",
+            "explanation": "이 근거에서는 12~2월을 산란 시기로 제시합니다. 요청한 1월은 해당 산란 시기 범위에 포함됩니다. 산란 시기 정보는 어획 가능성을 의미하지 않습니다.",
+            "evidenceRefs": [
+              "webfoot-mbris"
+            ],
+            "limitations": []
+          }
+        ]
+      }
+    }
+  ],
+  "forbiddenWordingScan": {
+    "scope": "generated explanations",
+    "terms": [
+      "잘 잡힙니다",
+      "낚시하기 좋은",
+      "출조 추천",
+      "GOOD",
+      "FAVORABLE",
+      "HIGH_PROBABILITY",
+      "PEAK_CATCH"
+    ],
+    "findings": 0
+  },
+  "immutability": {
+    "v2": {
+      "sha256": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
+      "unchanged": true
+    },
+    "v3": {
+      "sha256": "880066b3eefd2100ea870a674504492b8d70da9700a660350fb296ea5bc7a376",
+      "unchanged": true
+    }
+  },
+  "writes": {
+    "database": 0,
+    "supabase": 0,
+    "externalAi": 0
+  }
+}
