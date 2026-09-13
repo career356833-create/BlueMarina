@@ -1,0 +1,201 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-13T10:20:04.814Z",
+  "experiment": "TEMPERATURE_RELATION_DISTANCE_V1",
+  "scope": "OFFLINE_SINGLE_SPECIES_SINGLE_FIELD_RESEARCH",
+  "speciesId": "BM-SPECIES-000417",
+  "speciesName": "고등어",
+  "scientificName": "Scomber japonicus",
+  "variable": "temperature",
+  "sourceId": "nifs-risa",
+  "profile": {
+    "min": 15,
+    "max": 16,
+    "unit": "degC",
+    "rangeType": "PREFERRED",
+    "rangeContext": "PREFERRED_TEMPERATURE",
+    "lifeStage": "UNSPECIFIED",
+    "regionScope": "KOREA",
+    "evidenceRefs": [
+      "mackerel-mbris"
+    ],
+    "evidence": [
+      {
+        "id": "mackerel-mbris",
+        "sourceType": "MBRIS",
+        "title": "MBRIS 생물종 상세정보: 고등어",
+        "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016166",
+        "publicationYear": null,
+        "regionScope": "KOREA",
+        "evidenceType": "PREFERRED_TEMPERATURE_DEPTH_MIGRATION_FEEDING",
+        "quoteOrSummary": "15~16℃ 선호, 표층부터 300m 이내, 한국 근해의 계절 북상·남하 및 먹이 구성을 기술한다."
+      }
+    ]
+  },
+  "formulas": {
+    "signedDistanceToRange": "value < min ? value - min : value > max ? value - max : 0",
+    "absoluteDistanceToRange": "abs(signedDistanceToRange)",
+    "rangeWidth": "max - min",
+    "researchNormalizedDistance": "absoluteDistanceToRange / rangeWidth"
+  },
+  "cases": [
+    {
+      "observedValue": 5,
+      "unit": "degC",
+      "relation": "BELOW_RANGE",
+      "signedDistanceToRange": -10,
+      "absoluteDistanceToRange": 10,
+      "rangeWidth": 1,
+      "researchNormalizedDistance": 10,
+      "caseType": "SYNTHETIC_BOUNDARY",
+      "sourceObservation": false
+    },
+    {
+      "observedValue": 10,
+      "unit": "degC",
+      "relation": "BELOW_RANGE",
+      "signedDistanceToRange": -5,
+      "absoluteDistanceToRange": 5,
+      "rangeWidth": 1,
+      "researchNormalizedDistance": 5,
+      "caseType": "SYNTHETIC_BOUNDARY",
+      "sourceObservation": false
+    },
+    {
+      "observedValue": 14,
+      "unit": "degC",
+      "relation": "BELOW_RANGE",
+      "signedDistanceToRange": -1,
+      "absoluteDistanceToRange": 1,
+      "rangeWidth": 1,
+      "researchNormalizedDistance": 1,
+      "caseType": "SYNTHETIC_BOUNDARY",
+      "sourceObservation": false
+    },
+    {
+      "observedValue": 15,
+      "unit": "degC",
+      "relation": "WITHIN_RANGE",
+      "signedDistanceToRange": 0,
+      "absoluteDistanceToRange": 0,
+      "rangeWidth": 1,
+      "researchNormalizedDistance": 0,
+      "caseType": "SYNTHETIC_BOUNDARY",
+      "sourceObservation": false
+    },
+    {
+      "observedValue": 15.5,
+      "unit": "degC",
+      "relation": "WITHIN_RANGE",
+      "signedDistanceToRange": 0,
+      "absoluteDistanceToRange": 0,
+      "rangeWidth": 1,
+      "researchNormalizedDistance": 0,
+      "caseType": "SYNTHETIC_BOUNDARY",
+      "sourceObservation": false
+    },
+    {
+      "observedValue": 16,
+      "unit": "degC",
+      "relation": "WITHIN_RANGE",
+      "signedDistanceToRange": 0,
+      "absoluteDistanceToRange": 0,
+      "rangeWidth": 1,
+      "researchNormalizedDistance": 0,
+      "caseType": "SYNTHETIC_BOUNDARY",
+      "sourceObservation": false
+    },
+    {
+      "observedValue": 17,
+      "unit": "degC",
+      "relation": "ABOVE_RANGE",
+      "signedDistanceToRange": 1,
+      "absoluteDistanceToRange": 1,
+      "rangeWidth": 1,
+      "researchNormalizedDistance": 1,
+      "caseType": "SYNTHETIC_BOUNDARY",
+      "sourceObservation": false
+    },
+    {
+      "observedValue": 21,
+      "unit": "degC",
+      "relation": "ABOVE_RANGE",
+      "signedDistanceToRange": 5,
+      "absoluteDistanceToRange": 5,
+      "rangeWidth": 1,
+      "researchNormalizedDistance": 5,
+      "caseType": "SYNTHETIC_BOUNDARY",
+      "sourceObservation": false
+    },
+    {
+      "observedValue": 26,
+      "unit": "degC",
+      "relation": "ABOVE_RANGE",
+      "signedDistanceToRange": 10,
+      "absoluteDistanceToRange": 10,
+      "rangeWidth": 1,
+      "researchNormalizedDistance": 10,
+      "caseType": "SYNTHETIC_BOUNDARY",
+      "sourceObservation": false
+    },
+    {
+      "observedValue": 25.5,
+      "unit": "degC",
+      "relation": "ABOVE_RANGE",
+      "signedDistanceToRange": 9.5,
+      "absoluteDistanceToRange": 9.5,
+      "rangeWidth": 1,
+      "researchNormalizedDistance": 9.5,
+      "caseType": "SOURCE_BACKED_RISA_EXAMPLE",
+      "sourceObservation": true,
+      "sourceContext": {
+        "sourceId": "nifs-risa",
+        "stationId": "b***a",
+        "depthContext": "SURFACE",
+        "freshness": "fresh",
+        "provenancePath": "reports/fishing-condition/comparator-v1-quality.json"
+      }
+    }
+  ],
+  "consistency": {
+    "comparatorContract": "src/lib/fishing-condition/comparator.ts relationForRange",
+    "checkedCases": 10,
+    "mismatches": 0
+  },
+  "findings": {
+    "mathematicallyValid": [
+      "SIGNED_DISTANCE_PRESERVES_BELOW_ZERO_ABOVE_DIRECTION",
+      "BOUNDARIES_AND_INTERIOR_HAVE_ZERO_DISTANCE",
+      "ABSOLUTE_DISTANCE_MEASURES_ONLY_DISTANCE_TO_NEAREST_RANGE_BOUNDARY"
+    ],
+    "scientificallyUnsupported": [
+      "RANGE_WIDTH_IS_NOT_ESTABLISHED_AS_BIOLOGICAL_TOLERANCE",
+      "EQUAL_DISTANCE_ABOVE_AND_BELOW_IS_NOT_EQUAL_BIOLOGICAL_EFFECT",
+      "DISTANCE_MULTIPLES_DO_NOT_IMPLY LINEAR_BIOLOGICAL_EFFECT",
+      "ONE_DEGREE_RANGE_WIDTH_CANNOT_ESTABLISH_CROSS_SPECIES_COMPARABILITY"
+    ],
+    "productionProhibited": [
+      "USER_FACING_NUMERIC_ASSESSMENT",
+      "WEIGHTED_OR_COMPOSITE_RESULT",
+      "PROBABILITY",
+      "RANKING",
+      "RECOMMENDATION"
+    ],
+    "narrowRangeObservation": "The canonical range width is 1 degC, so width division numerically equals the absolute distance and magnifies no additional scientific meaning."
+  },
+  "normalizationDecision": "NORMALIZATION_NOT_JUSTIFIED",
+  "normalizationRationale": "Range width describes the evidence interval, not a validated tolerance denominator; preferred and observed ranges are not interchangeable and one species cannot establish a common scale.",
+  "productionDecision": "PRODUCTION_SCORE_NOT_APPROVED",
+  "productionApproved": false,
+  "invariants": {
+    "runtimeNumericAssessment": false,
+    "weightingImplementation": false,
+    "probabilityOutput": false,
+    "orderingOutput": false,
+    "adviceOutput": false,
+    "productionRoute": false,
+    "databaseWrites": false,
+    "supabaseChanges": false,
+    "externalAiCalls": false
+  }
+}
