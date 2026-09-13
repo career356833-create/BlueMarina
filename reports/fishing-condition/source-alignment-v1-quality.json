@@ -1,0 +1,66 @@
+{
+  "version": "v1",
+  "qualityClass": "DERIVED_SOURCE_ALIGNMENT",
+  "supportedSources": [
+    "nifs-risa",
+    "nifs-femo-sea",
+    "kma-marine-weather-observations",
+    "kma-marine-weather-forecast",
+    "khoa-ocean-current-model"
+  ],
+  "sourceBinding": {
+    "mode": "explicit_only",
+    "required": true,
+    "failureIsolation": "per_source"
+  },
+  "qualityCounters": {
+    "spatialDistancesReturnedPerPointSource": true,
+    "timestampsPreserved": true,
+    "timezoneUnresolvedCount": "runtime_dependent",
+    "depthUnresolvedCount": "runtime_dependent",
+    "unitUnverifiedCount": "runtime_dependent",
+    "partialFailures": "runtime_dependent"
+  },
+  "stability": {
+    "deterministicForIdenticalNormalizedInputs": true,
+    "sourceOrderingPreserved": true
+  },
+  "liveVerification": {
+    "performedAt": "2026-09-13T04:15:56.2784094Z",
+    "target": {
+      "latitude": 35.06628,
+      "longitude": 129.05204,
+      "requestedAt": "2026-09-13T00:00:00Z",
+      "depthContext": "SURFACE"
+    },
+    "httpStatus": 200,
+    "requestedSources": 5,
+    "alignedSources": 1,
+    "partialSources": 3,
+    "unavailableSources": 1,
+    "sources": [
+      { "sourceId": "nifs-risa", "bindingId": "bgj8a", "status": "PARTIAL", "qualityClass": "OBSERVED", "distanceMeters": 20818, "timeSemantic": "OBSERVED_AT", "depthMatchStatus": "CATEGORY_MATCH" },
+      { "sourceId": "nifs-femo-sea", "bindingId": "nifs-femo-sea:%EA%B0%80%EB%A1%9C%EB%A6%BC%EB%A7%8C:1", "status": "UNIT_UNVERIFIED", "qualityClass": "OBSERVED_PERIODIC_ENVIRONMENT", "distanceMeters": 326264, "timeSemantic": "SAMPLED_AT", "depthMatchStatus": "CATEGORY_MATCH" },
+      { "sourceId": "kma-marine-weather-observations", "bindingId": "21229", "status": "ALIGNED", "qualityClass": "OBSERVED", "distanceMeters": 323655, "timeSemantic": "OBSERVED_AT", "depthMatchStatus": "NOT_APPLICABLE" },
+      { "sourceId": "kma-marine-weather-forecast", "bindingId": "5174:1", "status": "UNAVAILABLE", "qualityClass": "FORECAST", "distanceMeters": null, "timeSemantic": "UNKNOWN", "depthMatchStatus": "NOT_APPLICABLE", "limitation": "CSV_HEADER_NOT_FOUND_FOR_EXPLICIT_ISSUE_VALID_PAIR" },
+      { "sourceId": "khoa-ocean-current-model", "bindingId": "35.06628:129.05204:2026-09-13 00:00:00", "status": "PARTIAL", "qualityClass": "MODEL", "distanceMeters": 0, "timeSemantic": "UNKNOWN", "depthMatchStatus": "NOT_APPLICABLE" }
+    ],
+    "secretExposed": false
+  },
+  "invariants": {
+    "automaticNearest": false,
+    "averaging": false,
+    "interpolation": false,
+    "weighting": false,
+    "gapFilling": false,
+    "unitConversion": false,
+    "sourcePreference": false,
+    "comparatorAutoRun": false,
+    "evidenceBundleAutoRun": false,
+    "score": false,
+    "probability": false,
+    "ranking": false,
+    "recommendation": false
+  },
+  "databaseWrites": 0
+}
