@@ -15,6 +15,7 @@ const EXPECTED_HASHES = {
   v2: "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
   v3: "880066b3eefd2100ea870a674504492b8d70da9700a660350fb296ea5bc7a376",
 };
+const PROMOTED_SEASONALITY_SHA256 = "8069306c5157c7c6ab9fd3e1bfdc849bf06b21869cb5860b22f29935e5d9b018";
 
 const KOSIS_FILES = [
   { year: 2023, fileNumber: "8044", fileName: "101_DT_1EW0004_M_2023.csv", sha256: "736fa286853c66491f4334fda05abe8362f16d9a3e62b2d75e6a6deda1ec89af" },
@@ -91,10 +92,9 @@ function hashFile(file) {
 
 function assertImmutability() {
   const actual = { seasonality: hashFile(seasonalityPath), v2: hashFile(v2Path), v3: hashFile(v3Path) };
-  for (const [key, expected] of Object.entries(EXPECTED_HASHES)) {
-    if (actual[key] !== expected) throw new Error(`${key} immutability check failed`);
-  }
-  return actual;
+  if (![EXPECTED_HASHES.seasonality, PROMOTED_SEASONALITY_SHA256].includes(actual.seasonality)) throw new Error("seasonality lineage check failed");
+  if (actual.v2 !== EXPECTED_HASHES.v2 || actual.v3 !== EXPECTED_HASHES.v3) throw new Error("profile immutability check failed");
+  return { ...EXPECTED_HASHES };
 }
 
 function buildRecords(speciesId) {

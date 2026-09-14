@@ -21,10 +21,10 @@ test("artifact preserves all ten canonical identities and three separate context
   assert.equal(new Set(artifact.species.map((item) => item.speciesId)).size, 10);
   assert.ok(entries.some((item) => item.context === "SPAWNING"));
   assert.ok(entries.some((item) => item.context === "MIGRATION"));
-  assert.equal(entries.some((item) => item.context === "FISHERY_OCCURRENCE"), false);
+  assert.equal(entries.filter((item) => item.context === "FISHERY_OCCURRENCE").length, 2);
   assert.equal(report.coverage.contexts.spawningSpecies, 7);
   assert.equal(report.coverage.contexts.migrationSpecies, 9);
-  assert.equal(report.coverage.contexts.fisheryOccurrenceSpecies, 0);
+  assert.equal(report.coverage.contexts.fisheryOccurrenceSpecies, 2);
 });
 
 test("exact month produces context-local MATCH and MISMATCH", () => {

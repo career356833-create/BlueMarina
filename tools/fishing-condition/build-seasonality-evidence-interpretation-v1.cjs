@@ -8,6 +8,8 @@ const v3Path = path.join(root, "data/fishing-condition/species-environment/v3/sp
 const artifactPath = path.join(root, "data/fishing-condition/seasonality/v1/species-seasonality.json");
 const reportPath = path.join(root, "reports/fishing-condition/seasonality-evidence-interpretation-v1.json");
 const docsPath = path.join(root, "docs/FISHING_CONDITION_SEASONALITY_EVIDENCE_INTERPRETATION_V1.md");
+const occurrenceResearchPath = path.join(root, "data/fishing-condition/seasonality/research/fishery-occurrence-batch1-v1.json");
+const occurrencePromotion = require("./promote-fishery-occurrence-v1.cjs");
 
 const GENERATED_AT = "2026-09-13T00:00:00.000Z";
 const EXPECTED_V2_SHA256 = "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98";
@@ -171,7 +173,7 @@ function build() {
     return { speciesId: profile.speciesId, koreanName: profile.koreanName, scientificName: profile.scientificName, entries };
   });
   const flatEntries = species.flatMap((item) => item.entries.map((entry) => ({ speciesId: item.speciesId, koreanName: item.koreanName, ...entry })));
-  const artifact = {
+  const baseArtifact = {
     schemaVersion: "1.0.0",
     sourceId: "blue-marina-seasonality-evidence-interpretation-v1",
     generatedAt: GENERATED_AT,
@@ -185,21 +187,28 @@ function build() {
     },
     species,
   };
+  const artifact = occurrencePromotion.promoteArtifact(baseArtifact, readJson(occurrenceResearchPath));
+  const promotedSpecies = artifact.species.map((item) => ({
+    ...item,
+    entries: item.entries,
+  }));
+  const promotedFlatEntries = promotedSpecies.flatMap((item) => item.entries.map((entry) => ({ speciesId: item.speciesId, koreanName: item.koreanName, ...entry })));
 
-  const contextSpecies = (context) => new Set(flatEntries.filter((entry) => entry.context === context).map((entry) => entry.speciesId)).size;
-  const monthResolvedSpecies = new Set(flatEntries.filter((entry) => entry.precision === "MONTH_RESOLVED").map((entry) => entry.speciesId));
-  const regional = flatEntries.filter((entry) => entry.limitations.some((value) => value.startsWith("REGIONAL_SCOPE_")));
-  const lifeStage = flatEntries.filter((entry) => entry.limitations.some((value) => value.startsWith("LIFE_STAGE_")));
+  const contextSpecies = (context) => new Set(promotedFlatEntries.filter((entry) => entry.context === context).map((entry) => entry.speciesId)).size;
+  const isMonthResolved = (entry) => entry.precision === "MONTH_RESOLVED" || entry.precision === "MONTHLY_RECORD_SERIES";
+  const monthResolvedSpecies = new Set(promotedFlatEntries.filter(isMonthResolved).map((entry) => entry.speciesId));
+  const regional = promotedFlatEntries.filter((entry) => entry.limitations.some((value) => value.startsWith("REGIONAL_SCOPE_")));
+  const lifeStage = promotedFlatEntries.filter((entry) => entry.limitations.some((value) => value.startsWith("LIFE_STAGE_")));
   const report = {
     schemaVersion: "1.0.0",
     generatedAt: GENERATED_AT,
     decision: "SEASONALITY_PARTIALLY_READY",
-    rationale: "Six of ten profiles have month-resolved evidence, but fishery-occurrence coverage is absent and several migration records are season-only, region-limited, life-stage-limited, or month-unresolved.",
+    rationale: "Two of ten species have factual monthly fishery-occurrence series, but runtime interpretation remains unwired and several biological records remain season-only, region-limited, life-stage-limited, or month-unresolved.",
     source: { path: artifact.derivedFrom.path, sha256: v2Sha256, profileCount: source.profiles.length },
     coverage: {
       species: source.profiles.length,
       contexts: { spawningSpecies: contextSpecies("SPAWNING"), migrationSpecies: contextSpecies("MIGRATION"), fisheryOccurrenceSpecies: contextSpecies("FISHERY_OCCURRENCE") },
-      entries: { total: flatEntries.length, monthResolved: flatEntries.filter((entry) => entry.precision === "MONTH_RESOLVED").length, seasonOnly: flatEntries.filter((entry) => entry.precision === "SEASON_ONLY").length, monthUnresolved: flatEntries.filter((entry) => entry.precision === "UNRESOLVED").length },
+      entries: { total: promotedFlatEntries.length, monthResolved: promotedFlatEntries.filter(isMonthResolved).length, seasonOnly: promotedFlatEntries.filter((entry) => entry.precision === "SEASON_ONLY").length, monthUnresolved: promotedFlatEntries.filter((entry) => entry.precision === "UNRESOLVED").length },
       monthResolvedSpecies: monthResolvedSpecies.size,
       unresolvedSpecies: source.profiles.length - monthResolvedSpecies.size,
       regionalLimitations: regional.length,
@@ -207,11 +216,11 @@ function build() {
       conflicts: 0,
       unsupported: { noContextSpecies: species.filter((item) => item.entries.length === 0).map((item) => item.speciesId), noMonthResolvedSpecies: species.filter((item) => !item.entries.some((entry) => entry.precision === "MONTH_RESOLVED")).map((item) => item.speciesId) },
     },
-    species: species.map((item) => ({
+    species: promotedSpecies.map((item) => ({
       speciesId: item.speciesId,
       koreanName: item.koreanName,
       contexts: unique(item.entries.map((entry) => entry.context)),
-      monthResolvedEntries: item.entries.filter((entry) => entry.precision === "MONTH_RESOLVED").length,
+      monthResolvedEntries: item.entries.filter(isMonthResolved).length,
       seasonOnlyEntries: item.entries.filter((entry) => entry.precision === "SEASON_ONLY").length,
       unresolvedEntries: item.entries.filter((entry) => entry.precision === "UNRESOLVED").length,
       entries: item.entries.map((entry) => ({ context: entry.context, months: entry.months, seasons: entry.seasons, region: entry.geographicContext, lifeStage: entry.lifeStage, evidenceRefs: entry.evidenceRefs, limitations: entry.limitations })),
@@ -234,7 +243,7 @@ function build() {
   fs.mkdirSync(path.dirname(reportPath), { recursive: true });
   fs.writeFileSync(artifactPath, `${JSON.stringify(artifact, null, 2)}\n`);
   fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
-  return { artifact, report, flatEntries };
+  return { artifact, report, flatEntries: promotedFlatEntries };
 }
 
 if (require.main === module) {

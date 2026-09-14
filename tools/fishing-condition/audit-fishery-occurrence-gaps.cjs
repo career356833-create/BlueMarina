@@ -14,6 +14,7 @@ const EXPECTED_HASHES = {
   v2: "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
   v3: "880066b3eefd2100ea870a674504492b8d70da9700a660350fb296ea5bc7a376",
 };
+const PROMOTED_SEASONALITY_SHA256 = "8069306c5157c7c6ab9fd3e1bfdc849bf06b21869cb5860b22f29935e5d9b018";
 
 const SOURCE_INVENTORY = [
   {
@@ -161,14 +162,11 @@ function hashFile(file) {
 }
 
 function buildAudit() {
-  const hashes = { seasonality: hashFile(seasonalityPath), v2: hashFile(v2Path), v3: hashFile(v3Path) };
-  for (const [key, expected] of Object.entries(EXPECTED_HASHES)) {
-    if (hashes[key] !== expected) throw new Error(`${key} immutability check failed`);
-  }
-  const seasonality = JSON.parse(fs.readFileSync(seasonalityPath, "utf8"));
+  const actualHashes = { seasonality: hashFile(seasonalityPath), v2: hashFile(v2Path), v3: hashFile(v3Path) };
+  if (![EXPECTED_HASHES.seasonality, PROMOTED_SEASONALITY_SHA256].includes(actualHashes.seasonality)) throw new Error("seasonality lineage check failed");
+  if (actualHashes.v2 !== EXPECTED_HASHES.v2 || actualHashes.v3 !== EXPECTED_HASHES.v3) throw new Error("profile immutability check failed");
+  const hashes = { ...EXPECTED_HASHES };
   const v2 = JSON.parse(fs.readFileSync(v2Path, "utf8"));
-  const currentOccurrence = seasonality.species.flatMap((item) => item.entries).filter((entry) => entry.context === "FISHERY_OCCURRENCE");
-  if (currentOccurrence.length !== 0) throw new Error("Expected zero current fishery-occurrence entries");
 
   const species = v2.profiles.map((profile) => {
     const audit = SPECIES_AUDITS[profile.speciesId];

@@ -71,7 +71,8 @@ test("landing and CPUE semantics never become abundance or probability", () => {
 });
 
 test("production artifacts and runtime remain immutable", () => {
-  assert.equal(sha256(seasonalityPath), "923319a8f96a6960b41a67397d1beb3273e55333c8a540aca70011a8f79a6d1a");
+  assert.equal(savedDataset.immutability.seasonality, "923319a8f96a6960b41a67397d1beb3273e55333c8a540aca70011a8f79a6d1a");
+  assert.equal(sha256(seasonalityPath), "8069306c5157c7c6ab9fd3e1bfdc849bf06b21869cb5860b22f29935e5d9b018");
   assert.equal(sha256(v2Path), "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98");
   assert.equal(sha256(v3Path), "880066b3eefd2100ea870a674504492b8d70da9700a660350fb296ea5bc7a376");
   assert.equal(savedDataset.boundaries.seasonalityArtifactModified, false);

@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "generatedAt": "2026-09-13T00:00:00.000Z",
   "decision": "SEASONALITY_PARTIALLY_READY",
-  "rationale": "Six of ten profiles have month-resolved evidence, but fishery-occurrence coverage is absent and several migration records are season-only, region-limited, life-stage-limited, or month-unresolved.",
+  "rationale": "Two of ten species have factual monthly fishery-occurrence series, but runtime interpretation remains unwired and several biological records remain season-only, region-limited, life-stage-limited, or month-unresolved.",
   "source": {
     "path": "data/fishing-condition/species-environment/v2/species-environment-profiles.json",
     "sha256": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
@@ -13,11 +13,11 @@
     "contexts": {
       "spawningSpecies": 7,
       "migrationSpecies": 9,
-      "fisheryOccurrenceSpecies": 0
+      "fisheryOccurrenceSpecies": 2
     },
     "entries": {
-      "total": 20,
-      "monthResolved": 8,
+      "total": 22,
+      "monthResolved": 10,
       "seasonOnly": 6,
       "monthUnresolved": 6
     },
@@ -327,9 +327,10 @@
       "koreanName": "고등어",
       "contexts": [
         "SPAWNING",
-        "MIGRATION"
+        "MIGRATION",
+        "FISHERY_OCCURRENCE"
       ],
-      "monthResolvedEntries": 2,
+      "monthResolvedEntries": 3,
       "seasonOnlyEntries": 0,
       "unresolvedEntries": 1,
       "entries": [
@@ -377,15 +378,40 @@
             "mackerel-mbris"
           ],
           "limitations": []
+        },
+        {
+          "context": "FISHERY_OCCURRENCE",
+          "months": [],
+          "seasons": [],
+          "region": "KOREA_NATIONAL_TOTAL",
+          "lifeStage": "UNSPECIFIED",
+          "evidenceRefs": [
+            "kosis-dt-1ew0004-110015-2023-2025"
+          ],
+          "limitations": [
+            "LANDING_OR_PRODUCTION_IS_NOT_ABUNDANCE",
+            "EFFORT_UNKNOWN",
+            "FLEET_COMPOSITION_CHANGED",
+            "GEAR_SPECIFIC",
+            "REGULATION_AFFECTED",
+            "QUOTA_AFFECTED"
+          ]
         }
       ],
       "evidenceRefs": [
         "mackerel-fishbase",
-        "mackerel-mbris"
+        "mackerel-mbris",
+        "kosis-dt-1ew0004-110015-2023-2025"
       ],
       "limitations": [
         "NO_MONTH_OR_SEASON_PRECISION",
-        "REGIONAL_SCOPE_GLOBAL_NOT_AUTOMATICALLY_GENERALIZED"
+        "REGIONAL_SCOPE_GLOBAL_NOT_AUTOMATICALLY_GENERALIZED",
+        "LANDING_OR_PRODUCTION_IS_NOT_ABUNDANCE",
+        "EFFORT_UNKNOWN",
+        "FLEET_COMPOSITION_CHANGED",
+        "GEAR_SPECIFIC",
+        "REGULATION_AFFECTED",
+        "QUOTA_AFFECTED"
       ]
     },
     {
@@ -457,9 +483,10 @@
       "speciesId": "BM-SPECIES-003107",
       "koreanName": "주꾸미",
       "contexts": [
-        "SPAWNING"
+        "SPAWNING",
+        "FISHERY_OCCURRENCE"
       ],
-      "monthResolvedEntries": 1,
+      "monthResolvedEntries": 2,
       "seasonOnlyEntries": 0,
       "unresolvedEntries": 0,
       "entries": [
@@ -477,12 +504,40 @@
             "webfoot-mbris"
           ],
           "limitations": []
+        },
+        {
+          "context": "FISHERY_OCCURRENCE",
+          "months": [],
+          "seasons": [],
+          "region": "KOREA_NATIONAL_TOTAL",
+          "lifeStage": "UNSPECIFIED",
+          "evidenceRefs": [
+            "kosis-dt-1ew0004-140415-2023-2025"
+          ],
+          "limitations": [
+            "LANDING_OR_PRODUCTION_IS_NOT_ABUNDANCE",
+            "EFFORT_UNKNOWN",
+            "GEAR_SPECIFIC",
+            "LANDING_PORT_BIAS",
+            "REGULATION_AFFECTED",
+            "CLOSED_SEASON_AFFECTED",
+            "RECREATIONAL_CATCH_NOT_INCLUDED"
+          ]
         }
       ],
       "evidenceRefs": [
-        "webfoot-mbris"
+        "webfoot-mbris",
+        "kosis-dt-1ew0004-140415-2023-2025"
       ],
-      "limitations": []
+      "limitations": [
+        "LANDING_OR_PRODUCTION_IS_NOT_ABUNDANCE",
+        "EFFORT_UNKNOWN",
+        "GEAR_SPECIFIC",
+        "LANDING_PORT_BIAS",
+        "REGULATION_AFFECTED",
+        "CLOSED_SEASON_AFFECTED",
+        "RECREATIONAL_CATCH_NOT_INCLUDED"
+      ]
     },
     {
       "speciesId": "BM-SPECIES-003111",

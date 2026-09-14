@@ -22,11 +22,11 @@ test("all ten canonical species are audited with at least one gap", () => {
   assert.ok(saved.species.every((item) => item.gaps.length >= 1));
 });
 
-test("current fishery-occurrence coverage remains zero", () => {
+test("the historical gap snapshot remains zero while production now has two promoted series", () => {
   assert.equal(saved.coverage.currentOccurrenceCoverage, 0);
   assert.equal(saved.coverage.currentOccurrenceEntries, 0);
   const seasonality = JSON.parse(fs.readFileSync(seasonalityPath, "utf8"));
-  assert.equal(seasonality.species.flatMap((item) => item.entries).some((entry) => entry.context === "FISHERY_OCCURRENCE"), false);
+  assert.equal(seasonality.species.flatMap((item) => item.entries).filter((entry) => entry.context === "FISHERY_OCCURRENCE").length, 2);
 });
 
 test("spawning and migration are explicitly prohibited as occurrence substitutes", () => {
@@ -76,7 +76,7 @@ test("research batch is bounded to three non-ranked targets", () => {
 });
 
 test("immutable seasonality and profile artifacts retain exact checksums", () => {
-  assert.equal(sha256(seasonalityPath), "923319a8f96a6960b41a67397d1beb3273e55333c8a540aca70011a8f79a6d1a");
+  assert.equal(sha256(seasonalityPath), "8069306c5157c7c6ab9fd3e1bfdc849bf06b21869cb5860b22f29935e5d9b018");
   assert.equal(sha256(v2Path), "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98");
   assert.equal(sha256(v3Path), "880066b3eefd2100ea870a674504492b8d70da9700a660350fb296ea5bc7a376");
 });
