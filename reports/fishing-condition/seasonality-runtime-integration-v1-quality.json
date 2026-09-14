@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "reportId": "blue-marina-seasonality-runtime-integration-v1-quality",
+  "reviewedAt": "2026-09-15",
+  "decision": "SEASONALITY_RUNTIME_INTEGRATION_V1_READY",
+  "runtime": {
+    "service": "src/lib/fishing-condition/seasonality-runtime.ts",
+    "route": "GET /api/fishing-condition/seasonality",
+    "qualityClass": "DERIVED_SEASONALITY_CONTEXT",
+    "explicitMonthRequired": true,
+    "readOnly": true
+  },
+  "productionArtifact": {
+    "path": "data/fishing-condition/seasonality/v1/species-seasonality.json",
+    "sha256": "8069306c5157c7c6ab9fd3e1bfdc849bf06b21869cb5860b22f29935e5d9b018",
+    "speciesLoaded": 10,
+    "entriesLoaded": 22,
+    "contexts": {
+      "SPAWNING": 7,
+      "MIGRATION": 13,
+      "FISHERY_OCCURRENCE": 2
+    },
+    "monthResolvedBiologicalEntries": 8,
+    "monthUnresolvedBiologicalEntries": 12
+  },
+  "occurrenceRecordIntegrity": {
+    "representation": "MONTHLY_RECORD_SERIES",
+    "mackerelRecords": 36,
+    "webfootOctopusRecords": 35,
+    "preservedMissingPeriods": ["2023-08"],
+    "missingConvertedToZero": false,
+    "recordAggregation": false
+  },
+  "checks": {
+    "contextIsolation": "PASS",
+    "crossYearMigration": "PASS",
+    "missingVsZero": "PASS",
+    "limitationsPreserved": "PASS",
+    "sourceLineagePreserved": "PASS",
+    "forbiddenWordingFindings": 0,
+    "aggregationFindings": 0,
+    "deterministicRepeat": "PASS",
+    "explicitMonthRoute": "PASS",
+    "readOnlyRoute": "PASS"
+  },
+  "immutability": {
+    "seasonalitySha256": "8069306c5157c7c6ab9fd3e1bfdc849bf06b21869cb5860b22f29935e5d9b018",
+    "speciesEnvironmentV2Sha256": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
+    "speciesEnvironmentV3Sha256": "880066b3eefd2100ea870a674504492b8d70da9700a660350fb296ea5bc7a376"
+  },
+  "boundaries": {
+    "newBiologicalInference": false,
+    "sourceFusion": false,
+    "numericScoring": false,
+    "probability": false,
+    "ranking": false,
+    "recommendation": false,
+    "databaseWrite": false,
+    "supabase": false,
+    "externalAi": false
+  }
+}
