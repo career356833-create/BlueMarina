@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .control {
+    @apply min-h-12 rounded-[18px] border border-[#1F3A50] bg-[#0E2233] px-4 text-sm font-bold text-white outline-none transition focus:border-[#2E8BFF] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .skeleton {
+    @apply animate-pulse rounded-[20px] border border-[#213D52] bg-[#0B2234];
+  }
+}
+
 :root {
   color-scheme: dark;
 }

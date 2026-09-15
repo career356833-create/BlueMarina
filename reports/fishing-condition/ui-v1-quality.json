@@ -1,0 +1,27 @@
+{
+  "reportType": "FISHING_CONDITION_UI_V1_QUALITY",
+  "route": "/fishing-spots/conditions",
+  "status": "PASS",
+  "readModelRoute": "/api/fishing-condition/read-model",
+  "approvedSpeciesCount": 10,
+  "sources": ["nifs-risa", "nifs-femo-sea"],
+  "depthRules": {
+    "nifs-risa": ["SURFACE", "MIDDLE", "BOTTOM"],
+    "nifs-femo-sea": ["SURFACE", "BOTTOM"]
+  },
+  "explicitMonthRequired": true,
+  "automaticFetchOnSelectorChange": false,
+  "scoreProbabilityRankingRecommendation": false,
+  "sourceLineagePreserved": true,
+  "rawMissingOccurrenceIsNotZero": true,
+  "oldFishingSpotsRoutePreserved": true,
+  "tests": {
+    "staticContract": "PASS (4 tests)",
+    "fullSuite": "PASS (681 tests)",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS (49 routes)",
+    "browserDesktop": "PASS (route rendered, controls and empty state visible)",
+    "browserMobile": "PASS (responsive breakpoint layout and fixed-width overflow review)"
+  }
+}

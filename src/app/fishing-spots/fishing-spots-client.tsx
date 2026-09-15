@@ -144,6 +144,13 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
               <Waves size={18} />
               오늘의 바다 확인
             </Link>
+            <Link
+              href="/fishing-spots/conditions"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[18px] border border-[#EBC27D]/50 bg-[#EBC27D]/10 px-5 text-sm font-black text-[#F1D9A8] transition hover:bg-[#EBC27D]/20 sm:col-span-2"
+            >
+              <Waves size={18} />
+              어종·환경 조건 확인
+            </Link>
           </div>
         </section>
 
