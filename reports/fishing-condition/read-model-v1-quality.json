@@ -1,0 +1,66 @@
+{
+  "reportVersion": "v1",
+  "generatedAt": "2026-09-15T00:00:00+09:00",
+  "decision": "FISHING_CONDITION_READ_MODEL_V1_READY",
+  "qualityClass": "DERIVED_FISHING_CONDITION_READ_MODEL",
+  "speciesTested": ["고등어", "주꾸미", "참돔"],
+  "fieldsProjected": ["temperature", "salinity", "dissolvedOxygen", "activity", "habitat"],
+  "seasonalityContexts": ["SPAWNING", "MIGRATION", "FISHERY_OCCURRENCE"],
+  "sources": {
+    "environment": ["nifs-risa", "nifs-femo-sea"],
+    "seasonality": ["MBRIS", "FISHBASE", "KOSIS"],
+    "sourceSelectionPerformed": false,
+    "lineagePreserved": true
+  },
+  "limitations": {
+    "exactStringDedupe": true,
+    "semanticMerge": false,
+    "preservedExamples": ["EFFORT_UNKNOWN", "REGULATION_AFFECTED", "CLOSED_SEASON_AFFECTED", "LIFE_STAGE_ADULT"]
+  },
+  "missingHandling": {
+    "missingLabel": "원자료 행 없음",
+    "missingValue": null,
+    "missingBecomesZero": false,
+    "missingMeansNoCatch": false
+  },
+  "freshness": {
+    "sourceStatesPreserved": ["fresh", "stale", "unavailable"],
+    "conditionInterpretationAdded": false
+  },
+  "liveFixtures": {
+    "mackerelMonth10": "PASS",
+    "mackerelMonth2": "PASS",
+    "webfootOctopusMonth1": "PASS",
+    "webfootOctopusMonth8": "PASS",
+    "redSeabream": "PASS"
+  },
+  "backwardCompatibility": {
+    "evidenceBundleRouteChanged": false,
+    "monthOptional": true,
+    "monthAbsentProjection": "NOT_REQUESTED"
+  },
+  "deterministicRepeat": true,
+  "forbiddenKeyScan": {
+    "findings": 0,
+    "keys": ["score", "overallCondition", "overallSuitability", "bestSeason", "bestMonth", "recommendedSpecies", "recommendedSpot", "catchProbability", "probability", "ranking", "recommendation"]
+  },
+  "boundaries": {
+    "newInference": false,
+    "sourceSelection": false,
+    "aggregation": false,
+    "numericScoring": false,
+    "probability": false,
+    "ranking": false,
+    "recommendation": false,
+    "externalAi": false,
+    "databaseWrite": false,
+    "supabase": false,
+    "persistence": false
+  },
+  "checksums": {
+    "seasonality": "8069306c5157c7c6ab9fd3e1bfdc849bf06b21869cb5860b22f29935e5d9b018",
+    "speciesEnvironmentV2": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
+    "speciesEnvironmentV3": "880066b3eefd2100ea870a674504492b8d70da9700a660350fb296ea5bc7a376"
+  },
+  "databaseWrites": 0
+}
