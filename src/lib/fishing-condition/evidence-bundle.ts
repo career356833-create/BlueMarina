@@ -1,5 +1,6 @@
 import type { ComparisonRelation, compareFishingCondition } from "./comparator";
 import type { explainFishingCondition, FishingConditionExplanation } from "./explanation";
+import type { SeasonalityRuntimeResult } from "./seasonality-runtime";
 
 export const CONDITION_EVIDENCE_BUNDLE_QUALITY_CLASS = "DERIVED_EVIDENCE_BUNDLE" as const;
 export const CONDITION_EVIDENCE_BUNDLE_PROFILE_VERSION = "v2" as const;
@@ -224,5 +225,46 @@ export function buildConditionEvidenceBundle(
     evidence,
     summary: summarize(Object.values(evidence)),
     qualityClass: CONDITION_EVIDENCE_BUNDLE_QUALITY_CLASS,
+  };
+}
+
+type ConditionEvidenceBundle = ReturnType<typeof buildConditionEvidenceBundle>;
+
+function summarizeSeasonality(seasonality: SeasonalityRuntimeResult) {
+  return {
+    availableContexts: seasonality.contexts.filter((context) =>
+      context.status !== "UNSUPPORTED" && context.status !== "MONTH_UNRESOLVED").length,
+    unresolvedContexts: seasonality.contexts.filter((context) => context.status === "MONTH_UNRESOLVED").length,
+    unsupportedContexts: seasonality.contexts.filter((context) => context.status === "UNSUPPORTED").length,
+  };
+}
+
+export function attachSeasonalityEvidence(
+  bundle: ConditionEvidenceBundle,
+  seasonality: SeasonalityRuntimeResult,
+) {
+  const {
+    temperature,
+    salinity,
+    dissolvedOxygen,
+    activity,
+    habitat,
+  } = bundle.evidence;
+  return {
+    ...bundle,
+    environmentEvidence: {
+      temperature,
+      salinity,
+      dissolvedOxygen,
+      activity,
+      habitat,
+    },
+    seasonalityEvidence: seasonality,
+    seasonalitySummary: summarizeSeasonality(seasonality),
+    evidenceDomainSemantics: {
+      environmentEvidence: "OBSERVED_ENVIRONMENT_COMPARISON" as const,
+      seasonalityEvidence: "EXPLICIT_MONTH_PRODUCTION_ARTIFACT" as const,
+      legacyEvidenceSeasonality: "OBSERVATION_MONTH_PROFILE_COMPARISON_COMPATIBILITY_ONLY" as const,
+    },
   };
 }

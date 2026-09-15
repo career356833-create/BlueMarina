@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0.0",
+  "reportId": "blue-marina-seasonality-evidence-bundle-integration-v1-quality",
+  "reviewedAt": "2026-09-15",
+  "decision": "SEASONALITY_EVIDENCE_BUNDLE_INTEGRATION_V1_READY",
+  "route": "POST /api/fishing-condition/evidence-bundle",
+  "legacyRequestCompatibility": "PASS",
+  "monthContract": {
+    "requiredForSeasonalityExtension": true,
+    "optionalForLegacyBundle": true,
+    "minimum": 1,
+    "maximum": 12,
+    "invalidRequestStatus": 400
+  },
+  "domains": {
+    "environmentEvidence": "OBSERVED_ENVIRONMENT_COMPARISON",
+    "seasonalityEvidence": "EXPLICIT_MONTH_PRODUCTION_ARTIFACT",
+    "crossDomainFusion": false,
+    "majorityLogic": false
+  },
+  "qualityClasses": {
+    "bundle": "DERIVED_EVIDENCE_BUNDLE",
+    "seasonality": "DERIVED_SEASONALITY_CONTEXT"
+  },
+  "speciesTested": [
+    "BM-SPECIES-000417",
+    "BM-SPECIES-003107",
+    "BM-SPECIES-000755"
+  ],
+  "environmentEvidenceFields": [
+    "temperature",
+    "salinity",
+    "dissolvedOxygen",
+    "activity",
+    "habitat"
+  ],
+  "seasonalityContexts": [
+    "SPAWNING",
+    "MIGRATION",
+    "FISHERY_OCCURRENCE"
+  ],
+  "occurrenceRecords": {
+    "mackerel": 36,
+    "webfootOctopus": 35,
+    "preservedMissingPeriods": ["2023-08"]
+  },
+  "checks": {
+    "environmentSummaryPreserved": "PASS",
+    "contextIsolation": "PASS",
+    "migrationEvidenceIndependent": "PASS",
+    "missingVsZero": "PASS",
+    "limitationsPreserved": "PASS",
+    "lineageSeparated": "PASS",
+    "noAggregation": "PASS",
+    "deterministicRepeat": "PASS",
+    "forbiddenFieldFindings": 0,
+    "forbiddenWordingFindings": 0
+  },
+  "checksums": {
+    "seasonality": "8069306c5157c7c6ab9fd3e1bfdc849bf06b21869cb5860b22f29935e5d9b018",
+    "speciesEnvironmentV2": "eb365314a15444d7407b7c88b3fd58d95004eaeafe6723efff620b2c7f705f98",
+    "speciesEnvironmentV3": "880066b3eefd2100ea870a674504492b8d70da9700a660350fb296ea5bc7a376"
+  },
+  "boundaries": {
+    "score": false,
+    "probability": false,
+    "ranking": false,
+    "recommendation": false,
+    "externalAi": false,
+    "databaseWrite": false,
+    "supabase": false
+  }
+}
