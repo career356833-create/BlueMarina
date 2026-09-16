@@ -216,6 +216,7 @@ export function SeaMapView() {
   const fishingMarkerRefs = useRef<KakaoMarkerInstance[]>([]);
   const marinePlaceMarkerRefs = useRef<KakaoMarkerInstance[]>([]);
   const currentMarkerRef = useRef<KakaoMarkerInstance | null>(null);
+  const initialFishingSpotHandledRef = useRef(false);
 
   const parsedFishingSpots = useMemo<ParsedFishingSpot[]>(
     () =>
@@ -550,6 +551,28 @@ export function SeaMapView() {
     map.setCenter(position);
     map.setLevel(6);
   }, [currentLocation, sdkStatus]);
+
+  useEffect(() => {
+    if (initialFishingSpotHandledRef.current || sdkStatus === "loading") return;
+    const spotId = new URLSearchParams(window.location.search).get("spotId");
+    if (!spotId) {
+      initialFishingSpotHandledRef.current = true;
+      return;
+    }
+    const spot = parsedFishingSpots.find((item) => item.id === spotId);
+    initialFishingSpotHandledRef.current = true;
+    if (!spot) return;
+
+    setShowFishingSpots(true);
+    setSelectedFeature({ kind: "fishing-spot", id: spot.id });
+    if (sdkStatus === "ready" && mapRef.current && window.kakao?.maps) {
+      mapRef.current.setCenter(new window.kakao.maps.LatLng(spot.latNumber, spot.lngNumber));
+      mapRef.current.setLevel(5);
+      setStatusMessage(`${spot.name} 포인트를 지도에서 표시했습니다.`);
+    } else {
+      setStatusMessage(`${spot.name} 포인트를 선택했습니다. 지도 연결 상태를 확인해 주세요.`);
+    }
+  }, [parsedFishingSpots, sdkStatus]);
 
   useEffect(() => {
     if (sdkStatus !== "ready" || !mapRef.current || !window.kakao?.maps) {
@@ -1023,8 +1046,8 @@ export function SeaMapView() {
                   </div>
                   <div className="rounded-[18px] border border-[#1F3A50] bg-[#0E2233] p-3">
                     <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#9FB3C8]">상세 보기</p>
-                    <Link href="/fishing-spots" className="mt-1 inline-flex min-h-11 items-center gap-2 text-sm font-black text-[#2E8BFF]">
-                      낚시거점 전체 보기
+                    <Link href={`/fishing-spots/${encodeURIComponent(selectedFishingSpot.id)}`} className="mt-1 inline-flex min-h-11 items-center gap-2 text-sm font-black text-[#2E8BFF]">
+                      포인트 상세 보기
                       <Navigation2 size={16} />
                     </Link>
                   </div>

@@ -1,0 +1,104 @@
+{
+  "report": "Fishing Spot Detail + Fishing Condition Integration V1",
+  "status": "PASS",
+  "generatedAt": "2026-09-17",
+  "baseline": {
+    "branch": "main",
+    "commit": "188c3e724944d79c74c164240c5133c8fa1316ce"
+  },
+  "routes": {
+    "list": "/fishing-spots",
+    "detail": "/fishing-spots/[id]",
+    "conditions": "/fishing-spots/conditions",
+    "map": "/sea?spotId={spotId}#live-marine-map",
+    "navigation": "/sea/navigation with the existing destination query contract"
+  },
+  "dataSource": {
+    "path": "src/data/fishing-spots.json",
+    "spotCount": 1405,
+    "spotsWithValidCoordinates": 1405,
+    "databaseWrite": false,
+    "supabaseWrite": false
+  },
+  "speciesMapping": {
+    "canonicalSpeciesCount": 10,
+    "mappingMode": "exact",
+    "approvedAliases": {
+      "광어": "넙치",
+      "우럭": "조피볼락"
+    },
+    "fuzzyMapping": false,
+    "mappedSpotCount": 1386,
+    "unmappedSpotCount": 19,
+    "multipleCanonicalSpeciesSpotCount": 1215,
+    "explicitAliasSpotCount": 822
+  },
+  "queryContract": {
+    "accepted": ["speciesId", "spotId"],
+    "trustedSpotContext": "resolved server-side from spotId",
+    "preselected": ["speciesId"],
+    "explicitUserSelection": ["month", "source", "stationOrSite", "depth"],
+    "automaticNearestStation": false,
+    "invalidSpeciesBehavior": "ignored and rendered unselected"
+  },
+  "detailUi": {
+    "spotIdentity": true,
+    "regionAndCoordinates": true,
+    "sourceProvenance": true,
+    "canonicalSpeciesActions": true,
+    "unmappedRawSpeciesPreserved": true,
+    "missingValuesNotInvented": true,
+    "safetyBoundary": true
+  },
+  "mapNavigation": {
+    "mapDeepLinkSelection": "PASS",
+    "mapProviderLocalStatus": "UNAVAILABLE_FAIL_CLOSED",
+    "mapDetailBacklink": "PASS",
+    "navigationContractReuse": "PASS",
+    "navigationDestinationVisible": "PASS",
+    "straightLineSafetyDisclaimer": "PASS"
+  },
+  "browser": {
+    "desktop1440x900": {
+      "status": "PASS",
+      "horizontalOverflow": false,
+      "pageErrors": 0
+    },
+    "mobile390x844": {
+      "status": "PASS",
+      "horizontalOverflow": false,
+      "bottomNavigationOverlap": false,
+      "pageErrors": 0
+    }
+  },
+  "emptyStates": {
+    "invalidSpecies": "PASS",
+    "noCanonicalSpecies": "PASS",
+    "directSpeciesSelectionLink": "PASS"
+  },
+  "accessibility": {
+    "semanticLinks": "PASS",
+    "accessibleSpeciesActions": "PASS",
+    "headingHierarchy": "PASS",
+    "minimumTouchTargets": "PASS"
+  },
+  "regressions": {
+    "routesChecked": [
+      "/fishing-spots",
+      "/fishing-spots/conditions",
+      "/sea",
+      "/sea/navigation",
+      "/fish"
+    ],
+    "automatedTests": "705/705 PASS",
+    "lint": "PASS"
+  },
+  "invariants": {
+    "scoringAdded": false,
+    "probabilityAdded": false,
+    "rankingAdded": false,
+    "recommendationAdded": false,
+    "analyticsAdded": false,
+    "persistenceAdded": false
+  }
+}

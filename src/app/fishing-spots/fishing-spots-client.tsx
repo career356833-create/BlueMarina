@@ -293,6 +293,16 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
                         </div>
                       </button>
 
+                      <div className="mt-3 flex justify-end">
+                        <Link
+                          href={`/fishing-spots/${encodeURIComponent(spot.id)}`}
+                          aria-label={`${spot.name} 상세 보기`}
+                          className="inline-flex min-h-10 items-center gap-2 rounded-full border border-[#29465D] px-4 text-xs font-black text-[#79B6FF] transition hover:bg-[#2E8BFF]/10"
+                        >
+                          상세 보기 <ChevronRight size={15} />
+                        </Link>
+                      </div>
+
                       {isOpen ? (
                         <div className="mt-4 space-y-3 rounded-[22px] border border-[#1F3A50] bg-[#071827] p-4">
                           <div className="grid gap-2 text-sm font-semibold leading-6 text-[#D7E4F6]">

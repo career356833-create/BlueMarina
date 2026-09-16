@@ -6,6 +6,7 @@ const path = require("node:path");
 const root = path.resolve(__dirname, "../..");
 const client = fs.readFileSync(path.join(root, "src/app/fishing-spots/conditions/fishing-condition-client.tsx"), "utf8");
 const fetcher = fs.readFileSync(path.join(root, "src/lib/fishing-condition/read-model-client.ts"), "utf8");
+const speciesContract = fs.readFileSync(path.join(root, "src/lib/fishing-condition/fishing-spot-integration.ts"), "utf8");
 
 test("Fishing Condition UI has a dedicated route and read-model client", () => {
   assert.ok(fs.existsSync(path.join(root, "src/app/fishing-spots/conditions/page.tsx")));
@@ -14,7 +15,8 @@ test("Fishing Condition UI has a dedicated route and read-model client", () => {
 });
 
 test("UI keeps the approved ten canonical species and explicit month selection", () => {
-  for (const id of ["BM-SPECIES-000755", "BM-SPECIES-000751", "BM-SPECIES-000188", "BM-SPECIES-000012", "BM-SPECIES-000465", "BM-SPECIES-000444", "BM-SPECIES-000417", "BM-SPECIES-000501", "BM-SPECIES-003107", "BM-SPECIES-003111"]) assert.match(client, new RegExp(id));
+  for (const id of ["BM-SPECIES-000755", "BM-SPECIES-000751", "BM-SPECIES-000188", "BM-SPECIES-000012", "BM-SPECIES-000465", "BM-SPECIES-000444", "BM-SPECIES-000417", "BM-SPECIES-000501", "BM-SPECIES-003107", "BM-SPECIES-003111"]) assert.match(speciesContract, new RegExp(id));
+  assert.match(client, /FISHING_CONDITION_SPECIES/);
   assert.match(client, /월 선택/);
   assert.match(client, /Array\.from\(\{ length: 12 \}/);
 });

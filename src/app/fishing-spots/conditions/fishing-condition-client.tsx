@@ -12,13 +12,7 @@ import {
   type FishingConditionReadModelResponse,
   type FishingConditionSourceId,
 } from "@/lib/fishing-condition/read-model-client";
-
-const SPECIES = [
-  ["BM-SPECIES-000755", "참돔"], ["BM-SPECIES-000751", "감성돔"], ["BM-SPECIES-000188", "농어"],
-  ["BM-SPECIES-000012", "조피볼락"], ["BM-SPECIES-000465", "넙치"], ["BM-SPECIES-000444", "갈치"],
-  ["BM-SPECIES-000417", "고등어"], ["BM-SPECIES-000501", "방어"], ["BM-SPECIES-003107", "주꾸미"],
-  ["BM-SPECIES-003111", "문어"],
-] as const;
+import { FISHING_CONDITION_SPECIES } from "@/lib/fishing-condition/fishing-spot-integration";
 
 const SOURCE_LABELS: Record<FishingConditionSourceId, string> = {
   "nifs-risa": "NIFS 연안정지관측",
@@ -150,8 +144,22 @@ function SectionHeading({ eyebrow, title, children }: { eyebrow: string; title: 
   </div>;
 }
 
-export function FishingConditionClient() {
-  const [speciesId, setSpeciesId] = useState("");
+type FishingConditionSpotContext = {
+  id: string;
+  name: string;
+  region: string;
+  detailHref: string;
+  mapHref: string;
+  navigationHref: string;
+};
+
+type FishingConditionClientProps = {
+  initialSpeciesId?: string;
+  spotContext?: FishingConditionSpotContext;
+};
+
+export function FishingConditionClient({ initialSpeciesId = "", spotContext }: FishingConditionClientProps) {
+  const [speciesId, setSpeciesId] = useState(initialSpeciesId);
   const [month, setMonth] = useState("");
   const [sourceId, setSourceId] = useState<FishingConditionSourceId | "">("");
   const [locationId, setLocationId] = useState("");
@@ -242,7 +250,7 @@ export function FishingConditionClient() {
   return <AppFrame>
     <div className="mx-auto w-full max-w-[1180px] space-y-5 pb-24 max-sm:pr-6 lg:space-y-7 lg:pb-10">
       <div className="flex items-center justify-between gap-3">
-        <Link href="/fishing-spots" className="inline-flex min-h-10 items-center gap-2 rounded-full border border-[#1F3A50] px-4 text-sm font-black text-[#D7E4F6] transition hover:bg-white/8"><ArrowLeft size={16} /> 출조거점</Link>
+        <Link href={spotContext?.detailHref ?? "/fishing-spots"} className="inline-flex min-h-10 items-center gap-2 rounded-full border border-[#1F3A50] px-4 text-sm font-black text-[#D7E4F6] transition hover:bg-white/8"><ArrowLeft size={16} /> {spotContext ? "포인트 상세" : "출조거점"}</Link>
         <span className="text-[11px] font-black uppercase tracking-[0.2em] text-[#6E8299]">Evidence-led view</span>
       </div>
 
@@ -252,10 +260,26 @@ export function FishingConditionClient() {
         <p className="mt-4 max-w-2xl text-sm font-semibold leading-7 text-[#B8CBDD] sm:text-base">어종, 관측 자료원, 정점과 수심을 직접 선택해 환경·계절성·원자료의 한계를 함께 확인합니다.</p>
       </header>
 
+      {spotContext ? <aside className="rounded-[22px] border border-[#29465D] bg-[#0A2031] p-4" aria-label="선택한 출조 포인트">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-[11px] font-black uppercase tracking-[0.2em] text-[#79C9D6]">Selected fishing spot</p>
+            <p className="mt-1 text-sm font-black text-white">{spotContext.name}</p>
+            <p className="mt-1 text-xs font-semibold text-[#8FA7BC]">{spotContext.region}</p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <Link href={spotContext.detailHref} className="inline-flex min-h-10 items-center rounded-full border border-[#29465D] px-4 text-xs font-black text-[#D7E4F6]">상세로 돌아가기</Link>
+            <Link href={spotContext.mapHref} className="inline-flex min-h-10 items-center rounded-full border border-[#79C9D6]/45 px-4 text-xs font-black text-[#AEE8EF]">지도에서 보기</Link>
+            <Link href={spotContext.navigationHref} className="inline-flex min-h-10 items-center rounded-full border border-[#EBC27D]/45 px-4 text-xs font-black text-[#F1D9A8]">항법에서 보기</Link>
+          </div>
+        </div>
+        <p className="mt-3 border-t border-[#29465D] pt-3 text-xs font-semibold leading-5 text-[#8FA7BC]">포인트 위치와 해양 관측 정점은 별도입니다. 월·자료원·정점·수심을 직접 선택해 주세요.</p>
+      </aside> : null}
+
       <section className="rounded-[28px] border border-[#1F3A50] bg-[#071827] p-4 sm:p-6">
         <div className="mb-5"><p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#2E8BFF]">Select context</p><h2 className="mt-1 text-xl font-black text-white">조건을 선택하세요</h2></div>
         <form onSubmit={handleSubmit} className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          <label className="grid gap-2 text-sm font-black text-white"><span>어종</span><select aria-label="어종 선택" value={speciesId} onChange={(event) => { clearDisplayedResult(); setSpeciesId(event.target.value); }} className="control"><option value="">어종 선택</option>{SPECIES.map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select></label>
+          <label className="grid gap-2 text-sm font-black text-white"><span>어종</span><select aria-label="어종 선택" value={speciesId} onChange={(event) => { clearDisplayedResult(); setSpeciesId(event.target.value); }} className="control"><option value="">어종 선택</option>{FISHING_CONDITION_SPECIES.map((species) => <option key={species.id} value={species.id}>{species.name}</option>)}</select></label>
           <label className="grid gap-2 text-sm font-black text-white"><span>기준 월</span><select aria-label="기준 월 선택" value={month} onChange={(event) => { clearDisplayedResult(); setMonth(event.target.value); }} className="control"><option value="">월 선택</option>{Array.from({ length: 12 }, (_, index) => <option key={index + 1} value={index + 1}>{index + 1}월</option>)}</select></label>
           <label className="grid gap-2 text-sm font-black text-white"><span>자료원</span><select aria-label="환경 자료원 선택" value={sourceId} onChange={(event) => { clearDisplayedResult(); setSourceId(event.target.value as FishingConditionSourceId | ""); }} className="control"><option value="">자료원 선택</option><option value="nifs-risa">NIFS 연안정지관측</option><option value="nifs-femo-sea">NIFS 어장환경관측</option></select></label>
           <label className="grid gap-2 text-sm font-black text-white"><span>{sourceId === "nifs-femo-sea" ? "사이트" : "관측 정점"}</span><select aria-label="관측 정점 또는 사이트 선택" value={locationId} onChange={(event) => { clearDisplayedResult(); setLocationId(event.target.value); }} disabled={!sourceId || locationState === "loading"} className="control disabled:cursor-not-allowed disabled:opacity-50"><option value="">{locationState === "loading" ? "자료 불러오는 중..." : "정점·사이트 선택"}</option>{locations.map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}</select>{sourceId ? <span className="text-[11px] font-semibold leading-5 text-[#7890A6]">{SOURCE_LABELS[sourceId]} · 지원 수심 {depthSummary}{selectedLocation ? ` · ${selectedLocation.freshness}` : ""}</span> : <span className="text-[11px] font-semibold text-[#7890A6]">자료원을 선택하면 정점과 지원 수심을 확인할 수 있습니다.</span>}</label>
