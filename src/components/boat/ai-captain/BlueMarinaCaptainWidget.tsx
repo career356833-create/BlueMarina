@@ -78,8 +78,9 @@ export function BlueMarinaCaptainWidget() {
   const pauseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const followModeRef = useRef(false);
   const isFishSession = pathname?.startsWith("/fish") ?? false;
+  const usesContentSafeArea = pathname?.startsWith("/fishing-spots") ?? false;
   const panelTitle = isFishSession ? "어종 도감 안내" : `${defaultCaptainName} · ${defaultCaptainSpecies}`;
-  const paused = isOpen || isHovered || (reducedMotion && !isFollowMode);
+  const paused = usesContentSafeArea || isOpen || isHovered || (reducedMotion && !isFollowMode);
 
   useEffect(() => {
     positionRef.current = position;
@@ -88,6 +89,13 @@ export function BlueMarinaCaptainWidget() {
   useEffect(() => {
     followModeRef.current = isFollowMode;
   }, [isFollowMode]);
+
+  useEffect(() => {
+    if (!usesContentSafeArea) return;
+    followModeRef.current = false;
+    setIsFollowMode(false);
+    setLurePosition(null);
+  }, [usesContentSafeArea]);
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -131,6 +139,7 @@ export function BlueMarinaCaptainWidget() {
     };
 
     const handleContextMenu = (event: MouseEvent) => {
+      if (usesContentSafeArea) return;
       const target = event.target instanceof Element ? event.target : null;
       const selection = window.getSelection();
       if (
@@ -163,7 +172,7 @@ export function BlueMarinaCaptainWidget() {
       document.documentElement.removeEventListener("pointerleave", handlePointerLeave);
       document.removeEventListener("contextmenu", handleContextMenu);
     };
-  }, []);
+  }, [usesContentSafeArea]);
 
   useEffect(() => {
     if (paused) {
@@ -282,7 +291,8 @@ export function BlueMarinaCaptainWidget() {
         data-open={isOpen}
         data-follow={isFollowMode ? "true" : "false"}
         data-facing={direction}
-        style={{ transform: `translate3d(${position.x}px, ${position.y}px, 0)` }}
+        data-safe-area={usesContentSafeArea ? "true" : "false"}
+        style={usesContentSafeArea ? undefined : { transform: `translate3d(${position.x}px, ${position.y}px, 0)` }}
         aria-label={`Blue Marina AI Captain ${defaultCaptainSpecies}`}
       >
       {isOpen ? (

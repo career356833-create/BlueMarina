@@ -15,10 +15,14 @@ export type FishingConditionReadModelResponse = {
     species: { speciesId: string; koreanName: string; scientificName: string };
     requestContext: { month: number | null; environmentSource: string; stationOrSiteId: string; depthContext: string };
     environment: Record<string, {
+      key: string;
       label: string;
+      status: string;
       displayValue: string | null;
       displayStatus: string | null;
       explanation: string | null;
+      profileReference: { rangeType: string | null; min: number | null; max: number | null; unit: string | null } | null;
+      source: { sourceId: string; lineage: string[] };
       freshness: string;
       limitations: string[];
     }>;
@@ -26,9 +30,25 @@ export type FishingConditionReadModelResponse = {
       requestedMonth: number | null;
       spawning: { status: string; description: string | null; cards: Array<{ title: string; description: string | null; relation: string | null; limitations: string[] }> };
       migration: { status: string; description: string | null; cards: Array<{ title: string; description: string | null; relation: string | null; limitations: string[] }> };
-      fisheryOccurrence: { status: string; description: string | null; cards: Array<{ title: string; description: string | null; yearlyRecords: Array<{ year: number; displayStatus: string; displayValue: string | null }> }> };
+      fisheryOccurrence: { status: string; description: string | null; cards: Array<{
+        title: string;
+        description: string | null;
+        sourceType: string;
+        source: { provider?: string; sourceName?: string; tableId?: string };
+        yearlyRecords: Array<{ year: number; status: string; displayStatus: string; value: number | null; displayValue: string | null; unit: string | null }>;
+      }> };
     };
-    sources: Array<{ domain: string; provider: string | null; sourceType: string | null; sourceName: string | null; sourceId: string; observedAt: string | null; urlOrReference: string | null }>;
+    sources: Array<{
+      domain: string;
+      provider: string | null;
+      sourceType: string | null;
+      sourceName: string | null;
+      sourceId: string;
+      qualityClass: string;
+      observedAt: string | null;
+      urlOrReference: string | null;
+      lineage: string[] | Record<string, unknown>;
+    }>;
     limitations: string[];
     freshness: { status: string; label: string; observedAt: string | null };
   };

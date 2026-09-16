@@ -60,6 +60,24 @@ select {
   transition: none;
 }
 
+.blue-captain-widget[data-safe-area="true"] {
+  top: auto;
+  right: 20px;
+  bottom: 86px;
+  left: auto;
+}
+
+.blue-captain-widget[data-safe-area="true"] .blue-captain-launcher {
+  width: 112px;
+  animation: none;
+  filter: drop-shadow(0 14px 20px rgba(0, 5, 9, 0.42));
+}
+
+.blue-captain-widget[data-safe-area="true"] .blue-captain-badge,
+.blue-captain-widget[data-safe-area="true"] .blue-captain-glow {
+  display: none;
+}
+
 .blue-captain-lure {
   position: fixed;
   z-index: 119;
@@ -380,6 +398,20 @@ select {
 
   .blue-captain-links {
     grid-template-columns: 1fr;
+  }
+
+  .blue-captain-widget[data-safe-area="true"] {
+    right: -2px;
+    bottom: 96px;
+  }
+
+  .blue-captain-widget[data-safe-area="true"] .blue-captain-launcher {
+    width: 44px;
+  }
+
+  .blue-captain-widget[data-safe-area="true"] .blue-captain-panel {
+    right: 0;
+    bottom: calc(100% + 12px);
   }
 }
 

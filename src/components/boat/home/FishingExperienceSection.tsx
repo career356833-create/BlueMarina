@@ -34,6 +34,7 @@ export function FishingExperienceSection() {
         src="/media/blue-marina-fishing-experience.png"
         alt="해 뜨는 바다에서 선상 낚시를 즐기는 두 사람"
         fill
+        priority
         sizes="100vw"
         className="-z-30 object-cover object-[66%_center] sm:object-[62%_center] lg:object-center"
       />
