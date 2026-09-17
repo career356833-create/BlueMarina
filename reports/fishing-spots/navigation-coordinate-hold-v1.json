@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "review": "Fishing Spot Coordinate Repair Review V1",
+  "reviewedOn": "2026-09-17",
+  "baseCommit": "37919f17603b39cb345840dd2c6184c9c6c9ff23",
+  "policyApplication": "RECOMMENDATION_ONLY_NOT_APPLIED",
+  "runtimeEnforced": false,
+  "reportPath": "reports/fishing-spots/coordinate-repair-review-v1.json",
+  "count": 4,
+  "holds": [
+    {
+      "spotId": "boat-60",
+      "currentCoordinate": {
+        "lat": 37.628583,
+        "lon": 125.680389
+      },
+      "repairStatus": "NO_AUTHORITATIVE_REPLACEMENT",
+      "navigationPolicy": "NAVIGATION_BLOCKED_PENDING_REVIEW",
+      "mapPolicy": "MAP_DISPLAY_BLOCKED",
+      "reason": "정확한 장소-좌표 대응 및 cross-region 충돌이 미해결이므로 현재 좌표의 목적지 선택·경로 요청·외부 항법 전달을 보류하도록 권고한다.",
+      "releaseCriteria": "Exact current coordinate confirmation resolving the conflict, or separately authorized application of a dual-source-approved replacement followed by coordinate revalidation. Coordinate confirmation alone is not route/access clearance.",
+      "applied": false
+    },
+    {
+      "spotId": "boat-128",
+      "currentCoordinate": {
+        "lat": 37.628583,
+        "lon": 125.680389
+      },
+      "repairStatus": "NO_AUTHORITATIVE_REPLACEMENT",
+      "navigationPolicy": "NAVIGATION_BLOCKED_PENDING_REVIEW",
+      "mapPolicy": "MAP_DISPLAY_WITH_WARNING",
+      "reason": "정확한 장소-좌표 대응 및 cross-region 충돌이 미해결이므로 현재 좌표의 목적지 선택·경로 요청·외부 항법 전달을 보류하도록 권고한다.",
+      "releaseCriteria": "Exact current coordinate confirmation resolving the conflict, or separately authorized application of a dual-source-approved replacement followed by coordinate revalidation. Coordinate confirmation alone is not route/access clearance.",
+      "applied": false
+    },
+    {
+      "spotId": "boat-129",
+      "currentCoordinate": {
+        "lat": 37.475917,
+        "lon": 126.354778
+      },
+      "repairStatus": "NO_AUTHORITATIVE_REPLACEMENT",
+      "navigationPolicy": "NAVIGATION_BLOCKED_PENDING_REVIEW",
+      "mapPolicy": "MAP_DISPLAY_WITH_WARNING",
+      "reason": "정확한 장소-좌표 대응 및 cross-region 충돌이 미해결이므로 현재 좌표의 목적지 선택·경로 요청·외부 항법 전달을 보류하도록 권고한다.",
+      "releaseCriteria": "Exact current coordinate confirmation resolving the conflict, or separately authorized application of a dual-source-approved replacement followed by coordinate revalidation. Coordinate confirmation alone is not route/access clearance.",
+      "applied": false
+    },
+    {
+      "spotId": "boat-321",
+      "currentCoordinate": {
+        "lat": 37.475917,
+        "lon": 126.354778
+      },
+      "repairStatus": "NO_AUTHORITATIVE_REPLACEMENT",
+      "navigationPolicy": "NAVIGATION_BLOCKED_PENDING_REVIEW",
+      "mapPolicy": "MAP_DISPLAY_BLOCKED",
+      "reason": "정확한 장소-좌표 대응 및 cross-region 충돌이 미해결이므로 현재 좌표의 목적지 선택·경로 요청·외부 항법 전달을 보류하도록 권고한다.",
+      "releaseCriteria": "Exact current coordinate confirmation resolving the conflict, or separately authorized application of a dual-source-approved replacement followed by coordinate revalidation. Coordinate confirmation alone is not route/access clearance.",
+      "applied": false
+    }
+  ]
+}

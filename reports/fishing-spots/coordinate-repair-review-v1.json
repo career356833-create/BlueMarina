@@ -1,0 +1,701 @@
+{
+  "schemaVersion": 1,
+  "review": "Fishing Spot Coordinate Repair Review V1",
+  "reviewedOn": "2026-09-17",
+  "baseCommit": "37919f17603b39cb345840dd2c6184c9c6c9ff23",
+  "decision": "NO_AUTHORITATIVE_REPAIR_AVAILABLE",
+  "decisionMeaning": "4개 원본 행의 명칭·지역 정체성은 식별했으나, 이번에 확인한 자료에서 승인 요건을 충족하는 대체 좌표나 독립된 현재 좌표 확인을 확보하지 못했다.",
+  "scope": {
+    "spotIds": [
+      "boat-60",
+      "boat-128",
+      "boat-129",
+      "boat-321"
+    ],
+    "reviewedCount": 4,
+    "otherSpotsReviewed": 0
+  },
+  "policyApplication": "RECOMMENDATION_ONLY_NOT_APPLIED",
+  "autoApply": false,
+  "inputs": {
+    "canonical": {
+      "path": "src/data/fishing-spots.json",
+      "sha256": "5707FB2E057A039B7F572ECE7E94A0936ED5B73F204613A3E3FCE9A45CDC74BA"
+    },
+    "source": {
+      "path": "work/fishing-spots-boat-raw.csv",
+      "sha256": "5AE7CFB4280214667583724B8C0531A7018B0ABDE47CB82C60F6C491B9DFA20D",
+      "freshDownloadUrl": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000003243490&fileDetailSn=1&insertDataPrcus=N",
+      "downloadedFilename": "선상낚시포인트.csv",
+      "freshDownloadBytes": 98417,
+      "byteIdentical": true
+    }
+  },
+  "approvalCriteria": [
+    "Public authority source",
+    "Exact feature identity plus region/address/source row match",
+    "Explicit coordinate with known CRS/unit",
+    "Source URL and record reference",
+    "Region consistency",
+    "Two independent authoritative sources for REPAIR_APPROVED; one qualifying source remains REPAIR_CANDIDATE_NEEDS_SECOND_SOURCE",
+    "No automatic application; unapplied candidate cannot enable current navigation"
+  ],
+  "researchLog": [
+    {
+      "source": "https://www.data.go.kr/data/15148435/fileData.do",
+      "outcome": "LIVE_PORTAL_AND_FRESH_CSV_VERIFIED",
+      "detail": "20231231 dataset; 329 rows in portal metadata; fresh download matches preserved SHA-256. Only IDs 60/128/129/321 reviewed."
+    },
+    {
+      "queries": [
+        "청석골 site:go.kr",
+        "구지둔턱 site:go.kr",
+        "영종도북측수문 site:go.kr",
+        "백포간출여 site:go.kr"
+      ],
+      "outcome": "NO_QUALIFYING_EXACT_COORDINATE_FOUND",
+      "detail": "이름·지역 결합 검색과 공공기관 한정 검색. 동명 지명 및 일반 재게시 자료는 제외."
+    },
+    {
+      "queries": [
+        "두미도 청석골 국립해양조사원",
+        "연평도 구지둔턱 국립해양조사원",
+        "돌산도 백포 간출여 국립해양조사원",
+        "영종도 북측수문 북서측 해상 국립해양조사원"
+      ],
+      "outcome": "NO_QUALIFYING_EXACT_COORDINATE_FOUND"
+    },
+    {
+      "source": "https://www.khoa.go.kr/oceanmap/main.do",
+      "request": {
+        "method": "POST",
+        "url": "https://www.khoa.go.kr/oceanmap/getMenuView.do",
+        "body": "mid=48"
+      },
+      "outcome": "BOAT_MENU_RETURNED_SERVICE_ERROR_HTML",
+      "detail": "메인 페이지와 공개 JS의 선상낚시 메뉴 경로를 확인했다. 상세 조회는 오류 본문을 반환했다. 이 서비스의 좌표 보유 여부는 확인하지 못했다."
+    },
+    {
+      "source": "https://www.codil.or.kr/filebank/original/RK/OTKCRK130224/OTKCRK130224.pdf",
+      "outcome": "NO_TARGET_COORDINATE_IN_EXTRACTED_TEXT",
+      "detail": "낚시정보도 제작 보고서 85페이지의 추출 텍스트에서 네 세부 지명 일치가 없었다. 연평도/돌산도는 계획 지역 목록에 등장한다. 도면의 이미지 전체를 판독한 결과가 아니므로 미보유 증거로 사용하지 않는다."
+    },
+    {
+      "source": "https://qca.purpleo.kr/article/128",
+      "outcome": "REJECTED_SAME_SOURCE_REPUBLICATION",
+      "detail": "같은 해수부 원본 행을 재게시하므로 독립 coordinate authority 아님."
+    },
+    {
+      "source": "https://www.ocean-fishing.com/fishing-spots/1455",
+      "outcome": "REJECTED_SAME_SOURCE_REPUBLICATION",
+      "detail": "해양수산부 2023-12-31 데이터를 출처로 명시한 재게시 정보. 독립 source 아님."
+    }
+  ],
+  "records": [
+    {
+      "spotId": "boat-60",
+      "currentCoordinate": {
+        "lat": 37.628583,
+        "lon": 125.680389
+      },
+      "currentRecord": {
+        "id": "boat-60",
+        "name": "두미도 - 청석골",
+        "region": "경상남도",
+        "city": "통영시",
+        "address": "경상남도 통영시",
+        "latitude": "37.628583",
+        "longitude": "125.680389",
+        "sourceRowId": "60",
+        "originalSourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceDataset": "해양수산부_공동활용체계_선상낚시포인트_20231231",
+        "rawProjectedCoordinates": "POINT (839433.704293541 1960348.81280377)",
+        "officialProvenance": {
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "url": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceCheckedAt": "2026-07-11"
+        }
+      },
+      "originalSourceRow": {
+        "공간정보일련번호": "60",
+        "공간정보": "POINT (839433.704293541 1960348.81280377)",
+        "포인트명1": "두미도",
+        "포인트명2": "청석골",
+        "수심범위내용": "5.0~16.1",
+        "주원료내용": "펄",
+        "조수물때내용": "상관없음",
+        "낚시방법대상내용": "▶감성돔 - 릴찌/ 장대/ 원투▶벵에돔 - 목줄/ 장대/ 부력/ 잠수▶노래미 - 루어/ 릴찌/ 장대/ 원투▶참돔 - 부력/ 잠수▶농어 - 루어/ 릴찌▶볼락 - 릴찌/ 장대/ 루어",
+        "선상낚시포인트도분초위도": "37-37-42.9N",
+        "선상낚시포인트도분초경도": "125-40-49.4E",
+        "고시내용": "",
+        "행정구역명": "경상남도 통영시"
+      },
+      "sourceCoordinateCheck": {
+        "originalDms": {
+          "latitude": "37-37-42.9N",
+          "longitude": "125-40-49.4E"
+        },
+        "currentVsDmsDeltaMeters": 0.0383,
+        "recoveredProjectedCrs": "EPSG:5179",
+        "targetCrs": "EPSG:4326",
+        "transformer": "src/lib/geo/projection.ts",
+        "limitation": "CRS recovery and numeric reproduction do not prove the point belongs to the named location. Portal does not declare projected CRS."
+      },
+      "locationIdentity": {
+        "sourceRecordIdentity": "EXACT_NAME_REGION_AND_SOURCE_ROW_MATCH",
+        "parentPlaceName": "두미도",
+        "namedFeature": "청석골",
+        "sourceRegion": "경상남도",
+        "sourceCity": "통영시",
+        "exactPosition": "UNCONFIRMED",
+        "independentExactFeatureMatch": false,
+        "resolution": "원본의 장소명·지역·행 ID는 식별했다. 독립 권위 자료는 상위 섬/마을만 보강하며 정확한 해상 위치는 확정하지 못했다.",
+        "disambiguation": "학술 지명 설명이며 측량 성과나 청석골의 좌표 정정 고시가 아니다. 섬 대표 좌표를 낚시 지점으로 전용하지 않는다."
+      },
+      "officialEvidence": [
+        {
+          "evidenceId": "MOF-BOAT-60",
+          "publisher": "해양수산부 / 공공데이터포털",
+          "authorityType": "PUBLIC_AUTHORITY",
+          "independenceGroup": "MOF-SHARED-BOAT-20231231",
+          "url": "https://www.data.go.kr/data/15148435/fileData.do",
+          "downloadUrl": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000003243490&fileDetailSn=1&insertDataPrcus=N",
+          "sourceRecordIdentifier": "60",
+          "datasetVersion": "20231231",
+          "retrievedOn": "2026-09-17",
+          "localArtifact": "work/fishing-spots-boat-raw.csv",
+          "sha256": "5AE7CFB4280214667583724B8C0531A7018B0ABDE47CB82C60F6C491B9DFA20D",
+          "freshDownloadByteIdentical": true,
+          "exactLocationMatch": false,
+          "nameRegionRowMatch": true,
+          "finding": "정확한 명칭·행정구역·행 ID를 확인했으나 다른 지역 행과 projected 및 DMS 좌표가 모두 동일하다. 이 원본만으로 정확한 장소-좌표 대응을 확정할 수 없다.",
+          "originalDms": {
+            "latitude": "37-37-42.9N",
+            "longitude": "125-40-49.4E"
+          },
+          "rawProjectedCoordinates": "POINT (839433.704293541 1960348.81280377)",
+          "coordinateAuthorityEligible": false,
+          "conflictResolved": false,
+          "coordinateUse": "CONFLICT_EVIDENCE_ONLY_NOT_REPAIR_AUTHORITY"
+        },
+        {
+          "evidenceId": "AKS-DUMIDO",
+          "publisher": "한국학중앙연구원 한국민족문화대백과사전",
+          "authorityType": "PUBLIC_RESEARCH_INSTITUTION",
+          "independenceGroup": "AKS-ENCYCLOPEDIA",
+          "url": "https://encykorea.aks.ac.kr/Article/E0017002",
+          "sourceRecordIdentifier": "E0017002",
+          "title": "두미도",
+          "scope": "PARENT_ISLAND_ONLY",
+          "exactLocationMatch": false,
+          "finding": "두미도를 통영시 욕지면 두미리의 섬으로 설명한다. 청석골 낚시 지점의 위치를 특정하지 않는다.",
+          "coordinateReference": {
+            "latitudeText": "34°41′N",
+            "longitudeText": "128°13′E",
+            "unit": "degrees and minutes",
+            "crs": "UNDECLARED",
+            "use": "REJECTED_PARENT_ISLAND_REFERENCE_NOT_REPLACEMENT"
+          },
+          "limitation": "학술 지명 설명이며 측량 성과나 청석골의 좌표 정정 고시가 아니다. 섬 대표 좌표를 낚시 지점으로 전용하지 않는다.",
+          "checkedOn": "2026-09-17",
+          "coordinateAuthorityEligible": false,
+          "conflictResolved": false
+        }
+      ],
+      "regionConsistency": {
+        "result": "CONTRADICTED_AT_PARENT_REGION_SCALE",
+        "basis": "원본의 남해 섬/마을 정체성과 인천권을 가리키는 현재 좌표의 큰 지역 불일치. 지명 근거에 따른 검토 판단이며 행정해역 경계 측량 판정은 아니다.",
+        "candidateRegionConsistency": "NOT_APPLICABLE_NO_CANDIDATE"
+      },
+      "candidateCoordinate": null,
+      "coordinateDeltaMeters": null,
+      "coordinateDeltaReason": "No authoritative replacement coordinate; no proposed point or repair distance was invented.",
+      "repairStatus": "NO_AUTHORITATIVE_REPLACEMENT",
+      "currentCoordinateConfirmed": false,
+      "crossRegionConflictResolved": false,
+      "previousNavigationRisk": "NAVIGATION_REVIEW_REQUIRED",
+      "mapPolicy": "MAP_DISPLAY_BLOCKED",
+      "mapPolicyReason": "상위 장소의 지역과 크게 어긋나는 현재 핀은 지도에서 차단하도록 권고한다. 좌표 없는 장소 설명은 보존할 수 있다.",
+      "navigationPolicy": "NAVIGATION_BLOCKED_PENDING_REVIEW",
+      "navigationPolicyReason": "정확한 장소-좌표 대응 및 cross-region 충돌이 미해결이므로 현재 좌표의 목적지 선택·경로 요청·외부 항법 전달을 보류하도록 권고한다.",
+      "policyApplied": false,
+      "userWording": "좌표 검토 필요 · 항법 목적지 사용 보류",
+      "limitations": [
+        "공개 원본 재다운로드와 두 좌표 표현의 일치는 한 자료 계보의 재현이며 두 독립 source 확인이 아니다.",
+        "상위 섬·마을·항구 대표점, 일반 geocoding, 블로그/카페, 원본 재게시 사이트는 repair 근거로 채택하지 않았다.",
+        "공개 검색에서 미발견이라는 뜻이며 권위 있는 좌표가 세상에 존재하지 않는다는 단정이 아니다.",
+        "정책은 review 권고이며 현재 앱의 지도 표시나 navigation eligibility에 적용되지 않았다."
+      ]
+    },
+    {
+      "spotId": "boat-128",
+      "currentCoordinate": {
+        "lat": 37.628583,
+        "lon": 125.680389
+      },
+      "currentRecord": {
+        "id": "boat-128",
+        "name": "연평도 - 구지둔턱",
+        "region": "인천광역시",
+        "city": "옹진군",
+        "address": "인천광역시 옹진군",
+        "latitude": "37.628583",
+        "longitude": "125.680389",
+        "sourceRowId": "128",
+        "originalSourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceDataset": "해양수산부_공동활용체계_선상낚시포인트_20231231",
+        "rawProjectedCoordinates": "POINT (839433.704293541 1960348.81280377)",
+        "officialProvenance": {
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "url": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceCheckedAt": "2026-07-11"
+        }
+      },
+      "originalSourceRow": {
+        "공간정보일련번호": "128",
+        "공간정보": "POINT (839433.704293541 1960348.81280377)",
+        "포인트명1": "연평도",
+        "포인트명2": "구지둔턱",
+        "수심범위내용": "5.3~15.9",
+        "주원료내용": "암",
+        "조수물때내용": "12물~4물",
+        "낚시방법대상내용": "▶광어 - 릴찌/ 원투▶우럭 - 릴찌/ 원투▶숭어 - 릴찌/ 장대/ 홀치기▶간재미 - 원투▶농어 - 루어/ 릴찌▶노래미 - 루어/ 릴찌/ 장대/ 원투",
+        "선상낚시포인트도분초위도": "37-37-42.9N",
+        "선상낚시포인트도분초경도": "125-40-49.4E",
+        "고시내용": "",
+        "행정구역명": "인천광역시 옹진군"
+      },
+      "sourceCoordinateCheck": {
+        "originalDms": {
+          "latitude": "37-37-42.9N",
+          "longitude": "125-40-49.4E"
+        },
+        "currentVsDmsDeltaMeters": 0.0383,
+        "recoveredProjectedCrs": "EPSG:5179",
+        "targetCrs": "EPSG:4326",
+        "transformer": "src/lib/geo/projection.ts",
+        "limitation": "CRS recovery and numeric reproduction do not prove the point belongs to the named location. Portal does not declare projected CRS."
+      },
+      "locationIdentity": {
+        "sourceRecordIdentity": "EXACT_NAME_REGION_AND_SOURCE_ROW_MATCH",
+        "parentPlaceName": "연평도",
+        "namedFeature": "구지둔턱",
+        "sourceRegion": "인천광역시",
+        "sourceCity": "옹진군",
+        "exactPosition": "UNCONFIRMED",
+        "independentExactFeatureMatch": false,
+        "resolution": "원본의 장소명·지역·행 ID는 식별했다. 독립 권위 자료는 상위 섬/마을만 보강하며 정확한 해상 위치는 확정하지 못했다.",
+        "disambiguation": "연평도 관광지 주소나 구지도라는 유사 지명을 구지둔턱의 정확한 위치로 간주하지 않는다."
+      },
+      "officialEvidence": [
+        {
+          "evidenceId": "MOF-BOAT-128",
+          "publisher": "해양수산부 / 공공데이터포털",
+          "authorityType": "PUBLIC_AUTHORITY",
+          "independenceGroup": "MOF-SHARED-BOAT-20231231",
+          "url": "https://www.data.go.kr/data/15148435/fileData.do",
+          "downloadUrl": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000003243490&fileDetailSn=1&insertDataPrcus=N",
+          "sourceRecordIdentifier": "128",
+          "datasetVersion": "20231231",
+          "retrievedOn": "2026-09-17",
+          "localArtifact": "work/fishing-spots-boat-raw.csv",
+          "sha256": "5AE7CFB4280214667583724B8C0531A7018B0ABDE47CB82C60F6C491B9DFA20D",
+          "freshDownloadByteIdentical": true,
+          "exactLocationMatch": false,
+          "nameRegionRowMatch": true,
+          "finding": "정확한 명칭·행정구역·행 ID를 확인했으나 다른 지역 행과 projected 및 DMS 좌표가 모두 동일하다. 이 원본만으로 정확한 장소-좌표 대응을 확정할 수 없다.",
+          "originalDms": {
+            "latitude": "37-37-42.9N",
+            "longitude": "125-40-49.4E"
+          },
+          "rawProjectedCoordinates": "POINT (839433.704293541 1960348.81280377)",
+          "coordinateAuthorityEligible": false,
+          "conflictResolved": false,
+          "coordinateUse": "CONFLICT_EVIDENCE_ONLY_NOT_REPAIR_AUTHORITY"
+        },
+        {
+          "evidenceId": "INCHEON-YEONPYEONG",
+          "publisher": "인천광역시·인천관광공사 인천투어",
+          "authorityType": "PUBLIC_AUTHORITY",
+          "independenceGroup": "INCHEON-TOURISM",
+          "url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21122410395910989",
+          "sourceRecordIdentifier": "ITD21122410395910989",
+          "title": "연평도(대·소연평도)",
+          "scope": "PARENT_ISLAND_ONLY",
+          "exactLocationMatch": false,
+          "finding": "연평면 옹진군의 대·소연평도를 설명한다. 구지둔턱의 명시 좌표를 제공하지 않는다.",
+          "coordinateReference": null,
+          "limitation": "연평도 관광지 주소나 구지도라는 유사 지명을 구지둔턱의 정확한 위치로 간주하지 않는다.",
+          "checkedOn": "2026-09-17",
+          "coordinateAuthorityEligible": false,
+          "conflictResolved": false
+        }
+      ],
+      "regionConsistency": {
+        "result": "BROAD_REGION_PLAUSIBLE_EXACT_POSITION_UNCONFIRMED",
+        "basis": "현재 좌표는 인천권이라는 큰 지역 설명과 양립할 수 있지만, 이를 정확한 구지둔턱/수문 북서측 해상 위치의 확인으로 보지 않는다.",
+        "candidateRegionConsistency": "NOT_APPLICABLE_NO_CANDIDATE"
+      },
+      "candidateCoordinate": null,
+      "coordinateDeltaMeters": null,
+      "coordinateDeltaReason": "No authoritative replacement coordinate; no proposed point or repair distance was invented.",
+      "repairStatus": "NO_AUTHORITATIVE_REPLACEMENT",
+      "currentCoordinateConfirmed": false,
+      "crossRegionConflictResolved": false,
+      "previousNavigationRisk": "NAVIGATION_REVIEW_REQUIRED",
+      "mapPolicy": "MAP_DISPLAY_WITH_WARNING",
+      "mapPolicyReason": "장소 설명을 보존하되 좌표 검토 필요 경고를 상시 표시하고 확정 핀으로 표현하지 않도록 권고한다. 경고를 표시할 수 없는 화면에서는 핀을 차단한다.",
+      "navigationPolicy": "NAVIGATION_BLOCKED_PENDING_REVIEW",
+      "navigationPolicyReason": "정확한 장소-좌표 대응 및 cross-region 충돌이 미해결이므로 현재 좌표의 목적지 선택·경로 요청·외부 항법 전달을 보류하도록 권고한다.",
+      "policyApplied": false,
+      "userWording": "좌표 검토 필요 · 항법 목적지 사용 보류",
+      "limitations": [
+        "공개 원본 재다운로드와 두 좌표 표현의 일치는 한 자료 계보의 재현이며 두 독립 source 확인이 아니다.",
+        "상위 섬·마을·항구 대표점, 일반 geocoding, 블로그/카페, 원본 재게시 사이트는 repair 근거로 채택하지 않았다.",
+        "공개 검색에서 미발견이라는 뜻이며 권위 있는 좌표가 세상에 존재하지 않는다는 단정이 아니다.",
+        "정책은 review 권고이며 현재 앱의 지도 표시나 navigation eligibility에 적용되지 않았다."
+      ]
+    },
+    {
+      "spotId": "boat-129",
+      "currentCoordinate": {
+        "lat": 37.475917,
+        "lon": 126.354778
+      },
+      "currentRecord": {
+        "id": "boat-129",
+        "name": "영종도·용유도 - 영종도북측수문북서측해상",
+        "region": "인천광역시",
+        "city": "중구",
+        "address": "인천광역시 중구",
+        "latitude": "37.475917",
+        "longitude": "126.354778",
+        "sourceRowId": "129",
+        "originalSourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceDataset": "해양수산부_공동활용체계_선상낚시포인트_20231231",
+        "rawProjectedCoordinates": "POINT (898739.4548031851 1942470.23046188)",
+        "officialProvenance": {
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "url": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceCheckedAt": "2026-07-11"
+        }
+      },
+      "originalSourceRow": {
+        "공간정보일련번호": "129",
+        "공간정보": "POINT (898739.4548031851 1942470.23046188)",
+        "포인트명1": "영종도·용유도",
+        "포인트명2": "영종도북측수문북서측해상",
+        "수심범위내용": "20.2~26",
+        "주원료내용": "모래/ 펄",
+        "조수물때내용": "조금 전후",
+        "낚시방법대상내용": "▶숭어 - 릴찌/ 장대/ 홀치기▶우럭 - 릴찌/ 원투▶노래미 - 루어/ 릴찌/ 장대/ 원투▶삼치 - 루어/ 릴찌▶붕장어 - 원투",
+        "선상낚시포인트도분초위도": "37-28-33.3N",
+        "선상낚시포인트도분초경도": "126-21-17.2E",
+        "고시내용": "",
+        "행정구역명": "인천광역시 중구"
+      },
+      "sourceCoordinateCheck": {
+        "originalDms": {
+          "latitude": "37-28-33.3N",
+          "longitude": "126-21-17.2E"
+        },
+        "currentVsDmsDeltaMeters": 0.0419,
+        "recoveredProjectedCrs": "EPSG:5179",
+        "targetCrs": "EPSG:4326",
+        "transformer": "src/lib/geo/projection.ts",
+        "limitation": "CRS recovery and numeric reproduction do not prove the point belongs to the named location. Portal does not declare projected CRS."
+      },
+      "locationIdentity": {
+        "sourceRecordIdentity": "EXACT_NAME_REGION_AND_SOURCE_ROW_MATCH",
+        "parentPlaceName": "영종도·용유도",
+        "namedFeature": "영종도북측수문북서측해상",
+        "sourceRegion": "인천광역시",
+        "sourceCity": "중구",
+        "exactPosition": "UNCONFIRMED",
+        "independentExactFeatureMatch": false,
+        "resolution": "원본의 장소명·지역·행 ID는 식별했다. 독립 권위 자료는 상위 섬/마을만 보강하며 정확한 해상 위치는 확정하지 못했다.",
+        "disambiguation": "현재 페이지 주소는 인천 영종구 운남동으로 표시된다. 원본의 2023년 중구 명칭과 시점을 구분하며 행정명 변경이나 좌표 정정을 수행하지 않는다. 수문 자체와 북서측 해상은 다른 대상이다."
+      },
+      "officialEvidence": [
+        {
+          "evidenceId": "MOF-BOAT-129",
+          "publisher": "해양수산부 / 공공데이터포털",
+          "authorityType": "PUBLIC_AUTHORITY",
+          "independenceGroup": "MOF-SHARED-BOAT-20231231",
+          "url": "https://www.data.go.kr/data/15148435/fileData.do",
+          "downloadUrl": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000003243490&fileDetailSn=1&insertDataPrcus=N",
+          "sourceRecordIdentifier": "129",
+          "datasetVersion": "20231231",
+          "retrievedOn": "2026-09-17",
+          "localArtifact": "work/fishing-spots-boat-raw.csv",
+          "sha256": "5AE7CFB4280214667583724B8C0531A7018B0ABDE47CB82C60F6C491B9DFA20D",
+          "freshDownloadByteIdentical": true,
+          "exactLocationMatch": false,
+          "nameRegionRowMatch": true,
+          "finding": "정확한 명칭·행정구역·행 ID를 확인했으나 다른 지역 행과 projected 및 DMS 좌표가 모두 동일하다. 이 원본만으로 정확한 장소-좌표 대응을 확정할 수 없다.",
+          "originalDms": {
+            "latitude": "37-28-33.3N",
+            "longitude": "126-21-17.2E"
+          },
+          "rawProjectedCoordinates": "POINT (898739.4548031851 1942470.23046188)",
+          "coordinateAuthorityEligible": false,
+          "conflictResolved": false,
+          "coordinateUse": "CONFLICT_EVIDENCE_ONLY_NOT_REPAIR_AUTHORITY"
+        },
+        {
+          "evidenceId": "INCHEON-YEONGJONG",
+          "publisher": "인천광역시·인천관광공사 인천투어",
+          "authorityType": "PUBLIC_AUTHORITY",
+          "independenceGroup": "INCHEON-TOURISM",
+          "url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21122410481474663",
+          "sourceRecordIdentifier": "ITD21122410481474663",
+          "title": "영종도",
+          "scope": "PARENT_ISLAND_ONLY",
+          "exactLocationMatch": false,
+          "finding": "영종도와 용유도 일대를 설명한다. 북측수문의 북서측 해상 지점에 대한 명시 좌표는 없다.",
+          "coordinateReference": null,
+          "limitation": "현재 페이지 주소는 인천 영종구 운남동으로 표시된다. 원본의 2023년 중구 명칭과 시점을 구분하며 행정명 변경이나 좌표 정정을 수행하지 않는다. 수문 자체와 북서측 해상은 다른 대상이다.",
+          "checkedOn": "2026-09-17",
+          "coordinateAuthorityEligible": false,
+          "conflictResolved": false
+        }
+      ],
+      "regionConsistency": {
+        "result": "BROAD_REGION_PLAUSIBLE_EXACT_POSITION_UNCONFIRMED",
+        "basis": "현재 좌표는 인천권이라는 큰 지역 설명과 양립할 수 있지만, 이를 정확한 구지둔턱/수문 북서측 해상 위치의 확인으로 보지 않는다.",
+        "candidateRegionConsistency": "NOT_APPLICABLE_NO_CANDIDATE"
+      },
+      "candidateCoordinate": null,
+      "coordinateDeltaMeters": null,
+      "coordinateDeltaReason": "No authoritative replacement coordinate; no proposed point or repair distance was invented.",
+      "repairStatus": "NO_AUTHORITATIVE_REPLACEMENT",
+      "currentCoordinateConfirmed": false,
+      "crossRegionConflictResolved": false,
+      "previousNavigationRisk": "NAVIGATION_REVIEW_REQUIRED",
+      "mapPolicy": "MAP_DISPLAY_WITH_WARNING",
+      "mapPolicyReason": "장소 설명을 보존하되 좌표 검토 필요 경고를 상시 표시하고 확정 핀으로 표현하지 않도록 권고한다. 경고를 표시할 수 없는 화면에서는 핀을 차단한다.",
+      "navigationPolicy": "NAVIGATION_BLOCKED_PENDING_REVIEW",
+      "navigationPolicyReason": "정확한 장소-좌표 대응 및 cross-region 충돌이 미해결이므로 현재 좌표의 목적지 선택·경로 요청·외부 항법 전달을 보류하도록 권고한다.",
+      "policyApplied": false,
+      "userWording": "좌표 검토 필요 · 항법 목적지 사용 보류",
+      "limitations": [
+        "공개 원본 재다운로드와 두 좌표 표현의 일치는 한 자료 계보의 재현이며 두 독립 source 확인이 아니다.",
+        "상위 섬·마을·항구 대표점, 일반 geocoding, 블로그/카페, 원본 재게시 사이트는 repair 근거로 채택하지 않았다.",
+        "공개 검색에서 미발견이라는 뜻이며 권위 있는 좌표가 세상에 존재하지 않는다는 단정이 아니다.",
+        "정책은 review 권고이며 현재 앱의 지도 표시나 navigation eligibility에 적용되지 않았다."
+      ]
+    },
+    {
+      "spotId": "boat-321",
+      "currentCoordinate": {
+        "lat": 37.475917,
+        "lon": 126.354778
+      },
+      "currentRecord": {
+        "id": "boat-321",
+        "name": "돌산도 - 백포간출여주변해상",
+        "region": "전라남도",
+        "city": "여수시",
+        "address": "전라남도 여수시",
+        "latitude": "37.475917",
+        "longitude": "126.354778",
+        "sourceRowId": "321",
+        "originalSourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceDataset": "해양수산부_공동활용체계_선상낚시포인트_20231231",
+        "rawProjectedCoordinates": "POINT (898739.4548031851 1942470.23046188)",
+        "officialProvenance": {
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "url": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceCheckedAt": "2026-07-11"
+        }
+      },
+      "originalSourceRow": {
+        "공간정보일련번호": "321",
+        "공간정보": "POINT (898739.4548031851 1942470.23046188)",
+        "포인트명1": "돌산도",
+        "포인트명2": "백포간출여주변해상",
+        "수심범위내용": "9.7~10.5",
+        "주원료내용": "펄",
+        "조수물때내용": "초들물~중날물",
+        "낚시방법대상내용": "▶참돔 - 부력/ 잠수▶농어 - 루어/ 릴찌▶노래미 - 루어/ 릴찌/ 장대/ 원투▶볼락 - 릴찌/ 장대/ 루어▶우럭 - 릴찌/ 원투▶붕장어 - 원투",
+        "선상낚시포인트도분초위도": "37-28-33.3N",
+        "선상낚시포인트도분초경도": "126-21-17.2E",
+        "고시내용": "",
+        "행정구역명": "전라남도 여수시"
+      },
+      "sourceCoordinateCheck": {
+        "originalDms": {
+          "latitude": "37-28-33.3N",
+          "longitude": "126-21-17.2E"
+        },
+        "currentVsDmsDeltaMeters": 0.0419,
+        "recoveredProjectedCrs": "EPSG:5179",
+        "targetCrs": "EPSG:4326",
+        "transformer": "src/lib/geo/projection.ts",
+        "limitation": "CRS recovery and numeric reproduction do not prove the point belongs to the named location. Portal does not declare projected CRS."
+      },
+      "locationIdentity": {
+        "sourceRecordIdentity": "EXACT_NAME_REGION_AND_SOURCE_ROW_MATCH",
+        "parentPlaceName": "돌산도",
+        "namedFeature": "백포간출여주변해상",
+        "sourceRegion": "전라남도",
+        "sourceCity": "여수시",
+        "exactPosition": "UNCONFIRMED",
+        "independentExactFeatureMatch": false,
+        "resolution": "원본의 장소명·지역·행 ID는 식별했다. 독립 권위 자료는 상위 섬/마을만 보강하며 정확한 해상 위치는 확정하지 못했다.",
+        "disambiguation": "백포 마을·항구·해변의 위치와 간출여 주변해상은 동일 지점으로 증명되지 않았다. 검색 색인 본문을 확인했고 직접 페이지 열기는 실패했다."
+      },
+      "officialEvidence": [
+        {
+          "evidenceId": "MOF-BOAT-321",
+          "publisher": "해양수산부 / 공공데이터포털",
+          "authorityType": "PUBLIC_AUTHORITY",
+          "independenceGroup": "MOF-SHARED-BOAT-20231231",
+          "url": "https://www.data.go.kr/data/15148435/fileData.do",
+          "downloadUrl": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000003243490&fileDetailSn=1&insertDataPrcus=N",
+          "sourceRecordIdentifier": "321",
+          "datasetVersion": "20231231",
+          "retrievedOn": "2026-09-17",
+          "localArtifact": "work/fishing-spots-boat-raw.csv",
+          "sha256": "5AE7CFB4280214667583724B8C0531A7018B0ABDE47CB82C60F6C491B9DFA20D",
+          "freshDownloadByteIdentical": true,
+          "exactLocationMatch": false,
+          "nameRegionRowMatch": true,
+          "finding": "정확한 명칭·행정구역·행 ID를 확인했으나 다른 지역 행과 projected 및 DMS 좌표가 모두 동일하다. 이 원본만으로 정확한 장소-좌표 대응을 확정할 수 없다.",
+          "originalDms": {
+            "latitude": "37-28-33.3N",
+            "longitude": "126-21-17.2E"
+          },
+          "rawProjectedCoordinates": "POINT (898739.4548031851 1942470.23046188)",
+          "coordinateAuthorityEligible": false,
+          "conflictResolved": false,
+          "coordinateUse": "CONFLICT_EVIDENCE_ONLY_NOT_REPAIR_AUTHORITY"
+        },
+        {
+          "evidenceId": "YEOSU-BAEKPO",
+          "publisher": "여수시 돌산읍",
+          "authorityType": "PUBLIC_AUTHORITY",
+          "independenceGroup": "YEOSU-LOCAL-GOVERNMENT",
+          "url": "https://www.yeosu.go.kr/dong/center/dolsan-eup/dolsan-eup_guide/baekpo",
+          "sourceRecordIdentifier": "dong/center/dolsan-eup/dolsan-eup_guide/baekpo",
+          "title": "백포 마을안내",
+          "scope": "PARENT_VILLAGE_ONLY",
+          "exactLocationMatch": false,
+          "finding": "백포를 돌산읍의 해안 마을로 설명하며 방죽포와 대율 사이에 있다고 한다. 간출여 주변해상의 좌표는 제공하지 않는다.",
+          "coordinateReference": null,
+          "limitation": "백포 마을·항구·해변의 위치와 간출여 주변해상은 동일 지점으로 증명되지 않았다. 검색 색인 본문을 확인했고 직접 페이지 열기는 실패했다.",
+          "checkedOn": "2026-09-17",
+          "coordinateAuthorityEligible": false,
+          "conflictResolved": false
+        }
+      ],
+      "regionConsistency": {
+        "result": "CONTRADICTED_AT_PARENT_REGION_SCALE",
+        "basis": "원본의 남해 섬/마을 정체성과 인천권을 가리키는 현재 좌표의 큰 지역 불일치. 지명 근거에 따른 검토 판단이며 행정해역 경계 측량 판정은 아니다.",
+        "candidateRegionConsistency": "NOT_APPLICABLE_NO_CANDIDATE"
+      },
+      "candidateCoordinate": null,
+      "coordinateDeltaMeters": null,
+      "coordinateDeltaReason": "No authoritative replacement coordinate; no proposed point or repair distance was invented.",
+      "repairStatus": "NO_AUTHORITATIVE_REPLACEMENT",
+      "currentCoordinateConfirmed": false,
+      "crossRegionConflictResolved": false,
+      "previousNavigationRisk": "NAVIGATION_REVIEW_REQUIRED",
+      "mapPolicy": "MAP_DISPLAY_BLOCKED",
+      "mapPolicyReason": "상위 장소의 지역과 크게 어긋나는 현재 핀은 지도에서 차단하도록 권고한다. 좌표 없는 장소 설명은 보존할 수 있다.",
+      "navigationPolicy": "NAVIGATION_BLOCKED_PENDING_REVIEW",
+      "navigationPolicyReason": "정확한 장소-좌표 대응 및 cross-region 충돌이 미해결이므로 현재 좌표의 목적지 선택·경로 요청·외부 항법 전달을 보류하도록 권고한다.",
+      "policyApplied": false,
+      "userWording": "좌표 검토 필요 · 항법 목적지 사용 보류",
+      "limitations": [
+        "공개 원본 재다운로드와 두 좌표 표현의 일치는 한 자료 계보의 재현이며 두 독립 source 확인이 아니다.",
+        "상위 섬·마을·항구 대표점, 일반 geocoding, 블로그/카페, 원본 재게시 사이트는 repair 근거로 채택하지 않았다.",
+        "공개 검색에서 미발견이라는 뜻이며 권위 있는 좌표가 세상에 존재하지 않는다는 단정이 아니다.",
+        "정책은 review 권고이며 현재 앱의 지도 표시나 navigation eligibility에 적용되지 않았다."
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "groupId": "A",
+      "spotIds": [
+        "boat-60",
+        "boat-128"
+      ],
+      "cause": "SOURCE_LEVEL_CROSS_REGION_COORDINATE_REUSE",
+      "causeDetail": "원본의 projected 좌표와 DMS 좌표가 모두 동일하다. 변환 충돌은 아니다. 복사 실수인지 다른 생산 단계 오류인지, 어느 행이 원 좌표 소유자인지는 확인되지 않았다.",
+      "identity": [
+        {
+          "spotId": "boat-60",
+          "name": "두미도 - 청석골",
+          "region": "경상남도",
+          "city": "통영시"
+        },
+        {
+          "spotId": "boat-128",
+          "name": "연평도 - 구지둔턱",
+          "region": "인천광역시",
+          "city": "옹진군"
+        }
+      ],
+      "replacementEvidence": "NONE_ACCEPTED",
+      "repairStatus": "NO_AUTHORITATIVE_REPLACEMENT",
+      "navigationPolicy": "NAVIGATION_BLOCKED_PENDING_REVIEW",
+      "recommendedAction": "두 행의 좌표를 유지하고 자동 병합·교환·수정하지 않는다. 원 제공기관의 행별 정정 근거와 독립된 두 번째 정확한 위치 근거가 확보될 때 재심사한다."
+    },
+    {
+      "groupId": "B",
+      "spotIds": [
+        "boat-129",
+        "boat-321"
+      ],
+      "cause": "SOURCE_LEVEL_CROSS_REGION_COORDINATE_REUSE",
+      "causeDetail": "원본의 projected 좌표와 DMS 좌표가 모두 동일하다. 변환 충돌은 아니다. 복사 실수인지 다른 생산 단계 오류인지, 어느 행이 원 좌표 소유자인지는 확인되지 않았다.",
+      "identity": [
+        {
+          "spotId": "boat-129",
+          "name": "영종도·용유도 - 영종도북측수문북서측해상",
+          "region": "인천광역시",
+          "city": "중구"
+        },
+        {
+          "spotId": "boat-321",
+          "name": "돌산도 - 백포간출여주변해상",
+          "region": "전라남도",
+          "city": "여수시"
+        }
+      ],
+      "replacementEvidence": "NONE_ACCEPTED",
+      "repairStatus": "NO_AUTHORITATIVE_REPLACEMENT",
+      "navigationPolicy": "NAVIGATION_BLOCKED_PENDING_REVIEW",
+      "recommendedAction": "두 행의 좌표를 유지하고 자동 병합·교환·수정하지 않는다. 원 제공기관의 행별 정정 근거와 독립된 두 번째 정확한 위치 근거가 확보될 때 재심사한다."
+    }
+  ],
+  "summary": {
+    "reviewed": 4,
+    "repair": {
+      "approved": 0,
+      "pendingSecondSource": 0,
+      "unresolved": 4,
+      "currentCoordinateConfirmed": 0
+    },
+    "map": {
+      "allowed": 0,
+      "warning": 2,
+      "blocked": 2
+    },
+    "navigation": {
+      "allowed": 0,
+      "blockedPendingReview": 4
+    }
+  },
+  "invariants": {
+    "coordinateMutation": 0,
+    "canonicalMutation": 0,
+    "sourceArtifactMutation": 0,
+    "mergeDelete": 0,
+    "runtimeMutation": 0,
+    "databaseSupabaseChanges": 0,
+    "navigationEligibilityMutation": 0
+  }
+}
