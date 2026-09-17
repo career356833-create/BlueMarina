@@ -1,0 +1,240 @@
+{
+  "audit": "Fishing Spot Coordinate Lineage & Duplicate Verification V1",
+  "auditDate": "2026-09-17",
+  "candidateCount": 11,
+  "repairCandidateCount": 4,
+  "policy": "REVIEW_ONLY; null candidateCoordinate means no authoritative replacement was found.",
+  "candidates": [
+    {
+      "spotId": "boat-60",
+      "name": "두미도 - 청석골",
+      "region": "경상남도",
+      "city": "통영시",
+      "currentCoordinate": {
+        "lat": 37.628583,
+        "lng": 125.680389
+      },
+      "candidateCoordinate": null,
+      "sourceEvidence": {
+        "sourceRecordId": "60",
+        "sourceRawCoordinate": "POINT (839433.704293541 1960348.81280377)",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "finding": "Distinct regions and places share the same official raw projected point."
+      },
+      "reason": "CROSS_REGION_CONFLICT",
+      "confidence": "HIGH",
+      "action": "REVIEW_ONLY",
+      "navigationRiskClass": "NAVIGATION_REVIEW_REQUIRED"
+    },
+    {
+      "spotId": "boat-128",
+      "name": "연평도 - 구지둔턱",
+      "region": "인천광역시",
+      "city": "옹진군",
+      "currentCoordinate": {
+        "lat": 37.628583,
+        "lng": 125.680389
+      },
+      "candidateCoordinate": null,
+      "sourceEvidence": {
+        "sourceRecordId": "128",
+        "sourceRawCoordinate": "POINT (839433.704293541 1960348.81280377)",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "finding": "Distinct regions and places share the same official raw projected point."
+      },
+      "reason": "CROSS_REGION_CONFLICT",
+      "confidence": "HIGH",
+      "action": "REVIEW_ONLY",
+      "navigationRiskClass": "NAVIGATION_REVIEW_REQUIRED"
+    },
+    {
+      "spotId": "boat-129",
+      "name": "영종도·용유도 - 영종도북측수문북서측해상",
+      "region": "인천광역시",
+      "city": "중구",
+      "currentCoordinate": {
+        "lat": 37.475917,
+        "lng": 126.354778
+      },
+      "candidateCoordinate": null,
+      "sourceEvidence": {
+        "sourceRecordId": "129",
+        "sourceRawCoordinate": "POINT (898739.4548031851 1942470.23046188)",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "finding": "Distinct regions and places share the same official raw projected point."
+      },
+      "reason": "CROSS_REGION_CONFLICT",
+      "confidence": "HIGH",
+      "action": "REVIEW_ONLY",
+      "navigationRiskClass": "NAVIGATION_REVIEW_REQUIRED"
+    },
+    {
+      "spotId": "boat-321",
+      "name": "돌산도 - 백포간출여주변해상",
+      "region": "전라남도",
+      "city": "여수시",
+      "currentCoordinate": {
+        "lat": 37.475917,
+        "lng": 126.354778
+      },
+      "candidateCoordinate": null,
+      "sourceEvidence": {
+        "sourceRecordId": "321",
+        "sourceRawCoordinate": "POINT (898739.4548031851 1942470.23046188)",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "finding": "Distinct regions and places share the same official raw projected point."
+      },
+      "reason": "CROSS_REGION_CONFLICT",
+      "confidence": "HIGH",
+      "action": "REVIEW_ONLY",
+      "navigationRiskClass": "NAVIGATION_REVIEW_REQUIRED"
+    },
+    {
+      "spotId": "rock-152",
+      "name": "청산도·대모도 - 대모도 동리말 갯바위",
+      "region": "전라남도",
+      "city": "완도군",
+      "currentCoordinate": {
+        "lat": 34.200361,
+        "lng": 126.860028
+      },
+      "candidateCoordinate": null,
+      "sourceEvidence": {
+        "sourceRecordId": "152",
+        "sourceRawCoordinate": "POINT (941038.619502367 1578742.05679526)",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "finding": "Distinct place names share one official raw projected point; the source does not explain whether it is representative."
+      },
+      "reason": "UNRESOLVED",
+      "confidence": "UNKNOWN",
+      "action": "REVIEW_ONLY",
+      "navigationRiskClass": "REVIEW_RECOMMENDED"
+    },
+    {
+      "spotId": "rock-297",
+      "name": "임자도·사옥도 - 고래미",
+      "region": "전라남도",
+      "city": "신안군",
+      "currentCoordinate": {
+        "lat": 35.056944,
+        "lng": 126.058111
+      },
+      "candidateCoordinate": null,
+      "sourceEvidence": {
+        "sourceRecordId": "297",
+        "sourceRawCoordinate": "POINT (868511.7080038951 1674493.44232489)",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "finding": "Three distinct place names share one official raw projected point; representative-coordinate reuse cannot be distinguished from an error."
+      },
+      "reason": "UNRESOLVED",
+      "confidence": "UNKNOWN",
+      "action": "REVIEW_ONLY",
+      "navigationRiskClass": "REVIEW_RECOMMENDED"
+    },
+    {
+      "spotId": "rock-430",
+      "name": "영종도·용유도 - 영종도 남측수문",
+      "region": "인천광역시",
+      "city": "중구",
+      "currentCoordinate": {
+        "lat": 37.421972,
+        "lng": 126.435
+      },
+      "candidateCoordinate": null,
+      "sourceEvidence": {
+        "sourceRecordId": "430",
+        "sourceRawCoordinate": "POINT (905765.271837197 1936402.01635873)",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "finding": "Distinct named areas share one official raw projected point; internal source fields do not resolve the conflict."
+      },
+      "reason": "UNRESOLVED",
+      "confidence": "UNKNOWN",
+      "action": "REVIEW_ONLY",
+      "navigationRiskClass": "REVIEW_RECOMMENDED"
+    },
+    {
+      "spotId": "rock-591",
+      "name": "청산도·대모도 - 청산도 황산말 철탑 부근",
+      "region": "전라남도",
+      "city": "완도군",
+      "currentCoordinate": {
+        "lat": 34.200361,
+        "lng": 126.860028
+      },
+      "candidateCoordinate": null,
+      "sourceEvidence": {
+        "sourceRecordId": "591",
+        "sourceRawCoordinate": "POINT (941038.619502367 1578742.05679526)",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "finding": "Distinct place names share one official raw projected point; the source does not explain whether it is representative."
+      },
+      "reason": "UNRESOLVED",
+      "confidence": "UNKNOWN",
+      "action": "REVIEW_ONLY",
+      "navigationRiskClass": "REVIEW_RECOMMENDED"
+    },
+    {
+      "spotId": "rock-821",
+      "name": "임자도·사옥도 - 임자도 남서측 곶부리",
+      "region": "전라남도",
+      "city": "신안군",
+      "currentCoordinate": {
+        "lat": 35.056944,
+        "lng": 126.058111
+      },
+      "candidateCoordinate": null,
+      "sourceEvidence": {
+        "sourceRecordId": "821",
+        "sourceRawCoordinate": "POINT (868511.7080038951 1674493.44232489)",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "finding": "Three distinct place names share one official raw projected point; representative-coordinate reuse cannot be distinguished from an error."
+      },
+      "reason": "UNRESOLVED",
+      "confidence": "UNKNOWN",
+      "action": "REVIEW_ONLY",
+      "navigationRiskClass": "REVIEW_RECOMMENDED"
+    },
+    {
+      "spotId": "rock-872",
+      "name": "임자도·사옥도 - 고동섬 갯바위",
+      "region": "전라남도",
+      "city": "신안군",
+      "currentCoordinate": {
+        "lat": 35.056944,
+        "lng": 126.058111
+      },
+      "candidateCoordinate": null,
+      "sourceEvidence": {
+        "sourceRecordId": "872",
+        "sourceRawCoordinate": "POINT (868511.7080038951 1674493.44232489)",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "finding": "Three distinct place names share one official raw projected point; representative-coordinate reuse cannot be distinguished from an error."
+      },
+      "reason": "UNRESOLVED",
+      "confidence": "UNKNOWN",
+      "action": "REVIEW_ONLY",
+      "navigationRiskClass": "REVIEW_RECOMMENDED"
+    },
+    {
+      "spotId": "rock-884",
+      "name": "안마도·석만도 - 나룻방 밑 갯바위",
+      "region": "인천광역시",
+      "city": "중구",
+      "currentCoordinate": {
+        "lat": 37.421972,
+        "lng": 126.435
+      },
+      "candidateCoordinate": null,
+      "sourceEvidence": {
+        "sourceRecordId": "884",
+        "sourceRawCoordinate": "POINT (905765.271837197 1936402.01635873)",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "finding": "Distinct named areas share one official raw projected point; internal source fields do not resolve the conflict."
+      },
+      "reason": "UNRESOLVED",
+      "confidence": "UNKNOWN",
+      "action": "REVIEW_ONLY",
+      "navigationRiskClass": "REVIEW_RECOMMENDED"
+    }
+  ]
+}
