@@ -1,0 +1,1534 @@
+{
+  "audit": "Fishing Spot Detail Content Quality Audit V1",
+  "auditVersion": "1.0.0",
+  "candidateCount": 34,
+  "criteria": [
+    "coordinate anomaly",
+    "duplicate candidate",
+    "missing provenance",
+    "no canonical species mapping",
+    "name or region quality"
+  ],
+  "candidates": [
+    {
+      "id": "boat-128",
+      "name": "연평도 - 구지둔턱",
+      "region": "인천광역시",
+      "city": "옹진군",
+      "coordinate": {
+        "lat": "37.628583",
+        "lng": "125.680389",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "광어",
+        "우럭",
+        "숭어",
+        "간재미",
+        "농어",
+        "노래미"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-000465",
+          "name": "넙치"
+        },
+        {
+          "id": "BM-SPECIES-000012",
+          "name": "조피볼락"
+        },
+        {
+          "id": "BM-SPECIES-000188",
+          "name": "농어"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "간재미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "DUPLICATE_COORDINATE",
+        "REGION_COORDINATE_MISMATCH"
+      ]
+    },
+    {
+      "id": "boat-129",
+      "name": "영종도·용유도 - 영종도북측수문북서측해상",
+      "region": "인천광역시",
+      "city": "중구",
+      "coordinate": {
+        "lat": "37.475917",
+        "lng": "126.354778",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "숭어",
+        "우럭",
+        "노래미",
+        "삼치",
+        "붕장어"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-000012",
+          "name": "조피볼락"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "삼치",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "DUPLICATE_COORDINATE",
+        "REGION_COORDINATE_MISMATCH"
+      ]
+    },
+    {
+      "id": "boat-193",
+      "name": "수영만 부근 - 광안대교인근해상",
+      "region": "부산광역시",
+      "city": "남구",
+      "coordinate": {
+        "lat": "35.151288",
+        "lng": "129.138452",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "도다리",
+        "붕장어",
+        "학꽁치",
+        "무늬오징어",
+        "망상어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "도다리",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "학꽁치",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "무늬오징어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "망상어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "boat-304",
+      "name": "수영만 부근 - 앞산초인근해상",
+      "region": "부산광역시",
+      "city": "남구",
+      "coordinate": {
+        "lat": "35.151274",
+        "lng": "129.170659",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "도다리",
+        "붕장어",
+        "학꽁치",
+        "무늬오징어",
+        "망상어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "도다리",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "학꽁치",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "무늬오징어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "망상어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "boat-321",
+      "name": "돌산도 - 백포간출여주변해상",
+      "region": "전라남도",
+      "city": "여수시",
+      "coordinate": {
+        "lat": "37.475917",
+        "lng": "126.354778",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "참돔",
+        "농어",
+        "노래미",
+        "볼락",
+        "우럭",
+        "붕장어"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-000755",
+          "name": "참돔"
+        },
+        {
+          "id": "BM-SPECIES-000188",
+          "name": "농어"
+        },
+        {
+          "id": "BM-SPECIES-000012",
+          "name": "조피볼락"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "볼락",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "DUPLICATE_COORDINATE",
+        "REGION_COORDINATE_MISMATCH"
+      ]
+    },
+    {
+      "id": "boat-60",
+      "name": "두미도 - 청석골",
+      "region": "경상남도",
+      "city": "통영시",
+      "coordinate": {
+        "lat": "37.628583",
+        "lng": "125.680389",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "감성돔",
+        "벵에돔",
+        "노래미",
+        "참돔",
+        "농어",
+        "볼락"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-000751",
+          "name": "감성돔"
+        },
+        {
+          "id": "BM-SPECIES-000755",
+          "name": "참돔"
+        },
+        {
+          "id": "BM-SPECIES-000188",
+          "name": "농어"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "벵에돔",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "볼락",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "DUPLICATE_COORDINATE",
+        "REGION_COORDINATE_MISMATCH"
+      ]
+    },
+    {
+      "id": "boat-76",
+      "name": "수영만 부근 - 청사포항인근해상",
+      "region": "부산광역시",
+      "city": "남구",
+      "coordinate": {
+        "lat": "35.159269",
+        "lng": "129.194563",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "도다리",
+        "붕장어",
+        "학꽁치",
+        "무늬오징어",
+        "망상어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "도다리",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "학꽁치",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "무늬오징어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "망상어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-1001",
+      "name": "당사해양낚시공원 - 당사해양낚시공원",
+      "region": "울산광역시",
+      "city": "북구",
+      "coordinate": {
+        "lat": "35.580222",
+        "lng": "129.458583",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "갑오징어",
+        "노래미",
+        "볼락",
+        "전갱이"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "갑오징어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "볼락",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "전갱이",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-1002",
+      "name": "주전몽돌해변 - 주전몽돌해변",
+      "region": "울산광역시",
+      "city": "동구",
+      "coordinate": {
+        "lat": "35.565806",
+        "lng": "129.455694",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "보리멸",
+        "성대",
+        "숭어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "보리멸",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "성대",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-1005",
+      "name": "대바위공원 - 대바위공원",
+      "region": "울산광역시",
+      "city": "울주군",
+      "coordinate": {
+        "lat": "35.377750",
+        "lng": "129.345417",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "노래미",
+        "보리멸",
+        "성대",
+        "숭어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "보리멸",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "성대",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-1054",
+      "name": "장호항 - 장호항 갯바위",
+      "region": "강원도",
+      "city": "삼척시",
+      "coordinate": {
+        "lat": "37.289167",
+        "lng": "129.317889",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "도다리",
+        "무늬오징어",
+        "황어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "도다리",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "무늬오징어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "황어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-120",
+      "name": "순천만 부근 - 이천리갯바위 끝",
+      "region": "전라남도",
+      "city": "여수시",
+      "coordinate": {
+        "lat": "34.745235",
+        "lng": "127.581826",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "망둑어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "짱뚱어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-121",
+      "name": "순천만 부근 - 소여자도 갯바위",
+      "region": "전라남도",
+      "city": "여수시",
+      "coordinate": {
+        "lat": "34.757415",
+        "lng": "127.510566",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "망둑어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "짱뚱어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-151",
+      "name": "개야도 - 에게이 서측 갯바위",
+      "region": "전라북도",
+      "city": "군산시",
+      "coordinate": {
+        "lat": "36.036417",
+        "lng": "126.513083",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "농어",
+        "부세",
+        "감성돔",
+        "백조기"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-000188",
+          "name": "농어"
+        },
+        {
+          "id": "BM-SPECIES-000751",
+          "name": "감성돔"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "부세",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "백조기",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NEAR_DUPLICATE_CANDIDATE"
+      ]
+    },
+    {
+      "id": "rock-152",
+      "name": "청산도·대모도 - 대모도 동리말 갯바위",
+      "region": "전라남도",
+      "city": "완도군",
+      "coordinate": {
+        "lat": "34.200361",
+        "lng": "126.860028",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "감성돔",
+        "농어",
+        "우럭",
+        "노래미",
+        "볼락"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-000751",
+          "name": "감성돔"
+        },
+        {
+          "id": "BM-SPECIES-000188",
+          "name": "농어"
+        },
+        {
+          "id": "BM-SPECIES-000012",
+          "name": "조피볼락"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "볼락",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "DUPLICATE_COORDINATE"
+      ]
+    },
+    {
+      "id": "rock-248",
+      "name": "울릉도 - 삼선암 갯바위",
+      "region": "경상북도",
+      "city": "울릉군",
+      "coordinate": {
+        "lat": "37.549389",
+        "lng": "130.908472",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "벵에돔",
+        "부시리"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "벵에돔",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "부시리",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-265",
+      "name": "개야도 - 에게이 등대 남측 갯바위",
+      "region": "전라북도",
+      "city": "군산시",
+      "coordinate": {
+        "lat": "36.035917",
+        "lng": "126.513722",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "망농어",
+        "부세",
+        "감성돔",
+        "백조기"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-000751",
+          "name": "감성돔"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "망농어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "부세",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "백조기",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NEAR_DUPLICATE_CANDIDATE"
+      ]
+    },
+    {
+      "id": "rock-297",
+      "name": "임자도·사옥도 - 고래미",
+      "region": "전라남도",
+      "city": "신안군",
+      "coordinate": {
+        "lat": "35.056944",
+        "lng": "126.058111",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "감성돔",
+        "노래미",
+        "민어",
+        "붕장어",
+        "우럭",
+        "광어",
+        "농어",
+        "백조기",
+        "숭어"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-000751",
+          "name": "감성돔"
+        },
+        {
+          "id": "BM-SPECIES-000012",
+          "name": "조피볼락"
+        },
+        {
+          "id": "BM-SPECIES-000465",
+          "name": "넙치"
+        },
+        {
+          "id": "BM-SPECIES-000188",
+          "name": "농어"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "민어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "백조기",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "DUPLICATE_COORDINATE"
+      ]
+    },
+    {
+      "id": "rock-320",
+      "name": "순천만 부근 - 궁항갯바위 부근",
+      "region": "전라남도",
+      "city": "여수시",
+      "coordinate": {
+        "lat": "34.775269",
+        "lng": "127.561181",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "망둑어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "짱뚱어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-387",
+      "name": "순천만 부근 - 신작 부근",
+      "region": "전라남도",
+      "city": "고흥군",
+      "coordinate": {
+        "lat": "34.735889",
+        "lng": "127.376750",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "망둑어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "짱뚱어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-388",
+      "name": "순천만 부근 - 대운두도 부근",
+      "region": "전라남도",
+      "city": "여수시",
+      "coordinate": {
+        "lat": "34.748204",
+        "lng": "127.559241",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "망둑어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "짱뚱어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-430",
+      "name": "영종도·용유도 - 영종도 남측수문",
+      "region": "인천광역시",
+      "city": "중구",
+      "coordinate": {
+        "lat": "37.421972",
+        "lng": "126.435000",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "숭어",
+        "노래미",
+        "삼치",
+        "붕장어",
+        "주꾸미"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-003107",
+          "name": "주꾸미"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "삼치",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "DUPLICATE_COORDINATE"
+      ]
+    },
+    {
+      "id": "rock-520",
+      "name": "자란만 부근 - 상족암 유람선 뒷편",
+      "region": "경상남도",
+      "city": "고성군",
+      "coordinate": {
+        "lat": "34.904369",
+        "lng": "128.149642",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "갑오징어",
+        "감성돔",
+        "노래미",
+        "벵에돔",
+        "참돔",
+        "볼락",
+        "농어",
+        "붕장어",
+        "우럭"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-000751",
+          "name": "감성돔"
+        },
+        {
+          "id": "BM-SPECIES-000755",
+          "name": "참돔"
+        },
+        {
+          "id": "BM-SPECIES-000188",
+          "name": "농어"
+        },
+        {
+          "id": "BM-SPECIES-000012",
+          "name": "조피볼락"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "갑오징어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "벵에돔",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "볼락",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "DUPLICATE_COORDINATE"
+      ]
+    },
+    {
+      "id": "rock-532",
+      "name": "진주만 부근 - 상족암 유람선 갯바위",
+      "region": "경상남도",
+      "city": "고성군",
+      "coordinate": {
+        "lat": "34.904369",
+        "lng": "128.149642",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "감성돔",
+        "노래미",
+        "볼락",
+        "농어",
+        "도다리",
+        "갑오징어"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-000751",
+          "name": "감성돔"
+        },
+        {
+          "id": "BM-SPECIES-000188",
+          "name": "농어"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "볼락",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "도다리",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "갑오징어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "DUPLICATE_COORDINATE"
+      ]
+    },
+    {
+      "id": "rock-591",
+      "name": "청산도·대모도 - 청산도 황산말 철탑 부근",
+      "region": "전라남도",
+      "city": "완도군",
+      "coordinate": {
+        "lat": "34.200361",
+        "lng": "126.860028",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "감성돔",
+        "넙치",
+        "농어",
+        "도다리",
+        "우럭",
+        "볼락",
+        "참돔"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-000751",
+          "name": "감성돔"
+        },
+        {
+          "id": "BM-SPECIES-000465",
+          "name": "넙치"
+        },
+        {
+          "id": "BM-SPECIES-000188",
+          "name": "농어"
+        },
+        {
+          "id": "BM-SPECIES-000012",
+          "name": "조피볼락"
+        },
+        {
+          "id": "BM-SPECIES-000755",
+          "name": "참돔"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "도다리",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "볼락",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "DUPLICATE_COORDINATE"
+      ]
+    },
+    {
+      "id": "rock-749",
+      "name": "순천만 부근 - 달천도 부근",
+      "region": "전라남도",
+      "city": "여수시",
+      "coordinate": {
+        "lat": "34.770555",
+        "lng": "127.559158",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "망둑어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "짱뚱어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-807",
+      "name": "순천만 부근 - 대여자도 하단",
+      "region": "전라남도",
+      "city": "여수시",
+      "coordinate": {
+        "lat": "34.755346",
+        "lng": "127.504503",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "망둑어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "짱뚱어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-821",
+      "name": "임자도·사옥도 - 임자도 남서측 곶부리",
+      "region": "전라남도",
+      "city": "신안군",
+      "coordinate": {
+        "lat": "35.056944",
+        "lng": "126.058111",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "감성돔",
+        "노래미",
+        "민어",
+        "붕장어",
+        "우럭",
+        "광어",
+        "농어",
+        "백조기",
+        "숭어"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-000751",
+          "name": "감성돔"
+        },
+        {
+          "id": "BM-SPECIES-000012",
+          "name": "조피볼락"
+        },
+        {
+          "id": "BM-SPECIES-000465",
+          "name": "넙치"
+        },
+        {
+          "id": "BM-SPECIES-000188",
+          "name": "농어"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "민어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "백조기",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "DUPLICATE_COORDINATE"
+      ]
+    },
+    {
+      "id": "rock-872",
+      "name": "임자도·사옥도 - 고동섬 갯바위",
+      "region": "전라남도",
+      "city": "신안군",
+      "coordinate": {
+        "lat": "35.056944",
+        "lng": "126.058111",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "감성돔",
+        "노래미",
+        "민어",
+        "붕장어",
+        "우럭",
+        "광어",
+        "농어",
+        "백조기",
+        "숭어"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-000751",
+          "name": "감성돔"
+        },
+        {
+          "id": "BM-SPECIES-000012",
+          "name": "조피볼락"
+        },
+        {
+          "id": "BM-SPECIES-000465",
+          "name": "넙치"
+        },
+        {
+          "id": "BM-SPECIES-000188",
+          "name": "농어"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "민어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "백조기",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "DUPLICATE_COORDINATE"
+      ]
+    },
+    {
+      "id": "rock-884",
+      "name": "안마도·석만도 - 나룻방 밑 갯바위",
+      "region": "인천광역시",
+      "city": "중구",
+      "coordinate": {
+        "lat": "37.421972",
+        "lng": "126.435000",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "간재미",
+        "노래미",
+        "붕장어",
+        "우럭",
+        "민어",
+        "광어"
+      ],
+      "canonicalSpecies": [
+        {
+          "id": "BM-SPECIES-000012",
+          "name": "조피볼락"
+        },
+        {
+          "id": "BM-SPECIES-000465",
+          "name": "넙치"
+        }
+      ],
+      "unmappedSpecies": [
+        {
+          "raw": "간재미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "민어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "DUPLICATE_COORDINATE"
+      ]
+    },
+    {
+      "id": "rock-886",
+      "name": "순천만 부근 - 교량낚시터",
+      "region": "전라남도",
+      "city": "여수시",
+      "coordinate": {
+        "lat": "34.757319",
+        "lng": "127.506776",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "망둑어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "짱뚱어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-904",
+      "name": "우이도 - 선창구미",
+      "region": "전라남도",
+      "city": "신안군",
+      "coordinate": {
+        "lat": "34.611250",
+        "lng": "125.859833",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "노래미",
+        "붕장어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-973",
+      "name": "순천만 부근 - 선정 부근",
+      "region": "전라남도",
+      "city": "고흥군",
+      "coordinate": {
+        "lat": "34.751111",
+        "lng": "127.389611",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "망둑어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "짱뚱어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    },
+    {
+      "id": "rock-980",
+      "name": "금진2리 - 금진 2리 마을 회관 갯바위",
+      "region": "경상북도",
+      "city": "영덕군",
+      "coordinate": {
+        "lat": "36.370500",
+        "lng": "129.398194",
+        "status": "VALID"
+      },
+      "targetSpeciesRaw": [
+        "노래미",
+        "무늬오징어",
+        "보리멸",
+        "볼락",
+        "붕장어",
+        "숭어"
+      ],
+      "canonicalSpecies": [],
+      "unmappedSpecies": [
+        {
+          "raw": "노래미",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "무늬오징어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "보리멸",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "볼락",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "붕장어",
+          "reason": "UNSUPPORTED_SPECIES"
+        },
+        {
+          "raw": "숭어",
+          "reason": "UNSUPPORTED_SPECIES"
+        }
+      ],
+      "reasons": [
+        "NO_CANONICAL_SPECIES"
+      ]
+    }
+  ]
+}

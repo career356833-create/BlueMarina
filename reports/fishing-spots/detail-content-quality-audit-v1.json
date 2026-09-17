@@ -1,0 +1,443 @@
+{
+  "audit": "Fishing Spot Detail Content Quality Audit V1",
+  "auditVersion": "1.0.0",
+  "baselineCommit": "6025bf91170e5539619ce1f07b94148b1b527374",
+  "decision": "SPOT_DETAIL_DATA_READY_WITH_GAPS",
+  "dataset": {
+    "source": "src/data/fishing-spots.json",
+    "totalSpots": 1405,
+    "mutated": false
+  },
+  "schema": {
+    "actualFields": [
+      "address",
+      "bottomNote",
+      "cautions",
+      "city",
+      "depthNote",
+      "description",
+      "facilities",
+      "id",
+      "lat",
+      "lng",
+      "methodNote",
+      "name",
+      "note",
+      "originalId",
+      "originalPoint",
+      "region",
+      "safetyStatus",
+      "sourceCheckedAt",
+      "sourceName",
+      "sourceType",
+      "sourceUrl",
+      "status",
+      "targetFish",
+      "tideNote",
+      "type"
+    ],
+    "expectedFieldsPresent": [
+      "id",
+      "name",
+      "type",
+      "region",
+      "city",
+      "address",
+      "lat",
+      "lng",
+      "targetFish",
+      "tideNote",
+      "depthNote",
+      "bottomNote",
+      "methodNote",
+      "safetyStatus",
+      "sourceType",
+      "sourceName",
+      "sourceUrl",
+      "sourceCheckedAt",
+      "status",
+      "description",
+      "facilities",
+      "cautions",
+      "originalId",
+      "originalPoint",
+      "note"
+    ],
+    "missingFieldSchema": [
+      "coordinateSource",
+      "portName",
+      "accessInfo",
+      "departureInfo",
+      "updatedAt"
+    ]
+  },
+  "coordinates": {
+    "bboxPolicy": {
+      "minLat": 32,
+      "maxLat": 39.5,
+      "minLng": 123,
+      "maxLng": 132.5
+    },
+    "valid": 1405,
+    "missing": 0,
+    "invalid": 0,
+    "outlierReview": 0,
+    "zeroZero": 0,
+    "swappedCandidates": 0,
+    "coordinateSourceFieldPresent": false,
+    "sourceAssociatedOriginalPoint": 1405,
+    "transformedWgs84MethodDocumented": 0,
+    "unverifiedSource": 1405,
+    "duplicateCoordinateGroups": 6,
+    "duplicateCoordinateSpots": 13,
+    "mapEligible": 1405,
+    "navigationEligible": 1405,
+    "safetyBoundary": "Navigation eligibility does not assert a safe route, hazard avoidance, or depth clearance."
+  },
+  "detailCoverage": {
+    "region": {
+      "present": 1405,
+      "missing": 0
+    },
+    "subregion": {
+      "field": "city",
+      "present": 1405,
+      "missing": 0
+    },
+    "address": {
+      "present": 1405,
+      "missing": 0
+    },
+    "type": {
+      "present": 1405,
+      "missing": 0,
+      "counts": {
+        "boat-fishing-point": 329,
+        "rock-fishing-point": 1076
+      }
+    },
+    "port": {
+      "dedicatedFieldPresent": false,
+      "missingStructuredValue": 1405,
+      "freeTextMentionCandidates": 119
+    },
+    "access": {
+      "dedicatedFieldPresent": false,
+      "missingStructuredValue": 1405,
+      "facilitiesPresentationAvailable": 1405
+    },
+    "departure": {
+      "dedicatedFieldPresent": false,
+      "missingStructuredValue": 1405,
+      "boatSpots": 329,
+      "genericBoatContextAvailable": 329,
+      "namedDeparturePointVerified": 0
+    },
+    "description": {
+      "present": 1405,
+      "missing": 0
+    },
+    "sourceDate": {
+      "field": "sourceCheckedAt",
+      "present": 1405,
+      "missing": 0
+    },
+    "regionCoordinateMismatchCandidates": 2,
+    "regionCoordinateMismatchGroups": [
+      [
+        {
+          "id": "boat-60",
+          "region": "경상남도",
+          "city": "통영시"
+        },
+        {
+          "id": "boat-128",
+          "region": "인천광역시",
+          "city": "옹진군"
+        }
+      ],
+      [
+        {
+          "id": "boat-129",
+          "region": "인천광역시",
+          "city": "중구"
+        },
+        {
+          "id": "boat-321",
+          "region": "전라남도",
+          "city": "여수시"
+        }
+      ]
+    ],
+    "regionBoundaryVerification": "NOT_PERFORMED_NO_ADMINISTRATIVE_POLYGON"
+  },
+  "species": {
+    "canonicalSpeciesCount": 10,
+    "aliases": {
+      "광어": "넙치",
+      "우럭": "조피볼락"
+    },
+    "mappingMode": "EXACT_PLUS_APPROVED_ALIAS_ONLY",
+    "fuzzyMapping": false,
+    "mappedSpots": 1386,
+    "unmappedSpots": 19,
+    "unmappedSpotIds": [
+      "boat-193",
+      "boat-304",
+      "boat-76",
+      "rock-1001",
+      "rock-1002",
+      "rock-1005",
+      "rock-1054",
+      "rock-120",
+      "rock-121",
+      "rock-248",
+      "rock-320",
+      "rock-387",
+      "rock-388",
+      "rock-749",
+      "rock-807",
+      "rock-886",
+      "rock-904",
+      "rock-973",
+      "rock-980"
+    ],
+    "unmappedSpotDetailsArtifact": "reports/fishing-spots/detail-content-review-candidates-v1.json",
+    "canonicalSpotCounts": {
+      "갈치": 0,
+      "감성돔": 991,
+      "고등어": 50,
+      "넙치": 441,
+      "농어": 969,
+      "문어": 57,
+      "방어": 19,
+      "조피볼락": 776,
+      "주꾸미": 57,
+      "참돔": 640
+    },
+    "allNonCanonicalRawValueCounts": {
+      "간재미": 15,
+      "갑오징어": 122,
+      "노래미": 686,
+      "농어/  삼치": 19,
+      "다금바리": 5,
+      "도다리": 200,
+      "독가시치": 35,
+      "돌돔": 455,
+      "망농어": 8,
+      "망둑어": 19,
+      "망둥어": 22,
+      "망상어": 4,
+      "무늬오징어": 129,
+      "민어": 34,
+      "백조기": 29,
+      "뱅어돔": 11,
+      "벤자리": 11,
+      "벵에돔": 296,
+      "보구치": 4,
+      "보리멸": 66,
+      "볼락": 661,
+      "부세": 17,
+      "부시리": 117,
+      "붕장어": 413,
+      "살오징어": 4,
+      "삼치": 97,
+      "성대": 3,
+      "숭어": 369,
+      "쏨뱅이": 12,
+      "쏨벵이": 2,
+      "양태": 10,
+      "열기": 5,
+      "자리돔": 28,
+      "장대": 4,
+      "전갱이": 12,
+      "전어": 1,
+      "쥐노래미": 1,
+      "쥐치": 2,
+      "짱뚱어": 9,
+      "학공치": 99,
+      "학꽁치": 18,
+      "한치": 39,
+      "황어": 84
+    },
+    "allNonCanonicalReasonCounts": {
+      "MALFORMED": 19,
+      "UNSUPPORTED_SPECIES": 4158
+    },
+    "unmappedSpotRawValueCounts": {
+      "갑오징어": 1,
+      "노래미": 4,
+      "도다리": 4,
+      "망둑어": 9,
+      "망상어": 3,
+      "무늬오징어": 5,
+      "벵에돔": 1,
+      "보리멸": 3,
+      "볼락": 2,
+      "부시리": 1,
+      "붕장어": 14,
+      "성대": 2,
+      "숭어": 12,
+      "전갱이": 1,
+      "짱뚱어": 9,
+      "학꽁치": 3,
+      "황어": 1
+    },
+    "unmappedSpotReasonCounts": {
+      "UNSUPPORTED_SPECIES": 75
+    },
+    "emptyTargetSpecies": 0
+  },
+  "provenance": {
+    "complete": 1405,
+    "missing": 0,
+    "sourceNamePresent": 1405,
+    "sourceUrlPresent": 1405,
+    "sourceTypePresent": 1405,
+    "sourceDatePresent": 1405,
+    "authorityClasses": {
+      "OFFICIAL": 1405
+    }
+  },
+  "duplicates": {
+    "exactIdGroups": [],
+    "exactNameCoordinateGroups": [],
+    "sameCoordinateDifferentNameGroups": [
+      [
+        "boat-60",
+        "boat-128"
+      ],
+      [
+        "boat-129",
+        "boat-321"
+      ],
+      [
+        "rock-152",
+        "rock-591"
+      ],
+      [
+        "rock-297",
+        "rock-821",
+        "rock-872"
+      ],
+      [
+        "rock-430",
+        "rock-884"
+      ],
+      [
+        "rock-520",
+        "rock-532"
+      ]
+    ],
+    "nearDuplicateThresholdMeters": 100,
+    "nearDuplicateNameSimilarityThreshold": 0.72,
+    "nearDuplicateCandidates": [
+      {
+        "leftId": "rock-151",
+        "rightId": "rock-265",
+        "distanceMeters": 80,
+        "nameSimilarity": 0.727
+      }
+    ],
+    "automaticMergePerformed": false
+  },
+  "nameQuality": {
+    "empty": 0,
+    "whitespaceOnly": 0,
+    "malformedEncoding": 0,
+    "genericOrTooShort": 0
+  },
+  "minimumDetailGate": {
+    "required": [
+      "name",
+      "region",
+      "valid coordinate",
+      "target species or fallback",
+      "source provenance"
+    ],
+    "passed": 1405,
+    "failed": 0
+  },
+  "completeness": {
+    "basis": "PRIMARY_CATEGORY_WITH_STRUCTURAL_SCHEMA_GAPS_REPORTED_SEPARATELY",
+    "categories": {
+      "CORE_COMPLETE": 1371,
+      "LOCATION_ONLY": 0,
+      "SPECIES_ONLY": 0,
+      "SOURCE_MISSING": 0,
+      "DETAIL_SPARSE": 0,
+      "REVIEW_REQUIRED": 34
+    },
+    "numericScoreUsed": false
+  },
+  "missingFields": {
+    "coordinates": 0,
+    "region": 0,
+    "portStructured": 1405,
+    "accessStructured": 1405,
+    "departureStructured": 1405,
+    "description": 0,
+    "targetSpecies": 0,
+    "provenance": 0,
+    "sourceDate": 0,
+    "coordinateSource": 1405
+  },
+  "gapClassification": {
+    "STRUCTURAL_SCHEMA_GAP": [
+      "coordinateSource",
+      "portName",
+      "accessInfo",
+      "departureInfo",
+      "updatedAt"
+    ],
+    "MISSING_VALUE": [],
+    "UNVERIFIED_VALUE": [
+      "transformed WGS84 coordinate method",
+      "named departure point"
+    ],
+    "AMBIGUOUS_VALUE": [
+      "free-text port mentions are not verified port relationships"
+    ],
+    "SOURCE_GAP": [],
+    "CONTENT_GAP": [
+      "19 spots have no canonical Fishing Condition species mapping"
+    ]
+  },
+  "safetyCriticalGaps": {
+    "coordinateSourceNotExplicit": 1405,
+    "structuredAccessRestrictionMissing": 1405,
+    "structuredDepartureLocationMissing": 1405,
+    "navigationDestinationEligibleButNotRouteSafe": 1405,
+    "provenanceMissing": 0
+  },
+  "priorityGaps": [
+    {
+      "priority": "HIGH",
+      "category": "COORDINATE_AND_DEPARTURE_PROVENANCE",
+      "reason": "Map/navigation coordinates are usable, but transformation method and named departure points are not explicit."
+    },
+    {
+      "priority": "HIGH",
+      "category": "STRUCTURED_ACCESS_AND_RESTRICTIONS",
+      "reason": "Facilities and cautions exist, but dedicated access and restriction fields do not."
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "CANONICAL_SPECIES_EXTENSION_REVIEW",
+      "reason": "19 spots retain valid raw species labels without a canonical condition mapping."
+    }
+  ],
+  "nextEnrichmentBatch": [
+    "coordinate/departure provenance",
+    "structured access and restrictions",
+    "unsupported species review"
+  ],
+  "reviewCandidateCount": 34,
+  "invariants": {
+    "runtimeChanged": false,
+    "databaseWrite": false,
+    "supabaseWrite": false,
+    "sourceDataMutated": false,
+    "webEnrichmentPerformed": false
+  }
+}
