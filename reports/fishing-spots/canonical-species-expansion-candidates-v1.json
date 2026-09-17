@@ -1,0 +1,602 @@
+{
+  "schemaVersion": 1,
+  "audit": "Fishing Spot Canonical Species Expansion Audit V1",
+  "auditedOn": "2026-09-18",
+  "baseCommit": "5ec1e1684822f8191f028f7e6a7ba5a975683add",
+  "decision": "CANONICAL_EXPANSION_CANDIDATES_FOUND",
+  "candidateCount": 15,
+  "affectedSpotCount": 19,
+  "aliasCandidatesToExistingCanonical": [],
+  "aliasesForProposedCanonicalSpecies": [
+    {
+      "alias": "무늬오징어",
+      "proposedCanonicalName": "흰꼴뚜기",
+      "scientificName": "Sepioteuthis lessoniana",
+      "affectedSpotCount": 5,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76",
+        "rock-1054",
+        "rock-980"
+      ],
+      "evidence": [
+        {
+          "organization": "국립수산과학원",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.nifs.go.kr/board/actionBoard0008View.do?BBS_CL_CD=B&BBS_ID=20250317204841171SMM&MENU_ID=M0000054",
+          "reference": "감성돔과 무늬오징어의 수온에 대한 답변",
+          "supports": "표준국명 흰꼴뚜기의 방언이 무늬오징어임을 명시한다."
+        },
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.data.go.kr/data/15071288/fileData.do",
+          "reference": "BM-SPECIES-003094 / MBRIS 무척추동물 source row 1542",
+          "supports": "정명과 학명 Sepioteuthis lessoniana"
+        }
+      ]
+    },
+    {
+      "alias": "학꽁치",
+      "proposedCanonicalName": "학공치",
+      "scientificName": "Hyporhamphus sajori",
+      "affectedSpotCount": 3,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76"
+      ],
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000008600",
+          "reference": "BM-SPECIES-000884 / SpcTxnId 270000008600",
+          "supports": "정명과 학명 Hyporhamphus sajori"
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "canonicalName": "노래미",
+      "scientificName": "Hexagrammos agrammus",
+      "rawNames": [
+        "노래미"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 4,
+      "affectedSpotCount": 4,
+      "spotIds": [
+        "rock-1001",
+        "rock-1005",
+        "rock-904",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "울산광역시",
+        "전라남도"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000008283",
+          "reference": "BM-SPECIES-001164 / SpcTxnId 270000008283",
+          "supports": "정명과 학명 Hexagrammos agrammus"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "도다리",
+      "scientificName": "Pleuronichthys cornutus",
+      "rawNames": [
+        "도다리"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 4,
+      "affectedSpotCount": 4,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76",
+        "rock-1054"
+      ],
+      "regions": [
+        "강원도",
+        "부산광역시"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000013960",
+          "reference": "BM-SPECIES-000548 / SpcTxnId 270000013960",
+          "supports": "정명과 학명 Pleuronichthys cornutus"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "망상어",
+      "scientificName": "Ditrema temminckii",
+      "rawNames": [
+        "망상어"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 3,
+      "affectedSpotCount": 3,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76"
+      ],
+      "regions": [
+        "부산광역시"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000005635",
+          "reference": "BM-SPECIES-000223 / SpcTxnId 270000005635",
+          "supports": "정명과 학명 Ditrema temminckii"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "흰꼴뚜기",
+      "scientificName": "Sepioteuthis lessoniana",
+      "rawNames": [
+        "무늬오징어"
+      ],
+      "proposedAliases": [
+        "무늬오징어"
+      ],
+      "occurrenceCount": 5,
+      "affectedSpotCount": 5,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76",
+        "rock-1054",
+        "rock-980"
+      ],
+      "regions": [
+        "강원도",
+        "경상북도",
+        "부산광역시"
+      ],
+      "identityKind": "SOURCE_BACKED_COMMON_NAME_FOR_EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립수산과학원",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.nifs.go.kr/board/actionBoard0008View.do?BBS_CL_CD=B&BBS_ID=20250317204841171SMM&MENU_ID=M0000054",
+          "reference": "감성돔과 무늬오징어의 수온에 대한 답변",
+          "supports": "표준국명 흰꼴뚜기의 방언이 무늬오징어임을 명시한다."
+        },
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.data.go.kr/data/15071288/fileData.do",
+          "reference": "BM-SPECIES-003094 / MBRIS 무척추동물 source row 1542",
+          "supports": "정명과 학명 Sepioteuthis lessoniana"
+        }
+      ],
+      "limitations": [
+        "이번 audit에서는 흰꼴뚜기 canonical 또는 무늬오징어 alias를 실제 추가하지 않는다."
+      ]
+    },
+    {
+      "canonicalName": "벵에돔",
+      "scientificName": "Girella punctata",
+      "rawNames": [
+        "벵에돔"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 1,
+      "affectedSpotCount": 1,
+      "spotIds": [
+        "rock-248"
+      ],
+      "regions": [
+        "경상북도"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "LOW",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000007132",
+          "reference": "BM-SPECIES-000279 / SpcTxnId 270000007132",
+          "supports": "정명과 학명 Girella punctata"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "보리멸",
+      "scientificName": "Sillago sihama",
+      "rawNames": [
+        "보리멸"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 3,
+      "affectedSpotCount": 3,
+      "spotIds": [
+        "rock-1002",
+        "rock-1005",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "울산광역시"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016512",
+          "reference": "BM-SPECIES-000818 / SpcTxnId 270000016512",
+          "supports": "정명과 학명 Sillago sihama"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "볼락",
+      "scientificName": "Sebastes inermis",
+      "rawNames": [
+        "볼락"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 2,
+      "affectedSpotCount": 2,
+      "spotIds": [
+        "rock-1001",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "울산광역시"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016243",
+          "reference": "BM-SPECIES-000002 / SpcTxnId 270000016243",
+          "supports": "정명과 학명 Sebastes inermis"
+        }
+      ],
+      "limitations": [
+        "조피볼락(Sebastes schlegelii)과 다른 종이므로 우럭 alias 규칙을 적용하지 않는다."
+      ]
+    },
+    {
+      "canonicalName": "부시리",
+      "scientificName": "Seriola aureovittata",
+      "rawNames": [
+        "부시리"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 1,
+      "affectedSpotCount": 1,
+      "spotIds": [
+        "rock-248"
+      ],
+      "regions": [
+        "경상북도"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "LOW",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016341",
+          "reference": "BM-SPECIES-000500 / SpcTxnId 270000016341",
+          "supports": "정명과 학명 Seriola aureovittata"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "붕장어",
+      "scientificName": "Conger myriaster",
+      "rawNames": [
+        "붕장어"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 14,
+      "affectedSpotCount": 14,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76",
+        "rock-120",
+        "rock-121",
+        "rock-320",
+        "rock-387",
+        "rock-388",
+        "rock-749",
+        "rock-807",
+        "rock-886",
+        "rock-904",
+        "rock-973",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "부산광역시",
+        "전라남도"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "HIGH",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000004416",
+          "reference": "BM-SPECIES-000908 / SpcTxnId 270000004416",
+          "supports": "정명과 학명 Conger myriaster"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "성대",
+      "scientificName": "Chelidonichthys spinosus",
+      "rawNames": [
+        "성대"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 2,
+      "affectedSpotCount": 2,
+      "spotIds": [
+        "rock-1002",
+        "rock-1005"
+      ],
+      "regions": [
+        "울산광역시"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000003607",
+          "reference": "BM-SPECIES-001135 / SpcTxnId 270000003607",
+          "supports": "정명과 학명 Chelidonichthys spinosus"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "숭어",
+      "scientificName": "Mugil cephalus",
+      "rawNames": [
+        "숭어"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 12,
+      "affectedSpotCount": 12,
+      "spotIds": [
+        "rock-1002",
+        "rock-1005",
+        "rock-120",
+        "rock-121",
+        "rock-320",
+        "rock-387",
+        "rock-388",
+        "rock-749",
+        "rock-807",
+        "rock-886",
+        "rock-973",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "울산광역시",
+        "전라남도"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "HIGH",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000028620",
+          "reference": "BM-SPECIES-000097 / SpcTxnId 270000028620",
+          "supports": "정명과 학명 Mugil cephalus"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "전갱이",
+      "scientificName": "Trachurus japonicus",
+      "rawNames": [
+        "전갱이"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 1,
+      "affectedSpotCount": 1,
+      "spotIds": [
+        "rock-1001"
+      ],
+      "regions": [
+        "울산광역시"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "LOW",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000018166",
+          "reference": "BM-SPECIES-000488 / SpcTxnId 270000018166",
+          "supports": "정명과 학명 Trachurus japonicus"
+        },
+        {
+          "organization": "국립수산과학원",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605226",
+          "reference": "fish_1576639605226",
+          "supports": "전갱이와 학명 Trachurus japonicus를 직접 연결한다."
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "짱뚱어",
+      "scientificName": "Boleophthalmus pectinirostris",
+      "rawNames": [
+        "짱뚱어"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 9,
+      "affectedSpotCount": 9,
+      "spotIds": [
+        "rock-120",
+        "rock-121",
+        "rock-320",
+        "rock-387",
+        "rock-388",
+        "rock-749",
+        "rock-807",
+        "rock-886",
+        "rock-973"
+      ],
+      "regions": [
+        "전라남도"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "HIGH",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.data.go.kr/data/15071288/fileData.do",
+          "reference": "BM-SPECIES-000385 / MBRIS 척추동물 source row 387",
+          "supports": "정명과 학명 Boleophthalmus pectinirostris"
+        }
+      ],
+      "limitations": [
+        "망둑어 집계명과 별개 종으로 유지해야 한다."
+      ]
+    },
+    {
+      "canonicalName": "학공치",
+      "scientificName": "Hyporhamphus sajori",
+      "rawNames": [
+        "학꽁치"
+      ],
+      "proposedAliases": [
+        "학꽁치"
+      ],
+      "occurrenceCount": 3,
+      "affectedSpotCount": 3,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76"
+      ],
+      "regions": [
+        "부산광역시"
+      ],
+      "identityKind": "ORTHOGRAPHIC_VARIANT_OF_EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000008600",
+          "reference": "BM-SPECIES-000884 / SpcTxnId 270000008600",
+          "supports": "정명과 학명 Hyporhamphus sajori"
+        }
+      ],
+      "limitations": [
+        "표기 variant를 fuzzy matching으로 처리하지 않고 명시적 alias 후보로만 기록한다."
+      ]
+    },
+    {
+      "canonicalName": "황어",
+      "scientificName": "Pseudaspius hakonensis",
+      "rawNames": [
+        "황어"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 1,
+      "affectedSpotCount": 1,
+      "spotIds": [
+        "rock-1054"
+      ],
+      "regions": [
+        "강원도"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "LOW",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000018212",
+          "reference": "BM-SPECIES-000958 / SpcTxnId 270000018212",
+          "supports": "정명과 학명 Pseudaspius hakonensis"
+        }
+      ],
+      "limitations": []
+    }
+  ],
+  "excluded": {
+    "aggregateNames": [
+      "갑오징어",
+      "망둑어"
+    ],
+    "commercialCategories": [],
+    "ambiguousNames": [],
+    "unresolvedNames": []
+  },
+  "invariants": {
+    "canonicalMutation": 0,
+    "runtimeMutation": 0,
+    "fuzzyMapping": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0,
+    "productionPromotion": 0
+  }
+}

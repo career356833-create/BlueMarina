@@ -1,0 +1,3137 @@
+{
+  "schemaVersion": 1,
+  "audit": "Fishing Spot Canonical Species Expansion Audit V1",
+  "auditedOn": "2026-09-18",
+  "baseCommit": "5ec1e1684822f8191f028f7e6a7ba5a975683add",
+  "decision": "CANONICAL_EXPANSION_CANDIDATES_FOUND",
+  "inputs": {
+    "fishingSpots": {
+      "path": "src/data/fishing-spots.json",
+      "sha256": "5707FB2E057A039B7F572ECE7E94A0936ED5B73F204613A3E3FCE9A45CDC74BA"
+    },
+    "aggregateNameReview": {
+      "path": "data/mbris/mappings/fish-alias-review-batch3.json",
+      "sha256": "F31B2F44FFAEC8D3F0F268B239C39CD49D51ED45675CD377A7BCD279BAFB3898"
+    }
+  },
+  "currentCanonical": {
+    "speciesCount": 10,
+    "species": [
+      "참돔",
+      "감성돔",
+      "농어",
+      "조피볼락",
+      "넙치",
+      "갈치",
+      "고등어",
+      "방어",
+      "주꾸미",
+      "문어"
+    ],
+    "approvedAliases": {
+      "광어": "넙치",
+      "우럭": "조피볼락"
+    },
+    "mappingMode": "EXACT_PLUS_APPROVED_ALIAS_ONLY",
+    "fuzzyMapping": false
+  },
+  "counts": {
+    "totalSpots": 1405,
+    "mappedSpots": 1386,
+    "unmappedSpots": 19,
+    "rawOccurrences": 75,
+    "uniqueRawNames": 17,
+    "classifications": {
+      "AGGREGATED_TAXON": 2,
+      "NEW_CANONICAL_SPECIES_CANDIDATE": 14,
+      "TYPO_OR_VARIANT": 1
+    },
+    "aliasCandidatesToExistingCanonical": 0,
+    "newCanonicalCandidates": 15,
+    "aggregateNames": 2,
+    "commercialCategories": 0,
+    "ambiguousNames": 0,
+    "unresolvedNames": 0
+  },
+  "unmappedSpots": [
+    {
+      "spotId": "boat-76",
+      "spotName": "수영만 부근 - 청사포항인근해상",
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "rawSpeciesNames": [
+        "도다리",
+        "붕장어",
+        "학꽁치",
+        "무늬오징어",
+        "망상어"
+      ],
+      "sourceRow": "76",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "boat-193",
+      "spotName": "수영만 부근 - 광안대교인근해상",
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "rawSpeciesNames": [
+        "도다리",
+        "붕장어",
+        "학꽁치",
+        "무늬오징어",
+        "망상어"
+      ],
+      "sourceRow": "193",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "boat-304",
+      "spotName": "수영만 부근 - 앞산초인근해상",
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "rawSpeciesNames": [
+        "도다리",
+        "붕장어",
+        "학꽁치",
+        "무늬오징어",
+        "망상어"
+      ],
+      "sourceRow": "304",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-121",
+      "spotName": "순천만 부근 - 소여자도 갯바위",
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "sourceRow": "121",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-120",
+      "spotName": "순천만 부근 - 이천리갯바위 끝",
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "sourceRow": "120",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-248",
+      "spotName": "울릉도 - 삼선암 갯바위",
+      "region": "경상북도",
+      "city": "울릉군",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "벵에돔",
+        "부시리"
+      ],
+      "sourceRow": "248",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-320",
+      "spotName": "순천만 부근 - 궁항갯바위 부근",
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "sourceRow": "320",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-387",
+      "spotName": "순천만 부근 - 신작 부근",
+      "region": "전라남도",
+      "city": "고흥군",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "sourceRow": "387",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-388",
+      "spotName": "순천만 부근 - 대운두도 부근",
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "sourceRow": "388",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-1005",
+      "spotName": "대바위공원 - 대바위공원",
+      "region": "울산광역시",
+      "city": "울주군",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "노래미",
+        "보리멸",
+        "성대",
+        "숭어"
+      ],
+      "sourceRow": "1005",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-749",
+      "spotName": "순천만 부근 - 달천도 부근",
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "sourceRow": "749",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-807",
+      "spotName": "순천만 부근 - 대여자도 하단",
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "sourceRow": "807",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-886",
+      "spotName": "순천만 부근 - 교량낚시터",
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "sourceRow": "886",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-904",
+      "spotName": "우이도 - 선창구미",
+      "region": "전라남도",
+      "city": "신안군",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "노래미",
+        "붕장어"
+      ],
+      "sourceRow": "904",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-973",
+      "spotName": "순천만 부근 - 선정 부근",
+      "region": "전라남도",
+      "city": "고흥군",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "붕장어",
+        "망둑어",
+        "짱뚱어",
+        "숭어"
+      ],
+      "sourceRow": "973",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-980",
+      "spotName": "금진2리 - 금진 2리 마을 회관 갯바위",
+      "region": "경상북도",
+      "city": "영덕군",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "노래미",
+        "무늬오징어",
+        "보리멸",
+        "볼락",
+        "붕장어",
+        "숭어"
+      ],
+      "sourceRow": "980",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-1001",
+      "spotName": "당사해양낚시공원 - 당사해양낚시공원",
+      "region": "울산광역시",
+      "city": "북구",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "갑오징어",
+        "노래미",
+        "볼락",
+        "전갱이"
+      ],
+      "sourceRow": "1001",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-1002",
+      "spotName": "주전몽돌해변 - 주전몽돌해변",
+      "region": "울산광역시",
+      "city": "동구",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "보리멸",
+        "성대",
+        "숭어"
+      ],
+      "sourceRow": "1002",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "spotId": "rock-1054",
+      "spotName": "장호항 - 장호항 갯바위",
+      "region": "강원도",
+      "city": "삼척시",
+      "spotType": "rock-fishing-point",
+      "rawSpeciesNames": [
+        "도다리",
+        "무늬오징어",
+        "황어"
+      ],
+      "sourceRow": "1054",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    }
+  ],
+  "occurrences": [
+    {
+      "occurrenceId": "boat-76:1",
+      "spotId": "boat-76",
+      "spotName": "수영만 부근 - 청사포항인근해상",
+      "rawSpeciesName": "도다리",
+      "sourceRow": {
+        "originalId": "76",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "boat-76:2",
+      "spotId": "boat-76",
+      "spotName": "수영만 부근 - 청사포항인근해상",
+      "rawSpeciesName": "붕장어",
+      "sourceRow": {
+        "originalId": "76",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "boat-76:3",
+      "spotId": "boat-76",
+      "spotName": "수영만 부근 - 청사포항인근해상",
+      "rawSpeciesName": "학꽁치",
+      "sourceRow": {
+        "originalId": "76",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "boat-76:4",
+      "spotId": "boat-76",
+      "spotName": "수영만 부근 - 청사포항인근해상",
+      "rawSpeciesName": "무늬오징어",
+      "sourceRow": {
+        "originalId": "76",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "boat-76:5",
+      "spotId": "boat-76",
+      "spotName": "수영만 부근 - 청사포항인근해상",
+      "rawSpeciesName": "망상어",
+      "sourceRow": {
+        "originalId": "76",
+        "sourceSpeciesIndex": 5
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "boat-193:1",
+      "spotId": "boat-193",
+      "spotName": "수영만 부근 - 광안대교인근해상",
+      "rawSpeciesName": "도다리",
+      "sourceRow": {
+        "originalId": "193",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "boat-193:2",
+      "spotId": "boat-193",
+      "spotName": "수영만 부근 - 광안대교인근해상",
+      "rawSpeciesName": "붕장어",
+      "sourceRow": {
+        "originalId": "193",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "boat-193:3",
+      "spotId": "boat-193",
+      "spotName": "수영만 부근 - 광안대교인근해상",
+      "rawSpeciesName": "학꽁치",
+      "sourceRow": {
+        "originalId": "193",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "boat-193:4",
+      "spotId": "boat-193",
+      "spotName": "수영만 부근 - 광안대교인근해상",
+      "rawSpeciesName": "무늬오징어",
+      "sourceRow": {
+        "originalId": "193",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "boat-193:5",
+      "spotId": "boat-193",
+      "spotName": "수영만 부근 - 광안대교인근해상",
+      "rawSpeciesName": "망상어",
+      "sourceRow": {
+        "originalId": "193",
+        "sourceSpeciesIndex": 5
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "boat-304:1",
+      "spotId": "boat-304",
+      "spotName": "수영만 부근 - 앞산초인근해상",
+      "rawSpeciesName": "도다리",
+      "sourceRow": {
+        "originalId": "304",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "boat-304:2",
+      "spotId": "boat-304",
+      "spotName": "수영만 부근 - 앞산초인근해상",
+      "rawSpeciesName": "붕장어",
+      "sourceRow": {
+        "originalId": "304",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "boat-304:3",
+      "spotId": "boat-304",
+      "spotName": "수영만 부근 - 앞산초인근해상",
+      "rawSpeciesName": "학꽁치",
+      "sourceRow": {
+        "originalId": "304",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "boat-304:4",
+      "spotId": "boat-304",
+      "spotName": "수영만 부근 - 앞산초인근해상",
+      "rawSpeciesName": "무늬오징어",
+      "sourceRow": {
+        "originalId": "304",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "boat-304:5",
+      "spotId": "boat-304",
+      "spotName": "수영만 부근 - 앞산초인근해상",
+      "rawSpeciesName": "망상어",
+      "sourceRow": {
+        "originalId": "304",
+        "sourceSpeciesIndex": 5
+      },
+      "region": "부산광역시",
+      "city": "남구",
+      "spotType": "boat-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-121:1",
+      "spotId": "rock-121",
+      "spotName": "순천만 부근 - 소여자도 갯바위",
+      "rawSpeciesName": "붕장어",
+      "sourceRow": {
+        "originalId": "121",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-121:2",
+      "spotId": "rock-121",
+      "spotName": "순천만 부근 - 소여자도 갯바위",
+      "rawSpeciesName": "망둑어",
+      "sourceRow": {
+        "originalId": "121",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-121:3",
+      "spotId": "rock-121",
+      "spotName": "순천만 부근 - 소여자도 갯바위",
+      "rawSpeciesName": "짱뚱어",
+      "sourceRow": {
+        "originalId": "121",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-121:4",
+      "spotId": "rock-121",
+      "spotName": "순천만 부근 - 소여자도 갯바위",
+      "rawSpeciesName": "숭어",
+      "sourceRow": {
+        "originalId": "121",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-120:1",
+      "spotId": "rock-120",
+      "spotName": "순천만 부근 - 이천리갯바위 끝",
+      "rawSpeciesName": "붕장어",
+      "sourceRow": {
+        "originalId": "120",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-120:2",
+      "spotId": "rock-120",
+      "spotName": "순천만 부근 - 이천리갯바위 끝",
+      "rawSpeciesName": "망둑어",
+      "sourceRow": {
+        "originalId": "120",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-120:3",
+      "spotId": "rock-120",
+      "spotName": "순천만 부근 - 이천리갯바위 끝",
+      "rawSpeciesName": "짱뚱어",
+      "sourceRow": {
+        "originalId": "120",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-120:4",
+      "spotId": "rock-120",
+      "spotName": "순천만 부근 - 이천리갯바위 끝",
+      "rawSpeciesName": "숭어",
+      "sourceRow": {
+        "originalId": "120",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-248:1",
+      "spotId": "rock-248",
+      "spotName": "울릉도 - 삼선암 갯바위",
+      "rawSpeciesName": "벵에돔",
+      "sourceRow": {
+        "originalId": "248",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "경상북도",
+      "city": "울릉군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-248:2",
+      "spotId": "rock-248",
+      "spotName": "울릉도 - 삼선암 갯바위",
+      "rawSpeciesName": "부시리",
+      "sourceRow": {
+        "originalId": "248",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "경상북도",
+      "city": "울릉군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-320:1",
+      "spotId": "rock-320",
+      "spotName": "순천만 부근 - 궁항갯바위 부근",
+      "rawSpeciesName": "붕장어",
+      "sourceRow": {
+        "originalId": "320",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-320:2",
+      "spotId": "rock-320",
+      "spotName": "순천만 부근 - 궁항갯바위 부근",
+      "rawSpeciesName": "망둑어",
+      "sourceRow": {
+        "originalId": "320",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-320:3",
+      "spotId": "rock-320",
+      "spotName": "순천만 부근 - 궁항갯바위 부근",
+      "rawSpeciesName": "짱뚱어",
+      "sourceRow": {
+        "originalId": "320",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-320:4",
+      "spotId": "rock-320",
+      "spotName": "순천만 부근 - 궁항갯바위 부근",
+      "rawSpeciesName": "숭어",
+      "sourceRow": {
+        "originalId": "320",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-387:1",
+      "spotId": "rock-387",
+      "spotName": "순천만 부근 - 신작 부근",
+      "rawSpeciesName": "붕장어",
+      "sourceRow": {
+        "originalId": "387",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "전라남도",
+      "city": "고흥군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-387:2",
+      "spotId": "rock-387",
+      "spotName": "순천만 부근 - 신작 부근",
+      "rawSpeciesName": "망둑어",
+      "sourceRow": {
+        "originalId": "387",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "전라남도",
+      "city": "고흥군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-387:3",
+      "spotId": "rock-387",
+      "spotName": "순천만 부근 - 신작 부근",
+      "rawSpeciesName": "짱뚱어",
+      "sourceRow": {
+        "originalId": "387",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "전라남도",
+      "city": "고흥군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-387:4",
+      "spotId": "rock-387",
+      "spotName": "순천만 부근 - 신작 부근",
+      "rawSpeciesName": "숭어",
+      "sourceRow": {
+        "originalId": "387",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "전라남도",
+      "city": "고흥군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-388:1",
+      "spotId": "rock-388",
+      "spotName": "순천만 부근 - 대운두도 부근",
+      "rawSpeciesName": "붕장어",
+      "sourceRow": {
+        "originalId": "388",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-388:2",
+      "spotId": "rock-388",
+      "spotName": "순천만 부근 - 대운두도 부근",
+      "rawSpeciesName": "망둑어",
+      "sourceRow": {
+        "originalId": "388",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-388:3",
+      "spotId": "rock-388",
+      "spotName": "순천만 부근 - 대운두도 부근",
+      "rawSpeciesName": "짱뚱어",
+      "sourceRow": {
+        "originalId": "388",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-388:4",
+      "spotId": "rock-388",
+      "spotName": "순천만 부근 - 대운두도 부근",
+      "rawSpeciesName": "숭어",
+      "sourceRow": {
+        "originalId": "388",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-1005:1",
+      "spotId": "rock-1005",
+      "spotName": "대바위공원 - 대바위공원",
+      "rawSpeciesName": "노래미",
+      "sourceRow": {
+        "originalId": "1005",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "울산광역시",
+      "city": "울주군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-1005:2",
+      "spotId": "rock-1005",
+      "spotName": "대바위공원 - 대바위공원",
+      "rawSpeciesName": "보리멸",
+      "sourceRow": {
+        "originalId": "1005",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "울산광역시",
+      "city": "울주군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-1005:3",
+      "spotId": "rock-1005",
+      "spotName": "대바위공원 - 대바위공원",
+      "rawSpeciesName": "성대",
+      "sourceRow": {
+        "originalId": "1005",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "울산광역시",
+      "city": "울주군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-1005:4",
+      "spotId": "rock-1005",
+      "spotName": "대바위공원 - 대바위공원",
+      "rawSpeciesName": "숭어",
+      "sourceRow": {
+        "originalId": "1005",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "울산광역시",
+      "city": "울주군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-749:1",
+      "spotId": "rock-749",
+      "spotName": "순천만 부근 - 달천도 부근",
+      "rawSpeciesName": "붕장어",
+      "sourceRow": {
+        "originalId": "749",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-749:2",
+      "spotId": "rock-749",
+      "spotName": "순천만 부근 - 달천도 부근",
+      "rawSpeciesName": "망둑어",
+      "sourceRow": {
+        "originalId": "749",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-749:3",
+      "spotId": "rock-749",
+      "spotName": "순천만 부근 - 달천도 부근",
+      "rawSpeciesName": "짱뚱어",
+      "sourceRow": {
+        "originalId": "749",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-749:4",
+      "spotId": "rock-749",
+      "spotName": "순천만 부근 - 달천도 부근",
+      "rawSpeciesName": "숭어",
+      "sourceRow": {
+        "originalId": "749",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-807:1",
+      "spotId": "rock-807",
+      "spotName": "순천만 부근 - 대여자도 하단",
+      "rawSpeciesName": "붕장어",
+      "sourceRow": {
+        "originalId": "807",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-807:2",
+      "spotId": "rock-807",
+      "spotName": "순천만 부근 - 대여자도 하단",
+      "rawSpeciesName": "망둑어",
+      "sourceRow": {
+        "originalId": "807",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-807:3",
+      "spotId": "rock-807",
+      "spotName": "순천만 부근 - 대여자도 하단",
+      "rawSpeciesName": "짱뚱어",
+      "sourceRow": {
+        "originalId": "807",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-807:4",
+      "spotId": "rock-807",
+      "spotName": "순천만 부근 - 대여자도 하단",
+      "rawSpeciesName": "숭어",
+      "sourceRow": {
+        "originalId": "807",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-886:1",
+      "spotId": "rock-886",
+      "spotName": "순천만 부근 - 교량낚시터",
+      "rawSpeciesName": "붕장어",
+      "sourceRow": {
+        "originalId": "886",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-886:2",
+      "spotId": "rock-886",
+      "spotName": "순천만 부근 - 교량낚시터",
+      "rawSpeciesName": "망둑어",
+      "sourceRow": {
+        "originalId": "886",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-886:3",
+      "spotId": "rock-886",
+      "spotName": "순천만 부근 - 교량낚시터",
+      "rawSpeciesName": "짱뚱어",
+      "sourceRow": {
+        "originalId": "886",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-886:4",
+      "spotId": "rock-886",
+      "spotName": "순천만 부근 - 교량낚시터",
+      "rawSpeciesName": "숭어",
+      "sourceRow": {
+        "originalId": "886",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "전라남도",
+      "city": "여수시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-904:1",
+      "spotId": "rock-904",
+      "spotName": "우이도 - 선창구미",
+      "rawSpeciesName": "노래미",
+      "sourceRow": {
+        "originalId": "904",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "전라남도",
+      "city": "신안군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-904:2",
+      "spotId": "rock-904",
+      "spotName": "우이도 - 선창구미",
+      "rawSpeciesName": "붕장어",
+      "sourceRow": {
+        "originalId": "904",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "전라남도",
+      "city": "신안군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-973:1",
+      "spotId": "rock-973",
+      "spotName": "순천만 부근 - 선정 부근",
+      "rawSpeciesName": "붕장어",
+      "sourceRow": {
+        "originalId": "973",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "전라남도",
+      "city": "고흥군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-973:2",
+      "spotId": "rock-973",
+      "spotName": "순천만 부근 - 선정 부근",
+      "rawSpeciesName": "망둑어",
+      "sourceRow": {
+        "originalId": "973",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "전라남도",
+      "city": "고흥군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-973:3",
+      "spotId": "rock-973",
+      "spotName": "순천만 부근 - 선정 부근",
+      "rawSpeciesName": "짱뚱어",
+      "sourceRow": {
+        "originalId": "973",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "전라남도",
+      "city": "고흥군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-973:4",
+      "spotId": "rock-973",
+      "spotName": "순천만 부근 - 선정 부근",
+      "rawSpeciesName": "숭어",
+      "sourceRow": {
+        "originalId": "973",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "전라남도",
+      "city": "고흥군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-980:1",
+      "spotId": "rock-980",
+      "spotName": "금진2리 - 금진 2리 마을 회관 갯바위",
+      "rawSpeciesName": "노래미",
+      "sourceRow": {
+        "originalId": "980",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "경상북도",
+      "city": "영덕군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-980:2",
+      "spotId": "rock-980",
+      "spotName": "금진2리 - 금진 2리 마을 회관 갯바위",
+      "rawSpeciesName": "무늬오징어",
+      "sourceRow": {
+        "originalId": "980",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "경상북도",
+      "city": "영덕군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-980:3",
+      "spotId": "rock-980",
+      "spotName": "금진2리 - 금진 2리 마을 회관 갯바위",
+      "rawSpeciesName": "보리멸",
+      "sourceRow": {
+        "originalId": "980",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "경상북도",
+      "city": "영덕군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-980:4",
+      "spotId": "rock-980",
+      "spotName": "금진2리 - 금진 2리 마을 회관 갯바위",
+      "rawSpeciesName": "볼락",
+      "sourceRow": {
+        "originalId": "980",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "경상북도",
+      "city": "영덕군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-980:5",
+      "spotId": "rock-980",
+      "spotName": "금진2리 - 금진 2리 마을 회관 갯바위",
+      "rawSpeciesName": "붕장어",
+      "sourceRow": {
+        "originalId": "980",
+        "sourceSpeciesIndex": 5
+      },
+      "region": "경상북도",
+      "city": "영덕군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-980:6",
+      "spotId": "rock-980",
+      "spotName": "금진2리 - 금진 2리 마을 회관 갯바위",
+      "rawSpeciesName": "숭어",
+      "sourceRow": {
+        "originalId": "980",
+        "sourceSpeciesIndex": 6
+      },
+      "region": "경상북도",
+      "city": "영덕군",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-1001:1",
+      "spotId": "rock-1001",
+      "spotName": "당사해양낚시공원 - 당사해양낚시공원",
+      "rawSpeciesName": "갑오징어",
+      "sourceRow": {
+        "originalId": "1001",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "울산광역시",
+      "city": "북구",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-1001:2",
+      "spotId": "rock-1001",
+      "spotName": "당사해양낚시공원 - 당사해양낚시공원",
+      "rawSpeciesName": "노래미",
+      "sourceRow": {
+        "originalId": "1001",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "울산광역시",
+      "city": "북구",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-1001:3",
+      "spotId": "rock-1001",
+      "spotName": "당사해양낚시공원 - 당사해양낚시공원",
+      "rawSpeciesName": "볼락",
+      "sourceRow": {
+        "originalId": "1001",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "울산광역시",
+      "city": "북구",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-1001:4",
+      "spotId": "rock-1001",
+      "spotName": "당사해양낚시공원 - 당사해양낚시공원",
+      "rawSpeciesName": "전갱이",
+      "sourceRow": {
+        "originalId": "1001",
+        "sourceSpeciesIndex": 4
+      },
+      "region": "울산광역시",
+      "city": "북구",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-1002:1",
+      "spotId": "rock-1002",
+      "spotName": "주전몽돌해변 - 주전몽돌해변",
+      "rawSpeciesName": "보리멸",
+      "sourceRow": {
+        "originalId": "1002",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "울산광역시",
+      "city": "동구",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-1002:2",
+      "spotId": "rock-1002",
+      "spotName": "주전몽돌해변 - 주전몽돌해변",
+      "rawSpeciesName": "성대",
+      "sourceRow": {
+        "originalId": "1002",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "울산광역시",
+      "city": "동구",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-1002:3",
+      "spotId": "rock-1002",
+      "spotName": "주전몽돌해변 - 주전몽돌해변",
+      "rawSpeciesName": "숭어",
+      "sourceRow": {
+        "originalId": "1002",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "울산광역시",
+      "city": "동구",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-1054:1",
+      "spotId": "rock-1054",
+      "spotName": "장호항 - 장호항 갯바위",
+      "rawSpeciesName": "도다리",
+      "sourceRow": {
+        "originalId": "1054",
+        "sourceSpeciesIndex": 1
+      },
+      "region": "강원도",
+      "city": "삼척시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-1054:2",
+      "spotId": "rock-1054",
+      "spotName": "장호항 - 장호항 갯바위",
+      "rawSpeciesName": "무늬오징어",
+      "sourceRow": {
+        "originalId": "1054",
+        "sourceSpeciesIndex": 2
+      },
+      "region": "강원도",
+      "city": "삼척시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    },
+    {
+      "occurrenceId": "rock-1054:3",
+      "spotId": "rock-1054",
+      "spotName": "장호항 - 장호항 갯바위",
+      "rawSpeciesName": "황어",
+      "sourceRow": {
+        "originalId": "1054",
+        "sourceSpeciesIndex": 3
+      },
+      "region": "강원도",
+      "city": "삼척시",
+      "spotType": "rock-fishing-point",
+      "provenance": {
+        "sourceType": "MOF_SHARED_ROCK_FISHING_POINT",
+        "sourceName": "해양수산부 공공데이터 갯바위 낚시 포인트",
+        "sourceUrl": "https://www.data.go.kr/data/15148580/fileData.do",
+        "sourceCheckedAt": "2026-07-11"
+      }
+    }
+  ],
+  "uniqueRawNames": [
+    {
+      "rawName": "갑오징어",
+      "occurrenceCount": 1,
+      "affectedSpotCount": 1,
+      "spotIds": [
+        "rock-1001"
+      ],
+      "regions": [
+        "울산광역시"
+      ],
+      "classification": "AGGREGATED_TAXON",
+      "identityKind": "AGGREGATE_NAME",
+      "canonicalName": null,
+      "scientificName": null,
+      "expansionValue": "LOW",
+      "expectedOutcome": "DO_NOT_MAP",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016305",
+          "reference": "갑오징어목·갑오징어과 및 복수 종 검토; data/mbris/mappings/fish-alias-review-batch3.json#갑오징어",
+          "supports": "갑오징어는 단일 종 정명이 아니라 복수 갑오징어류를 포괄한다."
+        }
+      ],
+      "limitations": [
+        "참갑오징어(Acanthosepion esculentum)를 포함한 복수 종 중 하나로 좁힐 spot별 근거가 없다."
+      ]
+    },
+    {
+      "rawName": "노래미",
+      "occurrenceCount": 4,
+      "affectedSpotCount": 4,
+      "spotIds": [
+        "rock-1001",
+        "rock-1005",
+        "rock-904",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "울산광역시",
+        "전라남도"
+      ],
+      "classification": "NEW_CANONICAL_SPECIES_CANDIDATE",
+      "identityKind": "EXACT_SPECIES",
+      "canonicalName": "노래미",
+      "scientificName": "Hexagrammos agrammus",
+      "proposedAliases": [],
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000008283",
+          "reference": "BM-SPECIES-001164 / SpcTxnId 270000008283",
+          "supports": "정명과 학명 Hexagrammos agrammus"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "rawName": "도다리",
+      "occurrenceCount": 4,
+      "affectedSpotCount": 4,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76",
+        "rock-1054"
+      ],
+      "regions": [
+        "강원도",
+        "부산광역시"
+      ],
+      "classification": "NEW_CANONICAL_SPECIES_CANDIDATE",
+      "identityKind": "EXACT_SPECIES",
+      "canonicalName": "도다리",
+      "scientificName": "Pleuronichthys cornutus",
+      "proposedAliases": [],
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000013960",
+          "reference": "BM-SPECIES-000548 / SpcTxnId 270000013960",
+          "supports": "정명과 학명 Pleuronichthys cornutus"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "rawName": "망둑어",
+      "occurrenceCount": 9,
+      "affectedSpotCount": 9,
+      "spotIds": [
+        "rock-120",
+        "rock-121",
+        "rock-320",
+        "rock-387",
+        "rock-388",
+        "rock-749",
+        "rock-807",
+        "rock-886",
+        "rock-973"
+      ],
+      "regions": [
+        "전라남도"
+      ],
+      "classification": "AGGREGATED_TAXON",
+      "identityKind": "AGGREGATE_OR_NONSTANDARD_NAME",
+      "canonicalName": null,
+      "scientificName": null,
+      "expansionValue": "LOW",
+      "expectedOutcome": "DO_NOT_MAP",
+      "evidence": [
+        {
+          "organization": "국립생물자원관·MBRIS 검토",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearch.do",
+          "reference": "data/mbris/mappings/fish-alias-review-batch3.json#망둥어",
+          "supports": "망둥어는 망둑어과 여러 종 또는 문절망둑을 가리키는 비표준 통칭이다."
+        }
+      ],
+      "limitations": [
+        "문절망둑, 말뚝망둥어 등 어느 단일 종인지 source row만으로 확정할 수 없다."
+      ]
+    },
+    {
+      "rawName": "망상어",
+      "occurrenceCount": 3,
+      "affectedSpotCount": 3,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76"
+      ],
+      "regions": [
+        "부산광역시"
+      ],
+      "classification": "NEW_CANONICAL_SPECIES_CANDIDATE",
+      "identityKind": "EXACT_SPECIES",
+      "canonicalName": "망상어",
+      "scientificName": "Ditrema temminckii",
+      "proposedAliases": [],
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000005635",
+          "reference": "BM-SPECIES-000223 / SpcTxnId 270000005635",
+          "supports": "정명과 학명 Ditrema temminckii"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "rawName": "무늬오징어",
+      "occurrenceCount": 5,
+      "affectedSpotCount": 5,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76",
+        "rock-1054",
+        "rock-980"
+      ],
+      "regions": [
+        "강원도",
+        "경상북도",
+        "부산광역시"
+      ],
+      "classification": "NEW_CANONICAL_SPECIES_CANDIDATE",
+      "identityKind": "SOURCE_BACKED_COMMON_NAME_FOR_EXACT_SPECIES",
+      "canonicalName": "흰꼴뚜기",
+      "scientificName": "Sepioteuthis lessoniana",
+      "proposedAliases": [
+        "무늬오징어"
+      ],
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립수산과학원",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.nifs.go.kr/board/actionBoard0008View.do?BBS_CL_CD=B&BBS_ID=20250317204841171SMM&MENU_ID=M0000054",
+          "reference": "감성돔과 무늬오징어의 수온에 대한 답변",
+          "supports": "표준국명 흰꼴뚜기의 방언이 무늬오징어임을 명시한다."
+        },
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.data.go.kr/data/15071288/fileData.do",
+          "reference": "BM-SPECIES-003094 / MBRIS 무척추동물 source row 1542",
+          "supports": "정명과 학명 Sepioteuthis lessoniana"
+        }
+      ],
+      "limitations": [
+        "이번 audit에서는 흰꼴뚜기 canonical 또는 무늬오징어 alias를 실제 추가하지 않는다."
+      ]
+    },
+    {
+      "rawName": "벵에돔",
+      "occurrenceCount": 1,
+      "affectedSpotCount": 1,
+      "spotIds": [
+        "rock-248"
+      ],
+      "regions": [
+        "경상북도"
+      ],
+      "classification": "NEW_CANONICAL_SPECIES_CANDIDATE",
+      "identityKind": "EXACT_SPECIES",
+      "canonicalName": "벵에돔",
+      "scientificName": "Girella punctata",
+      "proposedAliases": [],
+      "expansionValue": "LOW",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000007132",
+          "reference": "BM-SPECIES-000279 / SpcTxnId 270000007132",
+          "supports": "정명과 학명 Girella punctata"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "rawName": "보리멸",
+      "occurrenceCount": 3,
+      "affectedSpotCount": 3,
+      "spotIds": [
+        "rock-1002",
+        "rock-1005",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "울산광역시"
+      ],
+      "classification": "NEW_CANONICAL_SPECIES_CANDIDATE",
+      "identityKind": "EXACT_SPECIES",
+      "canonicalName": "보리멸",
+      "scientificName": "Sillago sihama",
+      "proposedAliases": [],
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016512",
+          "reference": "BM-SPECIES-000818 / SpcTxnId 270000016512",
+          "supports": "정명과 학명 Sillago sihama"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "rawName": "볼락",
+      "occurrenceCount": 2,
+      "affectedSpotCount": 2,
+      "spotIds": [
+        "rock-1001",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "울산광역시"
+      ],
+      "classification": "NEW_CANONICAL_SPECIES_CANDIDATE",
+      "identityKind": "EXACT_SPECIES",
+      "canonicalName": "볼락",
+      "scientificName": "Sebastes inermis",
+      "proposedAliases": [],
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016243",
+          "reference": "BM-SPECIES-000002 / SpcTxnId 270000016243",
+          "supports": "정명과 학명 Sebastes inermis"
+        }
+      ],
+      "limitations": [
+        "조피볼락(Sebastes schlegelii)과 다른 종이므로 우럭 alias 규칙을 적용하지 않는다."
+      ]
+    },
+    {
+      "rawName": "부시리",
+      "occurrenceCount": 1,
+      "affectedSpotCount": 1,
+      "spotIds": [
+        "rock-248"
+      ],
+      "regions": [
+        "경상북도"
+      ],
+      "classification": "NEW_CANONICAL_SPECIES_CANDIDATE",
+      "identityKind": "EXACT_SPECIES",
+      "canonicalName": "부시리",
+      "scientificName": "Seriola aureovittata",
+      "proposedAliases": [],
+      "expansionValue": "LOW",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016341",
+          "reference": "BM-SPECIES-000500 / SpcTxnId 270000016341",
+          "supports": "정명과 학명 Seriola aureovittata"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "rawName": "붕장어",
+      "occurrenceCount": 14,
+      "affectedSpotCount": 14,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76",
+        "rock-120",
+        "rock-121",
+        "rock-320",
+        "rock-387",
+        "rock-388",
+        "rock-749",
+        "rock-807",
+        "rock-886",
+        "rock-904",
+        "rock-973",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "부산광역시",
+        "전라남도"
+      ],
+      "classification": "NEW_CANONICAL_SPECIES_CANDIDATE",
+      "identityKind": "EXACT_SPECIES",
+      "canonicalName": "붕장어",
+      "scientificName": "Conger myriaster",
+      "proposedAliases": [],
+      "expansionValue": "HIGH",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000004416",
+          "reference": "BM-SPECIES-000908 / SpcTxnId 270000004416",
+          "supports": "정명과 학명 Conger myriaster"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "rawName": "성대",
+      "occurrenceCount": 2,
+      "affectedSpotCount": 2,
+      "spotIds": [
+        "rock-1002",
+        "rock-1005"
+      ],
+      "regions": [
+        "울산광역시"
+      ],
+      "classification": "NEW_CANONICAL_SPECIES_CANDIDATE",
+      "identityKind": "EXACT_SPECIES",
+      "canonicalName": "성대",
+      "scientificName": "Chelidonichthys spinosus",
+      "proposedAliases": [],
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000003607",
+          "reference": "BM-SPECIES-001135 / SpcTxnId 270000003607",
+          "supports": "정명과 학명 Chelidonichthys spinosus"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "rawName": "숭어",
+      "occurrenceCount": 12,
+      "affectedSpotCount": 12,
+      "spotIds": [
+        "rock-1002",
+        "rock-1005",
+        "rock-120",
+        "rock-121",
+        "rock-320",
+        "rock-387",
+        "rock-388",
+        "rock-749",
+        "rock-807",
+        "rock-886",
+        "rock-973",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "울산광역시",
+        "전라남도"
+      ],
+      "classification": "NEW_CANONICAL_SPECIES_CANDIDATE",
+      "identityKind": "EXACT_SPECIES",
+      "canonicalName": "숭어",
+      "scientificName": "Mugil cephalus",
+      "proposedAliases": [],
+      "expansionValue": "HIGH",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000028620",
+          "reference": "BM-SPECIES-000097 / SpcTxnId 270000028620",
+          "supports": "정명과 학명 Mugil cephalus"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "rawName": "전갱이",
+      "occurrenceCount": 1,
+      "affectedSpotCount": 1,
+      "spotIds": [
+        "rock-1001"
+      ],
+      "regions": [
+        "울산광역시"
+      ],
+      "classification": "NEW_CANONICAL_SPECIES_CANDIDATE",
+      "identityKind": "EXACT_SPECIES",
+      "canonicalName": "전갱이",
+      "scientificName": "Trachurus japonicus",
+      "proposedAliases": [],
+      "expansionValue": "LOW",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000018166",
+          "reference": "BM-SPECIES-000488 / SpcTxnId 270000018166",
+          "supports": "정명과 학명 Trachurus japonicus"
+        },
+        {
+          "organization": "국립수산과학원",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605226",
+          "reference": "fish_1576639605226",
+          "supports": "전갱이와 학명 Trachurus japonicus를 직접 연결한다."
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "rawName": "짱뚱어",
+      "occurrenceCount": 9,
+      "affectedSpotCount": 9,
+      "spotIds": [
+        "rock-120",
+        "rock-121",
+        "rock-320",
+        "rock-387",
+        "rock-388",
+        "rock-749",
+        "rock-807",
+        "rock-886",
+        "rock-973"
+      ],
+      "regions": [
+        "전라남도"
+      ],
+      "classification": "NEW_CANONICAL_SPECIES_CANDIDATE",
+      "identityKind": "EXACT_SPECIES",
+      "canonicalName": "짱뚱어",
+      "scientificName": "Boleophthalmus pectinirostris",
+      "proposedAliases": [],
+      "expansionValue": "HIGH",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.data.go.kr/data/15071288/fileData.do",
+          "reference": "BM-SPECIES-000385 / MBRIS 척추동물 source row 387",
+          "supports": "정명과 학명 Boleophthalmus pectinirostris"
+        }
+      ],
+      "limitations": [
+        "망둑어 집계명과 별개 종으로 유지해야 한다."
+      ]
+    },
+    {
+      "rawName": "학꽁치",
+      "occurrenceCount": 3,
+      "affectedSpotCount": 3,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76"
+      ],
+      "regions": [
+        "부산광역시"
+      ],
+      "classification": "TYPO_OR_VARIANT",
+      "identityKind": "ORTHOGRAPHIC_VARIANT_OF_EXACT_SPECIES",
+      "canonicalName": "학공치",
+      "scientificName": "Hyporhamphus sajori",
+      "proposedAliases": [
+        "학꽁치"
+      ],
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000008600",
+          "reference": "BM-SPECIES-000884 / SpcTxnId 270000008600",
+          "supports": "정명과 학명 Hyporhamphus sajori"
+        }
+      ],
+      "limitations": [
+        "표기 variant를 fuzzy matching으로 처리하지 않고 명시적 alias 후보로만 기록한다."
+      ]
+    },
+    {
+      "rawName": "황어",
+      "occurrenceCount": 1,
+      "affectedSpotCount": 1,
+      "spotIds": [
+        "rock-1054"
+      ],
+      "regions": [
+        "강원도"
+      ],
+      "classification": "NEW_CANONICAL_SPECIES_CANDIDATE",
+      "identityKind": "EXACT_SPECIES",
+      "canonicalName": "황어",
+      "scientificName": "Pseudaspius hakonensis",
+      "proposedAliases": [],
+      "expansionValue": "LOW",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000018212",
+          "reference": "BM-SPECIES-000958 / SpcTxnId 270000018212",
+          "supports": "정명과 학명 Pseudaspius hakonensis"
+        }
+      ],
+      "limitations": []
+    }
+  ],
+  "aliasCandidates": {
+    "toExistingCanonical": [],
+    "forProposedCanonicalSpecies": [
+      {
+        "alias": "무늬오징어",
+        "proposedCanonicalName": "흰꼴뚜기",
+        "scientificName": "Sepioteuthis lessoniana",
+        "affectedSpotCount": 5,
+        "spotIds": [
+          "boat-193",
+          "boat-304",
+          "boat-76",
+          "rock-1054",
+          "rock-980"
+        ],
+        "evidence": [
+          {
+            "organization": "국립수산과학원",
+            "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+            "url": "https://www.nifs.go.kr/board/actionBoard0008View.do?BBS_CL_CD=B&BBS_ID=20250317204841171SMM&MENU_ID=M0000054",
+            "reference": "감성돔과 무늬오징어의 수온에 대한 답변",
+            "supports": "표준국명 흰꼴뚜기의 방언이 무늬오징어임을 명시한다."
+          },
+          {
+            "organization": "국립해양생물자원관 MBRIS",
+            "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+            "url": "https://www.data.go.kr/data/15071288/fileData.do",
+            "reference": "BM-SPECIES-003094 / MBRIS 무척추동물 source row 1542",
+            "supports": "정명과 학명 Sepioteuthis lessoniana"
+          }
+        ]
+      },
+      {
+        "alias": "학꽁치",
+        "proposedCanonicalName": "학공치",
+        "scientificName": "Hyporhamphus sajori",
+        "affectedSpotCount": 3,
+        "spotIds": [
+          "boat-193",
+          "boat-304",
+          "boat-76"
+        ],
+        "evidence": [
+          {
+            "organization": "국립해양생물자원관 MBRIS",
+            "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+            "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000008600",
+            "reference": "BM-SPECIES-000884 / SpcTxnId 270000008600",
+            "supports": "정명과 학명 Hyporhamphus sajori"
+          }
+        ]
+      }
+    ]
+  },
+  "newCanonicalCandidates": [
+    {
+      "canonicalName": "노래미",
+      "scientificName": "Hexagrammos agrammus",
+      "rawNames": [
+        "노래미"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 4,
+      "affectedSpotCount": 4,
+      "spotIds": [
+        "rock-1001",
+        "rock-1005",
+        "rock-904",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "울산광역시",
+        "전라남도"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000008283",
+          "reference": "BM-SPECIES-001164 / SpcTxnId 270000008283",
+          "supports": "정명과 학명 Hexagrammos agrammus"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "도다리",
+      "scientificName": "Pleuronichthys cornutus",
+      "rawNames": [
+        "도다리"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 4,
+      "affectedSpotCount": 4,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76",
+        "rock-1054"
+      ],
+      "regions": [
+        "강원도",
+        "부산광역시"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000013960",
+          "reference": "BM-SPECIES-000548 / SpcTxnId 270000013960",
+          "supports": "정명과 학명 Pleuronichthys cornutus"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "망상어",
+      "scientificName": "Ditrema temminckii",
+      "rawNames": [
+        "망상어"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 3,
+      "affectedSpotCount": 3,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76"
+      ],
+      "regions": [
+        "부산광역시"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000005635",
+          "reference": "BM-SPECIES-000223 / SpcTxnId 270000005635",
+          "supports": "정명과 학명 Ditrema temminckii"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "흰꼴뚜기",
+      "scientificName": "Sepioteuthis lessoniana",
+      "rawNames": [
+        "무늬오징어"
+      ],
+      "proposedAliases": [
+        "무늬오징어"
+      ],
+      "occurrenceCount": 5,
+      "affectedSpotCount": 5,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76",
+        "rock-1054",
+        "rock-980"
+      ],
+      "regions": [
+        "강원도",
+        "경상북도",
+        "부산광역시"
+      ],
+      "identityKind": "SOURCE_BACKED_COMMON_NAME_FOR_EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립수산과학원",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.nifs.go.kr/board/actionBoard0008View.do?BBS_CL_CD=B&BBS_ID=20250317204841171SMM&MENU_ID=M0000054",
+          "reference": "감성돔과 무늬오징어의 수온에 대한 답변",
+          "supports": "표준국명 흰꼴뚜기의 방언이 무늬오징어임을 명시한다."
+        },
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.data.go.kr/data/15071288/fileData.do",
+          "reference": "BM-SPECIES-003094 / MBRIS 무척추동물 source row 1542",
+          "supports": "정명과 학명 Sepioteuthis lessoniana"
+        }
+      ],
+      "limitations": [
+        "이번 audit에서는 흰꼴뚜기 canonical 또는 무늬오징어 alias를 실제 추가하지 않는다."
+      ]
+    },
+    {
+      "canonicalName": "벵에돔",
+      "scientificName": "Girella punctata",
+      "rawNames": [
+        "벵에돔"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 1,
+      "affectedSpotCount": 1,
+      "spotIds": [
+        "rock-248"
+      ],
+      "regions": [
+        "경상북도"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "LOW",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000007132",
+          "reference": "BM-SPECIES-000279 / SpcTxnId 270000007132",
+          "supports": "정명과 학명 Girella punctata"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "보리멸",
+      "scientificName": "Sillago sihama",
+      "rawNames": [
+        "보리멸"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 3,
+      "affectedSpotCount": 3,
+      "spotIds": [
+        "rock-1002",
+        "rock-1005",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "울산광역시"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016512",
+          "reference": "BM-SPECIES-000818 / SpcTxnId 270000016512",
+          "supports": "정명과 학명 Sillago sihama"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "볼락",
+      "scientificName": "Sebastes inermis",
+      "rawNames": [
+        "볼락"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 2,
+      "affectedSpotCount": 2,
+      "spotIds": [
+        "rock-1001",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "울산광역시"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016243",
+          "reference": "BM-SPECIES-000002 / SpcTxnId 270000016243",
+          "supports": "정명과 학명 Sebastes inermis"
+        }
+      ],
+      "limitations": [
+        "조피볼락(Sebastes schlegelii)과 다른 종이므로 우럭 alias 규칙을 적용하지 않는다."
+      ]
+    },
+    {
+      "canonicalName": "부시리",
+      "scientificName": "Seriola aureovittata",
+      "rawNames": [
+        "부시리"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 1,
+      "affectedSpotCount": 1,
+      "spotIds": [
+        "rock-248"
+      ],
+      "regions": [
+        "경상북도"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "LOW",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016341",
+          "reference": "BM-SPECIES-000500 / SpcTxnId 270000016341",
+          "supports": "정명과 학명 Seriola aureovittata"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "붕장어",
+      "scientificName": "Conger myriaster",
+      "rawNames": [
+        "붕장어"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 14,
+      "affectedSpotCount": 14,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76",
+        "rock-120",
+        "rock-121",
+        "rock-320",
+        "rock-387",
+        "rock-388",
+        "rock-749",
+        "rock-807",
+        "rock-886",
+        "rock-904",
+        "rock-973",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "부산광역시",
+        "전라남도"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "HIGH",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000004416",
+          "reference": "BM-SPECIES-000908 / SpcTxnId 270000004416",
+          "supports": "정명과 학명 Conger myriaster"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "성대",
+      "scientificName": "Chelidonichthys spinosus",
+      "rawNames": [
+        "성대"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 2,
+      "affectedSpotCount": 2,
+      "spotIds": [
+        "rock-1002",
+        "rock-1005"
+      ],
+      "regions": [
+        "울산광역시"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000003607",
+          "reference": "BM-SPECIES-001135 / SpcTxnId 270000003607",
+          "supports": "정명과 학명 Chelidonichthys spinosus"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "숭어",
+      "scientificName": "Mugil cephalus",
+      "rawNames": [
+        "숭어"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 12,
+      "affectedSpotCount": 12,
+      "spotIds": [
+        "rock-1002",
+        "rock-1005",
+        "rock-120",
+        "rock-121",
+        "rock-320",
+        "rock-387",
+        "rock-388",
+        "rock-749",
+        "rock-807",
+        "rock-886",
+        "rock-973",
+        "rock-980"
+      ],
+      "regions": [
+        "경상북도",
+        "울산광역시",
+        "전라남도"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "HIGH",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000028620",
+          "reference": "BM-SPECIES-000097 / SpcTxnId 270000028620",
+          "supports": "정명과 학명 Mugil cephalus"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "전갱이",
+      "scientificName": "Trachurus japonicus",
+      "rawNames": [
+        "전갱이"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 1,
+      "affectedSpotCount": 1,
+      "spotIds": [
+        "rock-1001"
+      ],
+      "regions": [
+        "울산광역시"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "LOW",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000018166",
+          "reference": "BM-SPECIES-000488 / SpcTxnId 270000018166",
+          "supports": "정명과 학명 Trachurus japonicus"
+        },
+        {
+          "organization": "국립수산과학원",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605226",
+          "reference": "fish_1576639605226",
+          "supports": "전갱이와 학명 Trachurus japonicus를 직접 연결한다."
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "canonicalName": "짱뚱어",
+      "scientificName": "Boleophthalmus pectinirostris",
+      "rawNames": [
+        "짱뚱어"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 9,
+      "affectedSpotCount": 9,
+      "spotIds": [
+        "rock-120",
+        "rock-121",
+        "rock-320",
+        "rock-387",
+        "rock-388",
+        "rock-749",
+        "rock-807",
+        "rock-886",
+        "rock-973"
+      ],
+      "regions": [
+        "전라남도"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "HIGH",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.data.go.kr/data/15071288/fileData.do",
+          "reference": "BM-SPECIES-000385 / MBRIS 척추동물 source row 387",
+          "supports": "정명과 학명 Boleophthalmus pectinirostris"
+        }
+      ],
+      "limitations": [
+        "망둑어 집계명과 별개 종으로 유지해야 한다."
+      ]
+    },
+    {
+      "canonicalName": "학공치",
+      "scientificName": "Hyporhamphus sajori",
+      "rawNames": [
+        "학꽁치"
+      ],
+      "proposedAliases": [
+        "학꽁치"
+      ],
+      "occurrenceCount": 3,
+      "affectedSpotCount": 3,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76"
+      ],
+      "regions": [
+        "부산광역시"
+      ],
+      "identityKind": "ORTHOGRAPHIC_VARIANT_OF_EXACT_SPECIES",
+      "expansionValue": "MEDIUM",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000008600",
+          "reference": "BM-SPECIES-000884 / SpcTxnId 270000008600",
+          "supports": "정명과 학명 Hyporhamphus sajori"
+        }
+      ],
+      "limitations": [
+        "표기 variant를 fuzzy matching으로 처리하지 않고 명시적 alias 후보로만 기록한다."
+      ]
+    },
+    {
+      "canonicalName": "황어",
+      "scientificName": "Pseudaspius hakonensis",
+      "rawNames": [
+        "황어"
+      ],
+      "proposedAliases": [],
+      "occurrenceCount": 1,
+      "affectedSpotCount": 1,
+      "spotIds": [
+        "rock-1054"
+      ],
+      "regions": [
+        "강원도"
+      ],
+      "identityKind": "EXACT_SPECIES",
+      "expansionValue": "LOW",
+      "expectedOutcome": "ADD_CANONICAL_SPECIES_LIKELY",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000018212",
+          "reference": "BM-SPECIES-000958 / SpcTxnId 270000018212",
+          "supports": "정명과 학명 Pseudaspius hakonensis"
+        }
+      ],
+      "limitations": []
+    }
+  ],
+  "aggregateCategories": [
+    {
+      "rawName": "갑오징어",
+      "occurrenceCount": 1,
+      "affectedSpotCount": 1,
+      "spotIds": [
+        "rock-1001"
+      ],
+      "regions": [
+        "울산광역시"
+      ],
+      "classification": "AGGREGATED_TAXON",
+      "identityKind": "AGGREGATE_NAME",
+      "canonicalName": null,
+      "scientificName": null,
+      "expansionValue": "LOW",
+      "expectedOutcome": "DO_NOT_MAP",
+      "evidence": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016305",
+          "reference": "갑오징어목·갑오징어과 및 복수 종 검토; data/mbris/mappings/fish-alias-review-batch3.json#갑오징어",
+          "supports": "갑오징어는 단일 종 정명이 아니라 복수 갑오징어류를 포괄한다."
+        }
+      ],
+      "limitations": [
+        "참갑오징어(Acanthosepion esculentum)를 포함한 복수 종 중 하나로 좁힐 spot별 근거가 없다."
+      ]
+    },
+    {
+      "rawName": "망둑어",
+      "occurrenceCount": 9,
+      "affectedSpotCount": 9,
+      "spotIds": [
+        "rock-120",
+        "rock-121",
+        "rock-320",
+        "rock-387",
+        "rock-388",
+        "rock-749",
+        "rock-807",
+        "rock-886",
+        "rock-973"
+      ],
+      "regions": [
+        "전라남도"
+      ],
+      "classification": "AGGREGATED_TAXON",
+      "identityKind": "AGGREGATE_OR_NONSTANDARD_NAME",
+      "canonicalName": null,
+      "scientificName": null,
+      "expansionValue": "LOW",
+      "expectedOutcome": "DO_NOT_MAP",
+      "evidence": [
+        {
+          "organization": "국립생물자원관·MBRIS 검토",
+          "authorityClass": "OFFICIAL_PUBLIC_INSTITUTION",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearch.do",
+          "reference": "data/mbris/mappings/fish-alias-review-batch3.json#망둥어",
+          "supports": "망둥어는 망둑어과 여러 종 또는 문절망둑을 가리키는 비표준 통칭이다."
+        }
+      ],
+      "limitations": [
+        "문절망둑, 말뚝망둥어 등 어느 단일 종인지 source row만으로 확정할 수 없다."
+      ]
+    }
+  ],
+  "commercialCategories": [],
+  "ambiguousNames": [],
+  "unresolved": [],
+  "coverageImpact": {
+    "currentMappedSpots": 1386,
+    "currentUnmappedSpots": 19,
+    "potentiallyResolvedSpots": 19,
+    "potentiallyResolvedSpotIds": [
+      "boat-193",
+      "boat-304",
+      "boat-76",
+      "rock-1001",
+      "rock-1002",
+      "rock-1005",
+      "rock-1054",
+      "rock-120",
+      "rock-121",
+      "rock-248",
+      "rock-320",
+      "rock-387",
+      "rock-388",
+      "rock-749",
+      "rock-807",
+      "rock-886",
+      "rock-904",
+      "rock-973",
+      "rock-980"
+    ],
+    "potentialMappedSpots": 1405,
+    "potentialUnmappedSpots": 0,
+    "condition": "All listed candidates still require a separate canonical promotion and condition-profile review.",
+    "rankingUsed": false
+  },
+  "sourcePolicy": {
+    "officialIdentitySources": [
+      "https://www.mbris.kr/pub/marine/tsearch/tsearch.do",
+      "https://www.data.go.kr/data/15071288/fileData.do",
+      "https://www.nifs.go.kr/board/actionBoard0008View.do?BBS_CL_CD=B&BBS_ID=20250317204841171SMM&MENU_ID=M0000054",
+      "https://nifs.go.kr/portal/fr/chrpA/actionChrpFishView.do?fishId=fish_1576639605226"
+    ],
+    "sourceUrlsRecordedPerName": true,
+    "aggregateOrCommercialPromotionAllowed": false,
+    "sourceSpotProvenancePreserved": true
+  },
+  "invariants": {
+    "canonicalMutation": 0,
+    "runtimeMutation": 0,
+    "fuzzyMapping": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0,
+    "productionPromotion": 0
+  }
+}
