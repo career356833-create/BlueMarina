@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "audit": "Fishing Spot Departure Point Verification Batch 1",
+  "auditedOn": "2026-09-17",
+  "baseCommit": "d527236d2eedbf39029082405a324c7db8121479",
+  "decision": "NO_AUTHORITATIVE_EXACT_DEPARTURE_RELATION_CONFIRMED",
+  "counts": {
+    "total": 20,
+    "confirmed": 0,
+    "geographicNameOnly": 17,
+    "unresolved": 3,
+    "conflicts": 0,
+    "departureCoordinatesAdded": 0
+  },
+  "evidenceSummary": {
+    "officialBoatSourceRecords": 20,
+    "recordsWithIndependentPublicIdentityEvidence": 16,
+    "recordsWithGeneralFishingDepartureUseOnly": 3,
+    "recordsWithExactSpotDepartureRelation": 0
+  },
+  "coordinateSafetyHold": {
+    "source": "reports/fishing-spots/navigation-coordinate-hold-v1.json",
+    "spotIds": [
+      "boat-60",
+      "boat-128",
+      "boat-129",
+      "boat-321"
+    ],
+    "count": 4,
+    "released": 0,
+    "unchanged": true
+  },
+  "artifacts": {
+    "researchData": "data/fishing-spots/enrichment/research/departure-point-batch1-v1.json",
+    "report": "reports/fishing-spots/departure-point-verification-batch1-v1.json",
+    "productionEnrichmentPromoted": false
+  },
+  "hashes": {
+    "originalEnrichmentSha256": "9E4BE97368A2EA45017D0A82DBCF7ED00173A0598ACCA3C3AA309CB7F0A4D951",
+    "canonicalFishingSpotsSha256": "5707FB2E057A039B7F572ECE7E94A0936ED5B73F204613A3E3FCE9A45CDC74BA",
+    "coordinateHoldSha256": "057EEAF2DAEAD1806F0C33AA3F247DF12EB1D6B4FFF8533432467F4889BC9EC1"
+  },
+  "invariants": {
+    "coordinateInference": 0,
+    "originalEnrichmentMutation": 0,
+    "canonicalCoordinateMutation": 0,
+    "navigationHoldRelease": 0,
+    "runtimeMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0
+  }
+}

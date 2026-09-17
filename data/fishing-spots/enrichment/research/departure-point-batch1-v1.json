@@ -1,0 +1,965 @@
+{
+  "schemaVersion": 1,
+  "research": "Fishing Spot Departure Point Verification Batch 1",
+  "researchedOn": "2026-09-17",
+  "baseCommit": "d527236d2eedbf39029082405a324c7db8121479",
+  "input": "data/fishing-spots/enrichment/v1/boat-departure-access.json",
+  "decision": "NO_AUTHORITATIVE_EXACT_DEPARTURE_RELATION_CONFIRMED",
+  "confirmationGate": [
+    "spot identity match",
+    "named departure point stated",
+    "actual boarding or departure relation stated",
+    "authoritative source",
+    "source URL or reference",
+    "region match"
+  ],
+  "counts": {
+    "total": 20,
+    "confirmed": 0,
+    "geographicNameOnly": 17,
+    "unresolved": 3,
+    "conflicts": 0,
+    "departureCoordinatesAdded": 0
+  },
+  "records": [
+    {
+      "spotId": "boat-3",
+      "spotName": "울릉도 - 남양항부근해상",
+      "candidateDepartureName": "남양항",
+      "region": "경상북도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=3",
+          "finding": "공식 선상낚시 포인트 원본이 울릉도 / 남양항부근해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "PUBLIC_INSTITUTION",
+          "sourceType": "FIPA_PORT_REFERENCE",
+          "sourceName": "FIPA",
+          "sourceUrl": "https://www.fipa.or.kr/fipa/pgm/i-151/nat/front/map.do",
+          "sourceRef": "src/data/national-ports.ts#national-port-2530",
+          "finding": "남양항의 명칭, 유형, 주소가 후보 지역과 일치한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-22",
+      "spotName": "연화도 부근 - 연화항부근해상",
+      "candidateDepartureName": "연화항",
+      "region": "경상남도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=22",
+          "finding": "공식 선상낚시 포인트 원본이 연화도 부근 / 연화항부근해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "PUBLIC_INSTITUTION",
+          "sourceType": "FIPA_PORT_REFERENCE",
+          "sourceName": "FIPA",
+          "sourceUrl": "https://www.fipa.or.kr/fipa/pgm/i-245/lclty/front/map.do",
+          "sourceRef": "src/data/local-ports.ts#local-port-1785",
+          "finding": "연화항의 명칭, 유형, 주소가 후보 지역과 일치한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-29",
+      "spotName": "제주도 남부 - 강정포구앞노란부표부근",
+      "candidateDepartureName": "강정포구",
+      "region": "제주특별자치도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=29",
+          "finding": "공식 선상낚시 포인트 원본이 제주도 남부 / 강정포구앞노란부표부근라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "LOCAL_GOVERNMENT",
+          "sourceType": "OFFICIAL_TRANSIT_REFERENCE",
+          "sourceName": "제주버스정보시스템 680번 노선",
+          "sourceUrl": "https://bus.jeju.go.kr/mobile/schedule/detailSchedule?scheduleId=2502",
+          "finding": "공식 노선 안내가 강정포구의 명칭과 서귀포 지역 위치를 확인한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-63",
+      "spotName": "제주도 남부 - 강정포구앞입표부근",
+      "candidateDepartureName": "강정포구",
+      "region": "제주특별자치도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=63",
+          "finding": "공식 선상낚시 포인트 원본이 제주도 남부 / 강정포구앞입표부근라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "LOCAL_GOVERNMENT",
+          "sourceType": "OFFICIAL_TRANSIT_REFERENCE",
+          "sourceName": "제주버스정보시스템 680번 노선",
+          "sourceUrl": "https://bus.jeju.go.kr/mobile/schedule/detailSchedule?scheduleId=2502",
+          "finding": "공식 노선 안내가 강정포구의 명칭과 서귀포 지역 위치를 확인한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-73",
+      "spotName": "연도 - 역포항인근해상",
+      "candidateDepartureName": "역포항",
+      "region": "전라남도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=73",
+          "finding": "공식 선상낚시 포인트 원본이 연도 / 역포항인근해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "PUBLIC_INSTITUTION",
+          "sourceType": "FIPA_PORT_REFERENCE",
+          "sourceName": "FIPA",
+          "sourceUrl": "https://www.fipa.or.kr/fipa/pgm/i-247/fixed/front/map.do",
+          "sourceRef": "src/data/fixed-ports.ts#fixed-port-2027",
+          "finding": "역포항의 명칭, 유형, 주소가 후보 지역과 일치한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-76",
+      "spotName": "수영만 부근 - 청사포항인근해상",
+      "candidateDepartureName": "청사포항",
+      "region": "부산광역시",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=76",
+          "finding": "공식 선상낚시 포인트 원본이 수영만 부근 / 청사포항인근해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "PUBLIC_INSTITUTION",
+          "sourceType": "FIPA_PORT_REFERENCE",
+          "sourceName": "FIPA",
+          "sourceUrl": "https://www.fipa.or.kr/fipa/pgm/i-245/lclty/front/map.do",
+          "sourceRef": "src/data/local-ports.ts#local-port-1536",
+          "finding": "청사포항의 명칭, 유형, 주소가 후보 지역과 일치한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-100",
+      "spotName": "대청도·소청도 - 선진포항앞바다",
+      "candidateDepartureName": "선진포항",
+      "region": "인천광역시",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=100",
+          "finding": "공식 선상낚시 포인트 원본이 대청도·소청도 / 선진포항앞바다라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "PUBLIC_INSTITUTION",
+          "sourceType": "FIPA_PORT_REFERENCE",
+          "sourceName": "FIPA",
+          "sourceUrl": "https://www.fipa.or.kr/fipa/pgm/i-151/nat/front/map.do",
+          "sourceRef": "src/data/national-ports.ts#national-port-2447",
+          "finding": "선진포항의 명칭, 유형, 주소가 후보 지역과 일치한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "CENTRAL_GOVERNMENT",
+          "sourceType": "LIGHTHOUSE_REFERENCE",
+          "sourceName": "인천지방해양수산청 무인등대 현황",
+          "sourceUrl": "https://incheon.mof.go.kr/ko/page.do?menuIdx=1919",
+          "finding": "선진포항 방사제·방파제 등대 기록이 항 명칭과 옹진 지역을 확인한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-125",
+      "spotName": "거제도 북동부 - 지세포항앞바다",
+      "candidateDepartureName": "지세포항",
+      "region": "경상남도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=125",
+          "finding": "공식 선상낚시 포인트 원본이 거제도 북동부 / 지세포항앞바다라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "PUBLIC_INSTITUTION",
+          "sourceType": "FIPA_PORT_REFERENCE",
+          "sourceName": "FIPA",
+          "sourceUrl": "https://www.fipa.or.kr/fipa/pgm/i-151/nat/front/map.do",
+          "sourceRef": "src/data/national-ports.ts#national-port-2533",
+          "finding": "지세포항의 명칭, 유형, 주소가 후보 지역과 일치한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "LOCAL_GOVERNMENT",
+          "sourceType": "FISHING_VESSEL_REGISTRY_VIEW",
+          "sourceName": "거제시 관광문화 낚시어선 목록",
+          "sourceUrl": "https://tour.geoje.go.kr/board/list.geoje?boardId=BBS_0000505&menuCd=DOM_000008502004005003&paging=ok&startPage=10",
+          "finding": "공식 낚시어선 목록이 지세포항을 낚시어선 출입항·계선 장소로 기록한다. 어느 어선이 boat-125 지점으로 운항하는지는 기록하지 않는다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH",
+            "GENERAL_FISHING_VESSEL_DEPARTURE_USE"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "DEPARTURE_RELATION_UNRESOLVED",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "공공 근거가 해당 항의 일반적인 낚시어선 이용을 확인하지만 이 fishing spot으로의 운항 관계는 특정하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-143",
+      "spotName": "추도 부근 - 대항승선장부근해상",
+      "candidateDepartureName": "대항승선장",
+      "region": "경상남도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=143",
+          "finding": "공식 선상낚시 포인트 원본이 추도 부근 / 대항승선장부근해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-148",
+      "spotName": "제주도 남동부 - 비안포구앞해상",
+      "candidateDepartureName": "비안포구",
+      "region": "제주특별자치도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=148",
+          "finding": "공식 선상낚시 포인트 원본이 제주도 남동부 / 비안포구앞해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "LOCAL_GOVERNMENT",
+          "sourceType": "OFFICIAL_EDUCATION_REFERENCE",
+          "sourceName": "제주특별자치도 제주어 교육 플랫폼",
+          "sourceUrl": "https://www.jeju.go.kr/jedu/data/data.htm?act=view&page=101&seq=1538302",
+          "finding": "공식 교육 자료가 비안포구 명칭을 제주 지역 지명으로 확인한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-160",
+      "spotName": "안면도 북부 - 방포항방파제앞해상",
+      "candidateDepartureName": "방포항",
+      "region": "충청남도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=160",
+          "finding": "공식 선상낚시 포인트 원본이 안면도 북부 / 방포항방파제앞해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "PUBLIC_INSTITUTION",
+          "sourceType": "FIPA_PORT_REFERENCE",
+          "sourceName": "FIPA",
+          "sourceUrl": "https://www.fipa.or.kr/fipa/pgm/i-245/lclty/front/map.do",
+          "sourceRef": "src/data/local-ports.ts#local-port-1597",
+          "finding": "방포항의 명칭, 유형, 주소가 후보 지역과 일치한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "CENTRAL_GOVERNMENT",
+          "sourceType": "COAST_GUARD_PORT_PROFILE",
+          "sourceName": "태안해양경찰서 방포출장소 관할 안내",
+          "sourceUrl": "https://www.kcg.go.kr/taeancgs/cm/cntnts/cntntsView.do?cntntsId=532&mi=2513",
+          "finding": "방포항을 관할 주요 항포구로, 주요 선박을 낚시어선 57척으로 기록한다. boat-160 지점과 개별 출항 관계는 제시하지 않는다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH",
+            "GENERAL_FISHING_VESSEL_DEPARTURE_USE"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "DEPARTURE_RELATION_UNRESOLVED",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "공공 근거가 해당 항의 일반적인 낚시어선 이용을 확인하지만 이 fishing spot으로의 운항 관계는 특정하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-177",
+      "spotName": "거차수도 부근 - 동거차선착장해상",
+      "candidateDepartureName": "동거차선착장",
+      "region": "전라남도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=177",
+          "finding": "공식 선상낚시 포인트 원본이 거차수도 부근 / 동거차선착장해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-211",
+      "spotName": "제주도 남동부 - 태흥리포구앞해상",
+      "candidateDepartureName": "태흥리포구",
+      "region": "제주특별자치도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=211",
+          "finding": "공식 선상낚시 포인트 원본이 제주도 남동부 / 태흥리포구앞해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "CENTRAL_GOVERNMENT",
+          "sourceType": "COAST_GUARD_INCIDENT_REFERENCE",
+          "sourceName": "서귀포해양경찰서 보도자료",
+          "sourceUrl": "https://www.kcg.go.kr/seoguipocgs/na/ntt/selectNttInfo.do?nttSn=42273",
+          "finding": "공식 보도자료가 태흥리포구와 그 남쪽 해상을 같은 지역 문맥에서 확인한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-215",
+      "spotName": "석모도 - 외포리선착장입표부근해상",
+      "candidateDepartureName": "외포리선착장",
+      "region": "인천광역시",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=215",
+          "finding": "공식 선상낚시 포인트 원본이 석모도 / 외포리선착장입표부근해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "LOCAL_GOVERNMENT",
+          "sourceType": "OFFICIAL_TOURISM_REFERENCE",
+          "sourceName": "강화군 문화관광 여행 코스",
+          "sourceUrl": "https://www.ganghwa.go.kr/open_content/tour/trip/day2_1.jsp",
+          "finding": "공식 여행 안내가 외포리선착장의 명칭과 강화 지역 위치, 여객선 이용을 확인한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "FISHING_VESSEL_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-220",
+      "spotName": "연화도 부근 - 연화항부근해상",
+      "candidateDepartureName": "연화항",
+      "region": "경상남도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=220",
+          "finding": "공식 선상낚시 포인트 원본이 연화도 부근 / 연화항부근해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "PUBLIC_INSTITUTION",
+          "sourceType": "FIPA_PORT_REFERENCE",
+          "sourceName": "FIPA",
+          "sourceUrl": "https://www.fipa.or.kr/fipa/pgm/i-245/lclty/front/map.do",
+          "sourceRef": "src/data/local-ports.ts#local-port-1785",
+          "finding": "연화항의 명칭, 유형, 주소가 후보 지역과 일치한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-224",
+      "spotName": "추자군도 - 추자항북측해상",
+      "candidateDepartureName": "추자항",
+      "region": "제주특별자치도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=224",
+          "finding": "공식 선상낚시 포인트 원본이 추자군도 / 추자항북측해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "CENTRAL_GOVERNMENT",
+          "sourceType": "OFFICIAL_PASSENGER_ROUTE_REFERENCE",
+          "sourceName": "부산지방해양수산청 추자도등대 찾아오시는 길",
+          "sourceUrl": "https://busan.mof.go.kr/ko/page.do?menuIdx=4626",
+          "finding": "공식 안내가 추자항 명칭과 여객선 기항 관계를 확인한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "FISHING_VESSEL_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-268",
+      "spotName": "부산항 부근 - 몰운대전망대해상",
+      "candidateDepartureName": "부산항",
+      "region": "부산광역시",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=268",
+          "finding": "공식 선상낚시 포인트 원본이 부산항 부근 / 몰운대전망대해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-288",
+      "spotName": "제주도 북동부·우도 - 종달리포구앞해상",
+      "candidateDepartureName": "종달리포구",
+      "region": "제주특별자치도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=288",
+          "finding": "공식 선상낚시 포인트 원본이 제주도 북동부·우도 / 종달리포구앞해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-290",
+      "spotName": "압해도 - 압해도선착장앞해상",
+      "candidateDepartureName": "압해도선착장",
+      "region": "전라남도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=290",
+          "finding": "공식 선상낚시 포인트 원본이 압해도 / 압해도선착장앞해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "PUBLIC_INSTITUTION",
+          "sourceType": "OFFICIAL_TOURISM_REFERENCE",
+          "sourceName": "한국관광공사 대한민국 구석구석",
+          "sourceUrl": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=d3babfcf-e148-4523-84cb-88fc21d86618",
+          "finding": "공공기관 안내가 압해도선착장을 선상낚시 출발지로 일반적으로 소개한다. boat-290 지점으로의 운항 관계는 특정하지 않는다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH",
+            "GENERAL_FISHING_VESSEL_DEPARTURE_USE"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "DEPARTURE_RELATION_UNRESOLVED",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "공공 근거가 해당 항의 일반적인 낚시어선 이용을 확인하지만 이 fishing spot으로의 운항 관계는 특정하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    },
+    {
+      "spotId": "boat-300",
+      "spotName": "제주도 북동부·우도 - 천진항앞해상",
+      "candidateDepartureName": "천진항",
+      "region": "제주특별자치도",
+      "evidence": [
+        {
+          "authority": "OFFICIAL",
+          "sourceType": "MOF_SHARED_BOAT_FISHING_POINT",
+          "sourceName": "해양수산부 공공데이터 선상낚시 포인트",
+          "sourceUrl": "https://www.data.go.kr/data/15148435/fileData.do",
+          "sourceRef": "work/fishing-spots-boat-raw.csv#공간정보일련번호=300",
+          "finding": "공식 선상낚시 포인트 원본이 제주도 북동부·우도 / 천진항앞해상라는 위치 문맥을 제공한다.",
+          "supports": [
+            "SPOT_IDENTITY",
+            "NAMED_FEATURE_IN_SPOT_CONTEXT",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        },
+        {
+          "authority": "CENTRAL_GOVERNMENT",
+          "sourceType": "OFFICIAL_COAST_ROUTE_REFERENCE",
+          "sourceName": "해양수산부 연안포털 우도 해안도로",
+          "sourceUrl": "https://coast.mof.go.kr/coastScene/coastWayView.do?dt2=330&road_no=49",
+          "finding": "공식 연안 안내가 천진항 명칭과 우도 지역 위치, 여객 교통 관계를 확인한다.",
+          "supports": [
+            "NAMED_FEATURE_IDENTITY",
+            "REGION_MATCH"
+          ],
+          "doesNotSupport": [
+            "EXACT_SPOT_DEPARTURE_RELATION",
+            "FISHING_VESSEL_DEPARTURE_RELATION",
+            "DEPARTURE_COORDINATE"
+          ]
+        }
+      ],
+      "departureRelationStatus": "GEOGRAPHIC_NAME_ONLY",
+      "departureCoordinate": null,
+      "limitations": [
+        "항·포구·선착장 명칭이 fishing spot의 위치 문맥에 등장한다는 사실은 실제 승선·출항 관계를 증명하지 않는다.",
+        "확인된 공공 근거는 지명과 지역만 뒷받침하며 이 fishing spot으로의 승선·출항 관계를 제시하지 않는다.",
+        "명시적 공식 출항지 좌표가 없어 departureCoordinate를 null로 유지한다."
+      ]
+    }
+  ]
+}
