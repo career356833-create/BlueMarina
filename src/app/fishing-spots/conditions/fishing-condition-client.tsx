@@ -149,8 +149,11 @@ type FishingConditionSpotContext = {
   name: string;
   region: string;
   detailHref: string;
-  mapHref: string;
-  navigationHref: string;
+  mapHref?: string;
+  navigationHref?: string;
+  coordinateNotice?: string;
+  mapBlockedReason?: string;
+  navigationBlockedReason?: string;
 };
 
 type FishingConditionClientProps = {
@@ -269,10 +272,17 @@ export function FishingConditionClient({ initialSpeciesId = "", spotContext }: F
           </div>
           <div className="flex flex-wrap gap-2">
             <Link href={spotContext.detailHref} className="inline-flex min-h-10 items-center rounded-full border border-[#29465D] px-4 text-xs font-black text-[#D7E4F6]">상세로 돌아가기</Link>
-            <Link href={spotContext.mapHref} className="inline-flex min-h-10 items-center rounded-full border border-[#79C9D6]/45 px-4 text-xs font-black text-[#AEE8EF]">지도에서 보기</Link>
-            <Link href={spotContext.navigationHref} className="inline-flex min-h-10 items-center rounded-full border border-[#EBC27D]/45 px-4 text-xs font-black text-[#F1D9A8]">항법에서 보기</Link>
+            {spotContext.mapHref
+              ? <Link href={spotContext.mapHref} className="inline-flex min-h-10 items-center rounded-full border border-[#79C9D6]/45 px-4 text-xs font-black text-[#AEE8EF]">지도에서 보기</Link>
+              : <button type="button" disabled aria-describedby="condition-map-hold-reason" className="inline-flex min-h-10 cursor-not-allowed items-center rounded-full border border-[#29465D] px-4 text-xs font-black text-[#7890A6]">지도에서 보기</button>}
+            {spotContext.navigationHref
+              ? <Link href={spotContext.navigationHref} className="inline-flex min-h-10 items-center rounded-full border border-[#EBC27D]/45 px-4 text-xs font-black text-[#F1D9A8]">항법에서 보기</Link>
+              : <button type="button" disabled aria-describedby="condition-navigation-hold-reason" className="inline-flex min-h-10 cursor-not-allowed items-center rounded-full border border-[#6A5735] px-4 text-xs font-black text-[#D9C49A]">항법에서 보기</button>}
           </div>
         </div>
+        {spotContext.coordinateNotice ? <p role="note" className="mt-3 rounded-[14px] border border-[#6A5735] bg-[#201B13] px-3 py-2 text-xs font-semibold leading-5 text-[#D9C49A]">좌표 검토 중 · {spotContext.coordinateNotice}</p> : null}
+        {spotContext.mapBlockedReason ? <p id="condition-map-hold-reason" className="mt-2 text-xs font-semibold text-[#D9C49A]">{spotContext.mapBlockedReason}</p> : null}
+        {spotContext.navigationBlockedReason ? <p id="condition-navigation-hold-reason" className="mt-1 text-xs font-semibold text-[#D9C49A]">{spotContext.navigationBlockedReason}</p> : null}
         <p className="mt-3 border-t border-[#29465D] pt-3 text-xs font-semibold leading-5 text-[#8FA7BC]">포인트 위치와 해양 관측 정점은 별도입니다. 월·자료원·정점·수심을 직접 선택해 주세요.</p>
       </aside> : null}
 

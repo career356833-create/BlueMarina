@@ -1,4 +1,5 @@
 import type { FishingSpot } from "@/data/fishing-spots";
+import { getSpotCoordinateSafetyPolicy, NAVIGATION_HOLD_NOTICE } from "@/lib/fishing-spots/coordinate-safety";
 import type { MarinePlace } from "@/lib/types/data-contract";
 import type { NavigationDestination, NavigationSourceType } from "../types";
 
@@ -29,6 +30,16 @@ export function parseNavigationDestinationQuery(query: NavigationQuery): Destina
   if (rawSourceId && rawSourceId.length > 120) return { destination: null, error: "목적지 식별자가 너무 깁니다." };
   const sourceType = rawType as NavigationSourceType;
   const sourceId = rawSourceId?.trim() || undefined;
+  if (sourceType === "fishing_spot" && !sourceId) {
+    return { destination: null, error: "출조 포인트 식별자를 확인해 주세요." };
+  }
+  if (
+    sourceType === "fishing_spot"
+    && sourceId
+    && getSpotCoordinateSafetyPolicy(sourceId).navigationPolicy === "NAVIGATION_BLOCKED_PENDING_REVIEW"
+  ) {
+    return { destination: null, error: NAVIGATION_HOLD_NOTICE };
+  }
   return {
     destination: {
       id: sourceId ? `${sourceType}:${sourceId}` : `manual:${latitude.toFixed(6)},${longitude.toFixed(6)}`,
@@ -54,6 +65,9 @@ export function buildNavigationHref(destination: NavigationDestination): string 
 }
 
 export function navigationDestinationFromFishingSpot(spot: Pick<FishingSpot, "id" | "name" | "lat" | "lng">): NavigationDestination {
+  if (getSpotCoordinateSafetyPolicy(spot.id).navigationPolicy === "NAVIGATION_BLOCKED_PENDING_REVIEW") {
+    throw new Error(NAVIGATION_HOLD_NOTICE);
+  }
   const latitude = Number(spot.lat);
   const longitude = Number(spot.lng);
   if (!validLatitude(latitude) || !validLongitude(longitude)) throw new Error("Invalid fishing spot coordinates");

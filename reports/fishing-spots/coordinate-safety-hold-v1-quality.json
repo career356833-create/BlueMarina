@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "review": "Fishing Spot Coordinate Safety Hold V1",
+  "reviewedOn": "2026-09-17",
+  "baseCommit": "82007e1917f7deab226e605c5996bb591380a50c",
+  "decision": "COORDINATE_SAFETY_HOLD_ACTIVE",
+  "policySource": "reports/fishing-spots/navigation-coordinate-hold-v1.json",
+  "runtimeContract": "src/lib/fishing-spots/coordinate-safety.ts",
+  "counts": {
+    "heldSpots": 4,
+    "mapBlocked": 2,
+    "mapWarning": 2,
+    "navigationBlocked": 4
+  },
+  "heldSpots": [
+    { "spotId": "boat-60", "map": "BLOCKED", "navigation": "BLOCKED_PENDING_REVIEW" },
+    { "spotId": "boat-128", "map": "DISPLAY_WITH_WARNING", "navigation": "BLOCKED_PENDING_REVIEW" },
+    { "spotId": "boat-129", "map": "DISPLAY_WITH_WARNING", "navigation": "BLOCKED_PENDING_REVIEW" },
+    { "spotId": "boat-321", "map": "BLOCKED", "navigation": "BLOCKED_PENDING_REVIEW" }
+  ],
+  "directQueryDefense": {
+    "status": "PASS",
+    "mapBlockedSpotIds": ["boat-60", "boat-321"],
+    "mapWarningSpotIds": ["boat-128", "boat-129"],
+    "navigationQueryRejectedSpotIds": ["boat-60", "boat-128", "boat-129", "boat-321"],
+    "coordinateValueBlocklist": false
+  },
+  "normalSpotRegression": {
+    "status": "PASS",
+    "checkedSpotIds": ["boat-1", "rock-151"],
+    "map": "UNCHANGED",
+    "navigation": "UNCHANGED"
+  },
+  "conditionsRegression": {
+    "status": "PASS",
+    "heldSpotContextAllowed": true,
+    "detailBacklinkPreserved": true,
+    "automaticSourceSelection": false,
+    "automaticStationSelection": false
+  },
+  "coordinateMutationScan": {
+    "status": "PASS",
+    "canonicalMutationCount": 0,
+    "sourceMutationCount": 0,
+    "canonicalSha256": "5707FB2E057A039B7F572ECE7E94A0936ED5B73F204613A3E3FCE9A45CDC74BA",
+    "boatSourceSha256": "5AE7CFB4280214667583724B8C0531A7018B0ABDE47CB82C60F6C491B9DFA20D",
+    "rockSourceSha256": "E19E4D62ABCAC286FD65CC6658B428EC0A38B7EF8477A2BF37398063F73192AC"
+  },
+  "safetyWordingScan": {
+    "status": "PASS",
+    "forbiddenPhrases": ["위험한 장소", "사고 위험", "안전하지 않음"],
+    "matches": 0
+  },
+  "invariants": {
+    "duplicateMergeDelete": 0,
+    "databaseWrites": 0,
+    "supabaseChanges": 0,
+    "scoreOrRecommendationChanges": 0
+  }
+}

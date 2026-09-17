@@ -11,6 +11,11 @@ import {
   getFishingSpotSpeciesProjection,
 } from "@/lib/fishing-condition/fishing-spot-integration";
 import {
+  getSpotCoordinateSafetyPolicy,
+  MAP_WARNING_NOTICE,
+  NAVIGATION_HOLD_NOTICE,
+} from "@/lib/fishing-spots/coordinate-safety";
+import {
   buildNavigationHref,
   navigationDestinationFromFishingSpot,
 } from "@/lib/marine-navigation/adapters/navigation-destination-adapter";
@@ -33,8 +38,12 @@ export default async function FishingSpotDetailPage({ params }: PageProps) {
   if (!spot) notFound();
 
   const species = getFishingSpotSpeciesProjection(spot);
+  const coordinatePolicy = getSpotCoordinateSafetyPolicy(spot.id);
+  const mapBlocked = coordinatePolicy.mapPolicy === "MAP_DISPLAY_BLOCKED";
+  const mapWarning = coordinatePolicy.mapPolicy === "MAP_DISPLAY_WITH_WARNING";
+  const navigationBlocked = coordinatePolicy.navigationPolicy === "NAVIGATION_BLOCKED_PENDING_REVIEW";
   const mapHref = buildFishingSpotMapHref(spot);
-  const navigationHref = buildNavigationHref(navigationDestinationFromFishingSpot(spot));
+  const navigationHref = navigationBlocked ? null : buildNavigationHref(navigationDestinationFromFishingSpot(spot));
 
   return <AppFrame>
     <main className="mx-auto w-full max-w-[1180px] space-y-5 pb-24 max-sm:pr-6 lg:space-y-7 lg:pb-10">
@@ -54,6 +63,11 @@ export default async function FishingSpotDetailPage({ params }: PageProps) {
         <h1 className="mt-2 max-w-4xl text-3xl font-black leading-tight text-white sm:text-5xl">{spot.name}</h1>
         <p className="mt-4 max-w-3xl text-sm font-semibold leading-7 text-[#B8CBDD] sm:text-base">{spot.description || "포인트 설명이 원본 자료에 없습니다."}</p>
       </header>
+
+      {navigationBlocked ? <aside role="note" className="rounded-[22px] border border-[#6A5735] bg-[#201B13] p-4" aria-labelledby="coordinate-review-title">
+        <p id="coordinate-review-title" className="text-sm font-black text-[#F1D9A8]">좌표 검토 중</p>
+        <p className="mt-1 text-sm font-semibold leading-6 text-[#D9C49A]">{coordinatePolicy.reason}</p>
+      </aside> : null}
 
       <div className="grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="space-y-5">
@@ -97,10 +111,17 @@ export default async function FishingSpotDetailPage({ params }: PageProps) {
               <p className="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.22em] text-[#79C9D6]"><MapPin size={15} /> Location context</p>
               <h2 className="mt-2 text-xl font-black text-white">{spot.region} {spot.city}</h2>
               <p className="mt-1 font-mono text-sm text-[#B8CBDD]">{Number(spot.lat).toFixed(6)}, {Number(spot.lng).toFixed(6)}</p>
+              {mapWarning ? <p role="note" className="mt-4 rounded-[14px] border border-[#6A5735] bg-[#201B13] px-3 py-2 text-xs font-black text-[#F1D9A8]">{MAP_WARNING_NOTICE}</p> : null}
               <div className="mt-8 grid gap-2 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-                <Link href={mapHref} aria-label={`${spot.name} 바다 지도에서 보기`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[16px] bg-white px-4 text-sm font-black text-[#071827] transition hover:bg-[#EAF2FF]"><MapPin size={17} />지도에서 보기</Link>
-                <Link href={navigationHref} aria-label={`${spot.name} 항법 목적지로 보기`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[16px] border border-[#EBC27D]/55 bg-[#EBC27D]/10 px-4 text-sm font-black text-[#F1D9A8] transition hover:bg-[#EBC27D]/20"><Navigation2 size={17} />항법에서 보기</Link>
+                {mapBlocked
+                  ? <button type="button" disabled aria-describedby="map-hold-reason" className="inline-flex min-h-12 cursor-not-allowed items-center justify-center gap-2 rounded-[16px] bg-white/35 px-4 text-sm font-black text-[#B8CBDD]"><MapPin size={17} />지도에서 보기</button>
+                  : <Link href={mapHref} aria-label={`${spot.name} 바다 지도에서 보기`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[16px] bg-white px-4 text-sm font-black text-[#071827] transition hover:bg-[#EAF2FF]"><MapPin size={17} />지도에서 보기</Link>}
+                {navigationHref
+                  ? <Link href={navigationHref} aria-label={`${spot.name} 항법 목적지로 보기`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[16px] border border-[#EBC27D]/55 bg-[#EBC27D]/10 px-4 text-sm font-black text-[#F1D9A8] transition hover:bg-[#EBC27D]/20"><Navigation2 size={17} />항법에서 보기</Link>
+                  : <button type="button" disabled aria-describedby="navigation-hold-reason" className="inline-flex min-h-12 cursor-not-allowed items-center justify-center gap-2 rounded-[16px] border border-[#6A5735] bg-[#201B13] px-4 text-sm font-black text-[#D9C49A]"><Navigation2 size={17} />항법에서 보기</button>}
               </div>
+              {mapBlocked ? <p id="map-hold-reason" className="mt-3 text-xs font-semibold leading-5 text-[#D9C49A]">좌표 검토 중이라 지도 표시가 제한됩니다.</p> : null}
+              {navigationBlocked ? <p id="navigation-hold-reason" className="mt-1 text-xs font-semibold leading-5 text-[#D9C49A]">{NAVIGATION_HOLD_NOTICE}</p> : null}
               <p className="mt-4 text-xs font-semibold leading-5 text-[#8FA7BC]">표시된 직선과 거리는 안전 항로를 의미하지 않습니다. 현장 항행 정보와 통제 구역을 별도로 확인하세요.</p>
             </div>
           </section>

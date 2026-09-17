@@ -8,6 +8,10 @@ import {
   buildNavigationHref,
   navigationDestinationFromFishingSpot,
 } from "@/lib/marine-navigation/adapters/navigation-destination-adapter";
+import {
+  getSpotCoordinateSafetyPolicy,
+  NAVIGATION_HOLD_NOTICE,
+} from "@/lib/fishing-spots/coordinate-safety";
 
 export const metadata = {
   title: "Fishing Condition | Blue Marina",
@@ -22,6 +26,9 @@ export default async function FishingConditionPage({ searchParams }: { searchPar
   const query = await searchParams;
   const requestedSpecies = getFishingConditionSpecies(first(query.speciesId));
   const spot = findFishingSpot(first(query.spotId));
+  const coordinatePolicy = spot ? getSpotCoordinateSafetyPolicy(spot.id) : null;
+  const mapBlocked = coordinatePolicy?.mapPolicy === "MAP_DISPLAY_BLOCKED";
+  const navigationBlocked = coordinatePolicy?.navigationPolicy === "NAVIGATION_BLOCKED_PENDING_REVIEW";
 
   return <FishingConditionClient
     initialSpeciesId={requestedSpecies?.id}
@@ -30,8 +37,11 @@ export default async function FishingConditionPage({ searchParams }: { searchPar
       name: spot.name,
       region: [spot.region, spot.city].filter(Boolean).join(" · "),
       detailHref: `/fishing-spots/${encodeURIComponent(spot.id)}`,
-      mapHref: buildFishingSpotMapHref(spot),
-      navigationHref: buildNavigationHref(navigationDestinationFromFishingSpot(spot)),
+      mapHref: mapBlocked ? undefined : buildFishingSpotMapHref(spot),
+      navigationHref: navigationBlocked ? undefined : buildNavigationHref(navigationDestinationFromFishingSpot(spot)),
+      coordinateNotice: navigationBlocked ? coordinatePolicy.reason : undefined,
+      mapBlockedReason: mapBlocked ? "좌표 검토 중이라 지도 표시가 제한됩니다." : undefined,
+      navigationBlockedReason: navigationBlocked ? NAVIGATION_HOLD_NOTICE : undefined,
     } : undefined}
   />;
 }

@@ -14,6 +14,12 @@ import { loadKakaoMaps, type KakaoMapInstance, type KakaoMarkerInstance } from "
 import { LocationButton } from "@/components/sea/LocationButton";
 import { SeaNavigationLink } from "@/components/boat/navigation/SeaNavigationLink";
 import { navigationDestinationFromFishingSpot, navigationDestinationFromMarinePlace } from "@/lib/marine-navigation/adapters/navigation-destination-adapter";
+import {
+  getSpotCoordinateSafetyPolicy,
+  MAP_BLOCKED_NOTICE,
+  MAP_WARNING_NOTICE,
+  NAVIGATION_HOLD_NOTICE,
+} from "@/lib/fishing-spots/coordinate-safety";
 
 type GPSStatus = "unavailable" | "locating" | "ready" | "denied";
 type SDKStatus = "loading" | "ready" | "error";
@@ -231,7 +237,8 @@ export function SeaMapView() {
             lngNumber
           };
         })
-        .filter((spot) => isValidLatitude(spot.latNumber) && isValidLongitude(spot.lngNumber)),
+        .filter((spot) => isValidLatitude(spot.latNumber) && isValidLongitude(spot.lngNumber))
+        .filter((spot) => getSpotCoordinateSafetyPolicy(spot.id).mapPolicy !== "MAP_DISPLAY_BLOCKED"),
     []
   );
 
@@ -335,6 +342,7 @@ export function SeaMapView() {
   const [statusMessage, setStatusMessage] = useState<string>(
     KAKAO_KEY ? "현재 위치와 거점 정보를 지도로 준비하는 중입니다." : "카카오 지도 키를 설정하면 지도가 표시됩니다.",
   );
+  const [directQueryNotice, setDirectQueryNotice] = useState<string | null>(null);
 
   const selectedFishingSpot = useMemo(
     () =>
@@ -403,6 +411,9 @@ export function SeaMapView() {
     ],
     [revitalizationProjectsByMarinePlaceId, visibleFixedPorts, visibleLocalPorts, visibleNationalPorts]
   );
+  const selectedFishingSpotPolicy = selectedFishingSpot
+    ? getSpotCoordinateSafetyPolicy(selectedFishingSpot.id)
+    : null;
 
   const visibleMarinePlaceGroups = useMemo(
     () =>
@@ -559,10 +570,19 @@ export function SeaMapView() {
       initialFishingSpotHandledRef.current = true;
       return;
     }
+    const coordinatePolicy = getSpotCoordinateSafetyPolicy(spotId);
+    if (coordinatePolicy.mapPolicy === "MAP_DISPLAY_BLOCKED") {
+      initialFishingSpotHandledRef.current = true;
+      setSelectedFeature(null);
+      setDirectQueryNotice(MAP_BLOCKED_NOTICE);
+      setStatusMessage(MAP_BLOCKED_NOTICE);
+      return;
+    }
     const spot = parsedFishingSpots.find((item) => item.id === spotId);
     initialFishingSpotHandledRef.current = true;
     if (!spot) return;
 
+    setDirectQueryNotice(coordinatePolicy.mapPolicy === "MAP_DISPLAY_WITH_WARNING" ? MAP_WARNING_NOTICE : null);
     setShowFishingSpots(true);
     setSelectedFeature({ kind: "fishing-spot", id: spot.id });
     if (sdkStatus === "ready" && mapRef.current && window.kakao?.maps) {
@@ -1000,6 +1020,7 @@ export function SeaMapView() {
       </div>
       <div className="pointer-events-none absolute inset-x-0 bottom-[calc(64px+env(safe-area-inset-bottom)+12px)] z-20 px-3 sm:px-4">
         <div className="pointer-events-auto mx-auto max-w-[1280px]">
+          {directQueryNotice ? <p role="note" className="mb-2 max-w-[560px] rounded-[16px] border border-[#6A5735] bg-[#201B13]/95 px-4 py-3 text-sm font-black text-[#F1D9A8] backdrop-blur">{directQueryNotice}</p> : null}
           <section
             className={[
               "rounded-[24px] border border-white/10 bg-[#071827]/92 backdrop-blur",
@@ -1015,6 +1036,7 @@ export function SeaMapView() {
                     <div className="flex flex-wrap gap-2">
                       <span className="rounded-full bg-[#2E8BFF]/15 px-3 py-1 text-[11px] font-black text-[#2E8BFF]">{getFishingSpotTypeLabel(selectedFishingSpot.type)}</span>
                       <span className="rounded-full bg-[#00D3C7]/15 px-3 py-1 text-[11px] font-black text-[#00D3C7]">선택됨</span>
+                      {selectedFishingSpotPolicy?.mapPolicy === "MAP_DISPLAY_WITH_WARNING" ? <span className="rounded-full border border-[#6A5735] bg-[#201B13] px-3 py-1 text-[11px] font-black text-[#F1D9A8]">좌표 검토 중</span> : null}
                     </div>
                     <h2 className="mt-2 break-words text-lg font-black text-white">{selectedFishingSpot.name}</h2>
                     <p className="mt-1 text-xs font-semibold leading-5 text-[#9FB3C8]">{buildFishingSummary(selectedFishingSpot)}</p>
@@ -1052,7 +1074,13 @@ export function SeaMapView() {
                     </Link>
                   </div>
                 </div>
-                <SeaNavigationLink destination={navigationDestinationFromFishingSpot(selectedFishingSpot)} />
+                {selectedFishingSpotPolicy?.mapPolicy === "MAP_DISPLAY_WITH_WARNING" ? <p role="note" className="rounded-[16px] border border-[#6A5735] bg-[#201B13] px-3 py-2 text-xs font-semibold leading-5 text-[#D9C49A]">{MAP_WARNING_NOTICE}</p> : null}
+                {selectedFishingSpotPolicy?.navigationPolicy === "NAVIGATION_BLOCKED_PENDING_REVIEW"
+                  ? <div>
+                    <button type="button" disabled aria-describedby="sea-navigation-hold-reason" className="inline-flex min-h-11 w-full cursor-not-allowed items-center justify-center gap-2 border border-[#6A5735] bg-[#201B13] px-4 text-sm font-black text-[#D9C49A]"><Navigation2 size={16} />여기로 항해</button>
+                    <p id="sea-navigation-hold-reason" className="mt-2 text-xs font-semibold text-[#D9C49A]">{NAVIGATION_HOLD_NOTICE}</p>
+                  </div>
+                  : <SeaNavigationLink destination={navigationDestinationFromFishingSpot(selectedFishingSpot)} />}
               </div>
             ) : selectedNationalPort ? (
               <div className="space-y-3">
