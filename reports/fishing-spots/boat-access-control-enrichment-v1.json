@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "audit": "Fishing Spot Access & Control Enrichment V1",
+  "auditedOn": "2026-09-17",
+  "baseCommit": "83fcdb0e42c74c7c63f91d48f1b08c2576548a30",
+  "decision": "ACCESS_CONTROL_SOURCE_TOO_SPARSE",
+  "counts": {
+    "total": 329,
+    "access": {
+      "confirmed": 0,
+      "partial": 329,
+      "unknown": 0
+    },
+    "parking": {
+      "confirmed": 0,
+      "unknown": 329
+    },
+    "boarding": {
+      "confirmed": 0,
+      "partial": 0,
+      "unknown": 329
+    },
+    "control": {
+      "restrictionsConfirmed": 0,
+      "permitsConfirmed": 0,
+      "unknown": 329
+    }
+  },
+  "sourceCoverage": {
+    "officialSourceRowsTraced": 329,
+    "publicInstitutionGeographicEvidenceReviewed": 16,
+    "spotSpecificDetailedAccessSources": 0,
+    "unresolvedDetailedAccess": 329,
+    "sourceNoticeRows": 29,
+    "sourceNoticesApplicableToExactBoatSpot": 0
+  },
+  "fieldCoverage": {
+    "boatRequired": 329,
+    "parking": 0,
+    "boardingInfo": 0,
+    "restriction": 0,
+    "permitRequired": 0,
+    "closedArea": 0,
+    "timeRestriction": 0,
+    "permitType": 0,
+    "controlAuthority": 0
+  },
+  "exclusions": {
+    "generalPortRuleAppliedToSpot": 0,
+    "geographicIdentityAppliedAsAccess": 0,
+    "sourceNoticeMisappliedToBoatSpot": 0,
+    "noRestrictionInterpretedAsFreeAccess": 0
+  },
+  "coordinateSafetyHold": {
+    "source": "reports/fishing-spots/navigation-coordinate-hold-v1.json",
+    "spotIds": [
+      "boat-60",
+      "boat-128",
+      "boat-129",
+      "boat-321"
+    ],
+    "count": 4,
+    "released": 0,
+    "unchanged": true
+  },
+  "hashes": {
+    "productionEnrichmentSha256": "9E4BE97368A2EA45017D0A82DBCF7ED00173A0598ACCA3C3AA309CB7F0A4D951",
+    "officialBoatSourceSha256": "5AE7CFB4280214667583724B8C0531A7018B0ABDE47CB82C60F6C491B9DFA20D",
+    "canonicalFishingSpotsSha256": "5707FB2E057A039B7F572ECE7E94A0936ED5B73F204613A3E3FCE9A45CDC74BA",
+    "coordinateHoldSha256": "057EEAF2DAEAD1806F0C33AA3F247DF12EB1D6B4FFF8533432467F4889BC9EC1",
+    "departureResearchSha256": "2ABF0850914D7575E4B4591A007457CE643D9C2F504A22130D3B589D0944B729"
+  },
+  "output": {
+    "dataset": "data/fishing-spots/enrichment/research/boat-access-control-v1.json",
+    "report": "reports/fishing-spots/boat-access-control-enrichment-v1.json",
+    "productionIntegrated": false
+  },
+  "invariants": {
+    "parkingInference": 0,
+    "boardingInference": 0,
+    "restrictionInference": 0,
+    "permitInference": 0,
+    "coordinateMutation": 0,
+    "productionEnrichmentMutation": 0,
+    "navigationHoldRelease": 0,
+    "runtimeMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0
+  }
+}
