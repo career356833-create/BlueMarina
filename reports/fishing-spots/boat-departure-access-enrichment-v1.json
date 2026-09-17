@@ -1,0 +1,868 @@
+{
+  "schemaVersion": 1,
+  "audit": "Fishing Spot Departure & Access Enrichment V1",
+  "auditedOn": "2026-09-17",
+  "baseCommit": "ec5e97ca7033961d6d79eca7abee1233d37a09af",
+  "decision": "DEPARTURE_ACCESS_PARTIALLY_READY",
+  "dataset": {
+    "totalSpots": 1405,
+    "boatSpots": 329,
+    "sourceRowsTraced": 329,
+    "canonicalSha256": "5707FB2E057A039B7F572ECE7E94A0936ED5B73F204613A3E3FCE9A45CDC74BA",
+    "boatSourceSha256": "5AE7CFB4280214667583724B8C0531A7018B0ABDE47CB82C60F6C491B9DFA20D"
+  },
+  "departure": {
+    "confirmed": 0,
+    "candidate": 20,
+    "unresolved": 309,
+    "departureCoordinatesAdded": 0
+  },
+  "access": {
+    "confirmed": 0,
+    "partial": 329,
+    "unknown": 0,
+    "boatRequired": 329,
+    "parkingKnown": 0,
+    "boardingInfoKnown": 0,
+    "permitRequirementKnown": 0
+  },
+  "control": {
+    "restrictionCoverage": 0,
+    "permitCoverage": 0,
+    "inferredRestrictions": 0
+  },
+  "freeTextCandidateReview": {
+    "baselineCandidates": 119,
+    "boatInScope": 31,
+    "nonBoatExcluded": 88,
+    "boatClassifications": {
+      "AMBIGUOUS_LOCALITY": 8,
+      "EXPLICIT_PORT_NAME": 20,
+      "GENERIC_HARBOR_MENTION": 3
+    },
+    "allClassifications": {
+      "AMBIGUOUS_LOCALITY": 8,
+      "EXPLICIT_PORT_NAME": 20,
+      "GENERIC_HARBOR_MENTION": 3,
+      "NO_NAMED_DEPARTURE": 88
+    },
+    "records": [
+      {
+        "spotId": "boat-3",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "남양항"
+      },
+      {
+        "spotId": "boat-22",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "연화항"
+      },
+      {
+        "spotId": "boat-29",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "강정포구"
+      },
+      {
+        "spotId": "boat-53",
+        "spotType": "boat-fishing-point",
+        "classification": "GENERIC_HARBOR_MENTION",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": null
+      },
+      {
+        "spotId": "boat-63",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "강정포구"
+      },
+      {
+        "spotId": "boat-73",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "역포항"
+      },
+      {
+        "spotId": "boat-76",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "청사포항"
+      },
+      {
+        "spotId": "boat-80",
+        "spotType": "boat-fishing-point",
+        "classification": "AMBIGUOUS_LOCALITY",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": null
+      },
+      {
+        "spotId": "boat-100",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "선진포항"
+      },
+      {
+        "spotId": "boat-103",
+        "spotType": "boat-fishing-point",
+        "classification": "GENERIC_HARBOR_MENTION",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": null
+      },
+      {
+        "spotId": "boat-105",
+        "spotType": "boat-fishing-point",
+        "classification": "AMBIGUOUS_LOCALITY",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": null
+      },
+      {
+        "spotId": "boat-125",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "지세포항"
+      },
+      {
+        "spotId": "boat-143",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "대항승선장"
+      },
+      {
+        "spotId": "boat-148",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "비안포구"
+      },
+      {
+        "spotId": "boat-160",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "방포항"
+      },
+      {
+        "spotId": "boat-161",
+        "spotType": "boat-fishing-point",
+        "classification": "GENERIC_HARBOR_MENTION",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": null
+      },
+      {
+        "spotId": "boat-164",
+        "spotType": "boat-fishing-point",
+        "classification": "AMBIGUOUS_LOCALITY",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": null
+      },
+      {
+        "spotId": "boat-177",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "동거차선착장"
+      },
+      {
+        "spotId": "boat-198",
+        "spotType": "boat-fishing-point",
+        "classification": "AMBIGUOUS_LOCALITY",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": null
+      },
+      {
+        "spotId": "boat-211",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "태흥리포구"
+      },
+      {
+        "spotId": "boat-212",
+        "spotType": "boat-fishing-point",
+        "classification": "AMBIGUOUS_LOCALITY",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": null
+      },
+      {
+        "spotId": "boat-215",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "외포리선착장"
+      },
+      {
+        "spotId": "boat-220",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "연화항"
+      },
+      {
+        "spotId": "boat-224",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "추자항"
+      },
+      {
+        "spotId": "boat-249",
+        "spotType": "boat-fishing-point",
+        "classification": "AMBIGUOUS_LOCALITY",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": null
+      },
+      {
+        "spotId": "boat-268",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "부산항"
+      },
+      {
+        "spotId": "boat-288",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "종달리포구"
+      },
+      {
+        "spotId": "boat-290",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "압해도선착장"
+      },
+      {
+        "spotId": "boat-300",
+        "spotType": "boat-fishing-point",
+        "classification": "EXPLICIT_PORT_NAME",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": "천진항"
+      },
+      {
+        "spotId": "boat-308",
+        "spotType": "boat-fishing-point",
+        "classification": "AMBIGUOUS_LOCALITY",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": null
+      },
+      {
+        "spotId": "boat-324",
+        "spotType": "boat-fishing-point",
+        "classification": "AMBIGUOUS_LOCALITY",
+        "scope": "BOAT_REVIEWED",
+        "candidateName": null
+      },
+      {
+        "spotId": "rock-307",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-317",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-10",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-59",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-60",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-61",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-66",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-74",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-75",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-77",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-176",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-249",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-282",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-268",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-320",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-346",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-350",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-411",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-512",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-540",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-551",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-558",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-573",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-597",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-659",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-702",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-744",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-783",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-794",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-798",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-809",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-846",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-864",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-901",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-938",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-943",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-944",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-960",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-965",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-969",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-977",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-985",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-986",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-987",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-988",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-989",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-990",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-991",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-992",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-993",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-994",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-995",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-996",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-997",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-998",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-999",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1009",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1013",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1026",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1033",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1034",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1035",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1036",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1037",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1038",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1039",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1042",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1043",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1044",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1045",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1047",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1048",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1050",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1052",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1053",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1054",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1055",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1056",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1059",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1062",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1063",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1064",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1065",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1066",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1067",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1068",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1074",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      },
+      {
+        "spotId": "rock-1075",
+        "spotType": "rock-fishing-point",
+        "classification": "NO_NAMED_DEPARTURE",
+        "scope": "NON_BOAT_EXCLUDED"
+      }
+    ]
+  },
+  "sourceDistribution": {
+    "officialRawRows": 329,
+    "publicInstitutionCorroborations": 8,
+    "publicInstitutionCorroboratedFeatureNames": [
+      "남양항",
+      "방포항",
+      "선진포항",
+      "역포항",
+      "연화항",
+      "지세포항",
+      "청사포항"
+    ],
+    "officialConfirmedDepartureRelations": 0,
+    "officialFreeTextDepartureCandidates": 20,
+    "unresolvedDepartureRelations": 309
+  },
+  "unresolvedReasons": {
+    "NO_DEPARTURE_FIELD_IN_OFFICIAL_SOURCE": 329,
+    "NO_NAMED_WATERFRONT_MENTION": 298,
+    "GENERIC_HARBOR_MENTION": 3,
+    "AMBIGUOUS_LOCALITY": 8,
+    "NAMED_FEATURE_WITHOUT_DEPARTURE_RELATION": 20
+  },
+  "coordinateSafetyHold": {
+    "source": "reports/fishing-spots/navigation-coordinate-hold-v1.json",
+    "spotIds": [
+      "boat-60",
+      "boat-128",
+      "boat-129",
+      "boat-321"
+    ],
+    "policies": [
+      {
+        "spotId": "boat-60",
+        "mapPolicy": "MAP_DISPLAY_BLOCKED",
+        "navigationPolicy": "NAVIGATION_BLOCKED_PENDING_REVIEW"
+      },
+      {
+        "spotId": "boat-128",
+        "mapPolicy": "MAP_DISPLAY_WITH_WARNING",
+        "navigationPolicy": "NAVIGATION_BLOCKED_PENDING_REVIEW"
+      },
+      {
+        "spotId": "boat-129",
+        "mapPolicy": "MAP_DISPLAY_WITH_WARNING",
+        "navigationPolicy": "NAVIGATION_BLOCKED_PENDING_REVIEW"
+      },
+      {
+        "spotId": "boat-321",
+        "mapPolicy": "MAP_DISPLAY_BLOCKED",
+        "navigationPolicy": "NAVIGATION_BLOCKED_PENDING_REVIEW"
+      }
+    ],
+    "navigationHoldReleased": 0,
+    "unchanged": true
+  },
+  "output": {
+    "enrichmentDataset": "data/fishing-spots/enrichment/v1/boat-departure-access.json",
+    "report": "reports/fishing-spots/boat-departure-access-enrichment-v1.json",
+    "runtimeIntegrated": false
+  },
+  "invariants": {
+    "canonicalCoordinateMutation": 0,
+    "sourceMutation": 0,
+    "departureCoordinateInference": 0,
+    "duplicateMergeDelete": 0,
+    "navigationHoldRelease": 0,
+    "runtimeMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0
+  }
+}
