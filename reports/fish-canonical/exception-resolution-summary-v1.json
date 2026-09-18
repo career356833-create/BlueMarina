@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "program": "Fish Canonical Exception Resolution Program V1",
+  "generatedOn": "2026-09-18",
+  "decision": "EXCEPTION_RESOLUTION_COMPLETE_WITH_REMAINDERS",
+  "batches": {
+    "aggregateAlias": {
+      "total": 34,
+      "counts": {
+        "AGGREGATED_TAXON": 24,
+        "SAFE_ALIAS": 0,
+        "DO_NOT_MAP": 10,
+        "RESEARCH_REQUIRED": 0
+      }
+    },
+    "aliasAmbiguity": {
+      "total": 4,
+      "counts": {
+        "SAFE_ALIAS": 0,
+        "AMBIGUOUS_ALIAS": 1,
+        "REJECT_ALIAS": 3
+      }
+    },
+    "structural": {
+      "total": 5,
+      "counts": {
+        "RESOLVED": 0,
+        "RESOLVED_WITH_LIMITATION": 4,
+        "KEEP_EXCEPTION": 1
+      }
+    }
+  },
+  "exceptions": {
+    "before": 43,
+    "resolved": 41,
+    "remaining": 2,
+    "remainingIds": [
+      "07e1852e-0675-4090-8675-cd216fb90ba9",
+      "BM-SPECIES-000279"
+    ],
+    "historyPreserved": true,
+    "sourceQueueMutated": false
+  },
+  "canonical": {
+    "total": 1258,
+    "uniqueIds": 1258,
+    "verified": 1256,
+    "partial": 1,
+    "conflict": 1,
+    "unresolved": 0,
+    "sourceCoverage": 1258,
+    "identityStatusMutated": false
+  },
+  "collisions": {
+    "scientificName": [],
+    "koreanName": [],
+    "synonym": []
+  },
+  "priorCompletionDecision": "BULK_NORMALIZATION_COMPLETE_WITH_EXCEPTIONS",
+  "sources": {
+    "inventory": {
+      "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+      "sha256": "8E226C2EFD7760DC9D5E974967EFCF39FD4376816CBC0D64EDFD08E731E049C3"
+    },
+    "completion": {
+      "artifact": "reports/fish-canonical/bulk-normalization-completion-v1.json",
+      "sha256": "4C81465F9743A380D16618B0524E997BAAB2A1DF5C47366FAE817474F3750BB3"
+    },
+    "exceptions": {
+      "artifact": "reports/fish-canonical/bulk-normalization-exceptions-v1.json",
+      "sha256": "4F686AC7E8B72E2547F898832C172C1463425E067A611DB97063BBED82268566"
+    },
+    "aliasRegistry": {
+      "artifact": "data/mbris/mappings/fish-alias-registry.json",
+      "sha256": "BEFFCF01336B5674133C26B2F037624F63BAF8BBCEB77887D256C905004D6DC6"
+    },
+    "aliasReviewBatch2": {
+      "artifact": "data/mbris/mappings/fish-data-alias-review-batch2.json",
+      "sha256": "BD01FF4FC52E3115636A9717A8887C10FED7D0E73729432D66AC467DF25A17AB"
+    },
+    "taxonomyCrosswalk": {
+      "artifact": "data/mbris/mappings/nifs-mbris-taxonomy-crosswalk.json",
+      "sha256": "F588CAEEFEEB0799DF76971082F5C466A7919CCCABEA0B152A6A596354C9F8AA"
+    },
+    "conditionProfiles": {
+      "artifact": "data/fishing-condition/species-environment/v2/species-environment-profiles.json",
+      "sha256": "EB365314A15444D7407B7C88B3FD58D95004EAEAFE6723EFFF620B2C7F705F98"
+    }
+  },
+  "invariants": {
+    "productionMutation": 0,
+    "runtimeMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0,
+    "automaticMergeOrDelete": 0,
+    "oneByOneWorkflow": 0,
+    "conditionProfileResearch": 0
+  }
+}

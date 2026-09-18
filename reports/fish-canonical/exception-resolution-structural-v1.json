@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "program": "Fish Canonical Exception Resolution Program V1",
+  "batchId": "BATCH_C_STRUCTURAL_EXCEPTIONS",
+  "generatedOn": "2026-09-18",
+  "sourceQueue": {
+    "artifact": "reports/fish-canonical/bulk-normalization-exceptions-v1.json",
+    "sha256": "4F686AC7E8B72E2547F898832C172C1463425E067A611DB97063BBED82268566"
+  },
+  "total": 5,
+  "allowedDecisions": [
+    "RESOLVED",
+    "RESOLVED_WITH_LIMITATION",
+    "KEEP_EXCEPTION"
+  ],
+  "counts": {
+    "RESOLVED": 0,
+    "RESOLVED_WITH_LIMITATION": 4,
+    "KEEP_EXCEPTION": 1
+  },
+  "rows": [
+    {
+      "exceptionId": "07e1852e-0675-4090-8675-cd216fb90ba9",
+      "type": "TAXONOMY_CONFLICT",
+      "decision": "KEEP_EXCEPTION",
+      "resolutionStatus": "REMAINS_OPEN",
+      "evidence": [
+        {
+          "source": "WoRMS/MolluscaBase",
+          "title": "Haliotis diversicolor (AphiaID 445319)",
+          "url": "https://www.molluscabase.org/aphia.php?p=taxdetails&id=445319",
+          "note": "accepted, 별개의 유효종. synonym은 'Sulculus diversicolor'/'Haliotis (Sulculus) diversicolor'뿐 — supertexta는 이 종의 이명이 아니다"
+        },
+        {
+          "source": "WoRMS/MolluscaBase",
+          "title": "Haliotis supertexta (AphiaID 445364)",
+          "url": "https://www.molluscabase.org/aphia.php?p=taxdetails&id=445364",
+          "note": "accepted, diversicolor와 별개. Owen(2004) 'Of Sea and Shore' 26(2):99-105이 과거 아종(H. diversicolor supertexta)이던 것을 독립종으로 승격시킨 근거 문헌"
+        },
+        {
+          "source": "국립생물자원관(NIBR)",
+          "title": "국가생물종목록 무척추동물-V(연체동물-I 복족류) PDF",
+          "url": "https://www.nibr.go.kr/aiibook/catImage/30/Invertebrates-V.pdf",
+          "note": "국내 공식 목록: 'Sulculus diversicolor diversicolor(마대오분자기)'와 'Sulculus diversicolor supertexta(오분자기)'를 서로 다른 국명의 별개 아종으로 등재"
+        },
+        {
+          "source": "GBIF",
+          "title": "species/match?name=Haliotis supertexta",
+          "url": "https://api.gbif.org/v1/species/match?name=Haliotis%20supertexta",
+          "note": "ACCEPTED, synonym=null — WoRMS와 일치, diversicolor의 이명 아님"
+        }
+      ],
+      "rationale": "Authoritative sources distinguish Haliotis diversicolor and Haliotis supertexta. The NIFS Korean/scientific identity conflict cannot be repaired without a corrected authoritative source identity.",
+      "limitation": "NIFS and MBRIS records remain unjoined; no canonical ID or accepted name is changed."
+    },
+    {
+      "exceptionId": "70cb8d81-26a1-4d8b-b000-2b2f2676c345",
+      "type": "ACCEPTED_NAME_PARTIAL",
+      "decision": "RESOLVED_WITH_LIMITATION",
+      "resolutionStatus": "RESOLVED",
+      "evidence": [
+        {
+          "source": "WoRMS/MolluscaBase",
+          "title": "Turbo sazae (AphiaID 994353)",
+          "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=994353",
+          "note": "accepted — H. Fukuda, 2017"
+        },
+        {
+          "source": "WoRMS/MolluscaBase",
+          "title": "Turbo cornutus (AphiaID 413379)",
+          "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=413379",
+          "note": "accepted이지만 별개 유효종 — 중국 남부·대만 고유종으로 분포 한정"
+        },
+        {
+          "source": "WoRMS/MolluscaBase",
+          "title": "Batillus cornutus (AphiaID 1600422)",
+          "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=1600422",
+          "note": "superseded combination — valid_name은 Turbo cornutus(별도 종이 아니라 Batillus아속의 구식 속명 승격 표기)"
+        },
+        {
+          "source": "Molluscan Research",
+          "title": "Fukuda H. (2017) 37(4):268-281",
+          "url": "",
+          "note": "일본·한국 개체군에 적용되던 'Turbo cornutus'가 실제로는 오적용명(misapplied name)이며 진짜 T. cornutus는 중국·대만 고유종임을 밝히고 T. sazae를 신학명으로 부여"
+        }
+      ],
+      "rationale": "The preserved high-confidence crosswalk establishes that the Korean/Japanese population formerly misapplied as Turbo cornutus is accepted as Turbo sazae.",
+      "limitation": "Research resolution does not rewrite the frozen canonical row; production promotion requires a separate apply review."
+    },
+    {
+      "exceptionId": "CROSS-SYSTEM:우럭",
+      "type": "CROSS_DOMAIN_HOMONYM",
+      "decision": "RESOLVED_WITH_LIMITATION",
+      "resolutionStatus": "RESOLVED",
+      "evidence": [
+        {
+          "artifact": "src/lib/fishing-condition/fishing-spot-integration.ts",
+          "role": "EXISTING_DOMAIN_SCOPED_RUNTIME_MAPPING"
+        }
+      ],
+      "rationale": "The Fishing Spot label remains scoped to 조피볼락 and must not merge with the non-fish MBRIS homonym Mya arenaria.",
+      "limitation": "The homonym guard remains permanent and no cross-domain merge is allowed."
+    },
+    {
+      "exceptionId": "CONDITION:BM-SPECIES-003107",
+      "type": "CONDITION_ID_MISMATCH_OR_OUTSIDE_BASELINE",
+      "decision": "RESOLVED_WITH_LIMITATION",
+      "resolutionStatus": "RESOLVED",
+      "evidence": [
+        {
+          "artifact": "data/fishing-condition/species-environment/v2/species-environment-profiles.json",
+          "speciesId": "BM-SPECIES-003107",
+          "koreanName": "주꾸미",
+          "scientificName": "Amphioctopus fangsiao"
+        }
+      ],
+      "rationale": "The condition-enabled MBRIS internal ID is a protected domain identifier outside the enumerated Fish 1,258 baseline, not a missing member of that inventory.",
+      "limitation": "The condition ID remains unchanged and is not merged into or renumbered against the Fish baseline."
+    },
+    {
+      "exceptionId": "CONDITION:BM-SPECIES-003111",
+      "type": "CONDITION_ID_MISMATCH_OR_OUTSIDE_BASELINE",
+      "decision": "RESOLVED_WITH_LIMITATION",
+      "resolutionStatus": "RESOLVED",
+      "evidence": [
+        {
+          "artifact": "data/fishing-condition/species-environment/v2/species-environment-profiles.json",
+          "speciesId": "BM-SPECIES-003111",
+          "koreanName": "문어",
+          "scientificName": "Enteroctopus dofleini"
+        }
+      ],
+      "rationale": "The condition-enabled MBRIS internal ID is a protected domain identifier outside the enumerated Fish 1,258 baseline, not a missing member of that inventory.",
+      "limitation": "The condition ID remains unchanged and is not merged into or renumbered against the Fish baseline."
+    }
+  ],
+  "policy": {
+    "canonicalIdMutation": false,
+    "conditionIdProtection": true,
+    "crossDomainMerge": false,
+    "authoritativeTaxonomyOnly": true
+  },
+  "invariants": {
+    "productionMutation": 0,
+    "runtimeMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0,
+    "automaticMergeOrDelete": 0,
+    "oneByOneWorkflow": 0,
+    "conditionProfileResearch": 0
+  }
+}

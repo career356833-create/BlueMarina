@@ -1,0 +1,1084 @@
+{
+  "schemaVersion": 1,
+  "program": "Fish Canonical Exception Resolution Program V1",
+  "batchId": "BATCH_A_AGGREGATE_ALIAS",
+  "generatedOn": "2026-09-18",
+  "sourceQueue": {
+    "artifact": "reports/fish-canonical/bulk-normalization-exceptions-v1.json",
+    "sha256": "4F686AC7E8B72E2547F898832C172C1463425E067A611DB97063BBED82268566"
+  },
+  "total": 34,
+  "allowedDecisions": [
+    "AGGREGATED_TAXON",
+    "SAFE_ALIAS",
+    "DO_NOT_MAP",
+    "RESEARCH_REQUIRED"
+  ],
+  "counts": {
+    "AGGREGATED_TAXON": 24,
+    "SAFE_ALIAS": 0,
+    "DO_NOT_MAP": 10,
+    "RESEARCH_REQUIRED": 0
+  },
+  "rows": [
+    {
+      "speciesId": "BM-SPECIES-000042",
+      "canonicalKoreanName": "삼세기",
+      "candidates": [
+        {
+          "sourceName": "삼세기류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "삼세기",
+          "candidateScientificName": "Hemitripterus villosus"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000090",
+      "canonicalKoreanName": "연어",
+      "candidates": [
+        {
+          "sourceName": "복어",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        }
+      ],
+      "decision": "DO_NOT_MAP",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name does not establish a one-to-one identity with the queued canonical species. The candidate mapping is rejected without fuzzy remapping.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000114",
+      "canonicalKoreanName": "개복치",
+      "candidates": [
+        {
+          "sourceName": "전복치류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": "개복치",
+          "candidateScientificName": "Mola mola"
+        }
+      ],
+      "decision": "DO_NOT_MAP",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name does not establish a one-to-one identity with the queued canonical species. The candidate mapping is rejected without fuzzy remapping.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000143",
+      "canonicalKoreanName": "가시복",
+      "candidates": [
+        {
+          "sourceName": "가시복류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "가시복",
+          "candidateScientificName": "Diodon holocanthus"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000150",
+      "canonicalKoreanName": "별복",
+      "candidates": [
+        {
+          "sourceName": "참복",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        }
+      ],
+      "decision": "DO_NOT_MAP",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name does not establish a one-to-one identity with the queued canonical species. The candidate mapping is rejected without fuzzy remapping.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000163",
+      "canonicalKoreanName": "까치복",
+      "candidates": [
+        {
+          "sourceName": "까치복류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "까치복",
+          "candidateScientificName": "Takifugu xanthopterus"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000165",
+      "canonicalKoreanName": "검복",
+      "candidates": [
+        {
+          "sourceName": "검복류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "검복",
+          "candidateScientificName": "Takifugu porphyreus"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000193",
+      "canonicalKoreanName": "황줄돔",
+      "candidates": [
+        {
+          "sourceName": "줄돔",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        }
+      ],
+      "decision": "DO_NOT_MAP",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name does not establish a one-to-one identity with the queued canonical species. The candidate mapping is rejected without fuzzy remapping.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000278",
+      "canonicalKoreanName": "돌돔",
+      "candidates": [
+        {
+          "sourceName": "돌돔류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "돌돔",
+          "candidateScientificName": "Oplegnathus fasciatus"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000280",
+      "canonicalKoreanName": "긴꼬리벵에돔",
+      "candidates": [
+        {
+          "sourceName": "긴꼬리벵에돔류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "긴꼬리벵에돔",
+          "candidateScientificName": "Girella leonina"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000317",
+      "canonicalKoreanName": "발기",
+      "candidates": [
+        {
+          "sourceName": "열기",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        }
+      ],
+      "decision": "DO_NOT_MAP",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name does not establish a one-to-one identity with the queued canonical species. The candidate mapping is rejected without fuzzy remapping.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000369",
+      "canonicalKoreanName": "말뚝망둥어",
+      "candidates": [
+        {
+          "sourceName": "망둥어",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000412",
+      "canonicalKoreanName": "가다랑어",
+      "candidates": [
+        {
+          "sourceName": "가다랑어류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "가다랑어",
+          "candidateScientificName": "Katsuwonus pelamis"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000421",
+      "canonicalKoreanName": "눈다랑어",
+      "candidates": [
+        {
+          "sourceName": "눈다랑어류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "눈다랑어",
+          "candidateScientificName": "Thunnus obesus"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000444",
+      "canonicalKoreanName": "갈치",
+      "candidates": [
+        {
+          "sourceName": "실갈치류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "medium",
+          "candidateCanonicalName": "갈치",
+          "candidateScientificName": "Trichiurus japonicus"
+        }
+      ],
+      "decision": "DO_NOT_MAP",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name does not establish a one-to-one identity with the queued canonical species. The candidate mapping is rejected without fuzzy remapping.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000445",
+      "canonicalKoreanName": "분장어",
+      "candidates": [
+        {
+          "sourceName": "장어",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000451",
+      "canonicalKoreanName": "그물동서대",
+      "candidates": [
+        {
+          "sourceName": "서대류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000468",
+      "canonicalKoreanName": "중설가자미",
+      "candidates": [
+        {
+          "sourceName": "가자미",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000470",
+      "canonicalKoreanName": "청새치",
+      "candidates": [
+        {
+          "sourceName": "청새치류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "청새치",
+          "candidateScientificName": "Kajikia audax"
+        },
+        {
+          "sourceName": "흑새치",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        }
+      ],
+      "decision": "DO_NOT_MAP",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name does not establish a one-to-one identity with the queued canonical species. The candidate mapping is rejected without fuzzy remapping.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000473",
+      "canonicalKoreanName": "돛새치",
+      "candidates": [
+        {
+          "sourceName": "돛새치류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "돛새치",
+          "candidateScientificName": "Istiophorus platypterus"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000479",
+      "canonicalKoreanName": "황새치",
+      "candidates": [
+        {
+          "sourceName": "황새치류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "황새치",
+          "candidateScientificName": "Xiphias gladius"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000495",
+      "canonicalKoreanName": "참치방어",
+      "candidates": [
+        {
+          "sourceName": "참치",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "medium",
+          "candidateCanonicalName": "참치방어",
+          "candidateScientificName": "Elagatis bipinnulata"
+        }
+      ],
+      "decision": "DO_NOT_MAP",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name does not establish a one-to-one identity with the queued canonical species. The candidate mapping is rejected without fuzzy remapping.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000643",
+      "canonicalKoreanName": "도랑가오리",
+      "candidates": [
+        {
+          "sourceName": "가오리",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000662",
+      "canonicalKoreanName": "귀상어",
+      "candidates": [
+        {
+          "sourceName": "귀상어류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "귀상어",
+          "candidateScientificName": "Sphyrna zygaena"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000684",
+      "canonicalKoreanName": "전기가오리",
+      "candidates": [
+        {
+          "sourceName": "전기가오리류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "전기가오리",
+          "candidateScientificName": "Narke japonica"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000792",
+      "canonicalKoreanName": "벤자리",
+      "candidates": [
+        {
+          "sourceName": "벤자리류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "벤자리",
+          "candidateScientificName": "Parapristipoma trilineatum"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000833",
+      "canonicalKoreanName": "흑조기",
+      "candidates": [
+        {
+          "sourceName": "백조기류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        },
+        {
+          "sourceName": "조기",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        },
+        {
+          "sourceName": "조기류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000839",
+      "canonicalKoreanName": "보구치",
+      "candidates": [
+        {
+          "sourceName": "보구치류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "보구치",
+          "candidateScientificName": "Pennahia argentata"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000842",
+      "canonicalKoreanName": "부세",
+      "candidates": [
+        {
+          "sourceName": "부세류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "부세",
+          "candidateScientificName": "Larimichthys crocea"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000900",
+      "canonicalKoreanName": "갯장어",
+      "candidates": [
+        {
+          "sourceName": "갯장어류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "갯장어",
+          "candidateScientificName": "Muraenesox cinereus"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000958",
+      "canonicalKoreanName": "황어",
+      "candidates": [
+        {
+          "sourceName": "황어류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "황어",
+          "candidateScientificName": "Pseudaspius hakonensis"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001056",
+      "canonicalKoreanName": "대구",
+      "candidates": [
+        {
+          "sourceName": "은대구류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        }
+      ],
+      "decision": "DO_NOT_MAP",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name does not establish a one-to-one identity with the queued canonical species. The candidate mapping is rejected without fuzzy remapping.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001161",
+      "canonicalKoreanName": "임연수어",
+      "candidates": [
+        {
+          "sourceName": "임연수",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "low",
+          "candidateCanonicalName": null,
+          "candidateScientificName": null
+        }
+      ],
+      "decision": "DO_NOT_MAP",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name does not establish a one-to-one identity with the queued canonical species. The candidate mapping is rejected without fuzzy remapping.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001188",
+      "canonicalKoreanName": "먹갈치",
+      "candidates": [
+        {
+          "sourceName": "먹갈치류",
+          "priorAliasType": "aggregate_name",
+          "priorConfidence": "high",
+          "candidateCanonicalName": "먹갈치",
+          "candidateScientificName": "Lycodes nakamurae"
+        }
+      ],
+      "decision": "AGGREGATED_TAXON",
+      "resolutionStatus": "RESOLVED",
+      "rationale": "The source name denotes a group or broader common-name bucket. It is retained as a non-species label and cannot be promoted to one canonical species.",
+      "evidence": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "role": "PRESERVED_SOURCE_CANDIDATE_AND_PRIOR_REVIEW"
+        },
+        {
+          "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+          "role": "FROZEN_CANONICAL_IDENTITY"
+        }
+      ],
+      "limitations": [
+        "No candidate is added as a production alias.",
+        "No canonical ID, name, or scientific identity is changed."
+      ]
+    }
+  ],
+  "policy": {
+    "aggregateToSingleSpeciesPromotion": false,
+    "fuzzyMapping": false,
+    "existingCanonicalIdMutation": false,
+    "terminalDecisions": [
+      "AGGREGATED_TAXON",
+      "DO_NOT_MAP"
+    ]
+  },
+  "invariants": {
+    "productionMutation": 0,
+    "runtimeMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0,
+    "automaticMergeOrDelete": 0,
+    "oneByOneWorkflow": 0,
+    "conditionProfileResearch": 0
+  }
+}

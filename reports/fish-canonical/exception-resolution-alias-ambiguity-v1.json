@@ -1,0 +1,418 @@
+{
+  "schemaVersion": 1,
+  "program": "Fish Canonical Exception Resolution Program V1",
+  "batchId": "BATCH_B_ALIAS_AMBIGUITY",
+  "generatedOn": "2026-09-18",
+  "sourceQueue": {
+    "artifact": "reports/fish-canonical/bulk-normalization-exceptions-v1.json",
+    "sha256": "4F686AC7E8B72E2547F898832C172C1463425E067A611DB97063BBED82268566"
+  },
+  "total": 4,
+  "allowedDecisions": [
+    "SAFE_ALIAS",
+    "AMBIGUOUS_ALIAS",
+    "REJECT_ALIAS"
+  ],
+  "counts": {
+    "SAFE_ALIAS": 0,
+    "AMBIGUOUS_ALIAS": 1,
+    "REJECT_ALIAS": 3
+  },
+  "rows": [
+    {
+      "speciesId": "BM-SPECIES-000019",
+      "canonicalKoreanName": "쏨뱅이",
+      "aliasCandidates": [
+        "쏨뱅이 독가시"
+      ],
+      "decision": "REJECT_ALIAS",
+      "resolutionStatus": "RESOLVED",
+      "evidence": [
+        {
+          "sourceName": "쏨뱅이 독가시",
+          "authority": "MBRIS_SOURCE_REVIEW",
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "evidence": [
+            {
+              "source": "PHASE1_CANDIDATE_SEARCH",
+              "type": "exact_korean_name",
+              "value": "쏨뱅이(Sebastiscus marmoratus) sim=1.0 note="
+            },
+            {
+              "source": "MANUAL_REVIEW_QUEUE",
+              "type": "candidate",
+              "value": "쏨뱅이(Sebastiscus marmoratus)"
+            }
+          ]
+        }
+      ],
+      "rationale": "The source label contains descriptive or warning text and is not an authoritative one-to-one species alias.",
+      "limitations": [
+        "The rejected source label is preserved for audit history.",
+        "The label is not shortened or rewritten into a production alias."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000122",
+      "canonicalKoreanName": "쥐치",
+      "aliasCandidates": [
+        "쥐치포용 쥐치"
+      ],
+      "decision": "REJECT_ALIAS",
+      "resolutionStatus": "RESOLVED",
+      "evidence": [
+        {
+          "sourceName": "쥐치포용 쥐치",
+          "authority": "MBRIS_SOURCE_REVIEW",
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "evidence": [
+            {
+              "source": "PHASE1_CANDIDATE_SEARCH",
+              "type": "substring_match",
+              "value": "쥐치(Stephanolepis cirrhifer) sim=0.286 note=부분 문자열 일치"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "human_judgment",
+              "value": "relatedFish 첫 항목이 '쥐치' 자신"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "human_judgment",
+              "value": "분류군(fish) 일치"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "conflict",
+              "value": "sourceName 자체에 공백과 '포용'이라는 이례적 단어가 섞여 있어 이름이 온전하지 않다"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "conflict",
+              "value": "이 항목은 '주의가 필요한 어종' 카테고리가 아니라서 기존 이름오염 탐지 로직이 잡아내지 못하고 이 배치에 잘못 편입됐다"
+            },
+            {
+              "source": "국립국어원 표준국어대사전(stdict.korean.go.kr)",
+              "type": "official_evidence",
+              "value": "'포용' 표제어 검색: '포용'은 오직 '包容'(너그럽게 감싸 받아들임)으로만 등재됨. '포(脯)+용(用)' 조합의 한자어는 어떤 사전에도 없음 — '쥐치포용'은 문법적으로 성립하지 않는 조어."
+            },
+            {
+              "source": "국립국어원 표준국어대사전 / 한국민족문화대백과사전",
+              "type": "official_evidence",
+              "value": "'쥐치포'·'쥐포' 관련어: '쥐치포'는 표준국어대사전 미등재이나 한국민족문화대백과사전 등에서 '쥐치를 포 떠서 조미·건조한 식품'을 가리키는 정착된 실생활 용어로 확인됨."
+            },
+            {
+              "source": "국립해양생물자원관(MBRIS)/국립수산과학원(NIFS)",
+              "type": "official_evidence",
+              "value": "site 검색: '쥐치포용' 또는 '쥐치포용 쥐치'가 어종명·상품명으로 등재된 사례 없음."
+            },
+            {
+              "source": "BATCH2_OFFICIAL_RESEARCH",
+              "type": "conflict",
+              "value": "sourceName 자체가 국어 문법상 성립하지 않는 조어"
+            },
+            {
+              "source": "BATCH2_OFFICIAL_RESEARCH",
+              "type": "conflict",
+              "value": "원본 설명('건어물과 식용으로 친숙한 쥐치류입니다')이 '쥐치포 용도'라는 설명 문구이지 종명이 아님을 뒷받침"
+            },
+            {
+              "source": "MANUAL_REVIEW_QUEUE",
+              "type": "candidate",
+              "value": "쥐치(Stephanolepis cirrhifer)"
+            }
+          ]
+        },
+        {
+          "sourceName": "쥐치포용 쥐치",
+          "organization": "국립국어원 표준국어대사전(stdict.korean.go.kr)",
+          "title": "'포용' 표제어 검색",
+          "url": "https://stdict.korean.go.kr/",
+          "evidence": "'포용'은 오직 '包容'(너그럽게 감싸 받아들임)으로만 등재됨. '포(脯)+용(用)' 조합의 한자어는 어떤 사전에도 없음 — '쥐치포용'은 문법적으로 성립하지 않는 조어."
+        },
+        {
+          "sourceName": "쥐치포용 쥐치",
+          "organization": "국립국어원 표준국어대사전 / 한국민족문화대백과사전",
+          "title": "'쥐치포'·'쥐포' 관련어",
+          "url": "https://stdict.korean.go.kr/ , https://encykorea.aks.ac.kr/",
+          "evidence": "'쥐치포'는 표준국어대사전 미등재이나 한국민족문화대백과사전 등에서 '쥐치를 포 떠서 조미·건조한 식품'을 가리키는 정착된 실생활 용어로 확인됨."
+        },
+        {
+          "sourceName": "쥐치포용 쥐치",
+          "organization": "국립해양생물자원관(MBRIS)/국립수산과학원(NIFS)",
+          "title": "site 검색",
+          "url": "https://www.mbris.kr/ , https://www.nifs.go.kr/",
+          "evidence": "'쥐치포용' 또는 '쥐치포용 쥐치'가 어종명·상품명으로 등재된 사례 없음."
+        }
+      ],
+      "rationale": "The source label contains descriptive or warning text and is not an authoritative one-to-one species alias.",
+      "limitations": [
+        "The rejected source label is preserved for audit history.",
+        "The label is not shortened or rewritten into a production alias."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000279",
+      "canonicalKoreanName": "벵에돔",
+      "aliasCandidates": [
+        "점벵에돔",
+        "흑벵에돔"
+      ],
+      "decision": "AMBIGUOUS_ALIAS",
+      "resolutionStatus": "REMAINS_OPEN",
+      "evidence": [
+        {
+          "sourceName": "점벵에돔",
+          "authority": "MBRIS_SOURCE_REVIEW",
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "evidence": [
+            {
+              "source": "PHASE1_CANDIDATE_SEARCH",
+              "type": "substring_match",
+              "value": "벵에돔(Girella punctata) sim=0.75 note=부분 문자열 일치"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "human_judgment",
+              "value": "설명이 '벵에돔류'로 벵에돔과의 소속을 명시"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "human_judgment",
+              "value": "relatedFish 첫 항목이 '벵에돔' 자신"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "human_judgment",
+              "value": "분류군(fish) 일치"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "conflict",
+              "value": "설명이 '벵에돔류'(그룹 소속 표현)일 뿐 '벵에돔과 동일하다'는 명시적 진술이 아님"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "conflict",
+              "value": "점(반점)이라는 구분 형질이 별도로 언급돼 있어 변종/근연종일 가능성을 배제할 수 없음"
+            },
+            {
+              "source": "FishBase",
+              "type": "official_evidence",
+              "value": "Girella punctata Common Names List: 한국어 통용명으로 '벵에돔', '긴꼬리벵에돔'(로마자 Peng-e-dom)만 등재됨. '점벵에돔'은 없음."
+            },
+            {
+              "source": "국립수산과학원(NIFS)",
+              "type": "official_evidence",
+              "value": "site 검색(nifs.go.kr): '점벵에돔' 명칭이 등장하는 페이지를 찾지 못함(확인 안 됨)."
+            },
+            {
+              "source": "BATCH2_OFFICIAL_RESEARCH",
+              "type": "conflict",
+              "value": "6개 공식 출처 어디에도 '점벵에돔'이라는 명칭 자체가 등재돼 있지 않음"
+            },
+            {
+              "source": "BATCH2_OFFICIAL_RESEARCH",
+              "type": "conflict",
+              "value": "벵에돔과 동일종인지 반점을 가진 근연/변종인지 판별할 공식 근거 없음"
+            },
+            {
+              "source": "MANUAL_REVIEW_QUEUE",
+              "type": "candidate",
+              "value": "벵에돔(Girella punctata)"
+            }
+          ]
+        },
+        {
+          "sourceName": "흑벵에돔",
+          "authority": "MBRIS_SOURCE_REVIEW",
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "evidence": [
+            {
+              "source": "PHASE1_CANDIDATE_SEARCH",
+              "type": "substring_match",
+              "value": "벵에돔(Girella punctata) sim=0.75 note=부분 문자열 일치"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "human_judgment",
+              "value": "설명이 '벵에돔류'로 벵에돔과의 소속을 명시"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "human_judgment",
+              "value": "relatedFish 첫 항목이 '벵에돔' 자신"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "human_judgment",
+              "value": "분류군(fish) 일치"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "conflict",
+              "value": "설명이 그룹 소속 표현일 뿐 동일종 진술이 아님"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "conflict",
+              "value": "'어두운 빛'이라는 구분 형질이 별도로 언급됨"
+            },
+            {
+              "source": "FishBase",
+              "type": "official_evidence",
+              "value": "Girella punctata Common Names List: 한국어 통용명 '벵에돔', '긴꼬리벵에돔'만 등재. '흑벵에돔'은 없음."
+            },
+            {
+              "source": "BATCH2_OFFICIAL_RESEARCH",
+              "type": "conflict",
+              "value": "6개 공식 출처 어디에도 '흑벵에돔'이라는 명칭 자체가 등재돼 있지 않음"
+            },
+            {
+              "source": "BATCH2_OFFICIAL_RESEARCH",
+              "type": "conflict",
+              "value": "점벵에돔과 동일한 패턴 — 벵에돔과 동일종인지 색형 변이인지 판별 불가"
+            },
+            {
+              "source": "MANUAL_REVIEW_QUEUE",
+              "type": "candidate",
+              "value": "벵에돔(Girella punctata)"
+            }
+          ]
+        },
+        {
+          "sourceName": "점벵에돔",
+          "organization": "FishBase",
+          "title": "Girella punctata Common Names List",
+          "url": "https://www.fishbase.se/",
+          "evidence": "한국어 통용명으로 '벵에돔', '긴꼬리벵에돔'(로마자 Peng-e-dom)만 등재됨. '점벵에돔'은 없음."
+        },
+        {
+          "sourceName": "점벵에돔",
+          "organization": "국립수산과학원(NIFS)",
+          "title": "site 검색(nifs.go.kr)",
+          "url": "https://www.nifs.go.kr/",
+          "evidence": "'점벵에돔' 명칭이 등장하는 페이지를 찾지 못함(확인 안 됨)."
+        },
+        {
+          "sourceName": "흑벵에돔",
+          "organization": "FishBase",
+          "title": "Girella punctata Common Names List",
+          "url": "https://www.fishbase.se/",
+          "evidence": "한국어 통용명 '벵에돔', '긴꼬리벵에돔'만 등재. '흑벵에돔'은 없음."
+        }
+      ],
+      "rationale": "Public and institutional checks do not establish a one-to-one identity with Girella punctata; the two colloquial labels remain ambiguous.",
+      "limitations": [
+        "Absence from checked sources is not proof of synonymy or rejection.",
+        "Manual authoritative nomenclature evidence is still required."
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000408",
+      "canonicalKoreanName": "삼치",
+      "aliasCandidates": [
+        "대삼치"
+      ],
+      "decision": "REJECT_ALIAS",
+      "resolutionStatus": "RESOLVED",
+      "evidence": [
+        {
+          "sourceName": "대삼치",
+          "authority": "MBRIS_SOURCE_REVIEW",
+          "artifact": "data/mbris/mappings/fish-alias-registry.json",
+          "evidence": [
+            {
+              "source": "PHASE1_CANDIDATE_SEARCH",
+              "type": "substring_match",
+              "value": "삼치(Scomberomorus niphonius) sim=0.667 note=부분 문자열 일치"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "human_judgment",
+              "value": "relatedFish 첫 항목이 '삼치' 자신"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "human_judgment",
+              "value": "분류군(fish) 일치"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "human_judgment",
+              "value": "학명 Scombridae과 일치"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "conflict",
+              "value": "원본 설명이 '삼치보다 큰 크기'라고 명시적으로 비교 — 동일종이면 부자연스러운 서술"
+            },
+            {
+              "source": "BATCH1_MANUAL_REVIEW",
+              "type": "conflict",
+              "value": "크기 비교 표현이 성장단계 차이인지 별종인지 로컬 데이터로 판별 불가"
+            },
+            {
+              "source": "국립수산과학원(NIFS)",
+              "type": "official_evidence",
+              "value": "주요생물 생태와 생활사 — 삼치: 삼치는 학명 Scomberomorus niphonius 단일종으로만 표준화돼 있고 '대삼치'라는 별도 어종 언급이 없음."
+            },
+            {
+              "source": "국립해양생물자원관(MBRIS)",
+              "type": "official_evidence",
+              "value": "site 검색(mbris.kr): '대삼치'로 직접 등재된 종 없음. 삼치과 다른 종(줄삼치 등)만 확인됨."
+            },
+            {
+              "source": "BATCH2_OFFICIAL_RESEARCH",
+              "type": "conflict",
+              "value": "공식 출처 어디에도 '대삼치'가 별도 학명을 가진 등재종으로 확인되지 않음"
+            },
+            {
+              "source": "BATCH2_OFFICIAL_RESEARCH",
+              "type": "conflict",
+              "value": "원본 설명 '삼치보다 큰 크기'가 크기 등급 표현과 부합 — 동일종 단순 별칭으로 보기에는 정체성 진술이 아니라 비교 진술이라는 점에서 성장단계/상품등급 해석에 무게"
+            },
+            {
+              "source": "MANUAL_REVIEW_QUEUE",
+              "type": "candidate",
+              "value": "삼치(Scomberomorus niphonius)"
+            }
+          ]
+        },
+        {
+          "sourceName": "대삼치",
+          "organization": "국립수산과학원(NIFS)",
+          "title": "주요생물 생태와 생활사 — 삼치",
+          "url": "https://www.nifs.go.kr/contents/actionContentsCons0088.do",
+          "evidence": "삼치는 학명 Scomberomorus niphonius 단일종으로만 표준화돼 있고 '대삼치'라는 별도 어종 언급이 없음."
+        },
+        {
+          "sourceName": "대삼치",
+          "organization": "국립해양생물자원관(MBRIS)",
+          "title": "site 검색(mbris.kr)",
+          "url": "https://www.mbris.kr/",
+          "evidence": "'대삼치'로 직접 등재된 종 없음. 삼치과 다른 종(줄삼치 등)만 확인됨."
+        }
+      ],
+      "rationale": "The source label contains descriptive or warning text and is not an authoritative one-to-one species alias.",
+      "limitations": [
+        "The rejected source label is preserved for audit history.",
+        "The label is not shortened or rewritten into a production alias."
+      ]
+    }
+  ],
+  "policy": {
+    "officialOrPublicEvidenceRequired": true,
+    "oneToOneIdentityRequiredForSafeAlias": true,
+    "fuzzyMapping": false
+  },
+  "invariants": {
+    "productionMutation": 0,
+    "runtimeMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0,
+    "automaticMergeOrDelete": 0,
+    "oneByOneWorkflow": 0,
+    "conditionProfileResearch": 0
+  }
+}
