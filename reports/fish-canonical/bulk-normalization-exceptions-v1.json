@@ -1,0 +1,702 @@
+{
+  "schemaVersion": 1,
+  "program": "Fish Canonical Bulk Normalization Program V1",
+  "generatedOn": "2026-09-18",
+  "exceptionCount": 43,
+  "canonicalSpeciesExceptionCount": 40,
+  "categoryCounts": {
+    "AGGREGATED_TAXON": 34,
+    "ALIAS_REVIEW_REQUIRED": 4,
+    "COMMERCIAL_NAME": 1,
+    "CONDITION_ID_OUTSIDE_BASELINE": 2,
+    "CONFLICT": 1,
+    "CROSS_DOMAIN_HOMONYM": 1,
+    "PARTIAL": 1
+  },
+  "exceptions": [
+    {
+      "speciesId": "07e1852e-0675-4090-8675-cd216fb90ba9",
+      "koreanName": "오분자기",
+      "categories": [
+        "CONFLICT"
+      ],
+      "details": [
+        "오분자기: TAXONOMY_CONFLICT"
+      ],
+      "sourceRefs": [
+        {
+          "provider": "NIFS",
+          "sourceId": "fish_1575873437839",
+          "artifact": "reports/nifs-staging-import-8-execution.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "70cb8d81-26a1-4d8b-b000-2b2f2676c345",
+      "koreanName": "제주소라",
+      "categories": [
+        "PARTIAL"
+      ],
+      "details": [
+        "제주소라: ACCEPTED_NAME_UPDATE_AVAILABLE"
+      ],
+      "sourceRefs": [
+        {
+          "provider": "NIFS",
+          "sourceId": "fish_1575880014320",
+          "artifact": "reports/nifs-staging-import-8-execution.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000019",
+      "koreanName": "쏨뱅이",
+      "categories": [
+        "ALIAS_REVIEW_REQUIRED"
+      ],
+      "details": [
+        "쏨뱅이 독가시 (source_issue, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000042",
+      "koreanName": "삼세기",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "삼세기류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000090",
+      "koreanName": "연어",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "복어 (aggregate_name, low)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000114",
+      "koreanName": "개복치",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "전복치류 (aggregate_name, low)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000122",
+      "koreanName": "쥐치",
+      "categories": [
+        "ALIAS_REVIEW_REQUIRED"
+      ],
+      "details": [
+        "쥐치포용 쥐치 (source_issue, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000143",
+      "koreanName": "가시복",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "가시복류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000150",
+      "koreanName": "별복",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "참복 (aggregate_name, low)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000163",
+      "koreanName": "까치복",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "까치복류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000165",
+      "koreanName": "검복",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "검복류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000193",
+      "koreanName": "황줄돔",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "줄돔 (aggregate_name, low)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000278",
+      "koreanName": "돌돔",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "돌돔류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000279",
+      "koreanName": "벵에돔",
+      "categories": [
+        "ALIAS_REVIEW_REQUIRED"
+      ],
+      "details": [
+        "점벵에돔 (common_name, medium)",
+        "흑벵에돔 (common_name, medium)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        },
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000280",
+      "koreanName": "긴꼬리벵에돔",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "긴꼬리벵에돔류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000317",
+      "koreanName": "발기",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "열기 (aggregate_name, low)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000369",
+      "koreanName": "말뚝망둥어",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "망둥어 (aggregate_name, low)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000408",
+      "koreanName": "삼치",
+      "categories": [
+        "COMMERCIAL_NAME"
+      ],
+      "details": [
+        "대삼치 (market_name, medium)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000412",
+      "koreanName": "가다랑어",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "가다랑어류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000421",
+      "koreanName": "눈다랑어",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "눈다랑어류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000444",
+      "koreanName": "갈치",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "실갈치류 (aggregate_name, medium)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000445",
+      "koreanName": "분장어",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "장어 (aggregate_name, low)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000451",
+      "koreanName": "그물동서대",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "서대류 (aggregate_name, low)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000468",
+      "koreanName": "중설가자미",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "가자미 (aggregate_name, low)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000470",
+      "koreanName": "청새치",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "청새치류 (aggregate_name, high)",
+        "흑새치 (aggregate_name, low)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        },
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000473",
+      "koreanName": "돛새치",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "돛새치류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000479",
+      "koreanName": "황새치",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "황새치류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000495",
+      "koreanName": "참치방어",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "참치 (aggregate_name, medium)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000643",
+      "koreanName": "도랑가오리",
+      "categories": [
+        "AGGREGATED_TAXON",
+        "ALIAS_REVIEW_REQUIRED"
+      ],
+      "details": [
+        "가오리 (aggregate_name, low)",
+        "가오리 꼬리주의 (source_issue, low)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        },
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000662",
+      "koreanName": "귀상어",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "귀상어류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000684",
+      "koreanName": "전기가오리",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "전기가오리류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000792",
+      "koreanName": "벤자리",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "벤자리류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000833",
+      "koreanName": "흑조기",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "백조기류 (aggregate_name, low)",
+        "조기 (aggregate_name, low)",
+        "조기류 (aggregate_name, low)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        },
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        },
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000839",
+      "koreanName": "보구치",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "보구치류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000842",
+      "koreanName": "부세",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "부세류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000900",
+      "koreanName": "갯장어",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "갯장어류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000958",
+      "koreanName": "황어",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "황어류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001056",
+      "koreanName": "대구",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "은대구류 (aggregate_name, low)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001161",
+      "koreanName": "임연수어",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "임연수 (aggregate_name, low)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001188",
+      "koreanName": "먹갈치",
+      "categories": [
+        "AGGREGATED_TAXON"
+      ],
+      "details": [
+        "먹갈치류 (aggregate_name, high)"
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/mbris/mappings/fish-alias-registry.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "CONDITION:BM-SPECIES-003107",
+      "koreanName": null,
+      "categories": [
+        "CONDITION_ID_OUTSIDE_BASELINE"
+      ],
+      "details": [
+        "주꾸미 condition identity is protected but its BM internal ID is outside the enumerated Fish 1,258 baseline."
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/fishing-condition/species-environment/v2/species-environment-profiles.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "CONDITION:BM-SPECIES-003111",
+      "koreanName": null,
+      "categories": [
+        "CONDITION_ID_OUTSIDE_BASELINE"
+      ],
+      "details": [
+        "문어 condition identity is protected but its BM internal ID is outside the enumerated Fish 1,258 baseline."
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "data/fishing-condition/species-environment/v2/species-environment-profiles.json"
+        }
+      ]
+    },
+    {
+      "speciesId": "CROSS-SYSTEM:우럭",
+      "koreanName": null,
+      "categories": [
+        "CROSS_DOMAIN_HOMONYM"
+      ],
+      "details": [
+        "Fishing Spot runtime 우럭→조피볼락 mapping must not resolve to MBRIS non-fish Mya arenaria."
+      ],
+      "sourceRefs": [
+        {
+          "artifact": "src/lib/fishing-condition/fishing-spot-integration.ts"
+        }
+      ]
+    }
+  ],
+  "policy": {
+    "automaticMerge": false,
+    "automaticDelete": false,
+    "manualReviewOnlyForExceptions": true
+  },
+  "invariants": {
+    "productionMutation": 0,
+    "runtimeMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0,
+    "automaticMergeOrDelete": 0,
+    "oneByOneWorkflow": 0,
+    "conditionProfileResearch": 0
+  }
+}

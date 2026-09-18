@@ -1,0 +1,969 @@
+{
+  "schemaVersion": 1,
+  "program": "Fish Canonical Bulk Normalization Program V1",
+  "generatedOn": "2026-09-18",
+  "baseCommit": "a985bfa46aac1b99c988db5c314d6b1a3e87d297",
+  "decision": "BULK_NORMALIZATION_READY_WITH_EXCEPTIONS",
+  "inputs": {
+    "nifsImport": {
+      "path": "reports/nifs-staging-import-8-execution.json",
+      "sha256": "BDB3BE57D1991CFE20E2716D3172DB3030AC738E4827B964033FFF2DC6C103C0"
+    },
+    "mbrisReady": {
+      "path": "reports/mbris/mbris-staging-import-manifest-v1.json",
+      "sha256": "F0B3F234BBEC90E87A7EC34E051828B6C9315E784F4CCBA4F22932A83273F15A"
+    },
+    "mbrisReview": {
+      "path": "reports/mbris/mbris-review-ready-import-manifest-v1.json",
+      "sha256": "D64A90A380551BB7B5C81777199931550CED8976D4D9616A4ABF32587175B481"
+    },
+    "baseline": {
+      "path": "reports/mbris/fish-canonical-1258-baseline-v1.json",
+      "sha256": "D1CEA9EFD858F6C04A162B55956558DF9530B9A321C5B1BCD91D8B081047D5DE"
+    },
+    "aliases": {
+      "path": "data/mbris/mappings/fish-alias-registry.json",
+      "sha256": "BEFFCF01336B5674133C26B2F037624F63BAF8BBCEB77887D256C905004D6DC6"
+    },
+    "approvedAliases": {
+      "path": "data/mbris/mappings/fish-data-approved-aliases.json",
+      "sha256": "A7A0F94ADB85226F94FF940F3AA6DB3B89BD3648627CDAF41C176CFE09E7C16A"
+    },
+    "crosswalk": {
+      "path": "data/mbris/mappings/nifs-mbris-taxonomy-crosswalk.json",
+      "sha256": "F588CAEEFEEB0799DF76971082F5C466A7919CCCABEA0B152A6A596354C9F8AA"
+    },
+    "mottledSkate": {
+      "path": "reports/mbris/mbris-mottled-skate-postcheck-v1.json",
+      "sha256": "8788678DD18F6A80AE271A1037405C23642869C5A8AE3794DD428A1535D2B555"
+    },
+    "spots": {
+      "path": "src/data/fishing-spots.json",
+      "sha256": "5707FB2E057A039B7F572ECE7E94A0936ED5B73F204613A3E3FCE9A45CDC74BA"
+    },
+    "runtimeMapping": {
+      "path": "src/lib/fishing-condition/fishing-spot-integration.ts",
+      "sha256": "3D09BE7E708BFBD7DA83E213238D662024F32B424F3DC839D5A78BE3D04DEB0E"
+    },
+    "conditionProfiles": {
+      "path": "data/fishing-condition/species-environment/v2/species-environment-profiles.json",
+      "sha256": "EB365314A15444D7407B7C88B3FD58D95004EAEAFE6723EFFF620B2C7F705F98"
+    }
+  },
+  "canonical": {
+    "total": 1258,
+    "sourceComposition": {
+      "MBRIS": 1250,
+      "NIFS": 8
+    },
+    "identityStatus": {
+      "VERIFIED": 1256,
+      "PARTIAL": 1,
+      "AMBIGUOUS": 0,
+      "CONFLICT": 1,
+      "DUPLICATE_CANDIDATE": 0,
+      "UNRESOLVED": 0
+    },
+    "duplicateScientificNameGroups": [],
+    "duplicateKoreanNameGroups": [],
+    "missingScientificNames": [],
+    "sourceCoverage": {
+      "withAtLeastOneSource": 1258,
+      "sourceGap": 0
+    },
+    "approvedAliasCount": 3,
+    "synonymCount": 2
+  },
+  "fishingSpots": {
+    "total": 1405,
+    "rawUniqueNames": 53,
+    "rawNameClassifications": {
+      "CANONICAL_NAME": 35,
+      "SAFE_ALIAS": 3,
+      "SCIENTIFIC_SYNONYM": 0,
+      "COMMERCIAL_NAME": 0,
+      "AGGREGATED_TAXON": 3,
+      "REGIONAL_NAME": 1,
+      "TYPO_VARIANT": 1,
+      "AMBIGUOUS": 1,
+      "UNRESOLVED": 9
+    },
+    "rawInventory": [
+      {
+        "rawName": "감성돔",
+        "occurrenceCount": 991,
+        "spotCount": 991,
+        "regions": [
+          "강원도",
+          "경상남도",
+          "경상북도",
+          "부산광역시",
+          "울산광역시",
+          "인천광역시",
+          "전라남도",
+          "전라북도",
+          "제주특별자치도",
+          "충청남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000751",
+        "canonicalName": "감성돔",
+        "currentRuntimeMatch": true,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "농어",
+        "occurrenceCount": 969,
+        "spotCount": 969,
+        "regions": [
+          "강원도",
+          "경기도",
+          "경상남도",
+          "경상북도",
+          "부산광역시",
+          "울산광역시",
+          "인천광역시",
+          "전라남도",
+          "전라북도",
+          "제주특별자치도",
+          "충청남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000188",
+        "canonicalName": "농어",
+        "currentRuntimeMatch": true,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "우럭",
+        "occurrenceCount": 776,
+        "spotCount": 776,
+        "regions": [
+          "강원도",
+          "경기도",
+          "경상남도",
+          "부산광역시",
+          "인천광역시",
+          "전라남도",
+          "전라북도",
+          "제주특별자치도",
+          "충청남도"
+        ],
+        "nameClassification": "SAFE_ALIAS",
+        "canonicalSpeciesId": "BM-SPECIES-000012",
+        "canonicalName": "조피볼락",
+        "currentRuntimeMatch": true,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "노래미",
+        "occurrenceCount": 686,
+        "spotCount": 686,
+        "regions": [
+          "강원도",
+          "경기도",
+          "경상남도",
+          "경상북도",
+          "부산광역시",
+          "울산광역시",
+          "인천광역시",
+          "전라남도",
+          "전라북도",
+          "제주특별자치도",
+          "충청남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-001164",
+        "canonicalName": "노래미",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "볼락",
+        "occurrenceCount": 661,
+        "spotCount": 661,
+        "regions": [
+          "강원도",
+          "경상남도",
+          "경상북도",
+          "부산광역시",
+          "울산광역시",
+          "전라남도",
+          "제주특별자치도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000002",
+        "canonicalName": "볼락",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "참돔",
+        "occurrenceCount": 640,
+        "spotCount": 640,
+        "regions": [
+          "경상남도",
+          "경상북도",
+          "부산광역시",
+          "전라남도",
+          "전라북도",
+          "제주특별자치도",
+          "충청남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000755",
+        "canonicalName": "참돔",
+        "currentRuntimeMatch": true,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "돌돔",
+        "occurrenceCount": 455,
+        "spotCount": 455,
+        "regions": [
+          "경상남도",
+          "전라남도",
+          "전라북도",
+          "제주특별자치도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000278",
+        "canonicalName": "돌돔",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "붕장어",
+        "occurrenceCount": 413,
+        "spotCount": 413,
+        "regions": [
+          "강원도",
+          "경기도",
+          "경상남도",
+          "경상북도",
+          "부산광역시",
+          "울산광역시",
+          "인천광역시",
+          "전라남도",
+          "전라북도",
+          "충청남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000908",
+        "canonicalName": "붕장어",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "숭어",
+        "occurrenceCount": 369,
+        "spotCount": 369,
+        "regions": [
+          "강원도",
+          "경기도",
+          "경상남도",
+          "경상북도",
+          "부산광역시",
+          "울산광역시",
+          "인천광역시",
+          "전라남도",
+          "전라북도",
+          "충청남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000097",
+        "canonicalName": "숭어",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "벵에돔",
+        "occurrenceCount": 296,
+        "spotCount": 296,
+        "regions": [
+          "경상남도",
+          "경상북도",
+          "부산광역시",
+          "전라남도",
+          "제주특별자치도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000279",
+        "canonicalName": "벵에돔",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "넙치",
+        "occurrenceCount": 266,
+        "spotCount": 266,
+        "regions": [
+          "강원도",
+          "경기도",
+          "경상남도",
+          "경상북도",
+          "인천광역시",
+          "전라남도",
+          "전라북도",
+          "충청남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000465",
+        "canonicalName": "넙치",
+        "currentRuntimeMatch": true,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "도다리",
+        "occurrenceCount": 200,
+        "spotCount": 200,
+        "regions": [
+          "강원도",
+          "경기도",
+          "경상남도",
+          "부산광역시",
+          "전라남도",
+          "전라북도",
+          "충청남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000548",
+        "canonicalName": "도다리",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "광어",
+        "occurrenceCount": 175,
+        "spotCount": 175,
+        "regions": [
+          "경상남도",
+          "인천광역시",
+          "전라남도",
+          "충청남도"
+        ],
+        "nameClassification": "SAFE_ALIAS",
+        "canonicalSpeciesId": "BM-SPECIES-000465",
+        "canonicalName": "넙치",
+        "currentRuntimeMatch": true,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "무늬오징어",
+        "occurrenceCount": 129,
+        "spotCount": 129,
+        "regions": [
+          "강원도",
+          "경상남도",
+          "경상북도",
+          "부산광역시",
+          "울산광역시",
+          "전라남도",
+          "제주특별자치도"
+        ],
+        "nameClassification": "REGIONAL_NAME",
+        "canonicalSpeciesId": null,
+        "canonicalName": "흰꼴뚜기",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": "공식 근거가 있는 지역명이나 대상 identity가 Fish 1,258 baseline 밖이다."
+      },
+      {
+        "rawName": "갑오징어",
+        "occurrenceCount": 122,
+        "spotCount": 122,
+        "regions": [
+          "강원도",
+          "경상남도",
+          "경상북도",
+          "부산광역시",
+          "울산광역시",
+          "전라남도",
+          "전라북도",
+          "충청남도"
+        ],
+        "nameClassification": "AGGREGATED_TAXON",
+        "canonicalSpeciesId": null,
+        "canonicalName": null,
+        "currentRuntimeMatch": false,
+        "unresolvedReason": "복수 갑오징어류를 포괄해 단일 종으로 연결하지 않는다."
+      },
+      {
+        "rawName": "부시리",
+        "occurrenceCount": 117,
+        "spotCount": 117,
+        "regions": [
+          "경상북도",
+          "부산광역시",
+          "전라남도",
+          "전라북도",
+          "제주특별자치도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000500",
+        "canonicalName": "부시리",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "학공치",
+        "occurrenceCount": 99,
+        "spotCount": 99,
+        "regions": [
+          "경상남도",
+          "전라남도",
+          "충청남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000884",
+        "canonicalName": "학공치",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "삼치",
+        "occurrenceCount": 97,
+        "spotCount": 97,
+        "regions": [
+          "인천광역시",
+          "전라남도",
+          "전라북도",
+          "제주특별자치도",
+          "충청남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000408",
+        "canonicalName": "삼치",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "황어",
+        "occurrenceCount": 84,
+        "spotCount": 84,
+        "regions": [
+          "강원도",
+          "경상북도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000958",
+        "canonicalName": "황어",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "보리멸",
+        "occurrenceCount": 66,
+        "spotCount": 66,
+        "regions": [
+          "강원도",
+          "경상남도",
+          "경상북도",
+          "울산광역시"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000818",
+        "canonicalName": "보리멸",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "문어",
+        "occurrenceCount": 57,
+        "spotCount": 57,
+        "regions": [
+          "전라남도"
+        ],
+        "nameClassification": "UNRESOLVED",
+        "canonicalSpeciesId": null,
+        "canonicalName": null,
+        "currentRuntimeMatch": true,
+        "unresolvedReason": "NO_EXACT_OR_APPROVED_ALIAS_IN_FISH_1258_BASELINE"
+      },
+      {
+        "rawName": "주꾸미",
+        "occurrenceCount": 57,
+        "spotCount": 57,
+        "regions": [
+          "경상남도",
+          "인천광역시",
+          "충청남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "47aa9b93-2b32-4df4-9a2a-45ed3abbd484",
+        "canonicalName": "주꾸미",
+        "currentRuntimeMatch": true,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "고등어",
+        "occurrenceCount": 50,
+        "spotCount": 50,
+        "regions": [
+          "경상남도",
+          "부산광역시",
+          "전라남도",
+          "제주특별자치도",
+          "충청남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000417",
+        "canonicalName": "고등어",
+        "currentRuntimeMatch": true,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "한치",
+        "occurrenceCount": 39,
+        "spotCount": 39,
+        "regions": [
+          "제주특별자치도"
+        ],
+        "nameClassification": "UNRESOLVED",
+        "canonicalSpeciesId": null,
+        "canonicalName": null,
+        "currentRuntimeMatch": false,
+        "unresolvedReason": "NO_EXACT_OR_APPROVED_ALIAS_IN_FISH_1258_BASELINE"
+      },
+      {
+        "rawName": "독가시치",
+        "occurrenceCount": 35,
+        "spotCount": 35,
+        "regions": [
+          "제주특별자치도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000800",
+        "canonicalName": "독가시치",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "민어",
+        "occurrenceCount": 34,
+        "spotCount": 34,
+        "regions": [
+          "인천광역시",
+          "전라남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000840",
+        "canonicalName": "민어",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "백조기",
+        "occurrenceCount": 29,
+        "spotCount": 29,
+        "regions": [
+          "전라남도",
+          "전라북도"
+        ],
+        "nameClassification": "UNRESOLVED",
+        "canonicalSpeciesId": null,
+        "canonicalName": null,
+        "currentRuntimeMatch": false,
+        "unresolvedReason": "NO_EXACT_OR_APPROVED_ALIAS_IN_FISH_1258_BASELINE"
+      },
+      {
+        "rawName": "자리돔",
+        "occurrenceCount": 28,
+        "spotCount": 28,
+        "regions": [
+          "제주특별자치도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000226",
+        "canonicalName": "자리돔",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "망둥어",
+        "occurrenceCount": 22,
+        "spotCount": 22,
+        "regions": [
+          "경상남도",
+          "인천광역시",
+          "전라남도"
+        ],
+        "nameClassification": "AGGREGATED_TAXON",
+        "canonicalSpeciesId": null,
+        "canonicalName": null,
+        "currentRuntimeMatch": false,
+        "unresolvedReason": "비표준 집계명이며 단일 종으로 연결하지 않는다."
+      },
+      {
+        "rawName": "농어/  삼치",
+        "occurrenceCount": 19,
+        "spotCount": 19,
+        "regions": [
+          "전라남도"
+        ],
+        "nameClassification": "AMBIGUOUS",
+        "canonicalSpeciesId": null,
+        "canonicalName": null,
+        "currentRuntimeMatch": false,
+        "unresolvedReason": "한 source field에 두 종이 결합되어 자동 분리하지 않는다."
+      },
+      {
+        "rawName": "망둑어",
+        "occurrenceCount": 19,
+        "spotCount": 19,
+        "regions": [
+          "경기도",
+          "인천광역시",
+          "전라남도"
+        ],
+        "nameClassification": "AGGREGATED_TAXON",
+        "canonicalSpeciesId": null,
+        "canonicalName": null,
+        "currentRuntimeMatch": false,
+        "unresolvedReason": "복수 망둑어류를 포괄해 단일 종으로 연결하지 않는다."
+      },
+      {
+        "rawName": "방어",
+        "occurrenceCount": 19,
+        "spotCount": 19,
+        "regions": [
+          "경상북도",
+          "전라북도",
+          "제주특별자치도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000501",
+        "canonicalName": "방어",
+        "currentRuntimeMatch": true,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "학꽁치",
+        "occurrenceCount": 18,
+        "spotCount": 18,
+        "regions": [
+          "강원도",
+          "부산광역시",
+          "전라남도",
+          "충청남도"
+        ],
+        "nameClassification": "TYPO_VARIANT",
+        "canonicalSpeciesId": "BM-SPECIES-000884",
+        "canonicalName": "학공치",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "부세",
+        "occurrenceCount": 17,
+        "spotCount": 17,
+        "regions": [
+          "전라북도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000842",
+        "canonicalName": "부세",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "간재미",
+        "occurrenceCount": 15,
+        "spotCount": 15,
+        "regions": [
+          "인천광역시",
+          "전라남도"
+        ],
+        "nameClassification": "UNRESOLVED",
+        "canonicalSpeciesId": null,
+        "canonicalName": null,
+        "currentRuntimeMatch": false,
+        "unresolvedReason": "NO_EXACT_OR_APPROVED_ALIAS_IN_FISH_1258_BASELINE"
+      },
+      {
+        "rawName": "쏨뱅이",
+        "occurrenceCount": 12,
+        "spotCount": 12,
+        "regions": [
+          "인천광역시"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000019",
+        "canonicalName": "쏨뱅이",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "전갱이",
+        "occurrenceCount": 12,
+        "spotCount": 12,
+        "regions": [
+          "경상남도",
+          "부산광역시",
+          "울산광역시",
+          "전라남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000488",
+        "canonicalName": "전갱이",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "뱅어돔",
+        "occurrenceCount": 11,
+        "spotCount": 11,
+        "regions": [
+          "전라남도"
+        ],
+        "nameClassification": "UNRESOLVED",
+        "canonicalSpeciesId": null,
+        "canonicalName": null,
+        "currentRuntimeMatch": false,
+        "unresolvedReason": "NO_EXACT_OR_APPROVED_ALIAS_IN_FISH_1258_BASELINE"
+      },
+      {
+        "rawName": "벤자리",
+        "occurrenceCount": 11,
+        "spotCount": 11,
+        "regions": [
+          "제주특별자치도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000792",
+        "canonicalName": "벤자리",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "양태",
+        "occurrenceCount": 10,
+        "spotCount": 10,
+        "regions": [
+          "인천광역시",
+          "전라남도",
+          "전라북도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000065",
+        "canonicalName": "양태",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "짱뚱어",
+        "occurrenceCount": 9,
+        "spotCount": 9,
+        "regions": [
+          "전라남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000385",
+        "canonicalName": "짱뚱어",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "망농어",
+        "occurrenceCount": 8,
+        "spotCount": 8,
+        "regions": [
+          "전라북도"
+        ],
+        "nameClassification": "UNRESOLVED",
+        "canonicalSpeciesId": null,
+        "canonicalName": null,
+        "currentRuntimeMatch": false,
+        "unresolvedReason": "NO_EXACT_OR_APPROVED_ALIAS_IN_FISH_1258_BASELINE"
+      },
+      {
+        "rawName": "다금바리",
+        "occurrenceCount": 5,
+        "spotCount": 5,
+        "regions": [
+          "제주특별자치도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-001227",
+        "canonicalName": "다금바리",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "열기",
+        "occurrenceCount": 5,
+        "spotCount": 5,
+        "regions": [
+          "전라남도"
+        ],
+        "nameClassification": "UNRESOLVED",
+        "canonicalSpeciesId": null,
+        "canonicalName": null,
+        "currentRuntimeMatch": false,
+        "unresolvedReason": "NO_EXACT_OR_APPROVED_ALIAS_IN_FISH_1258_BASELINE"
+      },
+      {
+        "rawName": "망상어",
+        "occurrenceCount": 4,
+        "spotCount": 4,
+        "regions": [
+          "부산광역시",
+          "전라남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000223",
+        "canonicalName": "망상어",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "보구치",
+        "occurrenceCount": 4,
+        "spotCount": 4,
+        "regions": [
+          "전라북도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000839",
+        "canonicalName": "보구치",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "살오징어",
+        "occurrenceCount": 4,
+        "spotCount": 4,
+        "regions": [
+          "경상남도"
+        ],
+        "nameClassification": "UNRESOLVED",
+        "canonicalSpeciesId": null,
+        "canonicalName": null,
+        "currentRuntimeMatch": false,
+        "unresolvedReason": "NO_EXACT_OR_APPROVED_ALIAS_IN_FISH_1258_BASELINE"
+      },
+      {
+        "rawName": "장대",
+        "occurrenceCount": 4,
+        "spotCount": 4,
+        "regions": [
+          "전라북도"
+        ],
+        "nameClassification": "SAFE_ALIAS",
+        "canonicalSpeciesId": "BM-SPECIES-000065",
+        "canonicalName": "양태",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "성대",
+        "occurrenceCount": 3,
+        "spotCount": 3,
+        "regions": [
+          "울산광역시"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-001135",
+        "canonicalName": "성대",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "쏨벵이",
+        "occurrenceCount": 2,
+        "spotCount": 2,
+        "regions": [
+          "전라남도"
+        ],
+        "nameClassification": "UNRESOLVED",
+        "canonicalSpeciesId": null,
+        "canonicalName": null,
+        "currentRuntimeMatch": false,
+        "unresolvedReason": "NO_EXACT_OR_APPROVED_ALIAS_IN_FISH_1258_BASELINE"
+      },
+      {
+        "rawName": "쥐치",
+        "occurrenceCount": 2,
+        "spotCount": 2,
+        "regions": [
+          "경상남도"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-000122",
+        "canonicalName": "쥐치",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "전어",
+        "occurrenceCount": 1,
+        "spotCount": 1,
+        "regions": [
+          "부산광역시"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-001037",
+        "canonicalName": "전어",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      },
+      {
+        "rawName": "쥐노래미",
+        "occurrenceCount": 1,
+        "spotCount": 1,
+        "regions": [
+          "부산광역시"
+        ],
+        "nameClassification": "CANONICAL_NAME",
+        "canonicalSpeciesId": "BM-SPECIES-001165",
+        "canonicalName": "쥐노래미",
+        "currentRuntimeMatch": false,
+        "unresolvedReason": null
+      }
+    ],
+    "currentMappedSpots": 1386,
+    "currentUnmappedSpots": 19,
+    "potentialMappedSpotsWithFishBaseline": 1405,
+    "potentialUnmappedSpotsWithFishBaseline": 0,
+    "potentialMappingGain": 19,
+    "note": "Potential mapping is identity/search coverage only; it does not enable condition profiles or mutate runtime mapping."
+  },
+  "batchPlan": {
+    "batchCount": 7,
+    "sizes": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      58
+    ],
+    "batch1Count": 200
+  },
+  "exceptions": {
+    "total": 43,
+    "canonicalSpecies": 40,
+    "categoryCounts": {
+      "AGGREGATED_TAXON": 34,
+      "ALIAS_REVIEW_REQUIRED": 4,
+      "COMMERCIAL_NAME": 1,
+      "CONDITION_ID_OUTSIDE_BASELINE": 2,
+      "CONFLICT": 1,
+      "CROSS_DOMAIN_HOMONYM": 1,
+      "PARTIAL": 1
+    }
+  },
+  "conditionProfilePool": {
+    "candidateCount": 38,
+    "profileResearchPerformed": false
+  },
+  "invariants": {
+    "productionMutation": 0,
+    "runtimeMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0,
+    "automaticMergeOrDelete": 0,
+    "oneByOneWorkflow": 0,
+    "conditionProfileResearch": 0
+  }
+}

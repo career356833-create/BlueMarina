@@ -1,0 +1,399 @@
+{
+  "schemaVersion": 1,
+  "program": "Fish Canonical Bulk Normalization Program V1",
+  "generatedOn": "2026-09-18",
+  "candidateCount": 38,
+  "scope": "PRIORITY_ONLY_NO_PROFILE_RESEARCH",
+  "selection": "Current 10 protected first, then Fishing Spot usage frequency.",
+  "candidates": [
+    {
+      "speciesId": "BM-SPECIES-000751",
+      "koreanName": "감성돔",
+      "fishingSpotUsageCount": 991,
+      "currentConditionEnabled": true,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "CURRENT_CONDITION_IDENTITY_PROTECTED"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000188",
+      "koreanName": "농어",
+      "fishingSpotUsageCount": 969,
+      "currentConditionEnabled": true,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "CURRENT_CONDITION_IDENTITY_PROTECTED"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "koreanName": "조피볼락",
+      "fishingSpotUsageCount": 776,
+      "currentConditionEnabled": true,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "CURRENT_CONDITION_IDENTITY_PROTECTED"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "koreanName": "참돔",
+      "fishingSpotUsageCount": 640,
+      "currentConditionEnabled": true,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "CURRENT_CONDITION_IDENTITY_PROTECTED"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000465",
+      "koreanName": "넙치",
+      "fishingSpotUsageCount": 441,
+      "currentConditionEnabled": true,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "CURRENT_CONDITION_IDENTITY_PROTECTED"
+      ]
+    },
+    {
+      "speciesId": "47aa9b93-2b32-4df4-9a2a-45ed3abbd484",
+      "koreanName": "주꾸미",
+      "fishingSpotUsageCount": 57,
+      "currentConditionEnabled": true,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "CURRENT_CONDITION_IDENTITY_PROTECTED"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-003107",
+      "koreanName": "주꾸미",
+      "fishingSpotUsageCount": 57,
+      "currentConditionEnabled": true,
+      "reasons": [
+        "CURRENT_CONDITION_IDENTITY_PROTECTED",
+        "CROSS_SYSTEM_IDENTITY_REVIEW_REQUIRED"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-003111",
+      "koreanName": "문어",
+      "fishingSpotUsageCount": 57,
+      "currentConditionEnabled": true,
+      "reasons": [
+        "CURRENT_CONDITION_IDENTITY_PROTECTED",
+        "CROSS_SYSTEM_IDENTITY_REVIEW_REQUIRED"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000417",
+      "koreanName": "고등어",
+      "fishingSpotUsageCount": 50,
+      "currentConditionEnabled": true,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "CURRENT_CONDITION_IDENTITY_PROTECTED"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "koreanName": "방어",
+      "fishingSpotUsageCount": 19,
+      "currentConditionEnabled": true,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "CURRENT_CONDITION_IDENTITY_PROTECTED"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001164",
+      "koreanName": "노래미",
+      "fishingSpotUsageCount": 686,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000002",
+      "koreanName": "볼락",
+      "fishingSpotUsageCount": 661,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000278",
+      "koreanName": "돌돔",
+      "fishingSpotUsageCount": 455,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000908",
+      "koreanName": "붕장어",
+      "fishingSpotUsageCount": 413,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000097",
+      "koreanName": "숭어",
+      "fishingSpotUsageCount": 369,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000279",
+      "koreanName": "벵에돔",
+      "fishingSpotUsageCount": 296,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000548",
+      "koreanName": "도다리",
+      "fishingSpotUsageCount": 200,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000500",
+      "koreanName": "부시리",
+      "fishingSpotUsageCount": 117,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000884",
+      "koreanName": "학공치",
+      "fishingSpotUsageCount": 117,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000408",
+      "koreanName": "삼치",
+      "fishingSpotUsageCount": 97,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000958",
+      "koreanName": "황어",
+      "fishingSpotUsageCount": 84,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000818",
+      "koreanName": "보리멸",
+      "fishingSpotUsageCount": 66,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000800",
+      "koreanName": "독가시치",
+      "fishingSpotUsageCount": 35,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000840",
+      "koreanName": "민어",
+      "fishingSpotUsageCount": 34,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000226",
+      "koreanName": "자리돔",
+      "fishingSpotUsageCount": 28,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000842",
+      "koreanName": "부세",
+      "fishingSpotUsageCount": 17,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000065",
+      "koreanName": "양태",
+      "fishingSpotUsageCount": 14,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000019",
+      "koreanName": "쏨뱅이",
+      "fishingSpotUsageCount": 12,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000488",
+      "koreanName": "전갱이",
+      "fishingSpotUsageCount": 12,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000792",
+      "koreanName": "벤자리",
+      "fishingSpotUsageCount": 11,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000385",
+      "koreanName": "짱뚱어",
+      "fishingSpotUsageCount": 9,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001227",
+      "koreanName": "다금바리",
+      "fishingSpotUsageCount": 5,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000223",
+      "koreanName": "망상어",
+      "fishingSpotUsageCount": 4,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000839",
+      "koreanName": "보구치",
+      "fishingSpotUsageCount": 4,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001135",
+      "koreanName": "성대",
+      "fishingSpotUsageCount": 3,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000122",
+      "koreanName": "쥐치",
+      "fishingSpotUsageCount": 2,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001037",
+      "koreanName": "전어",
+      "fishingSpotUsageCount": 1,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001165",
+      "koreanName": "쥐노래미",
+      "fishingSpotUsageCount": 1,
+      "currentConditionEnabled": false,
+      "reasons": [
+        "FISHING_SPOT_USAGE",
+        "HIGH_USE_CANONICAL_CANDIDATE"
+      ]
+    }
+  ],
+  "invariants": {
+    "productionMutation": 0,
+    "runtimeMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0,
+    "automaticMergeOrDelete": 0,
+    "oneByOneWorkflow": 0,
+    "conditionProfileResearch": 0
+  }
+}

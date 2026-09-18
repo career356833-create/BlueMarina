@@ -1,0 +1,442 @@
+import assert from "node:assert/strict";
+import crypto from "node:crypto";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
+const BASE_COMMIT = "a985bfa46aac1b99c988db5c314d6b1a3e87d297";
+const GENERATED_ON = "2026-09-18";
+const INPUTS = Object.freeze({
+  nifsImport: ["reports/nifs-staging-import-8-execution.json", "BDB3BE57D1991CFE20E2716D3172DB3030AC738E4827B964033FFF2DC6C103C0"],
+  mbrisReady: ["reports/mbris/mbris-staging-import-manifest-v1.json", "F0B3F234BBEC90E87A7EC34E051828B6C9315E784F4CCBA4F22932A83273F15A"],
+  mbrisReview: ["reports/mbris/mbris-review-ready-import-manifest-v1.json", "D64A90A380551BB7B5C81777199931550CED8976D4D9616A4ABF32587175B481"],
+  baseline: ["reports/mbris/fish-canonical-1258-baseline-v1.json", "D1CEA9EFD858F6C04A162B55956558DF9530B9A321C5B1BCD91D8B081047D5DE"],
+  aliases: ["data/mbris/mappings/fish-alias-registry.json", "BEFFCF01336B5674133C26B2F037624F63BAF8BBCEB77887D256C905004D6DC6"],
+  approvedAliases: ["data/mbris/mappings/fish-data-approved-aliases.json", "A7A0F94ADB85226F94FF940F3AA6DB3B89BD3648627CDAF41C176CFE09E7C16A"],
+  crosswalk: ["data/mbris/mappings/nifs-mbris-taxonomy-crosswalk.json", "F588CAEEFEEB0799DF76971082F5C466A7919CCCABEA0B152A6A596354C9F8AA"],
+  mottledSkate: ["reports/mbris/mbris-mottled-skate-postcheck-v1.json", "8788678DD18F6A80AE271A1037405C23642869C5A8AE3794DD428A1535D2B555"],
+  spots: ["src/data/fishing-spots.json", "5707FB2E057A039B7F572ECE7E94A0936ED5B73F204613A3E3FCE9A45CDC74BA"],
+  runtimeMapping: ["src/lib/fishing-condition/fishing-spot-integration.ts", "3D09BE7E708BFBD7DA83E213238D662024F32B424F3DC839D5A78BE3D04DEB0E"],
+  conditionProfiles: ["data/fishing-condition/species-environment/v2/species-environment-profiles.json", "EB365314A15444D7407B7C88B3FD58D95004EAEAFE6723EFFF620B2C7F705F98"],
+});
+const OUTPUTS = Object.freeze({
+  inventory: "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+  batch1: "data/fish-canonical/bulk/v1/batch-001.json",
+  audit: "reports/fish-canonical/bulk-normalization-audit-v1.json",
+  plan: "reports/fish-canonical/bulk-normalization-batch-plan-v1.json",
+  exceptions: "reports/fish-canonical/bulk-normalization-exceptions-v1.json",
+  conditionPool: "reports/fish-canonical/condition-profile-priority-pool-v1.json",
+});
+
+const CURRENT_CONDITION = Object.freeze([
+  ["BM-SPECIES-000755", "참돔"], ["BM-SPECIES-000751", "감성돔"], ["BM-SPECIES-000188", "농어"],
+  ["BM-SPECIES-000012", "조피볼락"], ["BM-SPECIES-000465", "넙치"], ["BM-SPECIES-000444", "갈치"],
+  ["BM-SPECIES-000417", "고등어"], ["BM-SPECIES-000501", "방어"], ["BM-SPECIES-003107", "주꾸미"],
+  ["BM-SPECIES-003111", "문어"],
+]);
+const RUNTIME_ALIASES = Object.freeze({ 광어: "넙치", 우럭: "조피볼락" });
+const IDENTITY_STATUSES = Object.freeze(["VERIFIED", "PARTIAL", "AMBIGUOUS", "CONFLICT", "DUPLICATE_CANDIDATE", "UNRESOLVED"]);
+const NAME_CLASSIFICATIONS = Object.freeze(["CANONICAL_NAME", "SAFE_ALIAS", "SCIENTIFIC_SYNONYM", "COMMERCIAL_NAME", "AGGREGATED_TAXON", "REGIONAL_NAME", "TYPO_VARIANT", "AMBIGUOUS", "UNRESOLVED"]);
+const CHANGE_TYPES = Object.freeze(["NO_CHANGE", "NAME_NORMALIZED", "SCIENTIFIC_NAME_CONFIRMED", "ALIAS_ADDED_CANDIDATE", "SYNONYM_LINKED", "DUPLICATE_CANDIDATE", "CONFLICT_REVIEW_REQUIRED", "UNRESOLVED"]);
+const SPECIAL_RAW_NAMES = Object.freeze({
+  갑오징어: ["AGGREGATED_TAXON", null, "복수 갑오징어류를 포괄해 단일 종으로 연결하지 않는다."],
+  망둑어: ["AGGREGATED_TAXON", null, "복수 망둑어류를 포괄해 단일 종으로 연결하지 않는다."],
+  망둥어: ["AGGREGATED_TAXON", null, "비표준 집계명이며 단일 종으로 연결하지 않는다."],
+  "농어/  삼치": ["AMBIGUOUS", null, "한 source field에 두 종이 결합되어 자동 분리하지 않는다."],
+  무늬오징어: ["REGIONAL_NAME", "흰꼴뚜기", "공식 근거가 있는 지역명이나 대상 identity가 Fish 1,258 baseline 밖이다."],
+  학꽁치: ["TYPO_VARIANT", "학공치", "명시적 표기 변형 후보이며 fuzzy matching은 사용하지 않는다."],
+});
+
+function bytes(relativePath) { return fs.readFileSync(path.join(ROOT, relativePath)); }
+function json(relativePath) { return JSON.parse(bytes(relativePath).toString("utf8")); }
+function sha256(value) { return crypto.createHash("sha256").update(value).digest("hex").toUpperCase(); }
+function sortedUnique(values) { return [...new Set(values.filter((value) => value !== null && value !== undefined && value !== ""))].sort((a, b) => String(a).localeCompare(String(b), "ko")); }
+function countBy(values, keyFor) {
+  const counts = {};
+  for (const value of values) { const key = keyFor(value); counts[key] = (counts[key] ?? 0) + 1; }
+  return Object.fromEntries(Object.entries(counts).sort(([a], [b]) => a.localeCompare(b)));
+}
+function completeCounts(keys, counts) { return Object.fromEntries(keys.map((key) => [key, counts[key] ?? 0])); }
+function groupDuplicates(rows, keyFor) {
+  const groups = new Map();
+  for (const row of rows) {
+    const key = keyFor(row);
+    if (!key) continue;
+    const list = groups.get(key) ?? [];
+    list.push(row);
+    groups.set(key, list);
+  }
+  return [...groups.entries()].filter(([, list]) => list.length > 1).map(([value, list]) => ({ value, speciesIds: list.map((row) => row.speciesId).sort() }));
+}
+function sourceInputMetadata() {
+  return Object.fromEntries(Object.entries(INPUTS).map(([key, [inputPath, expected]]) => [key, { path: inputPath, sha256: expected }]));
+}
+
+function build() {
+  const loaded = {};
+  for (const [key, [inputPath, expected]] of Object.entries(INPUTS)) {
+    const inputBytes = bytes(inputPath);
+    assert.equal(sha256(inputBytes), expected, `${inputPath} changed`);
+    loaded[key] = key === "runtimeMapping" ? inputBytes.toString("utf8") : JSON.parse(inputBytes.toString("utf8"));
+  }
+  assert.equal(loaded.baseline.baseline.species, 1258);
+  assert.deepEqual(loaded.baseline.baseline.sourceComposition, { NIFS: 8, MBRISCanonicalSpecies: 1250 });
+  assert.equal(loaded.nifsImport.records.length, 8);
+  assert.equal(loaded.mbrisReady.newSpecies.length, 1114);
+  assert.equal(loaded.mbrisReview.rows.length, 136);
+
+  const approvedAliasRows = loaded.aliases.filter((row) => row.status === "approved");
+  const manualAliasRows = loaded.aliases.filter((row) => row.status === "manual_review");
+  const aliasById = new Map();
+  for (const row of approvedAliasRows) {
+    const list = aliasById.get(row.internalId) ?? [];
+    if (row.sourceName && row.sourceName !== row.canonicalName) list.push(row.sourceName);
+    aliasById.set(row.internalId, list);
+  }
+  for (const row of loaded.approvedAliases.filter((item) => item.approvalStatus === "approved")) {
+    const list = aliasById.get(row.internalId) ?? [];
+    list.push(row.sourceName);
+    aliasById.set(row.internalId, list);
+  }
+  const manualAliasesById = new Map();
+  for (const row of manualAliasRows) {
+    const list = manualAliasesById.get(row.internalId) ?? [];
+    list.push({ name: row.sourceName, type: row.aliasType, confidence: row.confidence });
+    manualAliasesById.set(row.internalId, list);
+  }
+  const conditionIds = new Set(CURRENT_CONDITION.map(([id]) => id));
+  const conditionNames = new Set(CURRENT_CONDITION.map(([, name]) => name));
+
+  const mbrisRows = [...loaded.mbrisReady.newSpecies, ...loaded.mbrisReview.rows].map((row) => {
+    const scientificName = row.normalizedScientificName ?? row.scientificName;
+    const taxonomy = row.taxonomy ?? {};
+    const sourceId = row.mbrisSourceId ?? row.relationPlan?.mbrisSourceId ?? row.lineagePlan?.sourceId;
+    const aliases = sortedUnique((aliasById.get(row.internalId) ?? []).filter((name) => name !== row.koreanName));
+    return {
+      speciesId: row.internalId,
+      sourceSystem: "MBRIS",
+      koreanName: row.koreanName,
+      scientificName,
+      acceptedScientificName: scientificName,
+      rank: "SPECIES",
+      family: taxonomy.family ?? null,
+      genus: taxonomy.genus ?? scientificName?.split(/\s+/)[0] ?? null,
+      aliases,
+      synonyms: [],
+      sourceRefs: [{ provider: "MBRIS", sourceId, artifact: row.legacyMappingRequired ? INPUTS.mbrisReview[0] : INPUTS.mbrisReady[0] }],
+      taxonomyStatus: "SOURCE_CANONICAL",
+      identityStatus: "VERIFIED",
+      duplicateStatus: "UNIQUE",
+      fishingSpotUsageCount: 0,
+      conditionProfileStatus: conditionIds.has(row.internalId) ? "CURRENT_ENABLED" : "NOT_ENABLED",
+      publishStatus: row.publishStatus ?? row.initialPublishStatus ?? "draft",
+      reviewStatus: row.reviewStatus ?? row.initialReviewStatus ?? "pending",
+      manualAliasReview: manualAliasesById.get(row.internalId) ?? [],
+    };
+  });
+
+  const crosswalkBySource = new Map(loaded.crosswalk.map((row) => [row.nifsSourceId, row]));
+  const nifsRows = loaded.nifsImport.records.map((row) => {
+    const crosswalk = crosswalkBySource.get(row.sourceId);
+    let scientificName = row.canonicalScientificName;
+    if (row.sourceId === loaded.mottledSkate.target.source_id) scientificName = loaded.mottledSkate.target.scientific_name;
+    const acceptedScientificName = crosswalk?.sameSpecies && crosswalk.reviewStatus === "approved"
+      ? crosswalk.mbrisScientificNameCanonical
+      : scientificName;
+    let identityStatus = "VERIFIED";
+    let taxonomyStatus = acceptedScientificName === scientificName ? "SOURCE_CANONICAL" : "ACCEPTED_NAME_UPDATE_AVAILABLE";
+    if (crosswalk?.reviewStatus === "unresolved" || crosswalk?.sameSpecies === false) {
+      identityStatus = "CONFLICT";
+      taxonomyStatus = "TAXONOMY_CONFLICT";
+    } else if (acceptedScientificName !== scientificName) identityStatus = "PARTIAL";
+    const synonyms = sortedUnique([
+      ...(row.scientificAliases ?? []),
+      ...(acceptedScientificName !== scientificName ? [scientificName] : []),
+    ]);
+    const evidenceUrls = crosswalk?.evidence?.map((item) => item.url).filter(Boolean) ?? [];
+    return {
+      speciesId: row.speciesId,
+      sourceSystem: "NIFS",
+      koreanName: row.koreanName,
+      scientificName,
+      acceptedScientificName,
+      rank: "SPECIES",
+      family: null,
+      genus: acceptedScientificName?.split(/\s+/)[0] ?? null,
+      aliases: [],
+      synonyms,
+      sourceRefs: [
+        { provider: "NIFS", sourceId: row.sourceId, artifact: INPUTS.nifsImport[0] },
+        ...(crosswalk ? [{ provider: "CROSSWALK", sourceId: crosswalk.mbrisInternalId, artifact: INPUTS.crosswalk[0], urls: evidenceUrls }] : []),
+      ],
+      taxonomyStatus,
+      identityStatus,
+      duplicateStatus: "UNIQUE",
+      fishingSpotUsageCount: 0,
+      conditionProfileStatus: conditionNames.has(row.koreanName) ? "CURRENT_ENABLED_NAME_BOUNDARY" : "NOT_ENABLED",
+      publishStatus: "draft",
+      reviewStatus: "pending",
+      manualAliasReview: [],
+    };
+  });
+
+  const canonical = [...mbrisRows, ...nifsRows].sort((a, b) => a.speciesId.localeCompare(b.speciesId));
+  assert.equal(canonical.length, 1258);
+  assert.equal(new Set(canonical.map((row) => row.speciesId)).size, 1258);
+  const scientificDuplicateGroups = groupDuplicates(canonical, (row) => row.acceptedScientificName?.trim().toLowerCase());
+  const koreanDuplicateGroups = groupDuplicates(canonical, (row) => row.koreanName?.trim());
+  const duplicateIds = new Set([...scientificDuplicateGroups, ...koreanDuplicateGroups].flatMap((group) => group.speciesIds));
+  for (const row of canonical) {
+    if (duplicateIds.has(row.speciesId)) {
+      row.duplicateStatus = "DUPLICATE_CANDIDATE";
+      if (row.identityStatus === "VERIFIED") row.identityStatus = "DUPLICATE_CANDIDATE";
+    }
+  }
+
+  const byKorean = new Map();
+  const byId = new Map(canonical.map((row) => [row.speciesId, row]));
+  for (const row of canonical) {
+    const list = byKorean.get(row.koreanName) ?? [];
+    list.push(row);
+    byKorean.set(row.koreanName, list);
+  }
+  const approvedAliasByName = new Map();
+  for (const alias of approvedAliasRows) {
+    if (!byId.has(alias.internalId)) continue;
+    const list = approvedAliasByName.get(alias.sourceName) ?? [];
+    list.push(alias.internalId);
+    approvedAliasByName.set(alias.sourceName, list);
+  }
+  for (const alias of loaded.approvedAliases.filter((item) => item.approvalStatus === "approved" && byId.has(item.internalId))) {
+    const list = approvedAliasByName.get(alias.sourceName) ?? [];
+    list.push(alias.internalId);
+    approvedAliasByName.set(alias.sourceName, list);
+  }
+
+  const spots = loaded.spots;
+  assert.equal(spots.length, 1405);
+  const rawMap = new Map();
+  const currentCanonicalNames = new Set(CURRENT_CONDITION.map(([, name]) => name));
+  const currentMappedSpotIds = new Set();
+  const bulkMappedSpotIds = new Set();
+  for (const spot of spots) {
+    const targets = String(spot.targetFish ?? "").split("|").map((name) => name.trim()).filter(Boolean);
+    let currentMapped = false;
+    let bulkMapped = false;
+    for (const rawName of targets) {
+      const item = rawMap.get(rawName) ?? { rawName, occurrenceCount: 0, spotIds: new Set(), regions: new Set() };
+      item.occurrenceCount += 1;
+      item.spotIds.add(spot.id);
+      item.regions.add(spot.region);
+      rawMap.set(rawName, item);
+      const runtimeName = RUNTIME_ALIASES[rawName] ?? rawName;
+      if (currentCanonicalNames.has(runtimeName)) currentMapped = true;
+      const exact = byKorean.get(rawName) ?? [];
+      const safeAliasIds = sortedUnique(approvedAliasByName.get(rawName) ?? []);
+      if (exact.length === 1 || safeAliasIds.length === 1 || (SPECIAL_RAW_NAMES[rawName]?.[0] === "TYPO_VARIANT" && (byKorean.get(SPECIAL_RAW_NAMES[rawName][1]) ?? []).length === 1)) bulkMapped = true;
+    }
+    if (currentMapped) currentMappedSpotIds.add(spot.id);
+    if (bulkMapped) bulkMappedSpotIds.add(spot.id);
+  }
+  assert.equal(currentMappedSpotIds.size, 1386);
+
+  const rawInventory = [...rawMap.values()].map((item) => {
+    const rawName = item.rawName;
+    const exact = byKorean.get(rawName) ?? [];
+    const safeAliasIds = sortedUnique(approvedAliasByName.get(rawName) ?? []);
+    let nameClassification = "UNRESOLVED";
+    let canonicalSpeciesId = null;
+    let canonicalName = null;
+    let unresolvedReason = "NO_EXACT_OR_APPROVED_ALIAS_IN_FISH_1258_BASELINE";
+    if (exact.length === 1) {
+      nameClassification = "CANONICAL_NAME";
+      canonicalSpeciesId = exact[0].speciesId;
+      canonicalName = exact[0].koreanName;
+      unresolvedReason = null;
+    } else if (safeAliasIds.length === 1) {
+      nameClassification = "SAFE_ALIAS";
+      canonicalSpeciesId = safeAliasIds[0];
+      canonicalName = byId.get(canonicalSpeciesId)?.koreanName ?? null;
+      unresolvedReason = null;
+    } else if (SPECIAL_RAW_NAMES[rawName]) {
+      const [classification, target, reason] = SPECIAL_RAW_NAMES[rawName];
+      nameClassification = classification;
+      const targetRows = target ? byKorean.get(target) ?? [] : [];
+      if (targetRows.length === 1 && classification === "TYPO_VARIANT") {
+        canonicalSpeciesId = targetRows[0].speciesId;
+        canonicalName = target;
+        unresolvedReason = null;
+      } else {
+        canonicalName = target;
+        unresolvedReason = reason;
+      }
+    }
+    if (RUNTIME_ALIASES[rawName]) {
+      const runtimeTarget = byKorean.get(RUNTIME_ALIASES[rawName]) ?? [];
+      if (runtimeTarget.length === 1) {
+        nameClassification = "SAFE_ALIAS";
+        canonicalSpeciesId = runtimeTarget[0].speciesId;
+        canonicalName = runtimeTarget[0].koreanName;
+        unresolvedReason = null;
+      }
+    }
+    if (canonicalSpeciesId && byId.has(canonicalSpeciesId)) byId.get(canonicalSpeciesId).fishingSpotUsageCount += item.spotIds.size;
+    return {
+      rawName,
+      occurrenceCount: item.occurrenceCount,
+      spotCount: item.spotIds.size,
+      regions: sortedUnique([...item.regions]),
+      nameClassification,
+      canonicalSpeciesId,
+      canonicalName,
+      currentRuntimeMatch: currentCanonicalNames.has(RUNTIME_ALIASES[rawName] ?? rawName),
+      unresolvedReason,
+    };
+  }).sort((a, b) => b.spotCount - a.spotCount || a.rawName.localeCompare(b.rawName, "ko"));
+  assert.equal(rawInventory.length, 53);
+
+  const issueMap = new Map();
+  function addIssue(speciesId, category, detail, source = null) {
+    const issue = issueMap.get(speciesId) ?? { speciesId, koreanName: byId.get(speciesId)?.koreanName ?? null, categories: [], details: [], sourceRefs: [] };
+    issue.categories.push(category);
+    issue.details.push(detail);
+    if (source) issue.sourceRefs.push(source);
+    issueMap.set(speciesId, issue);
+  }
+  for (const row of canonical) {
+    if (row.identityStatus !== "VERIFIED") addIssue(row.speciesId, row.identityStatus, `${row.koreanName}: ${row.taxonomyStatus}`, row.sourceRefs[0]);
+    for (const alias of row.manualAliasReview) addIssue(row.speciesId, alias.type === "aggregate_name" ? "AGGREGATED_TAXON" : alias.type === "market_name" ? "COMMERCIAL_NAME" : "ALIAS_REVIEW_REQUIRED", `${alias.name} (${alias.type}, ${alias.confidence})`, { artifact: INPUTS.aliases[0] });
+  }
+  addIssue("CROSS-SYSTEM:우럭", "CROSS_DOMAIN_HOMONYM", "Fishing Spot runtime 우럭→조피볼락 mapping must not resolve to MBRIS non-fish Mya arenaria.", { artifact: INPUTS.runtimeMapping[0] });
+  for (const [id, name] of CURRENT_CONDITION) {
+    if (!byId.has(id)) addIssue(`CONDITION:${id}`, "CONDITION_ID_OUTSIDE_BASELINE", `${name} condition identity is protected but its BM internal ID is outside the enumerated Fish 1,258 baseline.`, { artifact: INPUTS.conditionProfiles[0] });
+  }
+  const exceptions = [...issueMap.values()].map((item) => ({ ...item, categories: sortedUnique(item.categories), details: sortedUnique(item.details), sourceRefs: item.sourceRefs })).sort((a, b) => a.speciesId.localeCompare(b.speciesId));
+  const canonicalExceptionIds = new Set(exceptions.filter((item) => byId.has(item.speciesId)).map((item) => item.speciesId));
+
+  const priorityRows = [...canonical].sort((a, b) => {
+    const aCondition = a.conditionProfileStatus.startsWith("CURRENT") ? 1 : 0;
+    const bCondition = b.conditionProfileStatus.startsWith("CURRENT") ? 1 : 0;
+    const aException = canonicalExceptionIds.has(a.speciesId) ? 1 : 0;
+    const bException = canonicalExceptionIds.has(b.speciesId) ? 1 : 0;
+    return bCondition - aCondition || b.fishingSpotUsageCount - a.fishingSpotUsageCount || b.aliases.length - a.aliases.length || aException - bException || a.speciesId.localeCompare(b.speciesId);
+  });
+  const batchSizes = [200, 200, 200, 200, 200, 200, 58];
+  const batches = [];
+  let offset = 0;
+  for (let index = 0; index < batchSizes.length; index += 1) {
+    const rows = priorityRows.slice(offset, offset + batchSizes[index]);
+    offset += batchSizes[index];
+    batches.push({
+      batchId: `BATCH-${String(index + 1).padStart(3, "0")}`,
+      size: rows.length,
+      speciesIds: rows.map((row) => row.speciesId),
+      rationale: index === 0 ? "Fishing Spot usage, protected condition identities, approved aliases, then clear source-backed identities." : index === batchSizes.length - 1 ? "Final deterministic remainder." : "Remaining source-backed identities in deterministic priority order.",
+      expectedExceptionCount: rows.filter((row) => canonicalExceptionIds.has(row.speciesId)).length,
+    });
+  }
+  assert.equal(offset, 1258);
+  assert.equal(new Set(batches.flatMap((batch) => batch.speciesIds)).size, 1258);
+
+  const batch1Rows = priorityRows.slice(0, 200).map((row) => {
+    let changeType = "NO_CHANGE";
+    if (row.identityStatus === "CONFLICT") changeType = "CONFLICT_REVIEW_REQUIRED";
+    else if (row.duplicateStatus === "DUPLICATE_CANDIDATE") changeType = "DUPLICATE_CANDIDATE";
+    else if (row.scientificName !== row.acceptedScientificName) changeType = "SCIENTIFIC_NAME_CONFIRMED";
+    else if (row.synonyms.length > 0) changeType = "SYNONYM_LINKED";
+    else if (row.aliases.length > 0) changeType = "ALIAS_ADDED_CANDIDATE";
+    return {
+      speciesId: row.speciesId,
+      original: { koreanName: row.koreanName, scientificName: row.scientificName, aliases: [], synonyms: [] },
+      normalized: { canonicalName: row.koreanName, scientificName: row.acceptedScientificName, aliases: row.aliases, synonyms: row.synonyms, rank: row.rank, family: row.family, genus: row.genus },
+      identityStatus: row.identityStatus,
+      sourceRefs: row.sourceRefs,
+      changeType,
+      exception: canonicalExceptionIds.has(row.speciesId),
+    };
+  });
+
+  const conditionCandidates = [];
+  const seenConditionKeys = new Set();
+  for (const raw of rawInventory) {
+    if (!raw.canonicalSpeciesId || seenConditionKeys.has(raw.canonicalSpeciesId)) continue;
+    const row = byId.get(raw.canonicalSpeciesId);
+    conditionCandidates.push({ speciesId: row.speciesId, koreanName: row.koreanName, fishingSpotUsageCount: row.fishingSpotUsageCount, currentConditionEnabled: row.conditionProfileStatus.startsWith("CURRENT"), reasons: ["FISHING_SPOT_USAGE", ...(row.conditionProfileStatus.startsWith("CURRENT") ? ["CURRENT_CONDITION_IDENTITY_PROTECTED"] : ["HIGH_USE_CANONICAL_CANDIDATE"])] });
+    seenConditionKeys.add(raw.canonicalSpeciesId);
+  }
+  for (const [id, name] of CURRENT_CONDITION) {
+    if (seenConditionKeys.has(id) || byId.has(id)) continue;
+    conditionCandidates.push({ speciesId: id, koreanName: name, fishingSpotUsageCount: rawInventory.find((row) => row.rawName === name)?.spotCount ?? 0, currentConditionEnabled: true, reasons: ["CURRENT_CONDITION_IDENTITY_PROTECTED", "CROSS_SYSTEM_IDENTITY_REVIEW_REQUIRED"] });
+    seenConditionKeys.add(id);
+  }
+  conditionCandidates.sort((a, b) => Number(b.currentConditionEnabled) - Number(a.currentConditionEnabled) || b.fishingSpotUsageCount - a.fishingSpotUsageCount || a.speciesId.localeCompare(b.speciesId));
+  const conditionPoolRows = conditionCandidates.slice(0, 40);
+  assert.ok(conditionPoolRows.length >= 30 && conditionPoolRows.length <= 50);
+
+  const invariants = { productionMutation: 0, runtimeMutation: 0, databaseWrite: 0, supabaseWrite: 0, automaticMergeOrDelete: 0, oneByOneWorkflow: 0, conditionProfileResearch: 0 };
+  const inputMetadata = sourceInputMetadata();
+  const inventory = { schemaVersion: 1, program: "Fish Canonical Bulk Normalization Program V1", generatedOn: GENERATED_ON, baseCommit: BASE_COMMIT, total: canonical.length, inputs: inputMetadata, species: canonical.map(({ manualAliasReview, ...row }) => row), invariants };
+  const exceptionCategoryCounts = countBy(exceptions.flatMap((item) => item.categories), (value) => value);
+  const exceptionArtifact = { schemaVersion: 1, program: inventory.program, generatedOn: GENERATED_ON, exceptionCount: exceptions.length, canonicalSpeciesExceptionCount: canonicalExceptionIds.size, categoryCounts: exceptionCategoryCounts, exceptions, policy: { automaticMerge: false, automaticDelete: false, manualReviewOnlyForExceptions: true }, invariants };
+  const plan = { schemaVersion: 1, program: inventory.program, generatedOn: GENERATED_ON, totalSpecies: 1258, defaultBatchSize: 200, allowedBatchSize: { minimum: 150, maximum: 250, finalRemainderExempt: true }, batchCount: batches.length, batches, coverage: { assigned: batches.reduce((sum, batch) => sum + batch.size, 0), uniqueSpeciesIds: new Set(batches.flatMap((batch) => batch.speciesIds)).size, missing: 0, duplicates: 0 }, invariants };
+  const batch1 = { schemaVersion: 1, program: inventory.program, batchId: "BATCH-001", generatedOn: GENERATED_ON, selectionRationale: batches[0].rationale, processed: batch1Rows.length, counts: completeCounts(CHANGE_TYPES, countBy(batch1Rows, (row) => row.changeType)), exceptionCount: batch1Rows.filter((row) => row.exception).length, rows: batch1Rows, invariants };
+  const conditionPool = { schemaVersion: 1, program: inventory.program, generatedOn: GENERATED_ON, candidateCount: conditionPoolRows.length, scope: "PRIORITY_ONLY_NO_PROFILE_RESEARCH", selection: "Current 10 protected first, then Fishing Spot usage frequency.", candidates: conditionPoolRows, invariants };
+  const identityCounts = completeCounts(IDENTITY_STATUSES, countBy(canonical, (row) => row.identityStatus));
+  const nameCounts = completeCounts(NAME_CLASSIFICATIONS, countBy(rawInventory, (row) => row.nameClassification));
+  const audit = {
+    schemaVersion: 1,
+    program: inventory.program,
+    generatedOn: GENERATED_ON,
+    baseCommit: BASE_COMMIT,
+    decision: "BULK_NORMALIZATION_READY_WITH_EXCEPTIONS",
+    inputs: inputMetadata,
+    canonical: {
+      total: canonical.length,
+      sourceComposition: countBy(canonical, (row) => row.sourceSystem),
+      identityStatus: identityCounts,
+      duplicateScientificNameGroups: scientificDuplicateGroups,
+      duplicateKoreanNameGroups: koreanDuplicateGroups,
+      missingScientificNames: canonical.filter((row) => !row.scientificName).map((row) => row.speciesId),
+      sourceCoverage: { withAtLeastOneSource: canonical.filter((row) => row.sourceRefs.length > 0).length, sourceGap: canonical.filter((row) => row.sourceRefs.length === 0).length },
+      approvedAliasCount: canonical.reduce((sum, row) => sum + row.aliases.length, 0),
+      synonymCount: canonical.reduce((sum, row) => sum + row.synonyms.length, 0),
+    },
+    fishingSpots: {
+      total: spots.length,
+      rawUniqueNames: rawInventory.length,
+      rawNameClassifications: nameCounts,
+      rawInventory,
+      currentMappedSpots: currentMappedSpotIds.size,
+      currentUnmappedSpots: spots.length - currentMappedSpotIds.size,
+      potentialMappedSpotsWithFishBaseline: bulkMappedSpotIds.size,
+      potentialUnmappedSpotsWithFishBaseline: spots.length - bulkMappedSpotIds.size,
+      potentialMappingGain: bulkMappedSpotIds.size - currentMappedSpotIds.size,
+      note: "Potential mapping is identity/search coverage only; it does not enable condition profiles or mutate runtime mapping.",
+    },
+    batchPlan: { batchCount: batches.length, sizes: batches.map((batch) => batch.size), batch1Count: batch1Rows.length },
+    exceptions: { total: exceptions.length, canonicalSpecies: canonicalExceptionIds.size, categoryCounts: exceptionCategoryCounts },
+    conditionProfilePool: { candidateCount: conditionPoolRows.length, profileResearchPerformed: false },
+    invariants,
+  };
+  return { inventory, batch1, audit, plan, exceptions: exceptionArtifact, conditionPool };
+}
+
+function serialize(value) { return `${JSON.stringify(value, null, 2)}\n`; }
+function main() {
+  const result = build();
+  const outputPairs = Object.entries(OUTPUTS).map(([key, outputPath]) => [outputPath, result[key]]);
+  if (process.argv.includes("--check")) {
+    for (const [outputPath, value] of outputPairs) assert.equal(fs.readFileSync(path.join(ROOT, outputPath), "utf8"), serialize(value), `${outputPath} is not deterministic`);
+    console.log("fish canonical bulk normalization artifacts are deterministic");
+    return;
+  }
+  for (const [outputPath, value] of outputPairs) {
+    const absolutePath = path.join(ROOT, outputPath);
+    fs.mkdirSync(path.dirname(absolutePath), { recursive: true });
+    fs.writeFileSync(absolutePath, serialize(value));
+    console.log(`wrote ${outputPath}`);
+  }
+}
+
+main();
