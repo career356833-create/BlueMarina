@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const BASE_COMMIT = "a985bfa46aac1b99c988db5c314d6b1a3e87d297";
 const GENERATED_ON = "2026-09-18";
+const EXPANSION_INPUT = Object.freeze(["reports/fishing-spots/canonical-species-expansion-candidates-v1.json", "D3B628EAEDCC2C2C9BC8AC0A12AD78313E66E722A5E3746FE187321A2DF1FFD2"]);
 const INPUTS = Object.freeze({
   nifsImport: ["reports/nifs-staging-import-8-execution.json", "BDB3BE57D1991CFE20E2716D3172DB3030AC738E4827B964033FFF2DC6C103C0"],
   mbrisReady: ["reports/mbris/mbris-staging-import-manifest-v1.json", "F0B3F234BBEC90E87A7EC34E051828B6C9315E784F4CCBA4F22932A83273F15A"],
@@ -23,10 +24,17 @@ const INPUTS = Object.freeze({
 const OUTPUTS = Object.freeze({
   inventory: "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
   batch1: "data/fish-canonical/bulk/v1/batch-001.json",
+  batch2: "data/fish-canonical/bulk/v1/batch-002.json",
+  batch3: "data/fish-canonical/bulk/v1/batch-003.json",
+  batch4: "data/fish-canonical/bulk/v1/batch-004.json",
+  batch5: "data/fish-canonical/bulk/v1/batch-005.json",
+  batch6: "data/fish-canonical/bulk/v1/batch-006.json",
+  batch7: "data/fish-canonical/bulk/v1/batch-007.json",
   audit: "reports/fish-canonical/bulk-normalization-audit-v1.json",
   plan: "reports/fish-canonical/bulk-normalization-batch-plan-v1.json",
   exceptions: "reports/fish-canonical/bulk-normalization-exceptions-v1.json",
   conditionPool: "reports/fish-canonical/condition-profile-priority-pool-v1.json",
+  completion: "reports/fish-canonical/bulk-normalization-completion-v1.json",
 });
 
 const CURRENT_CONDITION = Object.freeze([
@@ -80,6 +88,9 @@ function build() {
     assert.equal(sha256(inputBytes), expected, `${inputPath} changed`);
     loaded[key] = key === "runtimeMapping" ? inputBytes.toString("utf8") : JSON.parse(inputBytes.toString("utf8"));
   }
+  const expansionBytes = bytes(EXPANSION_INPUT[0]);
+  assert.equal(sha256(expansionBytes), EXPANSION_INPUT[1], `${EXPANSION_INPUT[0]} changed`);
+  const expansionInput = JSON.parse(expansionBytes.toString("utf8"));
   assert.equal(loaded.baseline.baseline.species, 1258);
   assert.deepEqual(loaded.baseline.baseline.sourceComposition, { NIFS: 8, MBRISCanonicalSpecies: 1250 });
   assert.equal(loaded.nifsImport.records.length, 8);
@@ -339,7 +350,8 @@ function build() {
   assert.equal(offset, 1258);
   assert.equal(new Set(batches.flatMap((batch) => batch.speciesIds)).size, 1258);
 
-  const batch1Rows = priorityRows.slice(0, 200).map((row) => {
+  const exceptionById = new Map(exceptions.map((item) => [item.speciesId, item]));
+  function normalizedBatchRow(row) {
     let changeType = "NO_CHANGE";
     if (row.identityStatus === "CONFLICT") changeType = "CONFLICT_REVIEW_REQUIRED";
     else if (row.duplicateStatus === "DUPLICATE_CANDIDATE") changeType = "DUPLICATE_CANDIDATE";
@@ -349,11 +361,29 @@ function build() {
     return {
       speciesId: row.speciesId,
       original: { koreanName: row.koreanName, scientificName: row.scientificName, aliases: [], synonyms: [] },
-      normalized: { canonicalName: row.koreanName, scientificName: row.acceptedScientificName, aliases: row.aliases, synonyms: row.synonyms, rank: row.rank, family: row.family, genus: row.genus },
+      normalized: { koreanName: row.koreanName, canonicalName: row.koreanName, scientificName: row.scientificName, acceptedScientificName: row.acceptedScientificName, aliases: row.aliases, synonyms: row.synonyms, rank: row.rank, family: row.family, genus: row.genus },
+      taxonomyStatus: row.taxonomyStatus,
       identityStatus: row.identityStatus,
       sourceRefs: row.sourceRefs,
+      fishingSpotUsageCount: row.fishingSpotUsageCount,
       changeType,
       exception: canonicalExceptionIds.has(row.speciesId),
+      exceptionReasons: exceptionById.get(row.speciesId)?.details ?? [],
+    };
+  }
+  const batchArtifacts = batches.map((batch) => {
+    const rows = batch.speciesIds.map((speciesId) => normalizedBatchRow(byId.get(speciesId)));
+    return {
+      schemaVersion: 1,
+      program: "Fish Canonical Bulk Normalization Program V1",
+      batchId: batch.batchId,
+      generatedOn: GENERATED_ON,
+      selectionRationale: batch.rationale,
+      processed: rows.length,
+      counts: completeCounts(CHANGE_TYPES, countBy(rows, (row) => row.changeType)),
+      exceptionCount: rows.filter((row) => row.exception).length,
+      rows,
+      invariants: null,
     };
   });
 
@@ -375,12 +405,23 @@ function build() {
   assert.ok(conditionPoolRows.length >= 30 && conditionPoolRows.length <= 50);
 
   const invariants = { productionMutation: 0, runtimeMutation: 0, databaseWrite: 0, supabaseWrite: 0, automaticMergeOrDelete: 0, oneByOneWorkflow: 0, conditionProfileResearch: 0 };
+  for (const batch of batchArtifacts) batch.invariants = invariants;
   const inputMetadata = sourceInputMetadata();
   const inventory = { schemaVersion: 1, program: "Fish Canonical Bulk Normalization Program V1", generatedOn: GENERATED_ON, baseCommit: BASE_COMMIT, total: canonical.length, inputs: inputMetadata, species: canonical.map(({ manualAliasReview, ...row }) => row), invariants };
   const exceptionCategoryCounts = countBy(exceptions.flatMap((item) => item.categories), (value) => value);
-  const exceptionArtifact = { schemaVersion: 1, program: inventory.program, generatedOn: GENERATED_ON, exceptionCount: exceptions.length, canonicalSpeciesExceptionCount: canonicalExceptionIds.size, categoryCounts: exceptionCategoryCounts, exceptions, policy: { automaticMerge: false, automaticDelete: false, manualReviewOnlyForExceptions: true }, invariants };
+  function exceptionGroup(item) {
+    if (item.categories.includes("CONFLICT")) return "TAXONOMY_CONFLICT";
+    if (item.categories.includes("PARTIAL")) return "ACCEPTED_NAME_PARTIAL";
+    if (item.categories.includes("AGGREGATED_TAXON")) return "AGGREGATE_ALIAS";
+    if (item.categories.includes("ALIAS_REVIEW_REQUIRED") || item.categories.includes("COMMERCIAL_NAME")) return "ALIAS_AMBIGUITY";
+    if (item.categories.includes("CROSS_DOMAIN_HOMONYM")) return "CROSS_DOMAIN_HOMONYM";
+    if (item.categories.includes("CONDITION_ID_OUTSIDE_BASELINE")) return "CONDITION_ID_MISMATCH_OR_OUTSIDE_BASELINE";
+    return "OTHER";
+  }
+  const exceptionGroupNames = ["TAXONOMY_CONFLICT", "ACCEPTED_NAME_PARTIAL", "ALIAS_AMBIGUITY", "AGGREGATE_ALIAS", "CROSS_DOMAIN_HOMONYM", "CONDITION_ID_MISMATCH_OR_OUTSIDE_BASELINE", "OTHER"];
+  const categoryGroups = Object.fromEntries(exceptionGroupNames.map((group) => [group, exceptions.filter((item) => exceptionGroup(item) === group).map((item) => item.speciesId)]));
+  const exceptionArtifact = { schemaVersion: 1, program: inventory.program, generatedOn: GENERATED_ON, exceptionCount: exceptions.length, canonicalSpeciesExceptionCount: canonicalExceptionIds.size, categoryCounts: exceptionCategoryCounts, categoryGroups, exceptions, policy: { automaticMerge: false, automaticDelete: false, manualReviewOnlyForExceptions: true, nextReviewMode: "CATEGORY_BATCH" }, invariants };
   const plan = { schemaVersion: 1, program: inventory.program, generatedOn: GENERATED_ON, totalSpecies: 1258, defaultBatchSize: 200, allowedBatchSize: { minimum: 150, maximum: 250, finalRemainderExempt: true }, batchCount: batches.length, batches, coverage: { assigned: batches.reduce((sum, batch) => sum + batch.size, 0), uniqueSpeciesIds: new Set(batches.flatMap((batch) => batch.speciesIds)).size, missing: 0, duplicates: 0 }, invariants };
-  const batch1 = { schemaVersion: 1, program: inventory.program, batchId: "BATCH-001", generatedOn: GENERATED_ON, selectionRationale: batches[0].rationale, processed: batch1Rows.length, counts: completeCounts(CHANGE_TYPES, countBy(batch1Rows, (row) => row.changeType)), exceptionCount: batch1Rows.filter((row) => row.exception).length, rows: batch1Rows, invariants };
   const conditionPool = { schemaVersion: 1, program: inventory.program, generatedOn: GENERATED_ON, candidateCount: conditionPoolRows.length, scope: "PRIORITY_ONLY_NO_PROFILE_RESEARCH", selection: "Current 10 protected first, then Fishing Spot usage frequency.", candidates: conditionPoolRows, invariants };
   const identityCounts = completeCounts(IDENTITY_STATUSES, countBy(canonical, (row) => row.identityStatus));
   const nameCounts = completeCounts(NAME_CLASSIFICATIONS, countBy(rawInventory, (row) => row.nameClassification));
@@ -414,12 +455,56 @@ function build() {
       potentialMappingGain: bulkMappedSpotIds.size - currentMappedSpotIds.size,
       note: "Potential mapping is identity/search coverage only; it does not enable condition profiles or mutate runtime mapping.",
     },
-    batchPlan: { batchCount: batches.length, sizes: batches.map((batch) => batch.size), batch1Count: batch1Rows.length },
+    batchPlan: { batchCount: batches.length, sizes: batches.map((batch) => batch.size), batch1Count: batchArtifacts[0].processed },
     exceptions: { total: exceptions.length, canonicalSpecies: canonicalExceptionIds.size, categoryCounts: exceptionCategoryCounts },
     conditionProfilePool: { candidateCount: conditionPoolRows.length, profileResearchPerformed: false },
     invariants,
   };
-  return { inventory, batch1, audit, plan, exceptions: exceptionArtifact, conditionPool };
+  const allBatchRows = batchArtifacts.flatMap((batch) => batch.rows);
+  const allBatchIds = allBatchRows.map((row) => row.speciesId);
+  assert.equal(allBatchRows.length, 1258);
+  assert.equal(new Set(allBatchIds).size, 1258);
+  assert.deepEqual(new Set(allBatchIds), new Set(canonical.map((row) => row.speciesId)));
+  const synonymOwners = new Map();
+  for (const row of canonical) for (const synonym of row.synonyms) {
+    const key = synonym.trim().toLowerCase();
+    const owners = synonymOwners.get(key) ?? new Set();
+    owners.add(row.speciesId);
+    synonymOwners.set(key, owners);
+  }
+  const acceptedOwners = new Map(canonical.map((row) => [row.acceptedScientificName?.trim().toLowerCase(), row.speciesId]));
+  const synonymCollisionGroups = [...synonymOwners.entries()].filter(([name, owners]) => owners.size > 1 || (acceptedOwners.has(name) && !owners.has(acceptedOwners.get(name)))).map(([value, owners]) => ({ value, speciesIds: sortedUnique([...owners, ...(acceptedOwners.has(value) ? [acceptedOwners.get(value)] : [])]) }));
+  const expansionReconciliation = expansionInput.candidates.map((candidate) => {
+    const matches = byKorean.get(candidate.canonicalName) ?? [];
+    return {
+      canonicalName: candidate.canonicalName,
+      scientificName: candidate.scientificName,
+      affectedSpotCount: candidate.affectedSpotCount,
+      fishCanonicalSpeciesId: matches.length === 1 ? matches[0].speciesId : null,
+      status: matches.length === 1 ? "LINKED_FISH_CANONICAL" : "OUTSIDE_FISH_1258_BASELINE",
+    };
+  });
+  assert.equal(expansionReconciliation.length, 15);
+  const rawWithoutIdentity = rawInventory.filter((row) => !row.canonicalSpeciesId);
+  const completion = {
+    schemaVersion: 1,
+    program: inventory.program,
+    generatedOn: GENERATED_ON,
+    phaseABaselineCommit: "3cd67f74745a8d49666f300013a58292a568766d",
+    decision: "BULK_NORMALIZATION_COMPLETE_WITH_EXCEPTIONS",
+    reconciliation: { totalCanonical: 1258, batchCount: 7, batchSizes: batchArtifacts.map((batch) => batch.processed), totalBatchRows: allBatchRows.length, uniqueBatchSpeciesIds: new Set(allBatchIds).size, missingIds: 0, extraIds: 0, duplicateIds: 0, inventoryIdSetMatch: true, planExactMatch: batchArtifacts.every((batch, index) => JSON.stringify(batch.rows.map((row) => row.speciesId)) === JSON.stringify(plan.batches[index].speciesIds)) },
+    identityStatus: identityCounts,
+    changeTypes: completeCounts(CHANGE_TYPES, countBy(allBatchRows, (row) => row.changeType)),
+    names: { approvedAliasCandidates: canonical.reduce((sum, row) => sum + row.aliases.length, 0), synonyms: canonical.reduce((sum, row) => sum + row.synonyms.length, 0) },
+    exceptions: { total: exceptions.length, canonicalSpecies: canonicalExceptionIds.size, categoryCounts: exceptionCategoryCounts, categoryGroupCounts: Object.fromEntries(Object.entries(categoryGroups).map(([key, value]) => [key, value.length])) },
+    collisions: { acceptedScientificNameGroups: scientificDuplicateGroups, koreanNameGroups: koreanDuplicateGroups, synonymGroups: synonymCollisionGroups, taxonomyConflictSpeciesIds: canonical.filter((row) => row.identityStatus === "CONFLICT").map((row) => row.speciesId) },
+    sourceCoverage: audit.canonical.sourceCoverage,
+    fishingSpots: { currentProductionMapped: currentMappedSpotIds.size, currentProductionUnmapped: spots.length - currentMappedSpotIds.size, potentialIdentityMapped: bulkMappedSpotIds.size, potentialIdentityUnmapped: spots.length - bulkMappedSpotIds.size, potentialGain: bulkMappedSpotIds.size - currentMappedSpotIds.size, rawUniqueNames: rawInventory.length, unresolvedClassificationCount: rawInventory.filter((row) => row.nameClassification === "UNRESOLVED").length, rawNamesWithoutFishBaselineIdentity: rawWithoutIdentity.map((row) => row.rawName) },
+    expansionCandidates: { total: expansionReconciliation.length, linkedFishCanonical: expansionReconciliation.filter((row) => row.fishCanonicalSpeciesId).length, outsideFishBaseline: expansionReconciliation.filter((row) => !row.fishCanonicalSpeciesId).length, rows: expansionReconciliation, source: { path: EXPANSION_INPUT[0], sha256: EXPANSION_INPUT[1] } },
+    conditionProfilePool: { candidateCount: conditionPoolRows.length, profileResearchPerformed: false },
+    invariants,
+  };
+  return { inventory, batch1: batchArtifacts[0], batch2: batchArtifacts[1], batch3: batchArtifacts[2], batch4: batchArtifacts[3], batch5: batchArtifacts[4], batch6: batchArtifacts[5], batch7: batchArtifacts[6], audit, plan, exceptions: exceptionArtifact, conditionPool, completion };
 }
 
 function serialize(value) { return `${JSON.stringify(value, null, 2)}\n`; }

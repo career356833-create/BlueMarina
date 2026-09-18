@@ -13,6 +13,64 @@
     "CROSS_DOMAIN_HOMONYM": 1,
     "PARTIAL": 1
   },
+  "categoryGroups": {
+    "TAXONOMY_CONFLICT": [
+      "07e1852e-0675-4090-8675-cd216fb90ba9"
+    ],
+    "ACCEPTED_NAME_PARTIAL": [
+      "70cb8d81-26a1-4d8b-b000-2b2f2676c345"
+    ],
+    "ALIAS_AMBIGUITY": [
+      "BM-SPECIES-000019",
+      "BM-SPECIES-000122",
+      "BM-SPECIES-000279",
+      "BM-SPECIES-000408"
+    ],
+    "AGGREGATE_ALIAS": [
+      "BM-SPECIES-000042",
+      "BM-SPECIES-000090",
+      "BM-SPECIES-000114",
+      "BM-SPECIES-000143",
+      "BM-SPECIES-000150",
+      "BM-SPECIES-000163",
+      "BM-SPECIES-000165",
+      "BM-SPECIES-000193",
+      "BM-SPECIES-000278",
+      "BM-SPECIES-000280",
+      "BM-SPECIES-000317",
+      "BM-SPECIES-000369",
+      "BM-SPECIES-000412",
+      "BM-SPECIES-000421",
+      "BM-SPECIES-000444",
+      "BM-SPECIES-000445",
+      "BM-SPECIES-000451",
+      "BM-SPECIES-000468",
+      "BM-SPECIES-000470",
+      "BM-SPECIES-000473",
+      "BM-SPECIES-000479",
+      "BM-SPECIES-000495",
+      "BM-SPECIES-000643",
+      "BM-SPECIES-000662",
+      "BM-SPECIES-000684",
+      "BM-SPECIES-000792",
+      "BM-SPECIES-000833",
+      "BM-SPECIES-000839",
+      "BM-SPECIES-000842",
+      "BM-SPECIES-000900",
+      "BM-SPECIES-000958",
+      "BM-SPECIES-001056",
+      "BM-SPECIES-001161",
+      "BM-SPECIES-001188"
+    ],
+    "CROSS_DOMAIN_HOMONYM": [
+      "CROSS-SYSTEM:우럭"
+    ],
+    "CONDITION_ID_MISMATCH_OR_OUTSIDE_BASELINE": [
+      "CONDITION:BM-SPECIES-003107",
+      "CONDITION:BM-SPECIES-003111"
+    ],
+    "OTHER": []
+  },
   "exceptions": [
     {
       "speciesId": "07e1852e-0675-4090-8675-cd216fb90ba9",
@@ -688,7 +746,8 @@
   "policy": {
     "automaticMerge": false,
     "automaticDelete": false,
-    "manualReviewOnlyForExceptions": true
+    "manualReviewOnlyForExceptions": true,
+    "nextReviewMode": "CATEGORY_BATCH"
   },
   "invariants": {
     "productionMutation": 0,

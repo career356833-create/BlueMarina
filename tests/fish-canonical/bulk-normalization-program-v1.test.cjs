@@ -14,6 +14,8 @@ const audit = read("reports/fish-canonical/bulk-normalization-audit-v1.json");
 const plan = read("reports/fish-canonical/bulk-normalization-batch-plan-v1.json");
 const exceptions = read("reports/fish-canonical/bulk-normalization-exceptions-v1.json");
 const conditionPool = read("reports/fish-canonical/condition-profile-priority-pool-v1.json");
+const completion = read("reports/fish-canonical/bulk-normalization-completion-v1.json");
+const batchArtifacts = Array.from({ length: 7 }, (_, index) => read(`data/fish-canonical/bulk/v1/batch-${String(index + 1).padStart(3, "0")}.json`));
 const tool = path.join(root, "tools/fish-canonical/audit-and-build-bulk-normalization.mjs");
 
 test("reconstructs the frozen 1,258 canonical identities", () => {
@@ -86,6 +88,70 @@ test("generates Batch 1 with 200 normalized research rows", () => {
   assert.equal(batch1.processed, 200);
   assert.equal(batch1.rows.length, 200);
   assert.ok(batch1.rows.every((row) => row.original && row.normalized && row.identityStatus && row.changeType && Array.isArray(row.sourceRefs)));
+});
+
+test("persists all seven planned batch artifacts with exact sizes", () => {
+  assert.equal(batchArtifacts.length, 7);
+  assert.deepEqual(batchArtifacts.map((batch) => batch.processed), [200, 200, 200, 200, 200, 200, 58]);
+  assert.deepEqual(batchArtifacts.map((batch) => batch.batchId), ["BATCH-001", "BATCH-002", "BATCH-003", "BATCH-004", "BATCH-005", "BATCH-006", "BATCH-007"]);
+});
+
+test("reconciles all batch IDs as a disjoint exact inventory union", () => {
+  const ids = batchArtifacts.flatMap((batch) => batch.rows.map((row) => row.speciesId));
+  const inventoryIds = inventory.species.map((row) => row.speciesId);
+  assert.equal(ids.length, 1258);
+  assert.equal(new Set(ids).size, 1258);
+  assert.deepEqual(new Set(ids), new Set(inventoryIds));
+  assert.equal(completion.reconciliation.inventoryIdSetMatch, true);
+  assert.equal(completion.reconciliation.planExactMatch, true);
+});
+
+test("preserves the complete row contract in every batch", () => {
+  for (const row of batchArtifacts.flatMap((batch) => batch.rows)) {
+    assert.ok(row.speciesId);
+    assert.ok(Object.hasOwn(row.original, "koreanName"));
+    assert.ok(Object.hasOwn(row.normalized, "koreanName"));
+    assert.ok(Object.hasOwn(row.original, "scientificName"));
+    assert.ok(Object.hasOwn(row.normalized, "acceptedScientificName"));
+    assert.ok(row.taxonomyStatus && row.identityStatus);
+    assert.ok(Array.isArray(row.normalized.aliases));
+    assert.ok(Array.isArray(row.normalized.synonyms));
+    assert.ok(Array.isArray(row.sourceRefs) && row.sourceRefs.length > 0);
+    assert.equal(typeof row.fishingSpotUsageCount, "number");
+    assert.ok(Array.isArray(row.exceptionReasons));
+  }
+});
+
+test("completes scientific, Korean, synonym, and taxonomy collision checks", () => {
+  assert.deepEqual(completion.collisions.acceptedScientificNameGroups, []);
+  assert.deepEqual(completion.collisions.koreanNameGroups, []);
+  assert.deepEqual(completion.collisions.synonymGroups, []);
+  assert.equal(completion.collisions.taxonomyConflictSpeciesIds.length, 1);
+});
+
+test("reconciles all 15 expansion candidates in the bulk context", () => {
+  assert.equal(completion.expansionCandidates.total, 15);
+  assert.equal(completion.expansionCandidates.linkedFishCanonical, 14);
+  assert.equal(completion.expansionCandidates.outsideFishBaseline, 1);
+  assert.equal(completion.expansionCandidates.rows.find((row) => row.canonicalName === "흰꼴뚜기").status, "OUTSIDE_FISH_1258_BASELINE");
+});
+
+test("groups exceptions for category-batch review without losing entries", () => {
+  const grouped = Object.values(exceptions.categoryGroups).flat();
+  assert.equal(grouped.length, exceptions.exceptionCount);
+  assert.equal(new Set(grouped).size, exceptions.exceptionCount);
+  assert.equal(exceptions.policy.nextReviewMode, "CATEGORY_BATCH");
+});
+
+test("records full completion with exceptions and no apply", () => {
+  assert.equal(completion.decision, "BULK_NORMALIZATION_COMPLETE_WITH_EXCEPTIONS");
+  assert.equal(completion.reconciliation.totalBatchRows, 1258);
+  assert.equal(completion.exceptions.total, 43);
+  assert.equal(completion.conditionProfilePool.candidateCount, 38);
+  assert.equal(completion.invariants.productionMutation, 0);
+  assert.equal(completion.invariants.runtimeMutation, 0);
+  assert.equal(completion.invariants.databaseWrite, 0);
+  assert.equal(completion.invariants.supabaseWrite, 0);
 });
 
 test("keeps manual review in a bounded exception queue", () => {

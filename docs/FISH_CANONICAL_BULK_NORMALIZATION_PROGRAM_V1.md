@@ -110,3 +110,23 @@ The deterministic local inputs preserve NIFS and MBRIS as primary identity sourc
 ## Next batch execution
 
 Resolve exception categories in bulk, update the reviewed source artifacts if evidence changes, then regenerate the complete inventory and all batches. Production apply, alias activation, condition profile research, and database writes remain separate later stages.
+
+## Completion: Batch 1-7
+
+`BULK_NORMALIZATION_COMPLETE_WITH_EXCEPTIONS`
+
+All seven planned artifacts now exist with sizes `200 / 200 / 200 / 200 / 200 / 200 / 58`. Their union contains exactly 1,258 distinct IDs and equals the canonical inventory ID set. Missing IDs, extra IDs, duplicate batch IDs, and batch-plan deviations are all zero.
+
+Across the full program, 1,253 rows are `NO_CHANGE`, one records an accepted scientific-name confirmation, three retain approved alias candidates, and one is `CONFLICT_REVIEW_REQUIRED`. No production value is applied by these change labels.
+
+The final identity totals remain 1,256 verified, one partial, one conflict, and zero ambiguous, duplicate-candidate, or unresolved canonical identities. Accepted scientific-name collisions, Korean-name collisions, and synonym collisions are zero. Source coverage remains 1,258/1,258.
+
+The exception queue remains at 43 entries, including 40 canonical species exceptions and three cross-system boundaries. It is now grouped into taxonomy conflict, accepted-name partial, alias ambiguity, aggregate alias, cross-domain homonym, condition-ID mismatch/outside-baseline, and other category batches. No entry was discarded to reduce the exception rate.
+
+The prior 15 Fishing Spot expansion candidates were reconciled in the full program: 14 link to a Fish canonical baseline ID, while 흰꼴뚜기 is outside the Fish 1,258 boundary. This records identity linkage only and does not promote runtime mapping.
+
+Fishing Spot coverage remains 1,386/1,405 in production. The complete identity/search layer has potential coverage of 1,405/1,405, while 14 raw names still lack a direct Fish-baseline identity. Those facts can coexist because each of the 19 currently unmapped spots contains at least one other source-backed Fish identity. Runtime mapping remains unchanged.
+
+The condition profile priority pool remains 38 identities. Temperature, dissolved oxygen, salinity, seasonality, spawning, migration, and habitat profile research were not performed.
+
+The completion report is `reports/fish-canonical/bulk-normalization-completion-v1.json`. Any subsequent manual work must operate on exception categories in bulk rather than returning to per-species loops.

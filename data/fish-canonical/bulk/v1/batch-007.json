@@ -1,0 +1,2032 @@
+{
+  "schemaVersion": 1,
+  "program": "Fish Canonical Bulk Normalization Program V1",
+  "batchId": "BATCH-007",
+  "generatedOn": "2026-09-18",
+  "selectionRationale": "Final deterministic remainder.",
+  "processed": 58,
+  "counts": {
+    "NO_CHANGE": 56,
+    "NAME_NORMALIZED": 0,
+    "SCIENTIFIC_NAME_CONFIRMED": 1,
+    "ALIAS_ADDED_CANDIDATE": 0,
+    "SYNONYM_LINKED": 0,
+    "DUPLICATE_CANDIDATE": 0,
+    "CONFLICT_REVIEW_REQUIRED": 1,
+    "UNRESOLVED": 0
+  },
+  "exceptionCount": 30,
+  "rows": [
+    {
+      "speciesId": "BM-SPECIES-001226",
+      "original": {
+        "koreanName": "두줄벤자리",
+        "scientificName": "Diploprion bifasciatus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "두줄벤자리",
+        "canonicalName": "두줄벤자리",
+        "scientificName": "Diploprion bifasciatus",
+        "acceptedScientificName": "Diploprion bifasciatus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Liopropomatidae Poey, 1867",
+        "genus": "Diploprion Cuvier, 1828"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1228",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001228",
+      "original": {
+        "koreanName": "큰눈등가시치",
+        "scientificName": "Anisarchus macrops",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "큰눈등가시치",
+        "canonicalName": "큰눈등가시치",
+        "scientificName": "Anisarchus macrops",
+        "acceptedScientificName": "Anisarchus macrops",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Lumpenidae Jordan & Evermann, 1898",
+        "genus": "Anisarchus Gill, 1864"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1230",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001229",
+      "original": {
+        "koreanName": "가시베도라치",
+        "scientificName": "Lumpenella longirostris",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "가시베도라치",
+        "canonicalName": "가시베도라치",
+        "scientificName": "Lumpenella longirostris",
+        "acceptedScientificName": "Lumpenella longirostris",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Lumpenidae Jordan & Evermann, 1898",
+        "genus": "Lumpenella Hubbs, 1927"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1231",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001230",
+      "original": {
+        "koreanName": "등점꼬마베도라치",
+        "scientificName": "Lumpenopsis pavlenkoi",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "등점꼬마베도라치",
+        "canonicalName": "등점꼬마베도라치",
+        "scientificName": "Lumpenopsis pavlenkoi",
+        "acceptedScientificName": "Lumpenopsis pavlenkoi",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Lumpenidae Jordan & Evermann, 1898",
+        "genus": "Lumpenopsis Soldatov, 1916"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1232",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001231",
+      "original": {
+        "koreanName": "장어베도라치",
+        "scientificName": "Lumpenus sagitta",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "장어베도라치",
+        "canonicalName": "장어베도라치",
+        "scientificName": "Lumpenus sagitta",
+        "acceptedScientificName": "Lumpenus sagitta",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Lumpenidae Jordan & Evermann, 1898",
+        "genus": "Lumpenus Reinhardt, 1836"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1233",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001232",
+      "original": {
+        "koreanName": "둥근점육점날개",
+        "scientificName": "Opisthocentrus tenuis",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "둥근점육점날개",
+        "canonicalName": "둥근점육점날개",
+        "scientificName": "Opisthocentrus tenuis",
+        "acceptedScientificName": "Opisthocentrus tenuis",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Opisthocentridae Jordan & Evermann, 1898",
+        "genus": "Opisthocentrus Kner, 1868"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1234",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001233",
+      "original": {
+        "koreanName": "육점날개",
+        "scientificName": "Opisthocentrus zonope",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "육점날개",
+        "canonicalName": "육점날개",
+        "scientificName": "Opisthocentrus zonope",
+        "acceptedScientificName": "Opisthocentrus zonope",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Opisthocentridae Jordan & Evermann, 1898",
+        "genus": "Opisthocentrus Kner, 1868"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1235",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001234",
+      "original": {
+        "koreanName": "참육점날개",
+        "scientificName": "Opisthocentrus ocellatus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "참육점날개",
+        "canonicalName": "참육점날개",
+        "scientificName": "Opisthocentrus ocellatus",
+        "acceptedScientificName": "Opisthocentrus ocellatus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Opisthocentridae Jordan & Evermann, 1898",
+        "genus": "Opisthocentrus Kner, 1868"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1236",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001235",
+      "original": {
+        "koreanName": "얼룩괴도라치",
+        "scientificName": "Askoldia variegata",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "얼룩괴도라치",
+        "canonicalName": "얼룩괴도라치",
+        "scientificName": "Askoldia variegata",
+        "acceptedScientificName": "Askoldia variegata",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Opisthocentridae Jordan & Evermann, 1898",
+        "genus": "Askoldia Pavlenko, 1910"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1237",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001236",
+      "original": {
+        "koreanName": "황점베도라치",
+        "scientificName": "Dictyosoma rubrimaculatum",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "황점베도라치",
+        "canonicalName": "황점베도라치",
+        "scientificName": "Dictyosoma rubrimaculatum",
+        "acceptedScientificName": "Dictyosoma rubrimaculatum",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Cebidichthyidae Gill, 1862",
+        "genus": "Dictyosoma Temminck & Schlegel, 1845"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1238",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001237",
+      "original": {
+        "koreanName": "민그물베도라치",
+        "scientificName": "Dictyosoma tongyeongensis",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "민그물베도라치",
+        "canonicalName": "민그물베도라치",
+        "scientificName": "Dictyosoma tongyeongensis",
+        "acceptedScientificName": "Dictyosoma tongyeongensis",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Cebidichthyidae Gill, 1862",
+        "genus": "Dictyosoma Temminck & Schlegel, 1845"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1239",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001238",
+      "original": {
+        "koreanName": "그물베도라치",
+        "scientificName": "Dictyosoma temminckii",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "그물베도라치",
+        "canonicalName": "그물베도라치",
+        "scientificName": "Dictyosoma temminckii",
+        "acceptedScientificName": "Dictyosoma temminckii",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Cebidichthyidae Gill, 1862",
+        "genus": "Dictyosoma Temminck & Schlegel, 1845"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1240",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001239",
+      "original": {
+        "koreanName": "가시미끈우럭",
+        "scientificName": "Pseudogramma polyacantha",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "가시미끈우럭",
+        "canonicalName": "가시미끈우럭",
+        "scientificName": "Pseudogramma polyacantha",
+        "acceptedScientificName": "Pseudogramma polyacantha",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Grammistidae Bleeker, 1857",
+        "genus": "Pseudogramma Bleeker, 1875"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1241",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001240",
+      "original": {
+        "koreanName": "별각시돔",
+        "scientificName": "Chelidoperca pleurospilus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "별각시돔",
+        "canonicalName": "별각시돔",
+        "scientificName": "Chelidoperca pleurospilus",
+        "acceptedScientificName": "Chelidoperca pleurospilus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Serranidae Swainson, 1839",
+        "genus": "Chelidoperca Boulenger, 1895"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1242",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001241",
+      "original": {
+        "koreanName": "각시돔",
+        "scientificName": "Chelidoperca hirundinacea",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "각시돔",
+        "canonicalName": "각시돔",
+        "scientificName": "Chelidoperca hirundinacea",
+        "acceptedScientificName": "Chelidoperca hirundinacea",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Serranidae Swainson, 1839",
+        "genus": "Chelidoperca Boulenger, 1895"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1243",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001242",
+      "original": {
+        "koreanName": "빨간양태",
+        "scientificName": "Bembras japonica",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "빨간양태",
+        "canonicalName": "빨간양태",
+        "scientificName": "Bembras japonica",
+        "acceptedScientificName": "Bembras japonica",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Bembridae Kaup, 1873",
+        "genus": "Bembras Cuvier, 1829"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1244",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001243",
+      "original": {
+        "koreanName": "눈양태",
+        "scientificName": "Parabembras curta",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "눈양태",
+        "canonicalName": "눈양태",
+        "scientificName": "Parabembras curta",
+        "acceptedScientificName": "Parabembras curta",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Bembridae Kaup, 1873",
+        "genus": "Parabembras Bleeker, 1874"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1245",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001244",
+      "original": {
+        "koreanName": "에보시감펭",
+        "scientificName": "Ebosia bleekeri",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "에보시감펭",
+        "canonicalName": "에보시감펭",
+        "scientificName": "Ebosia bleekeri",
+        "acceptedScientificName": "Ebosia bleekeri",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Ebosia Jordan & Starks, 1904"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1246",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001245",
+      "original": {
+        "koreanName": "홍감펭",
+        "scientificName": "Helicolenus hilgendorfii",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "홍감펭",
+        "canonicalName": "홍감펭",
+        "scientificName": "Helicolenus hilgendorfii",
+        "acceptedScientificName": "Helicolenus hilgendorfii",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Helicolenus Goode & Bean, 1896"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1247",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001246",
+      "original": {
+        "koreanName": "점쏠배감펭",
+        "scientificName": "Pterois volitans",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "점쏠배감펭",
+        "canonicalName": "점쏠배감펭",
+        "scientificName": "Pterois volitans",
+        "acceptedScientificName": "Pterois volitans",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Pterois Oken, 1817"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1248",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001247",
+      "original": {
+        "koreanName": "쏠배감펭",
+        "scientificName": "Pterois lunulata",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "쏠배감펭",
+        "canonicalName": "쏠배감펭",
+        "scientificName": "Pterois lunulata",
+        "acceptedScientificName": "Pterois lunulata",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Pterois Oken, 1817"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1249",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001248",
+      "original": {
+        "koreanName": "주홍감펭",
+        "scientificName": "Scorpaenodes evides",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "주홍감펭",
+        "canonicalName": "주홍감펭",
+        "scientificName": "Scorpaenodes evides",
+        "acceptedScientificName": "Scorpaenodes evides",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Scorpaenodes Bleeker, 1857"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1250",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001249",
+      "original": {
+        "koreanName": "놀락감펭",
+        "scientificName": "Scorpaenopsis diabolus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "놀락감펭",
+        "canonicalName": "놀락감펭",
+        "scientificName": "Scorpaenopsis diabolus",
+        "acceptedScientificName": "Scorpaenopsis diabolus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Scorpaenopsis Heckel, 1837"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1251",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001250",
+      "original": {
+        "koreanName": "쏠치우럭",
+        "scientificName": "Scorpaenopsis neglecta",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "쏠치우럭",
+        "canonicalName": "쏠치우럭",
+        "scientificName": "Scorpaenopsis neglecta",
+        "acceptedScientificName": "Scorpaenopsis neglecta",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Scorpaenopsis Heckel, 1837"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1252",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001251",
+      "original": {
+        "koreanName": "쑥감펭",
+        "scientificName": "Scorpaenopsis cirrosa",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "쑥감펭",
+        "canonicalName": "쑥감펭",
+        "scientificName": "Scorpaenopsis cirrosa",
+        "acceptedScientificName": "Scorpaenopsis cirrosa",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Scorpaenopsis Heckel, 1837"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1253",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001252",
+      "original": {
+        "koreanName": "청회볼락",
+        "scientificName": "Sebastes glaucus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "청회볼락",
+        "canonicalName": "청회볼락",
+        "scientificName": "Sebastes glaucus",
+        "acceptedScientificName": "Sebastes glaucus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastes Cuvier, 1829"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1254",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001253",
+      "original": {
+        "koreanName": "탁자볼락",
+        "scientificName": "Sebastes taczanowskii",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "탁자볼락",
+        "canonicalName": "탁자볼락",
+        "scientificName": "Sebastes taczanowskii",
+        "acceptedScientificName": "Sebastes taczanowskii",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastes Cuvier, 1829"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1255",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "BM-SPECIES-001254",
+      "original": {
+        "koreanName": "좀볼락",
+        "scientificName": "Sebastes minor",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "좀볼락",
+        "canonicalName": "좀볼락",
+        "scientificName": "Sebastes minor",
+        "acceptedScientificName": "Sebastes minor",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Scorpaenidae Risso, 1827",
+        "genus": "Sebastes Cuvier, 1829"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1256",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": false,
+      "exceptionReasons": []
+    },
+    {
+      "speciesId": "07e1852e-0675-4090-8675-cd216fb90ba9",
+      "original": {
+        "koreanName": "오분자기",
+        "scientificName": "Sulculus diversicolor",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "오분자기",
+        "canonicalName": "오분자기",
+        "scientificName": "Sulculus diversicolor",
+        "acceptedScientificName": "Sulculus diversicolor",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": null,
+        "genus": "Sulculus"
+      },
+      "taxonomyStatus": "TAXONOMY_CONFLICT",
+      "identityStatus": "CONFLICT",
+      "sourceRefs": [
+        {
+          "provider": "NIFS",
+          "sourceId": "fish_1575873437839",
+          "artifact": "reports/nifs-staging-import-8-execution.json"
+        },
+        {
+          "provider": "CROSSWALK",
+          "sourceId": "BM-SPECIES-002418",
+          "artifact": "data/mbris/mappings/nifs-mbris-taxonomy-crosswalk.json",
+          "urls": [
+            "https://www.molluscabase.org/aphia.php?p=taxdetails&id=445319",
+            "https://www.molluscabase.org/aphia.php?p=taxdetails&id=445364",
+            "https://www.nibr.go.kr/aiibook/catImage/30/Invertebrates-V.pdf",
+            "https://api.gbif.org/v1/species/match?name=Haliotis%20supertexta"
+          ]
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "CONFLICT_REVIEW_REQUIRED",
+      "exception": true,
+      "exceptionReasons": [
+        "오분자기: TAXONOMY_CONFLICT"
+      ]
+    },
+    {
+      "speciesId": "70cb8d81-26a1-4d8b-b000-2b2f2676c345",
+      "original": {
+        "koreanName": "제주소라",
+        "scientificName": "Turbo cornutus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "제주소라",
+        "canonicalName": "제주소라",
+        "scientificName": "Turbo cornutus",
+        "acceptedScientificName": "Turbo sazae",
+        "aliases": [],
+        "synonyms": [
+          "Batillus cornutus",
+          "Turbo cornutus"
+        ],
+        "rank": "SPECIES",
+        "family": null,
+        "genus": "Turbo"
+      },
+      "taxonomyStatus": "ACCEPTED_NAME_UPDATE_AVAILABLE",
+      "identityStatus": "PARTIAL",
+      "sourceRefs": [
+        {
+          "provider": "NIFS",
+          "sourceId": "fish_1575880014320",
+          "artifact": "reports/nifs-staging-import-8-execution.json"
+        },
+        {
+          "provider": "CROSSWALK",
+          "sourceId": "BM-SPECIES-002324",
+          "artifact": "data/mbris/mappings/nifs-mbris-taxonomy-crosswalk.json",
+          "urls": [
+            "https://www.marinespecies.org/aphia.php?p=taxdetails&id=994353",
+            "https://www.marinespecies.org/aphia.php?p=taxdetails&id=413379",
+            "https://www.marinespecies.org/aphia.php?p=taxdetails&id=1600422"
+          ]
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "SCIENTIFIC_NAME_CONFIRMED",
+      "exception": true,
+      "exceptionReasons": [
+        "제주소라: ACCEPTED_NAME_UPDATE_AVAILABLE"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000042",
+      "original": {
+        "koreanName": "삼세기",
+        "scientificName": "Hemitripterus villosus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "삼세기",
+        "canonicalName": "삼세기",
+        "scientificName": "Hemitripterus villosus",
+        "acceptedScientificName": "Hemitripterus villosus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Agonidae Swainson, 1839",
+        "genus": "Hemitripterus Cuvier, 1829"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:44",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "삼세기류 (aggregate_name, high)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000090",
+      "original": {
+        "koreanName": "연어",
+        "scientificName": "Oncorhynchus keta",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "연어",
+        "canonicalName": "연어",
+        "scientificName": "Oncorhynchus keta",
+        "acceptedScientificName": "Oncorhynchus keta",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Salmonidae Jarocki or Schinz, 1822",
+        "genus": "Oncorhynchus Suckley, 1861"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:92",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "복어 (aggregate_name, low)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000114",
+      "original": {
+        "koreanName": "개복치",
+        "scientificName": "Mola mola",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "개복치",
+        "canonicalName": "개복치",
+        "scientificName": "Mola mola",
+        "acceptedScientificName": "Mola mola",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Molidae Bonaparte, 1835",
+        "genus": "Mola Koelreuter, 1766"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:116",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "전복치류 (aggregate_name, low)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000143",
+      "original": {
+        "koreanName": "가시복",
+        "scientificName": "Diodon holocanthus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "가시복",
+        "canonicalName": "가시복",
+        "scientificName": "Diodon holocanthus",
+        "acceptedScientificName": "Diodon holocanthus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Diodontidae Bonaparte, 1835",
+        "genus": "Diodon Linnaeus, 1758"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:145",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "가시복류 (aggregate_name, high)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000150",
+      "original": {
+        "koreanName": "별복",
+        "scientificName": "Arothron firmamentum",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "별복",
+        "canonicalName": "별복",
+        "scientificName": "Arothron firmamentum",
+        "acceptedScientificName": "Arothron firmamentum",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Tetraodontidae Bonaparte, 1831",
+        "genus": "Arothron Müller, 1841"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:152",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "참복 (aggregate_name, low)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000163",
+      "original": {
+        "koreanName": "까치복",
+        "scientificName": "Takifugu xanthopterus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "까치복",
+        "canonicalName": "까치복",
+        "scientificName": "Takifugu xanthopterus",
+        "acceptedScientificName": "Takifugu xanthopterus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Tetraodontidae Bonaparte, 1831",
+        "genus": "Takifugu Abe, 1949"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:165",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "까치복류 (aggregate_name, high)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000165",
+      "original": {
+        "koreanName": "검복",
+        "scientificName": "Takifugu porphyreus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "검복",
+        "canonicalName": "검복",
+        "scientificName": "Takifugu porphyreus",
+        "acceptedScientificName": "Takifugu porphyreus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Tetraodontidae Bonaparte, 1831",
+        "genus": "Takifugu Abe, 1949"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:167",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "검복류 (aggregate_name, high)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000193",
+      "original": {
+        "koreanName": "황줄돔",
+        "scientificName": "Histiopterus typus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "황줄돔",
+        "canonicalName": "황줄돔",
+        "scientificName": "Histiopterus typus",
+        "acceptedScientificName": "Histiopterus typus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Pentacerotidae Bleeker, 1859",
+        "genus": "Histiopterus Temminck & Schlegel, 1844"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:195",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "줄돔 (aggregate_name, low)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000280",
+      "original": {
+        "koreanName": "긴꼬리벵에돔",
+        "scientificName": "Girella leonina",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "긴꼬리벵에돔",
+        "canonicalName": "긴꼬리벵에돔",
+        "scientificName": "Girella leonina",
+        "acceptedScientificName": "Girella leonina",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Girellidae Gill, 1862",
+        "genus": "Girella Gray, 1835"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:282",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "긴꼬리벵에돔류 (aggregate_name, high)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000317",
+      "original": {
+        "koreanName": "발기",
+        "scientificName": "Perccottus glenii",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "발기",
+        "canonicalName": "발기",
+        "scientificName": "Perccottus glenii",
+        "acceptedScientificName": "Perccottus glenii",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Odontobutidae Hoese & Gill, 1993",
+        "genus": "Perccottus Dybowski, 1877"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:319",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "열기 (aggregate_name, low)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000369",
+      "original": {
+        "koreanName": "말뚝망둥어",
+        "scientificName": "Periophthalmus modestus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "말뚝망둥어",
+        "canonicalName": "말뚝망둥어",
+        "scientificName": "Periophthalmus modestus",
+        "acceptedScientificName": "Periophthalmus modestus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Oxudercidae Günther, 1861",
+        "genus": "Periophthalmus Bloch & Schneider, 1801"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:371",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "망둥어 (aggregate_name, low)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000412",
+      "original": {
+        "koreanName": "가다랑어",
+        "scientificName": "Katsuwonus pelamis",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "가다랑어",
+        "canonicalName": "가다랑어",
+        "scientificName": "Katsuwonus pelamis",
+        "acceptedScientificName": "Katsuwonus pelamis",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Katsuwonus Kishinouye, 1915"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:414",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "가다랑어류 (aggregate_name, high)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000421",
+      "original": {
+        "koreanName": "눈다랑어",
+        "scientificName": "Thunnus obesus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "눈다랑어",
+        "canonicalName": "눈다랑어",
+        "scientificName": "Thunnus obesus",
+        "acceptedScientificName": "Thunnus obesus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Scombridae Rafinesque, 1815",
+        "genus": "Thunnus South, 1845"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:423",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "눈다랑어류 (aggregate_name, high)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000445",
+      "original": {
+        "koreanName": "분장어",
+        "scientificName": "Eupleurogrammus muticus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "분장어",
+        "canonicalName": "분장어",
+        "scientificName": "Eupleurogrammus muticus",
+        "acceptedScientificName": "Eupleurogrammus muticus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Trichiuridae Rafinesque, 1810",
+        "genus": "Eupleurogrammus Gill, 1862"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:447",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "장어 (aggregate_name, low)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000451",
+      "original": {
+        "koreanName": "그물동서대",
+        "scientificName": "Aseraggodes kaianus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "그물동서대",
+        "canonicalName": "그물동서대",
+        "scientificName": "Aseraggodes kaianus",
+        "acceptedScientificName": "Aseraggodes kaianus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Soleidae Bonaparte, 1833",
+        "genus": "Aseraggodes Kaup, 1858"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:453",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "서대류 (aggregate_name, low)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000468",
+      "original": {
+        "koreanName": "중설가자미",
+        "scientificName": "Plagiopsetta glossa",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "중설가자미",
+        "canonicalName": "중설가자미",
+        "scientificName": "Plagiopsetta glossa",
+        "acceptedScientificName": "Plagiopsetta glossa",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Samaridae Jordan & Goss, 1889",
+        "genus": "Plagiopsetta Franz, 1910"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:470",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "가자미 (aggregate_name, low)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000470",
+      "original": {
+        "koreanName": "청새치",
+        "scientificName": "Kajikia audax",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "청새치",
+        "canonicalName": "청새치",
+        "scientificName": "Kajikia audax",
+        "acceptedScientificName": "Kajikia audax",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Istiophoridae Rafinesque, 1815",
+        "genus": "Kajikia Hirasaka & Nakamura, 1947"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:472",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "청새치류 (aggregate_name, high)",
+        "흑새치 (aggregate_name, low)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000473",
+      "original": {
+        "koreanName": "돛새치",
+        "scientificName": "Istiophorus platypterus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "돛새치",
+        "canonicalName": "돛새치",
+        "scientificName": "Istiophorus platypterus",
+        "acceptedScientificName": "Istiophorus platypterus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Istiophoridae Rafinesque, 1815",
+        "genus": "Istiophorus Lacepède, 1801"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:475",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "돛새치류 (aggregate_name, high)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000479",
+      "original": {
+        "koreanName": "황새치",
+        "scientificName": "Xiphias gladius",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "황새치",
+        "canonicalName": "황새치",
+        "scientificName": "Xiphias gladius",
+        "acceptedScientificName": "Xiphias gladius",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Xiphiidae Rafinesque, 1815",
+        "genus": "Xiphias Linnaeus, 1758"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:481",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "황새치류 (aggregate_name, high)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000495",
+      "original": {
+        "koreanName": "참치방어",
+        "scientificName": "Elagatis bipinnulata",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "참치방어",
+        "canonicalName": "참치방어",
+        "scientificName": "Elagatis bipinnulata",
+        "acceptedScientificName": "Elagatis bipinnulata",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Carangidae Rafinesque, 1815",
+        "genus": "Elagatis Bennett, 1840"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:497",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "참치 (aggregate_name, medium)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000643",
+      "original": {
+        "koreanName": "도랑가오리",
+        "scientificName": "Dipturus macrocauda",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "도랑가오리",
+        "canonicalName": "도랑가오리",
+        "scientificName": "Dipturus macrocauda",
+        "acceptedScientificName": "Dipturus macrocauda",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Rajidae de Blainville, 1816",
+        "genus": "Dipturus Rafinesque, 1810"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:645",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "가오리 (aggregate_name, low)",
+        "가오리 꼬리주의 (source_issue, low)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000662",
+      "original": {
+        "koreanName": "귀상어",
+        "scientificName": "Sphyrna zygaena",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "귀상어",
+        "canonicalName": "귀상어",
+        "scientificName": "Sphyrna zygaena",
+        "acceptedScientificName": "Sphyrna zygaena",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Sphyrnidae Bonaparte, 1840",
+        "genus": "Sphyrna Rafinesque, 1810"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:664",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "귀상어류 (aggregate_name, high)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000684",
+      "original": {
+        "koreanName": "전기가오리",
+        "scientificName": "Narke japonica",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "전기가오리",
+        "canonicalName": "전기가오리",
+        "scientificName": "Narke japonica",
+        "acceptedScientificName": "Narke japonica",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Narcinidae Gill, 1862",
+        "genus": "Narke Kaup, 1826"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:686",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "전기가오리류 (aggregate_name, high)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000833",
+      "original": {
+        "koreanName": "흑조기",
+        "scientificName": "Atrobucca nibe",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "흑조기",
+        "canonicalName": "흑조기",
+        "scientificName": "Atrobucca nibe",
+        "acceptedScientificName": "Atrobucca nibe",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Sciaenidae Cuvier, 1829",
+        "genus": "Atrobucca Chu, Lo & Wu, 1963"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:835",
+          "artifact": "reports/mbris/mbris-staging-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "백조기류 (aggregate_name, low)",
+        "조기 (aggregate_name, low)",
+        "조기류 (aggregate_name, low)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000900",
+      "original": {
+        "koreanName": "갯장어",
+        "scientificName": "Muraenesox cinereus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "갯장어",
+        "canonicalName": "갯장어",
+        "scientificName": "Muraenesox cinereus",
+        "acceptedScientificName": "Muraenesox cinereus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Muraenesocidae Kaup, 1859",
+        "genus": "Muraenesox McClelland, 1844"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:902",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "갯장어류 (aggregate_name, high)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001056",
+      "original": {
+        "koreanName": "대구",
+        "scientificName": "Gadus macrocephalus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "대구",
+        "canonicalName": "대구",
+        "scientificName": "Gadus macrocephalus",
+        "acceptedScientificName": "Gadus macrocephalus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Gadidae Rafinesque, 1810",
+        "genus": "Gadus Linnaeus, 1758"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1058",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "은대구류 (aggregate_name, low)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001161",
+      "original": {
+        "koreanName": "임연수어",
+        "scientificName": "Pleurogrammus azonus",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "임연수어",
+        "canonicalName": "임연수어",
+        "scientificName": "Pleurogrammus azonus",
+        "acceptedScientificName": "Pleurogrammus azonus",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Hexagrammidae Jordan, 1888",
+        "genus": "Pleurogrammus Gill, 1861"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1163",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "임연수 (aggregate_name, low)"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001188",
+      "original": {
+        "koreanName": "먹갈치",
+        "scientificName": "Lycodes nakamurae",
+        "aliases": [],
+        "synonyms": []
+      },
+      "normalized": {
+        "koreanName": "먹갈치",
+        "canonicalName": "먹갈치",
+        "scientificName": "Lycodes nakamurae",
+        "acceptedScientificName": "Lycodes nakamurae",
+        "aliases": [],
+        "synonyms": [],
+        "rank": "SPECIES",
+        "family": "Zoarcidae Swainson, 1839",
+        "genus": "Lycodes Reinhardt, 1831"
+      },
+      "taxonomyStatus": "SOURCE_CANONICAL",
+      "identityStatus": "VERIFIED",
+      "sourceRefs": [
+        {
+          "provider": "MBRIS",
+          "sourceId": "MBRIS:척추동물:1190",
+          "artifact": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+        }
+      ],
+      "fishingSpotUsageCount": 0,
+      "changeType": "NO_CHANGE",
+      "exception": true,
+      "exceptionReasons": [
+        "먹갈치류 (aggregate_name, high)"
+      ]
+    }
+  ],
+  "invariants": {
+    "productionMutation": 0,
+    "runtimeMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0,
+    "automaticMergeOrDelete": 0,
+    "oneByOneWorkflow": 0,
+    "conditionProfileResearch": 0
+  }
+}

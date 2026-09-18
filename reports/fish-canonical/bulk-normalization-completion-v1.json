@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "program": "Fish Canonical Bulk Normalization Program V1",
+  "generatedOn": "2026-09-18",
+  "phaseABaselineCommit": "3cd67f74745a8d49666f300013a58292a568766d",
+  "decision": "BULK_NORMALIZATION_COMPLETE_WITH_EXCEPTIONS",
+  "reconciliation": {
+    "totalCanonical": 1258,
+    "batchCount": 7,
+    "batchSizes": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      58
+    ],
+    "totalBatchRows": 1258,
+    "uniqueBatchSpeciesIds": 1258,
+    "missingIds": 0,
+    "extraIds": 0,
+    "duplicateIds": 0,
+    "inventoryIdSetMatch": true,
+    "planExactMatch": true
+  },
+  "identityStatus": {
+    "VERIFIED": 1256,
+    "PARTIAL": 1,
+    "AMBIGUOUS": 0,
+    "CONFLICT": 1,
+    "DUPLICATE_CANDIDATE": 0,
+    "UNRESOLVED": 0
+  },
+  "changeTypes": {
+    "NO_CHANGE": 1253,
+    "NAME_NORMALIZED": 0,
+    "SCIENTIFIC_NAME_CONFIRMED": 1,
+    "ALIAS_ADDED_CANDIDATE": 3,
+    "SYNONYM_LINKED": 0,
+    "DUPLICATE_CANDIDATE": 0,
+    "CONFLICT_REVIEW_REQUIRED": 1,
+    "UNRESOLVED": 0
+  },
+  "names": {
+    "approvedAliasCandidates": 3,
+    "synonyms": 2
+  },
+  "exceptions": {
+    "total": 43,
+    "canonicalSpecies": 40,
+    "categoryCounts": {
+      "AGGREGATED_TAXON": 34,
+      "ALIAS_REVIEW_REQUIRED": 4,
+      "COMMERCIAL_NAME": 1,
+      "CONDITION_ID_OUTSIDE_BASELINE": 2,
+      "CONFLICT": 1,
+      "CROSS_DOMAIN_HOMONYM": 1,
+      "PARTIAL": 1
+    },
+    "categoryGroupCounts": {
+      "TAXONOMY_CONFLICT": 1,
+      "ACCEPTED_NAME_PARTIAL": 1,
+      "ALIAS_AMBIGUITY": 4,
+      "AGGREGATE_ALIAS": 34,
+      "CROSS_DOMAIN_HOMONYM": 1,
+      "CONDITION_ID_MISMATCH_OR_OUTSIDE_BASELINE": 2,
+      "OTHER": 0
+    }
+  },
+  "collisions": {
+    "acceptedScientificNameGroups": [],
+    "koreanNameGroups": [],
+    "synonymGroups": [],
+    "taxonomyConflictSpeciesIds": [
+      "07e1852e-0675-4090-8675-cd216fb90ba9"
+    ]
+  },
+  "sourceCoverage": {
+    "withAtLeastOneSource": 1258,
+    "sourceGap": 0
+  },
+  "fishingSpots": {
+    "currentProductionMapped": 1386,
+    "currentProductionUnmapped": 19,
+    "potentialIdentityMapped": 1405,
+    "potentialIdentityUnmapped": 0,
+    "potentialGain": 19,
+    "rawUniqueNames": 53,
+    "unresolvedClassificationCount": 9,
+    "rawNamesWithoutFishBaselineIdentity": [
+      "무늬오징어",
+      "갑오징어",
+      "문어",
+      "한치",
+      "백조기",
+      "망둥어",
+      "농어/  삼치",
+      "망둑어",
+      "간재미",
+      "뱅어돔",
+      "망농어",
+      "열기",
+      "살오징어",
+      "쏨벵이"
+    ]
+  },
+  "expansionCandidates": {
+    "total": 15,
+    "linkedFishCanonical": 14,
+    "outsideFishBaseline": 1,
+    "rows": [
+      {
+        "canonicalName": "노래미",
+        "scientificName": "Hexagrammos agrammus",
+        "affectedSpotCount": 4,
+        "fishCanonicalSpeciesId": "BM-SPECIES-001164",
+        "status": "LINKED_FISH_CANONICAL"
+      },
+      {
+        "canonicalName": "도다리",
+        "scientificName": "Pleuronichthys cornutus",
+        "affectedSpotCount": 4,
+        "fishCanonicalSpeciesId": "BM-SPECIES-000548",
+        "status": "LINKED_FISH_CANONICAL"
+      },
+      {
+        "canonicalName": "망상어",
+        "scientificName": "Ditrema temminckii",
+        "affectedSpotCount": 3,
+        "fishCanonicalSpeciesId": "BM-SPECIES-000223",
+        "status": "LINKED_FISH_CANONICAL"
+      },
+      {
+        "canonicalName": "흰꼴뚜기",
+        "scientificName": "Sepioteuthis lessoniana",
+        "affectedSpotCount": 5,
+        "fishCanonicalSpeciesId": null,
+        "status": "OUTSIDE_FISH_1258_BASELINE"
+      },
+      {
+        "canonicalName": "벵에돔",
+        "scientificName": "Girella punctata",
+        "affectedSpotCount": 1,
+        "fishCanonicalSpeciesId": "BM-SPECIES-000279",
+        "status": "LINKED_FISH_CANONICAL"
+      },
+      {
+        "canonicalName": "보리멸",
+        "scientificName": "Sillago sihama",
+        "affectedSpotCount": 3,
+        "fishCanonicalSpeciesId": "BM-SPECIES-000818",
+        "status": "LINKED_FISH_CANONICAL"
+      },
+      {
+        "canonicalName": "볼락",
+        "scientificName": "Sebastes inermis",
+        "affectedSpotCount": 2,
+        "fishCanonicalSpeciesId": "BM-SPECIES-000002",
+        "status": "LINKED_FISH_CANONICAL"
+      },
+      {
+        "canonicalName": "부시리",
+        "scientificName": "Seriola aureovittata",
+        "affectedSpotCount": 1,
+        "fishCanonicalSpeciesId": "BM-SPECIES-000500",
+        "status": "LINKED_FISH_CANONICAL"
+      },
+      {
+        "canonicalName": "붕장어",
+        "scientificName": "Conger myriaster",
+        "affectedSpotCount": 14,
+        "fishCanonicalSpeciesId": "BM-SPECIES-000908",
+        "status": "LINKED_FISH_CANONICAL"
+      },
+      {
+        "canonicalName": "성대",
+        "scientificName": "Chelidonichthys spinosus",
+        "affectedSpotCount": 2,
+        "fishCanonicalSpeciesId": "BM-SPECIES-001135",
+        "status": "LINKED_FISH_CANONICAL"
+      },
+      {
+        "canonicalName": "숭어",
+        "scientificName": "Mugil cephalus",
+        "affectedSpotCount": 12,
+        "fishCanonicalSpeciesId": "BM-SPECIES-000097",
+        "status": "LINKED_FISH_CANONICAL"
+      },
+      {
+        "canonicalName": "전갱이",
+        "scientificName": "Trachurus japonicus",
+        "affectedSpotCount": 1,
+        "fishCanonicalSpeciesId": "BM-SPECIES-000488",
+        "status": "LINKED_FISH_CANONICAL"
+      },
+      {
+        "canonicalName": "짱뚱어",
+        "scientificName": "Boleophthalmus pectinirostris",
+        "affectedSpotCount": 9,
+        "fishCanonicalSpeciesId": "BM-SPECIES-000385",
+        "status": "LINKED_FISH_CANONICAL"
+      },
+      {
+        "canonicalName": "학공치",
+        "scientificName": "Hyporhamphus sajori",
+        "affectedSpotCount": 3,
+        "fishCanonicalSpeciesId": "BM-SPECIES-000884",
+        "status": "LINKED_FISH_CANONICAL"
+      },
+      {
+        "canonicalName": "황어",
+        "scientificName": "Pseudaspius hakonensis",
+        "affectedSpotCount": 1,
+        "fishCanonicalSpeciesId": "BM-SPECIES-000958",
+        "status": "LINKED_FISH_CANONICAL"
+      }
+    ],
+    "source": {
+      "path": "reports/fishing-spots/canonical-species-expansion-candidates-v1.json",
+      "sha256": "D3B628EAEDCC2C2C9BC8AC0A12AD78313E66E722A5E3746FE187321A2DF1FFD2"
+    }
+  },
+  "conditionProfilePool": {
+    "candidateCount": 38,
+    "profileResearchPerformed": false
+  },
+  "invariants": {
+    "productionMutation": 0,
+    "runtimeMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0,
+    "automaticMergeOrDelete": 0,
+    "oneByOneWorkflow": 0,
+    "conditionProfileResearch": 0
+  }
+}
