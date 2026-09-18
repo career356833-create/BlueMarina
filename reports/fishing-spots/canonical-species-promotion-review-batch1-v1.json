@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 1,
+  "review": "Fishing Spot Canonical Species Promotion Review Batch 1",
+  "reviewedOn": "2026-09-18",
+  "baseCommit": "9110cd11d453e642e75291fd9d2871f9253c481a",
+  "decision": "PARTIAL_PROMOTION_CANDIDATES_CONFIRMED",
+  "counts": {
+    "reviewedSpecies": 3,
+    "promotionReady": 2,
+    "promotionReadyWithAlias": 0,
+    "reviewRequired": 1,
+    "rejected": 0
+  },
+  "species": [
+    {
+      "rawName": "붕장어",
+      "canonicalKoreanName": "붕장어",
+      "scientificName": "Conger myriaster",
+      "acceptedTaxon": {
+        "name": "Conger myriaster (Brevoort, 1856)",
+        "status": "ACCEPTED",
+        "source": "WoRMS"
+      },
+      "synonyms": [
+        "Anguilla myriaster",
+        "Astroconger myriaster"
+      ],
+      "aliasReview": {
+        "proposedAliases": [],
+        "excludedAliases": [
+          "바다장어",
+          "아나고"
+        ]
+      },
+      "existingCanonicalDuplicateCheck": {
+        "productionFishingSpotCanonical10": false,
+        "fishCanonical1258Identity": true,
+        "action": "REUSE_EXISTING_INTERNAL_ID",
+        "internalId": "BM-SPECIES-000908",
+        "slug": "conger-myriaster",
+        "evidenceManifest": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+      },
+      "ambiguityReview": {
+        "rawNameRelation": "EXACT_OFFICIAL_KOREAN_NAME",
+        "commercialNameAmbiguity": "NONE_FOR_EXACT_RAW_NAME",
+        "aggregateRisk": "NONE",
+        "distinctFrom": [
+          "검붕장어 (Conger japonicus)",
+          "갯장어 (Muraenesox cinereus)",
+          "뱀장어 (Anguilla japonica)"
+        ]
+      },
+      "affectedSpots": {
+        "count": 14,
+        "spotIds": [
+          "boat-193",
+          "boat-304",
+          "boat-76",
+          "rock-120",
+          "rock-121",
+          "rock-320",
+          "rock-387",
+          "rock-388",
+          "rock-749",
+          "rock-807",
+          "rock-886",
+          "rock-904",
+          "rock-973",
+          "rock-980"
+        ]
+      },
+      "conditionProfileReadiness": {
+        "level": "MEDIUM",
+        "dimensionsForFutureReview": [
+          "temperature",
+          "depth",
+          "salinity",
+          "seasonality",
+          "habitat"
+        ],
+        "profileCreated": false
+      },
+      "promotionStatus": "PROMOTION_READY",
+      "rationale": "원본명은 공식 한국명과 정확히 일치하고 다른 장어류 또는 넓은 상용명으로 좁히는 과정이 필요 없다.",
+      "authoritativeSourceCount": 4,
+      "authoritativeSources": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "AUTHORITATIVE",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000004416",
+          "reference": "SpcTxnId 270000004416",
+          "supports": "붕장어와 Conger myriaster를 직접 연결한다."
+        },
+        {
+          "organization": "국립수산과학원 NIFS",
+          "authorityClass": "AUTHORITATIVE",
+          "url": "https://www.nifs.go.kr/portal/bt/frctA/actionSpeciesSearchView.do?taxonId=10072",
+          "reference": "taxonId 10072",
+          "supports": "공식 한국명과 학명을 교차 확인한다."
+        },
+        {
+          "organization": "WoRMS",
+          "authorityClass": "AUTHORITATIVE",
+          "url": "https://www.marinespecies.org/aphia.php?id=271745&p=taxdetails",
+          "reference": "AphiaID 271745",
+          "supports": "Conger myriaster를 accepted species로 기록하고 이명을 제공한다."
+        },
+        {
+          "organization": "FishBase",
+          "authorityClass": "AUTHORITATIVE",
+          "url": "https://fishbase.se/summary/302",
+          "reference": "Species summary 302",
+          "supports": "향후 habitat, depth, temperature profile 검토 근거를 제공한다."
+        }
+      ]
+    },
+    {
+      "rawName": "숭어",
+      "canonicalKoreanName": "숭어",
+      "scientificName": "Mugil cephalus",
+      "acceptedTaxon": {
+        "name": "Mugil cephalus Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "source": "WoRMS"
+      },
+      "synonyms": [],
+      "aliasReview": {
+        "proposedAliases": [],
+        "excludedAliases": [
+          "가숭어",
+          "참숭어",
+          "밀치",
+          "보리숭어"
+        ]
+      },
+      "existingCanonicalDuplicateCheck": {
+        "productionFishingSpotCanonical10": false,
+        "fishCanonical1258Identity": true,
+        "action": "REUSE_EXISTING_INTERNAL_ID",
+        "internalId": "BM-SPECIES-000097",
+        "slug": "mugil-cephalus",
+        "evidenceManifest": "reports/mbris/mbris-review-ready-import-manifest-v1.json"
+      },
+      "ambiguityReview": {
+        "rawNameRelation": "EXACT_OFFICIAL_KOREAN_NAME",
+        "commercialNameAmbiguity": "REVIEW_REQUIRED",
+        "aggregateRisk": "NONE",
+        "distinctFrom": [
+          "가숭어 (Planiliza haematocheilus)",
+          "등줄숭어"
+        ]
+      },
+      "affectedSpots": {
+        "count": 12,
+        "spotIds": [
+          "rock-1002",
+          "rock-1005",
+          "rock-120",
+          "rock-121",
+          "rock-320",
+          "rock-387",
+          "rock-388",
+          "rock-749",
+          "rock-807",
+          "rock-886",
+          "rock-973",
+          "rock-980"
+        ]
+      },
+      "conditionProfileReadiness": {
+        "level": "HIGH",
+        "dimensionsForFutureReview": [
+          "temperature",
+          "depth",
+          "salinity",
+          "seasonality",
+          "habitat"
+        ],
+        "profileCreated": false
+      },
+      "promotionStatus": "REVIEW_REQUIRED",
+      "rationale": "분류학적 정명 자체는 명확하지만 fishing-spot 원본은 한국명만 제공한다. 공식·산업 문맥의 숭어/가숭어 명칭 혼선 때문에 해당 12건을 Mugil cephalus로 단정할 source-level 근거가 더 필요하다.",
+      "authoritativeSourceCount": 6,
+      "authoritativeSources": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "AUTHORITATIVE",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000028620",
+          "reference": "SpcTxnId 270000028620",
+          "supports": "표준명 숭어와 Mugil cephalus를 연결한다."
+        },
+        {
+          "organization": "국립수산과학원 NIFS",
+          "authorityClass": "AUTHORITATIVE",
+          "url": "https://www.nifs.go.kr/portal/bt/frctA/actionSpeciesSearchView.do?taxonId=10968",
+          "reference": "taxonId 10968",
+          "supports": "Mugil cephalus(숭어)를 공식 종 정보로 제공한다."
+        },
+        {
+          "organization": "WoRMS",
+          "authorityClass": "AUTHORITATIVE",
+          "url": "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Mugil",
+          "reference": "Mugil taxon list",
+          "supports": "Mugil cephalus를 accepted name으로 확인한다."
+        },
+        {
+          "organization": "국립수산과학원 NIFS",
+          "authorityClass": "AUTHORITATIVE",
+          "url": "https://www.nifs.go.kr/board/actionBoard0018PopupPrevew.do?BBS_ID=20211228034724026HGL",
+          "reference": "숭어류 구분 자료",
+          "supports": "숭어, 가숭어, 등줄숭어가 별도 종임을 보여준다."
+        },
+        {
+          "organization": "국립수산과학원 NIFS",
+          "authorityClass": "AUTHORITATIVE",
+          "url": "https://nifs.go.kr/cmmn/file/climatechange_03.pdf",
+          "reference": "공식 양식 자료",
+          "supports": "일부 공식·산업 문맥에서 숭어 명칭이 Chelon haematocheilus에 사용되는 혼선을 보여준다."
+        },
+        {
+          "organization": "FishBase",
+          "authorityClass": "AUTHORITATIVE",
+          "url": "https://www.fishbase.se/Summary/Mugil-cephalus",
+          "reference": "Mugil cephalus species summary",
+          "supports": "정체가 확정된 뒤 profile을 구성할 생태 자료가 풍부함을 보여준다."
+        }
+      ]
+    },
+    {
+      "rawName": "짱뚱어",
+      "canonicalKoreanName": "짱뚱어",
+      "scientificName": "Boleophthalmus pectinirostris",
+      "acceptedTaxon": {
+        "name": "Boleophthalmus pectinirostris (Linnaeus, 1758)",
+        "status": "ACCEPTED",
+        "source": "WoRMS"
+      },
+      "synonyms": [
+        "Apocryptes chinensis"
+      ],
+      "aliasReview": {
+        "proposedAliases": [],
+        "excludedAliases": [
+          "망둑어"
+        ]
+      },
+      "existingCanonicalDuplicateCheck": {
+        "productionFishingSpotCanonical10": false,
+        "fishCanonical1258Identity": true,
+        "action": "REUSE_EXISTING_INTERNAL_ID",
+        "internalId": "BM-SPECIES-000385",
+        "slug": "boleophthalmus-pectinirostris",
+        "evidenceManifest": "reports/mbris/mbris-staging-import-manifest-v1.json"
+      },
+      "ambiguityReview": {
+        "rawNameRelation": "EXACT_OFFICIAL_KOREAN_NAME",
+        "commercialNameAmbiguity": "NONE_FOR_EXACT_RAW_NAME",
+        "aggregateRisk": "SEPARATED_FROM_AGGREGATE",
+        "distinctFrom": [
+          "망둑어 (aggregate/nonstandard goby label)",
+          "남방짱뚱어 (Scartelaos gigas)"
+        ]
+      },
+      "affectedSpots": {
+        "count": 9,
+        "spotIds": [
+          "rock-120",
+          "rock-121",
+          "rock-320",
+          "rock-387",
+          "rock-388",
+          "rock-749",
+          "rock-807",
+          "rock-886",
+          "rock-973"
+        ]
+      },
+      "conditionProfileReadiness": {
+        "level": "MEDIUM",
+        "dimensionsForFutureReview": [
+          "temperature",
+          "depth",
+          "salinity",
+          "seasonality",
+          "habitat"
+        ],
+        "profileCreated": false
+      },
+      "promotionStatus": "PROMOTION_READY",
+      "rationale": "원본명은 정확한 종명이며 여러 망둑어류를 포함하는 집계명 망둑어와 명시적으로 분리된다.",
+      "authoritativeSourceCount": 4,
+      "authoritativeSources": [
+        {
+          "organization": "국립해양생물자원관 MBRIS",
+          "authorityClass": "AUTHORITATIVE",
+          "url": "https://www.data.go.kr/data/15071288/fileData.do",
+          "reference": "MBRIS 척추동물 source row 387",
+          "supports": "짱뚱어와 Boleophthalmus pectinirostris를 연결한다."
+        },
+        {
+          "organization": "국립수산과학원 NIFS",
+          "authorityClass": "AUTHORITATIVE",
+          "url": "https://www.nifs.go.kr/contents/actionContentsCons0088.do",
+          "reference": "수산생물 종정보",
+          "supports": "공식 한국명과 학명을 교차 확인한다."
+        },
+        {
+          "organization": "WoRMS",
+          "authorityClass": "AUTHORITATIVE",
+          "url": "https://marinespecies.org/aphia.php?p=taxlist&pid=267096&rComp=%3E%3D&tRank=220",
+          "reference": "Boleophthalmus taxon list",
+          "supports": "Boleophthalmus pectinirostris를 accepted name으로 확인한다."
+        },
+        {
+          "organization": "FishBase",
+          "authorityClass": "AUTHORITATIVE",
+          "url": "https://www.fishbase.se/summary/Boleophthalmus-pectinirostris",
+          "reference": "Species summary",
+          "supports": "향후 intertidal habitat와 temperature profile 검토 근거를 제공한다."
+        }
+      ]
+    }
+  ],
+  "duplicateCheck": {
+    "productionFishingSpotCanonicalCount": 10,
+    "existingFishCanonicalIdentities": 3,
+    "newIdsCreated": 0
+  },
+  "aliasCandidates": [],
+  "impact": {
+    "current": {
+      "mapped": 1386,
+      "total": 1405,
+      "unmapped": 19
+    },
+    "promotionReadyOnly": {
+      "newlyMapped": 14,
+      "mapped": 1400,
+      "total": 1405,
+      "unmapped": 5,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76",
+        "rock-120",
+        "rock-121",
+        "rock-320",
+        "rock-387",
+        "rock-388",
+        "rock-749",
+        "rock-807",
+        "rock-886",
+        "rock-904",
+        "rock-973",
+        "rock-980"
+      ]
+    },
+    "allThreeConditional": {
+      "newlyMapped": 16,
+      "mapped": 1402,
+      "total": 1405,
+      "unmapped": 3,
+      "spotIds": [
+        "boat-193",
+        "boat-304",
+        "boat-76",
+        "rock-1002",
+        "rock-1005",
+        "rock-120",
+        "rock-121",
+        "rock-320",
+        "rock-387",
+        "rock-388",
+        "rock-749",
+        "rock-807",
+        "rock-886",
+        "rock-904",
+        "rock-973",
+        "rock-980"
+      ],
+      "condition": "숭어 source-level identity ambiguity must be resolved first."
+    }
+  },
+  "invariants": {
+    "canonicalMutation": 0,
+    "runtimeMutation": 0,
+    "conditionProfileCreation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0,
+    "productionAliasMutation": 0
+  }
+}
