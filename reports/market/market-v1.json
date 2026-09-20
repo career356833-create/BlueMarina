@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "program": "BLUE_MARINA_MARKET_V1_FOUNDATION_LISTING_FLOW",
+  "decision": "MARKET_V1_READY_WITH_BACKEND_LIMITATIONS",
+  "routes": ["/market", "/market/[id]", "/market/new"],
+  "domain": {
+    "entities": ["MarketListing", "MarketImage", "MarketContact"],
+    "categories": 12,
+    "conditions": 6,
+    "priceTypes": ["FIXED", "NEGOTIABLE", "FREE", "INQUIRY"],
+    "currency": "KRW",
+    "transactionMethods": ["DIRECT", "DELIVERY", "PARCEL", "OTHER"],
+    "listingStatuses": ["DRAFT", "SUBMITTED", "ACTIVE", "RESERVED", "SOLD", "HIDDEN", "REJECTED"],
+    "localModerationStatus": "REVIEW_REQUIRED"
+  },
+  "data": {
+    "datasetKind": "PRODUCTION",
+    "productionListings": 0,
+    "demoListingsExposed": 0,
+    "fakeImages": 0
+  },
+  "filters": {
+    "query": ["category", "region", "condition", "priceType", "q", "sort"],
+    "sorts": ["NEWEST", "PRICE_LOW", "PRICE_HIGH"],
+    "deterministic": true,
+    "ranking": 0,
+    "invalidQueryFallback": true
+  },
+  "listingForm": {
+    "stages": 9,
+    "storage": "BROWSER_LOCAL_STAGING",
+    "submittedStatus": "SUBMITTED",
+    "moderationStatus": "REVIEW_REQUIRED",
+    "automaticActive": 0,
+    "maxImages": 8,
+    "maxImageBytes": 8388608,
+    "imageMimeTypes": ["image/jpeg", "image/png", "image/webp"],
+    "backendUpload": 0
+  },
+  "inquiry": {
+    "types": ["PHONE", "EMAIL", "EXTERNAL_LINK", "INQUIRY_PREPARED"],
+    "chatBackend": 0,
+    "fakeMessageSuccess": 0,
+    "externalRel": "noopener noreferrer"
+  },
+  "moderation": {
+    "ruleBasedValidation": true,
+    "prohibitedGroups": 8,
+    "aiAutoBlock": 0,
+    "automaticApproval": 0
+  },
+  "safety": {
+    "plainTextSanitization": true,
+    "httpHttpsOnly": true,
+    "unsafeMimeBlocked": true,
+    "oversizedImageBlocked": true,
+    "filenameSanitization": true,
+    "fakeEscrow": 0,
+    "fakeSellerVerification": 0,
+    "fakeTransactionCompletion": 0,
+    "marineFitnessCertification": 0
+  },
+  "mobile": {
+    "targetWidth": 390,
+    "singleColumnDefault": true,
+    "ctaMinHeight": 44,
+    "safeAreaProvidedByAppFrame": true,
+    "bottomNavItemsChanged": 0
+  },
+  "backendBoundary": {
+    "database": 0,
+    "supabaseMigration": 0,
+    "supabaseApply": 0,
+    "payment": 0,
+    "escrow": 0,
+    "shippingTracking": 0,
+    "realtimeChat": 0,
+    "productionActivation": 0
+  },
+  "verification": {
+    "targeted": { "passed": 25, "total": 25 },
+    "allTests": { "passed": 956, "total": 956 },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "diffCheck": "PASS",
+    "browser390": {
+      "market": "PASS",
+      "marketNew": "PASS",
+      "horizontalOverflow": false,
+      "frameworkErrorOverlay": false,
+      "consoleErrors": 0
+    }
+  },
+  "limitations": [
+    "NO_PRODUCTION_LISTING_DATASET",
+    "NO_AUTHENTICATED_SELLER_PERSISTENCE",
+    "NO_BACKEND_IMAGE_STORAGE",
+    "NO_CONTACT_MESSAGING_BACKEND",
+    "NO_PAYMENT_ESCROW_OR_DELIVERY_TRACKING"
+  ]
+}

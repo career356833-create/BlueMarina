@@ -8,7 +8,7 @@ const desktopNav = [
   { href: "/sea", label: "SEA" },
   { href: "/fishing-spots", label: "FISHING" },
   { href: "/fish", label: "FISH" },
-  { href: "/coming-soon?section=%EB%A7%88%EC%BC%93&feature=%EB%A7%88%EC%BC%93", label: "MARKET" },
+  { href: "/market", label: "MARKET" },
   { href: "/license-guide", label: "GUIDE" }
 ];
 
