@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "decision": "CHARTER_DATA_BATCH_001_READY_WITH_EXCEPTIONS",
+  "sourceCounts": {
+    "discovered": 2,
+    "usable": 1,
+    "blocked": 1
+  },
+  "rawRecords": 70728,
+  "selectedSourceRegistrations": 100,
+  "normalizedRecords": {
+    "operators": 0,
+    "boats": 0,
+    "ports": 39,
+    "charters": 0,
+    "schedules": 0,
+    "sourceRegistrations": 100
+  },
+  "coverage": {
+    "contacts": 0,
+    "prices": 0,
+    "schedules": 0,
+    "capacities": 99,
+    "coordinates": 0,
+    "targetSpeciesMapping": 0
+  },
+  "coveragePercent": {
+    "capacities": 99,
+    "contacts": 0,
+    "prices": 0,
+    "schedules": 0,
+    "coordinates": 0,
+    "targetSpeciesMapping": 0
+  },
+  "dedupe": {
+    "duplicateIds": 0,
+    "danglingReferences": 0,
+    "automaticMerges": 0,
+    "duplicateCandidates": 0
+  },
+  "truth": {
+    "inferredSeats": 0,
+    "inferredPrices": 0,
+    "inferredCoordinates": 0,
+    "fuzzyMappings": 0,
+    "fakeRealtime": 0,
+    "productionActivation": 0,
+    "dbSupabaseWrites": 0
+  },
+  "exceptions": {
+    "total": 5,
+    "categories": [
+      {
+        "category": "operator identity conflict",
+        "count": 100
+      },
+      {
+        "category": "boat identity conflict",
+        "count": 100
+      },
+      {
+        "category": "unknown price",
+        "count": 100
+      },
+      {
+        "category": "stale schedule",
+        "count": 100
+      },
+      {
+        "category": "port ambiguity",
+        "count": 39
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "batchId": "CHARTER-BATCH-001",
+  "total": 5,
+  "entries": [
+    {
+      "category": "operator identity conflict",
+      "count": 100,
+      "status": "KEEP_EXCEPTION",
+      "reason": "Official source has no operator or business name field."
+    },
+    {
+      "category": "boat identity conflict",
+      "count": 100,
+      "status": "KEEP_EXCEPTION",
+      "reason": "Official source has no vessel name or registration field."
+    },
+    {
+      "category": "unknown price",
+      "count": 100,
+      "status": "KEEP_EXCEPTION",
+      "reason": "Official source has no charter product or price field."
+    },
+    {
+      "category": "stale schedule",
+      "count": 100,
+      "status": "KEEP_EXCEPTION",
+      "reason": "Source snapshot has no schedule or live availability field."
+    },
+    {
+      "category": "port ambiguity",
+      "count": 39,
+      "status": "KEEP_EXCEPTION",
+      "reason": "Port names are source-backed but lack authoritative coordinates."
+    }
+  ]
+}

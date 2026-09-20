@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "discovered": 2,
+  "usable": 1,
+  "blocked": 1,
+  "sources": [
+    {
+      "sourceId": "mof-fishing-vessel-register-20211230",
+      "sourceName": "해양수산부 공동활용체계 낚시어선업신고대장정보",
+      "sourceType": "GOVERNMENT_OPEN_DATA_FILE",
+      "baseUrl": "https://www.data.go.kr/data/15147464/fileData.do",
+      "accessMethod": "Public file download without login",
+      "fieldsAvailable": [
+        "serial number",
+        "maximum passengers",
+        "maximum crew",
+        "departure/entry port name",
+        "business area",
+        "business place"
+      ],
+      "updateFrequency": "One-time/static snapshot",
+      "termsOrRobotsNotes": "Portal states file download is available without login and licence scope is unrestricted.",
+      "bulkPotential": 70728,
+      "trustLevel": "AUTHORITATIVE",
+      "status": "USABLE"
+    },
+    {
+      "sourceId": "mof-fishing-vessel-register-openapi",
+      "sourceName": "해양수산부 낚시어선업신고대장 OpenAPI",
+      "sourceType": "GOVERNMENT_OPEN_API",
+      "baseUrl": "https://www.data.go.kr/data/15147464/fileData.do",
+      "accessMethod": "Requires Data.go.kr application and service key",
+      "fieldsAvailable": [
+        "Same underlying register fields"
+      ],
+      "updateFrequency": "One-time/static snapshot",
+      "termsOrRobotsNotes": "No key was requested or used; no access control was bypassed.",
+      "bulkPotential": 70728,
+      "trustLevel": "AUTHORITATIVE",
+      "status": "BLOCKED_PENDING_CREDENTIAL"
+    }
+  ]
+}
