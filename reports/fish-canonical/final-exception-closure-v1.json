@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "program": "Fish Canonical Final Exception Closure V1",
+  "generatedOn": "2026-09-19",
+  "decision": "EXCEPTION_CLOSURE_COMPLETE_WITH_REMAINDERS",
+  "scope": {
+    "before": 2,
+    "resolved": 1,
+    "remaining": 1,
+    "remainingIds": [
+      "BM-SPECIES-000279"
+    ],
+    "exactExceptionIds": [
+      "07e1852e-0675-4090-8675-cd216fb90ba9",
+      "BM-SPECIES-000279"
+    ],
+    "priorHistoryPreserved": true
+  },
+  "cases": [
+    {
+      "exceptionId": "07e1852e-0675-4090-8675-cd216fb90ba9",
+      "koreanName": "오분자기",
+      "exceptionType": "TAXONOMY_CONFLICT",
+      "currentIdentity": {
+        "scientificName": "Sulculus diversicolor",
+        "acceptedScientificName": "Sulculus diversicolor",
+        "taxonomyStatus": "TAXONOMY_CONFLICT",
+        "identityStatus": "CONFLICT",
+        "sourceSystem": "NIFS"
+      },
+      "competingAcceptedNames": [
+        {
+          "scientificName": "Haliotis diversicolor",
+          "status": "ACCEPTED",
+          "associatedKoreanName": "마대오분자기"
+        },
+        {
+          "scientificName": "Haliotis supertexta",
+          "status": "ACCEPTED",
+          "associatedKoreanName": "오분자기"
+        }
+      ],
+      "authoritativeEvidence": [
+        {
+          "authority": "NIFS",
+          "artifact": "data/nifs/normalized/fish/fish_1575873437839.json",
+          "sourceId": "fish_1575873437839",
+          "observedIdentity": {
+            "koreanName": "오분자기",
+            "scientificName": "Sulculus diversicolor"
+          },
+          "sourceDate": "2024 source history; normalized 2026-07-30",
+          "assessment": "The row preserves the conflicting Korean/scientific-name pair that opened this exception."
+        },
+        {
+          "authority": "MBRIS",
+          "artifact": "data/mbris/normalized/detail/BM-SPECIES-002418.json",
+          "sourceId": "270000022369",
+          "observedIdentity": {
+            "koreanName": "오분자기",
+            "scientificName": "Haliotis supertexta Lischke, 1870"
+          },
+          "acceptedStatus": "정명",
+          "sourceDate": "2026-08-03T10:12:10.188774+00:00",
+          "assessment": "The current public-institution record treats Haliotis supertexta as the accepted identity for 오분자기."
+        },
+        {
+          "authority": "WoRMS/MolluscaBase",
+          "title": "Haliotis diversicolor (AphiaID 445319)",
+          "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=445319",
+          "accessedOn": "2026-09-19",
+          "taxonomyDate": "record modified 2012-03-03; API checked 2026-09-19",
+          "acceptedStatus": "ACCEPTED",
+          "assessment": "Sulculus diversicolor is a superseded combination of Haliotis diversicolor, not a synonym of Haliotis supertexta."
+        },
+        {
+          "authority": "WoRMS/MolluscaBase",
+          "title": "Haliotis supertexta (AphiaID 445364)",
+          "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=445364",
+          "accessedOn": "2026-09-19",
+          "taxonomyDate": "record modified 2022-01-27; API checked 2026-09-19",
+          "acceptedStatus": "ACCEPTED",
+          "assessment": "Haliotis supertexta is a separate accepted species."
+        },
+        {
+          "authority": "NIBR",
+          "title": "K-BON 생물종 안내서 — 오분자기",
+          "url": "https://species.nibr.go.kr/nibr/assets/K-BON_GUIDE.pdf",
+          "accessedOn": "2026-09-19",
+          "taxonomyDate": "current guide checked 2026-09-19",
+          "acceptedStatus": "OFFICIAL KOREAN SPECIES GUIDE",
+          "assessment": "The guide identifies 오분자기 as Haliotis supertexta and distinguishes 마대오분자기."
+        },
+        {
+          "authority": "GBIF Backbone Taxonomy",
+          "title": "Species matches for Haliotis diversicolor and Haliotis supertexta",
+          "url": "https://api.gbif.org/v1/species/match?name=Haliotis%20supertexta",
+          "accessedOn": "2026-09-19",
+          "taxonomyDate": "API checked 2026-09-19",
+          "acceptedStatus": "BOTH ACCEPTED AS DISTINCT SPECIES",
+          "assessment": "The backbone returns separate accepted species matches, consistent with WoRMS."
+        }
+      ],
+      "synonymAssessment": {
+        "inputName": "Sulculus diversicolor",
+        "acceptedName": "Haliotis diversicolor",
+        "relationship": "SUPERSEDED_COMBINATION",
+        "synonymOfHaliotisSupertexta": false
+      },
+      "conflictOrigin": "The NIFS row pairs the Korean name 오분자기 with Sulculus diversicolor. Current MBRIS/NIBR Korean identity evidence assigns 오분자기 to Haliotis supertexta, while current WoRMS accepts Haliotis diversicolor as a separate species.",
+      "resolution": "RESOLVED_WITH_LIMITATION",
+      "resolutionMetadata": {
+        "researchAcceptedScientificName": "Haliotis supertexta",
+        "researchAcceptedKoreanName": "오분자기",
+        "displacedScientificIdentity": "Haliotis diversicolor",
+        "displacedIdentityKoreanName": "마대오분자기",
+        "canonicalApplyStatus": "NOT_APPLIED"
+      },
+      "limitation": "The evidence resolves the research classification, but the frozen canonical row remains unchanged and therefore retains TAXONOMY_CONFLICT/CONFLICT until a separately authorized production apply review."
+    },
+    {
+      "exceptionId": "BM-SPECIES-000279",
+      "koreanName": "벵에돔",
+      "exceptionType": "ALIAS_AMBIGUITY",
+      "currentIdentity": {
+        "scientificName": "Girella punctata",
+        "acceptedScientificName": "Girella punctata",
+        "taxonomyStatus": "SOURCE_CANONICAL",
+        "identityStatus": "VERIFIED",
+        "sourceSystem": "MBRIS"
+      },
+      "aliasCandidates": [
+        {
+          "alias": "점벵에돔",
+          "priorNameType": "unknown_possibly_colloquial",
+          "priorConfidence": "low",
+          "exactAuthoritativeSupportForGirellaPunctata": false,
+          "decision": "NOT_APPROVED",
+          "evidence": [
+            {
+              "organization": "FishBase",
+              "title": "Girella punctata Common Names List",
+              "url": "https://www.fishbase.se/",
+              "evidence": "한국어 통용명으로 '벵에돔', '긴꼬리벵에돔'(로마자 Peng-e-dom)만 등재됨. '점벵에돔'은 없음."
+            },
+            {
+              "organization": "국립수산과학원(NIFS)",
+              "title": "site 검색(nifs.go.kr)",
+              "url": "https://www.nifs.go.kr/",
+              "evidence": "'점벵에돔' 명칭이 등장하는 페이지를 찾지 못함(확인 안 됨)."
+            }
+          ]
+        },
+        {
+          "alias": "흑벵에돔",
+          "priorNameType": "unknown_possibly_colloquial",
+          "priorConfidence": "low",
+          "exactAuthoritativeSupportForGirellaPunctata": false,
+          "decision": "NOT_APPROVED",
+          "evidence": [
+            {
+              "organization": "FishBase",
+              "title": "Girella punctata Common Names List",
+              "url": "https://www.fishbase.se/",
+              "evidence": "한국어 통용명 '벵에돔', '긴꼬리벵에돔'만 등재. '흑벵에돔'은 없음."
+            }
+          ]
+        }
+      ],
+      "authoritativeEvidence": [
+        {
+          "authority": "MBRIS",
+          "artifact": "data/mbris/normalized/detail/BM-SPECIES-000279.json",
+          "sourceId": "270000007132",
+          "observedIdentity": {
+            "koreanName": "벵에돔",
+            "scientificName": "Girella punctata Gray, 1835"
+          },
+          "acceptedStatus": "정명",
+          "sourceDate": "2026-08-03T10:08:21.080518+00:00"
+        },
+        {
+          "authority": "FishBase",
+          "title": "Common names of Girella punctata",
+          "url": "https://www.fishbase.se/ComNames/CommonNamesList.php?GenusName=Girella&ID=6537&SpeciesName=punctata&StockCode=6858",
+          "accessedOn": "2026-09-19",
+          "assessment": "The checked Korean-name list does not establish 점벵에돔 or 흑벵에돔 as a name of Girella punctata."
+        },
+        {
+          "authority": "NIFS",
+          "title": "긴꼬리벵에돔 species record",
+          "url": "https://www.nifs.go.kr/portal/bt/frctA/actionSpeciesSearchView.do?taxonId=10405",
+          "accessedOn": "2026-09-19",
+          "observedIdentity": {
+            "koreanName": "긴꼬리벵에돔",
+            "scientificName": "Girella leonina"
+          },
+          "assessment": "An authoritative source distinguishes another Korean 벵에돔 name as a separate species, increasing the risk of accepting an unsupported colloquial alias."
+        },
+        {
+          "authority": "MBRIS",
+          "title": "긴꼬리벵에돔 species record",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000007130",
+          "accessedOn": "2026-09-19",
+          "observedIdentity": {
+            "koreanName": "긴꼬리벵에돔",
+            "scientificName": "Girella leonina"
+          },
+          "assessment": "The separate public-institution identity confirms that 벵에돔-family common names cannot be collapsed without exact one-to-one evidence."
+        }
+      ],
+      "relationship": {
+        "betweenCandidateAliases": "UNESTABLISHED",
+        "toGirellaPunctata": "UNESTABLISHED",
+        "regionalNameStatus": "UNPROVEN",
+        "commercialCommonNameStatus": "POSSIBLE_BUT_UNPROVEN",
+        "separateSpeciesRisk": true
+      },
+      "aliasSafety": "NOT_SAFE",
+      "safeAliasGate": {
+        "oneToOneSpeciesIdentity": false,
+        "authoritativeSynonymOrCommonNameSupport": false,
+        "noOtherSpeciesConflict": false,
+        "passed": false
+      },
+      "resolution": "KEEP_EXCEPTION",
+      "limitation": "Authoritative records support 벵에돔 = Girella punctata and separately 긴꼬리벵에돔 = Girella leonina, but do not establish either candidate alias as a unique name for Girella punctata. Absence from the checked sources does not prove a final alternative identity."
+    }
+  ],
+  "canonical": {
+    "total": 1258,
+    "uniqueIds": 1258,
+    "verified": 1256,
+    "partial": 1,
+    "conflict": 1,
+    "unresolved": 0,
+    "sourceCoverage": 1258,
+    "collisions": {
+      "scientificName": [],
+      "koreanName": [],
+      "synonym": []
+    },
+    "identityStatusMutated": false
+  },
+  "sources": {
+    "inventory": {
+      "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+      "sha256": "8E226C2EFD7760DC9D5E974967EFCF39FD4376816CBC0D64EDFD08E731E049C3"
+    },
+    "priorResolution": {
+      "artifact": "reports/fish-canonical/exception-resolution-summary-v1.json",
+      "sha256": "3378DA4CEC8ACF9977F3468723AC84F779497D2A0F914C356F4EF4732557F823"
+    },
+    "nifsObunjagi": {
+      "artifact": "data/nifs/normalized/fish/fish_1575873437839.json",
+      "sha256": "7F105C193A32D5ABB5512DE84D6039E3B7FDF35B452C0FF3EA72C12B9A51ABDE"
+    },
+    "mbrisObunjagi": {
+      "artifact": "data/mbris/normalized/detail/BM-SPECIES-002418.json",
+      "sha256": "6F16B86B025BD304467801F5CB0C9618F61730CE4565C73FEE008CFD8083FC29"
+    },
+    "mbrisGirellaPunctata": {
+      "artifact": "data/mbris/normalized/detail/BM-SPECIES-000279.json",
+      "sha256": "FFA77A36A804C710CF7A1E0910883D207154D0A3980E912AFE9656E6BFC6CA53"
+    },
+    "taxonomyCrosswalk": {
+      "artifact": "data/mbris/mappings/nifs-mbris-taxonomy-crosswalk.json",
+      "sha256": "F588CAEEFEEB0799DF76971082F5C466A7919CCCABEA0B152A6A596354C9F8AA"
+    },
+    "aliasReview": {
+      "artifact": "data/mbris/mappings/fish-data-alias-review-batch2.json",
+      "sha256": "BD01FF4FC52E3115636A9717A8887C10FED7D0E73729432D66AC467DF25A17AB"
+    }
+  },
+  "invariants": {
+    "idMutation": 0,
+    "newId": 0,
+    "idMerge": 0,
+    "idDelete": 0,
+    "productionMutation": 0,
+    "runtimeMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0
+  }
+}
