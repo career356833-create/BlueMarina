@@ -1,0 +1,2 @@
+import type{NextRequest}from"next/server";import{marketError,marketSuccess}from"@/lib/market/backend/http";import{authorizeMarketRequest}from"@/lib/market/backend/server";
+export async function POST(request:NextRequest,{params}:{params:Promise<{id:string}>}){try{const c=await authorizeMarketRequest(request);return marketSuccess({record:await c.service.validate((await params).id,c.userId,c.isAdmin)})}catch(error){return marketError(error)}}

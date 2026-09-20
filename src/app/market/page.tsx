@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { ArrowRight, PackageSearch, Plus, Search, ShieldCheck } from "lucide-react";
 import { AppFrame } from "@/components/boat/AppFrame";
-import { listMarketListings, parseMarketFilters } from "@/lib/market/filters";
+import { parseMarketFilters } from "@/lib/market/filters";
+import { readPublicMarketListings } from "@/lib/market/backend/public-reader";
 import { categoryLabels, conditionLabels, formatMarketPrice, priceTypeLabels, transactionLabels } from "@/lib/market/route-helpers";
 import { MARKET_CATEGORIES, MARKET_CONDITIONS, MARKET_PRICE_TYPES, MARKET_SORTS } from "@/lib/market/types";
 
@@ -10,7 +11,7 @@ const sortLabels = { NEWEST: "최신순", PRICE_LOW: "낮은 가격순", PRICE_H
 
 export default async function MarketPage({ searchParams }: { searchParams: Promise<MarketQuery> }) {
   const filters = parseMarketFilters(await searchParams);
-  const listings = listMarketListings(filters);
+  const listings = await readPublicMarketListings(filters);
   return <AppFrame><section className="mx-auto max-w-6xl py-5 sm:py-10">
     <div className="rounded-[30px] border border-[#1F3A50] bg-[linear-gradient(135deg,#071827,#0C2B3C)] p-6 sm:p-10">
       <p className="text-xs font-black tracking-[.22em] text-[#79C9D6]">BLUE MARINA MARKET</p>

@@ -2,11 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ExternalLink, Mail, PackageSearch, Phone, ShieldAlert } from "lucide-react";
 import { AppFrame } from "@/components/boat/AppFrame";
-import { getMarketListing } from "@/lib/market/registry";
+import { readPublicMarketListing } from "@/lib/market/backend/public-reader";
 import { categoryLabels, conditionLabels, formatMarketPrice, safeExternalHref, transactionLabels } from "@/lib/market/route-helpers";
 
 export default async function MarketListingDetail({ params }: { params: Promise<{ id: string }> }) {
-  const listing = getMarketListing((await params).id);
+  const listing = await readPublicMarketListing((await params).id);
   if (!listing || listing.status !== "ACTIVE") notFound();
   const externalHref = listing.contact?.contactType === "EXTERNAL_LINK" ? safeExternalHref(listing.contact.destination) : null;
   return <AppFrame><article className="mx-auto max-w-5xl py-5 sm:py-10">

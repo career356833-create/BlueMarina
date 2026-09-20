@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "market-supply-backend-v1",
+  "generatedAt": "2026-09-20T00:00:00.000Z",
+  "decision": "MARKET_SUPPLY_BACKEND_V1_READY_WITH_ENV_LIMITATIONS",
+  "database": {
+    "migration": "supabase/migrations/20260920115127_market_supply_backend_v1.sql",
+    "tables": 5,
+    "rlsEnabledTables": 5,
+    "anonDirectPrivileges": 0,
+    "authenticatedDirectPrivileges": 0,
+    "localApply": 0,
+    "remoteApply": 0
+  },
+  "api": {
+    "create": true,
+    "fetch": true,
+    "list": true,
+    "validate": true,
+    "status": true,
+    "review": true,
+    "imageUploadIntent": true,
+    "standardErrorCodes": 10
+  },
+  "workflow": {
+    "states": 7,
+    "initialPersistedStatus": "SUBMITTED",
+    "initialModerationStatus": "REVIEW_REQUIRED",
+    "adminApprovalRequiredForActive": true,
+    "automaticActive": 0,
+    "rawSnapshotPreserved": true,
+    "normalizedSnapshotPreserved": true,
+    "validationSnapshotPreserved": true,
+    "auditTrail": true,
+    "idempotency": true
+  },
+  "auth": {
+    "provider": "Supabase Auth",
+    "sellerIdentity": "auth.getUser(token)",
+    "adminClaim": "app_metadata.market_role=market_admin",
+    "userMetadataTrustedForAdmin": false
+  },
+  "storage": {
+    "bucketContract": "market-listing-staging",
+    "private": true,
+    "signedUploadIntent": true,
+    "allowedMimeTypes": ["image/jpeg", "image/png", "image/webp"],
+    "maxImages": 8,
+    "maxBytesPerImage": 8388608,
+    "bucketApply": 0,
+    "publicImageExposure": 0
+  },
+  "security": {
+    "requestBytes": 262144,
+    "actorRequestsPerTenMinutes": 10,
+    "contactPublicByDefault": false,
+    "ownershipChecks": true,
+    "adminChecks": true,
+    "prohibitedItemValidation": true,
+    "unknownPreserved": true
+  },
+  "featureFlags": {
+    "MARKET_BACKEND_ENABLED": false,
+    "MARKET_IMAGE_UPLOAD_ENABLED": false
+  },
+  "production": {
+    "existingRecords": 0,
+    "newRecords": 0,
+    "activation": 0,
+    "registryMutation": 0
+  },
+  "environmentLimitations": [
+    "Migration and storage contracts were not applied to a local or remote Supabase environment.",
+    "No authenticated end-to-end database or storage smoke test was performed.",
+    "Both backend feature flags remain disabled by default."
+  ],
+  "excluded": {
+    "payment": 0,
+    "escrow": 0,
+    "shipping": 0,
+    "realtimeChat": 0
+  },
+  "verification": {
+    "targeted": "39/39 PASS",
+    "total": "995/995 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "diffCheck": "PASS"
+  },
+  "git": {
+    "staged": 0,
+    "commit": 0,
+    "push": 0
+  }
+}

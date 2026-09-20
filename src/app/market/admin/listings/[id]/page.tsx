@@ -1,0 +1,1 @@
+import{AppFrame}from"@/components/boat/AppFrame";import{MarketAdminDetail}from"./market-admin-detail";export default async function MarketAdminListingPage({params}:{params:Promise<{id:string}>}){return <AppFrame><MarketAdminDetail id={(await params).id}/></AppFrame>}
