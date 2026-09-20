@@ -412,6 +412,11 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
             안전 체크리스트 보기
           </Link>
         </section>
+
+        <section className="rounded-[26px] border border-[#1F3A50] bg-[#071827] p-5 sm:flex sm:items-center sm:justify-between sm:gap-5">
+          <div><p className="text-xs font-black tracking-[.18em] text-[#79C9D6]">COMMUNITY</p><h2 className="mt-2 text-xl font-black">출조 경험과 질문 나누기</h2><p className="mt-2 text-sm font-semibold leading-6 text-[#9FB3C8]">조황과 출조 후기를 등록 포인트·어종에 직접 연결해 기록할 수 있습니다.</p></div>
+          <Link href="/community" className="mt-4 inline-flex min-h-11 shrink-0 items-center justify-center rounded-full bg-[#123A57] px-5 text-sm font-black text-white sm:mt-0">커뮤니티 보기</Link>
+        </section>
       </div>
     </AppFrame>
   );

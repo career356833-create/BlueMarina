@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "community-v1",
+  "generatedAt": "2026-09-20T00:00:00.000Z",
+  "decision": "COMMUNITY_V1_READY_WITH_BACKEND_LIMITATIONS",
+  "routes": ["/community", "/community/[id]", "/community/new"],
+  "domain": {
+    "postTypes": 6,
+    "postStatuses": 6,
+    "moderationStatuses": 4,
+    "commentStatuses": 4,
+    "reactionTypes": ["LIKE", "HELPFUL"],
+    "reportReasons": 7
+  },
+  "data": {
+    "datasetKind": "PRODUCTION",
+    "productionPosts": 0,
+    "demoPostsExposed": 0,
+    "fakeCounts": 0
+  },
+  "feed": {
+    "typeFilter": true,
+    "regionFilter": true,
+    "search": true,
+    "sorts": ["NEWEST", "OLDEST"],
+    "ranking": 0,
+    "recommendation": 0
+  },
+  "posting": {
+    "stages": 9,
+    "resultStatus": "SUBMITTED",
+    "moderationStatus": "REVIEW_REQUIRED",
+    "storage": "LOCAL_ONLY",
+    "automaticActive": 0,
+    "serverPersistence": 0
+  },
+  "linkedEntities": {
+    "fish": "EXPLICIT_SELECTION_ONLY",
+    "fishingSpot": "EXPLICIT_SELECTION_ONLY",
+    "charter": "EXPLICIT_SELECTION_ONLY",
+    "market": "EXPLICIT_SELECTION_ONLY",
+    "textInference": 0,
+    "gpsInference": 0
+  },
+  "images": {
+    "maxCount": 10,
+    "maxBytesEach": 8388608,
+    "mimeTypes": ["image/jpeg", "image/png", "image/webp"],
+    "svgAllowed": false,
+    "localPreview": true,
+    "upload": 0
+  },
+  "interactions": {
+    "comments": "LOCAL_PREVIEW",
+    "reactions": "LOCAL_DEVICE_STATE",
+    "reports": "PREPARED_ONLY",
+    "fakeReportReceipt": 0,
+    "fakePersistence": 0
+  },
+  "moderation": {
+    "ruleBasedFlags": 8,
+    "aiAutomaticDecision": 0,
+    "automaticDeletion": 0,
+    "automaticSuspension": 0,
+    "crimeJudgment": 0,
+    "trustScore": 0
+  },
+  "privacy": {
+    "freeformGpsField": false,
+    "automaticSpotLink": false,
+    "preferredRegionPrecision": "PROVINCE_OR_DISTRICT",
+    "privateMooringPrompt": false,
+    "homeAddressPrompt": false
+  },
+  "navigation": {
+    "desktopItemsChanged": 0,
+    "bottomItemsChanged": 0,
+    "fishingEntryAdded": true
+  },
+  "mobile": {
+    "viewport": "390x844",
+    "horizontalOverflow": 0,
+    "mainMinimumActionHeight": 44,
+    "errorOverlay": 0,
+    "consoleErrors": 0,
+    "result": "PASS"
+  },
+  "backendBoundary": {
+    "migration": 0,
+    "databaseApply": 0,
+    "authChange": 0,
+    "productionActivation": 0
+  },
+  "excluded": {
+    "realtimeChat": 0,
+    "directMessage": 0,
+    "follow": 0,
+    "recommendationAlgorithm": 0,
+    "pointEconomy": 0,
+    "advertising": 0
+  },
+  "verification": {
+    "targeted": "33/33 PASS",
+    "total": "1028/1028 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "diffCheck": "PASS"
+  },
+  "git": { "staged": 0, "commit": 0, "push": 0 }
+}
