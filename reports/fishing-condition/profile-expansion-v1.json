@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "program": "Fishing Condition Profile Expansion V1",
+  "generatedOn": "2026-09-20",
+  "decision": "PROFILE_EXPANSION_READY_WITH_EXCEPTIONS",
+  "total": 38,
+  "batches": {
+    "A": {
+      "total": 19,
+      "readiness": {
+        "PROFILE_READY": 5,
+        "PROFILE_PARTIAL": 3,
+        "PROFILE_LIMITED": 11,
+        "INSUFFICIENT_EVIDENCE": 0
+      }
+    },
+    "B": {
+      "total": 19,
+      "readiness": {
+        "PROFILE_READY": 0,
+        "PROFILE_PARTIAL": 0,
+        "PROFILE_LIMITED": 19,
+        "INSUFFICIENT_EVIDENCE": 0
+      }
+    }
+  },
+  "readiness": {
+    "PROFILE_READY": 5,
+    "PROFILE_PARTIAL": 3,
+    "PROFILE_LIMITED": 30,
+    "INSUFFICIENT_EVIDENCE": 0
+  },
+  "domainCoverage": {
+    "temperature": {
+      "covered": 11,
+      "unknown": 27
+    },
+    "depth": {
+      "covered": 27,
+      "unknown": 11
+    },
+    "salinity": {
+      "covered": 6,
+      "unknown": 32
+    },
+    "dissolvedOxygen": {
+      "covered": 4,
+      "unknown": 34
+    },
+    "spawning": {
+      "covered": 21,
+      "unknown": 17
+    },
+    "migration": {
+      "covered": 14,
+      "unknown": 24
+    },
+    "habitat": {
+      "covered": 38,
+      "unknown": 0
+    }
+  },
+  "sourceCoverage": {
+    "speciesWithEvidence": 38,
+    "evidenceRefCount": 69,
+    "bySource": {
+      "NIFS": 1,
+      "MBRIS": 31,
+      "NIBR": 0,
+      "WORMS": 0,
+      "FISHBASE": 22,
+      "FAO": 1,
+      "PAPER": 12
+    }
+  },
+  "existingConditionProfiles": {
+    "protectedCount": 10,
+    "directIdReused": 9,
+    "crossSystemReused": 1,
+    "evidenceRefreshed": 0,
+    "sourceValuesChanged": 0,
+    "unchanged": 10
+  },
+  "exceptions": {
+    "totalSpecies": 38,
+    "categoryCounts": {
+      "SOURCE_CONFLICT": 2,
+      "UNIT_AMBIGUITY": 2,
+      "TAXONOMY_MISMATCH": 1,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "INCOMPATIBLE_DEPTH_DEFINITIONS": 1,
+      "SEASONAL_AMBIGUITY": 4,
+      "UNKNOWN": 38
+    },
+    "artifact": "reports/fishing-condition/profile-expansion-exceptions-v1.json"
+  },
+  "sources": {
+    "priorityPool": {
+      "artifact": "reports/fish-canonical/condition-profile-priority-pool-v1.json",
+      "sha256": "9C7D3FA1FC2565613C21EB5D764B6A0074CE7788B8FF5BBBD7BC5DD803173055"
+    },
+    "inventory": {
+      "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+      "sha256": "8E226C2EFD7760DC9D5E974967EFCF39FD4376816CBC0D64EDFD08E731E049C3"
+    },
+    "existingProfiles": {
+      "artifact": "data/fishing-condition/species-environment/v3/species-environment-profiles.json",
+      "sha256": "880066B3EEFD2100EA870A674504492B8D70DA9700A660350FB296EA5BC7A376"
+    }
+  },
+  "invariants": {
+    "scoring": 0,
+    "ranking": 0,
+    "probability": 0,
+    "runtimeMutation": 0,
+    "productionMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0
+  }
+}

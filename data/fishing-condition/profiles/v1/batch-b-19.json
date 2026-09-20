@@ -1,0 +1,1823 @@
+{
+  "schemaVersion": 1,
+  "program": "Fishing Condition Profile Expansion V1",
+  "generatedOn": "2026-09-20",
+  "batch": "B",
+  "total": 19,
+  "selectionOrder": "PRIORITY_POOL_ORDER",
+  "readiness": {
+    "PROFILE_READY": 0,
+    "PROFILE_PARTIAL": 0,
+    "PROFILE_LIMITED": 19,
+    "INSUFFICIENT_EVIDENCE": 0
+  },
+  "profiles": [
+    {
+      "speciesId": "BM-SPECIES-000408",
+      "koreanName": "삼치",
+      "scientificName": "Scomberomorus niphonius",
+      "fishingSpotUsageCount": 97,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [],
+        "conflictingObservedDepth": [],
+        "status": "UNKNOWN"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              4,
+              5
+            ],
+            "seasons": [],
+            "summary": "4~5월경 내만에서 산란한다.",
+            "evidenceId": "BM-SPECIES-000408-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [
+          {
+            "summary": "여름에는 얕은 곳, 겨울에는 깊은 곳으로 이동한다.",
+            "evidenceId": "BM-SPECIES-000408-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "habitat": {
+        "types": [
+          "CONTINENTAL_SHELF",
+          "COASTAL",
+          "SURFACE"
+        ],
+        "substrates": [],
+        "summary": [
+          "대륙붕과 연안의 표층에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000408-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 삼치",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016173",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 20
+    },
+    {
+      "speciesId": "BM-SPECIES-000958",
+      "koreanName": "황어",
+      "scientificName": "Pseudaspius hakonensis",
+      "fishingSpotUsageCount": 84,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 0,
+            "max": 200,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-000958-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              3
+            ],
+            "seasons": [],
+            "summary": "3월 중순 산란기에 하천으로 소상한다.",
+            "evidenceId": "BM-SPECIES-000958-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [
+          {
+            "summary": "3월 중순 하천으로 소상한다.",
+            "evidenceId": "BM-SPECIES-000958-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL_SAND",
+          "RIVER"
+        ],
+        "substrates": [],
+        "summary": [
+          "연안 사질과 하천을 이용하는 회유성 어류이다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000958-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 황어",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000018212",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 21
+    },
+    {
+      "speciesId": "BM-SPECIES-000818",
+      "koreanName": "보리멸",
+      "scientificName": "Sillago sihama",
+      "fishingSpotUsageCount": 66,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 0,
+            "max": 60,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-000818-fishbase",
+            "evidenceClass": "SECONDARY_REFERENCE"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": null,
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "ESTUARY",
+          "SAND"
+        ],
+        "substrates": [],
+        "summary": [
+          "해변·사주·맹그로브 수로·하구의 모래 바닥을 이용한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000818-fishbase",
+          "sourceType": "FISHBASE",
+          "evidenceClass": "SECONDARY_REFERENCE",
+          "title": "FishBase Species Summary: Sillago sihama",
+          "url": "https://www.fishbase.se/summary/Sillago-sihama.html",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 22
+    },
+    {
+      "speciesId": "BM-SPECIES-000800",
+      "koreanName": "독가시치",
+      "scientificName": "Siganus fuscescens",
+      "fishingSpotUsageCount": 35,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 1,
+            "max": 50,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-000800-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": {
+          "seasons": [
+            "SUMMER"
+          ],
+          "summary": "산란기는 여름이다."
+        },
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "SEAGRASS",
+          "COASTAL_ROCKY_REEF"
+        ],
+        "substrates": [],
+        "summary": [
+          "수심 1~50m 해초 또는 연안 암초역에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000800-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 독가시치",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016477",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "SEASONAL_AMBIGUITY:spawning",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN",
+        "SEASONAL_AMBIGUITY"
+      ],
+      "batch": "B",
+      "priorityRank": 23
+    },
+    {
+      "speciesId": "BM-SPECIES-000840",
+      "koreanName": "민어",
+      "scientificName": "Miichthys miiuy",
+      "fishingSpotUsageCount": 34,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 15,
+            "max": 100,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-000840-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": null,
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "DEMERSAL",
+          "COASTAL_MUD"
+        ],
+        "substrates": [],
+        "summary": [
+          "수심 15~100m 연안 니질바닥의 저층부에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000840-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 민어",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000010842",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 24
+    },
+    {
+      "speciesId": "BM-SPECIES-000226",
+      "koreanName": "자리돔",
+      "scientificName": "Chromis notata",
+      "fishingSpotUsageCount": 28,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 2,
+            "max": 30,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-000226-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              6,
+              7,
+              8
+            ],
+            "seasons": [],
+            "summary": "산란기는 6~8월이다.",
+            "evidenceId": "BM-SPECIES-000226-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "ROCKY_REEF",
+          "CORAL_REEF"
+        ],
+        "substrates": [],
+        "summary": [
+          "수심 2~30m 바위 또는 산호초에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000226-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 자리돔",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000003808",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 25
+    },
+    {
+      "speciesId": "BM-SPECIES-000842",
+      "koreanName": "부세",
+      "scientificName": "Larimichthys crocea",
+      "fishingSpotUsageCount": 17,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 0,
+            "max": 120,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-000842-fishbase",
+            "evidenceClass": "SECONDARY_REFERENCE"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": null,
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [
+          {
+            "summary": "FishBase는 oceanodromous로 분류한다.",
+            "evidenceId": "BM-SPECIES-000842-fishbase",
+            "evidenceClass": "SECONDARY_REFERENCE"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "ESTUARY",
+          "MUD",
+          "SAND"
+        ],
+        "substrates": [],
+        "summary": [
+          "연안·하구의 진흙 또는 사니질 바닥, 수심 120m보다 얕은 곳에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000842-fishbase",
+          "sourceType": "FISHBASE",
+          "evidenceClass": "SECONDARY_REFERENCE",
+          "title": "FishBase Species Summary: Larimichthys crocea",
+          "url": "https://www.fishbase.se/summary/Larimichthys-crocea.html",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 26
+    },
+    {
+      "speciesId": "BM-SPECIES-000065",
+      "koreanName": "양태",
+      "scientificName": "Platycephalus indicus",
+      "fishingSpotUsageCount": 14,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [],
+        "conflictingObservedDepth": [],
+        "status": "UNKNOWN"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              5,
+              6
+            ],
+            "seasons": [],
+            "summary": "주 산란기는 5~6월이다.",
+            "evidenceId": "BM-SPECIES-000065-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [
+          {
+            "summary": "서해 개체는 가을 수온 하강기에 남해로 이동한다.",
+            "evidenceId": "BM-SPECIES-000065-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "habitat": {
+        "types": [
+          "DEMERSAL",
+          "COASTAL"
+        ],
+        "substrates": [],
+        "summary": [
+          "연안 저서 환경에서 생활한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000065-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 양태",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000013863",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 27
+    },
+    {
+      "speciesId": "BM-SPECIES-000019",
+      "koreanName": "쏨뱅이",
+      "scientificName": "Sebastiscus marmoratus",
+      "fishingSpotUsageCount": 12,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [],
+        "conflictingObservedDepth": [],
+        "status": "UNKNOWN"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": {
+          "months": [
+            12,
+            1,
+            2,
+            3,
+            4
+          ],
+          "summary": "난태생이며 12~4월 출산 기록이다. 산란 월로 변환하지 않는다."
+        },
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "DEMERSAL",
+          "COASTAL_ROCKY_REEF"
+        ],
+        "substrates": [],
+        "summary": [
+          "암초가 많은 연안 바닥에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000019-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 쏨뱅이",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016264",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "SEASONAL_AMBIGUITY:spawning",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN",
+        "SEASONAL_AMBIGUITY"
+      ],
+      "batch": "B",
+      "priorityRank": 28
+    },
+    {
+      "speciesId": "BM-SPECIES-000488",
+      "koreanName": "전갱이",
+      "scientificName": "Trachurus japonicus",
+      "fishingSpotUsageCount": 12,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 0,
+            "max": 275,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-000488-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": null,
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "PELAGIC",
+          "SCHOOLING"
+        ],
+        "substrates": [],
+        "summary": [
+          "수심 0~275m에서 무리를 지어 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000488-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 전갱이",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000018166",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 29
+    },
+    {
+      "speciesId": "BM-SPECIES-000792",
+      "koreanName": "벤자리",
+      "scientificName": "Parapristipoma trilineatum",
+      "fishingSpotUsageCount": 11,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [
+          {
+            "min": 18.2,
+            "max": 26.6,
+            "unit": "degC",
+            "context": "MODELLED_AQUAMAPS",
+            "evidenceId": "BM-SPECIES-000792-fishbase",
+            "evidenceClass": "SECONDARY_REFERENCE"
+          }
+        ],
+        "optimumRange": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [],
+        "conflictingObservedDepth": [],
+        "status": "UNKNOWN"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": null,
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [
+          {
+            "summary": "제한된 지역에서 계절적 외해-연안 이동을 한다.",
+            "evidenceId": "BM-SPECIES-000792-fishbase",
+            "evidenceClass": "SECONDARY_REFERENCE"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "habitat": {
+        "types": [
+          "ROCKY_SHORE",
+          "BENTHOPELAGIC"
+        ],
+        "substrates": [],
+        "summary": [
+          "따뜻하고 염분이 높은 암반 연안을 선호한다는 정성 기록이 있다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000792-fishbase",
+          "sourceType": "FISHBASE",
+          "evidenceClass": "SECONDARY_REFERENCE",
+          "title": "FishBase Species Summary: Parapristipoma trilineatum",
+          "url": "https://www.fishbase.se/summary/Parapristipoma-trilineatum.html",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:depth",
+        "UNKNOWN:spawning"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 30
+    },
+    {
+      "speciesId": "BM-SPECIES-000385",
+      "koreanName": "짱뚱어",
+      "scientificName": "Boleophthalmus pectinirostris",
+      "fishingSpotUsageCount": 9,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [],
+        "conflictingObservedDepth": [],
+        "status": "UNKNOWN"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": null,
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "INTERTIDAL_MUDFLAT",
+          "BURROW",
+          "AMPHIBIOUS"
+        ],
+        "substrates": [],
+        "summary": [
+          "간조 때 갯벌을 이용하고 만조 때 진흙 굴에 머문다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000385-fishbase",
+          "sourceType": "FISHBASE",
+          "evidenceClass": "SECONDARY_REFERENCE",
+          "title": "FishBase Species Summary: Boleophthalmus pectinirostris",
+          "url": "https://www.fishbase.se/summary/Boleophthalmus-pectinirostris.html",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 31
+    },
+    {
+      "speciesId": "BM-SPECIES-001227",
+      "koreanName": "다금바리",
+      "scientificName": "Niphon spinosus",
+      "fishingSpotUsageCount": 5,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 100,
+            "max": 140,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-001227-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "seasons": [],
+            "summary": "산란기는 5~8월이다.",
+            "evidenceId": "BM-SPECIES-001227-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "DEEP_ROCKY",
+          "SHELL_SAND"
+        ],
+        "substrates": [],
+        "summary": [
+          "패각·모래가 섞인 수심 100~140m 암초지대에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-001227-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 다금바리",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000011681",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 32
+    },
+    {
+      "speciesId": "BM-SPECIES-000223",
+      "koreanName": "망상어",
+      "scientificName": "Ditrema temminckii",
+      "fishingSpotUsageCount": 4,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [],
+        "conflictingObservedDepth": [],
+        "status": "UNKNOWN"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": {
+          "months": [
+            4,
+            5
+          ],
+          "summary": "4~5월 출산 기록이며 산란 월로 변환하지 않는다."
+        },
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "SAND",
+          "ROCK"
+        ],
+        "substrates": [],
+        "summary": [
+          "모래 또는 바위 바닥의 해안에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000223-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 망상어",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000005635",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "SEASONAL_AMBIGUITY:spawning",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN",
+        "SEASONAL_AMBIGUITY"
+      ],
+      "batch": "B",
+      "priorityRank": 33
+    },
+    {
+      "speciesId": "BM-SPECIES-000839",
+      "koreanName": "보구치",
+      "scientificName": "Pennahia argentata",
+      "fishingSpotUsageCount": 4,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 20,
+            "max": 140,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-000839-fishbase",
+            "evidenceClass": "SECONDARY_REFERENCE"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": null,
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "SAND",
+          "MUD"
+        ],
+        "substrates": [],
+        "summary": [
+          "연안 사질·니질 바닥에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000839-fishbase",
+          "sourceType": "FISHBASE",
+          "evidenceClass": "SECONDARY_REFERENCE",
+          "title": "FishBase Species Summary: Pennahia argentata",
+          "url": "https://www.fishbase.se/summary/Pennahia-argentata.html",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 34
+    },
+    {
+      "speciesId": "BM-SPECIES-001135",
+      "koreanName": "성대",
+      "scientificName": "Chelidonichthys spinosus",
+      "fishingSpotUsageCount": 3,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 20,
+            "max": 30,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-001135-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              4,
+              5,
+              6
+            ],
+            "seasons": [],
+            "summary": "산란기는 4~6월이다.",
+            "evidenceId": "BM-SPECIES-001135-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "DEMERSAL"
+        ],
+        "substrates": [],
+        "summary": [
+          "수심 20~30m 해저에서 주로 생활한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-001135-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 성대",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000003607",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 35
+    },
+    {
+      "speciesId": "BM-SPECIES-000122",
+      "koreanName": "쥐치",
+      "scientificName": "Stephanolepis cirrhifer",
+      "fishingSpotUsageCount": 2,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 0,
+            "max": 100,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-000122-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": null,
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "DEMERSAL"
+        ],
+        "substrates": [],
+        "summary": [
+          "수심 0~100m에 주로 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000122-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 쥐치",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000017064",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 36
+    },
+    {
+      "speciesId": "BM-SPECIES-001037",
+      "koreanName": "전어",
+      "scientificName": "Konosirus punctatus",
+      "fishingSpotUsageCount": 1,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 0,
+            "max": 30,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-001037-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              3,
+              4,
+              5,
+              6
+            ],
+            "seasons": [],
+            "summary": "산란기는 3~6월이다.",
+            "evidenceId": "BM-SPECIES-001037-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "ESTUARY",
+          "DEMERSAL"
+        ],
+        "substrates": [],
+        "summary": [
+          "연안·기수역의 보통 수심 30m 이내에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-001037-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 전어",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000009032",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 37
+    },
+    {
+      "speciesId": "BM-SPECIES-001165",
+      "koreanName": "쥐노래미",
+      "scientificName": "Hexagrammos otakii",
+      "fishingSpotUsageCount": 1,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 20,
+            "max": 100,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-001165-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              10,
+              11,
+              12,
+              1
+            ],
+            "seasons": [],
+            "summary": "산란기는 10~1월이다.",
+            "evidenceId": "BM-SPECIES-001165-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "ROCKY_REEF",
+          "SEAWEED"
+        ],
+        "substrates": [],
+        "summary": [
+          "수심 20~100m 암초와 해조류 지역에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-001165-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 쥐노래미",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000008285",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "B",
+      "priorityRank": 38
+    }
+  ],
+  "sources": {
+    "priorityPool": {
+      "artifact": "reports/fish-canonical/condition-profile-priority-pool-v1.json",
+      "sha256": "9C7D3FA1FC2565613C21EB5D764B6A0074CE7788B8FF5BBBD7BC5DD803173055"
+    },
+    "inventory": {
+      "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+      "sha256": "8E226C2EFD7760DC9D5E974967EFCF39FD4376816CBC0D64EDFD08E731E049C3"
+    },
+    "existingProfiles": {
+      "artifact": "data/fishing-condition/species-environment/v3/species-environment-profiles.json",
+      "sha256": "880066B3EEFD2100EA870A674504492B8D70DA9700A660350FB296EA5BC7A376"
+    }
+  },
+  "invariants": {
+    "scoring": 0,
+    "ranking": 0,
+    "probability": 0,
+    "runtimeMutation": 0,
+    "productionMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0
+  }
+}

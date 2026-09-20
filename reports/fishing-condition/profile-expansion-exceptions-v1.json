@@ -1,0 +1,672 @@
+{
+  "schemaVersion": 1,
+  "program": "Fishing Condition Profile Expansion V1",
+  "generatedOn": "2026-09-20",
+  "totalSpecies": 38,
+  "categoryCounts": {
+    "SOURCE_CONFLICT": 2,
+    "UNIT_AMBIGUITY": 2,
+    "TAXONOMY_MISMATCH": 1,
+    "INSUFFICIENT_EVIDENCE": 0,
+    "INCOMPATIBLE_DEPTH_DEFINITIONS": 1,
+    "SEASONAL_AMBIGUITY": 4,
+    "UNKNOWN": 38
+  },
+  "categoryGroups": {
+    "SOURCE_CONFLICT": [
+      "BM-SPECIES-000501",
+      "BM-SPECIES-000908"
+    ],
+    "UNIT_AMBIGUITY": [
+      "BM-SPECIES-000751",
+      "BM-SPECIES-000188"
+    ],
+    "TAXONOMY_MISMATCH": [
+      "47aa9b93-2b32-4df4-9a2a-45ed3abbd484"
+    ],
+    "INSUFFICIENT_EVIDENCE": [],
+    "INCOMPATIBLE_DEPTH_DEFINITIONS": [
+      "BM-SPECIES-000908"
+    ],
+    "SEASONAL_AMBIGUITY": [
+      "BM-SPECIES-000548",
+      "BM-SPECIES-000800",
+      "BM-SPECIES-000019",
+      "BM-SPECIES-000223"
+    ],
+    "UNKNOWN": [
+      "BM-SPECIES-000751",
+      "BM-SPECIES-000188",
+      "BM-SPECIES-000012",
+      "BM-SPECIES-000755",
+      "BM-SPECIES-000465",
+      "47aa9b93-2b32-4df4-9a2a-45ed3abbd484",
+      "BM-SPECIES-003107",
+      "BM-SPECIES-003111",
+      "BM-SPECIES-000417",
+      "BM-SPECIES-000501",
+      "BM-SPECIES-001164",
+      "BM-SPECIES-000002",
+      "BM-SPECIES-000278",
+      "BM-SPECIES-000908",
+      "BM-SPECIES-000097",
+      "BM-SPECIES-000279",
+      "BM-SPECIES-000548",
+      "BM-SPECIES-000500",
+      "BM-SPECIES-000884",
+      "BM-SPECIES-000408",
+      "BM-SPECIES-000958",
+      "BM-SPECIES-000818",
+      "BM-SPECIES-000800",
+      "BM-SPECIES-000840",
+      "BM-SPECIES-000226",
+      "BM-SPECIES-000842",
+      "BM-SPECIES-000065",
+      "BM-SPECIES-000019",
+      "BM-SPECIES-000488",
+      "BM-SPECIES-000792",
+      "BM-SPECIES-000385",
+      "BM-SPECIES-001227",
+      "BM-SPECIES-000223",
+      "BM-SPECIES-000839",
+      "BM-SPECIES-001135",
+      "BM-SPECIES-000122",
+      "BM-SPECIES-001037",
+      "BM-SPECIES-001165"
+    ]
+  },
+  "rows": [
+    {
+      "speciesId": "BM-SPECIES-000751",
+      "koreanName": "감성돔",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN",
+        "UNIT_AMBIGUITY"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity.numeric",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:activityPeriod",
+        "UNIT_AMBIGUITY:salinity:UNIT_NOT_DOCUMENTED"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000188",
+      "koreanName": "농어",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN",
+        "UNIT_AMBIGUITY"
+      ],
+      "limitations": [
+        "UNKNOWN:depth.maximum",
+        "UNKNOWN:salinity.numeric",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:activityPeriod",
+        "UNIT_AMBIGUITY:salinity:UNIT_NOT_DOCUMENTED"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "koreanName": "조피볼락",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:spawning",
+        "UNKNOWN:feeding"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "koreanName": "참돔",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:activityPeriod"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000465",
+      "koreanName": "넙치",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:activityPeriod"
+      ]
+    },
+    {
+      "speciesId": "47aa9b93-2b32-4df4-9a2a-45ed3abbd484",
+      "koreanName": "주꾸미",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN",
+        "TAXONOMY_MISMATCH"
+      ],
+      "limitations": [
+        "UNKNOWN:temperature.wild",
+        "UNKNOWN:temperature.preferred",
+        "UNKNOWN:salinity.wild",
+        "UNKNOWN:dissolvedOxygen.threshold",
+        "UNKNOWN:migration",
+        "UNKNOWN:feeding",
+        "TAXONOMY_MISMATCH:CROSS_SYSTEM_PROFILE_REUSE:BM-SPECIES-003107"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-003107",
+      "koreanName": "주꾸미",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:temperature.wild",
+        "UNKNOWN:temperature.preferred",
+        "UNKNOWN:salinity.wild",
+        "UNKNOWN:dissolvedOxygen.threshold",
+        "UNKNOWN:migration",
+        "UNKNOWN:feeding"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-003111",
+      "koreanName": "문어",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:spawning",
+        "UNKNOWN:activityPeriod"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000417",
+      "koreanName": "고등어",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:spawning.months"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "koreanName": "방어",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN",
+        "SOURCE_CONFLICT"
+      ],
+      "limitations": [
+        "UNKNOWN:activityPeriod",
+        "SOURCE_CONFLICT:depth.observed"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001164",
+      "koreanName": "노래미",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000002",
+      "koreanName": "볼락",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000278",
+      "koreanName": "돌돔",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000908",
+      "koreanName": "붕장어",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN",
+        "SOURCE_CONFLICT",
+        "INCOMPATIBLE_DEPTH_DEFINITIONS"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration",
+        "SOURCE_CONFLICT:depth",
+        "INCOMPATIBLE_DEPTH_DEFINITIONS:observedDepth"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000097",
+      "koreanName": "숭어",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000279",
+      "koreanName": "벵에돔",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000548",
+      "koreanName": "도다리",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN",
+        "SEASONAL_AMBIGUITY"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "SEASONAL_AMBIGUITY:spawning",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000500",
+      "koreanName": "부시리",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000884",
+      "koreanName": "학공치",
+      "batch": "A",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000408",
+      "koreanName": "삼치",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000958",
+      "koreanName": "황어",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000818",
+      "koreanName": "보리멸",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000800",
+      "koreanName": "독가시치",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN",
+        "SEASONAL_AMBIGUITY"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "SEASONAL_AMBIGUITY:spawning",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000840",
+      "koreanName": "민어",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000226",
+      "koreanName": "자리돔",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000842",
+      "koreanName": "부세",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000065",
+      "koreanName": "양태",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000019",
+      "koreanName": "쏨뱅이",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN",
+        "SEASONAL_AMBIGUITY"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "SEASONAL_AMBIGUITY:spawning",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000488",
+      "koreanName": "전갱이",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000792",
+      "koreanName": "벤자리",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:depth",
+        "UNKNOWN:spawning"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000385",
+      "koreanName": "짱뚱어",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001227",
+      "koreanName": "다금바리",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000223",
+      "koreanName": "망상어",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN",
+        "SEASONAL_AMBIGUITY"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "SEASONAL_AMBIGUITY:spawning",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000839",
+      "koreanName": "보구치",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001135",
+      "koreanName": "성대",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-000122",
+      "koreanName": "쥐치",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001037",
+      "koreanName": "전어",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:migration"
+      ]
+    },
+    {
+      "speciesId": "BM-SPECIES-001165",
+      "koreanName": "쥐노래미",
+      "batch": "B",
+      "categories": [
+        "UNKNOWN"
+      ],
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:migration"
+      ]
+    }
+  ],
+  "policy": {
+    "oneSpeciesFollowup": false,
+    "categoryBatchOnly": true,
+    "unknownValuesRemainNullOrEmpty": true
+  },
+  "sources": {
+    "priorityPool": {
+      "artifact": "reports/fish-canonical/condition-profile-priority-pool-v1.json",
+      "sha256": "9C7D3FA1FC2565613C21EB5D764B6A0074CE7788B8FF5BBBD7BC5DD803173055"
+    },
+    "inventory": {
+      "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+      "sha256": "8E226C2EFD7760DC9D5E974967EFCF39FD4376816CBC0D64EDFD08E731E049C3"
+    },
+    "existingProfiles": {
+      "artifact": "data/fishing-condition/species-environment/v3/species-environment-profiles.json",
+      "sha256": "880066B3EEFD2100EA870A674504492B8D70DA9700A660350FB296EA5BC7A376"
+    }
+  },
+  "invariants": {
+    "scoring": 0,
+    "ranking": 0,
+    "probability": 0,
+    "runtimeMutation": 0,
+    "productionMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0
+  }
+}

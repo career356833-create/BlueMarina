@@ -1,0 +1,2892 @@
+{
+  "schemaVersion": 1,
+  "program": "Fishing Condition Profile Expansion V1",
+  "generatedOn": "2026-09-20",
+  "batch": "A",
+  "total": 19,
+  "selectionOrder": "PRIORITY_POOL_ORDER",
+  "readiness": {
+    "PROFILE_READY": 5,
+    "PROFILE_PARTIAL": 3,
+    "PROFILE_LIMITED": 11,
+    "INSUFFICIENT_EVIDENCE": 0
+  },
+  "profiles": [
+    {
+      "speciesId": "BM-SPECIES-000751",
+      "koreanName": "감성돔",
+      "scientificName": "Acanthopagrus schlegelii",
+      "fishingSpotUsageCount": 991,
+      "currentConditionEnabled": true,
+      "existingProfile": {
+        "reused": true,
+        "sourceSpeciesId": "BM-SPECIES-000751",
+        "sourceArtifact": "data/fishing-condition/species-environment/v3/species-environment-profiles.json",
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [
+          {
+            "minC": 13.1,
+            "maxC": 25.4,
+            "context": "MODELLED_PREFERRED_TEMPERATURE_AQUAMAPS",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "blackporgy-fishbase-temperature-v2"
+            ]
+          },
+          {
+            "minC": 29,
+            "maxC": 30,
+            "context": "EXPERIMENTAL_FINAL_PREFERENDUM_APPROXIMATE",
+            "lifeStage": "JUVENILE",
+            "regionScope": "JAPAN_LAB_REARED",
+            "evidenceIds": [
+              "blackporgy-kaiseiken-preference-2002"
+            ]
+          }
+        ],
+        "optimumRange": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "depth": {
+        "habitatDepth": [
+          {
+            "minM": null,
+            "maxM": null,
+            "context": "INNER_BAY_REEF_AND_ESTUARY",
+            "lifeStage": "JUVENILE",
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "blackporgy-mbris"
+            ]
+          }
+        ],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "minM": 0,
+            "maxM": 50,
+            "context": "COASTAL_HABITAT",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "blackporgy-mbris"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [
+          "BRACKISH_TOLERANT",
+          "LOW_SALINITY_ADAPTED"
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "seasons": [],
+            "temperatureMinC": null,
+            "temperatureMaxC": null,
+            "depthMinM": null,
+            "depthMaxM": null,
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "blackporgy-mbris"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [
+          {
+            "movement": "OFFSHORE",
+            "months": [],
+            "seasons": [
+              "WINTER"
+            ],
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "KOREA",
+            "summary": "내만성 어종이지만 겨울철에는 더 깊은 곳으로 이동한다.",
+            "evidenceIds": [
+              "blackporgy-mbris"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "ROCKY_REEF",
+          "ESTUARY",
+          "DEMERSAL"
+        ],
+        "substrates": [
+          "ROCK",
+          "SAND"
+        ],
+        "summary": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "blackporgy-mbris",
+          "sourceType": "MBRIS",
+          "title": "MBRIS 생물종 상세정보: 감성돔",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000000084",
+          "publicationYear": null,
+          "regionScope": "KOREA",
+          "evidenceType": "DEPTH_HABITAT_SALINITY_SPAWNING_MIGRATION",
+          "quoteOrSummary": "50m 이내 연안의 모래·암초, 치어의 내만·하구 이용, 저염분 적응, 겨울 심층 이동과 3~7월 산란을 기술한다.",
+          "evidenceClass": "DIRECT_OFFICIAL"
+        },
+        {
+          "id": "blackporgy-fishbase",
+          "sourceType": "FISHBASE",
+          "title": "FishBase Species Summary: Acanthopagrus schlegelii",
+          "url": "https://www.fishbase.se/summary/SpeciesSummary.php?ID=6531",
+          "publicationYear": null,
+          "regionScope": "NORTHWEST_PACIFIC",
+          "evidenceType": "HABITAT_FEEDING_SPAWNING",
+          "quoteOrSummary": "만, 얕은 암초와 기수역에서 발견되며 연체동물·다모류를 먹고 봄·여름에 산란한다고 정리한다.",
+          "evidenceClass": "SECONDARY_REFERENCE"
+        },
+        {
+          "id": "blackporgy-fishbase-temperature-v2",
+          "sourceType": "FISHBASE",
+          "title": "FishBase AquaMaps modelled preferred temperature: Acanthopagrus schlegelii",
+          "url": "https://www.fishbase.se/summary/6531",
+          "publicationYear": null,
+          "regionScope": "GLOBAL",
+          "evidenceType": "MODELLED_PREFERRED_TEMPERATURE",
+          "quoteOrSummary": "FishBase가 AquaMaps occurrence-cell model로 13.1~25.4°C 범위를 제시한다(68 cells). 현장 실측 범위와 혼합하지 않는다.",
+          "officialDatasetId": "FishBase Ref. 123201",
+          "accessedAt": "2026-09-11",
+          "evidenceClass": "SECONDARY_REFERENCE"
+        },
+        {
+          "id": "blackporgy-kaiseiken-preference-2002",
+          "sourceName": "Marine Ecology Research Institute",
+          "sourceType": "RESEARCH_INSTITUTE_REPORT",
+          "title": "Experimental study on temperature preference of Japanese marine fish",
+          "url": "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf",
+          "year": 2002,
+          "species": "감성돔",
+          "scientificName": "Acanthopagrus schlegelii",
+          "temperature": {
+            "min": 29,
+            "max": 30,
+            "unit": "degC"
+          },
+          "rangeType": "EXPERIMENTAL_FINAL_PREFERENDUM_APPROXIMATE",
+          "lifeStage": "JUVENILE",
+          "geographicContext": "Japan; laboratory-reared from eyed eggs",
+          "seasonContext": null,
+          "evidenceStrength": "MEDIUM",
+          "notes": "Narrative reports an approximately 29-30 degC final preferendum. Laboratory origin and life-stage scope prohibit general wild promotion.",
+          "evidenceClass": "DIRECT_SCIENTIFIC"
+        }
+      ],
+      "profileReadiness": "PROFILE_READY",
+      "limitations": [
+        "UNKNOWN:salinity.numeric",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:activityPeriod",
+        "UNIT_AMBIGUITY:salinity:UNIT_NOT_DOCUMENTED"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN",
+        "UNIT_AMBIGUITY"
+      ],
+      "batch": "A",
+      "priorityRank": 1
+    },
+    {
+      "speciesId": "BM-SPECIES-000188",
+      "koreanName": "농어",
+      "scientificName": "Lateolabrax japonicus",
+      "fishingSpotUsageCount": 969,
+      "currentConditionEnabled": true,
+      "existingProfile": {
+        "reused": true,
+        "sourceSpeciesId": "BM-SPECIES-000188",
+        "sourceArtifact": "data/fishing-condition/species-environment/v3/species-environment-profiles.json",
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [
+          {
+            "minC": 12.7,
+            "maxC": 26.3,
+            "context": "MODELLED_PREFERRED_TEMPERATURE_AQUAMAPS",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "seabass-fishbase-temperature-v2"
+            ]
+          },
+          {
+            "minC": 29,
+            "maxC": 30,
+            "context": "EXPERIMENTAL_FINAL_PREFERENDUM_APPROXIMATE",
+            "lifeStage": "JUVENILE",
+            "regionScope": "JAPAN_LAB_REARED",
+            "evidenceIds": [
+              "seabass-kaiseiken-preference-2002"
+            ]
+          }
+        ],
+        "optimumRange": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "minM": 5,
+            "maxM": null,
+            "context": "OBSERVED_HABITAT",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "evidenceIds": [
+              "seabass-fishbase"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [
+          "MARINE_BRACKISH_FRESHWATER_LIFE_CYCLE"
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [],
+            "seasons": [
+              "AUTUMN",
+              "WINTER"
+            ],
+            "temperatureMinC": null,
+            "temperatureMaxC": null,
+            "depthMinM": null,
+            "depthMaxM": null,
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "seabass-mbris"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [
+          {
+            "movement": "INSHORE_OFFSHORE",
+            "months": [],
+            "seasons": [
+              "SPRING",
+              "SUMMER",
+              "AUTUMN",
+              "WINTER"
+            ],
+            "lifeStage": "JUVENILE",
+            "regionScope": "KOREA",
+            "summary": "치어는 봄·여름 담수로 올라가고 가을·겨울 바다로 내려가 산란한다.",
+            "evidenceIds": [
+              "seabass-mbris",
+              "seabass-fishbase"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "ROCKY_REEF",
+          "ESTUARY"
+        ],
+        "substrates": [
+          "ROCK"
+        ],
+        "summary": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "seabass-mbris",
+          "sourceType": "MBRIS",
+          "title": "MBRIS 생물종 상세정보: 농어",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000009286",
+          "publicationYear": null,
+          "regionScope": "KOREA",
+          "evidenceType": "HABITAT_SPAWNING_MIGRATION_FEEDING",
+          "quoteOrSummary": "연안 유영, 여름 기수·담수 진입, 치어의 계절 이동, 가을·겨울 하구 기수역 산란 및 성장 단계별 먹이를 기술한다.",
+          "evidenceClass": "DIRECT_OFFICIAL"
+        },
+        {
+          "id": "seabass-fishbase",
+          "sourceType": "FISHBASE",
+          "title": "FishBase Species Summary: Lateolabrax japonicus",
+          "url": "https://www.fishbase.se/summary/Lateolabrax-japonicus.html",
+          "publicationYear": null,
+          "regionScope": "NORTHWEST_PACIFIC",
+          "evidenceType": "DEPTH_HABITAT_MIGRATION_FEEDING",
+          "quoteOrSummary": "5m 이상 수심, 연안 암초의 흐르는 물, 치어의 하천 진입과 해양 산란 회귀, 성장 단계별 먹이를 정리한다.",
+          "evidenceClass": "SECONDARY_REFERENCE"
+        },
+        {
+          "id": "seabass-fishbase-temperature-v2",
+          "sourceType": "FISHBASE",
+          "title": "FishBase AquaMaps modelled preferred temperature: Lateolabrax japonicus",
+          "url": "https://www.fishbase.se/summary/Lateolabrax-japonicus.html",
+          "publicationYear": null,
+          "regionScope": "GLOBAL",
+          "evidenceType": "MODELLED_PREFERRED_TEMPERATURE",
+          "quoteOrSummary": "FishBase가 AquaMaps occurrence-cell model로 12.7~26.3°C 범위를 제시한다(180 cells). 현장 실측 범위와 혼합하지 않는다.",
+          "officialDatasetId": "FishBase Ref. 123201",
+          "accessedAt": "2026-09-11",
+          "evidenceClass": "SECONDARY_REFERENCE"
+        },
+        {
+          "id": "seabass-kaiseiken-preference-2002",
+          "sourceName": "Marine Ecology Research Institute",
+          "sourceType": "RESEARCH_INSTITUTE_REPORT",
+          "title": "Experimental study on temperature preference of Japanese marine fish",
+          "url": "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf",
+          "year": 2002,
+          "species": "농어",
+          "scientificName": "Lateolabrax japonicus",
+          "temperature": {
+            "min": 29,
+            "max": 30,
+            "unit": "degC"
+          },
+          "rangeType": "EXPERIMENTAL_FINAL_PREFERENDUM_APPROXIMATE",
+          "lifeStage": "JUVENILE",
+          "geographicContext": "Japan; laboratory-reared after artificial fertilization",
+          "seasonContext": null,
+          "evidenceStrength": "MEDIUM",
+          "notes": "Narrative reports an approximately 29-30 degC final preferendum. Oxygen and acclimation affect preference; not a general wild range.",
+          "evidenceClass": "DIRECT_SCIENTIFIC"
+        }
+      ],
+      "profileReadiness": "PROFILE_READY",
+      "limitations": [
+        "UNKNOWN:depth.maximum",
+        "UNKNOWN:salinity.numeric",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:activityPeriod",
+        "UNIT_AMBIGUITY:salinity:UNIT_NOT_DOCUMENTED"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN",
+        "UNIT_AMBIGUITY"
+      ],
+      "batch": "A",
+      "priorityRank": 2
+    },
+    {
+      "speciesId": "BM-SPECIES-000012",
+      "koreanName": "조피볼락",
+      "scientificName": "Sebastes schlegelii",
+      "fishingSpotUsageCount": 776,
+      "currentConditionEnabled": true,
+      "existingProfile": {
+        "reused": true,
+        "sourceSpeciesId": "BM-SPECIES-000012",
+        "sourceArtifact": "data/fishing-condition/species-environment/v3/species-environment-profiles.json",
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [
+          {
+            "minC": 8,
+            "maxC": 21.3,
+            "context": "MODELLED_PREFERRED_TEMPERATURE_AQUAMAPS",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "rockfish-fishbase-temperature-v2"
+            ]
+          },
+          {
+            "minC": 17.8,
+            "maxC": 22.8,
+            "context": "EXPERIMENTAL_TEMPERATURE_PREFERENCE_ACCLIMATION_INDEPENDENT",
+            "lifeStage": "YOUNG",
+            "regionScope": "JAPAN_LAB_EXPERIMENT",
+            "evidenceIds": [
+              "rockfish-jstage-preference-1997"
+            ]
+          }
+        ],
+        "optimumRange": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "minM": 0,
+            "maxM": 100,
+            "context": "SHALLOW_COASTAL_HABITAT",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "evidenceIds": [
+              "rockfish-paper-2015"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [
+          {
+            "movement": "SITE_FIDELITY",
+            "months": [],
+            "seasons": [],
+            "lifeStage": "ADULT",
+            "regionScope": "REGIONAL_OTHER",
+            "summary": "음향추적 연구에서 짧은 이동과 강한 서식지 충실성이 관찰됐다.",
+            "evidenceIds": [
+              "rockfish-paper-2015"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "ROCKY_REEF",
+          "DEMERSAL"
+        ],
+        "substrates": [
+          "ROCK"
+        ],
+        "summary": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "rockfish-paper-2015",
+          "sourceType": "PAPER",
+          "title": "Short-Term Fidelity, Habitat Use and Vertical Movement Behavior of the Black Rockfish",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4556453/",
+          "publicationYear": 2015,
+          "regionScope": "REGIONAL_OTHER",
+          "evidenceType": "DEPTH_HABITAT_MOVEMENT_ACTIVITY",
+          "quoteOrSummary": "북서태평양 연안 100m 이내 서식과 암초 연계, 강한 위치 충실성 및 개체별로 다른 주야 수직 이동을 보고한다.",
+          "evidenceClass": "DIRECT_SCIENTIFIC"
+        },
+        {
+          "id": "rockfish-fishbase",
+          "sourceType": "FISHBASE",
+          "title": "FishBase Ecology Summary: Sebastes schlegelii",
+          "url": "https://fishbase.se/Ecology/Sebastes_schlegelii",
+          "publicationYear": null,
+          "regionScope": "NORTHWEST_PACIFIC",
+          "evidenceType": "HABITAT_SUBSTRATE",
+          "quoteOrSummary": "저서성 암반 서식과 연안 암초 환경을 정리한다.",
+          "evidenceClass": "SECONDARY_REFERENCE"
+        },
+        {
+          "id": "rockfish-fishbase-temperature-v2",
+          "sourceType": "FISHBASE",
+          "title": "FishBase AquaMaps modelled preferred temperature: Sebastes schlegelii",
+          "url": "https://www.fishbase.se/summary/6534",
+          "publicationYear": null,
+          "regionScope": "GLOBAL",
+          "evidenceType": "MODELLED_PREFERRED_TEMPERATURE",
+          "quoteOrSummary": "FishBase가 AquaMaps occurrence-cell model로 8~21.3°C 범위를 제시한다(86 cells). 현장 실측 범위와 혼합하지 않는다.",
+          "officialDatasetId": "FishBase Ref. 123201",
+          "accessedAt": "2026-09-11",
+          "evidenceClass": "SECONDARY_REFERENCE"
+        },
+        {
+          "id": "rockfish-jstage-preference-1997",
+          "sourceName": "Japanese Society of Fisheries Science",
+          "sourceType": "PEER_REVIEWED_PAPER",
+          "title": "Temperature Responses of Young Schlegel's Black Rockfish Sebastes schlegelii",
+          "url": "https://www.jstage.jst.go.jp/article/suisan1932/63/3/63_3_317/_article/-char/en",
+          "year": 1997,
+          "species": "조피볼락",
+          "scientificName": "Sebastes schlegelii",
+          "temperature": {
+            "min": 17.8,
+            "max": 22.8,
+            "unit": "degC"
+          },
+          "rangeType": "EXPERIMENTAL_PREFERRED_TEMPERATURE",
+          "lifeStage": "YOUNG",
+          "geographicContext": "Japan; laboratory temperature-gradient experiment",
+          "seasonContext": null,
+          "evidenceStrength": "MEDIUM",
+          "notes": "Explicit preference test across 15-28 degC acclimation; final preferendum estimated near 20.5 degC. Young-fish experimental scope prevents general wild promotion.",
+          "evidenceClass": "UNKNOWN"
+        }
+      ],
+      "profileReadiness": "PROFILE_READY",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:spawning",
+        "UNKNOWN:feeding"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "A",
+      "priorityRank": 3
+    },
+    {
+      "speciesId": "BM-SPECIES-000755",
+      "koreanName": "참돔",
+      "scientificName": "Pagrus major",
+      "fishingSpotUsageCount": 640,
+      "currentConditionEnabled": true,
+      "existingProfile": {
+        "reused": true,
+        "sourceSpeciesId": "BM-SPECIES-000755",
+        "sourceArtifact": "data/fishing-condition/species-environment/v3/species-environment-profiles.json",
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [
+          {
+            "minC": 17,
+            "maxC": 24.4,
+            "context": "MODELLED_PREFERRED_TEMPERATURE_AQUAMAPS",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "pagrus-fishbase-temperature-v2"
+            ]
+          },
+          {
+            "minC": 18.4,
+            "maxC": 25.4,
+            "context": "EXPERIMENTAL_TEMPERATURE_PREFERENCE_ACCLIMATION_DEPENDENT",
+            "lifeStage": "JUVENILE",
+            "regionScope": "JAPAN_WILD_ORIGIN_LAB_ACCLIMATED",
+            "evidenceIds": [
+              "pagrus-kaiseiken-preference-2002"
+            ]
+          }
+        ],
+        "optimumRange": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "depth": {
+        "habitatDepth": [
+          {
+            "minM": 30,
+            "maxM": 200,
+            "context": "POST_AGE_2_TO_3_HABITAT",
+            "lifeStage": "ADULT",
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "pagrus-mbris"
+            ]
+          },
+          {
+            "minM": null,
+            "maxM": null,
+            "context": "SHALLOW_COASTAL_HABITAT",
+            "lifeStage": "JUVENILE",
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "pagrus-mbris"
+            ]
+          }
+        ],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "minM": 10,
+            "maxM": 200,
+            "context": "OBSERVED_HABITAT",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "evidenceIds": [
+              "pagrus-fishbase"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              5,
+              6
+            ],
+            "seasons": [],
+            "temperatureMinC": null,
+            "temperatureMaxC": null,
+            "depthMinM": null,
+            "depthMaxM": null,
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "pagrus-mbris"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [
+          {
+            "movement": "INSHORE",
+            "months": [],
+            "seasons": [
+              "SPRING",
+              "SUMMER"
+            ],
+            "lifeStage": "ADULT",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "summary": "성어가 늦봄과 여름 산란기에 더 얕은 수역으로 이동한다.",
+            "evidenceIds": [
+              "pagrus-fishbase"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "habitat": {
+        "types": [
+          "ROCKY_REEF",
+          "COASTAL",
+          "DEMERSAL",
+          "SEAGRASS"
+        ],
+        "substrates": [
+          "ROCK",
+          "MIXED"
+        ],
+        "summary": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "pagrus-mbris",
+          "sourceType": "MBRIS",
+          "title": "MBRIS 생물종 상세정보: 참돔",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000012524",
+          "publicationYear": null,
+          "regionScope": "KOREA",
+          "evidenceType": "HABITAT_DEPTH_LIFE_STAGE_SPAWNING",
+          "quoteOrSummary": "한국 참돔의 5~6월 산란, 연안 암초·해조류의 유어기 서식, 2~3년 이후 30~200m 이동을 기술한다.",
+          "evidenceClass": "DIRECT_OFFICIAL"
+        },
+        {
+          "id": "pagrus-fishbase",
+          "sourceType": "FISHBASE",
+          "title": "FishBase Species Summary: Pagrus major",
+          "url": "https://www.fishbase.se/summary/Pagrus-major.html",
+          "publicationYear": null,
+          "regionScope": "NORTHWEST_PACIFIC",
+          "evidenceType": "DEPTH_HABITAT_MIGRATION_FEEDING",
+          "quoteOrSummary": "10~200m의 해양 저서성 분포와 암초·거친 바닥·연질 바닥, 산란기 얕은 수역 이동 및 저서무척추동물·어류 섭식을 정리한다.",
+          "evidenceClass": "SECONDARY_REFERENCE"
+        },
+        {
+          "id": "pagrus-fishbase-temperature-v2",
+          "sourceType": "FISHBASE",
+          "title": "FishBase AquaMaps modelled preferred temperature: Pagrus major",
+          "url": "https://www.fishbase.se/summary/Pagrus-major.html",
+          "publicationYear": null,
+          "regionScope": "GLOBAL",
+          "evidenceType": "MODELLED_PREFERRED_TEMPERATURE",
+          "quoteOrSummary": "FishBase가 AquaMaps occurrence-cell model로 17~24.4°C 범위를 제시한다(143 cells). 현장 실측 범위와 혼합하지 않는다.",
+          "officialDatasetId": "FishBase Ref. 123201",
+          "accessedAt": "2026-09-11",
+          "evidenceClass": "SECONDARY_REFERENCE"
+        },
+        {
+          "id": "pagrus-kaiseiken-preference-2002",
+          "sourceName": "Marine Ecology Research Institute",
+          "sourceType": "RESEARCH_INSTITUTE_REPORT",
+          "title": "Experimental study on temperature preference of Japanese marine fish",
+          "url": "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf",
+          "year": 2002,
+          "species": "참돔",
+          "scientificName": "Pagrus major",
+          "temperature": {
+            "min": 18.4,
+            "max": 25.4,
+            "unit": "degC"
+          },
+          "rangeType": "EXPERIMENTAL_PREFERRED_ACCLIMATION_DEPENDENT",
+          "lifeStage": "JUVENILE",
+          "geographicContext": "Japan; wild-origin fish subsequently held and acclimated in laboratory",
+          "seasonContext": null,
+          "evidenceStrength": "MEDIUM",
+          "notes": "Temperature-gradient preference range across acclimation treatments; source reports 25.3 degC final preferendum. Not a general wild field range.",
+          "evidenceClass": "DIRECT_SCIENTIFIC"
+        }
+      ],
+      "profileReadiness": "PROFILE_READY",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:activityPeriod"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "A",
+      "priorityRank": 4
+    },
+    {
+      "speciesId": "BM-SPECIES-000465",
+      "koreanName": "넙치",
+      "scientificName": "Paralichthys olivaceus",
+      "fishingSpotUsageCount": 441,
+      "currentConditionEnabled": true,
+      "existingProfile": {
+        "reused": true,
+        "sourceSpeciesId": "BM-SPECIES-000465",
+        "sourceArtifact": "data/fishing-condition/species-environment/v3/species-environment-profiles.json",
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [
+          {
+            "minC": 8.6,
+            "maxC": 25,
+            "context": "MODELLED_PREFERRED_TEMPERATURE_AQUAMAPS",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "flounder-fishbase-temperature-v2"
+            ]
+          }
+        ],
+        "optimumRange": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "minM": 10,
+            "maxM": 200,
+            "context": "OBSERVED_HABITAT",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "evidenceIds": [
+              "flounder-mbris",
+              "flounder-fishbase"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "seasons": [],
+            "temperatureMinC": 11,
+            "temperatureMaxC": 17,
+            "depthMinM": 20,
+            "depthMaxM": 40,
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "flounder-mbris"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [
+          {
+            "movement": "NORTHWARD_SOUTHWARD",
+            "months": [],
+            "seasons": [
+              "SPRING",
+              "AUTUMN",
+              "WINTER"
+            ],
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "KOREA_WEST_COAST",
+            "summary": "서해에서 겨울 흑산도 서쪽 월동 후 봄 북상하고 가을 남하한다.",
+            "evidenceIds": [
+              "flounder-mbris"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "DEMERSAL",
+          "ROCKY_REEF",
+          "SANDY_BOTTOM",
+          "MUDDY_BOTTOM"
+        ],
+        "substrates": [
+          "GRAVEL",
+          "ROCK",
+          "SAND",
+          "MUD"
+        ],
+        "summary": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "flounder-mbris",
+          "sourceType": "MBRIS",
+          "title": "MBRIS 생물종 상세정보: 넙치",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000012842",
+          "publicationYear": null,
+          "regionScope": "KOREA",
+          "evidenceType": "DEPTH_HABITAT_SPAWNING_MIGRATION_FEEDING",
+          "quoteOrSummary": "10~200m 저층, 자갈·사니질 암초, 2~6월·11~17℃·20~40m 산란장, 서해 계절 이동과 먹이를 기술한다.",
+          "evidenceClass": "DIRECT_OFFICIAL"
+        },
+        {
+          "id": "flounder-fishbase",
+          "sourceType": "FISHBASE",
+          "title": "FishBase Species Summary: Paralichthys olivaceus",
+          "url": "https://www.fishbase.se/summary/Paralichthys-olivaceus.html",
+          "publicationYear": null,
+          "regionScope": "NORTHWEST_PACIFIC",
+          "evidenceType": "DEPTH_HABITAT",
+          "quoteOrSummary": "북서태평양 해양 저서성 어종으로 10~200m 수심 분포를 제시한다.",
+          "evidenceClass": "SECONDARY_REFERENCE"
+        },
+        {
+          "id": "flounder-fishbase-temperature-v2",
+          "sourceType": "FISHBASE",
+          "title": "FishBase AquaMaps modelled preferred temperature: Paralichthys olivaceus",
+          "url": "https://www.fishbase.se/summary/Paralichthys_olivaceus.html",
+          "publicationYear": null,
+          "regionScope": "GLOBAL",
+          "evidenceType": "MODELLED_PREFERRED_TEMPERATURE",
+          "quoteOrSummary": "FishBase가 AquaMaps occurrence-cell model로 8.6~25°C 범위를 제시한다(241 cells). 현장 실측 범위와 혼합하지 않는다.",
+          "officialDatasetId": "FishBase Ref. 123201",
+          "accessedAt": "2026-09-11",
+          "evidenceClass": "SECONDARY_REFERENCE"
+        }
+      ],
+      "profileReadiness": "PROFILE_PARTIAL",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:activityPeriod"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "A",
+      "priorityRank": 5
+    },
+    {
+      "speciesId": "47aa9b93-2b32-4df4-9a2a-45ed3abbd484",
+      "koreanName": "주꾸미",
+      "scientificName": "Amphioctopus fangsiao",
+      "fishingSpotUsageCount": 57,
+      "currentConditionEnabled": true,
+      "existingProfile": {
+        "reused": true,
+        "sourceSpeciesId": "BM-SPECIES-003107",
+        "sourceArtifact": "data/fishing-condition/species-environment/v3/species-environment-profiles.json",
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [
+          {
+            "minC": 21.5,
+            "maxC": 25,
+            "context": "CAPTIVE_REARING_CONDITIONS_NOT_WILD_PREFERENCE",
+            "lifeStage": "BROODSTOCK_AND_HATCHLINGS",
+            "regionScope": "REGIONAL_OTHER",
+            "evidenceIds": [
+              "webfoot-paper-2026"
+            ]
+          }
+        ],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "minM": 0,
+            "maxM": 60,
+            "context": "INTERTIDAL_TO_SUBTIDAL_HABITAT",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "webfoot-mbris"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [
+          {
+            "min": 27.5,
+            "max": 32,
+            "unit": "PRACTICAL_SALINITY_UNSPECIFIED",
+            "context": "CAPTIVE_REARING_CONDITIONS_NOT_WILD_PREFERENCE",
+            "regionScope": "REGIONAL_OTHER",
+            "evidenceIds": [
+              "webfoot-paper-2026"
+            ]
+          }
+        ],
+        "qualitative": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "dissolvedOxygen": {
+        "ranges": [
+          {
+            "minMgL": 5,
+            "maxMgL": null,
+            "context": "CAPTIVE_REARING_MAINTAINED_ABOVE_NOT_PHYSIOLOGICAL_THRESHOLD",
+            "regionScope": "REGIONAL_OTHER",
+            "evidenceIds": [
+              "webfoot-paper-2026"
+            ]
+          }
+        ],
+        "qualitative": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              12,
+              1,
+              2
+            ],
+            "seasons": [],
+            "temperatureMinC": null,
+            "temperatureMaxC": null,
+            "depthMinM": null,
+            "depthMaxM": null,
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "webfoot-mbris"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "DEMERSAL",
+          "ROCKY_REEF",
+          "SANDY_BOTTOM",
+          "MUDDY_BOTTOM"
+        ],
+        "substrates": [
+          "ROCK",
+          "SAND",
+          "MUD"
+        ],
+        "summary": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "webfoot-mbris",
+          "sourceType": "MBRIS",
+          "title": "MBRIS 생물종 상세정보: 주꾸미",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000000911",
+          "publicationYear": null,
+          "regionScope": "KOREA",
+          "evidenceType": "DEPTH_HABITAT_SPAWNING_ACTIVITY",
+          "quoteOrSummary": "조간대~60m의 모래진흙 굴 및 바위틈 서식, 야행성, 12~2월 산란을 기술한다.",
+          "evidenceClass": "DIRECT_OFFICIAL"
+        },
+        {
+          "id": "webfoot-paper-2026",
+          "sourceType": "PAPER",
+          "title": "Morphological ontogeny and growth patterns of Amphioctopus fangsiao",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/jwas.70101",
+          "publicationYear": 2026,
+          "regionScope": "REGIONAL_OTHER",
+          "evidenceType": "CAPTIVE_REARING_ENVIRONMENT",
+          "quoteOrSummary": "통제 사육 조건의 수온 21.5~25.0℃, 염분 27.5~32.0, DO 5mg/L 초과를 보고한다. 야생 선호나 생리 한계로 해석하지 않는다.",
+          "evidenceClass": "DIRECT_SCIENTIFIC"
+        },
+        {
+          "id": "47aa9b93-2b32-4df4-9a2a-45ed3abbd484-nifs-identity",
+          "sourceType": "NIFS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "NIFS canonical identity preserved for cross-system profile reuse",
+          "sourceId": "fish_1576639605227",
+          "artifact": "reports/nifs-staging-import-8-execution.json"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:temperature.wild",
+        "UNKNOWN:temperature.preferred",
+        "UNKNOWN:salinity.wild",
+        "UNKNOWN:dissolvedOxygen.threshold",
+        "UNKNOWN:migration",
+        "UNKNOWN:feeding",
+        "TAXONOMY_MISMATCH:CROSS_SYSTEM_PROFILE_REUSE:BM-SPECIES-003107"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN",
+        "TAXONOMY_MISMATCH"
+      ],
+      "batch": "A",
+      "priorityRank": 6
+    },
+    {
+      "speciesId": "BM-SPECIES-003107",
+      "koreanName": "주꾸미",
+      "scientificName": "Amphioctopus fangsiao",
+      "fishingSpotUsageCount": 57,
+      "currentConditionEnabled": true,
+      "existingProfile": {
+        "reused": true,
+        "sourceSpeciesId": "BM-SPECIES-003107",
+        "sourceArtifact": "data/fishing-condition/species-environment/v3/species-environment-profiles.json",
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [
+          {
+            "minC": 21.5,
+            "maxC": 25,
+            "context": "CAPTIVE_REARING_CONDITIONS_NOT_WILD_PREFERENCE",
+            "lifeStage": "BROODSTOCK_AND_HATCHLINGS",
+            "regionScope": "REGIONAL_OTHER",
+            "evidenceIds": [
+              "webfoot-paper-2026"
+            ]
+          }
+        ],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "minM": 0,
+            "maxM": 60,
+            "context": "INTERTIDAL_TO_SUBTIDAL_HABITAT",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "webfoot-mbris"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [
+          {
+            "min": 27.5,
+            "max": 32,
+            "unit": "PRACTICAL_SALINITY_UNSPECIFIED",
+            "context": "CAPTIVE_REARING_CONDITIONS_NOT_WILD_PREFERENCE",
+            "regionScope": "REGIONAL_OTHER",
+            "evidenceIds": [
+              "webfoot-paper-2026"
+            ]
+          }
+        ],
+        "qualitative": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "dissolvedOxygen": {
+        "ranges": [
+          {
+            "minMgL": 5,
+            "maxMgL": null,
+            "context": "CAPTIVE_REARING_MAINTAINED_ABOVE_NOT_PHYSIOLOGICAL_THRESHOLD",
+            "regionScope": "REGIONAL_OTHER",
+            "evidenceIds": [
+              "webfoot-paper-2026"
+            ]
+          }
+        ],
+        "qualitative": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              12,
+              1,
+              2
+            ],
+            "seasons": [],
+            "temperatureMinC": null,
+            "temperatureMaxC": null,
+            "depthMinM": null,
+            "depthMaxM": null,
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "webfoot-mbris"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "DEMERSAL",
+          "ROCKY_REEF",
+          "SANDY_BOTTOM",
+          "MUDDY_BOTTOM"
+        ],
+        "substrates": [
+          "ROCK",
+          "SAND",
+          "MUD"
+        ],
+        "summary": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "webfoot-mbris",
+          "sourceType": "MBRIS",
+          "title": "MBRIS 생물종 상세정보: 주꾸미",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000000911",
+          "publicationYear": null,
+          "regionScope": "KOREA",
+          "evidenceType": "DEPTH_HABITAT_SPAWNING_ACTIVITY",
+          "quoteOrSummary": "조간대~60m의 모래진흙 굴 및 바위틈 서식, 야행성, 12~2월 산란을 기술한다.",
+          "evidenceClass": "DIRECT_OFFICIAL"
+        },
+        {
+          "id": "webfoot-paper-2026",
+          "sourceType": "PAPER",
+          "title": "Morphological ontogeny and growth patterns of Amphioctopus fangsiao",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/jwas.70101",
+          "publicationYear": 2026,
+          "regionScope": "REGIONAL_OTHER",
+          "evidenceType": "CAPTIVE_REARING_ENVIRONMENT",
+          "quoteOrSummary": "통제 사육 조건의 수온 21.5~25.0℃, 염분 27.5~32.0, DO 5mg/L 초과를 보고한다. 야생 선호나 생리 한계로 해석하지 않는다.",
+          "evidenceClass": "DIRECT_SCIENTIFIC"
+        }
+      ],
+      "profileReadiness": "PROFILE_PARTIAL",
+      "limitations": [
+        "UNKNOWN:temperature.wild",
+        "UNKNOWN:temperature.preferred",
+        "UNKNOWN:salinity.wild",
+        "UNKNOWN:dissolvedOxygen.threshold",
+        "UNKNOWN:migration",
+        "UNKNOWN:feeding"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "A",
+      "priorityRank": 7
+    },
+    {
+      "speciesId": "BM-SPECIES-003111",
+      "koreanName": "문어",
+      "scientificName": "Enteroctopus dofleini",
+      "fishingSpotUsageCount": 57,
+      "currentConditionEnabled": true,
+      "existingProfile": {
+        "reused": true,
+        "sourceSpeciesId": "BM-SPECIES-003111",
+        "sourceArtifact": "data/fishing-condition/species-environment/v3/species-environment-profiles.json",
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [
+          {
+            "minC": 5,
+            "maxC": 14,
+            "context": "WILD_IMMATURE_OCCURRENCE_TEMPERATURE",
+            "lifeStage": "IMMATURE",
+            "regionScope": "OTHER_REGIONAL",
+            "evidenceIds": [
+              "gpo-hokkaido-temperature-v2"
+            ]
+          }
+        ],
+        "preferredRange": [
+          {
+            "minC": 6,
+            "maxC": 12,
+            "context": "CAPTIVE_HUSBANDRY_RECOMMENDED_NOT_WILD_PREFERENCE",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "gpo-husbandry-water-quality-v2"
+            ]
+          }
+        ],
+        "optimumRange": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "minM": 3,
+            "maxM": 100,
+            "context": "OBSERVED_HABITAT",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "gpo-mbris"
+            ]
+          },
+          {
+            "minM": 0,
+            "maxM": 197,
+            "context": "SURVEYED_HABITAT",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "REGIONAL_OTHER",
+            "evidenceIds": [
+              "gpo-paper-2002"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [
+          {
+            "min": 28,
+            "max": 33,
+            "unit": "ppt",
+            "context": "CAPTIVE_HUSBANDRY_RECOMMENDED_NOT_WILD_PREFERENCE",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "gpo-husbandry-water-quality-v2"
+            ]
+          }
+        ],
+        "qualitative": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "dissolvedOxygen": {
+        "ranges": [
+          {
+            "minMgL": null,
+            "maxMgL": null,
+            "context": "CAPTIVE_HUSBANDRY_85_TO_95_PERCENT_SATURATION_NOT_CONVERTED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "gpo-husbandry-water-quality-v2"
+            ]
+          }
+        ],
+        "qualitative": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "spawning": {
+        "periods": [],
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [
+          {
+            "movement": "SEASONAL_VERTICAL",
+            "months": [],
+            "seasons": [
+              "SPRING",
+              "SUMMER",
+              "AUTUMN",
+              "WINTER"
+            ],
+            "lifeStage": "IMMATURE",
+            "regionScope": "REGIONAL_OTHER",
+            "summary": "북부 홋카이도 어업자료에서 계절별 수심 분포 변화가 확인됐다. 한국 범위로 일반화하지 않는다.",
+            "evidenceIds": [
+              "gpo-paper-2017"
+            ]
+          },
+          {
+            "movement": "SHALLOW_COASTAL_RESIDENCE",
+            "months": [
+              12,
+              1,
+              2,
+              3,
+              4
+            ],
+            "seasons": [],
+            "lifeStage": "IMMATURE",
+            "regionScope": "OTHER_REGIONAL",
+            "summary": "소야 해협 미성숙 개체는 12~4월 얕은 연안에 머물렀다.",
+            "evidenceIds": [
+              "gpo-seasonal-migration-temperature-v2"
+            ]
+          },
+          {
+            "movement": "OFFSHORE_DEEPER",
+            "months": [
+              6,
+              7
+            ],
+            "seasons": [],
+            "lifeStage": "IMMATURE",
+            "regionScope": "OTHER_REGIONAL",
+            "summary": "연안 수온이 10~20°C로 상승한 6~7월 더 깊은 수역으로 이동했다.",
+            "evidenceIds": [
+              "gpo-seasonal-migration-temperature-v2"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "DEMERSAL",
+          "ROCKY_REEF",
+          "SEAGRASS",
+          "SANDY_BOTTOM",
+          "MUDDY_BOTTOM"
+        ],
+        "substrates": [
+          "ROCK",
+          "SAND",
+          "MUD",
+          "GRAVEL",
+          "MIXED"
+        ],
+        "summary": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "gpo-mbris",
+          "sourceType": "MBRIS",
+          "title": "MBRIS 생물종 상세정보: 문어",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000006090",
+          "publicationYear": null,
+          "regionScope": "KOREA",
+          "evidenceType": "DEPTH_HABITAT",
+          "quoteOrSummary": "제주·동해·남해 연안의 3~100m 바위틈 또는 굴 서식을 기술한다.",
+          "evidenceClass": "DIRECT_OFFICIAL"
+        },
+        {
+          "id": "gpo-paper-2002",
+          "sourceType": "PAPER",
+          "title": "Characteristics of Habitats Used by Enteroctopus dofleini in Prince William Sound and Cook Inlet",
+          "url": "https://doi.org/10.1046/j.1439-0485.2002.02776.x",
+          "publicationYear": 2002,
+          "regionScope": "REGIONAL_OTHER",
+          "evidenceType": "DEPTH_HABITAT_SUBSTRATE",
+          "quoteOrSummary": "알래스카 0~197m 조사에서 얕은 수역, 모래·자갈·쇄설물과 큰 바위·켈프 연계가 관찰됐다.",
+          "evidenceClass": "DIRECT_SCIENTIFIC"
+        },
+        {
+          "id": "gpo-paper-2017",
+          "sourceType": "PAPER",
+          "title": "Seasonal changes in the vertical distribution of Enteroctopus dofleini",
+          "url": "https://doi.org/10.2331/suisan.16-00058",
+          "publicationYear": 2017,
+          "regionScope": "REGIONAL_OTHER",
+          "evidenceType": "SEASONAL_MIGRATION_FEEDING",
+          "quoteOrSummary": "북부 홋카이도에서 미성숙 개체의 계절별 수심 변화와 주요 먹이인 개불·어류·게·문어를 보고한다.",
+          "evidenceClass": "DIRECT_SCIENTIFIC"
+        },
+        {
+          "id": "gpo-worms",
+          "sourceType": "OTHER_OFFICIAL",
+          "title": "WoRMS: Enteroctopus dofleini accepted name",
+          "url": "https://www.marinespecies.org/aphia.php?id=341966&p=taxdetails",
+          "publicationYear": null,
+          "regionScope": "GLOBAL",
+          "evidenceType": "TAXONOMY",
+          "quoteOrSummary": "Octopus dofleini를 Enteroctopus dofleini의 비수용명으로 연결해 canonical 학명을 확인한다.",
+          "evidenceClass": "DIRECT_OFFICIAL"
+        },
+        {
+          "id": "gpo-hokkaido-temperature-v2",
+          "sourceType": "PAPER",
+          "title": "Ecology of immature octopus Enteroctopus dofleini: Growth, movement and behaviour",
+          "url": "https://eprints.lib.hokudai.ac.jp/dspace/bitstream/2115/52601/3/PatriciaRRigby_2004.pdf",
+          "publicationYear": 2004,
+          "regionScope": "OTHER_REGIONAL",
+          "evidenceType": "WILD_IMMATURE_OBSERVED_TEMPERATURE",
+          "quoteOrSummary": "홋카이도 분카만의 미성숙 개체가 5~14°C 수온에서 관찰되며, 범위 밖 계절에는 심층으로 이동한다고 정리한다.",
+          "doi": null,
+          "accessedAt": "2026-09-11",
+          "evidenceClass": "DIRECT_SCIENTIFIC"
+        },
+        {
+          "id": "gpo-seasonal-migration-temperature-v2",
+          "sourceType": "PAPER",
+          "title": "Effect of water temperature on seasonal vertical migration of the immature North Pacific giant octopus",
+          "url": "https://www.jstage.jst.go.jp/article/suisan/92/4/92_25-00036/_article/-char/en",
+          "publicationYear": 2026,
+          "regionScope": "OTHER_REGIONAL",
+          "evidenceType": "WILD_IMMATURE_TEMPERATURE_MIGRATION",
+          "quoteOrSummary": "소야 해협 표지재포 연구에서 12~4월 연안의 -1.5~5°C 노출과 6~7월 10~20°C 상승 시 심층 이동을 보고한다.",
+          "doi": "10.2331/suisan.25-00036",
+          "accessedAt": "2026-09-11",
+          "evidenceClass": "DIRECT_SCIENTIFIC"
+        },
+        {
+          "id": "gpo-husbandry-water-quality-v2",
+          "sourceType": "PAPER",
+          "title": "Characterization of Current Husbandry and Veterinary Care Practices of the Giant Pacific Octopus",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10385140/",
+          "publicationYear": 2023,
+          "regionScope": "GLOBAL",
+          "evidenceType": "CAPTIVE_HUSBANDRY_TEMPERATURE_SALINITY_DO",
+          "quoteOrSummary": "기관 사육 조사와 AZA 지침의 수온 6~12°C, 염분 28~33ppt, DO 85~95% saturation을 정리한다. 야생 선호나 mg/L 한계로 변환하지 않는다.",
+          "doi": "10.3390/vetsci10070448",
+          "accessedAt": "2026-09-11",
+          "evidenceClass": "DIRECT_SCIENTIFIC"
+        }
+      ],
+      "profileReadiness": "PROFILE_PARTIAL",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:spawning",
+        "UNKNOWN:activityPeriod"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "A",
+      "priorityRank": 8
+    },
+    {
+      "speciesId": "BM-SPECIES-000417",
+      "koreanName": "고등어",
+      "scientificName": "Scomber japonicus",
+      "fishingSpotUsageCount": 50,
+      "currentConditionEnabled": true,
+      "existingProfile": {
+        "reused": true,
+        "sourceSpeciesId": "BM-SPECIES-000417",
+        "sourceArtifact": "data/fishing-condition/species-environment/v3/species-environment-profiles.json",
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [
+          {
+            "minC": 15,
+            "maxC": 16,
+            "context": "PREFERRED_TEMPERATURE",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "mackerel-mbris"
+            ]
+          },
+          {
+            "minC": 9.3,
+            "maxC": 27.7,
+            "context": "MODELLED_PREFERRED_TEMPERATURE_AQUAMAPS_SECONDARY",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "mackerel-fishbase-temperature-v2"
+            ]
+          }
+        ],
+        "optimumRange": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "minM": 0,
+            "maxM": 300,
+            "context": "OBSERVED_HABITAT",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "KOREA_AND_GLOBAL",
+            "evidenceIds": [
+              "mackerel-mbris",
+              "mackerel-fishbase"
+            ]
+          },
+          {
+            "minM": 50,
+            "maxM": 200,
+            "context": "USUAL_HABITAT",
+            "lifeStage": "ADULT",
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "mackerel-fishbase"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [],
+            "seasons": [],
+            "temperatureMinC": 15,
+            "temperatureMaxC": 20,
+            "depthMinM": null,
+            "depthMaxM": null,
+            "regionScope": "GLOBAL",
+            "evidenceIds": [
+              "mackerel-fishbase"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [
+          {
+            "movement": "NORTHWARD_SOUTHWARD",
+            "months": [
+              1,
+              2,
+              3,
+              9,
+              10,
+              11,
+              12
+            ],
+            "seasons": [],
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "KOREA",
+            "summary": "2~3월 제주도에서 동·서해로 북상하고 9월부터 이듬해 1월 남하한다.",
+            "evidenceIds": [
+              "mackerel-mbris"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "PELAGIC",
+          "OFFSHORE"
+        ],
+        "substrates": [
+          "UNKNOWN"
+        ],
+        "summary": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "mackerel-mbris",
+          "sourceType": "MBRIS",
+          "title": "MBRIS 생물종 상세정보: 고등어",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016166",
+          "publicationYear": null,
+          "regionScope": "KOREA",
+          "evidenceType": "PREFERRED_TEMPERATURE_DEPTH_MIGRATION_FEEDING",
+          "quoteOrSummary": "15~16℃ 선호, 표층부터 300m 이내, 한국 근해의 계절 북상·남하 및 먹이 구성을 기술한다.",
+          "evidenceClass": "DIRECT_OFFICIAL"
+        },
+        {
+          "id": "mackerel-fishbase",
+          "sourceType": "FISHBASE",
+          "title": "FishBase Species Summary: Scomber japonicus",
+          "url": "https://www.fishbase.se/summary/Scomber-japonicus.html",
+          "publicationYear": null,
+          "regionScope": "GLOBAL",
+          "evidenceType": "DEPTH_SPAWNING_TEMPERATURE_ACTIVITY_FEEDING",
+          "quoteOrSummary": "0~300m, 보통 50~200m의 연안 표영성 분포, 15~20℃ 산란, 낮 저층·밤 개방수역 이동과 먹이를 정리한다.",
+          "evidenceClass": "SECONDARY_REFERENCE"
+        },
+        {
+          "id": "mackerel-fishbase-temperature-v2",
+          "sourceType": "FISHBASE",
+          "title": "FishBase AquaMaps modelled preferred temperature: Scomber japonicus",
+          "url": "https://www.fishbase.se/summary/Scomber-japonicus.html",
+          "publicationYear": null,
+          "regionScope": "GLOBAL",
+          "evidenceType": "MODELLED_PREFERRED_TEMPERATURE",
+          "quoteOrSummary": "FishBase가 AquaMaps occurrence-cell model로 9.3~27.7°C를 제시한다(1,526 cells). 한국 MBRIS 15~16°C canonical 범위보다 우선하지 않는다.",
+          "officialDatasetId": "FishBase Ref. 123201",
+          "accessedAt": "2026-09-11",
+          "evidenceClass": "SECONDARY_REFERENCE"
+        }
+      ],
+      "profileReadiness": "PROFILE_READY",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:spawning.months"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "A",
+      "priorityRank": 9
+    },
+    {
+      "speciesId": "BM-SPECIES-000501",
+      "koreanName": "방어",
+      "scientificName": "Seriola quinqueradiata",
+      "fishingSpotUsageCount": 19,
+      "currentConditionEnabled": true,
+      "existingProfile": {
+        "reused": true,
+        "sourceSpeciesId": "BM-SPECIES-000501",
+        "sourceArtifact": "data/fishing-condition/species-environment/v3/species-environment-profiles.json",
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [
+          {
+            "minC": 20,
+            "maxC": 26,
+            "context": "AQUACULTURE_ADULT_OPTIMUM_GROWTH_NOT_WILD_PREFERENCE",
+            "lifeStage": "ADULT",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "evidenceIds": [
+              "amberjack-fao-aquaculture-v2"
+            ]
+          },
+          {
+            "minC": 22,
+            "maxC": 27,
+            "context": "AQUACULTURE_JUVENILE_MAXIMUM_GROWTH_NOT_WILD_PREFERENCE",
+            "lifeStage": "JUVENILE",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "evidenceIds": [
+              "amberjack-fao-aquaculture-v2"
+            ]
+          },
+          {
+            "minC": 20.8,
+            "maxC": 27.2,
+            "context": "EXPERIMENTAL_TEMPERATURE_PREFERENCE_ACCLIMATION_DEPENDENT",
+            "lifeStage": "JUVENILE",
+            "regionScope": "JAPAN_WILD_ORIGIN_LAB_ACCLIMATED",
+            "evidenceIds": [
+              "yellowtail-kaiseiken-preference-2002"
+            ]
+          }
+        ],
+        "optimumRange": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "depth": {
+        "habitatDepth": [
+          {
+            "minM": null,
+            "maxM": null,
+            "context": "DRIFTING_SEAWEED_ASSOCIATION",
+            "lifeStage": "JUVENILE",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "evidenceIds": [
+              "amberjack-fishbase"
+            ]
+          }
+        ],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "minM": 0,
+            "maxM": 200,
+            "context": "COASTAL_HABITAT",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "KOREA",
+            "evidenceIds": [
+              "amberjack-mbris"
+            ]
+          },
+          {
+            "minM": null,
+            "maxM": 100,
+            "context": "OBSERVED_HABITAT",
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "evidenceIds": [
+              "amberjack-fishbase"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [
+          {
+            "min": 30,
+            "max": 36,
+            "unit": "permille",
+            "context": "AQUACULTURE_OPTIMUM_NOT_WILD_PREFERENCE",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "evidenceIds": [
+              "amberjack-fao-aquaculture-v2"
+            ]
+          }
+        ],
+        "qualitative": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "dissolvedOxygen": {
+        "ranges": [
+          {
+            "minMgL": 4.3,
+            "maxMgL": null,
+            "context": "AQUACULTURE_BEHAVIORAL_ABNORMALITY_THRESHOLD_NOT_MORTALITY",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "evidenceIds": [
+              "amberjack-fao-aquaculture-v2"
+            ]
+          }
+        ],
+        "qualitative": [
+          "ABNORMAL_BEHAVIOR_REPORTED_BELOW_4_3_MG_L_IN_AQUACULTURE"
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [],
+            "seasons": [],
+            "temperatureMinC": null,
+            "temperatureMaxC": null,
+            "depthMinM": 200,
+            "depthMaxM": 200,
+            "regionScope": "NORTHWEST_PACIFIC",
+            "evidenceIds": [
+              "amberjack-fao-aquaculture-v2"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [
+          {
+            "movement": "OCEANODROMOUS",
+            "months": [],
+            "seasons": [],
+            "lifeStage": "UNSPECIFIED",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "summary": "해양 회유성으로 분류되지만 V1 근거에는 한국 계절·방향 정보가 없다.",
+            "evidenceIds": [
+              "amberjack-fishbase"
+            ]
+          },
+          {
+            "movement": "SOUTHWARD_SPAWNING_MIGRATION",
+            "months": [],
+            "seasons": [],
+            "lifeStage": "ADULT",
+            "regionScope": "NORTHWEST_PACIFIC",
+            "summary": "성숙 개체가 산란을 위해 남하하는 생활사를 FAO가 기술한다.",
+            "evidenceIds": [
+              "amberjack-fao-aquaculture-v2"
+            ]
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "DEMERSAL",
+          "OFFSHORE"
+        ],
+        "substrates": [
+          "UNKNOWN"
+        ],
+        "summary": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "amberjack-mbris",
+          "sourceType": "MBRIS",
+          "title": "MBRIS 생물종 상세정보: 방어",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016343",
+          "publicationYear": null,
+          "regionScope": "KOREA",
+          "evidenceType": "DEPTH_HABITAT",
+          "quoteOrSummary": "한국 연안 주변 수심 200m 이내 서식을 기술한다.",
+          "evidenceClass": "DIRECT_OFFICIAL"
+        },
+        {
+          "id": "amberjack-fishbase",
+          "sourceType": "FISHBASE",
+          "title": "FishBase Species Summary: Seriola quinqueradiata",
+          "url": "https://www.fishbase.se/summary/Seriola-quinqueradiata.html",
+          "publicationYear": null,
+          "regionScope": "NORTHWEST_PACIFIC",
+          "evidenceType": "DEPTH_MIGRATION_LIFE_STAGE_FEEDING",
+          "quoteOrSummary": "최대 100m의 해양 회유성 저서 종, 성어 군집과 유어의 유조 연계 및 플랑크톤 섭식을 정리한다.",
+          "evidenceClass": "SECONDARY_REFERENCE"
+        },
+        {
+          "id": "amberjack-fao-aquaculture-v2",
+          "sourceType": "FAO",
+          "title": "FAO Cultured Aquatic Species Information Programme: Seriola quinqueradiata",
+          "url": "https://www.fao.org/fishery/docs/DOCUMENT/aquaculture/CulturedSpecies/file/en/en_japaneseamberjack.htm",
+          "publicationYear": null,
+          "regionScope": "NORTHWEST_PACIFIC",
+          "evidenceType": "AQUACULTURE_TEMPERATURE_SALINITY_DO_LIFE_STAGE_MIGRATION",
+          "quoteOrSummary": "성어 최적 성장 20~26°C, 유어 최적 성장 22~27°C, 양식 최적 염분 30~36‰, 4.3mg/L 미만에서 이상행동을 보고한다. 야생 선호·치사 한계로 일반화하지 않는다.",
+          "officialDatasetId": "FAO Cultured Aquatic Species Programme",
+          "accessedAt": "2026-09-11",
+          "evidenceClass": "DIRECT_OFFICIAL"
+        },
+        {
+          "id": "yellowtail-kaiseiken-preference-2002",
+          "sourceName": "Marine Ecology Research Institute",
+          "sourceType": "RESEARCH_INSTITUTE_REPORT",
+          "title": "Experimental study on temperature preference of Japanese marine fish",
+          "url": "https://www.kaiseiken.or.jp/publish/reports/lib/2002_04_02.pdf",
+          "year": 2002,
+          "species": "방어",
+          "scientificName": "Seriola quinqueradiata",
+          "temperature": {
+            "min": 20.8,
+            "max": 27.2,
+            "unit": "degC"
+          },
+          "rangeType": "EXPERIMENTAL_PREFERRED_ACCLIMATION_DEPENDENT",
+          "lifeStage": "JUVENILE",
+          "geographicContext": "Japan; wild-origin fish subsequently held and acclimated in laboratory",
+          "seasonContext": null,
+          "evidenceStrength": "MEDIUM",
+          "notes": "Temperature-gradient preference range across acclimation treatments; source reports 26.9 degC final preferendum. Life-stage and acclimation limits prevent general wild promotion.",
+          "evidenceClass": "DIRECT_SCIENTIFIC"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:activityPeriod",
+        "SOURCE_CONFLICT:depth.observed"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN",
+        "SOURCE_CONFLICT"
+      ],
+      "batch": "A",
+      "priorityRank": 10
+    },
+    {
+      "speciesId": "BM-SPECIES-001164",
+      "koreanName": "노래미",
+      "scientificName": "Hexagrammos agrammus",
+      "fishingSpotUsageCount": 686,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [],
+        "conflictingObservedDepth": [],
+        "status": "UNKNOWN"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              11,
+              12
+            ],
+            "seasons": [],
+            "summary": "산란기는 11~12월이다.",
+            "evidenceId": "BM-SPECIES-001164-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL_ROCKY_REEF",
+          "SEAWEED"
+        ],
+        "substrates": [],
+        "summary": [
+          "바위와 해조류가 많은 연안에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-001164-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 노래미",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000008283",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "A",
+      "priorityRank": 11
+    },
+    {
+      "speciesId": "BM-SPECIES-000002",
+      "koreanName": "볼락",
+      "scientificName": "Sebastes inermis",
+      "fishingSpotUsageCount": 661,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [],
+        "conflictingObservedDepth": [],
+        "status": "UNKNOWN"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": null,
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "DEMERSAL",
+          "COASTAL",
+          "DRIFTING_SEAWEED_JUVENILE"
+        ],
+        "substrates": [],
+        "summary": [
+          "FishBase는 저서성 종으로 기록하며 유어가 유조에 연관됨을 기술한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000002-fishbase",
+          "sourceType": "FISHBASE",
+          "evidenceClass": "SECONDARY_REFERENCE",
+          "title": "FishBase Species Summary: Sebastes inermis",
+          "url": "https://www.fishbase.se/summary/Sebastes-inermis.html",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "A",
+      "priorityRank": 12
+    },
+    {
+      "speciesId": "BM-SPECIES-000278",
+      "koreanName": "돌돔",
+      "scientificName": "Oplegnathus fasciatus",
+      "fishingSpotUsageCount": 455,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 1,
+            "max": 10,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-000278-fishbase",
+            "evidenceClass": "SECONDARY_REFERENCE"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              4,
+              5,
+              6,
+              7
+            ],
+            "seasons": [],
+            "summary": "국내 기록의 산란기는 4~7월이다.",
+            "evidenceId": "BM-SPECIES-000278-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL_ROCKY_REEF"
+        ],
+        "substrates": [],
+        "summary": [
+          "성어는 바위가 많은 해안 지역의 저서 환경에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000278-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 돌돔",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000012286",
+          "accessedOn": "2026-09-20"
+        },
+        {
+          "id": "BM-SPECIES-000278-fishbase",
+          "sourceType": "FISHBASE",
+          "evidenceClass": "SECONDARY_REFERENCE",
+          "title": "FishBase Species Summary: Oplegnathus fasciatus",
+          "url": "https://www.fishbase.se/summary/Oplegnathus-fasciatus.html",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "A",
+      "priorityRank": 13
+    },
+    {
+      "speciesId": "BM-SPECIES-000908",
+      "koreanName": "붕장어",
+      "scientificName": "Conger myriaster",
+      "fishingSpotUsageCount": 413,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 0,
+            "max": 800,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-000908-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "conflictingObservedDepth": [
+          {
+            "min": 320,
+            "max": 830,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-000908-fishbase",
+            "evidenceClass": "SECONDARY_REFERENCE"
+          }
+        ],
+        "status": "CONFLICT"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": null,
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "DEMERSAL",
+          "SAND",
+          "MUD"
+        ],
+        "substrates": [],
+        "summary": [
+          "수심 800m 이내 모래·개펄 저층에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000908-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 붕장어",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000004416",
+          "accessedOn": "2026-09-20"
+        },
+        {
+          "id": "BM-SPECIES-000908-fishbase",
+          "sourceType": "FISHBASE",
+          "evidenceClass": "SECONDARY_REFERENCE",
+          "title": "FishBase Species Summary: Conger myriaster",
+          "url": "https://www.fishbase.se/summary/Conger-myriaster.html",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning",
+        "UNKNOWN:migration",
+        "SOURCE_CONFLICT:depth",
+        "INCOMPATIBLE_DEPTH_DEFINITIONS:observedDepth"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN",
+        "SOURCE_CONFLICT",
+        "INCOMPATIBLE_DEPTH_DEFINITIONS"
+      ],
+      "batch": "A",
+      "priorityRank": 14
+    },
+    {
+      "speciesId": "BM-SPECIES-000097",
+      "koreanName": "숭어",
+      "scientificName": "Mugil cephalus",
+      "fishingSpotUsageCount": 369,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 0,
+            "max": 120,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-000097-fishbase",
+            "evidenceClass": "SECONDARY_REFERENCE"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": null,
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [
+          {
+            "summary": "성어는 해상 산란을 위해 외해로 이동하고 유생은 연안으로 돌아온다.",
+            "evidenceId": "BM-SPECIES-000097-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "habitat": {
+        "types": [
+          "SHALLOW_COASTAL",
+          "ESTUARY",
+          "SAND",
+          "MUD"
+        ],
+        "substrates": [],
+        "summary": [
+          "얕은 연안의 사니질과 기수역을 이용한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000097-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 숭어",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000028620",
+          "accessedOn": "2026-09-20"
+        },
+        {
+          "id": "BM-SPECIES-000097-fishbase",
+          "sourceType": "FISHBASE",
+          "evidenceClass": "SECONDARY_REFERENCE",
+          "title": "FishBase Species Summary: Mugil cephalus",
+          "url": "https://www.fishbase.se/summary/Mugil-cephalus.html",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:spawning"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "A",
+      "priorityRank": 15
+    },
+    {
+      "speciesId": "BM-SPECIES-000279",
+      "koreanName": "벵에돔",
+      "scientificName": "Girella punctata",
+      "fishingSpotUsageCount": 296,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [],
+        "conflictingObservedDepth": [],
+        "status": "UNKNOWN"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "seasons": [],
+            "summary": "산란기는 2~6월이다.",
+            "evidenceId": "BM-SPECIES-000279-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL_ROCKY_REEF",
+          "TIDE_POOL",
+          "SEAWEED"
+        ],
+        "substrates": [],
+        "summary": [
+          "연안 암초와 자갈·해조류 지대에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000279-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 벵에돔",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000007132",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "A",
+      "priorityRank": 16
+    },
+    {
+      "speciesId": "BM-SPECIES-000548",
+      "koreanName": "도다리",
+      "scientificName": "Pleuronichthys cornutus",
+      "fishingSpotUsageCount": 200,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [
+          {
+            "min": 0,
+            "max": 100,
+            "unit": "m",
+            "context": "SPECIES_DEPTH_RANGE",
+            "evidenceId": "BM-SPECIES-000548-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "conflictingObservedDepth": [],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [],
+        "preservedSeasonalNote": {
+          "seasons": [
+            "AUTUMN",
+            "WINTER"
+          ],
+          "summary": "가을~겨울 사이 산란한다."
+        },
+        "status": "UNKNOWN"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "DEMERSAL",
+          "SAND",
+          "MUD"
+        ],
+        "substrates": [],
+        "summary": [
+          "수심 100m 미만의 모래 또는 개펄 바닥에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000548-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 도다리",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000013960",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "SEASONAL_AMBIGUITY:spawning",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN",
+        "SEASONAL_AMBIGUITY"
+      ],
+      "batch": "A",
+      "priorityRank": 17
+    },
+    {
+      "speciesId": "BM-SPECIES-000500",
+      "koreanName": "부시리",
+      "scientificName": "Seriola aureovittata",
+      "fishingSpotUsageCount": 117,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [],
+        "conflictingObservedDepth": [],
+        "status": "UNKNOWN"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "seasons": [],
+            "summary": "5~8월경 산란한다.",
+            "evidenceId": "BM-SPECIES-000500-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL_ROCKY",
+          "MIDWATER",
+          "DEMERSAL"
+        ],
+        "substrates": [],
+        "summary": [
+          "연안 바위지역의 중층과 저층에 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000500-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 부시리",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000016341",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "A",
+      "priorityRank": 18
+    },
+    {
+      "speciesId": "BM-SPECIES-000884",
+      "koreanName": "학공치",
+      "scientificName": "Hyporhamphus sajori",
+      "fishingSpotUsageCount": 117,
+      "currentConditionEnabled": false,
+      "existingProfile": {
+        "reused": false,
+        "sourceSpeciesId": null,
+        "sourceArtifact": null,
+        "evidenceRefresh": false,
+        "sourceValuesChanged": false
+      },
+      "temperature": {
+        "observedRange": [],
+        "preferredRange": [],
+        "optimumRange": [],
+        "status": "UNKNOWN"
+      },
+      "depth": {
+        "habitatDepth": [],
+        "fishingDepth": [],
+        "observedDepth": [],
+        "conflictingObservedDepth": [],
+        "status": "UNKNOWN"
+      },
+      "salinity": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "dissolvedOxygen": {
+        "ranges": [],
+        "qualitative": [],
+        "status": "UNKNOWN"
+      },
+      "spawning": {
+        "periods": [
+          {
+            "months": [
+              4,
+              5,
+              6,
+              7
+            ],
+            "seasons": [],
+            "summary": "산란기는 4~7월이다.",
+            "evidenceId": "BM-SPECIES-000884-mbris",
+            "evidenceClass": "DIRECT_OFFICIAL"
+          }
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "migration": {
+        "records": [],
+        "status": "UNKNOWN"
+      },
+      "habitat": {
+        "types": [
+          "COASTAL",
+          "BAY",
+          "SURFACE"
+        ],
+        "substrates": [],
+        "summary": [
+          "연안과 내만의 표층에 무리 지어 서식한다."
+        ],
+        "status": "EVIDENCE_AVAILABLE"
+      },
+      "evidenceRefs": [
+        {
+          "id": "BM-SPECIES-000884-mbris",
+          "sourceType": "MBRIS",
+          "evidenceClass": "DIRECT_OFFICIAL",
+          "title": "MBRIS 생물종 상세정보: 학공치",
+          "url": "https://www.mbris.kr/pub/marine/tsearch/tsearchDetail.do?spcTxnId=270000008600",
+          "accessedOn": "2026-09-20"
+        }
+      ],
+      "profileReadiness": "PROFILE_LIMITED",
+      "limitations": [
+        "UNKNOWN:salinity",
+        "UNKNOWN:dissolvedOxygen",
+        "UNKNOWN:temperature",
+        "UNKNOWN:depth",
+        "UNKNOWN:migration"
+      ],
+      "exceptionCategories": [
+        "UNKNOWN"
+      ],
+      "batch": "A",
+      "priorityRank": 19
+    }
+  ],
+  "sources": {
+    "priorityPool": {
+      "artifact": "reports/fish-canonical/condition-profile-priority-pool-v1.json",
+      "sha256": "9C7D3FA1FC2565613C21EB5D764B6A0074CE7788B8FF5BBBD7BC5DD803173055"
+    },
+    "inventory": {
+      "artifact": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json",
+      "sha256": "8E226C2EFD7760DC9D5E974967EFCF39FD4376816CBC0D64EDFD08E731E049C3"
+    },
+    "existingProfiles": {
+      "artifact": "data/fishing-condition/species-environment/v3/species-environment-profiles.json",
+      "sha256": "880066B3EEFD2100EA870A674504492B8D70DA9700A660350FB296EA5BC7A376"
+    }
+  },
+  "invariants": {
+    "scoring": 0,
+    "ranking": 0,
+    "probability": 0,
+    "runtimeMutation": 0,
+    "productionMutation": 0,
+    "databaseWrite": 0,
+    "supabaseWrite": 0
+  }
+}
