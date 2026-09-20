@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "program": "BLUE_MARINA_CHARTER_SUPPLY_INTAKE_BACKEND_ACTIVATION_REHEARSAL_V1",
+  "decision": "SUPPLY_INTAKE_REHEARSAL_BLOCKED",
+  "baseline": {
+    "branch": "main",
+    "head": "ac6f4bf18c633c6b4763a3186408e910d389980c",
+    "originMain": "ac6f4bf18c633c6b4763a3186408e910d389980c",
+    "matched": true
+  },
+  "environment": {
+    "selected": null,
+    "classification": "UNKNOWN",
+    "local": {
+      "available": false,
+      "supabaseCliVersion": "2.113.0",
+      "projectConfigPresent": false,
+      "dockerClientAvailable": true,
+      "dockerEngineAvailable": false,
+      "dockerDesktopStartAttempted": true,
+      "dockerServiceStartAttempted": true,
+      "failure": "DOCKER_DESKTOP_LINUX_ENGINE_UNAVAILABLE"
+    },
+    "staging": {
+      "identified": false,
+      "used": false
+    },
+    "production": {
+      "identified": false,
+      "touched": false
+    },
+    "remoteApply": false
+  },
+  "migration": {
+    "path": "supabase/migrations/20260920103020_charter_supply_intake_backend_v1.sql",
+    "applied": false,
+    "result": "NOT_EXECUTED_ENVIRONMENT_BLOCKED",
+    "tablesExpected": 4,
+    "tablesVerifiedLive": 0,
+    "indexesConstraintsVerifiedLive": false,
+    "rlsVerifiedLive": false,
+    "privilegesVerifiedLive": false,
+    "reapplyVerifiedLive": false
+  },
+  "auth": {
+    "normalUserCreated": false,
+    "charterAdminCreated": false,
+    "negativeCasesExecuted": 0,
+    "result": "NOT_EXECUTED_ENVIRONMENT_BLOCKED"
+  },
+  "featureFlag": {
+    "productionChanged": false,
+    "offVerifiedLive": false,
+    "onVerifiedLive": false,
+    "result": "NOT_EXECUTED_ENVIRONMENT_BLOCKED"
+  },
+  "submission": {
+    "created": false,
+    "rawPayloadVerified": false,
+    "normalizedPayloadVerified": false,
+    "auditVerified": false,
+    "unknownNullPreservationVerifiedLive": false,
+    "userCoordinateVerifiedStatusObserved": false,
+    "result": "NOT_EXECUTED_ENVIRONMENT_BLOCKED"
+  },
+  "validation": {
+    "successCase": false,
+    "failureCase": false,
+    "validTransitionsVerifiedLive": 0,
+    "invalidTransitionsVerifiedLive": 0,
+    "result": "NOT_EXECUTED_ENVIRONMENT_BLOCKED"
+  },
+  "adminReview": {
+    "approve": false,
+    "reject": false,
+    "requestChanges": false,
+    "reviewPersistenceVerified": false,
+    "result": "NOT_EXECUTED_ENVIRONMENT_BLOCKED"
+  },
+  "bulkImport": {
+    "dryRun": false,
+    "submit": false,
+    "invalidRowBlock": false,
+    "contentHashPersisted": false,
+    "idempotencyKeyPersisted": false,
+    "result": "NOT_EXECUTED_ENVIRONMENT_BLOCKED"
+  },
+  "idempotency": {
+    "sameKeyReplayVerified": false,
+    "sameContentRetryBlocked": false,
+    "duplicateSubmissions": null,
+    "result": "NOT_EXECUTED_ENVIRONMENT_BLOCKED"
+  },
+  "crosswalk": {
+    "persisted": false,
+    "observedStatuses": [],
+    "autoApproval": 0,
+    "result": "NOT_EXECUTED_ENVIRONMENT_BLOCKED"
+  },
+  "promotionCandidate": {
+    "approvedCandidateCreated": false,
+    "invalidStateBlocksVerified": false,
+    "productionActivated": 0,
+    "result": "NOT_EXECUTED_ENVIRONMENT_BLOCKED"
+  },
+  "security": {
+    "anonDirectAccessDeniedVerifiedLive": false,
+    "authenticatedDirectAccessDeniedVerifiedLive": false,
+    "servicePathVerifiedLive": false,
+    "stackTraceExposureVerifiedLive": false,
+    "productionRegistryMutation": 0,
+    "remoteProductionDatabaseApply": 0,
+    "result": "NOT_EXECUTED_ENVIRONMENT_BLOCKED"
+  },
+  "auditLog": {
+    "eventsVerifiedLive": [],
+    "submissionLinkageVerified": false,
+    "orderVerified": false,
+    "result": "NOT_EXECUTED_ENVIRONMENT_BLOCKED"
+  },
+  "cleanup": {
+    "rehearsalActorsCreated": 0,
+    "rehearsalRowsCreated": 0,
+    "cleanupRequired": false
+  },
+  "verification": {
+    "targeted": { "passed": 10, "total": 10 },
+    "allTests": { "passed": 931, "total": 931 },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "diffCheck": "PASS"
+  },
+  "git": {
+    "staged": 0,
+    "commits": 0,
+    "pushes": 0,
+    "unrelatedWorktreePreserved": true
+  },
+  "blockers": [
+    "Docker Desktop Linux engine did not become available after launch attempt.",
+    "The Docker Desktop service could not be started from the current non-elevated session.",
+    "No repository-local supabase/config.toml was present.",
+    "No explicitly identified isolated non-production staging environment was available.",
+    "Remote environment identity was therefore UNKNOWN and remote migration apply was prohibited."
+  ],
+  "nextPrerequisites": [
+    "Start a healthy Docker Desktop Linux engine or provide an explicitly identified isolated staging project.",
+    "Create an isolated Supabase project configuration without resetting existing local data.",
+    "Run the migration and full Auth, RLS, API, lifecycle, bulk import, idempotency, audit, and cleanup rehearsal.",
+    "Keep production activation and the production Charter registry unchanged."
+  ]
+}
