@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "program": "BLUE_MARINA_CHARTER_SUPPLY_INTAKE_BACKEND_V1",
+  "decision": "SUPPLY_INTAKE_BACKEND_V1_READY_WITH_AUTH_LIMITATIONS",
+  "database": {
+    "migration": "supabase/migrations/20260920103020_charter_supply_intake_backend_v1.sql",
+    "tables": 4,
+    "immutableRawPayload": true,
+    "rlsEnabled": true,
+    "browserGrants": 0,
+    "localApplied": false,
+    "remoteApplied": false
+  },
+  "routes": {
+    "create": "POST /api/charters/supply/submissions",
+    "list": "GET /api/charters/supply/submissions",
+    "fetch": "GET /api/charters/supply/submissions/[id]",
+    "validate": "POST /api/charters/supply/submissions/[id]/validate",
+    "review": "POST /api/charters/supply/submissions/[id]/review"
+  },
+  "states": ["DRAFT", "SUBMITTED", "VALIDATION_FAILED", "REVIEW_REQUIRED", "APPROVED", "REJECTED", "PROMOTED"],
+  "validation": { "serverSide": true, "canonicalSpecies": 1258, "fuzzyMapping": 0, "userCoordinateStatus": "USER_SUBMITTED", "crosswalkAutoApproved": false },
+  "persistence": { "rawPayload": true, "normalizedPayload": true, "validationResult": true, "reviews": true, "auditHistory": true, "promotionCandidate": true },
+  "bulkImport": { "dryRunBeforeSubmit": true, "invalidRowsBlockSubmit": true, "maxRows": 1000, "idempotency": "ACTOR_AND_CONTENT_HASH" },
+  "auth": { "submissionRequiresAuthenticatedUser": true, "reviewRequiresAppMetadataRole": "charter_admin", "status": "BACKEND_AUTH_REQUIRED", "fakeUsers": 0 },
+  "security": { "requestBytes": 262144, "rateLimit": "10_PER_ACTOR_PER_10_MINUTES", "httpHttpsOnly": true, "formulaInjectionRejected": true, "parameterizedSupabaseClient": true, "stackTraceExposure": false },
+  "promotion": { "approvedRequired": true, "candidatePersistence": true, "productionActivation": 0 },
+  "limitations": ["LOCAL_SUPABASE_DATABASE_NOT_RUNNING", "REMOTE_MIGRATION_NOT_APPLIED", "CHARTER_ADMIN_ROLE_PROVISIONING_REQUIRED", "IN_MEMORY_RATE_LIMIT_REQUIRES_DISTRIBUTED_REPLACEMENT_BEFORE_SCALE"]
+}

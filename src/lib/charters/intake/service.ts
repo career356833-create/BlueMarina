@@ -1,0 +1,33 @@
+import { createHash, randomUUID } from "node:crypto";
+import type { AdminReviewContract, SubmissionState } from "../onboarding/contracts";
+import { buildPromotionCandidate, getPromotionReadiness } from "../onboarding/promotion";
+import { sanitizePlainText } from "../onboarding/validation";
+import { normalizeServerSubmission, runServerValidation } from "./server-validation";
+import { assertTransition } from "./state-machine";
+import { SupplyIntakeError, type ReviewAction, type StoredSupplySubmission, type SupplyIntakeRepository } from "./types";
+
+const stable = (value: unknown): string => value && typeof value === "object" ? Array.isArray(value) ? `[${value.map(stable).join(",")}]` : `{${Object.entries(value as Record<string, unknown>).sort(([a],[b]) => a.localeCompare(b)).map(([key,item]) => `${JSON.stringify(key)}:${stable(item)}`).join(",")}}` : JSON.stringify(value);
+const sha256 = (value: unknown) => createHash("sha256").update(stable(value)).digest("hex");
+
+export class CharterSupplyIntakeService {
+  constructor(private readonly repository: SupplyIntakeRepository, private readonly now = () => new Date(), private readonly id = () => randomUUID()) {}
+
+  async create(rawPayload: unknown, actorId: string, idempotencyKey: string) {
+    if (!/^[A-Za-z0-9._:-]{8,128}$/.test(idempotencyKey)) throw new SupplyIntakeError("VALIDATION_ERROR", 400);
+    const contentHash=sha256(rawPayload); const prior=await this.repository.findByIdempotency(actorId,idempotencyKey);
+    if (prior) { if (prior.contentHash !== contentHash) throw new SupplyIntakeError("DUPLICATE_SUBMISSION",409); return { submission:prior,idempotent:true }; }
+    if (await this.repository.findByContentHash(actorId,contentHash)) throw new SupplyIntakeError("DUPLICATE_SUBMISSION",409);
+    const now=this.now().toISOString(),id=this.id(); const normalized=normalizeServerSubmission(rawPayload,id,now); assertTransition("DRAFT","SUBMITTED"); normalized.state="SUBMITTED";
+    const validation=runServerValidation(normalized); const status:SubmissionState=validation.summary.errors ? "VALIDATION_FAILED" : "REVIEW_REQUIRED"; assertTransition("SUBMITTED",status); normalized.state=status;
+    const stored:StoredSupplySubmission={id,submittedBy:actorId,idempotencyKey,contentHash,status,rawPayload:structuredClone(rawPayload),normalizedPayload:normalized,validationResult:{...validation.summary,issues:validation.issues},registrationCrosswalk:{status:validation.crosswalk.status,registrationId:validation.crosswalk.registrationId,autoApproved:false},promotionReadiness:validation.summary.errors?"REJECT":getPromotionReadiness(normalized),submittedAt:now,updatedAt:now,approvedAt:null,rejectedAt:null,reviewNotes:null};
+    await this.repository.create(stored); await this.audit(id,actorId,"SUBMISSION_CREATED","DRAFT","SUBMITTED",{}); await this.audit(id,actorId,"SUBMISSION_VALIDATED","SUBMITTED",status,{errors:validation.summary.errors,warnings:validation.summary.warnings,crosswalk:validation.crosswalk.status}); return {submission:stored,idempotent:false};
+  }
+  async get(id:string){const found=await this.repository.find(id);if(!found)throw new SupplyIntakeError("SUBMISSION_NOT_FOUND",404);return found;}
+  async list(limit=50){return this.repository.list(Math.max(1,Math.min(limit,100)));}
+  async validate(id:string,actorId:string){const current=await this.get(id);if(!["SUBMITTED","VALIDATION_FAILED","REVIEW_REQUIRED"].includes(current.status))throw new SupplyIntakeError("INVALID_STATE_TRANSITION",409);const normalized=structuredClone(current.normalizedPayload);const result=runServerValidation(normalized);const nextStatus:SubmissionState=result.summary.errors?"VALIDATION_FAILED":"REVIEW_REQUIRED";if(current.status!==nextStatus)assertTransition(current.status,nextStatus);const next={...current,status:nextStatus,normalizedPayload:normalized,validationResult:{...result.summary,issues:result.issues},registrationCrosswalk:{status:result.crosswalk.status,registrationId:result.crosswalk.registrationId,autoApproved:false as const},promotionReadiness:result.summary.errors?"REJECT" as const:getPromotionReadiness(normalized),updatedAt:this.now().toISOString()};await this.repository.update(next);await this.audit(id,actorId,"SUBMISSION_VALIDATED",current.status,nextStatus,{errors:result.summary.errors,warnings:result.summary.warnings});return next;}
+  async review(id:string,reviewerId:string,action:ReviewAction,reasonInput:string){const current=await this.get(id);if(current.status!=="REVIEW_REQUIRED")throw new SupplyIntakeError("INVALID_STATE_TRANSITION",409);const reason=sanitizePlainText(reasonInput,2000);if(reason.length<3)throw new SupplyIntakeError("VALIDATION_ERROR",400);const nextStatus:SubmissionState=action==="APPROVE"?"APPROVED":action==="REJECT"?"REJECTED":"VALIDATION_FAILED";assertTransition(current.status,nextStatus);const now=this.now().toISOString();const next={...current,status:nextStatus,reviewNotes:reason,approvedAt:action==="APPROVE"?now:null,rejectedAt:action==="REJECT"?now:null,updatedAt:now,normalizedPayload:{...current.normalizedPayload,state:nextStatus}};await this.repository.update(next);await this.repository.appendReview({id:this.id(),submissionId:id,reviewerId,action,reason,createdAt:now});await this.audit(id,reviewerId,"REVIEW_RECORDED",current.status,nextStatus,{action});await this.audit(id,reviewerId,action==="APPROVE"?"SUBMISSION_APPROVED":action==="REJECT"?"SUBMISSION_REJECTED":"CHANGES_REQUESTED",current.status,nextStatus,{});
+    if(action==="APPROVE"){const review:AdminReviewContract={submissionId:id,reviewedAt:now,reviewerRef:reviewerId,decision:"APPROVE",validationSummary:{errors:next.validationResult.errors,warnings:next.validationResult.warnings},registrationCrosswalk:next.registrationCrosswalk,conflicts:[],evidenceRefs:[],sourceRefs:[next.normalizedPayload.sourceIdentity.sourceUrl],promotionReadiness:next.promotionReadiness,notes:reason};const candidate=buildPromotionCandidate(next.normalizedPayload,review);await this.repository.savePromotionCandidate({submissionId:id,candidatePayload:candidate,contentHash:sha256(candidate),productionActivated:false,createdBy:reviewerId,createdAt:now});await this.audit(id,reviewerId,"PROMOTION_CANDIDATE_CREATED","APPROVED","APPROVED",{productionActivated:false});}
+    return next;
+  }
+  private audit(submissionId:string,actorId:string|null,eventType:Parameters<SupplyIntakeRepository["appendAudit"]>[0]["eventType"],fromStatus:SubmissionState|null,toStatus:SubmissionState|null,details:Record<string,unknown>){return this.repository.appendAudit({submissionId,actorId,eventType,fromStatus,toStatus,details,createdAt:this.now().toISOString()});}
+}

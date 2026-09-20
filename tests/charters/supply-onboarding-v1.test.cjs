@@ -113,7 +113,8 @@ test("official connector remains interface-only", () => {
 test("exposes the six-step local review UI", () => {
   const source = read("src/app/charters/onboarding/onboarding-client.tsx");
   for (const label of ["업체", "선박", "출항항", "출조상품", "일정·가격", "검토"]) assert.match(source, new RegExp(label.replace("·", "\\·")));
-  assert.match(source, /서버로 전송하지 않습니다/);
+  assert.match(source, /제출하기/);
+  assert.match(source, /관리자 검토 전에는 운영에 반영되지 않습니다/);
   assert.match(source, /min-h-11/);
 });
 
