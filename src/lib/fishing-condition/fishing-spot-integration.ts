@@ -1,5 +1,6 @@
 import { fishingSpots, type FishingSpot } from "@/data/fishing-spots";
 import { getFishingConditionProfile, getFishingConditionProfileSpecies } from "./profile-registry";
+import { buildFishingJourneyConditionsHref, buildFishingJourneySeaHref } from "@/lib/fishing-spots/journey";
 
 const LEGACY_FISHING_CONDITION_SPECIES = [
   { id: "BM-SPECIES-000755", name: "참돔" },
@@ -20,8 +21,8 @@ export const FISHING_CONDITION_SPECIES = getFishingConditionProfileSpecies();
 
 export type FishingConditionSpecies = (typeof FISHING_CONDITION_SPECIES)[number];
 
-const conditionSpeciesByName = new Map<string, FishingConditionSpecies>([...LEGACY_FISHING_CONDITION_SPECIES, ...FISHING_CONDITION_SPECIES].map((species) => [species.name, species]));
 const conditionSpeciesById = new Map<string, FishingConditionSpecies>([...LEGACY_FISHING_CONDITION_SPECIES, ...FISHING_CONDITION_SPECIES].map((species) => [species.id, species]));
+const registrySpeciesByName = new Map<string, FishingConditionSpecies>(FISHING_CONDITION_SPECIES.map((species) => [species.name, species]));
 
 // Explicit source-name aliases only. Aggregate labels and approximate matches stay unmapped.
 const approvedSourceAliases: Record<string, FishingConditionSpecies["name"]> = {
@@ -41,10 +42,10 @@ export function getFishingConditionSpecies(speciesId: string | null | undefined)
 }
 
 export function mapFishingSpotTarget(targetName: string): FishingConditionSpecies | null {
-  const direct = conditionSpeciesByName.get(targetName);
+  const direct = registrySpeciesByName.get(targetName);
   if (direct) return direct;
   const canonicalName = approvedSourceAliases[targetName];
-  return canonicalName ? conditionSpeciesByName.get(canonicalName) ?? null : null;
+  return canonicalName ? registrySpeciesByName.get(canonicalName) ?? null : null;
 }
 
 export function getFishingSpotSpeciesProjection(spot: Pick<FishingSpot, "targetFish">) {
@@ -66,11 +67,9 @@ export function findFishingSpot(spotId: string | null | undefined) {
 }
 
 export function buildFishingConditionHref(spot: Pick<FishingSpot, "id">, speciesId?: string) {
-  const params = new URLSearchParams({ spotId: spot.id });
-  if (getFishingConditionSpecies(speciesId)) params.set("speciesId", speciesId as string);
-  return `/fishing-spots/conditions?${params.toString()}`;
+  return buildFishingJourneyConditionsHref({ spotId: spot.id, speciesId, source: "spot-detail", returnTo: `/fishing-spots/${encodeURIComponent(spot.id)}` });
 }
 
-export function buildFishingSpotMapHref(spot: Pick<FishingSpot, "id">) {
-  return `/sea?spotId=${encodeURIComponent(spot.id)}#live-marine-map`;
+export function buildFishingSpotMapHref(spot: Pick<FishingSpot, "id">, speciesId?: string) {
+  return `${buildFishingJourneySeaHref({ spotId: spot.id, speciesId, source: "fishing-condition", returnTo: `/fishing-spots/${encodeURIComponent(spot.id)}` })}#live-marine-map`;
 }

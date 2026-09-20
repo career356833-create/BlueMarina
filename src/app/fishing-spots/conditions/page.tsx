@@ -2,8 +2,9 @@ import { FishingConditionClient } from "./fishing-condition-client";
 import {
   buildFishingSpotMapHref,
   findFishingSpot,
-  getFishingConditionSpecies,
 } from "@/lib/fishing-condition/fishing-spot-integration";
+import { getFishingConditionProfile } from "@/lib/fishing-condition/profile-registry";
+import { safeJourneyReturnTo } from "@/lib/fishing-spots/journey";
 import {
   buildNavigationHref,
   navigationDestinationFromFishingSpot,
@@ -24,24 +25,25 @@ const first = (value: string | string[] | undefined) => Array.isArray(value) ? v
 
 export default async function FishingConditionPage({ searchParams }: { searchParams: Promise<ConditionsQuery> }) {
   const query = await searchParams;
-  const requestedSpecies = getFishingConditionSpecies(first(query.speciesId));
+  const requestedSpecies = getFishingConditionProfile(first(query.speciesId));
   const spot = findFishingSpot(first(query.spotId));
   const coordinatePolicy = spot ? getSpotCoordinateSafetyPolicy(spot.id) : null;
   const mapBlocked = coordinatePolicy?.mapPolicy === "MAP_DISPLAY_BLOCKED";
   const navigationBlocked = coordinatePolicy?.navigationPolicy === "NAVIGATION_BLOCKED_PENDING_REVIEW";
 
   return <FishingConditionClient
-    initialSpeciesId={requestedSpecies?.id}
+    initialSpeciesId={requestedSpecies?.speciesId}
     spotContext={spot ? {
       id: spot.id,
       name: spot.name,
       region: [spot.region, spot.city].filter(Boolean).join(" · "),
       detailHref: `/fishing-spots/${encodeURIComponent(spot.id)}`,
-      mapHref: mapBlocked ? undefined : buildFishingSpotMapHref(spot),
+      mapHref: mapBlocked ? undefined : buildFishingSpotMapHref(spot, requestedSpecies?.speciesId),
       navigationHref: navigationBlocked ? undefined : buildNavigationHref(navigationDestinationFromFishingSpot(spot)),
       coordinateNotice: navigationBlocked ? coordinatePolicy.reason : undefined,
       mapBlockedReason: mapBlocked ? "좌표 검토 중이라 지도 표시가 제한됩니다." : undefined,
       navigationBlockedReason: navigationBlocked ? NAVIGATION_HOLD_NOTICE : undefined,
     } : undefined}
+    journey={{ spotId: spot?.id, speciesId: requestedSpecies?.speciesId, source: first(query.source), returnTo: safeJourneyReturnTo(first(query.returnTo), spot ? `/fishing-spots/${encodeURIComponent(spot.id)}` : "/fishing-spots") }}
   />;
 }

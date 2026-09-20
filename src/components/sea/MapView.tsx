@@ -14,6 +14,8 @@ import { loadKakaoMaps, type KakaoMapInstance, type KakaoMarkerInstance } from "
 import { LocationButton } from "@/components/sea/LocationButton";
 import { SeaNavigationLink } from "@/components/boat/navigation/SeaNavigationLink";
 import { navigationDestinationFromFishingSpot, navigationDestinationFromMarinePlace } from "@/lib/marine-navigation/adapters/navigation-destination-adapter";
+import { getFishingConditionProfile } from "@/lib/fishing-condition/profile-registry";
+import { buildFishingJourneyConditionsHref } from "@/lib/fishing-spots/journey";
 import {
   getSpotCoordinateSafetyPolicy,
   MAP_BLOCKED_NOTICE,
@@ -343,6 +345,7 @@ export function SeaMapView() {
     KAKAO_KEY ? "현재 위치와 거점 정보를 지도로 준비하는 중입니다." : "카카오 지도 키를 설정하면 지도가 표시됩니다.",
   );
   const [directQueryNotice, setDirectQueryNotice] = useState<string | null>(null);
+  const [journeySpeciesId, setJourneySpeciesId] = useState<string | null>(null);
 
   const selectedFishingSpot = useMemo(
     () =>
@@ -566,6 +569,8 @@ export function SeaMapView() {
   useEffect(() => {
     if (initialFishingSpotHandledRef.current || sdkStatus === "loading") return;
     const spotId = new URLSearchParams(window.location.search).get("spotId");
+    const speciesId = new URLSearchParams(window.location.search).get("speciesId");
+    setJourneySpeciesId(speciesId && getFishingConditionProfile(speciesId) ? speciesId : null);
     if (!spotId) {
       initialFishingSpotHandledRef.current = true;
       return;
@@ -1040,6 +1045,7 @@ export function SeaMapView() {
                     </div>
                     <h2 className="mt-2 break-words text-lg font-black text-white">{selectedFishingSpot.name}</h2>
                     <p className="mt-1 text-xs font-semibold leading-5 text-[#9FB3C8]">{buildFishingSummary(selectedFishingSpot)}</p>
+                    {journeySpeciesId ? <p className="mt-1 text-xs font-black text-[#79C9D6]">선택 어종 · {getFishingConditionProfile(journeySpeciesId)?.koreanName}</p> : null}
                   </div>
                   <button
                     type="button"
@@ -1074,6 +1080,7 @@ export function SeaMapView() {
                     </Link>
                   </div>
                 </div>
+                {journeySpeciesId ? <Link href={buildFishingJourneyConditionsHref({ spotId: selectedFishingSpot.id, speciesId: journeySpeciesId, source: "sea-map", returnTo: "/sea" })} className="inline-flex min-h-11 items-center text-sm font-black text-[#79C9D6]">조건 정보로 돌아가기</Link> : null}
                 {selectedFishingSpotPolicy?.mapPolicy === "MAP_DISPLAY_WITH_WARNING" ? <p role="note" className="rounded-[16px] border border-[#6A5735] bg-[#201B13] px-3 py-2 text-xs font-semibold leading-5 text-[#D9C49A]">{MAP_WARNING_NOTICE}</p> : null}
                 {selectedFishingSpotPolicy?.navigationPolicy === "NAVIGATION_BLOCKED_PENDING_REVIEW"
                   ? <div>

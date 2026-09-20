@@ -23,7 +23,7 @@ test("canonical species spot links list to detail and detail to preselected cond
   assert.ok(spot);
   assert.match(list, /\/fishing-spots\/\$\{encodeURIComponent\(spot\.id\)\}/);
   assert.match(detail, /buildFishingConditionHref\(spot, item\.id\)/);
-  assert.match(integration, /params\.set\("speciesId"/);
+  assert.match(integration, /buildFishingJourneyConditionsHref/);
 });
 
 test("multiple canonical species remain separate condition actions", () => {
@@ -34,7 +34,7 @@ test("multiple canonical species remain separate condition actions", () => {
 });
 
 test("invalid query species id safely falls back to the unselected state", () => {
-  assert.match(conditionsPage, /getFishingConditionSpecies\(first\(query\.speciesId\)\)/);
+  assert.match(conditionsPage, /getFishingConditionProfile\(first\(query\.speciesId\)\)/);
   assert.match(conditionsClient, /initialSpeciesId = ""/);
   assert.match(integration, /if \(!speciesId\) return null/);
   assert.match(integration, /getFishingConditionProfile\(speciesId\)/);

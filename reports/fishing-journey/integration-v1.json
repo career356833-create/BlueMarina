@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "decision": "FISHING_JOURNEY_READY_WITH_LIMITATIONS",
+  "routesAudited": ["/fishing-spots", "/fishing-spots/[id]", "/fishing-spots/conditions", "/sea", "/sea/navigation"],
+  "stateContract": ["spotId", "speciesId", "source", "returnTo"],
+  "continuity": { "spotId": true, "speciesId": true, "destinationAdapter": "existing fishing-spot adapter" },
+  "safetyHolds": { "boat-60": "MAP_DISPLAY_BLOCKED + NAVIGATION_BLOCKED_PENDING_REVIEW", "boat-321": "MAP_DISPLAY_BLOCKED + NAVIGATION_BLOCKED_PENDING_REVIEW", "boat-128": "MAP_DISPLAY_WITH_WARNING + NAVIGATION_BLOCKED_PENDING_REVIEW", "boat-129": "MAP_DISPLAY_WITH_WARNING + NAVIGATION_BLOCKED_PENDING_REVIEW" },
+  "mobile": { "minimumTapTarget": "min-h-11", "bottomNavClearance": true, "longTextWrapping": true },
+  "boundaries": { "scoring": 0, "ranking": 0, "probability": 0, "automaticSuitability": 0, "safeRouteInference": 0, "databaseWrite": 0, "supabaseWrite": 0 }
+}
