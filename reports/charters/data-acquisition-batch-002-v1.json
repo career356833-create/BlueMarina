@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "decision": "CHARTER_OFFER_SOURCE_INSUFFICIENT",
+  "sources": {
+    "discovered": 5,
+    "usable": 0,
+    "blocked": 5
+  },
+  "entities": {
+    "operators": 0,
+    "boats": 0,
+    "ports": 0,
+    "charters": 0,
+    "schedules": 0
+  },
+  "coverage": {
+    "contacts": 0,
+    "prices": 0,
+    "schedules": 0,
+    "capacities": 0,
+    "targetSpecies": 0,
+    "verifiedCoordinates": 0,
+    "externalBookingLinks": 0
+  },
+  "crosswalk": {
+    "exactMatch": 0,
+    "highConfidence": 0,
+    "candidate": 0,
+    "noMatch": 0,
+    "candidateAutoPromoted": 0,
+    "registrationsReviewed": 0,
+    "availableBatch001Registrations": 100
+  },
+  "promotion": {
+    "promotionReady": 0,
+    "promotionReadyWithLimitations": 0,
+    "reviewRequired": 0,
+    "notEligible": 0
+  },
+  "exceptions": {
+    "total": 5,
+    "categories": [
+      {
+        "category": "blocked source",
+        "count": 5,
+        "nextAction": "Resolve access/licensing or obtain an authorized documented bulk feed before collection."
+      }
+    ]
+  },
+  "truth": {
+    "fakeRealtime": 0,
+    "inferredPrices": 0,
+    "inferredSeats": 0,
+    "inferredSchedules": 0,
+    "inferredCoordinates": 0,
+    "fuzzyMappings": 0,
+    "productionActivation": 0,
+    "runtimeListingMutation": 0,
+    "dbSupabaseWrites": 0
+  }
+}

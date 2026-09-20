@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "datasetKind": "RESEARCH_STAGING",
+  "batchId": "CHARTER-OFFER-BATCH-002",
+  "decision": "CHARTER_OFFER_SOURCE_INSUFFICIENT",
+  "sourceObservationSha256": "6561f7c7fb4cc0bf7b28c118de8fe0fa49bdb18f945952baeb02c56ba283ddda",
+  "operators": [],
+  "boats": [],
+  "ports": [],
+  "charters": [],
+  "schedules": [],
+  "sourceRefs": [
+    "https://www.sunsang24.com/",
+    "https://yeyakhaja.com/",
+    "https://www.fishapp.co.kr/pt/schd/",
+    "https://data.visitkorea.or.kr/sparql",
+    "https://www.data.go.kr/data/15101578/openapi.do"
+  ],
+  "batch001Crosswalk": {
+    "exactMatch": 0,
+    "highConfidence": 0,
+    "candidate": 0,
+    "noMatch": 0,
+    "candidateAutoPromoted": 0,
+    "registrationsReviewed": 0,
+    "availableBatch001Registrations": 100
+  },
+  "promotion": {
+    "promotionReady": 0,
+    "promotionReadyWithLimitations": 0,
+    "reviewRequired": 0,
+    "notEligible": 0
+  },
+  "policies": {
+    "sourceUrlRequired": true,
+    "numericUnknown": null,
+    "availabilityDefault": "UNKNOWN",
+    "fuzzySpeciesMapping": false,
+    "candidateCrosswalkProductionSafe": false,
+    "registrationWithoutServiceEvidenceBecomesCharter": false
+  },
+  "limitations": [
+    "No source met both the bulk target and the documented access/reuse boundary.",
+    "No operator, boat, offer, price, schedule, remaining-seat, coordinate, or availability value was inferred."
+  ]
+}

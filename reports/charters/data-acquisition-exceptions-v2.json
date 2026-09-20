@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "batchId": "CHARTER-OFFER-BATCH-002",
+  "total": 5,
+  "entries": [
+    {
+      "category": "blocked source",
+      "sourceId": "sunsang24-public-catalog",
+      "status": "KEEP_EXCEPTION",
+      "reason": "Explicit reuse restriction; no consent obtained."
+    },
+    {
+      "category": "blocked source",
+      "sourceId": "yeyakhaja-public-catalog",
+      "status": "KEEP_EXCEPTION",
+      "reason": "Required offer/schedule paths are excluded by robots policy."
+    },
+    {
+      "category": "blocked source",
+      "sourceId": "fishapp-public-schedule",
+      "status": "KEEP_EXCEPTION",
+      "reason": "A compliant page-by-page collection cannot meet the bulk target, and no private API was reverse engineered."
+    },
+    {
+      "category": "blocked source",
+      "sourceId": "kto-linked-open-data",
+      "status": "KEEP_EXCEPTION",
+      "reason": "Endpoint returned HTTP 503 for both ASK and SELECT requests during collection."
+    },
+    {
+      "category": "blocked source",
+      "sourceId": "kto-tourapi",
+      "status": "KEEP_EXCEPTION",
+      "reason": "No authorized service key was available; no access control was bypassed."
+    }
+  ],
+  "categoryBatches": [
+    {
+      "category": "blocked source",
+      "count": 5,
+      "nextAction": "Resolve access/licensing or obtain an authorized documented bulk feed before collection."
+    }
+  ]
+}

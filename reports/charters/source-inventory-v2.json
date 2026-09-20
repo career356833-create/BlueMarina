@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 2,
+  "discovered": 5,
+  "usable": 0,
+  "blocked": 5,
+  "sources": [
+    {
+      "sourceId": "sunsang24-public-catalog",
+      "name": "선상24",
+      "type": "PUBLIC_BOOKING_PLATFORM",
+      "url": "https://www.sunsang24.com/",
+      "fields": [
+        "operator",
+        "boat",
+        "port",
+        "offer",
+        "species",
+        "price",
+        "schedule",
+        "contact",
+        "booking link"
+      ],
+      "bulkPotential": "1000+ vessels",
+      "publicAccess": "Public catalog pages exist",
+      "restrictions": "Operator sub-sites state that information may not be reused without consent; robots rules restrict ship paths for named crawlers.",
+      "freshness": "LIVE_CLAIMED_BY_SOURCE",
+      "trust": "OFFICIAL_BOOKING_PLATFORM",
+      "status": "NOT_USABLE",
+      "reason": "Explicit reuse restriction; no consent obtained.",
+      "domain": "www.sunsang24.com"
+    },
+    {
+      "sourceId": "yeyakhaja-public-catalog",
+      "name": "예약하자",
+      "type": "PUBLIC_BOOKING_PLATFORM",
+      "url": "https://yeyakhaja.com/",
+      "fields": [
+        "operator",
+        "boat",
+        "offer",
+        "schedule",
+        "remaining seats",
+        "booking link"
+      ],
+      "bulkPotential": "Platform-scale",
+      "publicAccess": "Public landing and sitemap",
+      "restrictions": "robots.txt disallows schedule, booking, inquiry, and redirect paths for all user agents.",
+      "freshness": "LIVE_CLAIMED_BY_SOURCE",
+      "trust": "OFFICIAL_BOOKING_PLATFORM",
+      "status": "NOT_USABLE",
+      "reason": "Required offer/schedule paths are excluded by robots policy.",
+      "domain": "yeyakhaja.com"
+    },
+    {
+      "sourceId": "fishapp-public-schedule",
+      "name": "Fishapp",
+      "type": "PUBLIC_BOOKING_PLATFORM",
+      "url": "https://www.fishapp.co.kr/pt/schd/",
+      "fields": [
+        "boat",
+        "offer",
+        "species",
+        "schedule",
+        "capacity",
+        "contact"
+      ],
+      "bulkPotential": "Platform-scale",
+      "publicAccess": "Public HTML application",
+      "restrictions": "robots.txt allows public paths but specifies Crawl-delay: 30; no documented bulk export/API was found.",
+      "freshness": "UNKNOWN",
+      "trust": "BOOKING_PLATFORM",
+      "status": "NOT_USABLE",
+      "reason": "A compliant page-by-page collection cannot meet the bulk target, and no private API was reverse engineered.",
+      "domain": "www.fishapp.co.kr"
+    },
+    {
+      "sourceId": "kto-linked-open-data",
+      "name": "한국관광공사 Linked Open Data",
+      "type": "PUBLIC_INSTITUTION_SPARQL",
+      "url": "https://data.visitkorea.or.kr/sparql",
+      "fields": [
+        "place",
+        "name",
+        "description",
+        "contact",
+        "fee",
+        "reservation",
+        "coordinates"
+      ],
+      "bulkPotential": "Large public tourism graph",
+      "publicAccess": "Documented public SPARQL endpoint",
+      "restrictions": "No access restriction identified",
+      "freshness": "UNKNOWN",
+      "trust": "AUTHORITATIVE",
+      "status": "NOT_USABLE",
+      "reason": "Endpoint returned HTTP 503 for both ASK and SELECT requests during collection.",
+      "domain": "data.visitkorea.or.kr"
+    },
+    {
+      "sourceId": "kto-tourapi",
+      "name": "한국관광공사 국문 관광정보 OpenAPI",
+      "type": "PUBLIC_INSTITUTION_API",
+      "url": "https://www.data.go.kr/data/15101578/openapi.do",
+      "fields": [
+        "tourism place",
+        "contact",
+        "description",
+        "coordinates",
+        "reservation information"
+      ],
+      "bulkPotential": "Approximately 260,000 tourism records",
+      "publicAccess": "Public API after application",
+      "restrictions": "Data.go.kr service key and usage application required",
+      "freshness": "CURRENT_API",
+      "trust": "AUTHORITATIVE",
+      "status": "NOT_USABLE",
+      "reason": "No authorized service key was available; no access control was bypassed.",
+      "domain": "www.data.go.kr"
+    }
+  ]
+}
