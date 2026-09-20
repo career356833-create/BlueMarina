@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "program": "CHARTER_SUPPLY_ONBOARDING_V1",
+  "decision": "SUPPLY_ONBOARDING_READY_WITH_BACKEND_LIMITATIONS",
+  "generatedAt": "2026-09-20T00:00:00.000Z",
+  "channels": {
+    "operatorOnboarding": true,
+    "bulkImport": true,
+    "officialConnector": {
+      "contractOnly": true,
+      "implemented": 0
+    }
+  },
+  "states": [
+    "DRAFT",
+    "SUBMITTED",
+    "VALIDATION_FAILED",
+    "REVIEW_REQUIRED",
+    "APPROVED",
+    "REJECTED",
+    "PROMOTED"
+  ],
+  "bulkImport": {
+    "maxBytes": 1048576,
+    "maxRows": 1000,
+    "templateRows": 3,
+    "demoPlaceholders": 3,
+    "formulaCells": 0,
+    "unsafeSourceUrls": 0,
+    "rowStatuses": [
+      "VALID",
+      "VALID_WITH_WARNINGS",
+      "INVALID"
+    ],
+    "dryRun": {
+      "totalRows": 3,
+      "validRows": 0,
+      "warningRows": 3,
+      "invalidRows": 0,
+      "operators": 3,
+      "boats": 2,
+      "ports": 3,
+      "charters": 3,
+      "schedules": 1,
+      "speciesMapped": 0,
+      "speciesUnmapped": 4,
+      "duplicates": 0,
+      "issueCount": 4
+    }
+  },
+  "crosswalk": {
+    "source": "MOF_BATCH_001",
+    "statuses": [
+      "EXACT_MATCH",
+      "HIGH_CONFIDENCE",
+      "CANDIDATE",
+      "NO_MATCH"
+    ],
+    "candidateAutoApproved": false
+  },
+  "promotion": {
+    "requiresApproved": true,
+    "readiness": [
+      "READY",
+      "READY_WITH_LIMITATIONS",
+      "REVIEW_REQUIRED",
+      "REJECT"
+    ],
+    "output": "PROMOTION_CANDIDATE",
+    "productionActivation": 0
+  },
+  "security": {
+    "plainTextSanitization": true,
+    "httpHttpsOnly": true,
+    "formulaInjectionRejected": true,
+    "userCoordinates": "USER_SUBMITTED"
+  },
+  "invariants": {
+    "authAssumptions": 0,
+    "databaseWrites": 0,
+    "supabaseWrites": 0,
+    "productionRegistryMutations": 0,
+    "reservationFlowMutations": 0,
+    "officialApiCredentials": 0
+  }
+}

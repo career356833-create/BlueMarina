@@ -1,0 +1,42 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import Link from "next/link";
+import { Anchor, CheckCircle2, FileSpreadsheet, ShieldCheck } from "lucide-react";
+import { dryRunCharterCsv, type ImportDryRun } from "@/lib/charters/onboarding/csv-import";
+
+const steps = ["업체", "선박", "출항항", "출조상품", "일정·가격", "검토"] as const;
+type FormState = Record<string, string>;
+const initial: FormState = { operatorName: "", representativeName: "", phone: "", email: "", websiteUrl: "", region: "", boatName: "", capacity: "", vesselType: "", registrationInfo: "", portName: "", portRegion: "", portAddress: "", latitude: "", longitude: "", charterTitle: "", targetSpecies: "", price: "", priceUnit: "1인", departureTime: "", returnTime: "", bookingMethod: "", bookingUrl: "", scheduleDate: "", scheduleCapacity: "", remainingSeats: "", sourceUrl: "" };
+
+const fields: Record<number, Array<[string, string, string]>> = {
+  0: [["operatorName", "업체명 *", "예: 업체명"], ["representativeName", "대표·담당자명", "선택 입력"], ["phone", "연락처", "예: 010-0000-0000"], ["email", "이메일", "operator@example.com"], ["websiteUrl", "공식 웹사이트", "https://"], ["region", "영업 지역", "시·도 / 시·군·구"]],
+  1: [["boatName", "선박명", "등록된 선박명"], ["capacity", "정원", "숫자"], ["vesselType", "선박 유형", "예: 낚시어선"], ["registrationInfo", "등록 정보", "공식 등록번호 또는 근거"]],
+  2: [["portName", "출항항명", "항·포구·선착장"], ["portRegion", "출항항 지역", "시·도 / 시·군·구"], ["portAddress", "주소", "공식 주소"], ["latitude", "위도", "사용자 제출값"], ["longitude", "경도", "사용자 제출값"]],
+  3: [["charterTitle", "출조상품명 *", "상품을 식별할 수 있는 이름"], ["targetSpecies", "대상 어종", "정확한 이름, 여러 개는 | 로 구분"], ["bookingMethod", "문의·예약 방법", "예: 전화 문의"], ["bookingUrl", "공식 문의 URL", "https://"]],
+  4: [["scheduleDate", "운항일", "YYYY-MM-DD"], ["departureTime", "출항 시간", "HH:MM"], ["returnTime", "귀항 시간", "HH:MM"], ["price", "가격", "숫자"], ["priceUnit", "가격 단위", "예: 1인"], ["scheduleCapacity", "일정 정원", "숫자"], ["remainingSeats", "잔여석", "확인된 숫자만"], ["sourceUrl", "정보 출처 URL *", "http:// 또는 https://"]]
+};
+
+export function CharterOnboardingClient() {
+  const [step, setStep] = useState(0); const [form, setForm] = useState(initial); const [reviewed, setReviewed] = useState(false);
+  const [importResult, setImportResult] = useState<ImportDryRun | null>(null); const [importError, setImportError] = useState<string | null>(null);
+  const completed = useMemo(() => Boolean(form.operatorName.trim() && form.charterTitle.trim() && /^https?:\/\//.test(form.sourceUrl)), [form]);
+  const set = (name: string, value: string) => { setForm((current) => ({ ...current, [name]: value })); setReviewed(false); };
+  return <section className="mx-auto max-w-5xl py-6 sm:py-12">
+    <div className="flex items-center gap-2 text-xs font-black tracking-[.18em] text-[#79C9D6]"><Anchor size={15}/> CHARTER SUPPLY ONBOARDING</div>
+    <h1 className="mt-4 text-3xl font-black text-white sm:text-5xl">출조 정보 검토 초안 만들기</h1>
+    <p className="mt-4 max-w-3xl text-sm font-semibold leading-7 text-[#B8CBDD]">입력 내용은 이 화면에서 검토용 초안으로만 구성됩니다. 저장·전송·업체 인증·예약 확정은 수행하지 않습니다.</p>
+    <div className="mt-6 rounded-2xl border border-amber-300/25 bg-amber-300/8 p-4 text-sm font-bold leading-6 text-amber-100"><ShieldCheck className="mr-2 inline" size={18}/>좌표는 제출 근거로만 기록되며 VERIFIED로 표시되지 않습니다. 가격·좌석·어종은 입력하지 않은 값을 추정하지 않습니다.</div>
+    <ol className="mt-7 grid grid-cols-3 gap-2 sm:grid-cols-6">{steps.map((label, index) => <li key={label}><button type="button" onClick={() => setStep(index)} className={`min-h-11 w-full rounded-xl px-2 text-xs font-black ${step === index ? "bg-[#2E8BFF] text-white" : "border border-[#29465D] bg-[#071827] text-[#AFC1D4]"}`}>{index + 1}. {label}</button></li>)}</ol>
+    <div className="mt-6 rounded-[28px] border border-[#1F3A50] bg-[#071827] p-5 sm:p-8">
+      <h2 className="text-xl font-black">{steps[step]}</h2>
+      {step < 5 ? <div className="mt-5 grid gap-4 sm:grid-cols-2">{fields[step].map(([name, label, placeholder]) => <label key={name} className="grid gap-2 text-sm font-bold text-[#D7E4F6]"><span>{label}</span><input value={form[name]} onChange={(event) => set(name, event.target.value)} placeholder={placeholder} className="min-h-11 min-w-0 rounded-xl border border-[#29465D] bg-[#050F19] px-4 text-white outline-none focus:border-[#79C9D6]" /></label>)}</div> : <div className="mt-5 space-y-4">
+        <div className="grid gap-3 sm:grid-cols-2">{[["업체", form.operatorName], ["선박", form.boatName || "미입력"], ["출항항", form.portName || "미입력"], ["출조상품", form.charterTitle], ["대상 어종", form.targetSpecies || "미입력"], ["출처", form.sourceUrl || "미입력"]].map(([label, value]) => <div key={label} className="min-w-0 rounded-xl bg-[#0B2235] p-4"><p className="text-xs font-black text-[#79C9D6]">{label}</p><p className="mt-1 break-words text-sm font-bold text-white">{value}</p></div>)}</div>
+        <button type="button" disabled={!completed} onClick={() => setReviewed(true)} className="min-h-11 w-full rounded-xl bg-[#2E8BFF] px-5 text-sm font-black text-white disabled:cursor-not-allowed disabled:opacity-40">검토 데이터 확인</button>
+        {reviewed ? <p className="rounded-xl border border-emerald-300/30 bg-emerald-300/10 p-4 text-sm font-bold text-emerald-100"><CheckCircle2 className="mr-2 inline" size={18}/>필수 입력 형식을 확인했습니다. 서버 제출이나 운영 반영은 발생하지 않았습니다.</p> : null}
+      </div>}
+      <div className="mt-7 flex flex-wrap justify-between gap-3"><button type="button" disabled={step === 0} onClick={() => setStep((value) => Math.max(0, value - 1))} className="min-h-11 rounded-full border border-[#29465D] px-5 text-sm font-black disabled:opacity-30">이전</button><button type="button" disabled={step === 5} onClick={() => setStep((value) => Math.min(5, value + 1))} className="min-h-11 rounded-full bg-[#2E8BFF] px-5 text-sm font-black disabled:opacity-30">다음</button></div>
+    </div>
+    <div className="mt-6 grid gap-4 sm:grid-cols-2"><div className="rounded-2xl border border-[#1F3A50] bg-[#071827] p-5"><FileSpreadsheet className="text-[#79C9D6]"/><h2 className="mt-3 font-black">대량 등록 dry-run</h2><p className="mt-2 text-sm leading-6 text-[#9FB3C8]">CSV 템플릿은 최대 1 MiB·1,000행입니다. 파일은 브라우저에서만 검사하며 서버로 전송하지 않습니다.</p><label className="mt-3 inline-flex min-h-11 cursor-pointer items-center rounded-full border border-[#79C9D6]/50 px-4 text-sm font-black text-[#AEE8EF]">CSV 선택<input type="file" accept=".csv,text/csv" className="sr-only" onChange={async (event) => { const file = event.target.files?.[0]; if (!file) return; try { setImportResult(dryRunCharterCsv(await file.text())); setImportError(null); } catch (error) { setImportResult(null); setImportError(error instanceof Error ? error.message : "CSV_PARSE_FAILED"); } }} /></label>{importResult ? <p className="mt-3 text-sm font-bold text-[#D7E4F6]">전체 {importResult.totalRows} · VALID {importResult.valid} · 경고 {importResult.warnings} · 오류 {importResult.invalid}</p> : null}{importError ? <p className="mt-3 break-words text-sm font-bold text-rose-300">검증 실패: {importError}</p> : null}</div><div className="rounded-2xl border border-[#1F3A50] bg-[#071827] p-5"><ShieldCheck className="text-[#79C9D6]"/><h2 className="mt-3 font-black">관리자 검토</h2><p className="mt-2 text-sm leading-6 text-[#9FB3C8]">VALID은 자동 승인 의미가 아닙니다. 근거 검토와 APPROVED 상태를 거쳐야 promotion candidate를 만들 수 있습니다.</p><Link href="/charters" className="mt-3 inline-flex min-h-11 items-center text-sm font-black text-[#AEE8EF]">출조 목록으로</Link></div></div>
+  </section>;
+}
