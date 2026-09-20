@@ -8,6 +8,12 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..")
 const BASE_COMMIT = "a985bfa46aac1b99c988db5c314d6b1a3e87d297";
 const GENERATED_ON = "2026-09-18";
 const EXPANSION_INPUT = Object.freeze(["reports/fishing-spots/canonical-species-expansion-candidates-v1.json", "D3B628EAEDCC2C2C9BC8AC0A12AD78313E66E722A5E3746FE187321A2DF1FFD2"]);
+// A later read-only Fishing Condition activation may extend this selector without
+// changing the canonical normalization inputs or generated bulk artifacts.
+const APPROVED_RUNTIME_MAPPING_HASHES = new Set([
+  "3D09BE7E708BFBD7DA83E213238D662024F32B424F3DC839D5A78BE3D04DEB0E",
+  "62F14976000BCC3EB5EE433DD9AA3363E65D0AFDA77D1AA69A077CDF931AF924",
+]);
 const INPUTS = Object.freeze({
   nifsImport: ["reports/nifs-staging-import-8-execution.json", "BDB3BE57D1991CFE20E2716D3172DB3030AC738E4827B964033FFF2DC6C103C0"],
   mbrisReady: ["reports/mbris/mbris-staging-import-manifest-v1.json", "F0B3F234BBEC90E87A7EC34E051828B6C9315E784F4CCBA4F22932A83273F15A"],
@@ -85,7 +91,9 @@ function build() {
   const loaded = {};
   for (const [key, [inputPath, expected]] of Object.entries(INPUTS)) {
     const inputBytes = bytes(inputPath);
-    assert.equal(sha256(inputBytes), expected, `${inputPath} changed`);
+    const actual = sha256(inputBytes);
+    if (key === "runtimeMapping") assert.ok(APPROVED_RUNTIME_MAPPING_HASHES.has(actual), `${inputPath} changed`);
+    else assert.equal(actual, expected, `${inputPath} changed`);
     loaded[key] = key === "runtimeMapping" ? inputBytes.toString("utf8") : JSON.parse(inputBytes.toString("utf8"));
   }
   const expansionBytes = bytes(EXPANSION_INPUT[0]);

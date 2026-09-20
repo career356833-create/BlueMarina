@@ -313,11 +313,40 @@ function ResultView({ result }: { result: ReadModel }) {
   const fields = Object.values(result.environment);
   return <div className="space-y-5" aria-live="polite">
     <section className="flex flex-col gap-3 rounded-[24px] border border-[#29465D] bg-[#0A2031] p-5 sm:flex-row sm:items-center sm:justify-between"><div><p className="text-xs font-black text-[#79C9D6]">{result.species.koreanName} · {result.species.scientificName}</p><h2 className="mt-1 text-xl font-black text-white">선택 조건의 확인 결과</h2></div><p className="text-xs font-bold text-[#A8BDCF]">{result.freshness.label} · {formatObservedAt(result.freshness.observedAt)}</p></section>
+    {result.profileContext ? <ProfileContext profile={result.profileContext} /> : null}
     <section className="rounded-[26px] border border-[#1F3A50] bg-[#071827] p-4 sm:p-6"><SectionHeading eyebrow="Environment" title="환경 자료" /><div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">{fields.map((field) => <EnvironmentCard key={field.key} field={field} />)}</div></section>
     <section className="grid gap-5 lg:grid-cols-2"><Seasonality title="산란 시기" section={result.seasonality.spawning} /><Seasonality title="회유" section={result.seasonality.migration} /></section>
     <OccurrenceTable section={result.seasonality.fisheryOccurrence} requestedMonth={result.seasonality.requestedMonth} />
     <section className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]"><SourcePanel sources={result.sources} /><LimitationsPanel limitations={result.limitations} /></section>
   </div>;
+}
+
+function profileDomainText(value: Record<string, unknown>) {
+  const status = typeof value.status === "string" ? value.status : "UNKNOWN";
+  if (status !== "EVIDENCE_AVAILABLE") return "자료 없음 또는 확인되지 않음";
+  const details = Object.entries(value).flatMap(([key, item]) =>
+    key !== "status" && Array.isArray(item) && item.length > 0 ? [`${key}: ${item.length}건`] : []);
+  if (details.length === 0) return "근거는 있으나 표시 가능한 세부 값이 없습니다.";
+  return details.join(" · ");
+}
+
+function readinessLabel(readiness: ReadModel["profileContext"] extends infer Value ? NonNullable<Value> extends { readiness: infer Ready } ? Ready : never : never) {
+  if (readiness === "PROFILE_READY") return "근거 확인 profile";
+  if (readiness === "PROFILE_PARTIAL") return "일부 근거 profile";
+  return "제한된 생태 정보";
+}
+
+function ProfileContext({ profile }: { profile: NonNullable<ReadModel["profileContext"]> }) {
+  const domains = [
+    ["수온", profile.temperature], ["수심", profile.depth], ["염분", profile.salinity], ["용존산소", profile.dissolvedOxygen], ["산란", profile.spawning], ["회유", profile.migration], ["서식 환경", profile.habitat],
+  ] as const;
+  return <section className="rounded-[26px] border border-[#34536B] bg-[#092235] p-4 sm:p-6">
+    <SectionHeading eyebrow="Species profile" title="확인된 환경·생태 참고 정보"><span className="rounded-full border border-[#79C9D6]/45 px-3 py-1 text-xs font-black text-[#AEE8EF]">{readinessLabel(profile.readiness)}</span></SectionHeading>
+    <p className="mt-3 text-sm font-semibold leading-6 text-[#B8CBDD]">현재 관측값과 자동으로 비교하거나 적합도·추천을 생성하지 않습니다. 확인된 근거와 제한사항만 함께 표시합니다.</p>
+    <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{domains.map(([label, value]) => <article key={label} className="rounded-[18px] border border-[#29465D] bg-[#081C2B] p-4"><p className="text-sm font-black text-white">{label}</p><p className="mt-2 text-xs font-semibold leading-5 text-[#B8CBDD]">{profileDomainText(value)}</p></article>)}</div>
+    <div className="mt-4 rounded-[18px] border border-[#29465D] bg-[#081C2B] p-4"><p className="text-xs font-black text-[#93AFC2]">근거 출처</p><ul className="mt-2 space-y-2 text-xs font-semibold text-[#B8CBDD]">{profile.evidenceRefs.map((reference) => <li key={reference.id}>{reference.url ? <a href={reference.url} target="_blank" rel="noreferrer" className="text-[#79C9D6] underline">{reference.title}</a> : reference.title} <span className="text-[#7890A6]">· {reference.evidenceClass}</span></li>)}</ul></div>
+    {profile.limitations.length > 0 ? <div className="mt-4"><p className="text-xs font-black text-[#F1D9A8]">제한사항</p><div className="mt-2 space-y-2">{profile.limitations.map((item) => <p key={item} className="text-xs font-semibold leading-5 text-[#D9C49A]">{humanizeLimitation(item)}</p>)}</div></div> : null}
+  </section>;
 }
 
 function EnvironmentCard({ field }: { field: EnvironmentField }) {

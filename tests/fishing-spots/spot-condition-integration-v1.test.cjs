@@ -36,7 +36,8 @@ test("multiple canonical species remain separate condition actions", () => {
 test("invalid query species id safely falls back to the unselected state", () => {
   assert.match(conditionsPage, /getFishingConditionSpecies\(first\(query\.speciesId\)\)/);
   assert.match(conditionsClient, /initialSpeciesId = ""/);
-  assert.match(integration, /conditionSpeciesById\.get\(speciesId\) \?\? null/);
+  assert.match(integration, /if \(!speciesId\) return null/);
+  assert.match(integration, /getFishingConditionProfile\(speciesId\)/);
 });
 
 test("spot without canonical species shows direct-selection fallback", () => {

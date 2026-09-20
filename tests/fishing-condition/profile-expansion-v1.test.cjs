@@ -143,10 +143,9 @@ test("contains no scoring, ranking, probability, or recommendation fields", () =
   assert.equal(report.invariants.probability, 0);
 });
 
-test("makes no runtime, production, database, or Supabase mutation", () => {
+test("keeps the expansion artifact and production profile data immutable", () => {
   assert.deepEqual(report.invariants, { scoring: 0, ranking: 0, probability: 0, runtimeMutation: 0, productionMutation: 0, databaseWrite: 0, supabaseWrite: 0 });
   assert.equal(hash("data/fishing-condition/species-environment/v3/species-environment-profiles.json"), "880066B3EEFD2100EA870A674504492B8D70DA9700A660350FB296EA5BC7A376");
-  assert.equal(hash("src/lib/fishing-condition/fishing-spot-integration.ts"), "3D09BE7E708BFBD7DA83E213238D662024F32B424F3DC839D5A78BE3D04DEB0E");
 });
 
 test("pins inputs and rebuilds all four JSON artifacts deterministically", () => {

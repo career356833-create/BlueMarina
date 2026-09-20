@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "program": "Fishing Condition Runtime Activation V1",
+  "decision": "RUNTIME_ACTIVATION_READY_WITH_READINESS_GUARDS",
+  "activation": { "species": 38, "PROFILE_READY": 5, "PROFILE_PARTIAL": 3, "PROFILE_LIMITED": 30 },
+  "registry": { "artifact": "data/fishing-condition/profiles/v1/batch-a-19.json + batch-b-19.json", "coverage": 38, "duplicateIds": 0, "missingIds": 0 },
+  "legacy": { "protectedSpecies": 10, "legacyComparatorPreserved": true, "sourceValuesChanged": 0, "regressions": 0 },
+  "api": { "readModelContract": "backward-compatible profileContext addition", "registrySpeciesSupported": 38, "legacySpeciesSupported": 10 },
+  "ui": { "selectorCoverage": 38, "profileReadinessDisplayed": true, "sourceDisplay": true, "limitationDisplay": true },
+  "unsupportedDomains": { "unknownValuesRemainUnknown": true, "salinityUnitInference": 0, "automaticNumericComparison": 0 },
+  "safetyInvariants": { "scoring": 0, "ranking": 0, "probability": 0, "recommendation": 0, "automaticSuitabilityVerdict": 0, "databaseWrite": 0, "supabaseWrite": 0 }
+}

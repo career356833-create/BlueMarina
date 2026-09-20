@@ -13,6 +13,19 @@ export type FishingConditionReadModelResponse = {
   ok: true;
   readModel: {
     species: { speciesId: string; koreanName: string; scientificName: string };
+    profileContext: null | {
+      readiness: "PROFILE_READY" | "PROFILE_PARTIAL" | "PROFILE_LIMITED";
+      availableDomains: Record<string, unknown>;
+      temperature: Record<string, unknown>;
+      depth: Record<string, unknown>;
+      salinity: Record<string, unknown>;
+      dissolvedOxygen: Record<string, unknown>;
+      spawning: Record<string, unknown>;
+      migration: Record<string, unknown>;
+      habitat: Record<string, unknown>;
+      evidenceRefs: Array<{ id: string; sourceType: string; title: string; url?: string | null; evidenceClass: string }>;
+      limitations: string[];
+    };
     requestContext: { month: number | null; environmentSource: string; stationOrSiteId: string; depthContext: string };
     environment: Record<string, {
       key: string;

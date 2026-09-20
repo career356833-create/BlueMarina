@@ -18,7 +18,10 @@ function loadTs(file) {
     compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
   }).outputText;
   const module = { exports: {} };
-  new Function("require", "module", "exports", output)(require, module, module.exports);
+  const localRequire = (id) => id === "./profile-registry"
+    ? { isFishingConditionRuntimeSpeciesId: (speciesId) => /^BM-SPECIES-\d{6}$/.test(speciesId) }
+    : require(id);
+  new Function("require", "module", "exports", output)(localRequire, module, module.exports);
   return module.exports;
 }
 

@@ -228,6 +228,9 @@ test("server composes the bundle directly once and the route remains read-only",
   const server = transpile(readModelServerPath, {
     "server-only": {},
     "./evidence-bundle-server": { runConditionEvidenceBundle: async () => { calls += 1; return bundle; } },
+    "./comparator-server": { getFishingConditionEnvironment: async () => { throw new Error("not used for legacy profile"); } },
+    "./profile-registry": { getFishingConditionProfile: () => null },
+    "./species-environment": { findSpeciesEnvironmentProfile: () => ({ speciesId: "BM-SPECIES-000417" }) },
     "./read-model": readModel,
   });
   const result = await server.runFishingConditionReadModel({ fixture: true });

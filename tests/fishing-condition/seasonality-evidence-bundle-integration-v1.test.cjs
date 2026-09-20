@@ -29,7 +29,9 @@ function transpile(file, mocks = {}) {
 
 const runtime = transpile(runtimePath, { "../../../data/fishing-condition/seasonality/v1/species-seasonality.json": artifact });
 const bundleModule = transpile(bundlePath);
-const requestModule = transpile(requestPath);
+const requestModule = transpile(requestPath, {
+  "./profile-registry": { isFishingConditionRuntimeSpeciesId: (speciesId) => /^BM-SPECIES-\d{6}$/.test(speciesId) },
+});
 const hash = (file) => crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
 
 function evidenceItem(field) {

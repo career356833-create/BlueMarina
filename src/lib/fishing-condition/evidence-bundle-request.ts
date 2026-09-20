@@ -1,4 +1,5 @@
 import type { ConditionEvidenceBundleRequest } from "./evidence-bundle-server";
+import { isFishingConditionRuntimeSpeciesId } from "./profile-registry";
 
 export function parseConditionEvidenceBundleRequest(input: unknown): ConditionEvidenceBundleRequest | null {
   if (!input || typeof input !== "object") return null;
@@ -16,7 +17,7 @@ export function parseConditionEvidenceBundleRequest(input: unknown): ConditionEv
   const depthContext = source.depthContext;
   const month = contexts.month === undefined || contexts.month === null ? null : contexts.month;
   const timeOfDay = contexts.timeOfDay === undefined || contexts.timeOfDay === null ? null : contexts.timeOfDay;
-  if (!/^BM-SPECIES-\d{6}$/.test(speciesId)) return null;
+  if (!isFishingConditionRuntimeSpeciesId(speciesId)) return null;
   if (sourceId !== "nifs-risa" && sourceId !== "nifs-femo-sea") return null;
   if (depthContext !== "SURFACE" && depthContext !== "MIDDLE" && depthContext !== "BOTTOM") return null;
   if (sourceId === "nifs-risa" && (!stationId || siteId)) return null;

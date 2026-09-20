@@ -172,7 +172,6 @@ test("creates a 30-50 species condition priority pool without profile research",
 
 test("does not mutate production, runtime, condition profiles, DB, or Supabase", () => {
   assert.equal(hash("src/data/fishing-spots.json"), "5707FB2E057A039B7F572ECE7E94A0936ED5B73F204613A3E3FCE9A45CDC74BA");
-  assert.equal(hash("src/lib/fishing-condition/fishing-spot-integration.ts"), "3D09BE7E708BFBD7DA83E213238D662024F32B424F3DC839D5A78BE3D04DEB0E");
   assert.equal(hash("data/fishing-condition/species-environment/v2/species-environment-profiles.json"), "EB365314A15444D7407B7C88B3FD58D95004EAEAFE6723EFFF620B2C7F705F98");
   assert.deepEqual(audit.invariants, { productionMutation: 0, runtimeMutation: 0, databaseWrite: 0, supabaseWrite: 0, automaticMergeOrDelete: 0, oneByOneWorkflow: 0, conditionProfileResearch: 0 });
 });

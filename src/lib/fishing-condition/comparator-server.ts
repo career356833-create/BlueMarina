@@ -79,7 +79,7 @@ function mapSourceError(error: unknown): never {
   throw new FishingConditionComparatorError("UPSTREAM_ERROR");
 }
 
-export async function runFishingConditionComparison(request: FishingConditionComparisonRequest) {
+export async function getFishingConditionEnvironment(request: FishingConditionComparisonRequest) {
   let environment: ComparatorEnvironment;
   try {
     if (request.environment.sourceId === "nifs-risa") {
@@ -102,5 +102,10 @@ export async function runFishingConditionComparison(request: FishingConditionCom
     mapSourceError(error);
   }
 
+  return environment;
+}
+
+export async function runFishingConditionComparison(request: FishingConditionComparisonRequest) {
+  const environment = await getFishingConditionEnvironment(request);
   return runFishingConditionComparisonForEnvironment(request.speciesId, environment);
 }

@@ -1,4 +1,6 @@
 import type { ConditionEvidenceItem } from "./evidence-bundle";
+import type { ComparatorEnvironment } from "./comparator";
+import type { FishingConditionProfile } from "./profile-registry";
 import type {
   BiologicalSeasonalityEvidence,
   FisheryOccurrenceEvidence,
@@ -299,7 +301,45 @@ function freshnessLabel(value: string) {
   return "이용 불가";
 }
 
-export function buildFishingConditionReadModel(bundle: EvidenceBundleInput) {
+function profileSources(profile: FishingConditionProfile) {
+  return profile.evidenceRefs.map((reference) => ({
+    domain: "profile",
+    provider: null,
+    sourceType: reference.sourceType,
+    sourceName: reference.title,
+    sourceId: reference.id,
+    qualityClass: reference.evidenceClass,
+    observedAt: null,
+    urlOrReference: reference.url ?? null,
+    lineage: ["Fishing Condition Profile Expansion V1", reference.id],
+  }));
+}
+
+export function profileContext(profile: FishingConditionProfile) {
+  return {
+    readiness: profile.profileReadiness,
+    availableDomains: Object.fromEntries([
+      ["temperature", profile.temperature.status],
+      ["depth", profile.depth.status],
+      ["salinity", profile.salinity.status],
+      ["dissolvedOxygen", profile.dissolvedOxygen.status],
+      ["spawning", profile.spawning.status],
+      ["migration", profile.migration.status],
+      ["habitat", profile.habitat.status],
+    ]),
+    temperature: profile.temperature,
+    depth: profile.depth,
+    salinity: profile.salinity,
+    dissolvedOxygen: profile.dissolvedOxygen,
+    spawning: profile.spawning,
+    migration: profile.migration,
+    habitat: profile.habitat,
+    evidenceRefs: profile.evidenceRefs.map((reference) => ({ ...reference })),
+    limitations: [...profile.limitations],
+  };
+}
+
+export function buildFishingConditionReadModel(bundle: EvidenceBundleInput, profile?: FishingConditionProfile | null) {
   const evidence = bundle.environmentEvidence ?? bundle.evidence;
   const environment = ENVIRONMENT_FIELDS.map((field) =>
     environmentCard(field, evidence[field], bundle.environmentContext.sourceId));
@@ -329,8 +369,9 @@ export function buildFishingConditionReadModel(bundle: EvidenceBundleInput) {
       migration: biologicalSection(migration, "MIGRATION"),
       fisheryOccurrence: occurrenceSection(occurrence, bundle.requestedContexts.month),
     },
-    sources: buildSources(bundle),
-    limitations: buildLimitations(environment, seasonality),
+    profileContext: profile ? profileContext(profile) : null,
+    sources: [...buildSources(bundle), ...(profile ? profileSources(profile) : [])],
+    limitations: unique([...buildLimitations(environment, seasonality), ...(profile?.limitations ?? [])]),
     freshness: {
       status: bundle.environmentContext.freshness,
       label: freshnessLabel(bundle.environmentContext.freshness),
@@ -340,5 +381,61 @@ export function buildFishingConditionReadModel(bundle: EvidenceBundleInput) {
       evidenceBundleClass: bundle.qualityClass,
       seasonalityClass: seasonality?.qualityClass ?? null,
     },
+  };
+}
+
+function observedItem(
+  key: "temperature" | "salinity" | "dissolvedOxygen",
+  label: string,
+  value: { value: number | null; unit: string | null },
+  environment: ComparatorEnvironment,
+) {
+  const displayValue = value.value === null ? null : `${value.value}${value.unit ? ` ${value.unit === "degC" ? "°C" : value.unit}` : ""}`;
+  return {
+    key,
+    label,
+    status: "OBSERVED_ONLY",
+    rawValue: value.value,
+    displayValue,
+    relation: null,
+    displayStatus: null,
+    explanation: "현재 관측값입니다. 이 화면에서는 어종 profile과 자동 비교하거나 적합도를 판단하지 않습니다.",
+    profileReference: null,
+    evidenceRefs: [],
+    source: { sourceId: environment.sourceId, lineage: [environment.sourceId, environment.qualityClass] },
+    freshness: environment.freshness,
+    limitations: value.value === null ? ["MISSING_ENVIRONMENT"] : [],
+  };
+}
+
+export function buildProfileOnlyFishingConditionReadModel(
+  profile: FishingConditionProfile,
+  environment: ComparatorEnvironment,
+  requestedContexts: { month: number | null; timeOfDay: string | null },
+) {
+  const profileDetails = profileContext(profile);
+  const environmentCards = {
+    temperature: observedItem("temperature", "수온", environment.temperature, environment),
+    salinity: observedItem("salinity", "염분", environment.salinity, environment),
+    dissolvedOxygen: observedItem("dissolvedOxygen", "용존산소", environment.dissolvedOxygen, environment),
+    activity: { key: "activity", label: "활동 시간대", status: "OBSERVED_ONLY", rawValue: requestedContexts.timeOfDay, displayValue: requestedContexts.timeOfDay, relation: null, displayStatus: null, explanation: null, profileReference: null, evidenceRefs: [], source: { sourceId: environment.sourceId, lineage: [environment.sourceId] }, freshness: environment.freshness, limitations: ["MISSING_ENVIRONMENT_CONTEXT"] },
+    habitat: { key: "habitat", label: "서식 환경", status: "OBSERVED_ONLY", rawValue: null, displayValue: null, relation: null, displayStatus: null, explanation: "서식 환경 근거는 아래 어종별 참고 정보에서 확인합니다.", profileReference: null, evidenceRefs: [], source: { sourceId: environment.sourceId, lineage: [environment.sourceId] }, freshness: environment.freshness, limitations: [] },
+  };
+  return {
+    qualityClass: FISHING_CONDITION_READ_MODEL_QUALITY_CLASS,
+    species: { speciesId: profile.speciesId, koreanName: profile.koreanName, scientificName: profile.scientificName },
+    requestContext: { month: requestedContexts.month, environmentSource: environment.sourceId, stationOrSiteId: environment.stationOrSiteId, depthContext: environment.depthContext, timeOfDay: requestedContexts.timeOfDay },
+    environment: environmentCards,
+    seasonality: {
+      requestedMonth: requestedContexts.month,
+      spawning: { status: "PROFILE_CONTEXT", description: "산란 근거는 아래 어종별 참고 정보에서 확인합니다.", cards: [] },
+      migration: { status: "PROFILE_CONTEXT", description: "회유 근거는 아래 어종별 참고 정보에서 확인합니다.", cards: [] },
+      fisheryOccurrence: { status: "NOT_REQUESTED", description: "이 어종에는 월별 어획 원기록 runtime을 연결하지 않았습니다.", cards: [] },
+    },
+    profileContext: profileDetails,
+    sources: [{ domain: "environment", provider: environment.provider, sourceType: "OBSERVED_ENVIRONMENT", sourceName: environment.sourceId, sourceId: environment.sourceId, qualityClass: environment.qualityClass, observedAt: environment.observedAt, urlOrReference: null, lineage: [environment.sourceId, environment.qualityClass] }, ...profileSources(profile)],
+    limitations: unique([...profile.limitations, "PROFILE_REFERENCE_ONLY_NO_AUTOMATIC_SUITABILITY_VERDICT"]),
+    freshness: { status: environment.freshness, label: freshnessLabel(environment.freshness), observedAt: environment.observedAt },
+    quality: { evidenceBundleClass: "PROFILE_CONTEXT_WITH_OBSERVED_ENVIRONMENT", seasonalityClass: null },
   };
 }

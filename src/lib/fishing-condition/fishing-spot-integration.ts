@@ -1,6 +1,7 @@
 import { fishingSpots, type FishingSpot } from "@/data/fishing-spots";
+import { getFishingConditionProfile, getFishingConditionProfileSpecies } from "./profile-registry";
 
-export const FISHING_CONDITION_SPECIES = [
+const LEGACY_FISHING_CONDITION_SPECIES = [
   { id: "BM-SPECIES-000755", name: "참돔" },
   { id: "BM-SPECIES-000751", name: "감성돔" },
   { id: "BM-SPECIES-000188", name: "농어" },
@@ -13,10 +14,14 @@ export const FISHING_CONDITION_SPECIES = [
   { id: "BM-SPECIES-003111", name: "문어" },
 ] as const;
 
+// The activation selector is driven by the reviewed 38-species registry.
+// Legacy-only IDs remain URL/API-compatible below so existing links keep working.
+export const FISHING_CONDITION_SPECIES = getFishingConditionProfileSpecies();
+
 export type FishingConditionSpecies = (typeof FISHING_CONDITION_SPECIES)[number];
 
-const conditionSpeciesByName = new Map<string, FishingConditionSpecies>(FISHING_CONDITION_SPECIES.map((species) => [species.name, species]));
-const conditionSpeciesById = new Map<string, FishingConditionSpecies>(FISHING_CONDITION_SPECIES.map((species) => [species.id, species]));
+const conditionSpeciesByName = new Map<string, FishingConditionSpecies>([...LEGACY_FISHING_CONDITION_SPECIES, ...FISHING_CONDITION_SPECIES].map((species) => [species.name, species]));
+const conditionSpeciesById = new Map<string, FishingConditionSpecies>([...LEGACY_FISHING_CONDITION_SPECIES, ...FISHING_CONDITION_SPECIES].map((species) => [species.id, species]));
 
 // Explicit source-name aliases only. Aggregate labels and approximate matches stay unmapped.
 const approvedSourceAliases: Record<string, FishingConditionSpecies["name"]> = {
@@ -29,7 +34,10 @@ export function splitFishingSpotTargets(value: string) {
 }
 
 export function getFishingConditionSpecies(speciesId: string | null | undefined) {
-  return speciesId ? conditionSpeciesById.get(speciesId) ?? null : null;
+  if (!speciesId) return null;
+  return conditionSpeciesById.get(speciesId) ?? (getFishingConditionProfile(speciesId)
+    ? { id: speciesId, name: getFishingConditionProfile(speciesId)!.koreanName }
+    : null);
 }
 
 export function mapFishingSpotTarget(targetName: string): FishingConditionSpecies | null {
