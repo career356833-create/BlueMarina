@@ -3,13 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BottomNav } from "@/components/boat/BottomNav";
 import { MarineVideoHero } from "@/components/boat/home/MarineVideoHero";
-
-const serviceLinks = [
-  { href: "/today-sea", label: "오늘의 바다", description: "물때와 해양 기상" },
-  { href: "/sea", label: "바다 지도", description: "해역과 거점 탐색" },
-  { href: "/fishing-spots", label: "낚시 포인트", description: "출조 지역 검색" },
-  { href: "/fish", label: "어종 도감", description: "어종 정보와 기록" }
-] as const;
+import { platformServiceEntries } from "@/lib/platform/navigation";
 
 export function HomeLanding() {
   return (
@@ -17,20 +11,29 @@ export function HomeLanding() {
       <MarineVideoHero />
 
       <section id="home-services" className="border-y border-white/10 bg-[#050f19]" aria-label="서비스 바로가기">
-        <div className="mx-auto grid w-full max-w-[1540px] grid-cols-2 px-5 sm:px-8 lg:grid-cols-4 lg:px-12">
-          {serviceLinks.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="group flex min-h-24 items-center justify-between gap-3 border-white/10 px-3 py-5 transition odd:border-r [&:nth-child(-n+2)]:border-b hover:text-[#f3d49a] sm:px-5 lg:min-h-28 lg:border-b-0 lg:border-r lg:px-6 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
-            >
-              <span>
-                <span className="font-serif text-lg text-[#f4f0e8] group-hover:text-[#f3d49a]">{item.label}</span>
-                <span className="mt-2 block text-xs text-white/42">{item.description}</span>
-              </span>
-              <ArrowRight size={17} className="shrink-0 text-[#d5b477]" aria-hidden="true" />
-            </Link>
-          ))}
+        <div className="mx-auto w-full max-w-[1540px] px-5 py-7 sm:px-8 lg:px-12 lg:py-9">
+          <div className="grid grid-cols-2 gap-px overflow-hidden border border-white/10 bg-white/10 sm:grid-cols-3">
+            {platformServiceEntries.filter((item) => item.priority === "PRIMARY").map((item) => (
+              <Link
+                key={item.id}
+                href={item.href}
+                className="group flex min-h-28 min-w-0 items-center justify-between gap-3 bg-[#050f19] px-4 py-5 transition hover:bg-[#091724] hover:text-[#f3d49a] sm:px-5 lg:min-h-32 lg:px-6"
+              >
+                <span className="min-w-0">
+                  <span className="block font-serif text-lg text-[#f4f0e8] group-hover:text-[#f3d49a]">{item.title}</span>
+                  <span className="mt-2 block break-keep text-xs leading-5 text-white/48">{item.description}</span>
+                </span>
+                <ArrowRight size={17} className="shrink-0 text-[#d5b477]" aria-hidden="true" />
+              </Link>
+            ))}
+          </div>
+          <div className="mt-4 flex flex-wrap items-center gap-x-7 gap-y-2">
+            {platformServiceEntries.filter((item) => item.priority === "SECONDARY").map((item) => (
+              <Link key={item.id} href={item.href} className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-white/68 transition hover:text-[#f3d49a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d5b477]">
+                {item.title}<ArrowRight size={15} className="text-[#d5b477]" aria-hidden="true" />
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

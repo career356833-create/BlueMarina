@@ -2,15 +2,7 @@ import { Suspense, type PropsWithChildren } from "react";
 import Link from "next/link";
 import { Anchor, Bell, Menu, UserRound } from "lucide-react";
 import { BottomNav } from "@/components/boat/BottomNav";
-
-const desktopNav = [
-  { href: "/", label: "HOME" },
-  { href: "/sea", label: "SEA" },
-  { href: "/fishing-spots", label: "FISHING" },
-  { href: "/fish", label: "FISH" },
-  { href: "/market", label: "MARKET" },
-  { href: "/license-guide", label: "GUIDE" }
-];
+import { PlatformDesktopNav } from "@/components/platform/PlatformDesktopNav";
 
 export function AppFrame({ children }: PropsWithChildren) {
   return (
@@ -27,17 +19,7 @@ export function AppFrame({ children }: PropsWithChildren) {
             </div>
           </Link>
 
-          <nav className="hidden items-center gap-1 lg:flex">
-            {desktopNav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="rounded-full px-4 py-2 text-sm font-black text-[#D7E4F6] transition hover:bg-white/8 hover:text-white"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+          <PlatformDesktopNav />
 
           <div className="flex items-center gap-2">
             <Link

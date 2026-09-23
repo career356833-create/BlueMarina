@@ -9,6 +9,7 @@ import {
   ChevronRight,
   Filter,
   MapPin,
+  MessageCircle,
   Search,
   ShieldAlert,
   Ship,
@@ -129,7 +130,7 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
             </div>
           </div>
 
-          <div className="mt-5 grid gap-2 sm:grid-cols-2">
+          <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
             <Link
               href="/fishing-safety"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[18px] bg-white px-5 text-sm font-black text-[#071827] transition hover:bg-sky-50"
@@ -138,7 +139,7 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
               출조 안전 가이드
             </Link>
             <Link
-              href="/sea-info"
+              href="/today-sea"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[18px] border border-white/10 bg-white/10 px-5 text-sm font-black text-white transition hover:bg-white/15"
             >
               <Waves size={18} />
@@ -146,10 +147,24 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
             </Link>
             <Link
               href="/fishing-spots/conditions"
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[18px] border border-[#EBC27D]/50 bg-[#EBC27D]/10 px-5 text-sm font-black text-[#F1D9A8] transition hover:bg-[#EBC27D]/20 sm:col-span-2"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[18px] border border-[#EBC27D]/50 bg-[#EBC27D]/10 px-5 text-sm font-black text-[#F1D9A8] transition hover:bg-[#EBC27D]/20"
             >
               <Waves size={18} />
               어종·환경 조건 확인
+            </Link>
+            <Link
+              href="/charters"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[18px] border border-white/10 bg-white/10 px-5 text-sm font-black text-white transition hover:bg-white/15"
+            >
+              <Ship size={18} />
+              출조 찾기
+            </Link>
+            <Link
+              href="/community"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[18px] border border-white/10 bg-white/10 px-5 text-sm font-black text-white transition hover:bg-white/15 sm:col-span-2"
+            >
+              <MessageCircle size={18} />
+              커뮤니티 경험 보기
             </Link>
           </div>
         </section>

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "platform-ux-integration-v1",
+  "generatedAt": "2026-09-20T00:00:00.000Z",
+  "decision": "PLATFORM_UX_V1_READY_WITH_LIMITATIONS",
+  "routes": {
+    "primary": ["/", "/today-sea", "/sea", "/sea/navigation", "/fishing-spots", "/fishing-spots/[id]", "/fishing-spots/conditions", "/fish", "/charters", "/charters/[id]", "/market", "/market/[id]", "/community", "/community/[id]", "/license-guide"],
+    "draftAndInquiry": ["/charters/onboarding", "/reservations", "/market/new", "/community/new"],
+    "brokenHrefs": 0,
+    "newIntermediateHubRoutes": 0
+  },
+  "home": {
+    "role": "BRAND_ENTRY",
+    "hero": "MarineVideoHero",
+    "primaryEntries": ["/today-sea", "/sea", "/fishing-spots", "/charters", "/fish", "/market"],
+    "secondaryEntries": ["/community", "/license-guide"],
+    "longFeatureSections": 0,
+    "unsupportedBadges": 0
+  },
+  "desktopNavigation": [
+    { "label": "HOME", "href": "/" },
+    { "label": "SEA", "href": "/sea" },
+    { "label": "FISHING", "href": "/fishing-spots" },
+    { "label": "FISH", "href": "/fish" },
+    { "label": "MARKET", "href": "/market" },
+    { "label": "GUIDE", "href": "/license-guide" }
+  ],
+  "mobileNavigation": [
+    { "label": "홈", "href": "/" },
+    { "label": "바다", "href": "/sea" },
+    { "label": "출조", "href": "/charters" },
+    { "label": "어종", "href": "/fish" },
+    { "label": "가이드", "href": "/license-guide" }
+  ],
+  "activeState": {
+    "desktopNestedRoutes": true,
+    "mobileNestedRoutes": true,
+    "charterMapsToMobileTrip": true,
+    "fishingSpotsForcedIntoMobileTrip": false,
+    "communityTopOrBottomItem": false
+  },
+  "crossServiceLinks": {
+    "fishingJourney": ["FISHING_SPOT", "FISH", "CONDITIONS", "SEA", "NAVIGATION"],
+    "fishingHub": ["CONDITIONS", "CHARTER", "COMMUNITY"],
+    "charter": ["FISHING_SPOT", "FISH", "CONDITIONS", "SEA"],
+    "market": ["COMMUNITY"],
+    "communityExplicitEntities": ["FISH", "FISHING_SPOT", "CHARTER", "MARKET"]
+  },
+  "returnFlow": {
+    "existingContextContractsPreserved": true,
+    "internalWhitelistPreserved": true,
+    "openRedirectAdded": false,
+    "historyOverrideAdded": false
+  },
+  "emptyStates": {
+    "charter": "등록된 출조 정보가 없습니다",
+    "market": "등록된 판매글이 없습니다",
+    "community": "등록된 커뮤니티 글이 없습니다",
+    "nextActionAvailable": true,
+    "demoData": 0,
+    "fakeSuccess": 0
+  },
+  "backendLimitedServices": {
+    "charter": { "productionRecords": 0, "automaticActivation": 0 },
+    "market": { "productionRecords": 0, "automaticActive": 0 },
+    "community": { "productionRecords": 0, "automaticActive": 0 }
+  },
+  "responsive": {
+    "mobileViewport": "390x844",
+    "desktopViewport": "1280x900",
+    "horizontalOverflow": 0,
+    "bottomNavOverlap": 0,
+    "minimumPrimaryActionHeight": 44,
+    "desktopCardStretchIssue": 0
+  },
+  "accessibility": {
+    "semanticNavigation": true,
+    "ariaCurrent": true,
+    "focusVisible": true,
+    "formLabelsPreserved": true,
+    "imageAltPreserved": true,
+    "divOnlyPrimaryButtons": 0
+  },
+  "protectedBoundaries": {
+    "seaMapViewMutation": 0,
+    "conditionRegistryMutation": 0,
+    "fishCanonicalMutation": 0,
+    "databaseMigration": 0,
+    "databaseApply": 0,
+    "backendActivation": 0
+  },
+  "verification": {
+    "targeted": "30/30 PASS",
+    "total": "1058/1058 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS (58/58 STATIC PAGES)",
+    "diffCheck": "PASS",
+    "browserMobile": "PASS (390x844, 8 ROUTES)",
+    "browserDesktop": "PASS (1280x900, 8 ROUTES)"
+  },
+  "git": { "staged": 0, "commit": 0, "push": 0 }
+}

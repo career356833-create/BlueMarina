@@ -1,16 +1,8 @@
 import Link from "next/link";
 import { Anchor, ArrowDown, ArrowRight, Compass } from "lucide-react";
+import { desktopNavigation } from "@/lib/platform/navigation";
 
 export const MARINE_HERO_VIDEO_PATH = "/media/blue-marina-marina-hero.mp4";
-
-const desktopNav = [
-  { href: "/", label: "Home" },
-  { href: "/sea", label: "Sea" },
-  { href: "/fishing-spots", label: "Fishing" },
-  { href: "/fish", label: "Fish" },
-  { href: "/coming-soon?section=%EB%A7%88%EC%BC%93&feature=%EB%A7%88%EC%BC%93", label: "Market" },
-  { href: "/license-guide", label: "Guide" }
-] as const;
 
 export function MarineVideoHero() {
   return (
@@ -44,11 +36,12 @@ export function MarineVideoHero() {
           </Link>
 
           <nav className="hidden items-center gap-9 lg:flex" aria-label="주요 메뉴">
-            {desktopNav.map((item) => (
+            {desktopNavigation.map((item) => (
               <Link
-                key={`${item.href}-${item.label}`}
+                key={item.id}
                 href={item.href}
-                className="text-sm font-medium tracking-[0.08em] text-white/70 transition hover:text-[#f3d49a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d5b477]"
+                aria-current={item.id === "home" ? "page" : undefined}
+                className={`text-sm font-medium tracking-[0.08em] transition hover:text-[#f3d49a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d5b477] ${item.id === "home" ? "text-[#f3d49a]" : "text-white/70"}`}
               >
                 {item.label}
               </Link>
