@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "decision": "ACCOUNT_V1_READY_WITH_ENV_LIMITATIONS",
+  "generatedAt": "2026-09-23T00:00:00.000Z",
+  "routes": [
+    "/account",
+    "/account/profile",
+    "/account/saved",
+    "/account/activity",
+    "/account/login"
+  ],
+  "auth": {
+    "provider": "SUPABASE_AUTH_REUSE",
+    "demoFallback": false,
+    "expiredSessionState": true,
+    "logoutClearsServerReadModel": true
+  },
+  "profile": {
+    "table": "public.profiles",
+    "duplicateTableCreated": false,
+    "fields": ["display_name", "avatar_url", "region", "bio"]
+  },
+  "savedContent": {
+    "table": "public.user_saved_items",
+    "entityTypes": ["FISHING_SPOT", "FISH", "CHARTER", "MARKET_LISTING"],
+    "idempotencyKey": ["user_id", "entity_type", "entity_id"],
+    "fakeSavedData": 0
+  },
+  "activity": {
+    "market": "SERVER_OWNED_ROWS",
+    "community": "LOCAL_DEVICE_DRAFTS_ONLY",
+    "charterInquiry": "NOT_YET_AVAILABLE",
+    "recent": "LOCAL_DEVICE_ONLY"
+  },
+  "security": {
+    "featureFlag": "ACCOUNT_BACKEND_ENABLED",
+    "defaultEnabled": false,
+    "failClosed": true,
+    "rlsOwnOnly": true,
+    "serverOwnershipFilter": true,
+    "remoteMigrationApplied": false
+  },
+  "database": {
+    "migrationCreated": true,
+    "localApply": 0,
+    "remoteApply": 0
+  },
+  "verification": {
+    "targeted": "16/16 PASS",
+    "total": "1076/1076 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "staticPages": "63/63 PASS",
+    "browserDesktop": "PASS",
+    "browserMobile390": "PASS",
+    "horizontalOverflow": 0,
+    "consoleErrors": 0,
+    "diffCheck": "PASS"
+  },
+  "invariants": {
+    "followFriendDm": 0,
+    "pointsSubscription": 0,
+    "homePersonalization": 0,
+    "productionDataMutation": 0,
+    "existingPlatformUxMutationOutsideAccountEntry": 0,
+    "navigationHudMutation": 0
+  }
+}

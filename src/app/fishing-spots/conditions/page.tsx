@@ -1,4 +1,5 @@
 import { FishingConditionClient } from "./fishing-condition-client";
+import { RecentlyViewedTracker } from "@/components/account/RecentlyViewedTracker";
 import {
   buildFishingSpotMapHref,
   findFishingSpot,
@@ -31,7 +32,9 @@ export default async function FishingConditionPage({ searchParams }: { searchPar
   const mapBlocked = coordinatePolicy?.mapPolicy === "MAP_DISPLAY_BLOCKED";
   const navigationBlocked = coordinatePolicy?.navigationPolicy === "NAVIGATION_BLOCKED_PENDING_REVIEW";
 
-  return <FishingConditionClient
+  return <>
+    {requestedSpecies ? <RecentlyViewedTracker item={{ entityType: "FISH", entityId: requestedSpecies.speciesId, label: requestedSpecies.koreanName, href: `/fishing-spots/conditions?speciesId=${encodeURIComponent(requestedSpecies.speciesId)}` }} /> : null}
+    <FishingConditionClient
     initialSpeciesId={requestedSpecies?.speciesId}
     spotContext={spot ? {
       id: spot.id,
@@ -45,5 +48,6 @@ export default async function FishingConditionPage({ searchParams }: { searchPar
       navigationBlockedReason: navigationBlocked ? NAVIGATION_HOLD_NOTICE : undefined,
     } : undefined}
     journey={{ spotId: spot?.id, speciesId: requestedSpecies?.speciesId, source: first(query.source), returnTo: safeJourneyReturnTo(first(query.returnTo), spot ? `/fishing-spots/${encodeURIComponent(spot.id)}` : "/fishing-spots") }}
-  />;
+    />
+  </>;
 }

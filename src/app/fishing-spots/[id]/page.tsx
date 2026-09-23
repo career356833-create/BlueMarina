@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Anchor, ArrowLeft, ExternalLink, Fish, MapPin, Navigation2, ShieldAlert, Waves } from "lucide-react";
 import { AppFrame } from "@/components/boat/AppFrame";
+import { AccountSaveButton } from "@/components/account/AccountSaveButton";
+import { RecentlyViewedTracker } from "@/components/account/RecentlyViewedTracker";
 import { getFishingSpotTypeLabel } from "@/data/fishing-spots";
 import {
   buildFishingConditionHref,
@@ -46,6 +48,7 @@ export default async function FishingSpotDetailPage({ params }: PageProps) {
   const navigationHref = navigationBlocked ? null : buildNavigationHref(navigationDestinationFromFishingSpot(spot));
 
   return <AppFrame>
+    <RecentlyViewedTracker item={{ entityType: "FISHING_SPOT", entityId: spot.id, label: spot.name, href: `/fishing-spots/${encodeURIComponent(spot.id)}` }} />
     <main className="mx-auto w-full max-w-[1180px] space-y-5 pb-24 max-sm:pr-6 lg:space-y-7 lg:pb-10">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <Link href="/fishing-spots" className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[#1F3A50] px-4 text-sm font-black text-[#D7E4F6] transition hover:bg-white/8">
@@ -62,6 +65,7 @@ export default async function FishingSpotDetailPage({ params }: PageProps) {
         <p className="mt-5 flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.26em] text-[#EBC27D]"><Anchor size={15} /> Blue Marina Point</p>
         <h1 className="mt-2 max-w-4xl text-3xl font-black leading-tight text-white sm:text-5xl">{spot.name}</h1>
         <p className="mt-4 max-w-3xl text-sm font-semibold leading-7 text-[#B8CBDD] sm:text-base">{spot.description || "포인트 설명이 원본 자료에 없습니다."}</p>
+        <div className="mt-5"><AccountSaveButton entityType="FISHING_SPOT" entityId={spot.id} label={spot.name} href={`/fishing-spots/${encodeURIComponent(spot.id)}`} /></div>
       </header>
 
       {navigationBlocked ? <aside role="note" className="rounded-[22px] border border-[#6A5735] bg-[#201B13] p-4" aria-labelledby="coordinate-review-title">
@@ -75,9 +79,9 @@ export default async function FishingSpotDetailPage({ params }: PageProps) {
             <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#2E8BFF]">Target species</p>
             <h2 className="mt-1 text-2xl font-black text-white">대상 어종</h2>
             {species.canonical.length > 0 ? <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              {species.canonical.map((item) => <div key={item.id} className="flex items-center justify-between gap-3 rounded-[18px] border border-[#29465D] bg-[#0A2031] p-3">
+              {species.canonical.map((item) => <div key={item.id} className="rounded-[18px] border border-[#29465D] bg-[#0A2031] p-3">
                 <span className="inline-flex items-center gap-2 text-sm font-black text-white"><Fish size={17} className="text-[#79C9D6]" />{item.name}</span>
-                <Link href={buildFishingConditionHref(spot, item.id)} aria-label={`${item.name} 조건 분석`} className="inline-flex min-h-10 items-center rounded-full border border-[#EBC27D]/50 px-3 text-xs font-black text-[#F1D9A8] transition hover:bg-[#EBC27D]/10">조건 보기</Link>
+                <div className="mt-3 flex flex-wrap gap-2"><Link href={buildFishingConditionHref(spot, item.id)} aria-label={`${item.name} 조건 분석`} className="inline-flex min-h-10 items-center rounded-full border border-[#EBC27D]/50 px-3 text-xs font-black text-[#F1D9A8] transition hover:bg-[#EBC27D]/10">조건 보기</Link><AccountSaveButton entityType="FISH" entityId={item.id} label={item.name} href={buildFishingConditionHref(spot, item.id)} /></div>
               </div>)}
             </div> : <div className="mt-5 rounded-[18px] border border-dashed border-[#29465D] bg-[#081C2B] p-4">
               <p className="text-sm font-black text-[#D7E4F6]">연결 가능한 대상 어종 정보가 없습니다.</p>

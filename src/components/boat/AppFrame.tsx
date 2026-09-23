@@ -1,6 +1,6 @@
 import { Suspense, type PropsWithChildren } from "react";
 import Link from "next/link";
-import { Anchor, Bell, Menu } from "lucide-react";
+import { Anchor, Bell, Menu, UserRound } from "lucide-react";
 import { BottomNav } from "@/components/boat/BottomNav";
 
 const desktopNav = [
@@ -40,6 +40,13 @@ export function AppFrame({ children }: PropsWithChildren) {
           </nav>
 
           <div className="flex items-center gap-2">
+            <Link
+              href="/account"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-[#D7E4F6] transition hover:bg-white/8"
+              aria-label="내 계정"
+            >
+              <UserRound size={20} />
+            </Link>
             <button
               type="button"
               className="hidden h-10 w-10 items-center justify-center rounded-full text-[#D7E4F6] transition hover:bg-white/8 sm:flex"
