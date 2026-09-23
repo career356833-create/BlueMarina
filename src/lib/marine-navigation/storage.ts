@@ -13,3 +13,4 @@ export function createLocalStorageAdapter<T>(key: string, fallback: T): StorageA
 
 export const waypointStorageKey = "blue-marina-navigation:waypoints:v1";
 export const trackStorageKey = "blue-marina-navigation:tracks:v1";
+export const hudVisibilityStorageKey = "blue-marina-navigation:hud-visible:v1";
