@@ -2,8 +2,10 @@ import Link from "next/link";
 import { ArrowRight, BadgeCheck, BookOpenCheck, ClipboardList, FileText, GraduationCap, Landmark, MapPin, PenLine, Route, ShieldCheck, ShipWheel } from "lucide-react";
 import { PortalShell } from "@/components/boat/portal/PortalShell";
 import type { Metadata } from "next";
+import { canonicalMetadata } from "@/lib/release/site-url";
 
 export const metadata: Metadata = {
+  ...canonicalMetadata("/license-guide"),
   title: "면허·가이드",
   description: "수상레저 조종면허의 시험, 안전교육, 발급, 학습 흐름을 안내합니다."
 };

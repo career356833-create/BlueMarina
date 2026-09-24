@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-09-24",
+  "baseline": "fabbb8d7801baf2841d9644bef592686ca49c636",
+  "decision": "PRODUCTION_DEPLOYMENT_CANDIDATE_READY_WITH_LIMITATIONS",
+  "decisionScope": "Local candidate plus configured Production environment; not a deployed-release assertion. Deployment must use a separately approved commit.",
+  "rootCause": "Root metadata alternates.canonical pointed to / and was inherited by service pages without overrides; Production NEXT_PUBLIC_SITE_URL was absent.",
+  "fix": {
+    "root": "Retain metadataBase, remove inherited root canonical; home owns its canonical.",
+    "helper": "Strict HTTPS origin validation and explicit route canonicalMetadata helper; no canonical in Preview or with invalid configuration.",
+    "origin": "https://blue-marina.vercel.app",
+    "productionEnv": "SET_AND_LIST_VERIFIED",
+    "previewEnvChanged": false,
+    "effect": "Production env applies to future builds; existing deployment was not rebuilt.",
+    "noindex": "Existing private/admin/write and unavailable-detail noindex preserved."
+  },
+  "canonicalChecks": {
+    "staticBuildHtml": ["/", "/today-sea", "/sea", "/fishing-spots", "/fish", "/charters", "/license-guide"],
+    "compiledBuildMetadata": ["/sea/navigation", "/fishing-spots/conditions", "/market", "/community"],
+    "dynamicCompiledGenerateMetadata": ["boat-1", "boat-128", "boat-60"],
+    "dynamicCases": ["normal", "map-warning/navigation-blocked", "map-blocked/navigation-blocked"],
+    "invalidSpot": "Compiled generateMetadata throws NOT_FOUND; source regression checks noindex and absent canonical.",
+    "result": "PASS",
+    "homeCanonicalOnOtherTestedRoutes": 0,
+    "rootHtmlNormalization": "Next.js serializes root canonical without trailing slash; equivalent origin URL.",
+    "dynamicHttp": "NOT_RUN; compiled metadata executed directly, not HTTP status verification."
+  },
+  "sitemap": {"static": 19, "dynamic": 1405, "total": 1424, "unique": 1424, "correctOrigin": 1424, "previewOrLocalhost": 0, "evidence": ".next/server/app/sitemap.xml.body"},
+  "robots": {"publicAllowed": true, "privateAdminApiWriteDisallowed": true, "productionSitemap": true, "evidence": ".next/server/app/robots.txt.body"},
+  "kakao": {"productionDomain": "Previously verified registered; unchanged", "productionKey": "PRESENT", "previewKey": "PRESENT", "keyValuesExposed": 0, "newConsoleChanges": 0},
+  "backendFlags": {"charter": "OFF_BY_DEFAULT", "market": "OFF_BY_DEFAULT", "marketImageUpload": "OFF_BY_DEFAULT", "account": "OFF_BY_DEFAULT", "activation": 0},
+  "gates": {
+    "A": {"status": "PASS", "evidence": "1133 tests; typecheck/lint and production-like build 58/58"},
+    "B": {"status": "PASS", "evidence": "Verified production alias from prior candidate audit; Production site URL now configured"},
+    "C": {"status": "PASS_WITH_LIMITATIONS", "evidence": "Prior Kakao registered-origin and Preview map evidence retained; key still present, no new production browser run"},
+    "D": {"status": "PASS_WITH_LIMITATIONS", "evidence": "Self canonicals, 1424 sitemap URLs, robots and noindex pass; historical invalid-detail HTTP status remains unverified"},
+    "E": {"status": "PASS_WITH_LIMITATIONS", "evidence": "Existing security headers retained; prior Vercel HSTS evidence; CSP deferred"},
+    "F": {"status": "PASS_WITH_LIMITATIONS", "evidence": "Existing PWA cache boundaries unchanged; real-device registration unverified"},
+    "G": {"status": "PASS_WITH_LIMITATIONS", "evidence": "Prior map/navigation evidence reused; no navigation or coordinate changes"},
+    "H": {"status": "PASS", "evidence": "Regression suite preserves 1405 spots, 1258 canonical fish, 38 condition profiles; no production data mutation"},
+    "I": {"status": "PASS", "evidence": "Production env inventory and fail-closed source defaults; build explicitly disabled all four backend flags"},
+    "J": {"status": "PASS_WITH_LIMITATIONS", "evidence": "Prior desktop/mobile evidence reused; metadata-only change, no new responsive browser matrix"}
+  },
+  "remainingBlockersForCandidate": [],
+  "limitations": {
+    "P2": "Historical invalid Fishing Spot HTTP 200/noindex; not re-certified over HTTP. Compiled handler throws NOT_FOUND. Not an informational candidate blocker.",
+    "P3": "Service Worker registration/install/update requires a real-device smoke check; no claim of completed device verification.",
+    "CSP": "Not applied; unchanged and tracked as security follow-up.",
+    "HSTS": "Already observed on Vercel response in prior audit; no repository HSTS change.",
+    "deployment": "No production deploy; live canonical output is not claimed fixed yet.",
+    "worktree": "Build includes pre-existing unrelated changes; select and review exact source scope before any future deployment."
+  },
+  "verification": {"targeted": "20/20 PASS", "total": "1133/1133 PASS", "typecheck": "PASS", "lint": "PASS", "build": "PASS", "staticPages": "58/58", "diff": "PASS"},
+  "invariants": {"dbApply": 0, "backendActivation": 0, "productionDeploy": 0, "productionDataMutation": 0, "navigationMutation": 0},
+  "git": {"staged": 0, "commit": 0, "push": 0, "unrelatedPreserved": true},
+  "history": "production-deployment-candidate-v1.json retained unchanged as pre-fix evidence. This report supersedes its two candidate blockers only."
+}

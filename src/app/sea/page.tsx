@@ -1,4 +1,7 @@
 import { Suspense } from "react";
+import { canonicalMetadata } from "@/lib/release/site-url";
+
+export const metadata = canonicalMetadata("/sea");
 import { ExploreSeaIntro } from "@/components/boat/sea/ExploreSeaIntro";
 import { SeaMapView } from "@/components/sea/MapView";
 

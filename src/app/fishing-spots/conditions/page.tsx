@@ -1,4 +1,5 @@
 import { FishingConditionClient } from "./fishing-condition-client";
+import { canonicalMetadata } from "@/lib/release/site-url";
 import { RecentlyViewedTracker } from "@/components/account/RecentlyViewedTracker";
 import {
   buildFishingSpotMapHref,
@@ -16,6 +17,7 @@ import {
 } from "@/lib/fishing-spots/coordinate-safety";
 
 export const metadata = {
+  ...canonicalMetadata("/fishing-spots/conditions"),
   title: "낚시 조건",
   description: "공식 해양환경과 계절성 근거를 선택해 확인합니다.",
 };

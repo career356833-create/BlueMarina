@@ -6,8 +6,10 @@ import { readPublicMarketListings } from "@/lib/market/backend/public-reader";
 import { categoryLabels, conditionLabels, formatMarketPrice, priceTypeLabels, transactionLabels } from "@/lib/market/route-helpers";
 import { MARKET_CATEGORIES, MARKET_CONDITIONS, MARKET_PRICE_TYPES, MARKET_SORTS } from "@/lib/market/types";
 import type { Metadata } from "next";
+import { canonicalMetadata } from "@/lib/release/site-url";
 
 export const metadata: Metadata = {
+  ...canonicalMetadata("/market"),
   title: "마켓",
   description: "검토된 판매글만 표시하는 해양레저 장비 정보 서비스입니다. 결제와 거래 보증은 제공하지 않습니다."
 };

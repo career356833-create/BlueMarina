@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalMetadata } from "@/lib/release/site-url";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Anchor, ArrowLeft, ExternalLink, Fish, MapPin, Navigation2, ShieldAlert, Waves } from "lucide-react";
@@ -27,7 +28,7 @@ type PageProps = { params: Promise<{ id: string }> };
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const spot = findFishingSpot(decodeURIComponent((await params).id));
   return spot
-    ? { title: spot.name, description: `${spot.region} ${spot.city} 출조 포인트 상세 정보` }
+    ? { ...canonicalMetadata(`/fishing-spots/${encodeURIComponent(spot.id)}`), title: spot.name, description: `${spot.region} ${spot.city} 출조 포인트 상세 정보` }
     : { title: "낚시 포인트", robots: { index: false, follow: false } };
 }
 

@@ -14,7 +14,7 @@ const publicSiteUrl = getPublicSiteUrl();
 export const metadata: Metadata = {
   title: { default: "Blue Marina | 바다낚시 · 해양레저 포털", template: "%s | Blue Marina" },
   description: "물때, 해양정보, 어종백과, 보트지식, 조종면허 학습을 제공하는 대한민국 해양레저 포털",
-  ...(publicSiteUrl ? { metadataBase: publicSiteUrl, alternates: { canonical: "/" } } : {}),
+  ...(publicSiteUrl ? { metadataBase: publicSiteUrl } : {}),
   openGraph: {
     title: "Blue Marina | 바다낚시 · 해양레저 포털",
     description: "물때, 해양정보, 어종백과, 보트지식, 조종면허 학습을 제공하는 대한민국 해양레저 포털",

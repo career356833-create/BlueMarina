@@ -7,8 +7,10 @@ import { productionCommunityDataset } from "@/lib/community/registry";
 import { communityExcerpt, communityPostTypeLabels } from "@/lib/community/route-helpers";
 import { COMMUNITY_POST_TYPES, COMMUNITY_SORTS } from "@/lib/community/types";
 import type { Metadata } from "next";
+import { canonicalMetadata } from "@/lib/release/site-url";
 
 export const metadata: Metadata = {
+  ...canonicalMetadata("/community"),
   title: "커뮤니티",
   description: "조황, 출조 후기, 지역 정보와 질문을 나누는 Blue Marina 커뮤니티입니다."
 };
