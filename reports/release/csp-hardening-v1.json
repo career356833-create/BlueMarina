@@ -1,0 +1,1094 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-09-24",
+  "decision": "CSP_HARDENING_COMPLETE_WITH_LIMITATIONS",
+  "baseline": "6a45cd998db51965cdd2b9b7e5467d9697b32213",
+  "inventory": {
+    "pageErrors": [],
+    "origins": {
+      "document": [
+        "https://blue-marina.vercel.app"
+      ],
+      "font": [
+        "https://blue-marina.vercel.app"
+      ],
+      "image": [
+        "https://blue-marina.vercel.app",
+        "https://t1.daumcdn.net",
+        "https://mts.daumcdn.net"
+      ],
+      "stylesheet": [
+        "https://blue-marina.vercel.app"
+      ],
+      "script": [
+        "https://blue-marina.vercel.app",
+        "https://dapi.kakao.com",
+        "https://t1.daumcdn.net"
+      ],
+      "media": [
+        "https://blue-marina.vercel.app"
+      ],
+      "fetch": [
+        "https://blue-marina.vercel.app",
+        "https://tile.openstreetmap.org"
+      ],
+      "other": [
+        "https://blue-marina.vercel.app"
+      ]
+    },
+    "workers": [
+      "https://blue-marina.vercel.app/maplibre/maplibre-gl-worker.mjs"
+    ],
+    "routes": [
+      {
+        "route": "/",
+        "status": 200,
+        "headers": {
+          "content-security-policy": null,
+          "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+          "x-frame-options": "SAMEORIGIN",
+          "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff"
+        },
+        "ui": {
+          "heading": "바다를 읽고,더 멀리 나아가다.",
+          "kakao": false,
+          "canvas": 0,
+          "video": [
+            {
+              "origin": "https://blue-marina.vercel.app",
+              "ready": 4,
+              "error": null
+            }
+          ],
+          "inlineScripts": 24,
+          "inlineStyles": 4,
+          "imageSchemes": [
+            "https"
+          ],
+          "serviceWorkers": [
+            {
+              "script": "https://blue-marina.vercel.app/sw.js",
+              "state": "activated"
+            }
+          ],
+          "forms": []
+        }
+      },
+      {
+        "route": "/sea",
+        "status": 200,
+        "headers": {
+          "content-security-policy": null,
+          "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+          "x-frame-options": "SAMEORIGIN",
+          "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff"
+        },
+        "ui": {
+          "heading": "바다 지도",
+          "kakao": true,
+          "canvas": 0,
+          "video": [
+            {
+              "origin": "https://blue-marina.vercel.app",
+              "ready": 4,
+              "error": null
+            }
+          ],
+          "inlineScripts": 20,
+          "inlineStyles": 143,
+          "imageSchemes": [
+            "https",
+            "data"
+          ],
+          "serviceWorkers": [
+            {
+              "script": "https://blue-marina.vercel.app/sw.js",
+              "state": "activated"
+            }
+          ],
+          "forms": []
+        }
+      },
+      {
+        "route": "/sea/navigation",
+        "status": 200,
+        "headers": {
+          "content-security-policy": null,
+          "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+          "x-frame-options": "SAMEORIGIN",
+          "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff"
+        },
+        "ui": {
+          "kakao": false,
+          "canvas": 1,
+          "video": [],
+          "inlineScripts": 14,
+          "inlineStyles": 6,
+          "imageSchemes": [
+            "https"
+          ],
+          "serviceWorkers": [
+            {
+              "script": "https://blue-marina.vercel.app/sw.js",
+              "state": "activated"
+            }
+          ],
+          "forms": [
+            "https://blue-marina.vercel.app"
+          ]
+        }
+      },
+      {
+        "route": "/fishing-spots",
+        "status": 200,
+        "headers": {
+          "content-security-policy": null,
+          "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+          "x-frame-options": "SAMEORIGIN",
+          "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff"
+        },
+        "ui": {
+          "heading": "출조거점 찾기",
+          "kakao": false,
+          "canvas": 0,
+          "video": [],
+          "inlineScripts": 21,
+          "inlineStyles": 4,
+          "imageSchemes": [
+            "https"
+          ],
+          "serviceWorkers": [
+            {
+              "script": "https://blue-marina.vercel.app/sw.js",
+              "state": "activated"
+            }
+          ],
+          "forms": []
+        }
+      },
+      {
+        "route": "/fishing-spots/conditions",
+        "status": 200,
+        "headers": {
+          "content-security-policy": null,
+          "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+          "x-frame-options": "SAMEORIGIN",
+          "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff"
+        },
+        "ui": {
+          "heading": "오늘 바다의 근거를 읽다",
+          "kakao": false,
+          "canvas": 0,
+          "video": [],
+          "inlineScripts": 15,
+          "inlineStyles": 3,
+          "imageSchemes": [
+            "https"
+          ],
+          "serviceWorkers": [
+            {
+              "script": "https://blue-marina.vercel.app/sw.js",
+              "state": "activated"
+            }
+          ],
+          "forms": [
+            "https://blue-marina.vercel.app"
+          ]
+        }
+      },
+      {
+        "route": "/fish",
+        "status": 200,
+        "headers": {
+          "content-security-policy": null,
+          "strict-transport-security": null,
+          "x-frame-options": "SAMEORIGIN",
+          "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff"
+        },
+        "ui": {
+          "heading": "어종백과",
+          "kakao": false,
+          "canvas": 0,
+          "video": [],
+          "inlineScripts": 14,
+          "inlineStyles": 5,
+          "imageSchemes": [
+            "https"
+          ],
+          "serviceWorkers": [
+            {
+              "script": "https://blue-marina.vercel.app/sw.js",
+              "state": "activated"
+            }
+          ],
+          "forms": []
+        }
+      },
+      {
+        "route": "/license-guide",
+        "status": 200,
+        "headers": {
+          "content-security-policy": null,
+          "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+          "x-frame-options": "SAMEORIGIN",
+          "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff"
+        },
+        "ui": {
+          "heading": "조종면허 취득 가이드",
+          "kakao": false,
+          "canvas": 0,
+          "video": [],
+          "inlineScripts": 30,
+          "inlineStyles": 4,
+          "imageSchemes": [
+            "https"
+          ],
+          "serviceWorkers": [
+            {
+              "script": "https://blue-marina.vercel.app/sw.js",
+              "state": "activated"
+            }
+          ],
+          "forms": []
+        }
+      },
+      {
+        "route": "/account/login",
+        "status": 200,
+        "headers": {
+          "content-security-policy": null,
+          "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+          "x-frame-options": "SAMEORIGIN",
+          "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff"
+        },
+        "ui": {
+          "heading": "로그인",
+          "kakao": false,
+          "canvas": 0,
+          "video": [],
+          "inlineScripts": 15,
+          "inlineStyles": 4,
+          "imageSchemes": [
+            "https"
+          ],
+          "serviceWorkers": [
+            {
+              "script": "https://blue-marina.vercel.app/sw.js",
+              "state": "activated"
+            }
+          ],
+          "forms": [
+            "https://blue-marina.vercel.app"
+          ]
+        }
+      }
+    ]
+  },
+  "policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none';",
+  "reportOnly": {
+    "mode": "report",
+    "base": "https://blue-marina.vercel.app",
+    "results": [
+      {
+        "path": "/",
+        "status": 200,
+        "csp": null,
+        "ui": {
+          "title": "Blue Marina | 바다낚시 · 해양레저 포털",
+          "kakao": false,
+          "tiles": 0,
+          "canvas": 0,
+          "video": [
+            {
+              "ready": 4,
+              "error": null
+            }
+          ],
+          "profile": false,
+          "partial": false,
+          "violations": [],
+          "sw": []
+        }
+      },
+      {
+        "path": "/sea",
+        "status": 200,
+        "csp": null,
+        "ui": {
+          "title": "바다 지도 | Blue Marina",
+          "kakao": true,
+          "tiles": 31,
+          "canvas": 0,
+          "video": [
+            {
+              "ready": 4,
+              "error": null
+            }
+          ],
+          "profile": false,
+          "partial": false,
+          "violations": [
+            {
+              "directive": "script-src",
+              "blocked": "eval",
+              "disposition": "report"
+            }
+          ],
+          "sw": []
+        }
+      },
+      {
+        "path": "/sea/navigation",
+        "status": 200,
+        "csp": null,
+        "ui": {
+          "title": "해양 항법 보조",
+          "kakao": false,
+          "tiles": 0,
+          "canvas": 1,
+          "video": [],
+          "profile": false,
+          "partial": false,
+          "violations": [],
+          "sw": []
+        }
+      },
+      {
+        "path": "/fishing-spots",
+        "status": 200,
+        "csp": null,
+        "ui": {
+          "title": "낚시 포인트 | Blue Marina",
+          "kakao": false,
+          "tiles": 0,
+          "canvas": 0,
+          "video": [],
+          "profile": false,
+          "partial": false,
+          "violations": [],
+          "sw": []
+        }
+      },
+      {
+        "path": "/fishing-spots/conditions",
+        "status": 200,
+        "csp": null,
+        "ui": {
+          "title": "낚시 조건",
+          "kakao": false,
+          "tiles": 0,
+          "canvas": 0,
+          "video": [],
+          "profile": true,
+          "partial": true,
+          "violations": [],
+          "sw": []
+        }
+      },
+      {
+        "path": "/fish",
+        "status": 200,
+        "csp": null,
+        "ui": {
+          "title": "어종 도감 | Blue Marina",
+          "kakao": false,
+          "tiles": 0,
+          "canvas": 0,
+          "video": [],
+          "profile": false,
+          "partial": false,
+          "violations": [],
+          "sw": []
+        }
+      },
+      {
+        "path": "/license-guide",
+        "status": 200,
+        "csp": null,
+        "ui": {
+          "title": "면허·가이드 | Blue Marina",
+          "kakao": false,
+          "tiles": 0,
+          "canvas": 0,
+          "video": [],
+          "profile": false,
+          "partial": false,
+          "violations": [],
+          "sw": []
+        }
+      }
+    ],
+    "workers": [
+      "/maplibre/maplibre-gl-worker.mjs"
+    ],
+    "errors": []
+  },
+  "controlledEnforcement": {
+    "mode": "enforce-inject",
+    "base": "https://blue-marina.vercel.app",
+    "results": [
+      {
+        "path": "/",
+        "status": 200,
+        "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none';",
+        "ui": {
+          "title": "Blue Marina | 바다낚시 · 해양레저 포털",
+          "kakao": false,
+          "tiles": 0,
+          "canvas": 0,
+          "video": [
+            {
+              "ready": 4,
+              "error": null
+            }
+          ],
+          "profile": false,
+          "partial": false,
+          "violations": [],
+          "sw": []
+        }
+      },
+      {
+        "path": "/sea",
+        "status": 200,
+        "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none';",
+        "ui": {
+          "title": "바다 지도 | Blue Marina",
+          "kakao": true,
+          "tiles": 31,
+          "canvas": 0,
+          "video": [
+            {
+              "ready": 4,
+              "error": null
+            }
+          ],
+          "profile": false,
+          "partial": false,
+          "violations": [
+            {
+              "directive": "script-src",
+              "blocked": "eval",
+              "disposition": "enforce",
+              "source": "https://t1.daumcdn.net/mapjsapi/js/main/4.5.26/kakao.js",
+              "line": 59,
+              "column": 196
+            }
+          ],
+          "sw": []
+        }
+      },
+      {
+        "path": "/sea/navigation",
+        "status": 200,
+        "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none';",
+        "ui": {
+          "title": "해양 항법 보조",
+          "kakao": false,
+          "tiles": 0,
+          "canvas": 1,
+          "video": [],
+          "profile": false,
+          "partial": false,
+          "violations": [],
+          "sw": []
+        }
+      },
+      {
+        "path": "/fishing-spots",
+        "status": 200,
+        "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none';",
+        "ui": {
+          "title": "낚시 포인트 | Blue Marina",
+          "kakao": false,
+          "tiles": 0,
+          "canvas": 0,
+          "video": [],
+          "profile": false,
+          "partial": false,
+          "violations": [],
+          "sw": []
+        }
+      },
+      {
+        "path": "/fishing-spots/conditions",
+        "status": 200,
+        "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none';",
+        "ui": {
+          "title": "낚시 조건",
+          "kakao": false,
+          "tiles": 0,
+          "canvas": 0,
+          "video": [],
+          "profile": true,
+          "partial": true,
+          "violations": [],
+          "sw": []
+        }
+      },
+      {
+        "path": "/fish",
+        "status": 200,
+        "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none';",
+        "ui": {
+          "title": "어종 도감 | Blue Marina",
+          "kakao": false,
+          "tiles": 0,
+          "canvas": 0,
+          "video": [],
+          "profile": false,
+          "partial": false,
+          "violations": [],
+          "sw": []
+        }
+      },
+      {
+        "path": "/license-guide",
+        "status": 200,
+        "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none';",
+        "ui": {
+          "title": "면허·가이드 | Blue Marina",
+          "kakao": false,
+          "tiles": 0,
+          "canvas": 0,
+          "video": [],
+          "profile": false,
+          "partial": false,
+          "violations": [],
+          "sw": []
+        }
+      }
+    ],
+    "workers": [
+      "/maplibre/maplibre-gl-worker.mjs"
+    ],
+    "errors": []
+  },
+  "phaseNote": "Controlled response-header injection in fresh browser only; not a Production server deployment",
+  "relaxations": {
+    "globalHttps": false,
+    "wildcard": false,
+    "imageBlob": "Existing Market/Community local file previews",
+    "styleUnsafeInline": "React/Kakao layout styles",
+    "scriptUnsafeInline": "Next static hydration/Flight",
+    "unsafeEval": false,
+    "imageData": "Observed Kakao images",
+    "workerBlob": false
+  },
+  "knownViolation": {
+    "acceptance": "User explicitly accepted known blocked legacy behavior on 2026-09-24; unsafe-eval remains absent.",
+    "source": "https://t1.daumcdn.net/mapjsapi/js/main/4.5.26/kakao.js",
+    "code": "try{eval(\"document.namespaces\")}catch(uf){}",
+    "disposition": "Blocked; caught legacy capability probe",
+    "mapStillWorks": true,
+    "line": 59
+  },
+  "verification": {
+    "targeted": "6/6 PASS",
+    "typecheck": "PASS",
+    "build": "PASS 1463/1463",
+    "total": "1165/1165 PASS",
+    "lint": "PASS",
+    "diff": "PASS"
+  },
+  "deployment": {
+    "production": {
+      "id": "dpl_D12eDqE8Z5yu9uPteLhcxrVhj3H8",
+      "url": "https://blue-marina.vercel.app",
+      "state": "READY",
+      "sha": "76fa62a6cdbd731d9094930ba6b855dec025a728",
+      "sameTestedCommit": true,
+      "nativeAudit": {
+        "mode": "native",
+        "base": "https://blue-marina.vercel.app",
+        "results": [
+          {
+            "path": "/",
+            "status": 200,
+            "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+            "ui": {
+              "title": "Blue Marina | 바다낚시 · 해양레저 포털",
+              "kakao": false,
+              "tiles": 0,
+              "canvas": 0,
+              "video": [
+                {
+                  "ready": 4,
+                  "error": null
+                }
+              ],
+              "profile": false,
+              "partial": false,
+              "violations": [],
+              "sw": [
+                "activated"
+              ]
+            }
+          },
+          {
+            "path": "/sea",
+            "status": 200,
+            "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+            "ui": {
+              "title": "바다 지도 | Blue Marina",
+              "kakao": true,
+              "tiles": 31,
+              "canvas": 0,
+              "video": [
+                {
+                  "ready": 4,
+                  "error": null
+                }
+              ],
+              "profile": false,
+              "partial": false,
+              "violations": [
+                {
+                  "directive": "script-src",
+                  "blocked": "eval",
+                  "disposition": "enforce",
+                  "source": "https://t1.daumcdn.net/mapjsapi/js/main/4.5.26/kakao.js",
+                  "line": 59,
+                  "column": 196
+                }
+              ],
+              "sw": [
+                "activated"
+              ]
+            }
+          },
+          {
+            "path": "/sea/navigation",
+            "status": 200,
+            "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+            "ui": {
+              "title": "해양 항법 보조",
+              "kakao": false,
+              "tiles": 0,
+              "canvas": 1,
+              "video": [],
+              "profile": false,
+              "partial": false,
+              "violations": [],
+              "sw": [
+                "activated"
+              ]
+            }
+          },
+          {
+            "path": "/fishing-spots",
+            "status": 200,
+            "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+            "ui": {
+              "title": "낚시 포인트 | Blue Marina",
+              "kakao": false,
+              "tiles": 0,
+              "canvas": 0,
+              "video": [],
+              "profile": false,
+              "partial": false,
+              "violations": [],
+              "sw": [
+                "activated"
+              ]
+            }
+          },
+          {
+            "path": "/fishing-spots/conditions",
+            "status": 200,
+            "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+            "ui": {
+              "title": "낚시 조건",
+              "kakao": false,
+              "tiles": 0,
+              "canvas": 0,
+              "video": [],
+              "profile": true,
+              "partial": true,
+              "violations": [],
+              "sw": [
+                "activated"
+              ]
+            }
+          },
+          {
+            "path": "/fish",
+            "status": 200,
+            "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+            "ui": {
+              "title": "어종 도감 | Blue Marina",
+              "kakao": false,
+              "tiles": 0,
+              "canvas": 0,
+              "video": [],
+              "profile": false,
+              "partial": false,
+              "violations": [],
+              "sw": [
+                "activated"
+              ]
+            }
+          },
+          {
+            "path": "/license-guide",
+            "status": 200,
+            "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+            "ui": {
+              "title": "면허·가이드 | Blue Marina",
+              "kakao": false,
+              "tiles": 0,
+              "canvas": 0,
+              "video": [],
+              "profile": false,
+              "partial": false,
+              "violations": [],
+              "sw": [
+                "activated"
+              ]
+            }
+          }
+        ],
+        "workers": [
+          "/maplibre/maplibre-gl-worker.mjs"
+        ],
+        "errors": [],
+        "sdkResponses": [
+          {
+            "origin": "https://dapi.kakao.com",
+            "path": "/v2/maps/sdk.js",
+            "status": 200
+          },
+          {
+            "origin": "https://t1.daumcdn.net",
+            "path": "/mapjsapi/js/main/4.5.26/kakao.js",
+            "status": 200
+          },
+          {
+            "origin": "https://t1.daumcdn.net",
+            "path": "/mapjsapi/images/transparent.gif",
+            "status": 200
+          },
+          {
+            "origin": "https://t1.daumcdn.net",
+            "path": "/mapjsapi/images/bg_tile.png",
+            "status": 200
+          },
+          {
+            "origin": "https://t1.daumcdn.net",
+            "path": "/mapjsapi/images/cursor/openhand.cur.ico",
+            "status": 200
+          },
+          {
+            "origin": "https://t1.daumcdn.net",
+            "path": "/mapjsapi/images/m_bi_b.png",
+            "status": 200
+          }
+        ]
+      }
+    },
+    "sha": "76fa62a6cdbd731d9094930ba6b855dec025a728",
+    "preview": {
+      "id": "dpl_CkJ9LzjNzWh9h4zj7bgsga4o4Y68",
+      "url": "https://blue-marina-lwkhdvco6-chiweon.vercel.app",
+      "alias": "https://blue-marina-git-codex-csp-hardening-v1-chiweon.vercel.app",
+      "state": "READY",
+      "nativeAudit": {
+        "mode": "native",
+        "base": "https://blue-marina-git-codex-csp-hardening-v1-chiweon.vercel.app",
+        "results": [
+          {
+            "path": "/",
+            "status": 200,
+            "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+            "ui": {
+              "title": "Blue Marina | 바다낚시 · 해양레저 포털",
+              "kakao": false,
+              "tiles": 0,
+              "canvas": 0,
+              "video": [
+                {
+                  "ready": 4,
+                  "error": null
+                }
+              ],
+              "profile": false,
+              "partial": false,
+              "violations": [],
+              "sw": []
+            }
+          },
+          {
+            "path": "/sea",
+            "status": 200,
+            "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+            "ui": {
+              "title": "바다 지도 | Blue Marina",
+              "kakao": true,
+              "tiles": 31,
+              "canvas": 0,
+              "video": [
+                {
+                  "ready": 4,
+                  "error": null
+                }
+              ],
+              "profile": false,
+              "partial": false,
+              "violations": [
+                {
+                  "directive": "script-src",
+                  "blocked": "eval",
+                  "disposition": "enforce",
+                  "source": "https://t1.daumcdn.net/mapjsapi/js/main/4.5.26/kakao.js",
+                  "line": 59,
+                  "column": 196
+                }
+              ],
+              "sw": []
+            }
+          },
+          {
+            "path": "/sea/navigation",
+            "status": 200,
+            "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+            "ui": {
+              "title": "해양 항법 보조",
+              "kakao": false,
+              "tiles": 0,
+              "canvas": 1,
+              "video": [],
+              "profile": false,
+              "partial": false,
+              "violations": [],
+              "sw": []
+            }
+          },
+          {
+            "path": "/fishing-spots",
+            "status": 200,
+            "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+            "ui": {
+              "title": "낚시 포인트 | Blue Marina",
+              "kakao": false,
+              "tiles": 0,
+              "canvas": 0,
+              "video": [],
+              "profile": false,
+              "partial": false,
+              "violations": [],
+              "sw": []
+            }
+          },
+          {
+            "path": "/fishing-spots/conditions",
+            "status": 200,
+            "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+            "ui": {
+              "title": "낚시 조건",
+              "kakao": false,
+              "tiles": 0,
+              "canvas": 0,
+              "video": [],
+              "profile": true,
+              "partial": true,
+              "violations": [],
+              "sw": []
+            }
+          },
+          {
+            "path": "/fish",
+            "status": 200,
+            "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+            "ui": {
+              "title": "어종 도감 | Blue Marina",
+              "kakao": false,
+              "tiles": 0,
+              "canvas": 0,
+              "video": [],
+              "profile": false,
+              "partial": false,
+              "violations": [],
+              "sw": []
+            }
+          },
+          {
+            "path": "/license-guide",
+            "status": 200,
+            "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+            "ui": {
+              "title": "면허·가이드 | Blue Marina",
+              "kakao": false,
+              "tiles": 0,
+              "canvas": 0,
+              "video": [],
+              "profile": false,
+              "partial": false,
+              "violations": [],
+              "sw": []
+            }
+          }
+        ],
+        "workers": [
+          "/maplibre/maplibre-gl-worker.mjs"
+        ],
+        "errors": [],
+        "sdkResponses": [
+          {
+            "origin": "https://dapi.kakao.com",
+            "path": "/v2/maps/sdk.js",
+            "status": 200
+          },
+          {
+            "origin": "https://t1.daumcdn.net",
+            "path": "/mapjsapi/js/main/4.5.26/kakao.js",
+            "status": 200
+          },
+          {
+            "origin": "https://t1.daumcdn.net",
+            "path": "/mapjsapi/images/transparent.gif",
+            "status": 200
+          },
+          {
+            "origin": "https://t1.daumcdn.net",
+            "path": "/mapjsapi/images/bg_tile.png",
+            "status": 200
+          },
+          {
+            "origin": "https://t1.daumcdn.net",
+            "path": "/mapjsapi/images/m_bi_b.png",
+            "status": 200
+          },
+          {
+            "origin": "https://t1.daumcdn.net",
+            "path": "/mapjsapi/images/cursor/openhand.cur.ico",
+            "status": 200
+          }
+        ]
+      }
+    }
+  },
+  "git": {
+    "configPartialStage": "Only policy/header hunks; reservations cache hunk preserved",
+    "files": 2,
+    "mainPushed": true,
+    "reportDocs": "Unstaged evidence",
+    "branchPushed": "codex/csp-hardening-v1",
+    "unrelatedPreserved": true,
+    "codeTestCommit": "76fa62a6cdbd731d9094930ba6b855dec025a728",
+    "head": "76fa62a6cdbd731d9094930ba6b855dec025a728",
+    "originMain": "76fa62a6cdbd731d9094930ba6b855dec025a728",
+    "staged": 0
+  },
+  "safety": {
+    "backendActivation": 0,
+    "conditionsActivation": 0,
+    "nonceRewrite": 0,
+    "authRewrite": 0,
+    "dbApply": 0
+  },
+  "blockers": [],
+  "previewToolbar": {
+    "branch": "codex/csp-hardening-v1",
+    "variable": "VERCEL_PREVIEW_FEEDBACK_ENABLED",
+    "value": "0",
+    "productionEnvironmentChanged": false,
+    "result": "Rebuilt Preview has no vercel.live CSP violations. Header-only skip attempt did not remove injected toolbar."
+  },
+  "resolvedBlockers": [
+    "Preview Kakao SDK domain authorization missing; original Preview SDK returned HTTP 401 DOMAIN_MISMATCHED while Production returned 200.",
+    "Production-content controlled enforcement blocks one caught Kakao legacy eval probe; zero-violation gate not met. Explicit acceptance requested; no answer received."
+  ],
+  "previewApproval": {
+    "domainRegistered": "https://blue-marina-git-codex-csp-hardening-v1-chiweon.vercel.app",
+    "existingDomainsPreserved": true,
+    "kakaoSdk": 200,
+    "kakaoTiles": 31,
+    "knownBlockedEval": 1,
+    "unexpectedViolations": 0,
+    "mobileViewport": "390x844",
+    "hudToggle": "PASS",
+    "layerToggle": "PASS",
+    "zoom": "PASS canvas changed",
+    "drag": "PASS canvas changed",
+    "homeVideoReadyState": 4,
+    "conditionsApi": 200,
+    "conditionsProfileUi": "PASS",
+    "serviceWorker": "activated",
+    "cache": "blue-marina-v6",
+    "previewAuthNote": "Existing Vercel automation bypass cookie used to authenticate native worker requests; no deployment protection setting changed."
+  },
+  "productionChecks": {
+    "http": [
+      {
+        "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net; font-src 'self'; connect-src 'self' https://tile.openstreetmap.org; media-src 'self'; worker-src 'self'; frame-src 'none'; manifest-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+        "hsts": "max-age=63072000; includeSubDomains; preload",
+        "frame": "SAMEORIGIN",
+        "nosniff": "nosniff",
+        "referrer": "strict-origin-when-cross-origin"
+      },
+      {
+        "path": "/manifest.json",
+        "status": 200
+      },
+      {
+        "path": "/sw.js",
+        "status": 200
+      },
+      {
+        "path": "/sitemap.xml",
+        "status": 200,
+        "sitemapCount": 1424
+      },
+      {
+        "path": "/fishing-spots/csp-invalid-id",
+        "status": 404,
+        "noindex": true
+      },
+      {
+        "apiStatus": 200,
+        "availability": "PARTIAL",
+        "qualityClass": "DERIVED_FISHING_CONDITION_READ_MODEL",
+        "profile": true
+      }
+    ],
+    "mobileViewport": "390x844",
+    "hudToggle": "PASS",
+    "layerToggle": "PASS",
+    "zoom": "PASS canvas changed",
+    "drag": "PASS canvas changed",
+    "homeVideoReadyState": 4,
+    "conditionsApi": 200,
+    "conditionsAvailability": "PARTIAL",
+    "profileContext": true,
+    "conditionsProfileUi": "PASS",
+    "serviceWorker": "activated",
+    "cache": "blue-marina-v6",
+    "knownBlockedLegacyBehavior": 1,
+    "unexpectedCspViolations": 0,
+    "observedCspFunctionalBlocks": 0,
+    "uncaughtPageErrors": 0,
+    "deviceGpsQa": "NOT RUN"
+  },
+  "limitations": [
+    "Kakao 4.5.26 caught eval(document.namespaces) remains blocked; explicitly accepted known blocked legacy behavior.",
+    "unsafe-inline retained for Next hydration and map/React styles; nonce/hash strict policy outside scope.",
+    "Existing optional marine data source HTTP 503 availability limitations remain; no live source activation.",
+    "Physical-device GPS/PWA QA and true multi-touch pinch verification not performed in this CSP task."
+  ]
+}
