@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "decision": "KAKAO_ROOT_CAUSE_IDENTIFIED_EXTERNAL_ACTION_REQUIRED",
+  "publicInformationalRelease": "PUBLIC_INFORMATIONAL_RELEASE_HOLD",
+  "baseline": "9f40fd2624a8a56921afe6f40e938b547fe1aa37",
+  "preview": {
+    "origin": "https://blue-marina-btoin4yw9-chiweon.vercel.app",
+    "productionTouched": false,
+    "dbApply": 0,
+    "backendActivation": 0,
+    "redeploy": "NOT_NEEDED: no code change is indicated."
+  },
+  "rootCause": {
+    "exactCause": "Kakao rejects the deployed SDK request for the Preview origin with domain mismatched.",
+    "confidence": "HIGH",
+    "evidence": {
+      "request": "GET dapi.kakao.com/v2/maps/sdk.js with the deployed appkey, autoload=false, and Preview Referer; appkey value was not logged.",
+      "status": 401,
+      "contentType": "application/json; charset=utf-8",
+      "bodyClassification": "DOMAIN_MISMATCHED",
+      "deployedScript": {
+        "protocol": "https:",
+        "host": "dapi.kakao.com",
+        "path": "/v2/maps/sdk.js",
+        "appkeyPresent": true,
+        "libraries": null,
+        "autoload": "false"
+      },
+      "runtime": "script element present; window.kakao.maps absent; safe fallback visible"
+    },
+    "ruledOut": [
+      "Missing Preview environment variable",
+      "Production-only environment scope",
+      "Malformed SDK host, path, or autoload query",
+      "Server-side window access",
+      "Missing maps.load call",
+      "CSP interference",
+      "Mixed-content transport"
+    ]
+  },
+  "environment": {
+    "keyName": "NEXT_PUBLIC_KAKAO_MAP_APP_KEY",
+    "clientExposed": true,
+    "buildTimeReplacement": "Next.js public environment variable compiled into client bundle",
+    "localFilePresent": true,
+    "localKeyPresent": true,
+    "vercelPreviewPresence": "PRESENT",
+    "vercelProductionPresence": "PRESENT",
+    "vercelScopes": ["Preview", "Production"],
+    "valueExposed": false
+  },
+  "loader": {
+    "clientBoundary": "use client",
+    "nextScript": false,
+    "injection": "document.createElement(script)",
+    "scriptId": "blue-marina-kakao-maps-sdk",
+    "autoload": false,
+    "order": "script.onload verifies window.kakao.maps, then invokes window.kakao.maps.load(callback)",
+    "duplicateHandling": "single global promise plus existing-script listener",
+    "retryHandling": "failed global promise is cleared",
+    "routeRemountHandling": "mounted guard suppresses stale state updates",
+    "raceAssessment": "NO_CODE_RACE_EVIDENCE: current failure is script HTTP 401 before maps namespace creation."
+  },
+  "security": {
+    "csp": "NOT_APPLIED",
+    "securityHeaders": "X-Content-Type-Options, Referrer-Policy, Permissions-Policy, and X-Frame-Options do not block the HTTPS SDK script.",
+    "mixedContent": false
+  },
+  "keyType": {
+    "required": "Kakao JavaScript key",
+    "codeContract": "The public NEXT_PUBLIC_KAKAO_MAP_APP_KEY is supplied as the Maps JavaScript SDK appkey.",
+    "responseInference": "The response is domain mismatch rather than invalid-key. Key type cannot be conclusively enumerated without the Kakao owner console; it is not the primary evidenced failure."
+  },
+  "domain": {
+    "requiredOrigin": "https://blue-marina-btoin4yw9-chiweon.vercel.app",
+    "format": "scheme and exact host only; no path",
+    "consolePath": "Kakao Developers > My Application > App > Platform Key > JavaScript Key > JavaScript SDK Domains",
+    "currentState": "NOT_EFFECTIVE: the live Kakao response proves the request origin is not accepted by the appkey used in this deployment.",
+    "likelyConfigurationChecks": [
+      "Confirm the exact origin is saved under the JavaScript key, not Product Link Management.",
+      "Confirm the setting belongs to the Kakao app that owns the deployed key.",
+      "Confirm https scheme and full preview hostname match exactly, with no path.",
+      "Allow Kakao configuration propagation, then repeat the SDK request."
+    ],
+    "stablePreviewRecommendation": "Use an owned non-production staging/preview domain mapped to Vercel Preview. Random Vercel deployment hostnames require repeated allowlist changes; the git-main Vercel alias is production and is not a Preview solution."
+  },
+  "fix": {
+    "type": "EXTERNAL_CONSOLE_CONFIGURATION",
+    "codeChanges": 0,
+    "changedFiles": [],
+    "requiredAction": "Save the exact Preview origin in the JavaScript SDK Domains list for the Kakao app/key used by Vercel Preview.",
+    "redeployAfterAction": false,
+    "recheckRequired": true
+  },
+  "p2": "UNCHANGED: missing Fishing Spot keeps noindex Next fallback with HTTP 200.",
+  "verification": { "targeted": "4/4 PASS", "total": "1105/1105 PASS", "typecheck": "PASS", "lint": "PASS", "build": "PASS (58 static pages)", "diffCheck": "PASS" },
+  "git": { "staged": 0, "commit": 0, "push": 0 }
+}
