@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "decision": "PREVIEW_DEPLOYMENT_READY_WITH_LIMITATIONS",
+  "publicInformationalRelease": "PUBLIC_INFORMATIONAL_RELEASE_HOLD",
+  "baseline": "5da56b7749c94cf2bfdf778e05f4ba0c8441a436",
+  "recheck": {
+    "provider": "Vercel",
+    "target": "preview",
+    "deploymentId": "dpl_GZQ91QuGHSWCLcF58Bhtqz8jXxCB",
+    "previewUrl": "https://blue-marina-btoin4yw9-chiweon.vercel.app",
+    "productionTouched": false,
+    "dbApply": 0,
+    "backendActivation": 0,
+    "redeploy": "NOT_RUN: Kakao console domain authorization is required before a meaningful fix deployment."
+  },
+  "kakao": {
+    "environmentVariable": "NEXT_PUBLIC_KAKAO_MAP_APP_KEY",
+    "keyValueRead": false,
+    "script": "https://dapi.kakao.com/v2/maps/sdk.js?appkey=<redacted>&autoload=false",
+    "observedState": "SDK request fails and /sea renders the honest registration-domain fallback.",
+    "rootCause": "The exact preview origin is not registered under the Kakao JavaScript key's JavaScript SDK domains, or its platform setting cannot be verified without the owning Kakao Developers session.",
+    "requiredConsoleAction": "Kakao Developers > My Application > App > Platform Key > JavaScript Key > JavaScript SDK Domains: add https://blue-marina-btoin4yw9-chiweon.vercel.app, save, then recheck.",
+    "stablePreviewAssessment": "Vercel's blue-marina-git-main-chiweon.vercel.app alias resolves to a production deployment and must not be used as a preview allowlist origin. Random Vercel preview hostnames are unsuitable as a durable Kakao allowlist. Use an owned, non-production preview/staging domain before public release.",
+    "consoleChanged": false,
+    "sourceBypass": false
+  },
+  "p2UnknownFishingSpot": {
+    "reproduced": true,
+    "route": "/fishing-spots/not-a-real-spot",
+    "implementation": "generateMetadata and page both call notFound() for missing spots.",
+    "previewHttpStatus": 200,
+    "indexing": "noindex",
+    "resolution": "NOT_FIXED: Next streaming fallback is served with HTTP 200 on this Preview response."
+  },
+  "checks": {
+    "kakaoMap": "BLOCKED",
+    "mapFallback": "PASS: no crash and a clear configuration message.",
+    "mapLibreNavigation": "PASS: response 200; prior rehearsal verified canvas, HUD and safety warning at desktop and mobile.",
+    "seo": "PASS_WITH_LIMITATIONS: preview noindex, robots and sitemap policy retained; canonical remains absent while NEXT_PUBLIC_SITE_URL is unset.",
+    "securityHeaders": "PASS: nosniff, strict-origin-when-cross-origin, Permissions-Policy, SAMEORIGIN and API noindex retained.",
+    "pwa": "PASS_WITH_LIMITATIONS: manifest and worker assets remain served; browser runner service-worker registration remains unverified.",
+    "mobileDesktop": "PASS_WITH_LIMITATIONS: prior 390x844 and 1280x900 checks had no overflow or console errors; Kakao render remains blocked."
+  },
+  "issues": {
+    "P0": [],
+    "P1": [
+      {
+        "id": "PREVIEW-RECHECK-001",
+        "title": "Kakao SDK Preview origin is not authorized",
+        "blockingAction": "An authorized Kakao Developers app owner must add the exact preview origin or configure an owned non-production preview/staging domain."
+      }
+    ],
+    "P2": [
+      {
+        "id": "PREVIEW-RECHECK-002",
+        "title": "Unknown Fishing Spot has a noindex fallback but HTTP 200",
+        "status": "REPRODUCED"
+      }
+    ],
+    "P3": [
+      {
+        "id": "PREVIEW-RECHECK-003",
+        "title": "Browser automation does not expose navigator/serviceWorker",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  "git": { "phaseACommit": "5da56b7749c94cf2bfdf778e05f4ba0c8441a436", "phaseBStaged": 0, "phaseBCommit": 0, "phaseBPush": 0 }
+}
