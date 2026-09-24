@@ -8,6 +8,7 @@ import { AppFrame } from "@/components/boat/AppFrame";
 import {
   fetchFishingConditionLocations,
   fetchFishingConditionReadModel,
+  fetchFishingConditionProfile,
   type FishingConditionDepth,
   type FishingConditionQuery,
   type FishingConditionReadModelResponse,
@@ -28,6 +29,7 @@ const DEPTHS: Array<{ value: FishingConditionDepth; label: string; sources: Fish
 ];
 
 const limitationLabels: Record<string, string> = {
+  LIVE_ENVIRONMENT_UNAVAILABLE: "현재 관측 데이터가 없어 정적 어종 근거만 제공합니다.",
   EFFORT_UNKNOWN: "어획 노력은 반영되지 않습니다.",
   EFFORT_NOT_CONTROLLED: "어획 노력 차이는 통제되지 않았습니다.",
   CATCH_EFFORT_NOT_CONTROLLED: "어획 노력 차이는 통제되지 않았습니다.",
@@ -68,7 +70,7 @@ function classifyError(error: unknown): UiError {
   const code = error instanceof Error && "code" in error ? String((error as Error & { code?: string }).code) : "";
   if (code === "INVALID_REQUEST") return { title: "입력 내용을 확인해 주세요", message: "선택한 조건이 올바른지 확인한 뒤 다시 시도해 주세요." };
   if (code === "MISSING_ENVIRONMENT") return { title: "관측 자료가 없습니다", message: "선택한 정점과 수심에 사용할 수 있는 환경 관측값이 없습니다." };
-  if (code === "UNSUPPORTED_SOURCE") return { title: "자료원을 이용할 수 없습니다", message: "현재 이 자료원에 연결할 수 없습니다. 잠시 후 다시 시도해 주세요." };
+  if (["UNSUPPORTED_SOURCE", "SOURCE_DISABLED", "API_KEY_MISSING"].includes(code)) return { title: "일부 자료원 사용 불가", message: "현재 관측 데이터가 없습니다. 어종과 월을 선택하면 어종 근거를 확인할 수 있습니다." };
   if (code === "UPSTREAM_TIMEOUT") return { title: "공식 자료 응답이 늦어지고 있습니다", message: "선택 조건은 유지됩니다. 잠시 후 다시 시도해 주세요." };
   if (error instanceof TypeError) return { title: "네트워크 연결을 확인해 주세요", message: "자료 요청을 완료하지 못했습니다. 연결 상태를 확인한 뒤 다시 시도해 주세요." };
   return { title: "자료를 불러오지 못했습니다", message: "일시적인 오류가 발생했습니다. 선택 조건을 유지한 채 다시 시도할 수 있습니다." };
@@ -247,6 +249,21 @@ export function FishingConditionClient({ initialSpeciesId = "", spotContext, jou
     setReadError(null);
   }
 
+  async function runProfileQuery() {
+    if (!speciesId || !month || requestControllerRef.current) return;
+    const controller = new AbortController();
+    requestControllerRef.current = controller;
+    setState("loading"); setReadError(null); setResult(null);
+    try {
+      const response = await fetchFishingConditionProfile(speciesId, Number(month), controller.signal);
+      if (!controller.signal.aborted) { setResult(response.readModel); setState("idle"); }
+    } catch (error) {
+      if (!controller.signal.aborted) { setReadError(classifyError(error)); setState("error"); }
+    } finally {
+      if (requestControllerRef.current === controller) requestControllerRef.current = null;
+    }
+  }
+
   function changeSpecies(nextSpeciesId: string) {
     clearDisplayedResult();
     setSpeciesId(nextSpeciesId);
@@ -306,6 +323,10 @@ export function FishingConditionClient({ initialSpeciesId = "", spotContext, jou
           <label className="grid gap-2 text-sm font-black text-white"><span>수심</span><select aria-label="수심 선택" value={depth} onChange={(event) => { clearDisplayedResult(); setDepth(event.target.value as FishingConditionDepth | ""); }} disabled={!sourceId} className="control disabled:cursor-not-allowed disabled:opacity-50"><option value="">수심 선택</option>{availableDepths.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}</select></label>
           <div className="flex items-end"><button type="submit" disabled={!canSubmit || state === "loading"} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-[18px] bg-[#EBC27D] px-5 text-sm font-black text-[#071827] transition hover:bg-[#F3D69D] disabled:cursor-not-allowed disabled:opacity-45">{state === "loading" ? <LoaderCircle size={18} className="animate-spin" /> : null} 조건 보기</button></div>
         </form>
+        <div className="mt-4 rounded-[18px] border border-[#29465D] p-4">
+          <p className="text-sm font-semibold text-[#B8CBDD]">관측자료 없이도 어종과 월을 선택해 환경·생태 참고 근거를 확인할 수 있습니다.</p>
+          <button type="button" disabled={!speciesId || !month || state === "loading"} onClick={() => void runProfileQuery()} className="mt-3 min-h-11 rounded-full border border-[#79C9D6] px-5 text-sm font-black text-[#AEE8EF] disabled:opacity-45">어종 근거 보기</button>
+        </div>
         {spotContext && speciesId ? <Link href={buildFishingJourneySeaHref({ ...journey, spotId: spotContext.id, speciesId, source: "conditions", returnTo: "/fishing-spots/conditions" })} className="mt-3 inline-flex min-h-11 items-center rounded-full border border-[#79C9D6]/45 px-4 text-xs font-black text-[#AEE8EF]">선택한 포인트를 지도에서 보기</Link> : null}
         <p className="mt-4 flex items-start gap-2 text-xs font-semibold leading-5 text-[#8FA7BC]"><Info size={15} className="mt-0.5 shrink-0 text-[#79C9D6]" /> 선택을 마친 뒤 버튼을 눌러 공식 자료를 조회합니다. 자동 추천이나 점수는 제공하지 않습니다.</p>
         {locationState === "loading" ? <p role="status" aria-live="polite" className="mt-3 text-sm font-bold text-[#9FB3C8]">정점 목록을 불러오는 중입니다.</p> : null}
@@ -325,6 +346,10 @@ function ResultView({ result }: { result: ReadModel }) {
   return <div className="space-y-5" aria-live="polite">
     <section className="flex flex-col gap-3 rounded-[24px] border border-[#29465D] bg-[#0A2031] p-5 sm:flex-row sm:items-center sm:justify-between"><div><p className="text-xs font-black text-[#79C9D6]">{result.species.koreanName} · {result.species.scientificName}</p><h2 className="mt-1 text-xl font-black text-white">선택 조건의 확인 결과</h2></div><p className="text-xs font-bold text-[#A8BDCF]">{result.freshness.label} · {formatObservedAt(result.freshness.observedAt)}</p></section>
     {result.profileContext ? <ProfileContext profile={result.profileContext} /> : null}
+    {result.availability === "PARTIAL" ? <aside role="status" className="rounded-[18px] border border-[#6A5735] bg-[#201B13] p-4 text-sm font-semibold text-[#D9C49A]">
+      <p>현재 관측 데이터 없음 · 정적 어종 근거만 제공합니다.</p>
+      {result.sourceStatus?.map(source => <p key={source.sourceId} className="mt-1">{SOURCE_LABELS[source.sourceId as FishingConditionSourceId] ?? source.sourceId}: {source.status === "UNAVAILABLE" ? "일부 자료원 사용 불가" : "관측자료를 요청하지 않음"}</p>)}
+    </aside> : null}
     <section className="rounded-[26px] border border-[#1F3A50] bg-[#071827] p-4 sm:p-6"><SectionHeading eyebrow="Environment" title="환경 자료" /><div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">{fields.map((field) => <EnvironmentCard key={field.key} field={field} />)}</div></section>
     <section className="grid gap-5 lg:grid-cols-2"><Seasonality title="산란 시기" section={result.seasonality.spawning} /><Seasonality title="회유" section={result.seasonality.migration} /></section>
     <OccurrenceTable section={result.seasonality.fisheryOccurrence} requestedMonth={result.seasonality.requestedMonth} />

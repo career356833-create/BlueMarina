@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { parseConditionEvidenceBundleRequest } from "@/lib/fishing-condition/evidence-bundle-request";
+import { parseProfileReadModelRequest, runStaticProfileReadModel } from "@/lib/fishing-condition/profile-read-model-server";
 import {
   FishingConditionReadModelError,
   runFishingConditionReadModel,
@@ -21,6 +22,10 @@ export async function POST(request: NextRequest) {
   } catch {
     return NextResponse.json({ ok: false, code: "INVALID_REQUEST" }, { status: 400 });
   }
+  const profileRequest = parseProfileReadModelRequest(body);
+  if (profileRequest) {
+    return NextResponse.json({ ok: true, readModel: runStaticProfileReadModel(profileRequest.speciesId, profileRequest.month) }, { headers: { "Cache-Control": "no-store" } });
+  }
   const parsed = parseConditionEvidenceBundleRequest(body);
   if (!parsed) return NextResponse.json({ ok: false, code: "INVALID_REQUEST" }, { status: 400 });
 
@@ -29,6 +34,10 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: true, readModel }, { headers: { "Cache-Control": "no-store" } });
   } catch (error) {
     const code = error instanceof FishingConditionReadModelError ? error.code : "UPSTREAM_ERROR";
+    if (error instanceof FishingConditionReadModelError && ["SOURCE_DISABLED", "API_KEY_MISSING", "UPSTREAM_TIMEOUT", "UPSTREAM_ERROR"].includes(code)) {
+      const readModel = runStaticProfileReadModel(parsed.speciesId, parsed.contexts.month, { sourceId: parsed.environment.sourceId, reason: code });
+      if (readModel) return NextResponse.json({ ok: true, readModel }, { headers: { "Cache-Control": "no-store" } });
+    }
     const status = code === "INVALID_REQUEST" ? 400
       : code === "PROFILE_NOT_FOUND" || code === "ENVIRONMENT_LOCATION_NOT_FOUND" ? 404
         : code === "UPSTREAM_TIMEOUT" ? 504

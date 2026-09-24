@@ -12,6 +12,8 @@ export type FishingConditionQuery = {
 export type FishingConditionReadModelResponse = {
   ok: true;
   readModel: {
+    availability?: "PARTIAL";
+    sourceStatus?: Array<{ sourceId: string; status: string; reason: string }>;
     species: { speciesId: string; koreanName: string; scientificName: string };
     profileContext: null | {
       readiness: "PROFILE_READY" | "PROFILE_PARTIAL" | "PROFILE_LIMITED";
@@ -26,7 +28,7 @@ export type FishingConditionReadModelResponse = {
       evidenceRefs: Array<{ id: string; sourceType: string; title: string; url?: string | null; evidenceClass: string }>;
       limitations: string[];
     };
-    requestContext: { month: number | null; environmentSource: string; stationOrSiteId: string; depthContext: string };
+    requestContext: { month: number | null; environmentSource: string | null; stationOrSiteId: string | null; depthContext: string | null };
     environment: Record<string, {
       key: string;
       label: string;
@@ -91,6 +93,13 @@ export async function fetchFishingConditionReadModel(query: FishingConditionQuer
     signal,
   });
   return parseResponse(response);
+}
+
+export async function fetchFishingConditionProfile(speciesId: string, month: number, signal?: AbortSignal) {
+  return parseResponse(await fetch("/api/fishing-condition/read-model", {
+    method: "POST", headers: { "content-type": "application/json" },
+    body: JSON.stringify({ speciesId, contexts: { month } }), signal,
+  }));
 }
 
 export async function fetchFishingConditionLocations(sourceId: FishingConditionSourceId, signal?: AbortSignal) {

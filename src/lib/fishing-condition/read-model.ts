@@ -339,6 +339,44 @@ export function profileContext(profile: FishingConditionProfile) {
   };
 }
 
+// Static evidence is available independently of live observation providers.
+export function buildStaticFishingConditionReadModel(
+  profile: FishingConditionProfile,
+  month: number | null,
+  seasonality: SeasonalityRuntimeResult | undefined,
+  sourceStatus: Array<{ sourceId: string; status: string; reason: string }>,
+) {
+  return {
+    qualityClass: FISHING_CONDITION_READ_MODEL_QUALITY_CLASS,
+    availability: "PARTIAL" as const,
+    sourceStatus,
+    species: { speciesId: profile.speciesId, koreanName: profile.koreanName, scientificName: profile.scientificName },
+    requestContext: { month, environmentSource: null, stationOrSiteId: null, depthContext: null },
+    environment: Object.fromEntries(ENVIRONMENT_FIELDS.map(key => [key, {
+      key, label: FIELD_LABELS[key], status: "MISSING_ENVIRONMENT", rawValue: null,
+      displayValue: null, relation: null, displayStatus: "현재 관측 데이터 없음",
+      explanation: "어종의 정적 참고 근거만 제공합니다. 현재 관측값이나 정점을 추정하지 않습니다.",
+      profileReference: null, evidenceRefs: [], source: { sourceId: "NOT_REQUESTED", lineage: [] },
+      freshness: "unavailable", limitations: ["LIVE_ENVIRONMENT_UNAVAILABLE"],
+    }])),
+    profileContext: profileContext(profile),
+    seasonality: {
+      requestedMonth: month,
+      spawning: biologicalSection(contextResult(seasonality, "SPAWNING"), "SPAWNING"),
+      migration: biologicalSection(contextResult(seasonality, "MIGRATION"), "MIGRATION"),
+      fisheryOccurrence: occurrenceSection(contextResult(seasonality, "FISHERY_OCCURRENCE"), month),
+    },
+    sources: [...profileSources(profile), ...(seasonality ? [{
+      domain: "seasonality", provider: "Blue Marina", sourceType: "STATIC_SEASONALITY_EVIDENCE",
+      sourceName: seasonality.sourceLineage.productionSourceId, sourceId: seasonality.sourceLineage.productionSourceId,
+      qualityClass: seasonality.qualityClass, observedAt: null,
+      urlOrReference: seasonality.sourceLineage.productionArtifact, lineage: [seasonality.sourceLineage.derivation],
+    }] : [])],
+    limitations: unique([...profile.limitations, "LIVE_ENVIRONMENT_UNAVAILABLE", "PROFILE_REFERENCE_ONLY_NO_AUTOMATIC_SUITABILITY_VERDICT"]),
+    freshness: { status: "unavailable", label: "정적 근거만 제공 · 현재 관측 데이터 없음", observedAt: null },
+  };
+}
+
 export function buildFishingConditionReadModel(bundle: EvidenceBundleInput, profile?: FishingConditionProfile | null) {
   const evidence = bundle.environmentEvidence ?? bundle.evidence;
   const environment = ENVIRONMENT_FIELDS.map((field) =>
