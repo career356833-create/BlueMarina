@@ -6,7 +6,7 @@ import { Anchor, ArrowLeft, ExternalLink, Fish, MapPin, Navigation2, ShieldAlert
 import { AppFrame } from "@/components/boat/AppFrame";
 import { AccountSaveButton } from "@/components/account/AccountSaveButton";
 import { RecentlyViewedTracker } from "@/components/account/RecentlyViewedTracker";
-import { getFishingSpotTypeLabel } from "@/data/fishing-spots";
+import { fishingSpots, getFishingSpotTypeLabel } from "@/data/fishing-spots";
 import {
   buildFishingConditionHref,
   buildFishingSpotMapHref,
@@ -25,11 +25,23 @@ import {
 
 type PageProps = { params: Promise<{ id: string }> };
 
+// This checked-in catalog is the complete route set. Reject misses before streaming.
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return fishingSpots.map(({ id }) => ({ id }));
+}
+
+function requireFishingSpot(id: string) {
+  // Next already decodes route params; a second decode can throw or change identity.
+  const spot = findFishingSpot(id);
+  if (!spot) notFound();
+  return spot;
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const spot = findFishingSpot(decodeURIComponent((await params).id));
-  return spot
-    ? { ...canonicalMetadata(`/fishing-spots/${encodeURIComponent(spot.id)}`), title: spot.name, description: `${spot.region} ${spot.city} 출조 포인트 상세 정보` }
-    : { title: "낚시 포인트", robots: { index: false, follow: false } };
+  const spot = requireFishingSpot((await params).id);
+  return { ...canonicalMetadata(`/fishing-spots/${encodeURIComponent(spot.id)}`), title: spot.name, description: `${spot.region} ${spot.city} 출조 포인트 상세 정보` };
 }
 
 function SourceMissing({ children }: { children: React.ReactNode }) {
@@ -37,8 +49,7 @@ function SourceMissing({ children }: { children: React.ReactNode }) {
 }
 
 export default async function FishingSpotDetailPage({ params }: PageProps) {
-  const spot = findFishingSpot(decodeURIComponent((await params).id));
-  if (!spot) notFound();
+  const spot = requireFishingSpot((await params).id);
 
   const species = getFishingSpotSpeciesProjection(spot);
   const coordinatePolicy = getSpotCoordinateSafetyPolicy(spot.id);
