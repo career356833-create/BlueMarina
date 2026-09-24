@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "decision": "PREVIEW_DEPLOYMENT_READY_WITH_LIMITATIONS",
+  "publicInformationalRelease": "PUBLIC_INFORMATIONAL_RELEASE_HOLD",
+  "productionDeploymentCandidate": "NOT_READY",
+  "baseline": "6e180c422c4cbe56b0f6abd9fabe387b51efd6c2",
+  "preview": {
+    "origin": "https://blue-marina-btoin4yw9-chiweon.vercel.app",
+    "productionTouched": false,
+    "dbApply": 0,
+    "backendActivation": 0,
+    "redeploy": 0
+  },
+  "kakao": {
+    "sdkRequest": {
+      "status": 401,
+      "contentType": "application/json; charset=utf-8",
+      "domainMismatched": true,
+      "source": "Previously reproduced deployed SDK request with the Preview Referer; this final browser check confirms the unchanged resulting fallback without exposing the key."
+    },
+    "runtime": {
+      "scriptPresent": true,
+      "windowKakao": false,
+      "windowKakaoMaps": false,
+      "mapsLoadCallback": "NOT_REACHED: the SDK namespace is absent after the rejected request.",
+      "mapRender": false,
+      "tiles": false,
+      "markersOrLayers": false,
+      "fallbackVisible": true
+    },
+    "status": "BLOCKED",
+    "reason": "The exact Preview origin is still not effective for the deployed Kakao JavaScript SDK key. No code, environment, loader, console, or deployment action was taken in this gate."
+  },
+  "navigation": {
+    "status": "PASS",
+    "desktop1280x900": {
+      "mapLibreCanvas": true,
+      "zoomControl": true,
+      "rotationControl": true,
+      "hudToggle": true,
+      "marineLayers": true,
+      "headingAndInstrumentPanel": true,
+      "straightLineSafetyDisclaimer": true
+    },
+    "mobile390x844": {
+      "mapLibreCanvas": true,
+      "hudToggle": true,
+      "collapsedLayerControl": true,
+      "horizontalOverflow": false,
+      "bottomNavOverlap": false
+    },
+    "safety": {
+      "safeRouteInference": 0,
+      "landAvoidance": 0,
+      "reefAvoidance": 0,
+      "depthAvoidance": 0,
+      "officialNavigationEquipmentReplacementClaim": 0
+    }
+  },
+  "responsive": {
+    "mobile390x844": {
+      "home": "PASS",
+      "sea": "PASS_WITH_LIMITATIONS: layout and controls render, but Kakao map remains the honest fallback.",
+      "navigation": "PASS",
+      "fishingSpots": "PASS",
+      "horizontalOverflow": false,
+      "consoleErrors": 0
+    },
+    "desktop1280x900": {
+      "sea": "PASS_WITH_LIMITATIONS: layout renders, but Kakao map remains the honest fallback.",
+      "navigation": "PASS",
+      "horizontalOverflow": false
+    }
+  },
+  "seo": {
+    "status": "PASS_WITH_LIMITATIONS",
+    "previewNoindex": true,
+    "robotsAndSitemapPolicy": "Present in the deployed application; unauthenticated HTTP verification receives the Vercel SSO gate before application responses.",
+    "previewUsedAsProductionCanonical": false,
+    "localhostCanonical": false
+  },
+  "security": {
+    "status": "PASS_WITH_LIMITATIONS",
+    "applicationPolicy": "Repository tests cover nosniff, strict-origin-when-cross-origin, Permissions-Policy, SAMEORIGIN, and API noindex,nofollow.",
+    "directPreviewHttpLimitation": "An unauthenticated direct request receives Vercel SSO HTTP 302 with X-Robots-Tag: noindex and X-Frame-Options: DENY before application security headers can be observed.",
+    "csp": "NOT_APPLIED",
+    "hsts": "NOT_APPLIED"
+  },
+  "pwa": {
+    "status": "PASS_WITH_LIMITATIONS",
+    "manifestAndWorkerAssets": "Previously verified and unchanged.",
+    "serviceWorkerRegistration": "NOT_VERIFIED in the browser automation environment."
+  },
+  "backendLimitations": {
+    "status": "PASS_WITH_LIMITATIONS",
+    "databaseApply": 0,
+    "backendActivation": 0,
+    "featureFlags": "Fail-closed state retained."
+  },
+  "issues": {
+    "P0": [],
+    "P1": [
+      {
+        "id": "FINAL-GATE-001",
+        "title": "Kakao Maps SDK domain authorization remains ineffective for Preview",
+        "impact": "The public Sea Map cannot render Kakao tiles, markers, or layers.",
+        "requiredExternalAction": "Verify the exact Preview origin is saved for the deployed JavaScript key in Kakao Developers and wait for propagation; then rerun this gate."
+      }
+    ],
+    "P2": [
+      {
+        "id": "FINAL-GATE-002",
+        "title": "Unknown Fishing Spot uses a noindex fallback with HTTP 200",
+        "status": "UNCHANGED"
+      }
+    ],
+    "P3": [
+      {
+        "id": "FINAL-GATE-003",
+        "title": "Automated service-worker registration verification is unavailable",
+        "status": "UNCHANGED"
+      }
+    ]
+  },
+  "productionPrerequisites": {
+    "productionDomain": "NOT_CONFIRMED",
+    "nextPublicSiteUrl": "NOT_CONFIRMED",
+    "kakaoProductionDomain": "NOT_CONFIRMED",
+    "vercelProductionEnvironment": "PRESENT in the prior audit, but production deploy was not performed.",
+    "previewAndProductionIndexingPolicy": "Separated by the current Preview noindex policy; final production canonical/index policy needs the production URL.",
+    "backendFlags": "OFF / fail-closed retained.",
+    "cspAndHsts": "NOT_APPLIED; explicitly retained as release limitations."
+  },
+  "verification": {
+    "targeted": "4/4 PASS",
+    "total": "1109/1109 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "diffCheck": "PASS"
+  },
+  "git": { "staged": 0, "commit": 0, "push": 0, "unrelatedWorktreePreserved": true }
+}
