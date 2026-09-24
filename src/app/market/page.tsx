@@ -5,6 +5,12 @@ import { parseMarketFilters } from "@/lib/market/filters";
 import { readPublicMarketListings } from "@/lib/market/backend/public-reader";
 import { categoryLabels, conditionLabels, formatMarketPrice, priceTypeLabels, transactionLabels } from "@/lib/market/route-helpers";
 import { MARKET_CATEGORIES, MARKET_CONDITIONS, MARKET_PRICE_TYPES, MARKET_SORTS } from "@/lib/market/types";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "마켓",
+  description: "검토된 판매글만 표시하는 해양레저 장비 정보 서비스입니다. 결제와 거래 보증은 제공하지 않습니다."
+};
 
 type MarketQuery = Record<string, string | string[] | undefined>;
 const sortLabels = { NEWEST: "최신순", PRICE_LOW: "낮은 가격순", PRICE_HIGH: "높은 가격순" } as const;

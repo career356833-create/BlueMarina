@@ -16,7 +16,7 @@ import {
 } from "@/lib/fishing-spots/coordinate-safety";
 
 export const metadata = {
-  title: "Fishing Condition | Blue Marina",
+  title: "낚시 조건",
   description: "공식 해양환경과 계절성 근거를 선택해 확인합니다.",
 };
 

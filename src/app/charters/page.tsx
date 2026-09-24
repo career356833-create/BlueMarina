@@ -2,6 +2,12 @@ import Link from "next/link";
 import { Anchor, Fish, Map, Search, SlidersHorizontal } from "lucide-react";
 import { AppFrame } from "@/components/boat/AppFrame";
 import { productionCharterDataset } from "@/lib/charters/registry";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "출조 찾기",
+  description: "공식 출처가 확인된 출조 정보만 안내하는 Blue Marina 출조 정보 서비스입니다."
+};
 
 const relatedServices = [
   { href: "/fishing-spots", label: "낚시 포인트", icon: Anchor },

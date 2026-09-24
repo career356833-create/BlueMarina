@@ -6,6 +6,12 @@ import { filterCommunityPosts, parseCommunityFilters } from "@/lib/community/fil
 import { productionCommunityDataset } from "@/lib/community/registry";
 import { communityExcerpt, communityPostTypeLabels } from "@/lib/community/route-helpers";
 import { COMMUNITY_POST_TYPES, COMMUNITY_SORTS } from "@/lib/community/types";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "커뮤니티",
+  description: "조황, 출조 후기, 지역 정보와 질문을 나누는 Blue Marina 커뮤니티입니다."
+};
 
 type Query = Record<string, string | string[] | undefined>;
 const sortLabels = { NEWEST: "최신순", OLDEST: "오래된순" } as const;

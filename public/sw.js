@@ -23,6 +23,15 @@ const isLocalhost =
   self.location.hostname === "127.0.0.1" ||
   self.location.hostname === "::1";
 
+const isPrivatePath = (pathname) =>
+  pathname.startsWith("/account") ||
+  pathname.startsWith("/charters/admin") ||
+  pathname.startsWith("/market/admin") ||
+  pathname === "/charters/onboarding" ||
+  pathname === "/market/new" ||
+  pathname === "/community/new" ||
+  pathname === "/reservations";
+
 self.addEventListener("install", (event) => {
   if (isLocalhost) {
     self.skipWaiting();
@@ -73,6 +82,7 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin) return;
   if (url.pathname.startsWith("/api/")) return;
+  if (isPrivatePath(url.pathname)) return;
 
   if (event.request.mode === "navigate") {
     event.respondWith(

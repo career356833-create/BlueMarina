@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "decision": "PUBLIC_RELEASE_HARDENING_READY_WITH_LIMITATIONS",
+  "baseline": "4935807bdc6572eed1520e9bc6d02b93e0fbc617",
+  "robots": {
+    "publicInformation": "ALLOW",
+    "privateAdminCompose": "DISALLOW",
+    "api": "DISALLOW"
+  },
+  "sitemap": {
+    "staticPublicRoutes": 19,
+    "dynamicFishingSpotRoutes": 1405,
+    "excluded": ["account", "admin", "api", "onboarding", "compose", "reservations", "charter-detail", "market-detail", "community-detail"],
+    "siteUrlRequirement": "NEXT_PUBLIC_SITE_URL must be a non-local HTTP(S) origin; sitemap is empty without it."
+  },
+  "canonical": {
+    "strategy": "metadataBase and canonical activate only from NEXT_PUBLIC_SITE_URL",
+    "localhostFallback": "disabled",
+    "hardcodedProductionDomain": false
+  },
+  "metadata": {
+    "root": "title template, description, Open Graph, Twitter, manifest and icons configured",
+    "publicServices": "today-sea, sea, fishing spots, fish, license guide, charters, market and community have source-backed page metadata",
+    "dynamicFishingSpot": "source-backed name and region description",
+    "emptyDynamicServices": "noindex; no fake detail metadata"
+  },
+  "noindex": ["/account/**", "/charters/admin/**", "/market/admin/**", "/charters/onboarding", "/market/new", "/community/new", "/reservations", "/charters/[id]", "/market/[id]", "/community/[id]", "not-found"],
+  "headers": {
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), payment=(), usb=(); geolocation is not disabled",
+    "X-Frame-Options": "SAMEORIGIN",
+    "apiXRobotsTag": "noindex, nofollow",
+    "privateCacheControl": "private, no-store, max-age=0, must-revalidate"
+  },
+  "csp": "NOT_APPLIED: MapLibre, Kakao, media and API origin inventory requires deployment verification before an enforced policy.",
+  "hsts": "NOT_APPLIED: configure only at the HTTPS production host after domain and redirect verification.",
+  "pwa": {
+    "manifest": "present",
+    "icons": "present",
+    "serviceWorker": "present",
+    "privateCache": "account, admin, onboarding, compose and reservations bypass service-worker cache",
+    "rewrite": 0
+  },
+  "verification": {
+    "targeted": "4/4 PASS",
+    "total": "1089/1089 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS (58 static pages; private/admin routes are force-dynamic)",
+    "diffCheck": "PASS"
+  },
+  "invariants": { "dbApply": 0, "backendActivation": 0, "productionDataMutation": 0, "gitPublication": 0 }
+}

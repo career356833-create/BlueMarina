@@ -1,2 +1,4 @@
 import { AppFrame } from "@/components/boat/AppFrame";
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "예약·문의 안내", robots: { index: false, follow: false } };
 export default function ReservationsPage() { return <AppFrame><section className="mx-auto max-w-3xl py-10"><p className="text-xs font-black tracking-[.2em] text-[#79C9D6]">INQUIRY</p><h1 className="mt-3 text-4xl font-black">예약·문의 안내</h1><p className="mt-5 text-sm font-semibold leading-7 text-[#B8CBDD]">Blue Marina는 이 화면에서 예약을 확정하거나 좌석을 보관하지 않습니다. 공식 선사 연락처와 외부 예약 경로를 확인한 뒤 문의 내용을 준비해 주세요.</p><ul className="mt-8 space-y-3 rounded-[24px] border border-[#1F3A50] bg-[#071827] p-6 text-sm font-semibold text-[#D7E4F6]"><li>· 출항 날짜와 인원</li><li>· 대상어종과 출항항</li><li>· 가격·잔여석·기상 취소 조건</li></ul></section></AppFrame>; }

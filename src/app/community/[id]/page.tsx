@@ -7,6 +7,9 @@ import { RecentlyViewedTracker } from "@/components/account/RecentlyViewedTracke
 import { getCommunityPost } from "@/lib/community/registry";
 import { communityPostTypeLabels, linkedCommunityHref } from "@/lib/community/route-helpers";
 import { CommunityInteractions } from "./community-interactions";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "커뮤니티 글", robots: { index: false, follow: false } };
 
 export default async function CommunityPostPage({ params }: { params: Promise<{ id: string }> }) {
   const post = getCommunityPost((await params).id);

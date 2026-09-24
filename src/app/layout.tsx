@@ -5,13 +5,24 @@ import { BlueMarinaCaptainWidget } from "@/components/boat/ai-captain/BlueMarina
 import { DevAuditFloatingButton } from "@/components/dev-audit/DevAuditFloatingButton";
 import { PwaRegister } from "@/components/PwaRegister";
 import { devAuditEnabled } from "@/lib/dev-audit/audit-data";
+import { getPublicSiteUrl } from "@/lib/release/site-url";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const publicSiteUrl = getPublicSiteUrl();
 
 export const metadata: Metadata = {
-  title: "Blue Marina - 바다낚시 · 해양레저 포털",
+  title: { default: "Blue Marina | 바다낚시 · 해양레저 포털", template: "%s | Blue Marina" },
   description: "물때, 해양정보, 어종백과, 보트지식, 조종면허 학습을 제공하는 대한민국 해양레저 포털",
+  ...(publicSiteUrl ? { metadataBase: publicSiteUrl, alternates: { canonical: "/" } } : {}),
+  openGraph: {
+    title: "Blue Marina | 바다낚시 · 해양레저 포털",
+    description: "물때, 해양정보, 어종백과, 보트지식, 조종면허 학습을 제공하는 대한민국 해양레저 포털",
+    siteName: "Blue Marina",
+    type: "website",
+    locale: "ko_KR"
+  },
+  twitter: { card: "summary", title: "Blue Marina | 바다낚시 · 해양레저 포털", description: "대한민국 바다낚시와 해양레저 정보" },
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,

@@ -6,6 +6,9 @@ import { AccountSaveButton } from "@/components/account/AccountSaveButton";
 import { RecentlyViewedTracker } from "@/components/account/RecentlyViewedTracker";
 import { readPublicMarketListing } from "@/lib/market/backend/public-reader";
 import { categoryLabels, conditionLabels, formatMarketPrice, safeExternalHref, transactionLabels } from "@/lib/market/route-helpers";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "마켓 상품", robots: { index: false, follow: false } };
 
 export default async function MarketListingDetail({ params }: { params: Promise<{ id: string }> }) {
   const listing = await readPublicMarketListing((await params).id);
