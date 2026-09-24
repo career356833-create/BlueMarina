@@ -200,7 +200,7 @@ export function MarineLayerControl({ deepWaterRouteVisible, deepWaterRouteState,
   onCloseFeature: () => void;
 }) {
   return (
-    <div className="bm-navigation-scrollbar absolute right-3 top-14 z-[500] max-h-[calc(100%-13rem)] w-[min(292px,calc(100vw-24px))] overflow-y-auto text-[#f2eee3]">
+    <div className="bm-navigation-scrollbar absolute right-[calc(3.5rem+env(safe-area-inset-right))] top-[calc(max(0.75rem,env(safe-area-inset-top))+6.75rem)] z-[500] max-h-[calc(100%-13rem)] w-[min(292px,calc(100%-4.25rem-env(safe-area-inset-right)))] sm:right-3 sm:top-14 sm:w-[min(292px,calc(100vw-24px))] overflow-y-auto text-[#f2eee3]">
       {selected?.kind !== "tide-station" && selected?.kind !== "marine-weather" && selected?.kind !== "marine-observation" && selected?.kind !== "ocean-current-model" ? <div className="border border-white/15 bg-[#06131a]/94 px-3 shadow-xl backdrop-blur-md" aria-label="해양 레이어">
         <LayerToggle label="깊은수심 항로" description="국립해양조사원 공개 공간정보" visible={deepWaterRouteVisible} state={deepWaterRouteState} onChange={onDeepWaterRouteVisibleChange} icon="layers" />
         <LayerToggle label="항만구역" description="전자해도 기반 항만 면형정보" visible={harborZoneVisible} state={harborZoneState} onChange={onHarborZoneVisibleChange} icon="anchor" />

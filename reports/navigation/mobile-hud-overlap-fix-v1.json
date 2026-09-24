@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-09-24",
+  "decision": "MOBILE_HUD_OVERLAP_FIXED_WITH_LIMITATIONS",
+  "baseline": "fb427389f67be9e578bf116a8320601105f3846b",
+  "rootCause": "HUD right-3 top-3 and layer right-3 top-16 overlap the MapLibre top-right zoom/compass rail",
+  "fix": {
+    "panelTop": "top + 6.75rem",
+    "breakpoint": "below 640px",
+    "bottomNav": "Not mounted on full-screen navigation route",
+    "right": "calc(3.5rem + env(safe-area-inset-right))",
+    "mapControlUnchanged": true,
+    "layerTop": "top + 3.25rem",
+    "top": "max(0.75rem, env(safe-area-inset-top))",
+    "desktopOriginalLayout": true
+  },
+  "browser": {
+    "interaction": {
+      "touchEventsExercised": true,
+      "zoomButton": true,
+      "realDeviceTested": false,
+      "mapClickSelectsDestination": true,
+      "hudToggle": true,
+      "layerToggle": true,
+      "emulatedPinch": true,
+      "drag": true
+    },
+    "environment": "local Next.js with real MapLibre, production baseline reproduced",
+    "viewports": [
+      {
+        "width": 360,
+        "hud": {
+          "x": 237.328125,
+          "y": 76,
+          "width": 73.046875,
+          "height": 44,
+          "top": 76,
+          "right": 310.375,
+          "bottom": 120,
+          "left": 237.328125
+        },
+        "layer": {
+          "x": 266.375,
+          "y": 128,
+          "width": 44,
+          "height": 44,
+          "top": 128,
+          "right": 310.375,
+          "bottom": 172,
+          "left": 266.375
+        },
+        "zoom": {
+          "x": 327.375,
+          "y": 74,
+          "width": 29,
+          "height": 87,
+          "top": 74,
+          "right": 356.375,
+          "bottom": 161,
+          "left": 327.375
+        },
+        "hudZoomOverlap": false,
+        "layerZoomOverlap": false,
+        "hudLayerOverlap": false,
+        "pointer": "none",
+        "overflow": false,
+        "expandedPanelClear": true
+      },
+      {
+        "width": 390,
+        "hud": {
+          "x": 260.953125,
+          "y": 76,
+          "width": 73.046875,
+          "height": 44,
+          "top": 76,
+          "right": 334,
+          "bottom": 120,
+          "left": 260.953125
+        },
+        "layer": {
+          "x": 290,
+          "y": 128,
+          "width": 44,
+          "height": 44,
+          "top": 128,
+          "right": 334,
+          "bottom": 172,
+          "left": 290
+        },
+        "zoom": {
+          "x": 351,
+          "y": 74,
+          "width": 29,
+          "height": 87,
+          "top": 74,
+          "right": 380,
+          "bottom": 161,
+          "left": 351
+        },
+        "hudZoomOverlap": false,
+        "layerZoomOverlap": false,
+        "hudLayerOverlap": false,
+        "pointer": "none",
+        "overflow": false,
+        "expandedPanelClear": true
+      },
+      {
+        "width": 430,
+        "hud": {
+          "x": 300.953125,
+          "y": 76,
+          "width": 73.046875,
+          "height": 44,
+          "top": 76,
+          "right": 374,
+          "bottom": 120,
+          "left": 300.953125
+        },
+        "layer": {
+          "x": 330,
+          "y": 128,
+          "width": 44,
+          "height": 44,
+          "top": 128,
+          "right": 374,
+          "bottom": 172,
+          "left": 330
+        },
+        "zoom": {
+          "x": 391,
+          "y": 74,
+          "width": 29,
+          "height": 87,
+          "top": 74,
+          "right": 420,
+          "bottom": 161,
+          "left": 391
+        },
+        "hudZoomOverlap": false,
+        "layerZoomOverlap": false,
+        "hudLayerOverlap": false,
+        "pointer": "none",
+        "overflow": false,
+        "expandedPanelClear": true
+      },
+      {
+        "width": 1280,
+        "hud": {
+          "x": 1194.953125,
+          "y": 76,
+          "width": 73.046875,
+          "height": 44,
+          "top": 76,
+          "right": 1268,
+          "bottom": 120,
+          "left": 1194.953125
+        },
+        "layer": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "zoom": {
+          "x": 1241,
+          "y": 74,
+          "width": 29,
+          "height": 87,
+          "top": 74,
+          "right": 1270,
+          "bottom": 161,
+          "left": 1241
+        },
+        "hudZoomOverlap": true,
+        "layerZoomOverlap": false,
+        "hudLayerOverlap": false,
+        "pointer": "none",
+        "overflow": false
+      }
+    ],
+    "sourceLimitations": "Local navigation-aids/warnings API 502; unrelated source configuration unchanged",
+    "pageExceptions": 0
+  },
+  "accessibility": {
+    "aria": true,
+    "interactivePointerEvents": "auto",
+    "hudTarget": "73x44",
+    "layerTarget": "44x44",
+    "focusVisible": true,
+    "visualPointerEvents": "none"
+  },
+  "verification": {
+    "typecheck": "PASS",
+    "total": "1153/1153 PASS",
+    "targeted": "6/6 PASS",
+    "diff": "PASS",
+    "lint": "PASS",
+    "build": "PASS"
+  },
+  "safety": {
+    "depthAvoidanceInference": 0,
+    "landAvoidanceInference": 0,
+    "navigationCoreMutation": 0,
+    "dbApply": 0,
+    "safeRouteInference": 0,
+    "reefAvoidanceInference": 0
+  },
+  "limitations": [
+    "Existing desktop overlap preserved by explicit mobile-only scope",
+    "Real-device pinch/GPS not verified; emulated browser interactions only",
+    "No claim of production re-verification"
+  ],
+  "git": {
+    "unrelatedIncluded": 0,
+    "scopeFiles": 5,
+    "conditionsEvidencePreserved": true
+  }
+}
