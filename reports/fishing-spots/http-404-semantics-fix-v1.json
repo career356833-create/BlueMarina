@@ -1,0 +1,780 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-09-24",
+  "decision": "FISHING_SPOT_HTTP_404_FIXED",
+  "baseline": "4dc04c199fb3233fdb08e237e95c23fc703f80f7",
+  "rootCause": {
+    "beforeRoute": "dynamic",
+    "streamedNotFound": "HTTP 200 already flushed by loading/Suspense before notFound",
+    "beforePrerenderedSpotCount": 0,
+    "duplicateLookupCause": false,
+    "nextVersion": "15.5.19"
+  },
+  "fix": {
+    "dynamicParams": false,
+    "doubleDecodeRemoved": true,
+    "generateStaticParams": 1405,
+    "singleLookupContract": true,
+    "forcedSSR": false
+  },
+  "build": {
+    "performance": "Build-time generation and static cache; catalog changes require rebuild",
+    "staticPages": 1463,
+    "route": "SSG",
+    "fallback": false,
+    "spotPages": 1405
+  },
+  "before": [
+    {
+      "id": "not-a-real-spot",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": "MISS",
+        "x-matched-path": "/fishing-spots/[id]",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": true,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "boat-1",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": "MISS",
+        "x-matched-path": "/fishing-spots/[id]",
+        "x-nextjs-cache": null
+      },
+      "canonical": "https://blue-marina.vercel.app/fishing-spots/boat-1",
+      "noindex": false,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": true,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "boat-128",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": "MISS",
+        "x-matched-path": "/fishing-spots/[id]",
+        "x-nextjs-cache": null
+      },
+      "canonical": "https://blue-marina.vercel.app/fishing-spots/boat-128",
+      "noindex": false,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": true,
+      "mapHold": false,
+      "navHold": true
+    },
+    {
+      "id": "boat-60",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": "MISS",
+        "x-matched-path": "/fishing-spots/[id]",
+        "x-nextjs-cache": null
+      },
+      "canonical": "https://blue-marina.vercel.app/fishing-spots/boat-60",
+      "noindex": false,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": true,
+      "mapHold": true,
+      "navHold": true
+    },
+    {
+      "id": "boat-999999",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": "MISS",
+        "x-matched-path": "/fishing-spots/[id]",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": true,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "%25",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": "MISS",
+        "x-matched-path": "/fishing-spots/[id]",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": true,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "%20",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": "MISS",
+        "x-matched-path": "/fishing-spots/[id]",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": true,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "boat-1%2Fextra",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": "MISS",
+        "x-matched-path": "/fishing-spots/[id]",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": true,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "sitemapStatus": 200,
+      "count": 1424,
+      "invalidIncluded": false
+    }
+  ],
+  "local": [
+    {
+      "id": "not-a-real-spot",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": null,
+        "x-matched-path": null,
+        "x-nextjs-cache": "HIT"
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "boat-1",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "x-vercel-cache": null,
+        "x-matched-path": null,
+        "x-nextjs-cache": "HIT"
+      },
+      "canonical": null,
+      "noindex": false,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": true,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "boat-128",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "x-vercel-cache": null,
+        "x-matched-path": null,
+        "x-nextjs-cache": "HIT"
+      },
+      "canonical": null,
+      "noindex": false,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": true,
+      "mapHold": false,
+      "navHold": true
+    },
+    {
+      "id": "boat-60",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000",
+        "x-vercel-cache": null,
+        "x-matched-path": null,
+        "x-nextjs-cache": "HIT"
+      },
+      "canonical": null,
+      "noindex": false,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": true,
+      "mapHold": true,
+      "navHold": true
+    },
+    {
+      "id": "boat-999999",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": null,
+        "x-matched-path": null,
+        "x-nextjs-cache": "HIT"
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "%25",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": null,
+        "x-matched-path": null,
+        "x-nextjs-cache": "HIT"
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "%20",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": null,
+        "x-matched-path": null,
+        "x-nextjs-cache": "HIT"
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "boat-1%2Fextra",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "x-vercel-cache": null,
+        "x-matched-path": null,
+        "x-nextjs-cache": "HIT"
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "sitemapStatus": 200,
+      "count": 0,
+      "invalidIncluded": false
+    }
+  ],
+  "verification": {
+    "typecheck": "PASS",
+    "diff": "PASS",
+    "build": "PASS",
+    "targeted": "6/6 PASS",
+    "lint": "PASS",
+    "total": "1159/1159 PASS",
+    "allLocalSpotHttp": "1405/1405 HTTP 200"
+  },
+  "deployment": {
+    "preview": {
+      "state": "READY",
+      "id": "dpl_6cFqgEJKWXBkTFFh8xdZrt8wo7Xd",
+      "url": "https://blue-marina-zb1ndj583-chiweon.vercel.app"
+    },
+    "sha": "0a5e7bffc4d950e39821902e25c745fec66e6702",
+    "production": {
+      "id": "dpl_9yZgDJkMsiUPA45RrELFVd4n6kV1",
+      "sha": "0a5e7bffc4d950e39821902e25c745fec66e6702",
+      "state": "READY",
+      "url": "https://blue-marina.vercel.app"
+    }
+  },
+  "safety": {
+    "canonicalDataMutation": 0,
+    "dbApply": 0,
+    "holdPolicyMutation": 0,
+    "backendActivation": 0,
+    "hudCodeMutation": 0
+  },
+  "git": {
+    "codeAndTestFiles": 2,
+    "unrelatedPreserved": true,
+    "reportDocs": "Post-deployment evidence remains unstaged",
+    "existingRelatedMetadataGuard": "Adopted into shared lookup",
+    "headOriginMatch": true,
+    "staged": 0
+  },
+  "previewEvidence": [
+    {
+      "id": "not-a-real-spot",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "MISS",
+        "x-matched-path": "/404",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "boat-1",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "PRERENDER",
+        "x-matched-path": "/fishing-spots/boat-1",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": false,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": true,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "boat-128",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "PRERENDER",
+        "x-matched-path": "/fishing-spots/boat-128",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": false,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": true,
+      "mapHold": false,
+      "navHold": true
+    },
+    {
+      "id": "boat-60",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "PRERENDER",
+        "x-matched-path": "/fishing-spots/boat-60",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": false,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": true,
+      "mapHold": true,
+      "navHold": true
+    },
+    {
+      "id": "boat-999999",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "HIT",
+        "x-matched-path": "/404",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "%25",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "HIT",
+        "x-matched-path": "/404",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "%20",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "HIT",
+        "x-matched-path": "/404",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "boat-1%2Fextra",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "HIT",
+        "x-matched-path": "/404",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "sitemapStatus": 200,
+      "count": 0,
+      "invalidIncluded": false
+    }
+  ],
+  "productionEvidence": [
+    {
+      "id": "not-a-real-spot",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "MISS",
+        "x-matched-path": "/404",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "boat-1",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "PRERENDER",
+        "x-matched-path": "/fishing-spots/boat-1",
+        "x-nextjs-cache": null
+      },
+      "canonical": "https://blue-marina.vercel.app/fishing-spots/boat-1",
+      "noindex": false,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": true,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "boat-128",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "PRERENDER",
+        "x-matched-path": "/fishing-spots/boat-128",
+        "x-nextjs-cache": null
+      },
+      "canonical": "https://blue-marina.vercel.app/fishing-spots/boat-128",
+      "noindex": false,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": true,
+      "mapHold": false,
+      "navHold": true
+    },
+    {
+      "id": "boat-60",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "PRERENDER",
+        "x-matched-path": "/fishing-spots/boat-60",
+        "x-nextjs-cache": null
+      },
+      "canonical": "https://blue-marina.vercel.app/fishing-spots/boat-60",
+      "noindex": false,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": true,
+      "mapHold": true,
+      "navHold": true
+    },
+    {
+      "id": "boat-999999",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "HIT",
+        "x-matched-path": "/404",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "%25",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "HIT",
+        "x-matched-path": "/404",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "%20",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "HIT",
+        "x-matched-path": "/404",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "id": "boat-1%2Fextra",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-vercel-cache": "HIT",
+        "x-matched-path": "/404",
+        "x-nextjs-cache": null
+      },
+      "canonical": null,
+      "noindex": true,
+      "notFoundUI": true,
+      "next404": false,
+      "loading": true,
+      "conditions": false,
+      "mapHold": false,
+      "navHold": false
+    },
+    {
+      "sitemapStatus": 200,
+      "count": 1424,
+      "invalidIncluded": false
+    }
+  ],
+  "productionBrowser": {
+    "checks": [
+      {
+        "id": "boat-1",
+        "status": 200,
+        "h1": "남해도 동부·신수도·창선도 - 벽재마을앞입표부근해상",
+        "canonical": "https://blue-marina.vercel.app/fishing-spots/boat-1",
+        "noindex": false,
+        "conditions": [
+          "/fishing-spots/conditions?spotId=boat-1&speciesId=BM-SPECIES-000755&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-1",
+          "/fishing-spots/conditions?spotId=boat-1&speciesId=BM-SPECIES-000188&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-1",
+          "/fishing-spots/conditions?spotId=boat-1&speciesId=BM-SPECIES-001164&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-1",
+          "/fishing-spots/conditions?spotId=boat-1&speciesId=BM-SPECIES-000002&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-1",
+          "/fishing-spots/conditions?spotId=boat-1&speciesId=BM-SPECIES-000012&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-1"
+        ],
+        "mapHold": false,
+        "navHold": false
+      },
+      {
+        "id": "boat-128",
+        "status": 200,
+        "h1": "연평도 - 구지둔턱",
+        "canonical": "https://blue-marina.vercel.app/fishing-spots/boat-128",
+        "noindex": false,
+        "conditions": [
+          "/fishing-spots/conditions?spotId=boat-128&speciesId=BM-SPECIES-000465&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-128",
+          "/fishing-spots/conditions?spotId=boat-128&speciesId=BM-SPECIES-000012&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-128",
+          "/fishing-spots/conditions?spotId=boat-128&speciesId=BM-SPECIES-000097&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-128",
+          "/fishing-spots/conditions?spotId=boat-128&speciesId=BM-SPECIES-000188&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-128",
+          "/fishing-spots/conditions?spotId=boat-128&speciesId=BM-SPECIES-001164&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-128"
+        ],
+        "mapHold": false,
+        "navHold": true
+      },
+      {
+        "id": "boat-60",
+        "status": 200,
+        "h1": "두미도 - 청석골",
+        "canonical": "https://blue-marina.vercel.app/fishing-spots/boat-60",
+        "noindex": false,
+        "conditions": [
+          "/fishing-spots/conditions?spotId=boat-60&speciesId=BM-SPECIES-000751&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-60",
+          "/fishing-spots/conditions?spotId=boat-60&speciesId=BM-SPECIES-000279&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-60",
+          "/fishing-spots/conditions?spotId=boat-60&speciesId=BM-SPECIES-001164&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-60",
+          "/fishing-spots/conditions?spotId=boat-60&speciesId=BM-SPECIES-000755&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-60",
+          "/fishing-spots/conditions?spotId=boat-60&speciesId=BM-SPECIES-000188&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-60",
+          "/fishing-spots/conditions?spotId=boat-60&speciesId=BM-SPECIES-000002&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-60"
+        ],
+        "mapHold": true,
+        "navHold": true
+      },
+      {
+        "id": "not-a-real-spot",
+        "status": 404,
+        "h1": "요청한 정보를 찾을 수 없습니다",
+        "canonical": null,
+        "noindex": true,
+        "conditions": [],
+        "mapHold": false,
+        "navHold": false
+      }
+    ],
+    "hud": {
+      "hudOverlap": false,
+      "layerOverlap": false,
+      "overflow": false,
+      "toggle": true,
+      "layerToggle": true,
+      "zoomChanged": true,
+      "dragChanged": true,
+      "mapClick": false
+    },
+    "errors": []
+  },
+  "browserLimitations": [
+    "HUD smoke confirms toggle, layer toggle, rendered-map drag/zoom and collision-free controls. Additional map-click check did not observe a destination change; no claim of that optional assertion passing.",
+    "No physical GPS/touch-device verification in this task."
+  ],
+  "localServerObservation": "Next.js local start logged Internal: NoFallbackError for rejected paths; responses were 404, no 500 or server exit occurred, and all 1405 known pages returned 200. Production rejected paths matched /404."
+}
