@@ -1,0 +1,1203 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-24T11:04:35.881Z",
+  "decision": "PRODUCTION_INFORMATIONAL_RELEASE_SUCCESS_WITH_LIMITATIONS",
+  "rollback": {
+    "status": "ROLLBACK_NOT_REQUIRED",
+    "action": "NONE",
+    "previousDeployment": "dpl_2eWCYfYEbaFrkvj28XHW1hwXXPRx",
+    "reason": "No new public crash, Kakao failure, canonical failure or backend activation. Existing Conditions source-disable and navigation usability limitations explicitly retained."
+  },
+  "phaseA": {
+    "baseline": "fabbb8d7801baf2841d9644bef592686ca49c636",
+    "releaseHead": "0625b2f13d161ea134a89451d54dd046ff79dd1c",
+    "message": "fix(release): correct production canonical metadata",
+    "files": 17,
+    "push": "SUCCESS",
+    "unrelatedIncluded": 0,
+    "mixedFile": "Spot detail: canonical import/spread staged; pre-existing notFound change left unstaged",
+    "targeted": "20/20 PASS",
+    "total": "1133/1133 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "diff": "PASS"
+  },
+  "deployment": {
+    "provider": "Vercel",
+    "id": "dpl_HcRHZvpabQsFj9ibCwsqQPTcX1JP",
+    "url": "https://blue-marina.vercel.app",
+    "immutableUrl": "https://blue-marina-ayz9pa7hp-chiweon.vercel.app",
+    "sha": "0625b2f13d161ea134a89451d54dd046ff79dd1c",
+    "status": "READY",
+    "build": "PASS",
+    "method": "GitHub main push; remote build of exact commit; no local dirty upload",
+    "shaMatch": true
+  },
+  "env": {
+    "siteUrl": "https://blue-marina.vercel.app",
+    "scope": "Production",
+    "siteUrlVerification": "Previously set; Production inventory plus deployed self canonicals/sitemap confirm value",
+    "kakaoKeyProduction": "PRESENT",
+    "kakaoProductionDomain": "Previously registered and now browser SDK HTTP 200",
+    "backendFlags": {
+      "charter": "OFF_DEFAULT",
+      "market": "OFF_DEFAULT",
+      "marketImageUpload": "OFF_DEFAULT",
+      "account": "OFF_DEFAULT",
+      "community": "LOCAL_ONLY"
+    },
+    "newEnvChanges": 0
+  },
+  "kakao": {
+    "sdkHttpStatuses": [
+      200,
+      200,
+      200
+    ],
+    "mimeType": "text/javascript",
+    "windowKakaoMaps": true,
+    "tiles": true,
+    "markers": true,
+    "layers": true,
+    "fallbackHidden": true,
+    "domainMismatched": 0
+  },
+  "navigation": {
+    "mapLibreCanvas": true,
+    "hud": true,
+    "headingScaleAndReticle": true,
+    "bearingAndDistance": "Placeholders retained with GPS OFF; live numeric guidance not tested",
+    "hudToggleAndReloadPersistence": "PASS",
+    "mobileLayerOpenClose": "PASS",
+    "hudPointerEvents": "none",
+    "dragInput": "EXECUTED",
+    "wheelInput": "EXECUTED",
+    "zoomButton": "BLOCKED_BY_HUD_BUTTON_AT_390PX",
+    "physicalPinch": "NOT_TESTED",
+    "safeRouteInference": 0,
+    "landReefDepthAvoidanceInference": 0,
+    "officialEquipmentReplacementClaim": 0
+  },
+  "fishing": {
+    "spots": 1405,
+    "detailSamples": [
+      "boat-1",
+      "boat-128",
+      "boat-60"
+    ],
+    "conditionsLinksPresent": true,
+    "safetyHoldPolicies": "Normal navigation CTA; boat-128 map warning/nav blocked; boat-60 map and nav blocked",
+    "conditionSelector": 38,
+    "conditionsLiveResult": "BLOCKED_SOURCE_DISABLED",
+    "conditionsSources": [
+      {
+        "source": "nifs-risa",
+        "status": 503,
+        "code": "SOURCE_DISABLED"
+      },
+      {
+        "source": "nifs-femo-sea",
+        "status": 503,
+        "code": "SOURCE_DISABLED"
+      }
+    ],
+    "profileContextLive": "NOT_VERIFIED; source selection cannot load stations",
+    "canonicalDataset": 1258,
+    "fishPublicLocalItems": 336,
+    "fishNote": "Canonical baseline validated locally; public /fish renders the separate 336-item local guide, not all 1258 records",
+    "scoringRankingProbability": 0
+  },
+  "services": {
+    "charter": "Honest empty; no realtime seat/booking claim",
+    "market": "Honest empty; public API listings []",
+    "community": "Honest empty; draft local-only statement",
+    "account": "Auth environment missing; login unavailable clearly shown",
+    "study": "HTTP 200",
+    "exam": "HTTP 200"
+  },
+  "http": [
+    {
+      "path": "/",
+      "status": 200,
+      "canonical": [
+        "https://blue-marina.vercel.app"
+      ],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/today-sea",
+      "status": 200,
+      "canonical": [
+        "https://blue-marina.vercel.app/today-sea"
+      ],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/sea",
+      "status": 200,
+      "canonical": [
+        "https://blue-marina.vercel.app/sea"
+      ],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/sea/navigation",
+      "status": 200,
+      "canonical": [
+        "https://blue-marina.vercel.app/sea/navigation"
+      ],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/fishing-spots",
+      "status": 200,
+      "canonical": [
+        "https://blue-marina.vercel.app/fishing-spots"
+      ],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/fishing-spots/conditions",
+      "status": 200,
+      "canonical": [
+        "https://blue-marina.vercel.app/fishing-spots/conditions"
+      ],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/fish",
+      "status": 200,
+      "canonical": [
+        "https://blue-marina.vercel.app/fish"
+      ],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/charters",
+      "status": 200,
+      "canonical": [
+        "https://blue-marina.vercel.app/charters"
+      ],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/market",
+      "status": 200,
+      "canonical": [
+        "https://blue-marina.vercel.app/market"
+      ],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/community",
+      "status": 200,
+      "canonical": [
+        "https://blue-marina.vercel.app/community"
+      ],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/license-guide",
+      "status": 200,
+      "canonical": [
+        "https://blue-marina.vercel.app/license-guide"
+      ],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/study",
+      "status": 200,
+      "canonical": [],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/exam",
+      "status": 200,
+      "canonical": [],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/fishing-spots/boat-1",
+      "status": 200,
+      "canonical": [
+        "https://blue-marina.vercel.app/fishing-spots/boat-1"
+      ],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/fishing-spots/boat-128",
+      "status": 200,
+      "canonical": [
+        "https://blue-marina.vercel.app/fishing-spots/boat-128"
+      ],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/fishing-spots/boat-60",
+      "status": 200,
+      "canonical": [
+        "https://blue-marina.vercel.app/fishing-spots/boat-60"
+      ],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/fishing-spots/not-a-real-spot",
+      "status": 200,
+      "canonical": [],
+      "robots": [
+        "noindex",
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/account",
+      "status": 200,
+      "canonical": [],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/charters/onboarding",
+      "status": 200,
+      "canonical": [],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/charters/admin/submissions",
+      "status": 200,
+      "canonical": [],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/market/new",
+      "status": 200,
+      "canonical": [],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/market/admin/listings",
+      "status": 200,
+      "canonical": [],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/community/new",
+      "status": 200,
+      "canonical": [],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/reservations",
+      "status": 200,
+      "canonical": [],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "canonical": [],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      },
+      "body": "User-Agent: *\nAllow: /\nAllow: /today-sea\nAllow: /sea\nAllow: /fishing-spots\nAllow: /fish\nAllow: /license-guide\nAllow: /study\nAllow: /theory\nAllow: /practice\nDisallow: /api/\nDisallow: /account/\nDisallow: /charters/admin/\nDisallow: /market/admin/\nDisallow: /charters/onboarding\nDisallow: /market/new\nDisallow: /community/new\nDisallow: /reservations\nDisallow: /dev-audit/\n\nSitemap: https://blue-marina.vercel.app/sitemap.xml\n"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "canonical": [],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      },
+      "sitemap": {
+        "total": 1424,
+        "unique": 1424,
+        "dynamic": 1405,
+        "allProduction": true
+      }
+    },
+    {
+      "path": "/manifest.json",
+      "status": 200,
+      "canonical": [],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      },
+      "manifest": {
+        "name": "Blue Marina",
+        "short_name": "BluePass",
+        "description": "대한민국 바다낚시, 선상낚시, 해양레저 포털",
+        "id": "/",
+        "start_url": "/",
+        "scope": "/",
+        "display": "standalone",
+        "display_override": [
+          "standalone",
+          "minimal-ui",
+          "browser"
+        ],
+        "background_color": "#F0F8FF",
+        "theme_color": "#0F2D52",
+        "orientation": "portrait",
+        "categories": [
+          "sports",
+          "navigation",
+          "education"
+        ],
+        "prefer_related_applications": false,
+        "icons": [
+          {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+          },
+          {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+          }
+        ],
+        "shortcuts": [
+          {
+            "name": "오늘의 바다",
+            "short_name": "바다",
+            "description": "조석, 물때, 해상날씨 정보를 확인합니다.",
+            "url": "/sea-info",
+            "icons": [
+              {
+                "src": "/icon-192.png",
+                "sizes": "192x192",
+                "type": "image/png"
+              }
+            ]
+          },
+          {
+            "name": "어종도감",
+            "short_name": "어종",
+            "description": "바다낚시 어종백과를 확인합니다.",
+            "url": "/fish",
+            "icons": [
+              {
+                "src": "/icon-192.png",
+                "sizes": "192x192",
+                "type": "image/png"
+              }
+            ]
+          },
+          {
+            "name": "일반조종면허 학습",
+            "short_name": "일반",
+            "description": "일반조종면허 문제은행을 시작합니다.",
+            "url": "/study?license=general",
+            "icons": [
+              {
+                "src": "/icon-192.png",
+                "sizes": "192x192",
+                "type": "image/png"
+              }
+            ]
+          },
+          {
+            "name": "요트조종면허 학습",
+            "short_name": "요트",
+            "description": "요트조종면허 문제은행을 시작합니다.",
+            "url": "/study?license=yacht",
+            "icons": [
+              {
+                "src": "/icon-192.png",
+                "sizes": "192x192",
+                "type": "image/png"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "/icon-192.png",
+      "status": 200,
+      "canonical": [],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/icon-512.png",
+      "status": 200,
+      "canonical": [],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      }
+    },
+    {
+      "path": "/sw.js",
+      "status": 200,
+      "canonical": [],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": null
+      },
+      "privateBypass": [
+        {
+          "path": "/account",
+          "present": true
+        },
+        {
+          "path": "/api/",
+          "present": true
+        },
+        {
+          "path": "/market/new",
+          "present": true
+        },
+        {
+          "path": "/community/new",
+          "present": true
+        }
+      ]
+    },
+    {
+      "path": "/api/account",
+      "status": 503,
+      "canonical": [],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": "noindex, nofollow"
+      },
+      "response": "{\"error\":\"ACCOUNT_BACKEND_DISABLED\"}"
+    },
+    {
+      "path": "/api/market/listings",
+      "status": 200,
+      "canonical": [],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": "noindex, nofollow"
+      },
+      "response": "{\"ok\":true,\"listings\":[]}"
+    },
+    {
+      "path": "/api/charters/supply/submissions",
+      "status": 401,
+      "canonical": [],
+      "robots": [],
+      "headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), payment=(), usb=()",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+        "x-robots-tag": "noindex, nofollow"
+      },
+      "response": "{\"ok\":false,\"code\":\"AUTH_REQUIRED\"}"
+    }
+  ],
+  "browser": [
+    {
+      "width": 390,
+      "height": 844,
+      "mode": "Desktop Chromium viewport emulation; not a physical touch device",
+      "routes": [
+        {
+          "path": "/",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": true,
+          "visibleNavigation": [
+            {
+              "label": null,
+              "visible": true,
+              "text": "홈\n바다\n출조\n어종\n가이드"
+            }
+          ],
+          "smallButtonCount": 0
+        },
+        {
+          "path": "/sea",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": true,
+          "loadedKakaoImages": 16,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": true,
+          "visibleNavigation": [
+            {
+              "label": null,
+              "visible": true,
+              "text": "홈\n바다\n출조\n어종\n가이드"
+            }
+          ],
+          "smallButtonCount": 7
+        },
+        {
+          "path": "/sea/navigation",
+          "overflow": false,
+          "canvas": 1,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": "true",
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [],
+          "smallButtonCount": 12
+        },
+        {
+          "path": "/fishing-spots",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [
+            {
+              "label": null,
+              "visible": true,
+              "text": "홈\n바다\n출조\n어종\n가이드"
+            }
+          ],
+          "smallButtonCount": 4
+        },
+        {
+          "path": "/fish",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [
+            {
+              "label": null,
+              "visible": true,
+              "text": "홈\n바다\n출조\n어종\n가이드"
+            }
+          ],
+          "smallButtonCount": 8
+        },
+        {
+          "path": "/charters",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [
+            {
+              "label": null,
+              "visible": true,
+              "text": "홈\n바다\n출조\n어종\n가이드"
+            }
+          ],
+          "smallButtonCount": 1
+        },
+        {
+          "path": "/market",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [
+            {
+              "label": null,
+              "visible": true,
+              "text": "홈\n바다\n출조\n어종\n가이드"
+            }
+          ],
+          "smallButtonCount": 1
+        },
+        {
+          "path": "/community",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [
+            {
+              "label": null,
+              "visible": true,
+              "text": "홈\n바다\n출조\n어종\n가이드"
+            }
+          ],
+          "smallButtonCount": 1
+        },
+        {
+          "path": "/account",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [
+            {
+              "label": "계정 메뉴",
+              "visible": true,
+              "text": "계정 홈\n프로필\n저장한 콘텐츠\n내 활동"
+            },
+            {
+              "label": null,
+              "visible": true,
+              "text": "홈\n바다\n출조\n어종\n가이드"
+            }
+          ],
+          "smallButtonCount": 1
+        },
+        {
+          "path": "/license-guide",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [
+            {
+              "label": null,
+              "visible": true,
+              "text": "홈\n바다\n출조\n어종\n가이드"
+            }
+          ],
+          "smallButtonCount": 1
+        }
+      ],
+      "pageErrors": [],
+      "commandFailures": []
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "mode": "Desktop Chromium viewport emulation; not a physical touch device",
+      "routes": [
+        {
+          "path": "/",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": true,
+          "visibleNavigation": [
+            {
+              "label": "주요 메뉴",
+              "visible": true,
+              "text": "HOME\nSEA\nFISHING\nFISH\nMARKET\nGUIDE"
+            }
+          ],
+          "smallButtonCount": 0
+        },
+        {
+          "path": "/sea",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": true,
+          "loadedKakaoImages": 31,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": true,
+          "visibleNavigation": [
+            {
+              "label": "주요 메뉴",
+              "visible": true,
+              "text": "HOME\nSEA\nFISHING\nFISH\nMARKET\nGUIDE"
+            }
+          ],
+          "smallButtonCount": 7
+        },
+        {
+          "path": "/sea/navigation",
+          "overflow": false,
+          "canvas": 1,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": "true",
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [],
+          "smallButtonCount": 12
+        },
+        {
+          "path": "/fishing-spots",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [
+            {
+              "label": "주요 메뉴",
+              "visible": true,
+              "text": "HOME\nSEA\nFISHING\nFISH\nMARKET\nGUIDE"
+            }
+          ],
+          "smallButtonCount": 3
+        },
+        {
+          "path": "/fish",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [
+            {
+              "label": "주요 메뉴",
+              "visible": true,
+              "text": "HOME\nSEA\nFISHING\nFISH\nMARKET\nGUIDE"
+            }
+          ],
+          "smallButtonCount": 8
+        },
+        {
+          "path": "/charters",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [
+            {
+              "label": "주요 메뉴",
+              "visible": true,
+              "text": "HOME\nSEA\nFISHING\nFISH\nMARKET\nGUIDE"
+            }
+          ],
+          "smallButtonCount": 1
+        },
+        {
+          "path": "/market",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [
+            {
+              "label": "주요 메뉴",
+              "visible": true,
+              "text": "HOME\nSEA\nFISHING\nFISH\nMARKET\nGUIDE"
+            }
+          ],
+          "smallButtonCount": 1
+        },
+        {
+          "path": "/community",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [
+            {
+              "label": "주요 메뉴",
+              "visible": true,
+              "text": "HOME\nSEA\nFISHING\nFISH\nMARKET\nGUIDE"
+            }
+          ],
+          "smallButtonCount": 1
+        },
+        {
+          "path": "/account",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [
+            {
+              "label": "주요 메뉴",
+              "visible": true,
+              "text": "HOME\nSEA\nFISHING\nFISH\nMARKET\nGUIDE"
+            },
+            {
+              "label": "계정 메뉴",
+              "visible": true,
+              "text": "계정 홈\n프로필\n저장한 콘텐츠\n내 활동"
+            }
+          ],
+          "smallButtonCount": 1
+        },
+        {
+          "path": "/license-guide",
+          "overflow": false,
+          "canvas": 0,
+          "kakaoMaps": false,
+          "loadedKakaoImages": 0,
+          "hud": null,
+          "serviceWorkerControlled": true,
+          "video": false,
+          "visibleNavigation": [
+            {
+              "label": "주요 메뉴",
+              "visible": true,
+              "text": "HOME\nSEA\nFISHING\nFISH\nMARKET\nGUIDE"
+            }
+          ],
+          "smallButtonCount": 1
+        }
+      ],
+      "pageErrors": [],
+      "commandFailures": []
+    }
+  ],
+  "pwa": {
+    "manifest": 200,
+    "icons": [
+      200,
+      200
+    ],
+    "serviceWorkerAsset": 200,
+    "registration": {
+      "scope": "https://blue-marina.vercel.app/",
+      "script": "https://blue-marina.vercel.app/sw.js",
+      "state": "activated"
+    },
+    "privateCacheBypassContract": "PRESERVED",
+    "physicalDeviceInstallUpdateOffline": "NOT_VERIFIED"
+  },
+  "security": {
+    "headers": "nosniff / strict-origin-when-cross-origin / Permissions-Policy / SAMEORIGIN confirmed",
+    "hsts": "max-age=63072000; includeSubDomains; preload",
+    "apiRobots": "noindex, nofollow",
+    "csp": "NOT_APPLIED",
+    "runtimeErrorScan": "No error logs returned for exact deployment during initial smoke window; no claim of continuous monitoring"
+  },
+  "limitations": [
+    {
+      "id": "P2_INVALID_SPOT",
+      "detail": "Invalid spot HTTP 200 with noindex and no canonical remains."
+    },
+    {
+      "id": "P3_DEVICE_PWA",
+      "detail": "Chromium registration verified; physical-device install/update/offline not tested."
+    },
+    {
+      "id": "CSP",
+      "detail": "No CSP applied."
+    },
+    {
+      "id": "CONDITIONS_SOURCE_DISABLED",
+      "detail": "Both NIFS environment endpoints return 503 SOURCE_DISABLED; 38-option selector renders but live profileContext flow is unavailable. No flags enabled."
+    },
+    {
+      "id": "NAVIGATION_MOBILE_CONTROLS",
+      "detail": "HUD toggle overlaps MapLibre zoom-in button at 390px; drag/wheel commands executed. Some buttons are below 44px. Navigation source unchanged by release."
+    },
+    {
+      "id": "MAP_VISUAL_OVERLAY",
+      "detail": "Existing fish assistant artwork overlaps part of map/HUD; retained, no presentation rewrite in this release."
+    },
+    {
+      "id": "FISH_GUIDE_SCOPE",
+      "detail": "Public fish guide displays 336 local items; 1258 canonical records are a separate data baseline."
+    },
+    {
+      "id": "GPS",
+      "detail": "No real GPS/compass or physical touch/pinch test; bearing/distance placeholders preserved."
+    }
+  ],
+  "verification": {
+    "targeted": "7/7 PASS",
+    "total": "1140/1140 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS; production-like local build 58/58",
+    "diff": "PASS"
+  },
+  "invariants": {
+    "dbApply": 0,
+    "migrationApply": 0,
+    "storageApply": 0,
+    "backendActivation": 0,
+    "paymentEscrowChat": 0
+  },
+  "gitAfterDeploy": {
+    "evidenceStaged": 0,
+    "evidenceCommit": 0,
+    "evidencePush": 0,
+    "unrelatedPreserved": true
+  },
+  "evidenceNote": "HTTP/Chromium probes executed against the production alias after Vercel READY. Browser command probes and screenshots retained in local temporary storage; this report retains sanitized results without SDK keys."
+}
