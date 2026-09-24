@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "decision": "PREVIEW_DEPLOYMENT_READY_WITH_LIMITATIONS",
+  "publicInformationalRelease": "PUBLIC_INFORMATIONAL_RELEASE_HOLD",
+  "baseline": "6cbff7413ab2fce487e4097b750994c41ea856b0",
+  "deployment": {
+    "provider": "Vercel",
+    "target": "preview",
+    "id": "dpl_GZQ91QuGHSWCLcF58Bhtqz8jXxCB",
+    "url": "https://blue-marina-btoin4yw9-chiweon.vercel.app",
+    "region": "iad1",
+    "framework": "Next.js 15.5.19",
+    "nodeVersion": "24.x",
+    "productionTouched": false,
+    "dbApply": 0,
+    "backendActivation": 0
+  },
+  "environment": {
+    "NEXT_PUBLIC_KAKAO_MAP_APP_KEY": "PRESENT_IN_PREVIEW_SENSITIVE",
+    "NEXT_PUBLIC_SITE_URL": "MISSING",
+    "supabasePublicVariables": "NOT_CONFIGURED_IN_PREVIEW",
+    "backendFeatureFlags": "NOT_CONFIGURED_DEFAULT_OFF",
+    "secretValuesReported": 0
+  },
+  "gates": {
+    "deploy": "PASS",
+    "routes": "PASS",
+    "seo": "PASS_WITH_LIMITATIONS",
+    "pwa": "PASS_WITH_LIMITATIONS",
+    "security": "PASS",
+    "map": "BLOCKED",
+    "mobile": "PASS_WITH_LIMITATIONS",
+    "desktop": "PASS_WITH_LIMITATIONS",
+    "backendLimits": "PASS"
+  },
+  "routeSmoke": {
+    "passed": ["/", "/today-sea", "/sea", "/sea/navigation", "/fishing-spots", "/fishing-spots/conditions", "/fish", "/charters", "/market", "/community", "/license-guide", "/account"],
+    "status": 200,
+    "consoleErrors": 0
+  },
+  "dynamicSamples": {
+    "boat-60": "200; safety hold content rendered",
+    "boat-128": "200; safety warning content rendered",
+    "boat-321": "200; safety hold content rendered",
+    "unknownSpot": "Next 404 fallback and noindex rendered, HTTP status remained 200"
+  },
+  "seo": {
+    "previewXRobotsTag": "noindex",
+    "robots": "200; expected public allow and private/API disallow rules",
+    "sitemap": "200; valid empty XML because NEXT_PUBLIC_SITE_URL is unset",
+    "canonical": "absent by design; no localhost or preview canonical",
+    "metadata": "title, description, Open Graph, Twitter and manifest rendered"
+  },
+  "headers": {
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), payment=(), usb=()",
+    "X-Frame-Options": "SAMEORIGIN",
+    "previewXRobotsTag": "noindex",
+    "apiXRobotsTag": "noindex, nofollow",
+    "hsts": "Vercel preview response: max-age=63072000; includeSubDomains; preload"
+  },
+  "pwa": {
+    "manifest": "200",
+    "serviceWorker": "200",
+    "privatePathBypass": "source and deployment artifact verified",
+    "registrationAndCacheStorage": "NOT_VERIFIED: browser automation context does not expose navigator"
+  },
+  "map": {
+    "kakao": "BLOCKED: SDK script loads but preview renders its safe SDK/domain configuration error state",
+    "mapLibreNavigation": "PASS: canvas and HUD render at desktop and mobile viewport",
+    "safeRouteInference": 0,
+    "landReefDepthAvoidance": 0
+  },
+  "issues": {
+    "P0": [],
+    "P1": [
+      { "id": "PREVIEW-001", "title": "Kakao map does not load on preview domain", "nextAction": "Register the final preview/production domain in Kakao Maps JavaScript key allowed domains, then redeploy and recheck /sea." }
+    ],
+    "P2": [
+      { "id": "PREVIEW-002", "title": "Unknown Fishing Spot streams a Next 404 fallback with HTTP 200", "nextAction": "Confirm the desired non-streaming 404 status behavior in a production-like edge test before search indexing is enabled." },
+      { "id": "PREVIEW-003", "title": "Production site URL is absent", "nextAction": "Set NEXT_PUBLIC_SITE_URL only to the final HTTPS production origin before enabling canonical URLs and a populated sitemap." },
+      { "id": "PREVIEW-004", "title": "Fishing Spot listing HTML is large", "nextAction": "Measure client payload and pagination/filtering strategy separately; do not block this rehearsal on it." }
+    ],
+    "P3": [
+      { "id": "PREVIEW-005", "title": "PWA install/cache storage could not be inspected", "nextAction": "Use a browser runner with navigator/serviceWorker access for final installability verification." }
+    ]
+  },
+  "verification": {
+    "targeted": "4/4 PASS",
+    "total": "1093/1093 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS (58 static pages)",
+    "diffCheck": "PASS"
+  },
+  "git": { "staged": 0, "commit": 0, "push": 0 }
+}
