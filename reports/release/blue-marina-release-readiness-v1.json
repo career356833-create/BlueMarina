@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "decision": "WITH_BACKEND_ACTIVATION_BLOCKERS",
+  "releaseTier": "PUBLIC_INFORMATIONAL_RELEASE_READY",
+  "baseline": "3d9843d122c8e29c4d2470aca256db5c069fa6f1",
+  "gates": {
+    "static": "PASS",
+    "navigation": "PASS_WITH_LIMITATIONS",
+    "security": "PASS_WITH_LIMITATIONS",
+    "data": "PASS_WITH_LIMITATIONS",
+    "runtimeBackend": "BLOCKED",
+    "ux": "PASS_WITH_LIMITATIONS",
+    "seoPwa": "PASS_WITH_LIMITATIONS"
+  },
+  "surfaces": { "home": true, "sea": true, "fishing": true, "fish": true, "charter": true, "market": true, "community": true, "guide": true, "account": true, "legacyStudyRoutes": true },
+  "backend": {
+    "charter": "CODE_READY_MIGRATION_PRESENT_APPLY_UNKNOWN_E2E_BLOCKED",
+    "market": "CODE_READY_MIGRATION_PRESENT_STORAGE_APPLY_UNKNOWN_E2E_BLOCKED",
+    "account": "CODE_READY_MIGRATION_PRESENT_APPLY_UNKNOWN_E2E_BLOCKED",
+    "community": "LOCAL_ONLY_NO_SERVER_BACKEND"
+  },
+  "data": { "fishingSpots": 1405, "fishCanonical": 1258, "conditionProfiles": 38, "charterProductionRecords": 0, "marketProductionListings": 0, "communityProductionPosts": 0 },
+  "flags": { "CHARTER_SUPPLY_INTAKE_ENABLED": "FAIL_CLOSED", "MARKET_BACKEND_ENABLED": "FAIL_CLOSED", "MARKET_IMAGE_UPLOAD_ENABLED": "FAIL_CLOSED", "ACCOUNT_BACKEND_ENABLED": "FAIL_CLOSED" },
+  "p0": [],
+  "p1": [
+    { "id": "RR-001", "title": "Backend migrations and E2E activation are unverified", "surface": "Charter, Market, Account", "reason": "Migration artifacts exist but local/remote apply and authenticated production-like E2E were intentionally not run.", "nextAction": "Apply migrations in an isolated staging project, run RLS/auth/ownership E2E, then explicitly enable flags.", "dependencies": ["staging Supabase", "test identities"], "effort": "LARGE" },
+    { "id": "RR-002", "title": "Transaction surfaces have no production inventory", "surface": "Charter, Market, Community", "reason": "Charter records, Market listings, and Community posts are all zero or local-only.", "nextAction": "Ingest and review authoritative supply/content before claiming transactional availability.", "dependencies": ["RR-001", "source approval"], "effort": "LARGE" },
+    { "id": "RR-003", "title": "SEO indexing policy is incomplete", "surface": "all public routes", "reason": "Manifest, icons, and service worker exist, but repository audit found no robots, sitemap, or route-level canonical/noindex policy.", "nextAction": "Define and verify robots/sitemap/canonical and private-route noindex contracts.", "dependencies": ["deployment domain"], "effort": "MEDIUM" }
+  ],
+  "p2": [
+    { "id": "RR-004", "title": "Security header policy is not declared in Next config", "surface": "all routes", "reason": "No CSP, frame, referrer, permissions, or HSTS policy is configured in repository code.", "nextAction": "Audit host defaults and add a tested minimal policy.", "dependencies": ["third-party map/media inventory"], "effort": "MEDIUM" },
+    { "id": "RR-005", "title": "PWA installation and browser release matrix could not be rerun", "surface": "mobile and desktop", "reason": "In-app browser returned ERR_BLOCKED_BY_CLIENT for localhost, so install/update behavior and responsive verification could not be observed in this audit.", "nextAction": "Run PWA install/update plus 390x844 and 1280x900 matrix in a supported browser runner.", "dependencies": ["browser runner"], "effort": "SMALL" }
+  ],
+  "p3": [],
+  "verification": {
+    "targeted": "3/3 PASS",
+    "total": "1085/1085 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS (63 static pages)",
+    "diffCheck": "PASS"
+  },
+  "invariants": { "dbApply": 0, "productionActivation": 0, "secretValuesReported": 0, "gitPublication": 0 }
+}
