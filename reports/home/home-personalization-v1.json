@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "decision": "HOME_PERSONALIZATION_V1_READY_WITH_ENV_LIMITATIONS",
+  "homepageAuthority": {
+    "marineVideoHero": "PRESERVED",
+    "primaryServiceEntries": 6,
+    "secondaryServiceEntries": 2,
+    "placement": "AFTER_SERVICE_ENTRIES"
+  },
+  "states": ["UNAUTHENTICATED", "AUTHENTICATED", "AUTHENTICATED_WITH_BACKEND_LIMITATIONS"],
+  "sources": {
+    "profile": "ACCOUNT_SERVER_BACKED",
+    "savedItems": "ACCOUNT_SERVER_BACKED",
+    "marketActivity": "ACCOUNT_SERVER_BACKED_OWN_ROWS",
+    "recent": "DEVICE_LOCAL_ONLY",
+    "communityActivity": "DEVICE_LOCAL_DRAFTS_ONLY",
+    "charterInquiry": "UNAVAILABLE"
+  },
+  "limits": { "recentShown": 6, "recentStored": 30, "savedPerGroup": 2 },
+  "backendLimitations": {
+    "featureFlag": "ACCOUNT_BACKEND_ENABLED",
+    "default": "FAIL_CLOSED",
+    "fakeSyncedData": 0,
+    "homepageFailure": 0
+  },
+  "privacy": { "emailExposure": 0, "crossUserData": 0, "preciseLocation": 0 },
+  "safety": { "recommendation": 0, "ranking": 0, "personalizedScore": 0, "aiPersonalization": 0 },
+  "database": { "migration": 0, "localApply": 0, "remoteApply": 0 },
+  "verification": { "targeted": "6/6 PASS", "total": "1082/1082 PASS", "typecheck": "PASS", "lint": "PASS", "build": "PASS", "diffCheck": "PASS", "browser": "BLOCKED_BY_IN_APP_BROWSER_CLIENT" }
+}

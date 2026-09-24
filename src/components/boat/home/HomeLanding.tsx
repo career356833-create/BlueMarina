@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BottomNav } from "@/components/boat/BottomNav";
 import { MarineVideoHero } from "@/components/boat/home/MarineVideoHero";
+import { PersonalizedHomeSection } from "@/components/boat/home/PersonalizedHomeSection";
 import { platformServiceEntries } from "@/lib/platform/navigation";
 
 export function HomeLanding() {
@@ -36,6 +37,8 @@ export function HomeLanding() {
           </div>
         </div>
       </section>
+
+      <PersonalizedHomeSection />
 
       <footer className="bg-[#030b15] px-5 pb-24 pt-9 text-center sm:px-8 lg:pb-9">
         <p className="text-[10px] tracking-[0.34em] text-[#d5b477]">BLUE MARINA</p>
