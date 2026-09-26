@@ -1,0 +1,38 @@
+{
+  "decision": "TODAY_SEA_OPERATIONAL_HUB_READY_WITH_LIMITATIONS",
+  "route": "/today-sea",
+  "sources": [
+    { "name": "KMA marine forecast", "kind": "MODEL/FORECAST", "endpoint": "/api/sea-info/marine-forecast", "selection": "explicit Lzone/Szone" },
+    { "name": "KMA marine observations", "kind": "OBSERVED", "endpoint": "/api/sea-info/marine-observations", "selection": "explicit stationId" },
+    { "name": "KMA marine warnings", "kind": "REFERENCE", "endpoint": "/api/sea-info/weather-warnings" },
+    { "name": "KHOA tide prediction", "kind": "PREDICTION", "endpoint": "/api/sea-info/tide", "selection": "explicit audited stationId and date; default Asia/Seoul calendar date" },
+    { "name": "NIFS RISA water temperature", "kind": "OBSERVED", "endpoint": "/api/fishing-condition/environment/realtime", "selection": "explicit stationId" },
+    { "name": "KHOA navigation warnings", "kind": "REFERENCE", "endpoint": "/api/sea-info/navigation-warnings" }
+  ],
+  "statuses": ["AVAILABLE", "STALE", "DISABLED", "ERROR", "UNKNOWN"],
+  "failureIsolation": "per-source; /today-sea remains HTTP 200",
+  "mobile": { "targetWidthPx": 390, "horizontalOverflow": false, "bottomNavPreserved": true, "decorativeCaptainLauncherHidden": true },
+  "sourceCache": "existing API policies reused; no new upstream adapter",
+  "links": ["/sea", "/sea/navigation", "/fishing-spots/conditions"],
+  "safety": {
+    "safetyScore": 0,
+    "fishingScore": 0,
+    "recommendation": 0,
+    "nearestStationInference": 0,
+    "tideDepthInference": 0,
+    "automaticDestination": 0,
+    "femoActivation": 0
+  },
+  "limitations": [
+    "Live KMA and KHOA cards require their existing source keys and feature flags; unavailable sources display DISABLED or ERROR.",
+    "RISA source timezone is not documented; the original source time is shown without conversion.",
+    "Forecast selection requires official numeric Lzone/Szone identifiers; no geographic zone inference is performed."
+  ],
+  "verification": {
+    "targetedTests": "14/14 PASS",
+    "totalTests": "1206/1206 PASS",
+    "mobileViewport": "390x844; horizontal overflow 0; BottomNav visible; decorative launcher hidden",
+    "desktopViewport": "1280x900; two-column source cards; horizontal overflow 0"
+  },
+  "databaseApply": 0
+}

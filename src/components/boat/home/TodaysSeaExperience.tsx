@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Anchor, ArrowRight, Compass } from "lucide-react";
-import { SeaInterestCard } from "@/components/boat/home/SeaInterestCard";
 
 export const TODAYS_SEA_VIDEO_PATH = "/media/blue-marina-todays-sea.mp4";
 
@@ -14,34 +13,34 @@ function TripBriefingCard() {
         </div>
         <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200/15 bg-emerald-300/10 px-3 py-1 text-[11px] font-semibold text-emerald-200">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
-          조석 확인
+          자료별 상태 확인
         </span>
       </div>
 
       <dl className="divide-y divide-white/12 text-sm">
         <div className="grid grid-cols-[110px_1fr] gap-3 py-4">
-          <dt className="text-white/55">최적 출항 시간</dt>
-          <dd className="text-right font-medium text-white/90">관심 해역에서 확인</dd>
+          <dt className="text-white/55">해양기상</dt>
+          <dd className="text-right font-medium text-white/90">기상청 예보·관측</dd>
         </div>
         <div className="grid grid-cols-[110px_1fr] gap-3 py-4">
-          <dt className="text-white/55">주의 사항</dt>
-          <dd className="text-right font-medium text-white/90">출항 전 공식 예보 확인</dd>
+          <dt className="text-white/55">조석</dt>
+          <dd className="text-right font-medium text-white/90">해양조사원 예측</dd>
         </div>
         <div className="grid grid-cols-[110px_1fr] gap-3 py-4">
-          <dt className="text-white/55">추천 포인트</dt>
-          <dd className="text-right font-medium text-white/90">공식 출조거점 탐색</dd>
+          <dt className="text-white/55">수온</dt>
+          <dd className="text-right font-medium text-white/90">수산과학원 관측</dd>
         </div>
         <div className="grid grid-cols-[110px_1fr] gap-3 py-4">
-          <dt className="text-white/55">추천 서비스</dt>
-          <dd className="text-right font-medium text-white/90">출조 안전 가이드</dd>
+          <dt className="text-white/55">참고정보</dt>
+          <dd className="text-right font-medium text-white/90">기상특보·항행 공지</dd>
         </div>
       </dl>
 
       <Link
-        href="/fishing-spots"
+        href="#today-sea-data"
         className="mt-1 inline-flex min-h-12 w-full items-center justify-center gap-2 border border-white/30 px-4 text-sm font-semibold text-white transition hover:border-[#d5b477] hover:text-[#f3d49a]"
       >
-        상세 브리핑 보기
+        공공 데이터 확인
         <ArrowRight size={16} aria-hidden="true" />
       </Link>
     </aside>
@@ -97,7 +96,7 @@ export function TodaysSeaExperience({ showHeader = true }: TodaysSeaExperiencePr
       <div
         className={`relative z-10 mx-auto flex w-full max-w-[1540px] flex-1 flex-col justify-center px-5 pb-24 sm:px-8 sm:pb-28 lg:px-12 lg:pb-12 ${showHeader ? "pt-28 lg:pt-32" : "pt-20 lg:pt-24"}`}
       >
-        <div className="grid items-end gap-6 xl:grid-cols-[0.72fr_1.28fr_0.82fr] xl:gap-0">
+        <div className="grid items-end gap-6 xl:grid-cols-[1fr_0.8fr] xl:gap-12">
           <div className="pb-2 xl:pr-12">
             <div className="flex items-center gap-3 text-[#d5b477]">
               <Anchor size={19} strokeWidth={1.3} aria-hidden="true" />
@@ -114,9 +113,9 @@ export function TodaysSeaExperience({ showHeader = true }: TodaysSeaExperiencePr
               읽다
             </h1>
             <p className="mt-6 max-w-sm text-sm font-medium leading-7 text-white/62 sm:text-base">
-              변화하는 바다의 신호를 실시간으로 분석합니다.
+              기관별 관측·예보·예측 자료를 한곳에서 확인하세요.
               <br />
-              조위 데이터로 안전한 출조를 계획하세요.
+              지역과 정점을 직접 선택해 자료의 시각과 상태를 살펴보세요.
             </p>
             <Link
               href="/sea"
@@ -127,13 +126,12 @@ export function TodaysSeaExperience({ showHeader = true }: TodaysSeaExperiencePr
             </Link>
           </div>
 
-          <SeaInterestCard />
           <TripBriefingCard />
         </div>
 
         <div className="mt-8 hidden items-center justify-center border-t border-white/15 pt-7 text-center lg:flex">
           <div>
-            <p className="text-xs tracking-[0.28em] text-[#d5b477]">데이터가 만든 안전, 경험이 만든 가치</p>
+            <p className="text-xs tracking-[0.28em] text-[#d5b477]">공공 자료를 읽는 바다의 시작점</p>
             <p className="mt-3 font-serif text-[11px] tracking-[0.42em] text-white/65">BLUE MARINA</p>
           </div>
         </div>
