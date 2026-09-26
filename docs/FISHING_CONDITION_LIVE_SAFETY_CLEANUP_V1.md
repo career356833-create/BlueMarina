@@ -23,3 +23,9 @@ Initial page load and a species change alone make zero NIFS calls. Explicit sour
 ## Activation boundary
 
 RISA-only Production activation is a separate decision. It requires server-scoped `NIFS_RISA_API_KEY` and `NIFS_REALTIME_FISHING_ENABLED=true`, confirmed quota/cost terms, and successful Preview source/API/UI and failure-isolation smoke. `NIFS_FISHERY_ENVIRONMENT_ENABLED` remains off. The current Vercel inventory has no NIFS variables in Preview or Production. A working local key does not satisfy that gate. Production live-source activation, DB/Supabase apply and new scoring features are outside this change.
+
+## Deployment smoke (same code commit)
+
+The Git push of `5a45e2ef85a101d523fe80db351c728505e410dd` triggered the repository's linked Vercel Production deployment automatically. A clean, detached worktree at exactly that commit was used for a separate [Preview deployment](https://blue-marina-9a2lz4j5t-chiweon.vercel.app). Both reached Ready. The temporary deployment worktree was removed after the smoke check; the user's unrelated worktree remains intact.
+
+Preview's protected endpoint was checked through authenticated `vercel curl`: the initial selector contained 38 unique IDs; static and legacy hairtail profile requests returned `200 PARTIAL`; a request with an explicit but disabled RISA source retained profile and seasonality with all environment relations null; observation-only routes returned `SOURCE_DISABLED`. The [Production deployment](https://blue-marina.vercel.app) served the Conditions page at HTTP 200, the static read-model at `200 PARTIAL`, and both disabled observation-only APIs at HTTP 503. Vercel's environment inventory still contained zero NIFS-related variables. These checks verify the disabled-source information flow, not a live observation, installed PWA, or full browser interaction.

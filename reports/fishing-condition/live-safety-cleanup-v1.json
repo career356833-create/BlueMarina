@@ -54,8 +54,30 @@
     "remainingRisk": "serverless cold instances each maintain separate module cache"
   },
   "deployment": {
-    "previewExplicitDeploy": false,
+    "previewExplicitDeploy": true,
+    "previewUrl": "https://blue-marina-9a2lz4j5t-chiweon.vercel.app",
+    "previewState": "READY",
+    "previewSmoke": {
+      "selectorSpecies": 38,
+      "duplicateSelectorIds": 0,
+      "staticReadModel": "200 PARTIAL",
+      "legacyHairtailReadModel": "200 PARTIAL",
+      "selectedSourceFailure": "200 PARTIAL WITH PROFILE_AND_SEASONALITY",
+      "automaticObservationRelations": 0,
+      "observationOnly": "SOURCE_DISABLED",
+      "browserInteraction": "NOT_RUN"
+    },
     "productionExplicitDeploy": false,
+    "productionGitAutoDeploy": true,
+    "productionUrl": "https://blue-marina.vercel.app",
+    "productionState": "READY",
+    "productionSmoke": {
+      "conditionsPage": 200,
+      "staticReadModel": "200 PARTIAL",
+      "profileContext": "PRESENT",
+      "sourceStatuses": ["DISABLED", "DISABLED"],
+      "observationOnlyHttp": [503, 503]
+    },
     "risaFlagChanged": false,
     "femoFlagChanged": false,
     "databaseApply": false
