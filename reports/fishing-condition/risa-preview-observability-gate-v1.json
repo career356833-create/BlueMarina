@@ -1,0 +1,108 @@
+{
+  "version": "V1",
+  "decision": "RISA_OBSERVABILITY_GATE_PASS_WITH_LIMITATIONS",
+  "productionActivation": "RISA_PRODUCTION_ACTIVATION_READY",
+  "phaseACommit": "4fdfefea7cd22912feece1bad5c7d01da22e05f7",
+  "instrumentationCommit": "98510104a373641e0762dfe65821eb03802df26d",
+  "preview": {
+    "deploymentId": "dpl_GEJ8KHhSP1SMEnzWstvcC5eVEFyQ",
+    "url": "https://blue-marina-oq8q7yav5-chiweon.vercel.app",
+    "deployedSha": "98510104a373641e0762dfe65821eb03802df26d",
+    "state": "READY",
+    "risaHttp": 200,
+    "risaSourceStatusAtFinalCheck": "STALE",
+    "readModelHttp": 200,
+    "readModelAvailabilityAtFinalCheck": "PARTIAL",
+    "femoObservationHttp": 503,
+    "femoCode": "SOURCE_DISABLED",
+    "selectorSpecies": 38,
+    "profileContext": "PRESENT",
+    "seasonalityContext": "PRESENT",
+    "observationContext": "EXPLICIT_STATION_AND_DEPTH"
+  },
+  "browser": {
+    "authenticatedPreview": true,
+    "speciesSubmitted": ["감성돔", "농어", "조피볼락", "참돔"],
+    "stationId": "bgj8a",
+    "depthContext": "SURFACE",
+    "uiCrash": 0,
+    "criticalConsoleErrors": 0,
+    "consoleWarnings": 0,
+    "browserAssetUrls": 45,
+    "browserScriptAssets": 23,
+    "nifsAssetUrls": 0,
+    "keyQueryAssetUrls": 0,
+    "observedSpeciesChangeCacheHits": 3
+  },
+  "upstream": {
+    "coldConcurrentRequests": 5,
+    "coldHttpSuccess": 5,
+    "coldInstances": 4,
+    "coldCacheMisses": 4,
+    "coldInflightJoins": 1,
+    "coldActualNifsFetches": 8,
+    "endpointsPerColdInstance": 2,
+    "sameInstanceDedupe": "PASS",
+    "crossInstanceDedupe": "NOT_GUARANTEED",
+    "warmRepeatRequests": 3,
+    "warmCdnHits": 3,
+    "warmAdditionalNifsFetches": 0,
+    "speciesChangeAdditionalNifsFetches": 0,
+    "finalCacheHitEvents": 4,
+    "finalActualNifsFetches": 8
+  },
+  "risa": {
+    "stations": 41,
+    "observations": 65,
+    "latestObservedAtSourceLocal": "2026-09-26T13:30:00",
+    "temperatureUnit": "degC",
+    "sourceTimezone": "UNSPECIFIED_BY_NIFS",
+    "quota": "QUOTA_UNKNOWN"
+  },
+  "security": {
+    "previewDebugFlag": "ON_PREVIEW_ONLY",
+    "productionDebugFlag": "ABSENT",
+    "serverOnly": true,
+    "authenticatedAppHtmlKeyExposure": 0,
+    "authenticatedAppClientScriptsScanned": 18,
+    "authenticatedAppClientScriptKeyExposure": 0,
+    "runtimeLogKeyExposure": 0,
+    "publicDebugEndpoint": 0
+  },
+  "production": {
+    "url": "https://blue-marina.vercel.app",
+    "risaKey": "ABSENT",
+    "risaFlag": "ABSENT_FAIL_CLOSED",
+    "femoFlag": "ABSENT_FAIL_CLOSED",
+    "debugFlag": "ABSENT",
+    "phaseBEnvironmentChanges": 0,
+    "phaseBDeployments": 0,
+    "databaseApply": 0
+  },
+  "safety": {
+    "automaticComparator": 0,
+    "scoring": 0,
+    "ranking": 0,
+    "probability": 0,
+    "nearestStationInference": 0,
+    "femoActivation": 0
+  },
+  "verification": {
+    "targeted": "11/11 PASS (3 new, 8 existing)",
+    "fullInMainWorktreeWithExactCodeOverlay": "1191/1191 PASS",
+    "typecheck": "PASS",
+    "lintInMainWorktreeWithExactCodeOverlay": "PASS",
+    "build": "PASS 1463/1463",
+    "diffCheck": "PASS",
+    "cleanWorktreeFullSuite": "BASELINE_DEPENDENCY_BLOCKED_BY_UNCOMMITTED_UNRELATED_FILES"
+  },
+  "limitations": [
+    "Four serverless instances served five cold requests, producing eight NIFS endpoint calls in total; only same-instance dedupe is guaranteed",
+    "Three warm repeats were served by Vercel CDN, so their response body retained the original fresh_fetch cacheStatus despite zero additional upstream calls",
+    "The final RISA sample was stale under the application freshness policy; the read-model honestly returned 200 PARTIAL with RISA STALE",
+    "Official NIFS quota and cost remain unknown",
+    "The authenticated browser asset inventory is not a complete fetch/XHR network trace; server-only code and authenticated HTML/client-script scans provide the key boundary evidence",
+    "The previous 70-script unauthenticated scan reached Vercel Login and is superseded by the authenticated application HTML and 18 script scan",
+    "The clean committed checkout lacks unrelated uncommitted files required by legacy full-suite and lint commands; exact-code overlay on the existing main worktree passed all 1191 tests and lint"
+  ]
+}

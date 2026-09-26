@@ -1,0 +1,29 @@
+# Fishing Condition RISA Preview Observability Gate V1
+
+**Decision: `RISA_OBSERVABILITY_GATE_PASS_WITH_LIMITATIONS`; Production activation status: `RISA_PRODUCTION_ACTIVATION_READY`.** This verifies the remaining Preview console and upstream-call gates. It does **not** activate RISA in Production. FEMO remains disabled.
+
+## Evidence commits and deployment
+
+The blocked readiness evidence was committed on `main` as `4fdfefea7cd22912feece1bad5c7d01da22e05f7` with exactly three report/document/test files. The instrumentation was committed separately on `codex/risa-preview-observability-v1` as `98510104a373641e0762dfe65821eb03802df26d`; it was not merged into `main`. A clean checkout of that pushed branch commit produced the [Preview deployment](https://blue-marina-oq8q7yav5-chiweon.vercel.app/fishing-spots/conditions), `dpl_GEJ8KHhSP1SMEnzWstvcC5eVEFyQ`, in `READY` state. No Phase B Production deployment or Production environment change was made. The Phase A documentation push may trigger the repository's existing automatic Production build; it did not turn on a live source.
+
+The only new environment flag is `RISA_OBSERVABILITY_DEBUG=true` in Vercel **Preview** scope. The adapter emits structured `RISA_CACHE_MISS`, `RISA_INFLIGHT_JOIN`, `RISA_UPSTREAM_FETCH` and `RISA_CACHE_HIT` events only when both `VERCEL_ENV=preview` and the flag are true. Each event includes a fixed source request key, process-instance ID, optional load ID, endpoint kind (`code` or `list`) and timestamp. It never logs the key, full upstream URL, raw response or user-selected species. Production debug flag is absent; the same code is silent there. No public debug endpoint or monitoring vendor was added.
+
+## Actual upstream calls
+
+Five simultaneous cold requests to the Preview RISA observation API all returned HTTP 200 with 41 stations and 65 observation rows. The Vercel request logs show four serverless instances, each with one cache miss and exactly two `RISA_UPSTREAM_FETCH` events, one for each NIFS endpoint: **eight actual NIFS fetches total**. The fifth request joined an in-flight load on one instance, adding **zero** NIFS fetches. This proves same-instance coalescing (`<=2` fetches per cold instance), while the four cold instances demonstrate that cross-instance deduplication is not guaranteed.
+
+Three immediate warm repeats returned HTTP 200 through Vercel CDN `HIT` and added **zero** upstream fetches. Their response body still said `fresh_fetch` because CDN served the original body; CDN request logs, rather than that body field, establish the warm hit. In the authenticated Preview browser, switching from 감성돔 to 농어, 조피볼락 and 참돔 kept the explicit 기장 surface station, showed factual observations and `cache_hit`, and added zero NIFS fetches. No Fishing Spot coordinate was used to infer the station.
+
+## Browser and safety
+
+The authenticated Preview browser loaded the 38-species Conditions selector. It displayed station, source-local timestamp, surface temperature, reference profile, seasonality and limitations without an automatic condition judgment. The four submitted species flows had zero UI crashes, console errors and console warnings. Preview runtime error logs were also empty. The only logged HTTP 5xx was the deliberate FEMO-disabled 503 check.
+
+The RISA key was absent from authenticated application HTML, all 18 scripts referenced by that HTML and the inspected runtime logs. The browser's asset inventory listed 45 URLs, including 23 scripts, with no NIFS host or key-query URL. This inventory does not enumerate every fetch/XHR request, so the server-only import, client source inspection and authenticated asset scan provide the key-boundary evidence together. The earlier 70-script scan used an unauthenticated request that reached Vercel Login; it is **not** used as application key-exposure evidence here.
+
+RISA returned HTTP 200 throughout. At the final check, the latest NIFS source-local observation timestamp remained `2026-09-26T13:30:00`, so the application's freshness policy classified it as `STALE`; the selected read-model honestly returned HTTP 200 `PARTIAL` with RISA `STALE`, profile and seasonality intact, and FEMO `DISABLED`. The timestamp timezone remains `UNSPECIFIED_BY_NIFS`. A test-injected RISA upstream failure returns HTTP 200 `PARTIAL` with profile, seasonality and an error source status. The observation-only route may return an explicit error independently. No comparator, score, rank, probability, nearest-station inference or FEMO activation was added.
+
+## Decision boundary and verification
+
+The required observability gate passed with bounded, documented limits. Global deduplication is not claimed: the measured cold fanout was eight upstream calls for five concurrent requests. The Preview CDN and 10-minute per-instance cache prevented additional calls in the warm and species-change checks. Official NIFS quota and cost remain `QUOTA_UNKNOWN`. These are Production activation limitations, not hidden pass claims; the existing flag-off plus clean redeploy path remains the rollback control. Production still has no RISA key or flag and both RISA/FEMO observation APIs remain disabled. A later, separate Production activation decision may use this gate evidence; this task does not make that environment change.
+
+The new and existing targeted tests passed 11/11. A temporary exact-code overlay on the existing main worktree, which holds unrelated uncommitted test dependencies, passed the full 1191/1191 suite, typecheck, lint and the 1463-page build. The clean branch checkout also passed typecheck and build, but its legacy full-suite and lint commands fail because the repository baseline references unrelated uncommitted files and folders. Those files were not added to the branch or deployment. The temporary main overlay was removed and its original source hash rechecked. `git diff --check` passed.
