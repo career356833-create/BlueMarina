@@ -1,0 +1,128 @@
+{
+  "version": "V1",
+  "decision": "RISA_PRODUCTION_ACTIVATION_COMPLETE_WITH_LIMITATIONS",
+  "verifiedAtUtc": "2026-09-26T06:15:21Z",
+  "branchIntegration": {
+    "reviewedBranch": "origin/codex/risa-preview-observability-v1",
+    "reviewedCommits": [
+      "98510104a373641e0762dfe65821eb03802df26d",
+      "6198a3fb5fa087fa32728fdf24061d17559784fa"
+    ],
+    "productionSafeRuntimeNeeded": 0,
+    "reason": "The cache, per-instance in-flight deduplication, source status and failure isolation already exist on main. The branch's only runtime diff is Preview-gated debug logging.",
+    "previewDebugFilesExcluded": ["src/lib/fishing-condition/nifs-realtime-fishing-server.ts", "tests/fishing-condition/risa-preview-observability-gate-v1.test.cjs"],
+    "previewEvidenceRetainedOnBranch": ["reports/fishing-condition/risa-preview-observability-gate-v1.json", "docs/FISHING_CONDITION_RISA_PREVIEW_OBSERVABILITY_GATE_V1.md"],
+    "runtimeCommitsToMain": 0
+  },
+  "productionEnvironment": {
+    "risaKey": "PRESENT_SECRET_VALUE_NOT_READ_OR_RECORDED",
+    "risaKeyAction": "Existing Preview secret expanded to Production through Vercel environment settings after user authorization",
+    "risaFlag": "true",
+    "femoFlag": "ABSENT_FAIL_CLOSED",
+    "previewDebugFlag": "ABSENT_IN_PRODUCTION",
+    "otherEnvironmentChanges": 0
+  },
+  "deployment": {
+    "id": "dpl_GbWhAn7nQYtYRD57LkTfr9PwziZe",
+    "url": "https://blue-marina.vercel.app",
+    "target": "production",
+    "status": "READY",
+    "gitSha": "4fdfefea7cd22912feece1bad5c7d01da22e05f7",
+    "cleanPushedMainShaMatched": true
+  },
+  "risa": {
+    "http": 200,
+    "stations": 41,
+    "observationRows": 65,
+    "sourceStatus": "STALE",
+    "latestObservedAtSourceLocal": "2026-09-26T13:30:00",
+    "sourceTimezone": "UNSPECIFIED_BY_NIFS",
+    "sampleStationId": "bgj8a",
+    "sampleStationName": "기장",
+    "sampleDepthContext": "SURFACE",
+    "sampleTemperature": { "value": 24.2, "unit": "degC" },
+    "sampleFetchedAtUtc": "2026-09-26T06:04:55.952Z",
+    "warmRepeatHttp": [200, 200],
+    "warmRepeatLatencyMs": [228, 65],
+    "warmRepeatCdn": "HIT",
+    "warmRepeatBodyCacheStatus": "fresh_fetch",
+    "warmRepeatNote": "CDN re-served the original response body; the Vercel request cache field, not the body field, establishes the warm hit."
+  },
+  "femo": { "http": 503, "code": "SOURCE_DISABLED", "activation": 0 },
+  "readModel": {
+    "http": 200,
+    "availability": "PARTIAL",
+    "profileContext": "PRESENT",
+    "seasonality": "PRESENT",
+    "observationContext": "PRESENT_EXPLICIT_STATION_AND_SURFACE_DEPTH",
+    "risaSourceStatus": "STALE",
+    "femoSourceStatus": "DISABLED",
+    "upstreamFailureIsolation": "PASS_IN_EXISTING_TEST_INJECTION; NOT_INJECTED_IN_PRODUCTION"
+  },
+  "browser": {
+    "selectorSpecies": 38,
+    "desktop": "PASS",
+    "mobileViewport": "390x844 PASS",
+    "mobileHorizontalOverflow": 0,
+    "mobileObservationAndLimitationVisible": true,
+    "mobileBottomNavigationCollision": 0,
+    "consoleErrors": 0,
+    "consoleWarnings": 0,
+    "speciesChange": "감성돔_TO_농어_WITH_EXPLICIT_STATION_PRESERVED_AND_CACHE_HIT"
+  },
+  "observability": {
+    "window": "short post-activation smoke on the new Production deployment",
+    "requestLogRows": 36,
+    "relevantRequestRows": 14,
+    "runtimeErrorRows": 0,
+    "unexpected5xx": 0,
+    "deliberateFemoDisabled503": 3,
+    "retryStormObserved": false,
+    "productionUpstreamFetchCount": "NOT_INSTRUMENTED",
+    "previewColdFiveRequests": { "instances": 4, "actualNifsEndpointCalls": 8 },
+    "crossInstanceDedupe": "NOT_GUARANTEED",
+    "nifsQuota": "QUOTA_UNKNOWN"
+  },
+  "security": {
+    "serverOnlyAdapter": true,
+    "clientHtmlSecretMarkerHits": 0,
+    "clientScriptsScanned": 18,
+    "clientScriptSecretMarkerHits": 0,
+    "browserFetchXhrInventory": "NOT_INDEPENDENTLY_CAPTURED",
+    "keyValueRecorded": 0
+  },
+  "safety": {
+    "automaticComparator": 0,
+    "scoring": 0,
+    "ranking": 0,
+    "probability": 0,
+    "nearestStationInference": 0,
+    "femoActivation": 0,
+    "databaseApply": 0
+  },
+  "rollback": {
+    "triggered": false,
+    "action": "NONE",
+    "preparedMethod": "Set NIFS_REALTIME_FISHING_ENABLED=false in Production and redeploy clean main SHA if a trigger appears"
+  },
+  "verification": {
+    "preActivationFullTests": "1188/1188 PASS",
+    "preActivationTypecheck": "PASS",
+    "preActivationLint": "PASS",
+    "preActivationBuild": "PASS 1463/1463",
+    "preActivationDiffCheck": "PASS",
+    "targetedFinal": "4/4 PASS",
+    "fullFinal": "1192/1192 PASS",
+    "typecheckFinal": "PASS",
+    "lintFinal": "PASS",
+    "buildFinal": "PASS 1463/1463",
+    "diffCheckFinal": "PASS"
+  },
+  "limitations": [
+    "NIFS quota and cost are unknown",
+    "Cross-instance upstream call deduplication is not guaranteed",
+    "NIFS observation timezone is not documented and the current sample is stale",
+    "Production upstream fetch count is not instrumented; warm CDN hits and the Preview cold fanout are the available bounded observations",
+    "A full browser fetch/XHR inventory and a live Production upstream-failure injection were not performed"
+  ]
+}
