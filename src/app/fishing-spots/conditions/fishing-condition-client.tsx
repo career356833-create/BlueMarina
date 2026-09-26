@@ -345,12 +345,18 @@ function ResultView({ result }: { result: ReadModel }) {
   const fields = Object.values(result.environment);
   return <div className="space-y-5" aria-live="polite">
     <section className="flex flex-col gap-3 rounded-[24px] border border-[#29465D] bg-[#0A2031] p-5 sm:flex-row sm:items-center sm:justify-between"><div><p className="text-xs font-black text-[#79C9D6]">{result.species.koreanName} · {result.species.scientificName}</p><h2 className="mt-1 text-xl font-black text-white">선택 조건의 확인 결과</h2></div><p className="text-xs font-bold text-[#A8BDCF]">{result.freshness.label} · {formatObservedAt(result.freshness.observedAt)}</p></section>
+    {result.observationContext ? <aside className="rounded-[18px] border border-[#29465D] bg-[#081C2B] p-4 text-xs font-semibold text-[#B8CBDD]">
+      <p className="font-black text-[#79C9D6]">현재 관측 · {SOURCE_LABELS[result.observationContext.sourceId as FishingConditionSourceId] ?? result.observationContext.sourceId}</p>
+      <p className="mt-1">정점 {result.observationContext.stationName ?? result.observationContext.stationOrSiteId} · {result.observationContext.depthContext} · 관측 시각 {formatObservedAt(result.observationContext.sourceTimestamp)} (시간대 미확인)</p>
+      <p className="mt-1">조회 {formatObservedAt(result.observationContext.fetchedAt ?? null)} UTC · 캐시 {result.observationContext.cacheStatus ?? "미확인"}</p>
+      {result.observationContext.freshness !== "fresh" ? <p className="mt-1 text-[#F1D9A8]">최근 관측 자료가 아닙니다.</p> : null}
+    </aside> : null}
     {result.profileContext ? <ProfileContext profile={result.profileContext} /> : null}
     {result.availability === "PARTIAL" ? <aside role="status" className="rounded-[18px] border border-[#6A5735] bg-[#201B13] p-4 text-sm font-semibold text-[#D9C49A]">
-      <p>현재 관측 데이터 없음 · 정적 어종 근거만 제공합니다.</p>
-      {result.sourceStatus?.map(source => <p key={source.sourceId} className="mt-1">{SOURCE_LABELS[source.sourceId as FishingConditionSourceId] ?? source.sourceId}: {source.status === "UNAVAILABLE" ? "일부 자료원 사용 불가" : "관측자료를 요청하지 않음"}</p>)}
+      <p>{result.observationContext ? "최근 관측 자료가 아닙니다. 관측 사실과 어종 참고 정보를 분리해 표시합니다." : "현재 관측 데이터 없음 · 정적 어종 근거만 제공합니다."}</p>
+      {result.sourceStatus?.map(source => <p key={source.sourceId} className="mt-1">{SOURCE_LABELS[source.sourceId as FishingConditionSourceId] ?? source.sourceId}: {source.status === "DISABLED" ? "현재 관측 자료원을 사용할 수 없습니다" : source.status === "STALE" ? "최근 관측 자료가 아닙니다" : source.status === "ERROR" ? "관측 자료를 불러오지 못했습니다" : source.status === "AVAILABLE" ? "관측 자료 이용 가능" : "관측자료를 요청하지 않음"}</p>)}
     </aside> : null}
-    <section className="rounded-[26px] border border-[#1F3A50] bg-[#071827] p-4 sm:p-6"><SectionHeading eyebrow="Environment" title="환경 자료" /><div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">{fields.map((field) => <EnvironmentCard key={field.key} field={field} />)}</div></section>
+    <section className="rounded-[26px] border border-[#1F3A50] bg-[#071827] p-4 sm:p-6"><SectionHeading eyebrow="Environment" title="현재 관측" /><div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">{fields.map((field) => <EnvironmentCard key={field.key} field={field} />)}</div></section>
     <section className="grid gap-5 lg:grid-cols-2"><Seasonality title="산란 시기" section={result.seasonality.spawning} /><Seasonality title="회유" section={result.seasonality.migration} /></section>
     <OccurrenceTable section={result.seasonality.fisheryOccurrence} requestedMonth={result.seasonality.requestedMonth} />
     <section className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]"><SourcePanel sources={result.sources} /><LimitationsPanel limitations={result.limitations} /></section>
@@ -378,7 +384,7 @@ function ProfileContext({ profile }: { profile: NonNullable<ReadModel["profileCo
   ] as const;
   return <section className="rounded-[26px] border border-[#34536B] bg-[#092235] p-4 sm:p-6">
     <SectionHeading eyebrow="Species profile" title="확인된 환경·생태 참고 정보"><span className="rounded-full border border-[#79C9D6]/45 px-3 py-1 text-xs font-black text-[#AEE8EF]">{readinessLabel(profile.readiness)}</span></SectionHeading>
-    <p className="mt-3 text-sm font-semibold leading-6 text-[#B8CBDD]">현재 관측값과 자동으로 비교하거나 적합도·추천을 생성하지 않습니다. 확인된 근거와 제한사항만 함께 표시합니다.</p>
+    <p className="mt-3 text-sm font-semibold leading-6 text-[#B8CBDD]">어종 참고 정보입니다. 현재 관측 사실과 분리해 근거와 제한사항을 표시합니다.</p>
     <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{domains.map(([label, value]) => <article key={label} className="rounded-[18px] border border-[#29465D] bg-[#081C2B] p-4"><p className="text-sm font-black text-white">{label}</p><p className="mt-2 text-xs font-semibold leading-5 text-[#B8CBDD]">{profileDomainText(value)}</p></article>)}</div>
     <div className="mt-4 rounded-[18px] border border-[#29465D] bg-[#081C2B] p-4"><p className="text-xs font-black text-[#93AFC2]">근거 출처</p><ul className="mt-2 space-y-2 text-xs font-semibold text-[#B8CBDD]">{profile.evidenceRefs.map((reference) => <li key={reference.id}>{reference.url ? <a href={reference.url} target="_blank" rel="noreferrer" className="text-[#79C9D6] underline">{reference.title}</a> : reference.title} <span className="text-[#7890A6]">· {reference.evidenceClass}</span></li>)}</ul></div>
     {profile.limitations.length > 0 ? <div className="mt-4"><p className="text-xs font-black text-[#F1D9A8]">제한사항</p><div className="mt-2 space-y-2">{profile.limitations.map((item) => <p key={item} className="text-xs font-semibold leading-5 text-[#D9C49A]">{humanizeLimitation(item)}</p>)}</div></div> : null}
@@ -392,7 +398,7 @@ function EnvironmentCard({ field }: { field: EnvironmentField }) {
     <p className="text-xs font-black text-[#93AFC2]">{field.label}</p>
     <dl className="mt-3 space-y-3">
       <div><dt className="text-[10px] font-bold text-[#6E8299]">{currentLabel}</dt><dd className="mt-1 text-xl font-black text-white">{field.displayValue ?? "자료 없음"}</dd></div>
-      <div><dt className="text-[10px] font-bold text-[#6E8299]">비교 기준</dt><dd className="mt-1 text-xs font-bold text-[#D7E4F6]">{reference ?? "비교 기준 없음"}</dd>{reference && field.profileReference ? <dd className="mt-1 text-[10px] font-semibold text-[#7890A6]">{rangeTypeLabel(field.profileReference.rangeType)}</dd> : null}</div>
+      <div><dt className="text-[10px] font-bold text-[#6E8299]">어종 참고 정보</dt><dd className="mt-1 text-xs font-bold text-[#D7E4F6]">{reference ?? "아래 근거에서 별도 확인"}</dd>{reference && field.profileReference ? <dd className="mt-1 text-[10px] font-semibold text-[#7890A6]">{rangeTypeLabel(field.profileReference.rangeType)}</dd> : null}</div>
       <div><dt className="text-[10px] font-bold text-[#6E8299]">상태</dt><dd className="mt-1 text-xs font-bold text-[#79C9D6]">{environmentStatusLabel(field)}</dd></div>
     </dl>
     {field.explanation ? <p className="mt-3 text-[11px] font-semibold leading-5 text-[#9FB3C8]">{field.explanation}</p> : null}

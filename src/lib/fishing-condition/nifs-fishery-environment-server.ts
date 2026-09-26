@@ -28,6 +28,7 @@ export type NifsFisheryEnvironmentResponse = {
   };
   fetchedAt: string;
   lastSuccessfulFetchAt: string;
+  cacheStatus: "fresh_fetch" | "cache_hit" | "stale_fallback";
   latestSampledAt: string | null;
   freshness: NifsFemoFreshness;
   delivery: "live" | "stale_fallback";
@@ -39,6 +40,7 @@ export type NifsFisheryEnvironmentResponse = {
 
 type CacheEntry = { response: NifsFisheryEnvironmentResponse; expiresAt: number; staleUntil: number };
 let cache: CacheEntry | null = null;
+let inFlight: Promise<NifsFisheryEnvironmentResponse> | null = null;
 
 export class NifsFisheryEnvironmentSourceError extends Error {
   constructor(public readonly code: "SOURCE_DISABLED" | "API_KEY_MISSING" | "UPSTREAM_TIMEOUT" | "UPSTREAM_ERROR" | "UPSTREAM_RESPONSE_TOO_LARGE" | "UPSTREAM_CONTRACT_ERROR") {
@@ -98,6 +100,7 @@ async function fetchRows(baseUrl: string, apiKey: string, startDate: string, end
 
 export function clearNifsFisheryEnvironmentCache() {
   cache = null;
+  inFlight = null;
 }
 
 export async function getNifsFisheryEnvironment(): Promise<NifsFisheryEnvironmentResponse> {
@@ -105,8 +108,9 @@ export async function getNifsFisheryEnvironment(): Promise<NifsFisheryEnvironmen
   const apiKey = process.env.NIFS_FEMO_API_KEY;
   if (!apiKey) throw new NifsFisheryEnvironmentSourceError("API_KEY_MISSING");
   const now = Date.now();
-  if (cache && now <= cache.expiresAt) return cache.response;
-  try {
+  if (cache && now <= cache.expiresAt) return { ...cache.response, cacheStatus: "cache_hit" };
+  if (inFlight) return inFlight;
+  const load = async (): Promise<NifsFisheryEnvironmentResponse> => { try {
     const window = queryWindow(new Date(now));
     const rows = await fetchRows(process.env.NIFS_FEMO_SEA_URL ?? DEFAULT_SEA_URL, apiKey, window.startDate, window.endDate);
     if (rows.length === 0) throw new NifsFisheryEnvironmentSourceError("UPSTREAM_CONTRACT_ERROR");
@@ -119,6 +123,7 @@ export async function getNifsFisheryEnvironment(): Promise<NifsFisheryEnvironmen
       source: { provider: NIFS_FEMO_PROVIDER, sourceId: NIFS_FEMO_SOURCE_ID, qualityClass: NIFS_FEMO_QUALITY_CLASS },
       fetchedAt,
       lastSuccessfulFetchAt: fetchedAt,
+      cacheStatus: "fresh_fetch",
       latestSampledAt: normalized.quality.latestSampledAt,
       freshness: deriveNifsFemoFreshness(normalized.quality.latestSampledAt, formatAsiaSeoulWallClock(new Date(now))),
       delivery: "live",
@@ -130,8 +135,12 @@ export async function getNifsFisheryEnvironment(): Promise<NifsFisheryEnvironmen
     cache = { response, expiresAt: now + NIFS_FEMO_CACHE_SECONDS * 1_000, staleUntil: now + NIFS_FEMO_STALE_FALLBACK_SECONDS * 1_000 };
     return response;
   } catch (error) {
-    if (cache && now <= cache.staleUntil) return { ...cache.response, fetchedAt: new Date(now).toISOString(), delivery: "stale_fallback" };
+    if (cache && now <= cache.staleUntil) return { ...cache.response, fetchedAt: new Date(now).toISOString(), cacheStatus: "stale_fallback", delivery: "stale_fallback" };
     if (error instanceof NifsFisheryEnvironmentSourceError) throw error;
     throw new NifsFisheryEnvironmentSourceError("UPSTREAM_ERROR");
-  }
+  } };
+  const pending = load();
+  inFlight = pending;
+  try { return await pending; }
+  finally { if (inFlight === pending) inFlight = null; }
 }

@@ -31,6 +31,7 @@ export type NifsRealtimeEnvironmentResponse = {
   };
   fetchedAt: string;
   lastSuccessfulFetchAt: string;
+  cacheStatus: "fresh_fetch" | "cache_hit" | "stale_fallback";
   freshness: NifsRealtimeFreshness;
   sourceTime: {
     timezone: typeof NIFS_RISA_SOURCE_TIMEZONE;
@@ -47,6 +48,7 @@ type CacheEntry = {
 };
 
 let cache: CacheEntry | null = null;
+let inFlight: Promise<NifsRealtimeEnvironmentResponse> | null = null;
 
 export class NifsRealtimeFishingSourceError extends Error {
   constructor(public readonly code: "SOURCE_DISABLED" | "API_KEY_MISSING" | "UPSTREAM_TIMEOUT" | "UPSTREAM_ERROR" | "UPSTREAM_RESPONSE_TOO_LARGE" | "UPSTREAM_CONTRACT_ERROR") {
@@ -104,6 +106,7 @@ function degradedFreshness(current: NifsRealtimeFreshness): NifsRealtimeFreshnes
 
 export function clearNifsRealtimeFishingCache() {
   cache = null;
+  inFlight = null;
 }
 
 export async function getNifsRealtimeFishingEnvironment(): Promise<NifsRealtimeEnvironmentResponse> {
@@ -111,9 +114,10 @@ export async function getNifsRealtimeFishingEnvironment(): Promise<NifsRealtimeE
   const apiKey = process.env.NIFS_RISA_API_KEY;
   if (!apiKey) throw new NifsRealtimeFishingSourceError("API_KEY_MISSING");
   const now = Date.now();
-  if (cache && now <= cache.expiresAt) return cache.response;
+  if (cache && now <= cache.expiresAt) return { ...cache.response, cacheStatus: "cache_hit" };
+  if (inFlight) return inFlight;
 
-  try {
+  const load = async (): Promise<NifsRealtimeEnvironmentResponse> => { try {
     const [stationRows, observationRows] = await Promise.all([
       fetchNifsRows(process.env.NIFS_RISA_CODE_URL ?? DEFAULT_CODE_URL, apiKey),
       fetchNifsRows(process.env.NIFS_RISA_LIST_URL ?? DEFAULT_LIST_URL, apiKey),
@@ -127,7 +131,7 @@ export async function getNifsRealtimeFishingEnvironment(): Promise<NifsRealtimeE
     const response: NifsRealtimeEnvironmentResponse = {
       ok: true,
       source: { provider: NIFS_RISA_PROVIDER, sourceId: NIFS_RISA_SOURCE_ID, qualityClass: NIFS_RISA_QUALITY_CLASS, waterTemperatureUnit: NIFS_RISA_UNIT },
-      fetchedAt, lastSuccessfulFetchAt: fetchedAt, freshness,
+      fetchedAt, lastSuccessfulFetchAt: fetchedAt, cacheStatus: "fresh_fetch", freshness,
       sourceTime: { timezone: NIFS_RISA_SOURCE_TIMEZONE, freshnessBasis: "NIFS_SOURCE_LOCAL_CLOCK_COMPARED_WITH_ASIA_SEOUL_OPERATIONAL_CLOCK" },
       stations: normalized.stations, quality: normalized.quality,
     };
@@ -138,11 +142,16 @@ export async function getNifsRealtimeFishingEnvironment(): Promise<NifsRealtimeE
       return {
         ...cache.response,
         fetchedAt: new Date().toISOString(),
+        cacheStatus: "stale_fallback",
         freshness: degradedFreshness(cache.response.freshness),
         stations: cache.response.stations.map((station) => ({ ...station, freshness: degradedFreshness(station.freshness) })),
       };
     }
     if (error instanceof NifsRealtimeFishingSourceError) throw error;
     throw new NifsRealtimeFishingSourceError("UPSTREAM_ERROR");
-  }
+  } };
+  const pending = load();
+  inFlight = pending;
+  try { return await pending; }
+  finally { if (inFlight === pending) inFlight = null; }
 }

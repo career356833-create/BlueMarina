@@ -12,8 +12,15 @@ export type FishingConditionQuery = {
 export type FishingConditionReadModelResponse = {
   ok: true;
   readModel: {
-    availability?: "PARTIAL";
+    availability?: "AVAILABLE" | "PARTIAL";
     sourceStatus?: Array<{ sourceId: string; status: string; reason: string }>;
+    observationContext?: {
+      sourceId: string; stationOrSiteId: string; stationName?: string;
+      depthContext: string; sourceTimestamp: string | null; sourceTimezone?: string;
+      fetchedAt?: string; lastSuccessfulFetchAt?: string;
+      cacheStatus?: "fresh_fetch" | "cache_hit" | "stale_fallback";
+      freshness: string;
+    };
     species: { speciesId: string; koreanName: string; scientificName: string };
     profileContext: null | {
       readiness: "PROFILE_READY" | "PROFILE_PARTIAL" | "PROFILE_LIMITED";

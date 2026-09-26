@@ -28,6 +28,11 @@ export type ComparatorEnvironment = {
   qualityClass: "OBSERVED" | "OBSERVED_PERIODIC_ENVIRONMENT";
   stationOrSiteId: string;
   observedAt: string | null;
+  stationName?: string;
+  sourceTimezone?: string;
+  fetchedAt?: string;
+  lastSuccessfulFetchAt?: string;
+  cacheStatus?: "fresh_fetch" | "cache_hit" | "stale_fallback";
   freshness: "fresh" | "stale" | "unavailable";
   depthContext: ComparatorDepthContext;
   exactDepthM: number | null;

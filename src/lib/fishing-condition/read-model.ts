@@ -428,7 +428,9 @@ function observedItem(
   value: { value: number | null; unit: string | null },
   environment: ComparatorEnvironment,
 ) {
-  const displayValue = value.value === null ? null : `${value.value}${value.unit ? ` ${value.unit === "degC" ? "°C" : value.unit}` : ""}`;
+  const displayValue = value.value === null ? null : value.unit === "UNIT_NOT_DOCUMENTED"
+    ? `${value.value} (단위 미확인)`
+    : `${value.value}${value.unit ? ` ${value.unit === "degC" ? "°C" : value.unit}` : ""}`;
   return {
     key,
     label,
@@ -437,12 +439,12 @@ function observedItem(
     displayValue,
     relation: null,
     displayStatus: null,
-    explanation: "현재 관측값입니다. 이 화면에서는 어종 profile과 자동 비교하거나 적합도를 판단하지 않습니다.",
+    explanation: "선택한 정점의 관측 사실입니다. 어종 참고 정보와 자동으로 결론을 내리지 않습니다.",
     profileReference: null,
     evidenceRefs: [],
     source: { sourceId: environment.sourceId, lineage: [environment.sourceId, environment.qualityClass] },
     freshness: environment.freshness,
-    limitations: value.value === null ? ["MISSING_ENVIRONMENT"] : [],
+    limitations: value.value === null ? ["MISSING_ENVIRONMENT"] : value.unit === "UNIT_NOT_DOCUMENTED" ? ["UNIT_NOT_DOCUMENTED"] : [],
   };
 }
 

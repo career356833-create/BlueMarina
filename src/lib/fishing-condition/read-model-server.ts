@@ -1,27 +1,44 @@
 import "server-only";
 
-import {
-  ConditionEvidenceBundleError,
-  runConditionEvidenceBundle,
-  type ConditionEvidenceBundleRequest,
-} from "./evidence-bundle-server";
+import { ConditionEvidenceBundleError, type ConditionEvidenceBundleRequest } from "./evidence-bundle-server";
 import { getFishingConditionEnvironment } from "./comparator-server";
-import { getFishingConditionProfile } from "./profile-registry";
-import { findSpeciesEnvironmentProfile } from "./species-environment";
-import { buildFishingConditionReadModel, buildProfileOnlyFishingConditionReadModel } from "./read-model";
+import { getFactualConditionProfile } from "./factual-profile";
+import { runStaticProfileReadModel } from "./profile-read-model-server";
+import { buildProfileOnlyFishingConditionReadModel } from "./read-model";
 
 export type FishingConditionReadModelRequest = ConditionEvidenceBundleRequest;
 
 export { ConditionEvidenceBundleError as FishingConditionReadModelError };
 
 export async function runFishingConditionReadModel(request: FishingConditionReadModelRequest) {
-  const profile = getFishingConditionProfile(request.speciesId);
-  const legacyProfile = findSpeciesEnvironmentProfile({ speciesId: request.speciesId });
-  if (legacyProfile) {
-    const bundle = await runConditionEvidenceBundle(request);
-    return buildFishingConditionReadModel(bundle, profile);
-  }
+  const profile = getFactualConditionProfile(request.speciesId);
   if (!profile) throw new ConditionEvidenceBundleError("PROFILE_NOT_FOUND");
   const environment = await getFishingConditionEnvironment(request);
-  return buildProfileOnlyFishingConditionReadModel(profile, environment, request.contexts);
+  const factual = buildProfileOnlyFishingConditionReadModel(profile, environment, request.contexts);
+  const staticModel = runStaticProfileReadModel(request.speciesId, request.contexts.month);
+  if (!staticModel) throw new ConditionEvidenceBundleError("PROFILE_NOT_FOUND");
+  const status = environment.freshness === "fresh" ? "AVAILABLE" : environment.observedAt ? "STALE" : "ERROR";
+  return {
+    ...factual,
+    availability: status === "AVAILABLE" ? "AVAILABLE" as const : "PARTIAL" as const,
+    observationContext: {
+      sourceId: environment.sourceId,
+      stationOrSiteId: environment.stationOrSiteId,
+      stationName: environment.stationName,
+      depthContext: environment.depthContext,
+      sourceTimestamp: environment.observedAt,
+      sourceTimezone: environment.sourceTimezone,
+      fetchedAt: environment.fetchedAt,
+      lastSuccessfulFetchAt: environment.lastSuccessfulFetchAt,
+      cacheStatus: environment.cacheStatus,
+      freshness: environment.freshness,
+    },
+    seasonalityContext: staticModel.seasonality,
+    seasonality: staticModel.seasonality,
+    sourceStatus: staticModel.sourceStatus.map(source => source.sourceId === environment.sourceId
+      ? { ...source, status, reason: status === "AVAILABLE" ? "OBSERVATION_AVAILABLE" : status === "STALE" ? "SOURCE_SAMPLE_STALE" : "SOURCE_SAMPLE_UNAVAILABLE" }
+      : source),
+    sources: [...factual.sources, ...staticModel.sources.filter(source => source.domain === "seasonality")],
+    limitations: [...new Set([...factual.limitations, ...(status !== "AVAILABLE" ? ["OBSERVATION_NOT_CURRENT"] : []), "TIMEZONE_NOT_DOCUMENTED"])],
+  };
 }

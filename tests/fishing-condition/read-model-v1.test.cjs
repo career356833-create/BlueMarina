@@ -222,20 +222,31 @@ test("output is deterministic and contains no decision or ordering keys", () => 
   for (const forbidden of ["score", "overallCondition", "overallSuitability", "bestSeason", "bestMonth", "recommendedSpecies", "recommendedSpot", "catchProbability", "probability", "ranking", "recommendation"]) assert.equal(keys.includes(forbidden), false);
 });
 
-test("server composes the bundle directly once and the route remains read-only", async () => {
-  const bundle = withMonth("BM-SPECIES-000417", 10);
+test("server composes factual observation and static seasonality without a legacy comparator", async () => {
   let calls = 0;
+  const environment = {
+    sourceId: "nifs-risa", provider: "NIFS", qualityClass: "OBSERVED", stationOrSiteId: "A",
+    observedAt: "2026-09-26T12:30:00", freshness: "fresh", depthContext: "SURFACE",
+    temperature: { value: 15.5, unit: "degC" }, salinity: { value: null, unit: null },
+    dissolvedOxygen: { value: null, unit: null }, chlorophyllA: { value: null, unit: null },
+  };
+  const profile = { speciesId: "BM-SPECIES-000417", koreanName: "고등어", scientificName: "Scomber japonicus", profileReadiness: "PROFILE_LIMITED", temperature: { status: "UNKNOWN" }, depth: { status: "UNKNOWN" }, salinity: { status: "UNKNOWN" }, dissolvedOxygen: { status: "UNKNOWN" }, spawning: { status: "UNKNOWN" }, migration: { status: "UNKNOWN" }, habitat: { status: "UNKNOWN" }, evidenceRefs: [], limitations: [] };
+  const seasonality = { requestedMonth: 10, spawning: { status: "AVAILABLE", cards: [] } };
   const server = transpile(readModelServerPath, {
     "server-only": {},
-    "./evidence-bundle-server": { runConditionEvidenceBundle: async () => { calls += 1; return bundle; } },
-    "./comparator-server": { getFishingConditionEnvironment: async () => { throw new Error("not used for legacy profile"); } },
-    "./profile-registry": { getFishingConditionProfile: () => null },
-    "./species-environment": { findSpeciesEnvironmentProfile: () => ({ speciesId: "BM-SPECIES-000417" }) },
+    "./evidence-bundle-server": { ConditionEvidenceBundleError: class extends Error {} },
+    "./comparator-server": { getFishingConditionEnvironment: async () => { calls += 1; return environment; } },
+    "./factual-profile": { getFactualConditionProfile: () => profile },
+    "./profile-read-model-server": { runStaticProfileReadModel: () => ({ seasonality, sourceStatus: [{ sourceId: "nifs-risa", status: "UNKNOWN", reason: "OBSERVATIONS_NOT_REQUESTED" }], sources: [] }) },
     "./read-model": readModel,
   });
-  const result = await server.runFishingConditionReadModel({ fixture: true });
+  const result = await server.runFishingConditionReadModel({ speciesId: profile.speciesId, contexts: { month: 10, timeOfDay: null } });
   assert.equal(calls, 1);
   assert.equal(result.qualityClass, "DERIVED_FISHING_CONDITION_READ_MODEL");
+  assert.equal(result.environment.temperature.relation, null);
+  assert.equal(result.environment.temperature.rawValue, 15.5);
+  assert.equal(result.sourceStatus[0].status, "AVAILABLE");
+  assert.equal(result.seasonality, seasonality);
   const route = fs.readFileSync(readModelRoutePath, "utf8");
   assert.match(route, /export async function POST/);
   assert.match(route, /runFishingConditionReadModel\(parsed\)/);

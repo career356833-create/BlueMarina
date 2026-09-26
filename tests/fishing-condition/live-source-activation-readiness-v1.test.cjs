@@ -72,7 +72,7 @@ test('static read-model retains explicit source status and profile after recover
   const staticModel = read('src/lib/fishing-condition/profile-read-model-server.ts');
   assert.match(route, /SOURCE_DISABLED.*API_KEY_MISSING.*UPSTREAM_TIMEOUT.*UPSTREAM_ERROR/);
   assert.match(route, /runStaticProfileReadModel\(parsed\.speciesId, parsed\.contexts\.month/);
-  assert.match(staticModel, /"UNAVAILABLE" : "NOT_REQUESTED"/);
+  assert.match(staticModel, /"DISABLED".*"UNKNOWN".*"ERROR"/);
   assert.match(staticModel, /"OBSERVATIONS_NOT_REQUESTED"/);
   assert.ok(report.sourceContract.staticProfileOnFailure);
 });

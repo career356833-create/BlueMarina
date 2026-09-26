@@ -30,6 +30,7 @@ export function runFishingConditionComparisonForEnvironment(speciesId: string, e
 function environmentFromRisaStation(
   station: Awaited<ReturnType<typeof getNifsRealtimeFishingEnvironment>>["stations"][number],
   depthContext: ComparatorDepthContext,
+  response: Awaited<ReturnType<typeof getNifsRealtimeFishingEnvironment>>,
 ): ComparatorEnvironment {
   const key = depthContext === "SURFACE" ? "surface" : depthContext === "MIDDLE" ? "middle" : "bottom";
   const valueKey = depthContext === "SURFACE" ? "surfaceC" : depthContext === "MIDDLE" ? "middleC" : "bottomC";
@@ -39,6 +40,11 @@ function environmentFromRisaStation(
     qualityClass: "OBSERVED",
     stationOrSiteId: station.stationId,
     observedAt: station.observedAt,
+    stationName: station.stationName,
+    sourceTimezone: station.sourceTimezone,
+    fetchedAt: response.fetchedAt,
+    lastSuccessfulFetchAt: response.lastSuccessfulFetchAt,
+    cacheStatus: response.cacheStatus,
     freshness: station.freshness,
     depthContext,
     exactDepthM: station.depthMeters[key],
@@ -53,6 +59,7 @@ function environmentFromRisaStation(
 function environmentFromFemoSample(
   sample: Awaited<ReturnType<typeof getNifsFisheryEnvironment>>["samples"][number],
   depthContext: "SURFACE" | "BOTTOM",
+  response: Awaited<ReturnType<typeof getNifsFisheryEnvironment>>,
 ): ComparatorEnvironment {
   const key = depthContext === "SURFACE" ? "surface" : "bottom";
   return {
@@ -61,6 +68,11 @@ function environmentFromFemoSample(
     qualityClass: "OBSERVED_PERIODIC_ENVIRONMENT",
     stationOrSiteId: sample.siteId,
     observedAt: sample.sampledAt,
+    stationName: sample.stationName,
+    sourceTimezone: sample.sourceTimezone,
+    fetchedAt: response.fetchedAt,
+    lastSuccessfulFetchAt: response.lastSuccessfulFetchAt,
+    cacheStatus: response.cacheStatus,
     freshness: sample.freshness,
     depthContext,
     exactDepthM: null,
@@ -87,7 +99,7 @@ export async function getFishingConditionEnvironment(request: FishingConditionCo
       const response = await getNifsRealtimeFishingEnvironment();
       const station = response.stations.find((item) => item.stationId === request.environment.stationId);
       if (!station) throw new FishingConditionComparatorError("ENVIRONMENT_LOCATION_NOT_FOUND");
-      environment = environmentFromRisaStation(station, request.environment.depthContext);
+      environment = environmentFromRisaStation(station, request.environment.depthContext, response);
     } else {
       if (!request.environment.siteId || request.environment.stationId || request.environment.depthContext === "MIDDLE") throw new FishingConditionComparatorError("INVALID_REQUEST");
       const response = await getNifsFisheryEnvironment();
@@ -95,7 +107,7 @@ export async function getFishingConditionEnvironment(request: FishingConditionCo
         .filter((item) => item.siteId === request.environment.siteId)
         .sort((left, right) => right.sampledAt.localeCompare(left.sampledAt))[0];
       if (!sample) throw new FishingConditionComparatorError("ENVIRONMENT_LOCATION_NOT_FOUND");
-      environment = environmentFromFemoSample(sample, request.environment.depthContext);
+      environment = environmentFromFemoSample(sample, request.environment.depthContext, response);
     }
   } catch (error) {
     if (error instanceof FishingConditionComparatorError) throw error;

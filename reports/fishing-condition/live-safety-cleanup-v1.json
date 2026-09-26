@@ -1,0 +1,80 @@
+{
+  "version": "V1",
+  "decision": "CONDITIONS_LIVE_SAFETY_CLEANUP_COMPLETE_WITH_LIMITATIONS",
+  "phaseABaseline": "e4440ab1101dc5afbe1094f139eac309d88292d5",
+  "scope": {
+    "productionConditionsReadModel": "/api/fishing-condition/read-model",
+    "reviewedRegistrySpecies": 38,
+    "reviewedReadiness": { "PROFILE_READY": 5, "PROFILE_PARTIAL": 3, "PROFILE_LIMITED": 30 },
+    "legacySpeciesIds": 10,
+    "legacyOutsideReviewedRegistry": ["BM-SPECIES-000444"],
+    "legacyDataMutation": 0,
+    "historicalExperimentDeletion": 0
+  },
+  "readModel": {
+    "legacyComparatorCalls": 0,
+    "profileContext": "PRESERVED",
+    "observationContext": "EXPLICIT_SOURCE_STATION_DEPTH_TIMESTAMP_TIMEZONE_FETCH_CACHE",
+    "seasonalityContext": "STATIC_SOURCE_BACKED",
+    "sourceStatus": ["AVAILABLE", "DISABLED", "ERROR", "STALE", "UNKNOWN"],
+    "sourceFailure": "200 PARTIAL with profile and available static seasonality for valid species and recoverable failures",
+    "observationOnlyDisabled": "503 SOURCE_DISABLED",
+    "autoTemperatureRelation": 0,
+    "autoSalinityRelation": 0,
+    "autoSuitabilityVerdict": 0
+  },
+  "sources": {
+    "risa": {
+      "productionPolicy": "DISABLED_PENDING_SEPARATE_RISA_ONLY_ACTIVATION",
+      "requiredProductionEnv": ["NIFS_REALTIME_FISHING_ENABLED=true", "NIFS_RISA_API_KEY"],
+      "sourceTimezone": "TIMEZONE_NOT_DOCUMENTED",
+      "moduleCacheSeconds": 600,
+      "staleFallbackSeconds": 7200,
+      "sameInstanceColdCallsForConcurrentRequests": 2,
+      "futureActivationOrder": 1
+    },
+    "femo": {
+      "productionPolicy": "HOLD_REFERENCE_ONLY_WHILE_STALE",
+      "latestKnownSample": "2025-11-05 10:10",
+      "salinityUnit": "UNIT_NOT_DOCUMENTED",
+      "dissolvedOxygenUnit": "mg/L",
+      "moduleCacheSeconds": 86400,
+      "staleFallbackSeconds": 604800,
+      "sameInstanceColdCallsForConcurrentRequests": 1,
+      "futureActivationOrder": null
+    }
+  },
+  "requestVolume": {
+    "initialPageLoadUpstream": 0,
+    "speciesChangeWithoutSubmitUpstream": 0,
+    "stationChangeWithoutSubmitUpstream": 0,
+    "explicitSourceSelectionColdUpstream": { "risa": 2, "femo": 1 },
+    "warmInstanceSubmitUpstreamWithinTtl": 0,
+    "crossInstanceCoalescing": false,
+    "remainingRisk": "serverless cold instances each maintain separate module cache"
+  },
+  "deployment": {
+    "previewExplicitDeploy": false,
+    "productionExplicitDeploy": false,
+    "risaFlagChanged": false,
+    "femoFlagChanged": false,
+    "databaseApply": false
+  },
+  "verification": {
+    "targeted": "8/8 PASS",
+    "total": "1184/1184 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "staticPages": "1463/1463",
+    "diffCheck": "PASS"
+  },
+  "limitations": [
+    "BM-SPECIES-000444 is legacy-only and not in the reviewed 38-species selector; its original evidence remains available through the factual read-model by ID",
+    "Historical explicit comparison, explanation and evidence-bundle APIs remain separate from the Conditions read-model/UI and are not activation paths",
+    "FEMO newest verified sample was approximately 325 days old on 2026-09-26",
+    "Vercel Preview/Production NIFS credentials and flags remain absent; live activation smoke not performed",
+    "NIFS quota/cost and cross-instance call amplification remain unconfirmed"
+  ],
+  "safety": { "scoringAdded": 0, "rankingAdded": 0, "probabilityAdded": 0, "recommendationAdded": 0, "automaticSuitabilityAdded": 0, "productionLiveSourceActivation": 0, "databaseWrite": 0 }
+}

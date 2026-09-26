@@ -28,7 +28,7 @@ test("preserves reviewed readiness and source-backed limitations", () => {
 test("keeps the read model additive and routes registry-only species without a comparator", () => {
   const server = readText("src/lib/fishing-condition/read-model-server.ts");
   const model = readText("src/lib/fishing-condition/read-model.ts");
-  assert.match(server, /getFishingConditionProfile/);
+  assert.match(server, /getFactualConditionProfile/);
   assert.match(server, /buildProfileOnlyFishingConditionReadModel/);
   assert.match(model, /profileContext/);
   assert.match(model, /PROFILE_REFERENCE_ONLY_NO_AUTOMATIC_SUITABILITY_VERDICT/);
