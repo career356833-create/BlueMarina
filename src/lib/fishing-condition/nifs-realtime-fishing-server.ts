@@ -49,6 +49,14 @@ type CacheEntry = {
 
 let cache: CacheEntry | null = null;
 let inFlight: Promise<NifsRealtimeEnvironmentResponse> | null = null;
+const instanceId = globalThis.crypto?.randomUUID?.() ?? `risa-${Date.now().toString(36)}`;
+
+type RisaCacheEvent = "RISA_CACHE_HIT" | "RISA_CACHE_MISS" | "RISA_INFLIGHT_JOIN" | "RISA_UPSTREAM_FETCH";
+
+function traceRisa(event: RisaCacheEvent, loadId: string | null = null, endpointKind: "code" | "list" | null = null) {
+  if (process.env.VERCEL_ENV !== "preview" || process.env.RISA_OBSERVABILITY_DEBUG !== "true") return;
+  console.info(JSON.stringify({ event, requestKey: "nifs-risa", instanceId, loadId, endpointKind, timestamp: new Date().toISOString() }));
+}
 
 export class NifsRealtimeFishingSourceError extends Error {
   constructor(public readonly code: "SOURCE_DISABLED" | "API_KEY_MISSING" | "UPSTREAM_TIMEOUT" | "UPSTREAM_ERROR" | "UPSTREAM_RESPONSE_TOO_LARGE" | "UPSTREAM_CONTRACT_ERROR") {
@@ -78,10 +86,11 @@ function resultCode(payload: unknown) {
   return header?.resultCode === undefined ? null : String(header.resultCode);
 }
 
-async function fetchNifsRows(baseUrl: string, apiKey: string) {
+async function fetchNifsRows(baseUrl: string, apiKey: string, endpointKind: "code" | "list", loadId: string) {
   const url = new URL(baseUrl);
   url.searchParams.set("key", apiKey);
   try {
+    traceRisa("RISA_UPSTREAM_FETCH", loadId, endpointKind);
     const response = await fetch(url, { cache: "no-store", signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS), headers: { accept: "application/json" } });
     if (!response.ok) throw new NifsRealtimeFishingSourceError("UPSTREAM_ERROR");
     const buffer = await response.arrayBuffer();
@@ -114,13 +123,21 @@ export async function getNifsRealtimeFishingEnvironment(): Promise<NifsRealtimeE
   const apiKey = process.env.NIFS_RISA_API_KEY;
   if (!apiKey) throw new NifsRealtimeFishingSourceError("API_KEY_MISSING");
   const now = Date.now();
-  if (cache && now <= cache.expiresAt) return { ...cache.response, cacheStatus: "cache_hit" };
-  if (inFlight) return inFlight;
+  if (cache && now <= cache.expiresAt) {
+    traceRisa("RISA_CACHE_HIT");
+    return { ...cache.response, cacheStatus: "cache_hit" };
+  }
+  if (inFlight) {
+    traceRisa("RISA_INFLIGHT_JOIN");
+    return inFlight;
+  }
+  const loadId = globalThis.crypto?.randomUUID?.() ?? `load-${now.toString(36)}`;
+  traceRisa("RISA_CACHE_MISS", loadId);
 
   const load = async (): Promise<NifsRealtimeEnvironmentResponse> => { try {
     const [stationRows, observationRows] = await Promise.all([
-      fetchNifsRows(process.env.NIFS_RISA_CODE_URL ?? DEFAULT_CODE_URL, apiKey),
-      fetchNifsRows(process.env.NIFS_RISA_LIST_URL ?? DEFAULT_LIST_URL, apiKey),
+      fetchNifsRows(process.env.NIFS_RISA_CODE_URL ?? DEFAULT_CODE_URL, apiKey, "code", loadId),
+      fetchNifsRows(process.env.NIFS_RISA_LIST_URL ?? DEFAULT_LIST_URL, apiKey, "list", loadId),
     ]);
     if (stationRows.length === 0 || observationRows.length === 0) throw new NifsRealtimeFishingSourceError("UPSTREAM_CONTRACT_ERROR");
     const fetchedAt = new Date().toISOString();
