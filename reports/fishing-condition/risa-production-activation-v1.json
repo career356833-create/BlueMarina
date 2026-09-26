@@ -1,0 +1,86 @@
+{
+  "version": "V1",
+  "decision": "RISA_PRODUCTION_ACTIVATION_BLOCKED",
+  "baselineSha": "fbc71e53737202eb426ba40c0e70b8ac04ecfdad",
+  "preview": {
+    "deploymentId": "dpl_EnBboMeBP6Mo89hxzgcGbBennCFF",
+    "url": "https://blue-marina-mnx0ki61c-chiweon.vercel.app",
+    "deployedSha": "fbc71e53737202eb426ba40c0e70b8ac04ecfdad",
+    "build": "READY",
+    "risaFlag": true,
+    "risaKey": "PRESENT_SERVER_ONLY",
+    "femoFlag": false,
+    "risaObservationHttp": 200,
+    "risaSourceStatus": "AVAILABLE",
+    "femoObservationHttp": 503,
+    "femoSourceStatus": "DISABLED",
+    "selectorSpecies": 38,
+    "readModelHttp": 200,
+    "profileContext": "PRESENT",
+    "seasonalityContext": "PRESENT",
+    "observationContext": "PRESENT_EXPLICIT_STATION_AND_DEPTH",
+    "ui": "PASS_AUTHENTICATED_BROWSER",
+    "speciesChange": "SAME_STATION_OBSERVATION_CACHE_HIT",
+    "runtimeErrorLogs": 0,
+    "browserConsoleErrors": "NOT_OBSERVABLE_IN_AUTHENTICATED_PREVIEW_BROWSER",
+    "browserNetworkKeyExposure": "NOT_DIRECTLY_CAPTURED",
+    "sameInstanceDedupe": "PASS_TEST_LEVEL_ONLY",
+    "previewUpstreamCallCount": "NOT_OBSERVABLE",
+    "failureIsolation": "PASS_TEST_LEVEL_ONLY",
+    "secretExposureHtml": 0,
+    "secretExposureClientScripts": 0,
+    "clientScriptsScanned": 70
+  },
+  "risa": {
+    "stations": 41,
+    "observations": 65,
+    "freshStations": 39,
+    "unavailableStations": 2,
+    "latestObservedAtSourceLocal": "2026-09-26T13:30:00",
+    "sourceTimezone": "UNSPECIFIED_BY_NIFS",
+    "temperatureUnit": "degC",
+    "sampleStationId": "bgj8a",
+    "sampleDepth": "SURFACE",
+    "sampleTemperatureC": 24.2,
+    "quota": "QUOTA_UNKNOWN"
+  },
+  "production": {
+    "url": "https://blue-marina.vercel.app",
+    "existingDeploymentId": "dpl_BcsRaXtmevSFezbjgNd887wDVUPs",
+    "risaFlag": "ABSENT_FAIL_CLOSED",
+    "risaKey": "ABSENT",
+    "femoFlag": "ABSENT_FAIL_CLOSED",
+    "risaObservationHttp": 503,
+    "risaCode": "SOURCE_DISABLED",
+    "femoObservationHttp": 503,
+    "femoCode": "SOURCE_DISABLED",
+    "environmentChanged": false,
+    "deploymentCreated": false,
+    "rollbackUsed": false
+  },
+  "gate": {
+    "passed": false,
+    "blockers": [
+      "Preview browser console errors could not be measured in the authenticated in-app browser; independent headless Chromium was redirected to Vercel Login",
+      "Preview concurrent upstream endpoint call count could not be measured; same-instance dedupe is proved only by injected test"
+    ]
+  },
+  "safety": {
+    "automaticComparator": 0,
+    "scoring": 0,
+    "ranking": 0,
+    "probability": 0,
+    "nearestStationInference": 0,
+    "femoActivation": 0,
+    "databaseApply": 0
+  },
+  "verification": {
+    "targeted": "4/4 PASS",
+    "total": "1188/1188 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "staticPages": "1463/1463",
+    "diffCheck": "PASS"
+  }
+}
