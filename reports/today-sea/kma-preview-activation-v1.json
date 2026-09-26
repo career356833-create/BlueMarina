@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "auditedAt": "2026-09-26T16:04:38Z",
+  "decision": "KMA_PREVIEW_ACTIVATION_PASS_WITH_LIMITATIONS",
+  "phaseA": {
+    "commit": "bb8e8d70894adc8296f0e17ade97ba3f267ac246",
+    "message": "docs(today-sea): record source activation readiness",
+    "files": 3,
+    "pushedToOriginMain": true
+  },
+  "codeCommits": [
+    "08e2393f71b658622f93bd41606f7d908600cee8",
+    "3d54a07cf38403563f2c17daaa21e8138a9fdc3c"
+  ],
+  "preview": {
+    "url": "https://blue-marina-a8whzq8ix-chiweon.vercel.app",
+    "deploymentId": "dpl_nEVneKKCurkCqe4qsaSrwyjXc5hs",
+    "sourceCommit": "3d54a07cf38403563f2c17daaa21e8138a9fdc3c",
+    "sourceWorktreeClean": true,
+    "readyState": "READY",
+    "todaySeaHttpStatus": 200,
+    "note": "Deployment is protected by Vercel authentication; authenticated vercel curl and the signed-in in-app browser were used."
+  },
+  "environment": {
+    "previewOnlyPresent": [
+      "KMA_MARINE_OBSERVATION_ENABLED",
+      "KMA_MARINE_STATION_API_KEY",
+      "KMA_MARINE_OBSERVATION_API_KEY",
+      "KMA_MARINE_WARNING_ENABLED",
+      "KMA_MARINE_WARNING_API_KEY"
+    ],
+    "previewFlagsEnabled": ["KMA_MARINE_OBSERVATION_ENABLED", "KMA_MARINE_WARNING_ENABLED"],
+    "productionKmaVariablesPresent": 0,
+    "productionObservationApiCode": "SOURCE_DISABLED",
+    "productionWarningApiCode": "SOURCE_DISABLED",
+    "keyValuesRecorded": 0,
+    "authMethod": "server-side authKey query parameter to https://apihub.kma.go.kr/api/typ01/url"
+  },
+  "observation": {
+    "httpStatus": 200,
+    "sourceKind": "OBSERVED",
+    "stationCount": 76,
+    "stationCoordinateCount": 76,
+    "recordCount": 138,
+    "latestObservedAt": "2026-09-27T00:00:00+09:00",
+    "responseCacheFreshness": "fresh",
+    "selectedStation": {
+      "stationId": "21229",
+      "stationName": "울릉도",
+      "observedAt": "2026-09-27T00:00:00+09:00",
+      "significantWaveHeightM": 0.7,
+      "windSpeedMs": 3,
+      "seaTemperatureC": 24.9,
+      "uiSourceStatus": "STALE"
+    },
+    "sourceTimeAssessment": "At approximately 00:58 KST, the latest source row was 00:00 KST; the existing source-time freshness policy classified the selected station STALE despite a fresh fetch cache. The audited source-family cadence is :00/:30 KST; no newer row was returned.",
+    "firstColdStationRead": "UPSTREAM_TIMEOUT on the initial Preview deployment; a bounded retry returned 200 and 76 stations",
+    "productionReadiness": "KMA_OBSERVATION_PRODUCTION_HOLD",
+    "holdReasons": ["Latest observed source time was stale at verification", "Initial cold station metadata request timed out", "Concurrent cold-request volume and quota were not measured"]
+  },
+  "warning": {
+    "httpStatus": 200,
+    "recordCount": 0,
+    "responseCacheFreshness": "fresh",
+    "uiSourceStatus": "AVAILABLE",
+    "issuanceTime": null,
+    "region": null,
+    "type": null,
+    "emptyMessage": "현재 조회된 특보 없음",
+    "absenceMeansSafe": false,
+    "productionReadiness": "KMA_WARNING_PRODUCTION_HOLD",
+    "holdReasons": ["Preview returned zero active warnings, so live issuance, region and type fields were not exercised", "One bounded cold API read took approximately 12 seconds", "Concurrent cold-request volume and quota were not measured"]
+  },
+  "otherSources": {
+    "kmaForecast": "API_KEY_MISSING with explicit zone; no Preview key added",
+    "khoaTide": "API_KEY_MISSING with explicit station/date; no Preview key added",
+    "khoaNavigationWarning": "SOURCE_DISABLED",
+    "productionActivation": 0
+  },
+  "failureIsolation": {
+    "initialStationTimeout": "Observed on the earlier Preview deployment while the page and warning source remained available",
+    "warningFailure": "Independent card behavior covered by source-state tests; a live warning outage was not induced",
+    "todaySeaHttpStatus": 200,
+    "wholePage503Observed": false
+  },
+  "cacheAndCalls": {
+    "browserStructure": "One stations and one warnings request on page load; one observation request for an explicitly selected station URL",
+    "stationMetadataCache": "24 hours fresh, 7 days stale fallback per server instance",
+    "observationCache": "10 minutes fresh, 90 minutes stale fallback per server instance",
+    "warningCache": "Current 5 minutes fresh, 60 minutes stale fallback per server instance",
+    "inFlightDeduplication": false,
+    "measuredBrowserRequestCount": null,
+    "duplicateCallVerdict": "NOT_VERIFIED; no production gate claim from structural inspection alone"
+  },
+  "security": {
+    "serverOnlyCredentials": true,
+    "localJsAssetsScanned": 137,
+    "secretMatchesInJs": 0,
+    "secretMatchesInPreviewHtml": 0,
+    "kmaEndpointInPreviewHtml": false,
+    "browserDirectKmaCallsInUiCode": 0,
+    "keyValuesInReportOrDocs": 0
+  },
+  "ui": {
+    "mobileViewport": "390x844",
+    "desktopViewport": "1280x900",
+    "horizontalOverflowPx": 0,
+    "bottomNavigationVisibleOnMobile": true,
+    "observedAndWarningLabels": true,
+    "selectedObservationBadge": "STALE",
+    "warningZeroMessageAndSafetyCaveat": true,
+    "browserConsoleErrors": 0
+  },
+  "safety": {
+    "seaSafetyScore": 0,
+    "recommendation": 0,
+    "bestTime": 0,
+    "fishingScore": 0,
+    "riskScore": 0,
+    "nearestStationInference": 0,
+    "warningAbsenceMeansSafety": false
+  },
+  "verification": {
+    "targeted": "4/4 PASS",
+    "total": "1222/1222 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS; 1463/1463 static pages generated",
+    "diffCheck": "PASS"
+  },
+  "git": {
+    "phaseACommittedAndPushed": true,
+    "phaseBCodeCommittedAndPushed": true,
+    "phaseBEvidenceCommitted": false,
+    "phaseBEvidenceStaged": false,
+    "unrelatedWorktreePreserved": true,
+    "productionEnvironmentChanged": false
+  }
+}
