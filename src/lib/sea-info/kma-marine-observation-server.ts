@@ -26,8 +26,14 @@ const observationCache = new Map<SourceName, CacheEntry<KmaMarineObservation[]>>
 const buoyCache = new Map<SourceName, CacheEntry<KmaBuoyDetailObservation[]>>();
 
 export class KmaMarineObservationSourceError extends Error {
-  constructor(public readonly code: "API_KEY_MISSING" | "UPSTREAM_TIMEOUT" | "UPSTREAM_ERROR" | "UPSTREAM_RESPONSE_TOO_LARGE") {
+  constructor(public readonly code: "SOURCE_DISABLED" | "API_KEY_MISSING" | "UPSTREAM_TIMEOUT" | "UPSTREAM_ERROR" | "UPSTREAM_RESPONSE_TOO_LARGE") {
     super(code);
+  }
+}
+
+function requireKmaMarineObservationEnabled() {
+  if (process.env.KMA_MARINE_OBSERVATION_ENABLED !== "true") {
+    throw new KmaMarineObservationSourceError("SOURCE_DISABLED");
   }
 }
 
@@ -71,6 +77,7 @@ function save<T>(cache: Map<SourceName, CacheEntry<T>>, source: SourceName, data
 }
 
 export async function getKmaMarineStations(): Promise<Snapshot<KmaStationParseResult>> {
+  requireKmaMarineObservationEnabled();
   const source: SourceName = "stations";
   const current = cached(stationCache.get(source), false);
   if (current) return current;
@@ -89,6 +96,7 @@ export async function getKmaMarineStations(): Promise<Snapshot<KmaStationParseRe
 }
 
 export async function getKmaMarineObservationSnapshot(): Promise<Snapshot<KmaMarineObservation[]>> {
+  requireKmaMarineObservationEnabled();
   const source: SourceName = "seaObservation";
   const current = cached(observationCache.get(source), false);
   if (current) return current;
@@ -108,6 +116,7 @@ export async function getKmaMarineObservationSnapshot(): Promise<Snapshot<KmaMar
 }
 
 export async function getKmaBuoyDetailSnapshot(): Promise<Snapshot<KmaBuoyDetailObservation[]>> {
+  requireKmaMarineObservationEnabled();
   const source: SourceName = "buoyDetail";
   const current = cached(buoyCache.get(source), false);
   if (current) return current;

@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 
 function errorResponse(error: unknown) {
   const code = error instanceof KmaMarineObservationSourceError ? error.code : "UPSTREAM_ERROR";
-  const status = code === "API_KEY_MISSING" ? 503 : code === "UPSTREAM_TIMEOUT" ? 504 : 502;
+  const status = code === "SOURCE_DISABLED" || code === "API_KEY_MISSING" ? 503 : code === "UPSTREAM_TIMEOUT" ? 504 : 502;
   return NextResponse.json({ ok: false, code, message: "KMA 해양기상 관측소 정보를 불러올 수 없습니다." }, { status });
 }
 

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { khoaTideStationSnapshots } from "@/data/khoa-tide-stations";
 import type { FishingConditionRealtimeEnvironment } from "@/lib/fishing-condition/nifs-realtime-fishing";
 import type { NifsRealtimeEnvironmentResponse } from "@/lib/fishing-condition/nifs-realtime-fishing-server";
-import type { KmaMarineObservation, KmaMarineStation } from "@/lib/sea-info/kma-marine-observation";
+import { deriveKmaObservationFreshness, type KmaMarineObservation, type KmaMarineStation } from "@/lib/sea-info/kma-marine-observation";
 import type { KmaMarineForecast } from "@/lib/sea-info/kma-marine-forecast";
 import type { KmaMarineWeatherWarningsResponse } from "@/lib/marine-navigation/adapters/kma-marine-weather-warnings";
 import type { KhoaNavigationWarningsResponse } from "@/lib/marine-navigation/adapters/khoa-navigation-warnings";
@@ -93,6 +93,7 @@ export function TodaySeaOperationalHub() {
   const navigationWarnings = useSource<KhoaNavigationWarningsResponse>("/api/sea-info/navigation-warnings");
   const selectedRisa = selectExplicitStation<FishingConditionRealtimeEnvironment>(risa.data?.stations ?? [], risaStationId);
   const selectedObservation = selectExplicitStation<KmaMarineObservation>(observation.data?.observations ?? [], kmaStationId);
+  const selectedObservationFreshness = deriveKmaObservationFreshness(selectedObservation?.observedAt);
   const selectedTideStation = khoaTideStationSnapshots.find((station) => station.stationId === tideStationId);
 
   return (
@@ -157,7 +158,7 @@ export function TodaySeaOperationalHub() {
                   <option value="">관측소를 선택하세요</option>
                   {kmaStations.data?.stations.map((station) => <option key={station.id} value={station.id}>{station.koreanName} ({station.id})</option>)}
                 </select>
-                {selectedObservation ? <p className="mt-3">관측 {sourceTime(selectedObservation.observedAt)} · 유의파고 {numberOrUnknown(selectedObservation.significantWaveHeightM, "m")} · 풍속 {numberOrUnknown(selectedObservation.windSpeedMs, "m/s")} · 수온 {numberOrUnknown(selectedObservation.seaTemperatureC, "°C")}<br />수집 {sourceTime(observation.data?.fetchedAt)}</p> : null}
+                {selectedObservation ? <p className="mt-3">관측 {sourceTime(selectedObservation.observedAt)} · 정점 상태 {selectedObservationFreshness.toUpperCase()}<br />{selectedObservationFreshness === "unavailable" ? "관측시각이 표시 가능 범위를 벗어나 수치를 표시하지 않습니다." : <>유의파고 {numberOrUnknown(selectedObservation.significantWaveHeightM, "m")} · 풍속 {numberOrUnknown(selectedObservation.windSpeedMs, "m/s")} · 수온 {numberOrUnknown(selectedObservation.seaTemperatureC, "°C")}</>}<br />수집 {sourceTime(observation.data?.fetchedAt)}</p> : null}
                 {kmaStationId && observation.data && !selectedObservation ? <p className="mt-3">선택한 정점의 관측값이 제공되지 않았습니다.</p> : null}
               </SourceCard>
             </div>
@@ -167,7 +168,7 @@ export function TodaySeaOperationalHub() {
             <summary className="min-h-11 cursor-pointer py-2 font-semibold">특보·항행 공지 · 기관별 참고정보</summary>
             <div className="mt-4 grid gap-4 lg:grid-cols-2">
               <SourceCard title="해상 기상특보" organization="기상청" kind="특보 · 참고정보" state={weatherWarnings}>
-                {weatherWarnings.data ? <><p>제공된 해상특보 {weatherWarnings.data.warnings.length}건 · 수집 {sourceTime(weatherWarnings.data.fetchedAt)}</p><ul className="mt-2 space-y-1">{weatherWarnings.data.warnings.slice(0, 3).map((warning) => <li key={warning.id}>{warning.areaName ?? warning.regionId} · {warning.warningType} {warning.warningLevel} · {warning.status}</li>)}</ul></> : null}
+                {weatherWarnings.data ? <><p>{weatherWarnings.data.warnings.length === 0 ? "현재 조회된 특보 없음" : `제공된 해상특보 ${weatherWarnings.data.warnings.length}건`} · 수집 {sourceTime(weatherWarnings.data.fetchedAt)}</p><ul className="mt-2 space-y-1">{weatherWarnings.data.warnings.slice(0, 3).map((warning) => <li key={warning.id}>{warning.areaName ?? warning.regionId} · {warning.warningType} {warning.warningLevel} · {warning.status}</li>)}</ul></> : null}
                 <p className="mt-3 text-xs text-white/55">표시 건수 0도 안전 판정이 아닙니다. 최신 공식 특보를 확인하세요.</p>
               </SourceCard>
               <SourceCard title="항행경보" organization="국립해양조사원" kind="공지 · 참고정보" state={navigationWarnings}>

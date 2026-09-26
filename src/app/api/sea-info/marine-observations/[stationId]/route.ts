@@ -5,6 +5,9 @@ import { getKmaBuoyDetailSnapshot, getKmaMarineObservationSnapshot } from "@/lib
 export const dynamic = "force-dynamic";
 
 export async function GET(_request: Request, context: { params: Promise<{ stationId: string }> }) {
+  if (process.env.KMA_MARINE_OBSERVATION_ENABLED !== "true") {
+    return NextResponse.json({ ok: false, code: "SOURCE_DISABLED", message: "KMA 해양기상 관측이 비활성화되어 있습니다." }, { status: 503 });
+  }
   const { stationId } = await context.params;
   if (!/^\d{1,10}$/.test(stationId)) {
     return NextResponse.json({ ok: false, code: "INVALID_STATION_ID", message: "관측소 ID 형식이 올바르지 않습니다." }, { status: 400 });

@@ -14,6 +14,6 @@ export async function GET(request: Request) {
     return NextResponse.json({ ok: true, observations, freshness: snapshot.freshness, fetchedAt: snapshot.fetchedAt, lastSuccessfulFetchAt: snapshot.lastSuccessfulFetchAt });
   } catch (error) {
     const code = error instanceof KmaMarineObservationSourceError ? error.code : "UPSTREAM_ERROR";
-    return NextResponse.json({ ok: false, code, message: "KMA 최신 종합관측을 불러올 수 없습니다." }, { status: code === "UPSTREAM_TIMEOUT" ? 504 : code === "API_KEY_MISSING" ? 503 : 502 });
+    return NextResponse.json({ ok: false, code, message: "KMA 최신 종합관측을 불러올 수 없습니다." }, { status: code === "UPSTREAM_TIMEOUT" ? 504 : code === "SOURCE_DISABLED" || code === "API_KEY_MISSING" ? 503 : 502 });
   }
 }

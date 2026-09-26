@@ -77,8 +77,20 @@ test('RISA retains station timestamps, depth layers, stale status and undocument
 });
 
 test('warning absence and UNKNOWN lifecycle never produce a safety verdict', () => {
+  assert.match(hub, /현재 조회된 특보 없음/);
   assert.match(hub, /표시 건수 0도 안전 판정이 아닙니다/);
   assert.match(hub, /UNKNOWN lifecycle은 확정된 현재 위험구역으로 해석하지 않습니다/);
+});
+
+test('KMA observation has a default-off server boundary and source-time freshness', () => {
+  const server = read('src/lib/sea-info/kma-marine-observation-server.ts');
+  for (const route of ['src/app/api/sea-info/marine-observations/route.ts', 'src/app/api/sea-info/marine-observations/stations/route.ts', 'src/app/api/sea-info/marine-observations/[stationId]/route.ts']) {
+    assert.match(read(route), /SOURCE_DISABLED/);
+  }
+  assert.match(server, /KMA_MARINE_OBSERVATION_ENABLED !== "true"/);
+  assert.match(server, /requireKmaMarineObservationEnabled\(\)/);
+  assert.match(hub, /deriveKmaObservationFreshness\(selectedObservation\?\.observedAt\)/);
+  assert.match(hub, /selectedObservationFreshness === "unavailable"/);
 });
 
 test('tide stays a prediction and never becomes safe-depth guidance', () => {
