@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "program": "BLUE_MARINA_V1_MASTER_STATUS_AND_NEXT_ROADMAP",
+  "observedAtUtc": "2026-09-26T21:22:33Z",
+  "baseline": {
+    "branch": "main",
+    "head": "51a86755d1f6bcc36b3ecfe1775de486266f5a50",
+    "originMain": "51a86755d1f6bcc36b3ecfe1775de486266f5a50",
+    "matched": true
+  },
+  "decision": "V1_PRODUCTION_CORE_READY_WITH_LIMITATIONS",
+  "decisionScope": "Public informational discovery core, not a transactional, community, or certified marine-navigation release.",
+  "nextPrimaryPriority": "VERIFIED_CHARTER_SUPPLY_AND_INQUIRY_LAUNCH",
+  "evidencePolicy": {
+    "LIVE_HTTP": "Bounded Production requests at observedAtUtc; one sample, not an SLA or ongoing browser check.",
+    "COMMITTED_CODE": "HEAD repository artifacts and runtime contracts; existence does not prove remote activation.",
+    "HISTORICAL_AUDIT": "Dated committed reports; not promoted to current live proof.",
+    "UNKNOWN": "No authorized DB, authenticated browser, or real-device evidence."
+  },
+  "production": {
+    "url": "https://blue-marina.vercel.app",
+    "deploymentId": "dpl_TX7XwU1fM5JKTLdxpMXFPuAoC4t4",
+    "deploymentState": "READY",
+    "deploymentCreatedAtUtc": "2026-09-26T21:15:37Z",
+    "deploymentGitSha": null,
+    "deploymentGitShaLimitation": "Vercel inspect returned no Git SHA; the local/pushed main SHA is known but was not independently matched to deployment metadata.",
+    "environmentNamesPresent": ["NIFS_REALTIME_FISHING_ENABLED", "NIFS_RISA_API_KEY", "NEXT_PUBLIC_SITE_URL", "NEXT_PUBLIC_KAKAO_MAP_APP_KEY"],
+    "environmentValuesRecorded": 0,
+    "productionDeployThisAudit": 0
+  },
+  "classificationEnum": ["PRODUCTION_ACTIVE", "PRODUCTION_ACTIVE_WITH_LIMITATIONS", "PREVIEW_READY", "CODE_READY_NOT_ACTIVATED", "BLOCKED_OR_BACKLOG"],
+  "featureMatrix": [
+    { "surface": "HOME", "classification": "PRODUCTION_ACTIVE_WITH_LIMITATIONS", "routes": ["/"], "reason": "MarineVideoHero, six primary and two secondary entries are public; local recent works, while account-backed personalization is unavailable without Auth." },
+    { "surface": "TODAY_SEA", "classification": "PRODUCTION_ACTIVE_WITH_LIMITATIONS", "routes": ["/today-sea"], "reason": "Operational hub returns 200 and isolates disabled cards; RISA is live, KMA/KHOA families remain off or without keys." },
+    { "surface": "SEA_MAP", "classification": "PRODUCTION_ACTIVE_WITH_LIMITATIONS", "routes": ["/sea"], "reason": "Kakao domain/tiles/layers passed the dated Production browser audit; current route is 200, but this audit did not rerender the map." },
+    { "surface": "NAVIGATION", "classification": "PRODUCTION_ACTIVE_WITH_LIMITATIONS", "routes": ["/sea/navigation"], "reason": "MapLibre/HUD, bearing, track and destination contract are deployed; four spot holds and straight-line-only disclaimer remain. Physical GPS/PWA QA is blocked." },
+    { "surface": "FISHING_SPOTS", "classification": "PRODUCTION_ACTIVE_WITH_LIMITATIONS", "routes": ["/fishing-spots", "/fishing-spots/[id]"], "reason": "1,405 source-backed spots, detail, cross-links and invalid-ID HTTP 404 are live; four navigation holds and partial coordinate lineage remain." },
+    { "surface": "CONDITIONS", "classification": "PRODUCTION_ACTIVE_WITH_LIMITATIONS", "routes": ["/fishing-spots/conditions"], "reason": "38 factual profiles and seasonality are public; RISA is active, FEMO is disabled, and no score, rank, probability or automatic comparator is active." },
+    { "surface": "FISH", "classification": "PRODUCTION_ACTIVE_WITH_LIMITATIONS", "routes": ["/fish"], "reason": "The public guide uses 336 local items; 1,258 normalized canonical records are a separate inventory, with one alias exception remaining." },
+    { "surface": "CHARTER", "classification": "CODE_READY_NOT_ACTIVATED", "routes": ["/charters", "/charters/[id]", "/charters/onboarding", "/reservations"], "reason": "Public discovery is an honest empty state; zero verified offers, backend flag off, no live Auth/migration E2E." },
+    { "surface": "MARKET", "classification": "CODE_READY_NOT_ACTIVATED", "routes": ["/market", "/market/[id]", "/market/new"], "reason": "Listing and moderation contracts exist, but public listing count is zero, backend/upload flags are off, and storage/migration E2E is absent." },
+    { "surface": "COMMUNITY", "classification": "CODE_READY_NOT_ACTIVATED", "routes": ["/community", "/community/[id]", "/community/new"], "reason": "Feed is empty; posting, comments and reactions are local previews without server persistence or public moderation." },
+    { "surface": "GUIDE", "classification": "PRODUCTION_ACTIVE", "routes": ["/license-guide", "/study", "/exam"], "reason": "Public guide and legacy learning routes exist; no backend activation dependency identified." },
+    { "surface": "ACCOUNT", "classification": "CODE_READY_NOT_ACTIVATED", "routes": ["/account", "/account/profile", "/account/saved", "/account/activity", "/account/login"], "reason": "Profile and saved contracts exist and device-local recent can work, but Production Auth variables/flag are absent and remote migration is not verified." },
+    { "surface": "OPERATIONS", "classification": "BLOCKED_OR_BACKLOG", "routes": ["/admin/operations", "/api/operations/health"], "reason": "Read-only code is deployed and fails closed; no Supabase Auth runtime or verified operations_admin actor, so the authenticated dashboard is unavailable." }
+  ],
+  "previewReadySubfeatures": [
+    { "id": "KMA_OBSERVATION", "classification": "PREVIEW_READY", "productionGate": "HOLD", "reason": "Preview returned 76 stations/138 observations, but selected source time was stale and a cold request timed out." },
+    { "id": "KMA_WARNING", "classification": "PREVIEW_READY", "productionGate": "HOLD", "reason": "Preview returned 200 with zero active warnings; live warning detail and cold latency need a full gate." }
+  ],
+  "dataMatrix": [
+    { "id": "FISHING_SPOTS", "count": 1405, "meaning": "Committed source-backed public spot records", "evidence": "src/data/fishing-spots.json" },
+    { "id": "FISH_CANONICAL", "count": 1258, "meaning": "Normalized canonical inventory; not identical to public /fish cards", "evidence": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json" },
+    { "id": "FISH_PUBLIC_GUIDE", "count": 336, "meaning": "Last dated Production browser audit of local guide items; not re-counted from the current browser", "evidence": "reports/release/production-informational-release-v1.json" },
+    { "id": "CONDITION_PROFILES", "count": 38, "meaning": "Two committed 19-species profile batches and runtime registry", "evidence": "data/fishing-condition/profiles/v1/batch-a-19.json; data/fishing-condition/profiles/v1/batch-b-19.json" },
+    { "id": "RISA_STATIONS", "count": 41, "meaning": "One current Production API response", "evidence": "LIVE_HTTP /api/fishing-condition/environment/realtime" },
+    { "id": "RISA_OBSERVATION_ROWS", "count": 65, "meaning": "One current Production API response; time-varying", "evidence": "LIVE_HTTP /api/fishing-condition/environment/realtime" },
+    { "id": "CHARTER_PUBLIC_OFFERS", "count": 0, "meaning": "Committed public registry; remote DB contents cannot be inspected", "evidence": "src/lib/charters/registry.ts" },
+    { "id": "MARKET_PUBLIC_LISTINGS", "count": 0, "meaning": "Current public API returned empty; remote DB contents cannot be inspected", "evidence": "LIVE_HTTP /api/market/listings" },
+    { "id": "COMMUNITY_PUBLIC_POSTS", "count": 0, "meaning": "Committed public registry; local device drafts are excluded", "evidence": "src/lib/community/registry.ts" }
+  ],
+  "sourceMatrix": [
+    { "id": "KAKAO_MAPS", "productionState": "ACTIVE", "programGate": "LIMITED", "evidenceKind": "HISTORICAL_AUDIT", "detail": "Production SDK HTTP 200, authorized domain, tiles/layers passed dated browser audit; no fresh canvas test in this audit." },
+    { "id": "MAPLIBRE_BASE_MAP", "productionState": "ACTIVE", "programGate": "LIMITED", "evidenceKind": "HISTORICAL_AUDIT", "detail": "Production canvas/HUD previously passed; current navigation route 200, real-device gestures unverified." },
+    { "id": "RISA", "productionState": "ACTIVE", "programGate": "LIMITED", "evidenceKind": "LIVE_HTTP", "detail": "HTTP 200, 41 stations, 65 observation rows, fresh response sample; source timezone and quota unknown." },
+    { "id": "FEMO", "productionState": "DISABLED", "programGate": "HOLD", "evidenceKind": "LIVE_HTTP", "detail": "Fishery environment endpoint 503 SOURCE_DISABLED; last audited sample historical, salinity unit undocumented." },
+    { "id": "KMA_OBSERVATION", "productionState": "DISABLED", "programGate": "HOLD", "evidenceKind": "LIVE_HTTP", "detail": "Production 503 SOURCE_DISABLED; Preview evidence exists but stale/cold-timeout gate remains." },
+    { "id": "KMA_WARNING", "productionState": "DISABLED", "programGate": "HOLD", "evidenceKind": "LIVE_HTTP", "detail": "Production 503 SOURCE_DISABLED; Preview returned no active warnings, not a safety verdict." },
+    { "id": "KMA_FORECAST", "productionState": "DISABLED", "programGate": "HOLD", "evidenceKind": "LIVE_HTTP", "detail": "Explicit zone request returned 503 API_KEY_MISSING." },
+    { "id": "KHOA_TIDE", "productionState": "DISABLED", "programGate": "HOLD", "evidenceKind": "LIVE_HTTP", "detail": "Explicit station/date request returned 503 API_KEY_MISSING; datum/timezone not established." },
+    { "id": "KHOA_NAV_WARNING", "productionState": "DISABLED", "programGate": "HOLD", "evidenceKind": "LIVE_HTTP", "detail": "Production 503 SOURCE_DISABLED; warning lifecycle remains unknown." }
+  ],
+  "backendMatrix": [
+    { "id": "CHARTER", "migrationExists": true, "remoteApply": "UNVERIFIED; prior rehearsal not executed", "authReady": false, "featureFlagEnabled": false, "runtimeE2E": "BLOCKED", "productionActivation": false, "publicRecords": 0 },
+    { "id": "MARKET", "migrationExists": true, "remoteApply": "UNVERIFIED; prior report says no apply", "authReady": false, "featureFlagEnabled": false, "runtimeE2E": "BLOCKED", "productionActivation": false, "publicRecords": 0, "storageBucketApply": "UNVERIFIED" },
+    { "id": "ACCOUNT", "migrationExists": true, "remoteApply": "UNVERIFIED; prior report says no apply", "authReady": false, "featureFlagEnabled": false, "runtimeE2E": "BLOCKED", "productionActivation": false },
+    { "id": "OPERATIONS", "migrationExists": false, "remoteApply": "NOT_APPLICABLE", "authReady": false, "featureFlagEnabled": null, "runtimeE2E": "NEGATIVE_AUTH_ONLY", "productionActivation": false },
+    { "id": "COMMUNITY", "migrationExists": false, "remoteApply": "NOT_APPLICABLE", "authReady": false, "featureFlagEnabled": null, "runtimeE2E": "LOCAL_PREVIEW_ONLY", "productionActivation": false, "publicRecords": 0 }
+  ],
+  "releaseSecurity": {
+    "sampleHttp200Routes": ["/", "/today-sea", "/sea", "/sea/navigation", "/fishing-spots", "/fishing-spots/conditions", "/fish", "/charters", "/market", "/community", "/license-guide"],
+    "invalidSpotHttpStatus": 404,
+    "sitemapUrlCount": 1424,
+    "robotsAdminDisallowed": true,
+    "productionSelfCanonicalsSampled": ["/", "/today-sea", "/fishing-spots/boat-1"],
+    "cspPresent": true,
+    "unsafeEvalAllowed": false,
+    "knownBlockedKakaoLegacyEvalViolation": 1,
+    "hstsPresent": true,
+    "otherHeadersPresent": ["X-Content-Type-Options", "Referrer-Policy", "Permissions-Policy", "X-Frame-Options"],
+    "serviceWorkerHttpStatus": 200,
+    "serviceWorkerCacheVersion": "blue-marina-v6",
+    "operationsUnauthenticatedHttpStatus": 404,
+    "operationsHealthNoTokenHttpStatus": 401,
+    "rollback": "Vercel rollback capability and historical prior deployment exist; rollback was not rehearsed in this audit."
+  },
+  "qa": {
+    "baselineUnitIntegration": "1230/1230 PASS at Operations V1 commit; master status adds 7/7 and full suite passes 1237/1237",
+    "historicalMobileBrowser": "390px and other Chromium mobile viewports passed selected routes; not a physical device",
+    "historicalDesktopBrowser": "1280px selected-route audits passed",
+    "realDeviceGpsPwa": "BLOCKED_NO_DEVICE",
+    "authenticatedOperationsUi": "BLOCKED_NO_AUTH_CONFIG_OR_OPERATOR",
+    "currentProductionSmoke": "Selected HTTP routes, RISA and disabled-source responses checked; no fresh full browser journey",
+    "productionDbE2E": "NOT_VERIFIED"
+  },
+  "productValue": {
+    "canDoNow": ["Explore 1,405 fishing spots and source lineage", "Read 38 factual condition profiles with selected RISA observations", "Use Today Sea and sea map as reference", "Use map/navigation HUD as straight-line aid", "Read the public fish and guide content"],
+    "strongest": "Source-backed fishing-spot to Conditions to Sea/Navigation informational journey",
+    "weakest": "Charter, Market and Community public shells have zero public supply and no durable conversion loop",
+    "emptyShells": ["CHARTER", "MARKET", "COMMUNITY"],
+    "retentionPath": "Trusted source updates, saved/recent and community participation after Auth/persistence activation",
+    "revenuePath": "Verified charter offers and operator inquiries first; moderated marketplace second",
+    "commercialTransactionsNow": 0
+  },
+  "v1ReleaseScope": {
+    "productionCore": ["HOME_BRAND_ENTRY", "TODAY_SEA_REFERENCE", "SEA_MAP_REFERENCE", "FISHING_SPOT_DISCOVERY", "FACTUAL_CONDITIONS_WITH_RISA", "FISH_PUBLIC_GUIDE", "GUIDE"],
+    "beta": ["NAVIGATION_HUD_STRAIGHT_LINE", "HOME_LOCAL_PERSONALIZATION", "COMMUNITY_LOCAL_DRAFT", "CHARTER_EMPTY_DISCOVERY", "MARKET_EMPTY_DISCOVERY"],
+    "experimental": ["KMA_OBSERVATION_PREVIEW", "KMA_WARNING_PREVIEW"],
+    "backlog": ["DURABLE_CHARTER_SUPPLY", "DURABLE_MARKET", "COMMUNITY_BACKEND", "ACCOUNT_AUTH_AND_SAVED", "OPERATIONS_AUTH", "REAL_DEVICE_NAVIGATION_GATE"]
+  },
+  "backlog": {
+    "P0": [],
+    "P1": [
+      { "id": "VERIFIED_CHARTER_SUPPLY", "title": "Verified charter offers and inquiry conversion are absent" },
+      { "id": "REAL_DEVICE_NAVIGATION_GATE", "title": "Navigation GPS, heading and installed PWA remain unverified on a physical device" },
+      { "id": "IDENTITY_TRUST_BACKEND", "title": "Auth, roles and Charter/Market/Account migration E2E are unverified" }
+    ],
+    "P2": [
+      { "id": "TODAY_SEA_SOURCE_HOLDS", "title": "FEMO, KMA and KHOA Production source package remains held" },
+      { "id": "MARKET_SUPPLY_ZERO", "title": "No moderated production market listings" },
+      { "id": "COMMUNITY_PERSISTENCE_ZERO", "title": "No durable public community posts or moderation workflow" },
+      { "id": "OPERATIONS_AUTH_BLOCKED", "title": "Private dashboard cannot be used without operations_admin and Auth runtime" },
+      { "id": "RISA_OPERATIONAL_LIMITS", "title": "RISA quota, source timezone and cross-instance deduplication remain unknown" },
+      { "id": "FISH_PUBLIC_COVERAGE_GAP", "title": "Public fish guide does not expose the full canonical inventory" }
+    ],
+    "P3": [
+      { "id": "OBSERVABILITY_HISTORY", "title": "No persistent 5xx/latency history or operator alerting" },
+      { "id": "FUNNEL_MEASUREMENT", "title": "No measured inquiry, save or return-user conversion funnel" },
+      { "id": "ROLLBACK_REHEARSAL", "title": "Production rollback has not been rehearsed for this release" }
+    ],
+    "INFO": [
+      { "id": "KAKAO_LEGACY_EVAL", "title": "One known legacy eval CSP violation remains blocked; unsafe-eval stays disallowed" },
+      { "id": "CANONICAL_ALIAS_EXCEPTION", "title": "BM-SPECIES-000279 alias ambiguity remains; no production alias promotion" }
+    ]
+  },
+  "roadmapIds": [
+    "VERIFIED_CHARTER_SUPPLY_AND_INQUIRY_LAUNCH",
+    "IDENTITY_AND_TRUST_FOUNDATION",
+    "REAL_DEVICE_NAVIGATION_FIELD_GATE",
+    "TODAY_SEA_RELIABLE_SOURCE_PACKAGE",
+    "MARKET_COMMUNITY_MODERATED_PILOT"
+  ],
+  "limitations": [
+    "This is a bounded current HTTP/source sample plus committed historical browser audits, not continuous Production monitoring.",
+    "Production deployment Git SHA and remote Supabase table contents were not independently verified.",
+    "No authenticated Account/Operations or physical-device browser test was available.",
+    "RISA observation rows, source freshness and latencies change with time; quota and source timezone remain undocumented.",
+    "Kakao/MapLibre canvas rendering was not rerun during this audit; classification relies on prior Production browser evidence.",
+    "Charter, Market and Community zero counts describe public runtime exposure, not inaccessible remote database rows."
+  ],
+  "verification": { "targeted": "7/7 PASS", "total": "1237/1237 PASS", "typecheck": "PASS", "lint": "PASS", "build": "PASS; 1463/1463 static generation", "diffCheck": "PASS" },
+  "git": { "staged": 0, "commit": 0, "push": 0, "unrelatedWorktreePreserved": true },
+  "invariants": { "newFeatureImplementation": 0, "productionDeploy": 0, "databaseApply": 0, "backendActivation": 0, "sourceActivation": 0 }
+}
