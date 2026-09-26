@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "auditedAt": "2026-09-26T15:22:00Z",
+  "baseline": "10d7dd200c60d91fc3d465cdfe8161700e947e99",
+  "decision": "TODAY_SEA_SOURCE_ACTIVATION_HOLD",
+  "reason": "All five source credentials are absent from both Vercel Preview and Production. Local KMA observation and warning reads demonstrate two conditional candidates, but no deployed upstream can yet be validated.",
+  "environmentAudit": {
+    "method": "vercel env ls preview and production; variable names only; no values retrieved",
+    "preview": {
+      "KMA_APIHUB_KEY": "MISSING",
+      "KMA_MARINE_STATION_API_KEY": "MISSING",
+      "KMA_MARINE_OBSERVATION_API_KEY": "MISSING",
+      "KMA_MARINE_WARNING_API_KEY": "MISSING",
+      "KMA_MARINE_WARNING_ENABLED": "DISABLED",
+      "KHOA_API_KEY": "MISSING",
+      "KHOA_NAVIGATION_WARNING_API_KEY": "MISSING",
+      "KHOA_NAVIGATION_WARNING_ENABLED": "DISABLED"
+    },
+    "production": {
+      "KMA_APIHUB_KEY": "MISSING",
+      "KMA_MARINE_STATION_API_KEY": "MISSING",
+      "KMA_MARINE_OBSERVATION_API_KEY": "MISSING",
+      "KMA_MARINE_WARNING_API_KEY": "MISSING",
+      "KMA_MARINE_WARNING_ENABLED": "DISABLED",
+      "KHOA_API_KEY": "MISSING",
+      "KHOA_NAVIGATION_WARNING_API_KEY": "MISSING",
+      "KHOA_NAVIGATION_WARNING_ENABLED": "DISABLED"
+    },
+    "localNamesPresent": ["KMA_APIHUB_KEY", "KMA_MARINE_STATION_API_KEY", "KMA_MARINE_OBSERVATION_API_KEY", "KMA_MARINE_WARNING_API_KEY", "KHOA_API_KEY", "KHOA_NAVIGATION_WARNING_API_KEY"],
+    "localCredentialScope": "Local presence does not establish Preview or Production authorization or quotas. Values were not recorded."
+  },
+  "liveChecks": {
+    "production": {
+      "page": { "httpStatus": 200, "elapsedMs": 157 },
+      "forecast": { "httpStatus": 503, "elapsedMs": 1340, "code": "API_KEY_MISSING", "recordCount": null, "latestTimestamp": null },
+      "stations": { "httpStatus": 503, "elapsedMs": 792, "code": "API_KEY_MISSING", "recordCount": null, "latestTimestamp": null },
+      "observations": { "httpStatus": 503, "elapsedMs": 252, "code": "API_KEY_MISSING", "recordCount": null, "latestTimestamp": null },
+      "warnings": { "httpStatus": 503, "elapsedMs": 245, "code": "SOURCE_DISABLED", "recordCount": null, "latestTimestamp": null },
+      "tide": { "httpStatus": 503, "elapsedMs": 313, "code": "API_KEY_MISSING", "recordCount": null, "latestTimestamp": null },
+      "navigationWarnings": { "httpStatus": 503, "elapsedMs": 398, "code": "SOURCE_DISABLED", "recordCount": null, "latestTimestamp": null }
+    },
+    "local": {
+      "forecast": { "httpStatus": 502, "elapsedMs": 2407, "code": "UPSTREAM_ERROR", "recordCount": null, "latestTimestamp": null, "secondRepresentativeCoordinateAttempt": { "httpStatus": 502, "elapsedMs": 1200, "code": "UPSTREAM_ERROR" } },
+      "stations": { "httpStatus": 200, "elapsedMs": 1219, "recordCount": 76, "schemaValid": true },
+      "observations": { "httpStatus": 200, "elapsedMs": 414, "recordCount": 137, "latestTimestamp": "2026-09-27T00:00:00+09:00", "schemaValid": true },
+      "warnings": { "httpStatus": 200, "elapsedMs": 491, "recordCount": 0, "schemaValid": true, "latestTimestamp": null, "interpretation": "No returned warnings is not a safety determination." },
+      "tide": { "httpStatus": 504, "elapsedMs": 8231, "code": "UPSTREAM_TIMEOUT", "recordCount": null, "latestTimestamp": null },
+      "navigationWarnings": { "request": "SKIPPED", "reason": "A single cold request fans out into paginated list and per-document detail requests; quota and request-volume review required." }
+    },
+    "preview": { "request": "SKIPPED", "reason": "Matching Preview credential names absent; avoid duplicate disabled-only probes." }
+  },
+  "sources": [
+    {
+      "sourceId": "KMA_MARINE_FORECAST", "provider": "KMA", "kind": "MODEL/FORECAST", "route": "/api/sea-info/marine-forecast", "envFlag": null, "apiKeyEnv": "KMA_APIHUB_KEY", "endpoint": "https://apihub.kma.go.kr/api/typ06/url/marine_small_zone.php", "authMethod": "server-side authKey query parameter", "responseSchema": "KMA whitespace/comma tabular text normalized by parseKmaMarineForecastCsv", "timestampField": ["tma_fc UTC issue", "tma_ef UTC valid"], "unitFields": { "wh_sig": "m", "wvprd_max": "s", "wvdr": "degree", "ws": "m/s", "wd": "degree", "vs": "m", "rain": "mm", "tw": "°C", "swell": "UNIT_NOT_DOCUMENTED" }, "timezone": "UTC documented for issue and valid time", "officialCadence": "00/12 UTC issues; 3-hour valid steps through +75 hours", "cachePolicy": "in-process fresh 30 min; last-good fallback 18 h", "timeoutMs": 8000, "retry": "No explicit retry; one fetch followed by stale fallback", "requestVolume": "0 on initial page load; 1 per explicit Lzone/Szone submit; no in-flight dedupe", "currentStatus": "DISABLED", "freshness": "DISABLED", "latestAvailableForecast": null, "operationalValue": "MEDIUM", "valueReason": "Wave and wind forecast has clear units but requires numeric zone entry and the current local upstream request fails.", "activationRisk": "HIGH", "riskReason": "Both deployed keys absent and two bounded local reads failed upstream; quota unknown.", "readiness": "HOLD", "sourceRefs": ["src/app/api/sea-info/marine-forecast/route.ts", "docs/MARINE_WEATHER_SOURCE_AUDIT_V1.md"]
+    },
+    {
+      "sourceId": "KMA_MARINE_OBSERVATIONS", "provider": "KMA", "kind": "OBSERVED", "route": "/api/sea-info/marine-observations", "envFlag": null, "apiKeyEnv": ["KMA_MARINE_STATION_API_KEY", "KMA_MARINE_OBSERVATION_API_KEY"], "endpoint": ["https://apihub.kma.go.kr/api/typ01/url/stn_inf.php", "https://apihub.kma.go.kr/api/typ01/url/sea_obs.php"], "authMethod": "server-side authKey query parameter", "responseSchema": "station metadata whitespace text; observations comma text; exact stationId selection", "timestampField": ["TM", "rawObservedAt", "observedAt"], "unitFields": { "WH": "m", "WD": "degree", "WS": "m/s", "WS_GST": "m/s", "TW": "°C", "TA": "°C", "PA": "hPa", "HM": "%" }, "timezone": "KST documented in prior official-source audit; raw TM retained", "officialCadence": ":00/:30 source family; station rows may differ", "cachePolicy": "station metadata 24 h fresh / 7 d stale; observations 10 min fresh / 90 min stale", "timeoutMs": 8000, "retry": "No explicit retry; per-source last-good fallback", "requestVolume": "1 metadata request on page load, then 1 observations request per selected station; server fetches all observations, cached per instance; no in-flight dedupe", "currentStatus": "DISABLED", "freshness": "DISABLED", "localSampleFreshness": "AVAILABLE", "latestObservedAt": "2026-09-27T00:00:00+09:00", "operationalValue": "HIGH", "valueReason": "Recent station-specific wave, wind and water temperature observations with explicit provenance and no nearest-station inference.", "activationRisk": "MEDIUM", "riskReason": "Local station and observation APIs responded successfully; two deployed credentials, per-instance cold-request duplication and quota remain to verify.", "readiness": "READY_WITH_LIMITATIONS", "sourceRefs": ["src/lib/sea-info/kma-marine-observation-server.ts", "docs/KMA_MARINE_WEATHER_OBSERVATION_V1.md"]
+    },
+    {
+      "sourceId": "KMA_MARINE_WARNINGS", "provider": "KMA", "kind": "REFERENCE_WARNING", "route": "/api/sea-info/weather-warnings", "envFlag": "KMA_MARINE_WARNING_ENABLED", "apiKeyEnv": "KMA_MARINE_WARNING_API_KEY", "endpoint": ["https://apihub.kma.go.kr/api/typ01/url/wrn_now_data_new.php", "https://apihub.kma.go.kr/api/typ01/url/wrn_met_data.php", "https://apihub.kma.go.kr/api/typ01/url/wrn_reg.php"], "authMethod": "server-side authKey query parameter", "responseSchema": "JSON current + EUC-KR text history/zone; marine REG_ID filtering; panel-only, geometry null", "timestampField": ["TM_FC issued", "TM_EF effective", "ED_TM raw expected end text"], "unitFields": {}, "timezone": "KST documented in prior official-source audit", "officialCadence": "Event-driven; no fixed warning interval asserted", "cachePolicy": "current 5 min fresh / 60 min stale; history 20 min fresh / 60 min stale; zones 24 h fresh / 7 d stale", "timeoutMs": 12000, "retry": "No explicit retry; bounded stale fallback", "requestVolume": "1 browser request on page load; cold server fetch fans out to 3 upstream calls; no in-flight dedupe", "currentStatus": "DISABLED", "freshness": "DISABLED", "localSampleFreshness": "AVAILABLE", "latestIssuedAt": null, "operationalValue": "HIGH", "valueReason": "Official marine warning type, level, region and issue/effective time are high-value reference information.", "activationRisk": "MEDIUM", "riskReason": "Local 200 with zero current rows confirms empty response parsing only; deployed key and flag absent, warning completeness and quota require Preview checks.", "readiness": "READY_WITH_LIMITATIONS", "sourceRefs": ["src/lib/sea-info/kma-marine-weather-warning-server.ts", "docs/KMA_MARINE_WEATHER_WARNING_V1.md"]
+    },
+    {
+      "sourceId": "KHOA_TIDE_PREDICTION", "provider": "KHOA", "kind": "PREDICTION", "route": "/api/sea-info/tide", "envFlag": null, "apiKeyEnv": "KHOA_API_KEY", "endpoint": "https://apis.data.go.kr/1192136/tideFcstHghLw/GetTideFcstHghLwApiService", "authMethod": "server-side serviceKey query parameter", "responseSchema": "JSON high/low events for explicit obsCode and reqDate", "timestampField": ["predcDt", "occurredAt"], "unitFields": { "predcTdlvVl": "cm", "datum": "DATUM_NOT_DOCUMENTED" }, "timezone": "TIMEZONE_NOT_DOCUMENTED in reviewed API evidence; UI-selected date uses Asia/Seoul calendar only", "officialCadence": "No provider refresh cadence established; request-date prediction", "cachePolicy": "in-process fresh 1 h / stale fallback 24 h", "timeoutMs": 8000, "retry": "No explicit retry; last-good fallback", "requestVolume": "0 on initial page load; 1 per explicit station/date combination; no in-flight dedupe", "currentStatus": "DISABLED", "freshness": "DISABLED", "latestPrediction": null, "operationalValue": "MEDIUM", "valueReason": "High/low prediction is useful reference data, but not observed water level or safe depth.", "activationRisk": "HIGH", "riskReason": "Deployed key absent, local bounded request timed out, datum and source timezone unresolved.", "readiness": "HOLD", "sourceRefs": ["src/app/api/sea-info/tide/route.ts", "docs/KHOA_TIDE_STATION_OVERLAY_V1.md"]
+    },
+    {
+      "sourceId": "KHOA_NAVIGATION_WARNINGS", "provider": "KHOA", "kind": "REFERENCE_NOTICE", "route": "/api/sea-info/navigation-warnings", "envFlag": "KHOA_NAVIGATION_WARNING_ENABLED", "apiKeyEnv": "KHOA_NAVIGATION_WARNING_API_KEY", "endpoint": ["https://apis.data.go.kr/1192136/NavigationalWarning/getNavigationalWarningInfo", "https://apis.data.go.kr/1192136/NavigationalWarning/getNavigationalWarningDetailInfo"], "authMethod": "server-side ServiceKey query parameter", "responseSchema": "paginated XML list plus per-document detail and conservative geometry", "timestampField": ["alarm_date", "alarm_time", "publication timestamp not provided"], "unitFields": { "position": "DMS when strictly parseable" }, "timezone": "TIMEZONE_NOT_DOCUMENTED", "officialCadence": "Event-driven; no refresh SLA", "cachePolicy": "in-process 10 min; stale fallback 60 min", "timeoutMs": 12000, "retry": "No explicit retry; last-good fallback", "requestVolume": "1 browser request on page load; one cold server request fans out over list pages and each unique document's detail pages; no in-flight dedupe; prior audit observed 112 unique documents", "currentStatus": "DISABLED", "freshness": "DISABLED", "latestIssueTimestamp": null, "lifecycle": "UNKNOWN", "operationalValue": "MEDIUM", "valueReason": "Official notice content is useful as reference, but current/expired status cannot be established.", "activationRisk": "HIGH", "riskReason": "Dedicated key and flag absent, lifecycle always UNKNOWN, publication/expiry absent and cold fan-out risks quota and latency.", "readiness": "HOLD", "sourceRefs": ["src/app/api/sea-info/navigation-warnings/route.ts", "docs/KHOA_NAVIGATION_WARNING_SOURCE_AUDIT_V2.md"]
+    }
+  ],
+  "priority": ["KMA_MARINE_OBSERVATIONS", "KMA_MARINE_WARNINGS", "KMA_MARINE_FORECAST", "KHOA_TIDE_PREDICTION", "KHOA_NAVIGATION_WARNINGS"],
+  "selectedActivationCandidates": ["KMA_MARINE_OBSERVATIONS", "KMA_MARINE_WARNINGS"],
+  "candidateQualification": "Conditional candidates only. Local names exist and local reads succeeded; Preview/Production credentials remain absent and no activation is authorized by this report.",
+  "previewPlan": [
+    "For observations, verify KMA_MARINE_STATION_API_KEY and KMA_MARINE_OBSERVATION_API_KEY authorization/quota; register secrets in Preview only; deploy Preview; smoke station catalog and an exact selected station; compare source TM to official :00/:30 cadence; inspect units, stale behavior and page isolation.",
+    "For warnings, verify KMA_MARINE_WARNING_API_KEY authorization/quota; register it in Preview and only then enable KMA_MARINE_WARNING_ENABLED in Preview; deploy Preview; smoke current/history/zone paths, zero-warning state, lifecycle and per-card isolation.",
+    "For each candidate, inspect request counts and concurrent cold loads, ensure no client key or upstream URL exposure, run 200/error/timeout/stale UI checks and confirm /today-sea HTTP 200 throughout.",
+    "Only after Preview passes, evaluate a separate Production gate: production-scoped key and quota, official freshness, bounded latency/volume, no key leakage, explicit source labels, error rollback plan and approval. No Production change in this audit."
+  ],
+  "security": { "serverOnlyKeys": true, "browserDirectUpstreamCalls": 0, "clientBundleKeyExposureFound": 0, "reportKeyValueExposure": 0, "logKeyValueExposureObserved": 0 },
+  "safety": { "score": 0, "recommendation": 0, "nearestStationInference": 0, "tideDepthInference": 0, "warningAbsenceImpliesSafety": false, "forecastAsObservation": false, "tideAsObservation": false },
+  "mutations": { "previewActivation": 0, "productionActivation": 0, "databaseApply": 0, "supabaseApply": 0, "staged": 0, "commits": 0, "pushes": 0 }
+}
