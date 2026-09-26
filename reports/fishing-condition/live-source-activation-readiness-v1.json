@@ -1,0 +1,118 @@
+{
+  "version": "V1",
+  "decision": "LIVE_SOURCE_ACTIVATION_HOLD",
+  "assessedAt": "2026-09-26",
+  "baseline": "bdccadbeda8eb9d2381863dca112d560aaa0ba96",
+  "production": "https://blue-marina.vercel.app",
+  "sources": {
+    "risa": {
+      "id": "nifs-risa",
+      "endpoint": "https://www.nifs.go.kr/api/OpenAPI_json?id=risaCode|risaList",
+      "authentication": "server-side key query parameter",
+      "flag": "NIFS_REALTIME_FISHING_ENABLED",
+      "keyEnv": "NIFS_RISA_API_KEY",
+      "optionalUrlEnv": ["NIFS_RISA_CODE_URL", "NIFS_RISA_LIST_URL"],
+      "previewEnv": "MISSING",
+      "productionEnv": "MISSING",
+      "localKeyReadOnlyCheck": "VALID_FOR_BOUNDED_REQUEST",
+      "liveCheck": {
+        "http": 200,
+        "resultCode": "00",
+        "contentType": "application/json;charset=UTF-8",
+        "stationRows": 41,
+        "observationRows": 65,
+        "uniqueObservationStations": 41,
+        "latestObservedAtSourceClock": "2026-09-26 12:30:00",
+        "freshnessClass": "NEAR_REALTIME",
+        "depthLayers": ["SURFACE", "MIDDLE", "BOTTOM"],
+        "temperatureUnit": "degC",
+        "timestampTimezone": "TIMEZONE_NOT_DOCUMENTED",
+        "responseMsApprox": {"risaCode": 169, "risaList": 107}
+      },
+      "timeoutMsPerEndpoint": 10000,
+      "retryCount": 0,
+      "moduleCacheSeconds": 600,
+      "staleFallbackSeconds": 7200,
+      "cdnSeconds": 600,
+      "quota": "UNKNOWN",
+      "cost": "UNKNOWN"
+    },
+    "femo": {
+      "id": "nifs-femo-sea",
+      "endpointDefault": "https://www.nifs.go.kr/OpenAPI_json?id=femoSeaList",
+      "endpointTested": "https://www.nifs.go.kr/api/OpenAPI_json?id=femoSeaList",
+      "authentication": "server-side key query parameter, sdate and edate required",
+      "flag": "NIFS_FISHERY_ENVIRONMENT_ENABLED",
+      "keyEnv": "NIFS_FEMO_API_KEY",
+      "optionalUrlEnv": ["NIFS_FEMO_SEA_URL"],
+      "previewEnv": "MISSING",
+      "productionEnv": "MISSING",
+      "localKeyReadOnlyCheck": "VALID_FOR_BOUNDED_REQUEST",
+      "liveCheck": {
+        "http": 200,
+        "resultCode": "00",
+        "contentType": "application/json;charset=UTF-8",
+        "rawRows": 251,
+        "uniqueSites": 249,
+        "earliestSampledAtSourceClock": "2025-09-26 08:55",
+        "latestSampledAtSourceClock": "2025-11-05 10:10",
+        "latestAgeDaysApprox": 325,
+        "freshnessClass": "PERIODIC_STALE",
+        "depthLayers": ["SURFACE", "BOTTOM"],
+        "temperatureUnit": "degC",
+        "salinityUnit": "UNIT_NOT_DOCUMENTED",
+        "dissolvedOxygenUnit": "mg/L",
+        "timestampTimezone": "TIMEZONE_NOT_DOCUMENTED",
+        "responseMsApprox": 190
+      },
+      "officialUpdateCadence": "2_TO_3_MONTHS",
+      "timeoutMs": 30000,
+      "retryCount": 0,
+      "moduleCacheSeconds": 86400,
+      "staleFallbackSeconds": 604800,
+      "cdnSeconds": 86400,
+      "quota": "UNKNOWN",
+      "cost": "UNKNOWN"
+    }
+  },
+  "sourceContract": {
+    "stationSelection": "EXPLICIT_ONLY",
+    "fishingSpotIsObservationStation": false,
+    "normalization": "RISA exact stationId join and latest timestamp per station; FEMO composite fishery/station siteId and latest sample per selected site",
+    "status": "UNAVAILABLE or NOT_REQUESTED for static read-model; observed source status is carried in source/freshness fields",
+    "errorMapping": "observation routes: 503 disabled/key, 504 timeout, 502 other; read-model: 200 PARTIAL for disabled/key/timeout/upstream error with valid profile, contract error 502",
+    "staticProfileOnFailure": true,
+    "independentSourceDegradation": "only explicitly requested source is fetched; other source is not automatically combined"
+  },
+  "requestVolume": {
+    "initialPageViewUpstream": 0,
+    "staticProfileQueryUpstream": 0,
+    "sourceSelectionColdInstanceUpstream": {"risa": 2, "femo": 1},
+    "explicitReadModelColdInstanceUpstream": {"risa": 2, "femo": 1},
+    "speciesChangeWithoutSubmitUpstream": 0,
+    "speciesChangeThenSubmitWarmInstanceUpstream": 0,
+    "stationChangeThenSubmitWarmInstanceUpstream": 0,
+    "duplicateRisk": "module-local cache only; separate serverless instances and simultaneous cold requests may multiply calls; no in-flight coalescing or retry"
+  },
+  "security": {
+    "serverOnlyImports": true,
+    "clientKeyReferences": 0,
+    "responseKeyExposureObserved": 0,
+    "keyInServerSideQueryUrl": true,
+    "logExposureObserved": 0,
+    "productionSettingsChanged": false
+  },
+  "blockers": [
+    "Preview and Production NIFS flags, keys, and optional URL overrides are absent in Vercel inventory",
+    "FEMO latest available sample is approximately 325 days old, well beyond official 2–3 month update cadence",
+    "Existing legacy 10-species path calls numeric comparator when live observations are explicitly submitted, contrary to this activation's fact/reference-only policy",
+    "No Preview source/API/UI smoke; quota and cost unconfirmed; one bounded upstream sample does not establish reliability"
+  ],
+  "preview": {"activatedSources": [], "apiResult": "NOT_RUN", "uiResult": "NOT_RUN", "reason": "HOLD; no Preview environment activation"},
+  "productionGate": {
+    "flagEnabled": false,
+    "required": ["server-scoped Preview keys and flags", "FEMO freshness and unit policy", "fact/reference-only read-model for both legacy and expanded species", "bounded-load quota confirmation", "Preview success and failure smoke", "separate Production approval"]
+  },
+  "invariants": {"scoringAdded": 0, "rankingAdded": 0, "probabilityAdded": 0, "automaticComparisonAdded": 0, "databaseApply": 0, "productionActivation": 0, "previewActivation": 0, "gitStage": 0, "commit": 0, "push": 0},
+  "officialReferences": ["https://www.nifs.go.kr/openApi/actionOpenapiInfoList.do?contentsCd=01", "https://nifs.go.kr/portal/me/femoA/actionDataObsSearch.do"]
+}
