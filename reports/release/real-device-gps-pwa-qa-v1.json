@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-09-25",
+  "decision": "REAL_DEVICE_GPS_PWA_QA_BLOCKED",
+  "baseline": "29a04093fc9e4a7235b4387bf9305751afc52438",
+  "production": "https://blue-marina.vercel.app",
+  "evidenceClasses": {
+    "realDevice": "NONE_AVAILABLE",
+    "browser": "Desktop Chromium with mobile viewport and touch emulation; not a real phone",
+    "permission": "Browser-controlled denial; not an OS permission test",
+    "code": "Read-only navigation, manifest, and service-worker inspection"
+  },
+  "deviceMatrix": [
+    {
+      "target": "Android Chrome",
+      "deviceModel": null,
+      "osVersion": null,
+      "browserVersion": null,
+      "standalone": null,
+      "status": "BLOCKED"
+    },
+    {
+      "target": "iPhone Safari",
+      "deviceModel": null,
+      "osVersion": null,
+      "browserVersion": null,
+      "standalone": null,
+      "status": "BLOCKED"
+    },
+    {
+      "target": "Installed PWA",
+      "deviceModel": null,
+      "osVersion": null,
+      "browserVersion": null,
+      "standalone": null,
+      "status": "BLOCKED"
+    }
+  ],
+  "browserEvidence": {
+    "viewportWidths": [
+      360,
+      390,
+      430
+    ],
+    "mapLibreCanvas": true,
+    "horizontalOverflow": false,
+    "hudZoomOverlap": false,
+    "hudLayerOverlap": false,
+    "layerZoomOverlap": false,
+    "permissionDeniedMessage": "위치 권한이 거부되었습니다.",
+    "permissionDeniedCrash": false,
+    "serviceWorker": {
+      "active": true,
+      "controlled": true,
+      "cache": "blue-marina-v6",
+      "privateCachedPaths": []
+    },
+    "offlineShellStatus": 200,
+    "offlineApi": "NETWORK_UNAVAILABLE",
+    "onlineRestore": {
+      "conditionsApiStatus": 200,
+      "availability": "PARTIAL",
+      "profileContext": true
+    },
+    "uncaughtPageErrors": 0
+  },
+  "codeReview": {
+    "position": "watchPosition with high accuracy; actual latitude, longitude and accuracy unavailable without a device",
+    "headingPriority": [
+      "GeolocationCoordinates.heading",
+      "derived movement only when native speed is absent and movement is qualified",
+      "device orientation fallback if heading remains absent",
+      "unavailable"
+    ],
+    "speedPriority": [
+      "GeolocationCoordinates.speed",
+      "derived movement if native speed absent and movement is qualified",
+      "unavailable"
+    ],
+    "nullSpeedAndHeading": "HUD displays -- when unavailable; no fabricated numeric reading",
+    "derivedMovementGuard": "Both accuracies <= 50 m and elapsed 1-30 seconds; heading requires at least 5 m movement",
+    "gpsWatcher": "clearWatch on stop, retry and component unmount; duplicate-watch behavior on real background/foreground not tested",
+    "orientation": "Explicit compass button requests iOS permission where supported and installs orientation listeners; real sensor behavior not tested",
+    "track": "User-started points saved in device localStorage; pause/resume/stop and 10 s or 10 m append rule exist in code",
+    "eta": "Straight-line distance divided by speed; null below 0.5 knots",
+    "serverLocationWrite": "No navigation coordinate/track write found in inspected component or storage adapter; device and network verification still required",
+    "manifest": {
+      "name": "Blue Marina",
+      "shortName": "BluePass",
+      "display": "standalone",
+      "startUrl": "/",
+      "themeColor": "#0F2D52",
+      "icons": [
+        "/icon-192.png",
+        "/icon-512.png"
+      ]
+    },
+    "serviceWorkerPrivateBypass": [
+      "/account",
+      "/charters/admin",
+      "/market/admin",
+      "/charters/onboarding",
+      "/market/new",
+      "/community/new",
+      "/reservations"
+    ],
+    "navigationWarning": "Straight-line aid; no safe-route, land, reef, or depth avoidance inference"
+  },
+  "realDeviceChecks": {
+    "allow": "BLOCKED",
+    "deny": "BLOCKED",
+    "reallow": "BLOCKED",
+    "accuracy": "BLOCKED",
+    "heading": "BLOCKED",
+    "speed": "BLOCKED",
+    "movement": "BLOCKED",
+    "destination": "BLOCKED",
+    "trackLifecycle": "BLOCKED",
+    "backgroundForeground": "BLOCKED",
+    "screenLock": "BLOCKED",
+    "orientationChange": "BLOCKED",
+    "touchGestures": "BLOCKED",
+    "install": "BLOCKED",
+    "standalone": "BLOCKED",
+    "swUpdate": "BLOCKED",
+    "offlineOnlineOnDevice": "BLOCKED",
+    "devicePrivacy": "BLOCKED"
+  },
+  "gates": {
+    "REAL_DEVICE_GPS": "BLOCKED",
+    "HEADING": "BLOCKED",
+    "SPEED": "BLOCKED",
+    "HUD": "BLOCKED",
+    "MAP": "BLOCKED",
+    "PWA_INSTALL": "BLOCKED",
+    "SERVICE_WORKER": "BLOCKED",
+    "OFFLINE": "BLOCKED",
+    "BACKGROUND_RESUME": "BLOCKED",
+    "PRIVACY": "BLOCKED",
+    "SAFETY": "BLOCKED"
+  },
+  "issues": {
+    "P0": [],
+    "P1": [
+      {
+        "code": "REAL_DEVICE_UNAVAILABLE",
+        "kind": "QA_GATE",
+        "finding": "No smartphone was available or connected; device and installed-PWA requirements cannot be assessed.",
+        "productDefectConfirmed": false
+      }
+    ],
+    "P2": [],
+    "P3": [],
+    "INFO": [
+      "Desktop mobile viewport and source review are supporting evidence only",
+      "Optional marine-source 503 responses are existing availability limits, not a GPS/PWA finding"
+    ]
+  },
+  "verification": {
+    "targeted": "3/3 PASS",
+    "total": "1168/1168 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS 1463/1463",
+    "diff": "PASS"
+  },
+  "git": {
+    "staged": 0,
+    "commit": 0,
+    "push": 0,
+    "unrelatedPreserved": true
+  },
+  "safety": {
+    "newFeature": 0,
+    "routeEngine": 0,
+    "safeRouteInference": 0,
+    "dbApply": 0,
+    "backendActivation": 0
+  }
+}
