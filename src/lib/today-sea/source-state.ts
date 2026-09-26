@@ -21,6 +21,12 @@ export function selectExplicitStation<T extends { stationId: string }>(rows: T[]
   return selectedId ? rows.find((row) => row.stationId === selectedId) ?? null : null;
 }
 
+export function classifySelectedObservationSource<T>(source: TodaySeaSourceResult<T>, selected: boolean, freshness: "fresh" | "stale" | "unavailable"): TodaySeaSourceResult<T> {
+  if (source.status !== "AVAILABLE" && source.status !== "STALE") return source;
+  if (!selected || freshness === "unavailable") return { ...source, status: "UNKNOWN" };
+  return { ...source, status: source.status === "STALE" || freshness === "stale" ? "STALE" : "AVAILABLE" };
+}
+
 export function formatSeoulCalendarDate(date: Date): string {
   const parts = new Intl.DateTimeFormat("en-US", { timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(date);
   const value = (type: string) => parts.find((part) => part.type === type)?.value ?? "";

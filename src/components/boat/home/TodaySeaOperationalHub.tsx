@@ -10,7 +10,7 @@ import type { KmaMarineForecast } from "@/lib/sea-info/kma-marine-forecast";
 import type { KmaMarineWeatherWarningsResponse } from "@/lib/marine-navigation/adapters/kma-marine-weather-warnings";
 import type { KhoaNavigationWarningsResponse } from "@/lib/marine-navigation/adapters/khoa-navigation-warnings";
 import type { TideForecastResponse } from "@/lib/sea-info/types";
-import { classifyTodaySeaSource, formatSeoulCalendarDate, selectExplicitStation, type TodaySeaSourceResult, type TodaySeaSourceStatus } from "@/lib/today-sea/source-state";
+import { classifySelectedObservationSource, classifyTodaySeaSource, formatSeoulCalendarDate, selectExplicitStation, type TodaySeaSourceResult, type TodaySeaSourceStatus } from "@/lib/today-sea/source-state";
 
 type Source<T> = TodaySeaSourceResult<T> & { loading: boolean };
 type KmaObservationResponse = { observations: KmaMarineObservation[]; fetchedAt: string; lastSuccessfulFetchAt: string };
@@ -94,6 +94,7 @@ export function TodaySeaOperationalHub() {
   const selectedRisa = selectExplicitStation<FishingConditionRealtimeEnvironment>(risa.data?.stations ?? [], risaStationId);
   const selectedObservation = selectExplicitStation<KmaMarineObservation>(observation.data?.observations ?? [], kmaStationId);
   const selectedObservationFreshness = deriveKmaObservationFreshness(selectedObservation?.observedAt);
+  const observationCardState = { ...classifySelectedObservationSource(observation, Boolean(selectedObservation), selectedObservationFreshness), loading: observation.loading };
   const selectedTideStation = khoaTideStationSnapshots.find((station) => station.stationId === tideStationId);
 
   return (
@@ -152,7 +153,7 @@ export function TodaySeaOperationalHub() {
                 {forecast.data?.data.forecast ? <p className="mt-3">유효 {sourceTime(forecast.data.data.forecast.validAt)} · 발행 {sourceTime(forecast.data.data.forecast.issuedAt)}<br />유의파고 {numberOrUnknown(forecast.data.data.forecast.significantWaveHeightM, "m")} · 풍속 {numberOrUnknown(forecast.data.data.forecast.windSpeedMps, "m/s")}<br />수집 {sourceTime(forecast.data.fetchedAt)}</p> : null}
                 {forecast.data && !forecast.data.data.forecast ? <p className="mt-3">요청한 소해구의 예보 행이 제공되지 않았습니다.</p> : null}
               </SourceCard>
-              <SourceCard title="해양 관측" organization="기상청" kind="실측 · OBSERVED" state={kmaStationId ? observation : kmaStations}>
+              <SourceCard title="해양 관측" organization="기상청" kind="실측 · OBSERVED" state={kmaStationId ? observationCardState : kmaStations}>
                 <label htmlFor="today-kma-station">관측소 직접 선택</label>
                 <select id="today-kma-station" className={selectClass} value={kmaStationId} onChange={(event) => setKmaStationId(event.target.value)} disabled={!kmaStations.data}>
                   <option value="">관측소를 선택하세요</option>

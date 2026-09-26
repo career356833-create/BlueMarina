@@ -11,7 +11,7 @@ const helperSource = read('src/lib/today-sea/source-state.ts');
 const compiled = ts.transpileModule(helperSource, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
 const helperExports = {};
 vm.runInNewContext(compiled, { exports: helperExports });
-const { classifyTodaySeaSource, selectExplicitStation, formatSeoulCalendarDate } = helperExports;
+const { classifyTodaySeaSource, classifySelectedObservationSource, selectExplicitStation, formatSeoulCalendarDate } = helperExports;
 const hub = read('src/components/boat/home/TodaySeaOperationalHub.tsx');
 const hero = read('src/components/boat/home/TodaysSeaExperience.tsx');
 const page = read('src/app/today-sea/page.tsx');
@@ -91,6 +91,17 @@ test('KMA observation has a default-off server boundary and source-time freshnes
   assert.match(server, /requireKmaMarineObservationEnabled\(\)/);
   assert.match(hub, /deriveKmaObservationFreshness\(selectedObservation\?\.observedAt\)/);
   assert.match(hub, /selectedObservationFreshness === "unavailable"/);
+});
+
+test('selected observation badge follows source timestamp without hiding source failures', () => {
+  const source = { status: 'AVAILABLE', data: { observations: [] }, code: null };
+  assert.equal(classifySelectedObservationSource(source, true, 'stale').status, 'STALE');
+  assert.equal(classifySelectedObservationSource(source, true, 'unavailable').status, 'UNKNOWN');
+  assert.equal(classifySelectedObservationSource(source, false, 'fresh').status, 'UNKNOWN');
+  assert.equal(classifySelectedObservationSource(source, true, 'fresh').status, 'AVAILABLE');
+  assert.equal(classifySelectedObservationSource({ ...source, status: 'STALE' }, true, 'fresh').status, 'STALE');
+  assert.equal(classifySelectedObservationSource({ ...source, status: 'ERROR' }, true, 'fresh').status, 'ERROR');
+  assert.match(hub, /state=\{kmaStationId \? observationCardState : kmaStations\}/);
 });
 
 test('tide stays a prediction and never becomes safe-depth guidance', () => {
