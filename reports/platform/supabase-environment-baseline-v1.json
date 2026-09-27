@@ -1,0 +1,100 @@
+{
+  "reportVersion": "v1",
+  "auditDate": "2026-09-27",
+  "decision": "SUPABASE_BACKEND_BASELINE_FROZEN_WITH_LIMITATIONS",
+  "environmentDecision": "SUPABASE_ENVIRONMENT_BASELINE_READY_WITH_LIMITATIONS",
+  "repository": {
+    "branch": "main",
+    "head": "e9a36a49d69004c831f70e1b0560f3b5cc2ca5da",
+    "originMain": "e9a36a49d69004c831f70e1b0560f3b5cc2ca5da"
+  },
+  "environments": ["LOCAL", "STAGING", "PRODUCTION"],
+  "staging": {
+    "projectRef": "mlfvpaikfpjrgrhwlrjn",
+    "role": "BLUE_MARINA_BACKEND_STAGING",
+    "fishSpecies": 1258,
+    "marineOrganisms": 3016,
+    "profilesExists": false,
+    "accountCharterMarketTableCollisions": 0,
+    "readOnlyCompatibilityChecked": true,
+    "migrationApplied": false
+  },
+  "production": {
+    "projectRef": null,
+    "projectCreated": false,
+    "bindingConfirmed": false,
+    "featureFlagsEnabled": false
+  },
+  "profilesBaseline": {
+    "migration": "supabase/migrations/20260920100000_blue_marina_profile_baseline_v1.sql",
+    "columns": ["id", "email", "full_name", "display_name", "avatar_url", "region", "bio", "created_at", "updated_at"],
+    "authUsersForeignKey": "ON DELETE CASCADE",
+    "creation": "private-schema SECURITY DEFINER AFTER INSERT trigger on auth.users; only id is copied; duplicate id ignored",
+    "rls": "authenticated own SELECT/UPDATE; no anon privileges; service_role access completed by the reviewed grants migration included in this freeze",
+    "publicProfileRead": false
+  },
+  "migrationChain": {
+    "actualTimestampOrder": [
+      "202606300001_blue_marina_learning_states.sql",
+      "20260920100000_blue_marina_profile_baseline_v1.sql",
+      "20260920103020_charter_supply_intake_backend_v1.sql",
+      "20260920115127_market_supply_backend_v1.sql",
+      "20260923100000_blue_marina_account_v1.sql",
+      "20260927023446_blue_marina_account_service_role_grants_v1.sql"
+    ],
+    "logicalActivationOrder": ["AUTH_PROFILE_BASELINE", "ACCOUNT", "ACCOUNT_SERVICE_ROLE_GRANTS", "CHARTER", "MARKET"],
+    "orderLimitation": "Committed Charter/Market migration versions precede committed Account; versions were not rewritten. The actual timestamp order is dependency-safe and passes fresh apply, but does not equal the requested logical activation order.",
+    "grantsMigrationStatus": "pre-existing untracked Account backend artifact; provenance and minimum operation grants reviewed and included in this freeze"
+  },
+  "localFreshDatabase": {
+    "engine": "isolated Supabase CLI 2.113.0 local Postgres 17",
+    "profilesPrecreated": false,
+    "appliedMigrationCount": 6,
+    "migrationApply": "PASS",
+    "authUsersInsertCreatesProfile": "PASS",
+    "duplicateAuthIdDoesNotDuplicateProfile": "PASS",
+    "ownProfileSelectUpdate": "PASS",
+    "crossUserSelectUpdateDenied": "PASS",
+    "anonTablePrivilegesDenied": "PASS",
+    "serviceRoleCrossUserAccess": "PASS",
+    "authUserDeleteCascadesProfile": "PASS",
+    "transactionalTestRowsPersisted": 0
+  },
+  "freezeVerification": {
+    "source": "clean detached checkout of repository HEAD plus only the five exact freeze files",
+    "freshSupabaseCompatibleDatabase": "PASS",
+    "profilesFixturePrecreated": false,
+    "appliedMigrationCount": 6,
+    "targetedLiveTests": "6/6 PASS",
+    "noUnrelatedWorktreeDependency": true
+  },
+  "compatibility": {
+    "account": "PASS after baseline; service-role grants require pre-existing grant migration",
+    "charter": "PASS fresh local migration; no staging table collision observed",
+    "market": "PASS fresh local migration; storage bucket is separately required",
+    "existingFishMarineTablesMutated": false
+  },
+  "storage": {
+    "existingStagingPrivateBuckets": ["fish-observation-originals", "fish-observation-processed", "fish-observation-public"],
+    "plannedMarketBucket": "market-listing-staging",
+    "plannedPublic": false,
+    "plannedMaxBytesPerObject": 8388608,
+    "plannedMimeTypes": ["image/jpeg", "image/png", "image/webp"],
+    "remoteBucketCreated": false
+  },
+  "limitations": [
+    "Production project and binding remain unconfirmed and uncreated.",
+    "No remote Auth, Storage, RLS or signup E2E was performed.",
+    "Existing committed migration versions retain Charter/Market before Account; do not renumber applied history blindly.",
+    "The Account service-role grants migration was previously untracked; this freeze includes it after provenance and permission review. Remote grants remain untested.",
+    "Market private bucket and storage policy are a plan, not an applied artifact."
+  ],
+  "mutations": {
+    "remoteSqlWrites": 0,
+    "remoteMigrationApplies": 0,
+    "remoteStorageBucketsCreated": 0,
+    "productionProjectsCreated": 0,
+    "vercelEnvChanges": 0,
+    "featureFlagChanges": 0
+  }
+}
