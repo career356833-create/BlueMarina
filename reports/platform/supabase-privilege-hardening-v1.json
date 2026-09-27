@@ -1,0 +1,712 @@
+{
+  "schemaVersion": "v1",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "decision": "SUPABASE_PRIVILEGE_HARDENING_COMPLETE_WITH_LIMITATIONS",
+  "activationGate": "PRIVILEGE_BLOCKER_REMOVED_AUTH_CONFIGURATION_PENDING",
+  "gitBaseline": "1315c3c7bf61582e5d06ea73c5ae7ebb02e9e4a0",
+  "migration": {
+    "file": "supabase\\migrations\\20260927112051_blue_marina_privilege_hardening_v1.sql",
+    "version": "20260927112051",
+    "sha256": "BAD49B469474921EF82A4138CA788BF7B4147B6D00E00432F0A79E62FDE0CFCA",
+    "appliedVia": "supabase migration up --linked --include-all",
+    "historyCountBefore": 6,
+    "historyCountAfter": 7
+  },
+  "rootCause": {
+    "owner": "postgres",
+    "schema": "public",
+    "defaultAcl": "postgres-owned public tables inherited ALL for anon, authenticated, service_role; fish_auditor inherited SELECT",
+    "learningMigration": "did not revoke inherited browser privileges",
+    "accountMigration": "revoked anon from user_saved_items but did not revoke inherited authenticated excess grants",
+    "postDefaultProtection": "Scoped postgres/public table defaults revoke TRUNCATE, REFERENCES, TRIGGER, MAINTAIN for anon, authenticated, service_role; DML defaults remain and must be reviewed in future migrations"
+  },
+  "beforePrivileges": [
+    {
+      "table": "blue_marina_learning_states",
+      "role": "anon",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "blue_marina_learning_states",
+      "role": "authenticated",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "blue_marina_learning_states",
+      "role": "service_role",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "charter_supply_audit_logs",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_audit_logs",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_audit_logs",
+      "role": "service_role",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "charter_supply_promotion_candidates",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_promotion_candidates",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_promotion_candidates",
+      "role": "service_role",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "charter_supply_reviews",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_reviews",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_reviews",
+      "role": "service_role",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "charter_supply_submissions",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_submissions",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_submissions",
+      "role": "service_role",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "market_listing_audit_logs",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_audit_logs",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_audit_logs",
+      "role": "service_role",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "market_listing_contacts",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_contacts",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_contacts",
+      "role": "service_role",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "market_listing_images",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_images",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_images",
+      "role": "service_role",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "market_listing_reviews",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_reviews",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_reviews",
+      "role": "service_role",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "market_listings",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "market_listings",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "market_listings",
+      "role": "service_role",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "profiles",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "profiles",
+      "role": "authenticated",
+      "allowed": [
+        "SELECT"
+      ]
+    },
+    {
+      "table": "profiles",
+      "role": "service_role",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "user_saved_items",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "user_saved_items",
+      "role": "authenticated",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "user_saved_items",
+      "role": "service_role",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "REFERENCES",
+        "SELECT",
+        "TRIGGER",
+        "TRUNCATE",
+        "UPDATE"
+      ]
+    }
+  ],
+  "afterPrivileges": [
+    {
+      "table": "blue_marina_learning_states",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "blue_marina_learning_states",
+      "role": "authenticated",
+      "allowed": [
+        "INSERT",
+        "SELECT",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "blue_marina_learning_states",
+      "role": "service_role",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_audit_logs",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_audit_logs",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_audit_logs",
+      "role": "service_role",
+      "allowed": [
+        "INSERT",
+        "SELECT"
+      ]
+    },
+    {
+      "table": "charter_supply_promotion_candidates",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_promotion_candidates",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_promotion_candidates",
+      "role": "service_role",
+      "allowed": [
+        "INSERT",
+        "SELECT"
+      ]
+    },
+    {
+      "table": "charter_supply_reviews",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_reviews",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_reviews",
+      "role": "service_role",
+      "allowed": [
+        "INSERT",
+        "SELECT"
+      ]
+    },
+    {
+      "table": "charter_supply_submissions",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_submissions",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "charter_supply_submissions",
+      "role": "service_role",
+      "allowed": [
+        "INSERT",
+        "SELECT",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "market_listing_audit_logs",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_audit_logs",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_audit_logs",
+      "role": "service_role",
+      "allowed": [
+        "INSERT",
+        "SELECT"
+      ]
+    },
+    {
+      "table": "market_listing_contacts",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_contacts",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_contacts",
+      "role": "service_role",
+      "allowed": [
+        "INSERT",
+        "SELECT",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "market_listing_images",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_images",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_images",
+      "role": "service_role",
+      "allowed": [
+        "INSERT",
+        "SELECT",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "market_listing_reviews",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_reviews",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "market_listing_reviews",
+      "role": "service_role",
+      "allowed": [
+        "INSERT",
+        "SELECT"
+      ]
+    },
+    {
+      "table": "market_listings",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "market_listings",
+      "role": "authenticated",
+      "allowed": []
+    },
+    {
+      "table": "market_listings",
+      "role": "service_role",
+      "allowed": [
+        "INSERT",
+        "SELECT",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "profiles",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "profiles",
+      "role": "authenticated",
+      "allowed": [
+        "SELECT"
+      ]
+    },
+    {
+      "table": "profiles",
+      "role": "service_role",
+      "allowed": [
+        "INSERT",
+        "SELECT",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "user_saved_items",
+      "role": "anon",
+      "allowed": []
+    },
+    {
+      "table": "user_saved_items",
+      "role": "authenticated",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "SELECT",
+        "UPDATE"
+      ]
+    },
+    {
+      "table": "user_saved_items",
+      "role": "service_role",
+      "allowed": [
+        "DELETE",
+        "INSERT",
+        "SELECT",
+        "UPDATE"
+      ]
+    }
+  ],
+  "assertions": {
+    "roleMatrix": "36/36 PASS",
+    "anonTruncateCount": 0,
+    "authenticatedTruncateCount": 0,
+    "serviceRoleTruncateCount": 0,
+    "newTableRls": "12/12",
+    "savedItemOwnUpdatePolicy": true,
+    "profileColumnUpdatePreserved": true,
+    "fishAuditorNewBackendSelectCount": 0,
+    "dangerousPostgresPublicDefaultGrantCount": 0,
+    "newBackendDataRows": 0,
+    "remoteRoleFixturesCreated": 0,
+    "isolatedRoleFixtureTest": "PASS_ROLLED_BACK",
+    "isolatedTruncateDenial": "PASS_ROLLED_BACK",
+    "freshSevenMigrationChain": "PASS"
+  },
+  "data": {
+    "before": {
+      "fishSpecies": {
+        "rows": 1258,
+        "digest": "0a8215807a485a207e6294dca81ac91a"
+      },
+      "fishSpeciesSources": {
+        "rows": 1261,
+        "digest": "91cf25ad0096f4bf01334615caaed226"
+      },
+      "fishChangeLogs": {
+        "rows": 1281,
+        "digest": "2f56c9876a37422794854f0fff427d07"
+      },
+      "fishSourceRecords": {
+        "rows": 9,
+        "digest": "3d3f1cee77961408686fc2349bec2a8d"
+      },
+      "marineOrganisms": {
+        "rows": 3016,
+        "digest": "075dbd8f927ca41719a9d9c8cbae0311"
+      },
+      "marineOrganismSources": {
+        "rows": 3016,
+        "digest": "cea18bdb29725c2128a28e6e8ba0edcd"
+      },
+      "marineOrganismSourceRecords": {
+        "rows": 1,
+        "digest": "569fe74ba3e342665eccb30eb763568a"
+      },
+      "authUsers": 0,
+      "storageBuckets": [
+        {
+          "id": "fish-observation-originals",
+          "public": false
+        },
+        {
+          "id": "fish-observation-processed",
+          "public": false
+        },
+        {
+          "id": "fish-observation-public",
+          "public": false
+        }
+      ],
+      "storageObjects": 0
+    },
+    "after": {
+      "fishSpecies": {
+        "rows": 1258,
+        "digest": "0a8215807a485a207e6294dca81ac91a"
+      },
+      "fishSpeciesSources": {
+        "rows": 1261,
+        "digest": "91cf25ad0096f4bf01334615caaed226"
+      },
+      "fishChangeLogs": {
+        "rows": 1281,
+        "digest": "2f56c9876a37422794854f0fff427d07"
+      },
+      "fishSourceRecords": {
+        "rows": 9,
+        "digest": "3d3f1cee77961408686fc2349bec2a8d"
+      },
+      "marineOrganisms": {
+        "rows": 3016,
+        "digest": "075dbd8f927ca41719a9d9c8cbae0311"
+      },
+      "marineOrganismSources": {
+        "rows": 3016,
+        "digest": "cea18bdb29725c2128a28e6e8ba0edcd"
+      },
+      "marineOrganismSourceRecords": {
+        "rows": 1,
+        "digest": "569fe74ba3e342665eccb30eb763568a"
+      },
+      "authUsers": 0,
+      "storageBuckets": [
+        {
+          "id": "fish-observation-originals",
+          "public": false
+        },
+        {
+          "id": "fish-observation-processed",
+          "public": false
+        },
+        {
+          "id": "fish-observation-public",
+          "public": false
+        }
+      ],
+      "storageObjects": 0
+    },
+    "sevenDigestsIdentical": true,
+    "authUsers": 0,
+    "storageBuckets": 3,
+    "storageObjects": 0
+  },
+  "securityAdvisor": {
+    "critical": 0,
+    "high": 0,
+    "infoRlsNoPolicy": 27,
+    "warnExistingSecurityDefiner": 2,
+    "newCriticalHigh": 0
+  },
+  "limitations": [
+    "No production Auth/JWT signup E2E yet; remote auth.users remains empty.",
+    "Production Auth Site URL/redirect and Vercel backend env/flags are not configured in this task.",
+    "Postgres/public defaults retain future DML grants; each new migration must explicitly review and revoke unnecessary browser grants. Supabase-managed schemas and supabase_admin defaults were not altered.",
+    "Security Advisor INFO no-policy notices remain for service-only Charter/Market tables; two WARN findings are pre-existing fish-domain functions.",
+    "The existing postgres/public default SELECT grant to fish_auditor remains for future tables; this migration removes it only from the twelve Blue Marina backend tables. Future sensitive tables must revoke that inherited grant explicitly."
+  ],
+  "nextAction": "AUTH_ACCOUNT_REMOTE_ACTIVATION",
+  "verification": {
+    "targeted": "4/4 PASS (fresh seven-migration chain, isolated own-row fixture, isolated TRUNCATE denial, remote 36-cell privilege matrix)",
+    "total": "1284 passed, 1 skipped, 0 failed",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS (1465 static pages)",
+    "diff": "PASS"
+  },
+  "git": {
+    "staged": 0,
+    "commit": 0,
+    "push": 0,
+    "unrelatedPreserved": true
+  },
+  "remoteMutations": {
+    "migrationApply": 1,
+    "fishMarineRows": 0,
+    "authUsers": 0,
+    "storage": 0,
+    "vercelEnv": 0,
+    "featureFlags": 0,
+    "deploy": 0
+  }
+}
