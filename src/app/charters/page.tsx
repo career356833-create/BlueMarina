@@ -37,7 +37,7 @@ export default function ChartersPage() {
                 return <Link key={item.href} href={item.href} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl border border-[#29465D] bg-[#0B2235] px-4 text-sm font-black text-[#D7E4F6] transition hover:border-[#79C9D6]/60"><Icon size={17} />{item.label}</Link>;
               })}
             </div>
-            <Link href="/charters/onboarding" className="mt-5 inline-flex min-h-11 items-center px-3 text-xs font-bold text-[#79C9D6] underline decoration-[#79C9D6]/35 underline-offset-4">업체용 출조 정보 등록 안내</Link>
+            <Link href="/charters/partners" className="mt-5 inline-flex min-h-11 items-center px-3 text-xs font-bold text-[#79C9D6] underline decoration-[#79C9D6]/35 underline-offset-4">업체용 출조 정보 등록 안내</Link>
           </div>
         ) : null}
       </section>

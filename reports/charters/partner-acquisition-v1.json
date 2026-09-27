@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "decision": "CHARTER_PARTNER_ACQUISITION_V1_READY_WITH_LIMITATIONS",
+  "acquisitionFlow": ["partner landing", "existing onboarding or CSV dry-run", "supplier submission", "source and identity review", "admin approval", "promotion candidate", "separate publication decision"],
+  "pilot": {
+    "operatorContactRange": [10, 30],
+    "currentContacted": 0,
+    "currentInterested": 0,
+    "currentSubmissions": 0,
+    "currentApproved": 0,
+    "currentPublished": 0,
+    "targets": { "contactedOperators": 20, "responses": 5, "submissions": 3, "publishedOffersMin": 3, "publishedOffersMax": 10 },
+    "metrics": ["contacted operators", "interested", "submissions received", "approved", "published", "contact CTA clicks"]
+  },
+  "materials": {
+    "landing": "/charters/partners",
+    "existingOnboarding": "/charters/onboarding",
+    "templateDownload": "/charters/partners/template.csv",
+    "templateSource": "data/charters/templates/charter-partner-pilot-template.csv",
+    "submissionGuide": "docs/BLUE_MARINA_CHARTER_PARTNER_SUBMISSION_GUIDE_V1.md",
+    "outreachCopy": "docs/BLUE_MARINA_CHARTER_PARTNER_OUTREACH_V1.md",
+    "onePager": "docs/BLUE_MARINA_CHARTER_PARTNER_ONE_PAGER_V1.md"
+  },
+  "tracker": {
+    "path": "data/charters/partners/v1/partner-outreach-tracker.csv",
+    "rows": 0,
+    "allowedResponseStatuses": ["NOT_CONTACTED", "CONTACTED", "INTERESTED", "DECLINED"],
+    "allowedSubmissionStatuses": ["NOT_RECEIVED", "SUBMISSION_RECEIVED"],
+    "allowedReviewStatuses": ["NOT_REVIEWED", "REVIEW_REQUIRED", "APPROVED", "PUBLISHED"]
+  },
+  "review": {
+    "checklist": "docs/BLUE_MARINA_CHARTER_PARTNER_REVIEW_CHECKLIST_V1.md",
+    "supplierApprovalRequired": true,
+    "adminReviewRequired": true,
+    "mofCrosswalkAutoApproval": false
+  },
+  "publicationGate": {
+    "supplierSubmissionOrExplicitApproval": true,
+    "sourceConfirmed": true,
+    "operatorIdentityClear": true,
+    "contactOrBookingPath": true,
+    "criticalConflicts": 0,
+    "adminReview": true,
+    "autoPublish": false,
+    "productionListings": 0
+  },
+  "limitations": [
+    "Intake backend remains environment-gated and may reject direct submission",
+    "No configured public partner contact channel",
+    "Consent acknowledgement is client-side only; no durable consent evidence field",
+    "Template business_name and notes are worksheet-only and not persisted by current import parser",
+    "Desktop browser inspected at approximately 1280px; exact 390px mobile viewport was not available in the browser harness",
+    "No actual outreach, supplier approval, or publication performed"
+  ],
+  "verification": { "targetedPassed": 8, "totalPassed": 1250, "typecheck": "PASS", "lint": "PASS", "build": "PASS", "diffCheck": "PASS", "templateHttp": 200, "mobile390": "NOT_VERIFIED", "desktop1280": "APPROXIMATE_VISUAL_PASS" },
+  "invariants": { "actualOutreach": 0, "productionDeploy": 0, "dbSupabaseApply": 0, "commit": 0, "push": 0 }
+}

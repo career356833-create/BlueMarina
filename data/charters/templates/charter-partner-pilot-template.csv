@@ -1,0 +1,2 @@
+operator_name,business_name,phone,website_url,booking_url,region,boat_name,capacity,port_name,charter_title,target_species,price,price_unit,departure_time,return_time,notes,representative_name,email,vessel_type,registration_info,port_region,port_address,latitude,longitude,booking_method,schedule_date,schedule_capacity,remaining_seats,source_url
+DEMO_PLACEHOLDER_OPERATOR,DEMO_PLACEHOLDER_BUSINESS,,,,,DEMO_PLACEHOLDER_BOAT,,DEMO_PLACEHOLDER_PORT,DEMO_PLACEHOLDER_CHARTER,,,,,,DEMO_PLACEHOLDER_NOT_REAL,,,,,,,,,,,,,https://example.invalid/source
