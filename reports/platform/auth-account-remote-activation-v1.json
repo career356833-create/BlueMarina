@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "decision": "AUTH_ACCOUNT_REMOTE_ACTIVATION_PARTIAL",
+  "git": {
+    "baseline": "18de3559cd632c9dd135a9af410c47bf0a3e9bd4",
+    "headMatchesOriginMain": true,
+    "staged": 0,
+    "commits": 0,
+    "pushes": 0,
+    "unrelatedWorktreePreserved": true
+  },
+  "remoteBaseline": {
+    "migrations": 7,
+    "accountTablesPresent": true,
+    "accountRlsEnabled": true,
+    "browserRoleTruncateGrants": 0,
+    "authUsers": 0,
+    "profiles": 0,
+    "savedItems": 0,
+    "fishSpecies": 1258,
+    "marineOrganisms": 3016
+  },
+  "auth": {
+    "siteUrl": "https://blue-marina.vercel.app",
+    "exactRedirectUrls": ["https://blue-marina.vercel.app/account/login"],
+    "emailProviderEnabled": true,
+    "signupEnabled": true,
+    "emailConfirmationRequired": true,
+    "anonymousSigninEnabled": false,
+    "accessTokenLifetimeSeconds": 3600,
+    "refreshTokenReplayDetection": true,
+    "builtInEmailService": true,
+    "passwordResetUiImplemented": false,
+    "testAccountCreated": false,
+    "signupE2e": "NOT_RUN",
+    "loginE2e": "NOT_RUN",
+    "logoutE2e": "NOT_RUN"
+  },
+  "vercel": {
+    "productionEnvNamesAdded": [
+      "NEXT_PUBLIC_SUPABASE_URL",
+      "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "SUPABASE_SERVICE_ROLE_KEY"
+    ],
+    "serviceRoleServerOnly": true,
+    "accountBackendEnabled": false,
+    "deploymentCreated": false,
+    "existingProductionDeploymentReady": true,
+    "newEnvNotYetBuiltIntoDeployment": true
+  },
+  "account": {
+    "apiNoStoreWorktreeFix": true,
+    "apiNoStoreLocalHttpVerified": true,
+    "apiNoStoreDeployed": false,
+    "productionRoutesHttp200": [
+      "/account/login",
+      "/account",
+      "/account/profile",
+      "/account/saved"
+    ],
+    "productionApiWithoutTokenHttp503": true,
+    "profileAutoCreationTriggerPresent": true,
+    "profileRoundTrip": "NOT_RUN",
+    "savedCreateListDelete": "NOT_RUN",
+    "sessionRestore": "NOT_RUN",
+    "homeDataBacked": false
+  },
+  "security": {
+    "anonProfileReadDenied": true,
+    "serviceRoleAdminReadWorks": true,
+    "criticalOrHighAdvisors": 0,
+    "remainingAdvisorInfo": 27,
+    "remainingAdvisorWarn": 2,
+    "testCredentialsRecorded": false,
+    "secretValuesRecorded": false,
+    "accountFlagRemainsOff": true
+  },
+  "blockers": [
+    "The committed Production login page is sign-in-only; its signup implementation exists only in an unrelated dirty worktree and was not deployed.",
+    "No receiving test mailbox has been supplied for the enabled email confirmation flow.",
+    "Supabase built-in SMTP is rate-limited and marked unsuitable for production email delivery.",
+    "The new Vercel Production variables require a new deployment before browser code can use them."
+  ],
+  "verification": {
+    "tests": 1285,
+    "passed": 1284,
+    "failed": 0,
+    "skipped": 1,
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "diffCheck": "PASS"
+  },
+  "remoteMutations": {
+    "authSiteUrl": 1,
+    "authRedirectUrl": 1,
+    "vercelProductionEnvNames": 3,
+    "dbSchemaOrData": 0,
+    "authUsers": 0,
+    "productionDeployments": 0
+  },
+  "nextSafeAction": "Prepare a clean, reviewable Account signup deployment and production SMTP; then run a receiving-mailbox signup and Account API rehearsal before enabling the flag."
+}

@@ -57,6 +57,12 @@ export function AccountClient({ section, previewAuthenticated = false }: { secti
     });
     const { data: listener } = client.auth.onAuthStateChange((event, session) => {
       if (event === "SIGNED_OUT" || !session) { setAuthState("signed-out"); setToken(null); setModel(null); }
+      else if (event === "SIGNED_IN" || event === "TOKEN_REFRESHED") {
+        setAuthState("signed-in");
+        setToken(session.access_token);
+        // Keep network work outside the Auth callback to avoid locking session refresh.
+        setTimeout(() => void load(session.access_token), 0);
+      }
     });
     return () => listener.subscription.unsubscribe();
   }, [load, previewAuthenticated]);

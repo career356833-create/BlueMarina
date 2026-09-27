@@ -27,10 +27,14 @@ function mapProfile(row: Record<string, unknown>, id: string, email: string | nu
 
 export async function readAccount(request: Request): Promise<AccountReadModel> {
   const { client, user } = await authenticateAccountRequest(request);
+  // Account activates before Market; its read model must not require Market's table.
+  const marketActivityEnabled = process.env.MARKET_BACKEND_ENABLED === "true";
   const [profileResult, savedResult, marketResult] = await Promise.all([
     client.from("profiles").select("full_name,display_name,avatar_url,region,bio,updated_at").eq("id", user.id).maybeSingle(),
     client.from("user_saved_items").select("id,entity_type,entity_id,label,href,created_at").eq("user_id", user.id).order("created_at", { ascending: false }).limit(200),
-    client.from("market_listings").select("id,title,status,updated_at").eq("seller_id", user.id).order("updated_at", { ascending: false }).limit(50),
+    marketActivityEnabled
+      ? client.from("market_listings").select("id,title,status,updated_at").eq("seller_id", user.id).order("updated_at", { ascending: false }).limit(50)
+      : Promise.resolve({ data: [], error: null }),
   ]);
   if (profileResult.error || savedResult.error || marketResult.error) throw new AccountApiError(500, "ACCOUNT_READ_FAILED");
   const row = (profileResult.data ?? {}) as Record<string, unknown>;
