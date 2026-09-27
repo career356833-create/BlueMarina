@@ -1,0 +1,879 @@
+{
+  "schemaVersion": 2,
+  "program": "BLUE_MARINA_CURRENT_STATE_MASTER_AUDIT_V2",
+  "observedOn": "2026-09-27",
+  "decision": "PRODUCTION_INFORMATIONAL_CORE_ACTIVE_BUSINESS_BACKENDS_BLOCKED",
+  "evidencePolicy": {
+    "LIVE_HTTP": "Bounded Production HTTP checks at audit time; no SLA or future availability guarantee",
+    "LIVE_BROWSER": "Codex in-app browser screenshot/AX on Production /sea and /sea/navigation",
+    "VERCEL_CLI": "Read-only authenticated Vercel CLI; connector failed with 403 scope mismatch",
+    "COMMITTED_SOURCE": "Files at main HEAD; code presence does not prove runtime activation",
+    "HISTORICAL": "Older reports used only for prior QA and unresolved limitations",
+    "UNKNOWN": "No production Supabase project binding, authenticated user QA, real-device QA, or private business data read"
+  },
+  "git": {
+    "branch": "main",
+    "head": "98b53d2ac41dd46dfc1f3ee7c05b344917143d49",
+    "originMain": "98b53d2ac41dd46dfc1f3ee7c05b344917143d49",
+    "ahead": 0,
+    "behind": 0,
+    "staged": 0,
+    "modifiedTrackedBeforeAudit": 6,
+    "untrackedFilesBeforeAudit": 1546,
+    "untrackedCounting": "git status --porcelain=v1 -uall; includes 510 stale .next artifacts",
+    "notableResidualGroups": [
+      "MBRIS research/data",
+      "stale Next build",
+      "reports/docs experiments",
+      "NIFS imports and logs",
+      "uncommitted next.config.ts and release test"
+    ]
+  },
+  "production": {
+    "url": "https://blue-marina.vercel.app",
+    "deploymentId": "dpl_BMeZiZsMCtSQD3eLAY2TXwVEZeJa",
+    "deploymentUrl": "https://blue-marina-d5cna7w0s-chiweon.vercel.app",
+    "deployedGitSha": "98b53d2ac41dd46dfc1f3ee7c05b344917143d49",
+    "createdAtUtc": "2026-09-27T01:16:55Z",
+    "status": "READY",
+    "sameAsMain": true,
+    "laggingCommits": 0,
+    "source": "Vercel CLI inspect alias + list deployment metadata",
+    "deployedThisAudit": false
+  },
+  "routeInventory": [
+    {
+      "path": "/",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/today-sea",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/today-sea",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/sea",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/sea",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/sea/navigation",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/sea/navigation",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/fishing-spots",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/fishing-spots",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/fishing-spots/[id]",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/fishing-spots/boat-60",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/fishing-spots/conditions",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/fishing-spots/conditions",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/fish",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/fish",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/charters",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/charters",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": "ZERO_PUBLIC_OFFERS"
+    },
+    {
+      "path": "/charters/[id]",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/charters/not-a-record",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": true,
+      "authOrFlag": "NONE",
+      "dataState": "ZERO_PUBLIC_OFFERS"
+    },
+    {
+      "path": "/charters/onboarding",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/charters/onboarding",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": true,
+      "authOrFlag": "AUTH_BACKEND_REQUIRED",
+      "dataState": "ZERO_PUBLIC_OFFERS"
+    },
+    {
+      "path": "/charters/partners",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/charters/partners",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": "ZERO_PUBLIC_OFFERS"
+    },
+    {
+      "path": "/reservations",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/reservations",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": true,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/market",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/market",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": "ZERO_PUBLIC_LISTINGS"
+    },
+    {
+      "path": "/market/[id]",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/market/not-a-record",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": true,
+      "authOrFlag": "NONE",
+      "dataState": "ZERO_PUBLIC_LISTINGS"
+    },
+    {
+      "path": "/market/new",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/market/new",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": true,
+      "authOrFlag": "LOCAL_DRAFT_BACKEND_DISABLED",
+      "dataState": "ZERO_PUBLIC_LISTINGS"
+    },
+    {
+      "path": "/community",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/community",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": "ZERO_PUBLIC_POSTS"
+    },
+    {
+      "path": "/community/[id]",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/community/not-a-record",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": true,
+      "authOrFlag": "NONE",
+      "dataState": "ZERO_PUBLIC_POSTS"
+    },
+    {
+      "path": "/community/new",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/community/new",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": true,
+      "authOrFlag": "LOCAL_ONLY",
+      "dataState": "ZERO_PUBLIC_POSTS"
+    },
+    {
+      "path": "/license-guide",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/license-guide",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/account",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/account",
+      "productionHttp": 200,
+      "productionAccessible": "SHELL_BACKEND_UNAVAILABLE",
+      "noindex": true,
+      "authOrFlag": "AUTH_OR_BACKEND_REQUIRED",
+      "dataState": "AUTH_UNAVAILABLE"
+    },
+    {
+      "path": "/account/profile",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/account/profile",
+      "productionHttp": 200,
+      "productionAccessible": "SHELL_BACKEND_UNAVAILABLE",
+      "noindex": true,
+      "authOrFlag": "AUTH_OR_BACKEND_REQUIRED",
+      "dataState": "AUTH_UNAVAILABLE"
+    },
+    {
+      "path": "/account/saved",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/account/saved",
+      "productionHttp": 200,
+      "productionAccessible": "SHELL_BACKEND_UNAVAILABLE",
+      "noindex": true,
+      "authOrFlag": "AUTH_OR_BACKEND_REQUIRED",
+      "dataState": "AUTH_UNAVAILABLE"
+    },
+    {
+      "path": "/account/activity",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/account/activity",
+      "productionHttp": 200,
+      "productionAccessible": "SHELL_BACKEND_UNAVAILABLE",
+      "noindex": true,
+      "authOrFlag": "AUTH_OR_BACKEND_REQUIRED",
+      "dataState": "AUTH_UNAVAILABLE"
+    },
+    {
+      "path": "/account/login",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/account/login",
+      "productionHttp": 200,
+      "productionAccessible": "SHELL_BACKEND_UNAVAILABLE",
+      "noindex": true,
+      "authOrFlag": "AUTH_OR_BACKEND_REQUIRED",
+      "dataState": "AUTH_UNAVAILABLE"
+    },
+    {
+      "path": "/admin/operations",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/admin/operations",
+      "productionHttp": 404,
+      "productionAccessible": "DENIED_UNAUTHENTICATED",
+      "noindex": true,
+      "authOrFlag": "AUTH_OR_BACKEND_REQUIRED",
+      "dataState": null
+    },
+    {
+      "path": "/study",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/study",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/theory",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/theory",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/exam",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/exam",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/random",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/random",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/wrong",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/wrong",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/progress",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/progress",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/analysis",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/analysis",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/practice",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/practice",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/practice/videos",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/practice/videos",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    },
+    {
+      "path": "/past",
+      "sourceExists": true,
+      "buildExists": true,
+      "productionSamplePath": "/past",
+      "productionHttp": 200,
+      "productionAccessible": "YES",
+      "noindex": false,
+      "authOrFlag": "NONE",
+      "dataState": null
+    }
+  ],
+  "featureStateEnum": [
+    "PRODUCTION_ACTIVE",
+    "PRODUCTION_ACTIVE_WITH_LIMITATIONS",
+    "MAIN_CODE_READY_NOT_PRODUCTION",
+    "PREVIEW_ONLY",
+    "CODE_ONLY",
+    "BLOCKED",
+    "BACKLOG"
+  ],
+  "featureMatrix": [
+    {
+      "id": "HOME",
+      "state": "PRODUCTION_ACTIVE_WITH_LIMITATIONS",
+      "why": "MarineVideoHero and 6+2 links live; account-backed personalization unavailable."
+    },
+    {
+      "id": "TODAY_SEA",
+      "state": "PRODUCTION_ACTIVE_WITH_LIMITATIONS",
+      "why": "RISA live; KMA and KHOA card sources disabled or keyless."
+    },
+    {
+      "id": "SEA_MAP",
+      "state": "PRODUCTION_ACTIVE_WITH_LIMITATIONS",
+      "why": "Kakao map tiles and markers rendered in browser; live layers limited."
+    },
+    {
+      "id": "NAVIGATION",
+      "state": "PRODUCTION_ACTIVE_WITH_LIMITATIONS",
+      "why": "MapLibre and HUD rendered; physical GPS/PWA unverified; straight-line only."
+    },
+    {
+      "id": "FISHING_SPOTS",
+      "state": "PRODUCTION_ACTIVE_WITH_LIMITATIONS",
+      "why": "1405 source-backed spots; invalid ID 404; four navigation holds."
+    },
+    {
+      "id": "CONDITIONS",
+      "state": "PRODUCTION_ACTIVE_WITH_LIMITATIONS",
+      "why": "38 factual profiles and static read model live; RISA live, FEMO disabled."
+    },
+    {
+      "id": "FISH",
+      "state": "PRODUCTION_ACTIVE_WITH_LIMITATIONS",
+      "why": "Public guide has 336 items, separate from 1258 canonical inventory."
+    },
+    {
+      "id": "CHARTER",
+      "state": "BLOCKED",
+      "why": "Consumer shell is public but zero offers; supply backend/auth absent in Production."
+    },
+    {
+      "id": "MARKET",
+      "state": "BLOCKED",
+      "why": "Public shell and form exist, zero listings; backend/storage absent."
+    },
+    {
+      "id": "COMMUNITY",
+      "state": "BLOCKED",
+      "why": "Public shell and device-local posting preview only; no server posts."
+    },
+    {
+      "id": "GUIDE",
+      "state": "PRODUCTION_ACTIVE",
+      "why": "Public guide and legacy learning routes respond 200."
+    },
+    {
+      "id": "ACCOUNT",
+      "state": "BLOCKED",
+      "why": "Pages are deployed but Production Auth/backend env absent; API 503."
+    },
+    {
+      "id": "OPERATIONS",
+      "state": "BLOCKED",
+      "why": "Main and Production contain route and health API; unauthenticated page 404 and API 401; no authenticated QA."
+    }
+  ],
+  "productionSources": [
+    {
+      "id": "KAKAO",
+      "codeSupport": true,
+      "productionState": "ACTIVE",
+      "keyOrEnv": "public app key present",
+      "liveEvidence": "Browser map tiles and markers rendered; known historical blocked legacy eval; no unsafe-eval CSP"
+    },
+    {
+      "id": "MAPLIBRE_BASE",
+      "codeSupport": true,
+      "productionState": "ACTIVE",
+      "keyOrEnv": "no project key required",
+      "liveEvidence": "Browser navigation map rendered with KHOA/OSM attribution; reference only"
+    },
+    {
+      "id": "RISA",
+      "codeSupport": true,
+      "productionState": "ACTIVE_WITH_LIMITATIONS",
+      "keyOrEnv": "flag and key present",
+      "liveEvidence": "200; 41 returned stations, 65 observation rows, 39 fresh and 2 unavailable stations; oldest row 2026-04-16"
+    },
+    {
+      "id": "FEMO",
+      "codeSupport": true,
+      "productionState": "DISABLED",
+      "keyOrEnv": "flag and key absent",
+      "liveEvidence": "503 SOURCE_DISABLED"
+    },
+    {
+      "id": "KMA_OBSERVATION",
+      "codeSupport": true,
+      "productionState": "DISABLED",
+      "keyOrEnv": "flag and key absent Production",
+      "liveEvidence": "503 SOURCE_DISABLED; preview env names present only"
+    },
+    {
+      "id": "KMA_WARNING",
+      "codeSupport": true,
+      "productionState": "DISABLED",
+      "keyOrEnv": "flag and key absent Production",
+      "liveEvidence": "503 SOURCE_DISABLED; preview env names present only"
+    },
+    {
+      "id": "KMA_FORECAST",
+      "codeSupport": true,
+      "productionState": "HOLD",
+      "keyOrEnv": "API key absent",
+      "liveEvidence": "503 API_KEY_MISSING with valid zone query"
+    },
+    {
+      "id": "KHOA_TIDE",
+      "codeSupport": true,
+      "productionState": "HOLD",
+      "keyOrEnv": "API key absent",
+      "liveEvidence": "503 API_KEY_MISSING with station/date query"
+    },
+    {
+      "id": "KHOA_NAV_WARNING",
+      "codeSupport": true,
+      "productionState": "DISABLED",
+      "keyOrEnv": "flag and key absent",
+      "liveEvidence": "503 SOURCE_DISABLED"
+    },
+    {
+      "id": "KHOA_NAV_AIDS",
+      "codeSupport": true,
+      "productionState": "HOLD",
+      "keyOrEnv": "credential absent",
+      "liveEvidence": "503 SOURCE_CREDENTIAL_REQUIRED"
+    },
+    {
+      "id": "KHOA_ROMS",
+      "codeSupport": true,
+      "productionState": "DISABLED",
+      "keyOrEnv": "flag and key absent",
+      "liveEvidence": "503 FEATURE_DISABLED"
+    }
+  ],
+  "flags": {
+    "NIFS_REALTIME_FISHING_ENABLED": "ON_RUNTIME_CONFIRMED",
+    "NIFS_RISA_API_KEY": "PRESENT_VALUE_REDACTED",
+    "NIFS_FISHERY_ENVIRONMENT_ENABLED": "ABSENT",
+    "NIFS_FEMO_API_KEY": "ABSENT",
+    "KMA_MARINE_OBSERVATION_ENABLED": "ABSENT",
+    "KMA_MARINE_WARNING_ENABLED": "ABSENT",
+    "KMA_APIHUB_KEY": "ABSENT",
+    "KHOA_API_KEY": "ABSENT",
+    "KHOA_NAVIGATION_WARNING_ENABLED": "ABSENT",
+    "CHARTER_SUPPLY_INTAKE_ENABLED": "ABSENT",
+    "MARKET_BACKEND_ENABLED": "ABSENT",
+    "MARKET_IMAGE_UPLOAD_ENABLED": "ABSENT",
+    "ACCOUNT_BACKEND_ENABLED": "ABSENT",
+    "NEXT_PUBLIC_SUPABASE_URL": "ABSENT",
+    "SUPABASE_SERVICE_ROLE_KEY": "ABSENT",
+    "OPERATIONS_AUTH": "ABSENT",
+    "NEXT_PUBLIC_SITE_URL": "PRESENT_VALUE_REDACTED",
+    "NEXT_PUBLIC_KAKAO_MAP_APP_KEY": "PRESENT_VALUE_REDACTED",
+    "note": "Vercel Production env names queried without values. Runtime 200 proves RISA enabled; other presence and absence are name-based.",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "ABSENT"
+  },
+  "dataCounts": {
+    "fishingSpots": {
+      "total": 1405,
+      "boat": 329,
+      "rock": 1076,
+      "source": "src/data/fishing-spots.json and Production 200"
+    },
+    "fishCanonical": {
+      "total": 1258,
+      "verified": 1256,
+      "partial": 1,
+      "conflict": 1,
+      "remainingAliasException": 1,
+      "source": "data/fish-canonical/bulk/v1/canonical-inventory-v1.json + final-exception report"
+    },
+    "fishPublicGuide": {
+      "total": 336,
+      "source": "Production /fish rendered count"
+    },
+    "conditionProfiles": {
+      "total": 38,
+      "ready": 5,
+      "partial": 3,
+      "limited": 30,
+      "source": "data/fishing-condition/profiles/v1/batch-a-19.json and batch-b-19.json"
+    },
+    "risa": {
+      "returnedStations": 41,
+      "observationRows": 65,
+      "freshStations": 39,
+      "unavailableStations": 2,
+      "newestObservedAt": "2026-09-27T10:00:00",
+      "oldestObservedAt": "2026-04-16T10:30:00",
+      "source": "Production /api/fishing-condition/environment/realtime quality",
+      "quota": "UNKNOWN",
+      "crossInstanceDedupe": "NOT_GUARANTEED"
+    },
+    "charterPublicOffers": {
+      "count": 0,
+      "source": "src/lib/charters/registry.ts and Production public empty state"
+    },
+    "marketPublicListings": {
+      "count": 0,
+      "source": "Production /api/market/listings returned []"
+    },
+    "communityPublicPosts": {
+      "count": 0,
+      "source": "src/lib/community/registry.ts and Production public empty state"
+    }
+  },
+  "fishingSpots": {
+    "invalidIdHttp": 404,
+    "validBoat60Http": 200,
+    "lineage": {
+      "confirmed": 979,
+      "partial": 426,
+      "unresolved": 0,
+      "mismatch": 0
+    },
+    "safetyHoldIds": [
+      "boat-60",
+      "boat-128",
+      "boat-129",
+      "boat-321"
+    ],
+    "navigationBlocked": 4,
+    "source": "source JSON, lineage and safety hold reports; Production invalid/valid HTTP"
+  },
+  "conditions": {
+    "staticReadModelHttp": 200,
+    "profileContextPresent": true,
+    "risaHttp": 200,
+    "femoHttp": 503,
+    "femoCode": "SOURCE_DISABLED",
+    "factualOnly": true,
+    "legacyAutomaticComparatorActive": false,
+    "scoreRankProbability": false,
+    "nearestStationInference": false,
+    "seasonality": "PROFILE_CONTEXT",
+    "source": "Production POST /api/fishing-condition/read-model and GET source APIs plus main source"
+  },
+  "charter": {
+    "consumerUi": true,
+    "supplyBackendCode": true,
+    "migrationPresent": true,
+    "remoteApplied": "UNKNOWN",
+    "productionBackendFlag": "ABSENT",
+    "productionOffers": 0,
+    "pilotOperatorsResearched": 5,
+    "pilotOffersResearched": 12,
+    "outreachTargets": 20,
+    "contacted": 0,
+    "responses": 0,
+    "submissions": 0,
+    "approved": 0,
+    "published": 0,
+    "publicInfoReuseApproved": {
+      "YES": 0,
+      "NO": 0,
+      "PENDING": 20
+    },
+    "source": "Tracker CSV, Sprint report, registry, Production /charters"
+  },
+  "market": {
+    "publicUi": true,
+    "migrationPresent": true,
+    "remoteApplied": "UNKNOWN",
+    "backendFlag": "ABSENT",
+    "imageUploadFlag": "ABSENT",
+    "publicListings": 0,
+    "actualSellerListings": "UNKNOWN_UNOBSERVABLE",
+    "source": "Production API [] and Vercel env list; no database binding"
+  },
+  "community": {
+    "publicUi": true,
+    "localStorageDrafts": true,
+    "serverBackend": false,
+    "publicPosts": 0,
+    "actualUserPosts": "UNKNOWN_DEVICE_LOCAL_ONLY"
+  },
+  "account": {
+    "routesPresent": true,
+    "migrationPresent": true,
+    "remoteApplied": "UNKNOWN",
+    "supabaseAuthConfigured": false,
+    "backendFlag": "ABSENT",
+    "productionApiHttp": 503,
+    "authenticatedUserCount": "UNKNOWN",
+    "authenticatedE2e": "NOT_RUN"
+  },
+  "operations": {
+    "codeInMain": true,
+    "deployed": true,
+    "routeUnauthenticatedHttp": 404,
+    "healthNoTokenHttp": 401,
+    "authConfigured": false,
+    "adminAccountExists": "UNKNOWN",
+    "authenticatedUiQa": "NOT_RUN"
+  },
+  "database": {
+    "localMigrationFiles": 4,
+    "domainMigrations": {
+      "charter": "20260920103020_charter_supply_intake_backend_v1.sql",
+      "market": "20260920115127_market_supply_backend_v1.sql",
+      "account": "20260923100000_blue_marina_account_v1.sql"
+    },
+    "remoteProjectBinding": "UNIDENTIFIED",
+    "remoteApplied": {
+      "charter": "UNKNOWN",
+      "market": "UNKNOWN",
+      "account": "UNKNOWN"
+    },
+    "applyThisAudit": 0
+  },
+  "release": {
+    "securityHeaders": {
+      "csp": true,
+      "unsafeEvalAllowed": false,
+      "hsts": true,
+      "nosniff": true,
+      "referrerPolicy": true,
+      "permissionsPolicy": true,
+      "xFrameOptions": true
+    },
+    "robotsHttp": 200,
+    "sitemapHttp": 200,
+    "sitemapUrls": 1424,
+    "rootCanonical": "https://blue-marina.vercel.app",
+    "privateNoindexObserved": true,
+    "invalidSpotNoindexObserved": true,
+    "serviceWorkerHttp": 200,
+    "manifestPath": "/manifest.json",
+    "manifestHttp": 200,
+    "knownKakaoLegacyEval": "HISTORICAL_BLOCKED_BEHAVIOR_NOT_REOBSERVED",
+    "actualCspFunctionalBlockInBrowser": "NONE_OBSERVED_ON_MAP_SAMPLES"
+  },
+  "qa": {
+    "browserProduction": "SEA_MAP_KAKAO_RENDERED; NAVIGATION_MAPLIBRE_HUD_RENDERED",
+    "browserEmulatedMobile": "HISTORICAL_PASS_NOT_REPEATED",
+    "realDeviceGpsPwa": "BLOCKED_NO_DEVICE",
+    "authenticatedBackend": "NOT_RUN",
+    "dirtyWorktreeBuildCaveat": true
+  },
+  "business": {
+    "charterContacts": 0,
+    "charterApprovals": 0,
+    "charterPublished": 0,
+    "marketSellers": "UNKNOWN",
+    "marketPublicListings": 0,
+    "communityUsers": "UNKNOWN",
+    "communityPublicPosts": 0,
+    "accountActiveUsers": "UNKNOWN",
+    "commercialTransactionsVerified": 0
+  },
+  "preview": {
+    "kmaObservationAndWarningEnvNamesPresent": true,
+    "currentLiveQa": "NOT_RETESTED",
+    "previewOnlyChangeClaim": "NONE_VERIFIED"
+  },
+  "worktreeDebt": {
+    "trackedModified": 6,
+    "untrackedFiles": 1546,
+    "dominantGroups": {
+      "data": 577,
+      "staleNext": 510,
+      "tools": 147,
+      "reports": 132,
+      "docs": 119
+    },
+    "risk": "Dirty build and accidental broad stage; many research artifacts are outside main; no deletion performed"
+  },
+  "blockers": {
+    "P0": [],
+    "P1": [
+      "Verified Charter supply/contact/consent/publication absent",
+      "Charter backend Auth and remote schema E2E blocked by missing Production Supabase config",
+      "Physical GPS/PWA navigation safety gate unverified"
+    ],
+    "P2": [
+      "Market and Account backends/storage not activated",
+      "KMA/KHOA live source families disabled or keyless",
+      "Operations authenticated monitoring unavailable",
+      "Two Charter contacts need recheck before outreach"
+    ],
+    "P3": [
+      "Charter/Market/Community invalid details return HTTP 200 noindex",
+      "Historical Kakao legacy eval violation blocked by CSP"
+    ],
+    "INFO": [
+      "One fish alias exception remains",
+      "RISA quota and cross-instance dedupe not verified"
+    ]
+  },
+  "revenueReadiness": {
+    "charter": "TECH_READY_SUPPLY_NOT_ACQUIRED",
+    "market": "TECH_READY_SUPPLY_NOT_ACQUIRED",
+    "community": "NO_DURABLE_USER_CONTENT",
+    "account": "AUTH_NOT_CONFIGURED"
+  },
+  "nextPrimaryPriority": "VERIFIED_CHARTER_SUPPLY_AND_INQUIRY_LAUNCH",
+  "charterPriorityDecision": "KEEP_CHARTER_AS_PRIMARY",
+  "verification": {
+    "targeted": "8/8 PASS",
+    "fullSuite": "1264/1264 PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS; 1465/1465 static pages generated",
+    "diffCheck": "PASS",
+    "scope": "Existing dirty worktree; clean checkout result not independently measured"
+  },
+  "invariants": {
+    "newFeature": 0,
+    "productionDeploy": 0,
+    "dbApply": 0,
+    "partnerContact": 0,
+    "productionPromotion": 0,
+    "stage": 0,
+    "commit": 0,
+    "push": 0
+  }
+}
