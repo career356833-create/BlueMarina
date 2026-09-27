@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "total": 31,
+  "exceptions": [
+    {
+      "category": "crosswalk candidate",
+      "operatorId": "BM-PILOT-OP-YUD3004",
+      "detail": "NO_MATCH: registration identity not verified",
+      "sourceUrl": "https://yud3004.cafe24.com/"
+    },
+    {
+      "category": "price missing",
+      "charterId": "BM-PILOT-CHARTER-YUD3004-JUKKUMI-OCTOPUS",
+      "detail": "INQUIRY; no zero-price inference",
+      "sourceUrl": "https://yud3004.cafe24.com/"
+    },
+    {
+      "category": "species ambiguity",
+      "charterId": "BM-PILOT-CHARTER-YUD3004-JUKKUMI-OCTOPUS",
+      "detail": "Raw name preserved: 문어",
+      "sourceUrl": "https://yud3004.cafe24.com/"
+    },
+    {
+      "category": "price missing",
+      "charterId": "BM-PILOT-CHARTER-YUD3004-WINTER-BLACK-PORGY",
+      "detail": "INQUIRY; no zero-price inference",
+      "sourceUrl": "https://yud3004.cafe24.com/"
+    },
+    {
+      "category": "source freshness",
+      "charterId": "BM-PILOT-CHARTER-YUD3004-WINTER-BLACK-PORGY",
+      "detail": "Seasonal offer; current dates and availability unverified",
+      "sourceUrl": "https://yud3004.cafe24.com/"
+    },
+    {
+      "category": "crosswalk candidate",
+      "operatorId": "BM-PILOT-OP-NOULBIT",
+      "detail": "NO_MATCH: registration identity not verified",
+      "sourceUrl": "https://www.noulbit.com/"
+    },
+    {
+      "category": "port ambiguity",
+      "operatorId": "BM-PILOT-OP-NOULBIT",
+      "detail": "Exact departure port not stated",
+      "sourceUrl": "https://www.noulbit.com/"
+    },
+    {
+      "category": "source freshness",
+      "charterId": "BM-PILOT-CHARTER-NOULBIT-DOLPHIN-FISHING",
+      "detail": "Static course or price needs supplier reconfirmation",
+      "sourceUrl": "https://www.noulbit.com/"
+    },
+    {
+      "category": "source freshness",
+      "charterId": "BM-PILOT-CHARTER-NOULBIT-NIGHT-FISHING",
+      "detail": "Static course or price needs supplier reconfirmation",
+      "sourceUrl": "https://www.noulbit.com/"
+    },
+    {
+      "category": "species ambiguity",
+      "charterId": "BM-PILOT-CHARTER-NOULBIT-NIGHT-FISHING",
+      "detail": "Raw name preserved: 한치",
+      "sourceUrl": "https://www.noulbit.com/"
+    },
+    {
+      "category": "price missing",
+      "charterId": "BM-PILOT-CHARTER-NOULBIT-TAI-RUBBER",
+      "detail": "INQUIRY; no zero-price inference",
+      "sourceUrl": "https://www.noulbit.com/"
+    },
+    {
+      "category": "source freshness",
+      "charterId": "BM-PILOT-CHARTER-NOULBIT-TAI-RUBBER",
+      "detail": "Static course or price needs supplier reconfirmation",
+      "sourceUrl": "https://www.noulbit.com/"
+    },
+    {
+      "category": "crosswalk candidate",
+      "operatorId": "BM-PILOT-OP-SONGYI",
+      "detail": "NO_MATCH: registration identity not verified",
+      "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/"
+    },
+    {
+      "category": "port ambiguity",
+      "operatorId": "BM-PILOT-OP-SONGYI",
+      "detail": "Exact departure port not stated",
+      "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/"
+    },
+    {
+      "category": "source freshness",
+      "charterId": "BM-PILOT-CHARTER-SONGYI-FLATFISH-GROUP",
+      "detail": "Static course or price needs supplier reconfirmation",
+      "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/"
+    },
+    {
+      "category": "source freshness",
+      "charterId": "BM-PILOT-CHARTER-SONGYI-FULL-DAY",
+      "detail": "Static course or price needs supplier reconfirmation",
+      "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/"
+    },
+    {
+      "category": "species ambiguity",
+      "charterId": "BM-PILOT-CHARTER-SONGYI-FULL-DAY",
+      "detail": "Raw name preserved: 문어",
+      "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/"
+    },
+    {
+      "category": "source freshness",
+      "charterId": "BM-PILOT-CHARTER-SONGYI-HALF-DAY",
+      "detail": "Static course or price needs supplier reconfirmation",
+      "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/"
+    },
+    {
+      "category": "species ambiguity",
+      "charterId": "BM-PILOT-CHARTER-SONGYI-HALF-DAY",
+      "detail": "Raw name preserved: 문어",
+      "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/"
+    },
+    {
+      "category": "crosswalk candidate",
+      "operatorId": "BM-PILOT-OP-ACEHO",
+      "detail": "NO_MATCH: registration identity not verified",
+      "sourceUrl": "https://aceho.co.kr/"
+    },
+    {
+      "category": "port ambiguity",
+      "operatorId": "BM-PILOT-OP-ACEHO",
+      "detail": "Exact departure port not stated",
+      "sourceUrl": "https://aceho.co.kr/"
+    },
+    {
+      "category": "price missing",
+      "charterId": "BM-PILOT-CHARTER-ACEHO-HAIRTAIL",
+      "detail": "INQUIRY; no zero-price inference",
+      "sourceUrl": "https://aceho.co.kr/"
+    },
+    {
+      "category": "price missing",
+      "charterId": "BM-PILOT-CHARTER-ACEHO-SQUID",
+      "detail": "INQUIRY; no zero-price inference",
+      "sourceUrl": "https://aceho.co.kr/"
+    },
+    {
+      "category": "source freshness",
+      "charterId": "BM-PILOT-CHARTER-ACEHO-SQUID",
+      "detail": "Seasonal offer; current dates and availability unverified",
+      "sourceUrl": "https://aceho.co.kr/"
+    },
+    {
+      "category": "species ambiguity",
+      "charterId": "BM-PILOT-CHARTER-ACEHO-SQUID",
+      "detail": "Raw name preserved: 한치",
+      "sourceUrl": "https://aceho.co.kr/"
+    },
+    {
+      "category": "price missing",
+      "charterId": "BM-PILOT-CHARTER-ACEHO-CUTTLEFISH",
+      "detail": "INQUIRY; no zero-price inference",
+      "sourceUrl": "https://aceho.co.kr/"
+    },
+    {
+      "category": "source freshness",
+      "charterId": "BM-PILOT-CHARTER-ACEHO-CUTTLEFISH",
+      "detail": "Seasonal offer; current dates and availability unverified",
+      "sourceUrl": "https://aceho.co.kr/"
+    },
+    {
+      "category": "species ambiguity",
+      "charterId": "BM-PILOT-CHARTER-ACEHO-CUTTLEFISH",
+      "detail": "Raw name preserved: 갑오징어",
+      "sourceUrl": "https://aceho.co.kr/"
+    },
+    {
+      "category": "crosswalk candidate",
+      "operatorId": "BM-PILOT-OP-BOYS-FISHING",
+      "detail": "NO_MATCH: registration identity not verified",
+      "sourceUrl": "https://www.sunrise1.co.kr/bf/home"
+    },
+    {
+      "category": "price missing",
+      "charterId": "BM-PILOT-CHARTER-BOYS-FISHING-TIPRUN",
+      "detail": "INQUIRY; no zero-price inference",
+      "sourceUrl": "https://www.sunrise1.co.kr/bf/home"
+    },
+    {
+      "category": "species ambiguity",
+      "charterId": "BM-PILOT-CHARTER-BOYS-FISHING-TIPRUN",
+      "detail": "Raw name preserved: 무늬오징어",
+      "sourceUrl": "https://www.sunrise1.co.kr/bf/home"
+    }
+  ]
+}

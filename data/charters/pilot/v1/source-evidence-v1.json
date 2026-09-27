@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "researchOnly": true,
+  "reviewedOn": "2026-09-27",
+  "sourcePolicy": "Operator-owned public pages; factual field extraction only. No third-party booking-platform catalog or private API ingestion.",
+  "operators": [
+    {
+      "key": "yud3004",
+      "name": "삼천포 여의도호",
+      "region": "경남 사천",
+      "phone": "010-9811-1006",
+      "websiteUrl": "https://yud3004.cafe24.com/",
+      "sourceUrl": "https://yud3004.cafe24.com/",
+      "boatName": "여의도호",
+      "portName": "대방동 선착장",
+      "capacity": 12,
+      "offers": [
+        { "key": "jukkumi-octopus", "title": "주꾸미·문어 병행 출조", "tripType": "SEASONAL_FISHING", "species": ["주꾸미", "문어"], "price": null, "priceUnit": "INQUIRY", "evidence": "2026년 9월부터 주꾸미·문어 병행 출조 안내", "freshness": "RECENT" },
+        { "key": "winter-black-porgy", "title": "겨울 선상 감성돔 출조", "tripType": "SEASONAL_FISHING", "species": ["감성돔"], "price": null, "priceUnit": "INQUIRY", "evidence": "겨울 선상 감성돔 전문 출조 안내", "freshness": "SEASONAL" }
+      ]
+    },
+    {
+      "key": "noulbit",
+      "name": "놀빛바다호",
+      "region": "제주 제주시",
+      "phone": "010-3698-7770",
+      "websiteUrl": "https://www.noulbit.com/",
+      "sourceUrl": "https://www.noulbit.com/",
+      "boatName": "놀빛바다호",
+      "portName": null,
+      "capacity": null,
+      "offers": [
+        { "key": "dolphin-fishing", "title": "배낚시·돌고래 관찰 체험", "tripType": "EXPERIENCE", "species": [], "price": 30000, "priceUnit": "PER_ADULT", "evidence": "성인 30,000원 2시간 30분 코스, 돌고래 출현 보장 없음", "freshness": "STATIC" },
+        { "key": "night-fishing", "title": "야간 배낚시 체험", "tripType": "NIGHT_FISHING", "species": ["한치", "고등어", "참돔"], "price": 50000, "priceUnit": "PER_ADULT", "evidence": "성인 50,000원 야간 4시간 코스", "freshness": "STATIC" },
+        { "key": "tai-rubber", "title": "타이라바 체험", "tripType": "LURE_FISHING", "species": ["참돔", "방어"], "price": null, "priceUnit": "INQUIRY", "evidence": "계절별 가격·일정 문의 필수", "freshness": "STATIC" }
+      ]
+    },
+    {
+      "key": "songyi",
+      "name": "송이호 배낚시",
+      "region": "강원 양양",
+      "phone": "010-5367-2477",
+      "websiteUrl": "https://songyifishing.com/",
+      "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/",
+      "boatName": "송이호",
+      "portName": null,
+      "capacity": null,
+      "offers": [
+        { "key": "flatfish-group", "title": "참가자미 단체 배낚시", "tripType": "GROUP_FISHING", "species": ["참가자미"], "price": 120000, "priceUnit": "PER_BOAT_FOUR", "evidence": "4인 기준 120,000원 안내", "freshness": "STATIC" },
+        { "key": "full-day", "title": "7시간 종일 배낚시", "tripType": "FULL_DAY", "species": ["대구", "문어", "삼치", "볼락"], "price": 100000, "priceUnit": "PER_PERSON", "evidence": "7시간 1인 100,000원, 최소 5인 안내", "freshness": "STATIC" },
+        { "key": "half-day", "title": "4시간 배낚시", "tripType": "HALF_DAY", "species": ["대구", "문어", "삼치", "볼락"], "price": 60000, "priceUnit": "PER_PERSON", "evidence": "4시간 1인 60,000원, 최소 5인 안내", "freshness": "STATIC" }
+      ]
+    },
+    {
+      "key": "aceho",
+      "name": "제주 에이스호",
+      "region": "제주 제주시",
+      "phone": "010-3548-3472",
+      "websiteUrl": "https://aceho.co.kr/",
+      "sourceUrl": "https://aceho.co.kr/",
+      "boatName": "에이스호",
+      "portName": null,
+      "capacity": null,
+      "offers": [
+        { "key": "hairtail", "title": "갈치 선상 출조", "tripType": "SEASONAL_FISHING", "species": ["갈치"], "price": null, "priceUnit": "INQUIRY", "evidence": "갈치 전문 출조 및 전화 예약 안내", "freshness": "RECENT" },
+        { "key": "squid", "title": "한치 선상 출조", "tripType": "SEASONAL_FISHING", "species": ["한치"], "price": null, "priceUnit": "INQUIRY", "evidence": "한치 전문 출조 및 전화 예약 안내", "freshness": "SEASONAL" },
+        { "key": "cuttlefish", "title": "갑오징어 선상 출조", "tripType": "SEASONAL_FISHING", "species": ["갑오징어"], "price": null, "priceUnit": "INQUIRY", "evidence": "갑오징어 전문 출조 및 전화 예약 안내", "freshness": "SEASONAL" }
+      ]
+    },
+    {
+      "key": "boys-fishing",
+      "name": "보이스피싱호",
+      "region": "경북 포항",
+      "phone": "010-5766-0007",
+      "websiteUrl": "https://www.sunrise1.co.kr/bf/home",
+      "sourceUrl": "https://www.sunrise1.co.kr/bf/home",
+      "boatName": "보이스피싱호",
+      "portName": "강사1리 방파제",
+      "capacity": null,
+      "offers": [
+        { "key": "tiprun", "title": "무늬오징어 팁런 출조", "tripType": "LURE_FISHING", "species": ["무늬오징어"], "price": null, "priceUnit": "INQUIRY", "evidence": "공식 예약 화면에 무늬팁런 출조 상품 표시. 날짜별 가격과 좌석은 복제하지 않음", "freshness": "RECENT" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1645 @@
+{
+  "schemaVersion": 1,
+  "datasetKind": "RESEARCH_STAGING",
+  "decision": "CHARTER_VERIFIED_SUPPLY_PILOT_BLOCKED",
+  "reviewedOn": "2026-09-27",
+  "sourcePolicy": "Operator-owned public pages; factual field extraction only. No third-party booking-platform catalog or private API ingestion.",
+  "operators": [
+    {
+      "id": "BM-PILOT-OP-YUD3004",
+      "name": "삼천포 여의도호",
+      "region": "경남 사천",
+      "phone": "01098111006",
+      "websiteUrl": "https://yud3004.cafe24.com/",
+      "bookingUrl": null,
+      "verificationStatus": "SOURCE_BACKED",
+      "partnerApproval": false,
+      "sourceRefs": [
+        "https://yud3004.cafe24.com/"
+      ]
+    },
+    {
+      "id": "BM-PILOT-OP-NOULBIT",
+      "name": "놀빛바다호",
+      "region": "제주 제주시",
+      "phone": "01036987770",
+      "websiteUrl": "https://www.noulbit.com/",
+      "bookingUrl": null,
+      "verificationStatus": "SOURCE_BACKED",
+      "partnerApproval": false,
+      "sourceRefs": [
+        "https://www.noulbit.com/"
+      ]
+    },
+    {
+      "id": "BM-PILOT-OP-SONGYI",
+      "name": "송이호 배낚시",
+      "region": "강원 양양",
+      "phone": "01053672477",
+      "websiteUrl": "https://songyifishing.com/",
+      "bookingUrl": null,
+      "verificationStatus": "SOURCE_BACKED",
+      "partnerApproval": false,
+      "sourceRefs": [
+        "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/"
+      ]
+    },
+    {
+      "id": "BM-PILOT-OP-ACEHO",
+      "name": "제주 에이스호",
+      "region": "제주 제주시",
+      "phone": "01035483472",
+      "websiteUrl": "https://aceho.co.kr/",
+      "bookingUrl": null,
+      "verificationStatus": "SOURCE_BACKED",
+      "partnerApproval": false,
+      "sourceRefs": [
+        "https://aceho.co.kr/"
+      ]
+    },
+    {
+      "id": "BM-PILOT-OP-BOYS-FISHING",
+      "name": "보이스피싱호",
+      "region": "경북 포항",
+      "phone": "01057660007",
+      "websiteUrl": "https://www.sunrise1.co.kr/bf/home",
+      "bookingUrl": null,
+      "verificationStatus": "SOURCE_BACKED",
+      "partnerApproval": false,
+      "sourceRefs": [
+        "https://www.sunrise1.co.kr/bf/home"
+      ]
+    }
+  ],
+  "boats": [
+    {
+      "id": "BM-PILOT-BOAT-YUD3004",
+      "operatorId": "BM-PILOT-OP-YUD3004",
+      "name": "여의도호",
+      "capacity": 12,
+      "verificationStatus": "SOURCE_BACKED",
+      "registrationVerified": false,
+      "sourceRefs": [
+        "https://yud3004.cafe24.com/"
+      ]
+    },
+    {
+      "id": "BM-PILOT-BOAT-NOULBIT",
+      "operatorId": "BM-PILOT-OP-NOULBIT",
+      "name": "놀빛바다호",
+      "capacity": null,
+      "verificationStatus": "SOURCE_BACKED",
+      "registrationVerified": false,
+      "sourceRefs": [
+        "https://www.noulbit.com/"
+      ]
+    },
+    {
+      "id": "BM-PILOT-BOAT-SONGYI",
+      "operatorId": "BM-PILOT-OP-SONGYI",
+      "name": "송이호",
+      "capacity": null,
+      "verificationStatus": "SOURCE_BACKED",
+      "registrationVerified": false,
+      "sourceRefs": [
+        "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/"
+      ]
+    },
+    {
+      "id": "BM-PILOT-BOAT-ACEHO",
+      "operatorId": "BM-PILOT-OP-ACEHO",
+      "name": "에이스호",
+      "capacity": null,
+      "verificationStatus": "SOURCE_BACKED",
+      "registrationVerified": false,
+      "sourceRefs": [
+        "https://aceho.co.kr/"
+      ]
+    },
+    {
+      "id": "BM-PILOT-BOAT-BOYS-FISHING",
+      "operatorId": "BM-PILOT-OP-BOYS-FISHING",
+      "name": "보이스피싱호",
+      "capacity": null,
+      "verificationStatus": "SOURCE_BACKED",
+      "registrationVerified": false,
+      "sourceRefs": [
+        "https://www.sunrise1.co.kr/bf/home"
+      ]
+    }
+  ],
+  "ports": [
+    {
+      "id": "BM-PILOT-PORT-YUD3004",
+      "name": "대방동 선착장",
+      "region": "경남 사천",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "UNKNOWN",
+      "sourceRefs": [
+        "https://yud3004.cafe24.com/"
+      ]
+    },
+    {
+      "id": "BM-PILOT-PORT-BOYS-FISHING",
+      "name": "강사1리 방파제",
+      "region": "경북 포항",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "UNKNOWN",
+      "sourceRefs": [
+        "https://www.sunrise1.co.kr/bf/home"
+      ]
+    }
+  ],
+  "charters": [
+    {
+      "id": "BM-PILOT-CHARTER-YUD3004-JUKKUMI-OCTOPUS",
+      "operatorId": "BM-PILOT-OP-YUD3004",
+      "boatId": "BM-PILOT-BOAT-YUD3004",
+      "departurePortId": "BM-PILOT-PORT-YUD3004",
+      "title": "주꾸미·문어 병행 출조",
+      "targetSpeciesIds": [
+        "47aa9b93-2b32-4df4-9a2a-45ed3abbd484"
+      ],
+      "targetSpeciesRawNames": [
+        "주꾸미",
+        "문어"
+      ],
+      "speciesMatches": [
+        {
+          "rawName": "주꾸미",
+          "canonicalId": "47aa9b93-2b32-4df4-9a2a-45ed3abbd484",
+          "matchType": "EXACT_CANONICAL"
+        },
+        {
+          "rawName": "문어",
+          "canonicalId": null,
+          "matchType": "UNRESOLVED"
+        }
+      ],
+      "tripType": "SEASONAL_FISHING",
+      "price": {
+        "amount": null,
+        "currency": "KRW",
+        "unit": "INQUIRY",
+        "sourceFreshness": "RECENT"
+      },
+      "bookingMethod": "PHONE",
+      "status": "INQUIRY_REQUIRED",
+      "remainingSeats": null,
+      "scheduleId": null,
+      "sourceUrl": "https://yud3004.cafe24.com/",
+      "sourceRefs": [
+        "https://yud3004.cafe24.com/"
+      ],
+      "evidence": "2026년 9월부터 주꾸미·문어 병행 출조 안내",
+      "verificationStatus": "SOURCE_BACKED",
+      "freshness": "RECENT",
+      "readiness": "REVIEW_REQUIRED",
+      "businessReadiness": "CONTACTABLE",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "어종 미해결: 문어"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-YUD3004-WINTER-BLACK-PORGY",
+      "operatorId": "BM-PILOT-OP-YUD3004",
+      "boatId": "BM-PILOT-BOAT-YUD3004",
+      "departurePortId": "BM-PILOT-PORT-YUD3004",
+      "title": "겨울 선상 감성돔 출조",
+      "targetSpeciesIds": [
+        "BM-SPECIES-000751"
+      ],
+      "targetSpeciesRawNames": [
+        "감성돔"
+      ],
+      "speciesMatches": [
+        {
+          "rawName": "감성돔",
+          "canonicalId": "BM-SPECIES-000751",
+          "matchType": "EXACT_CANONICAL"
+        }
+      ],
+      "tripType": "SEASONAL_FISHING",
+      "price": {
+        "amount": null,
+        "currency": "KRW",
+        "unit": "INQUIRY",
+        "sourceFreshness": "SEASONAL"
+      },
+      "bookingMethod": "PHONE",
+      "status": "INQUIRY_REQUIRED",
+      "remainingSeats": null,
+      "scheduleId": null,
+      "sourceUrl": "https://yud3004.cafe24.com/",
+      "sourceRefs": [
+        "https://yud3004.cafe24.com/"
+      ],
+      "evidence": "겨울 선상 감성돔 전문 출조 안내",
+      "verificationStatus": "SOURCE_BACKED",
+      "freshness": "SEASONAL",
+      "readiness": "REVIEW_REQUIRED",
+      "businessReadiness": "CONTACTABLE",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-NOULBIT-DOLPHIN-FISHING",
+      "operatorId": "BM-PILOT-OP-NOULBIT",
+      "boatId": "BM-PILOT-BOAT-NOULBIT",
+      "departurePortId": null,
+      "title": "배낚시·돌고래 관찰 체험",
+      "targetSpeciesIds": [],
+      "targetSpeciesRawNames": [],
+      "speciesMatches": [],
+      "tripType": "EXPERIENCE",
+      "price": {
+        "amount": 30000,
+        "currency": "KRW",
+        "unit": "PER_ADULT",
+        "sourceFreshness": "STATIC"
+      },
+      "bookingMethod": "PHONE",
+      "status": "INQUIRY_REQUIRED",
+      "remainingSeats": null,
+      "scheduleId": null,
+      "sourceUrl": "https://www.noulbit.com/",
+      "sourceRefs": [
+        "https://www.noulbit.com/"
+      ],
+      "evidence": "성인 30,000원 2시간 30분 코스, 돌고래 출현 보장 없음",
+      "verificationStatus": "SOURCE_BACKED",
+      "freshness": "STATIC",
+      "readiness": "REVIEW_REQUIRED",
+      "businessReadiness": "CONTACTABLE",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-NOULBIT-NIGHT-FISHING",
+      "operatorId": "BM-PILOT-OP-NOULBIT",
+      "boatId": "BM-PILOT-BOAT-NOULBIT",
+      "departurePortId": null,
+      "title": "야간 배낚시 체험",
+      "targetSpeciesIds": [
+        "BM-SPECIES-000417",
+        "BM-SPECIES-000755"
+      ],
+      "targetSpeciesRawNames": [
+        "한치",
+        "고등어",
+        "참돔"
+      ],
+      "speciesMatches": [
+        {
+          "rawName": "한치",
+          "canonicalId": null,
+          "matchType": "UNRESOLVED"
+        },
+        {
+          "rawName": "고등어",
+          "canonicalId": "BM-SPECIES-000417",
+          "matchType": "EXACT_CANONICAL"
+        },
+        {
+          "rawName": "참돔",
+          "canonicalId": "BM-SPECIES-000755",
+          "matchType": "EXACT_CANONICAL"
+        }
+      ],
+      "tripType": "NIGHT_FISHING",
+      "price": {
+        "amount": 50000,
+        "currency": "KRW",
+        "unit": "PER_ADULT",
+        "sourceFreshness": "STATIC"
+      },
+      "bookingMethod": "PHONE",
+      "status": "INQUIRY_REQUIRED",
+      "remainingSeats": null,
+      "scheduleId": null,
+      "sourceUrl": "https://www.noulbit.com/",
+      "sourceRefs": [
+        "https://www.noulbit.com/"
+      ],
+      "evidence": "성인 50,000원 야간 4시간 코스",
+      "verificationStatus": "SOURCE_BACKED",
+      "freshness": "STATIC",
+      "readiness": "REVIEW_REQUIRED",
+      "businessReadiness": "CONTACTABLE",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "어종 미해결: 한치",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-NOULBIT-TAI-RUBBER",
+      "operatorId": "BM-PILOT-OP-NOULBIT",
+      "boatId": "BM-PILOT-BOAT-NOULBIT",
+      "departurePortId": null,
+      "title": "타이라바 체험",
+      "targetSpeciesIds": [
+        "BM-SPECIES-000755",
+        "BM-SPECIES-000501"
+      ],
+      "targetSpeciesRawNames": [
+        "참돔",
+        "방어"
+      ],
+      "speciesMatches": [
+        {
+          "rawName": "참돔",
+          "canonicalId": "BM-SPECIES-000755",
+          "matchType": "EXACT_CANONICAL"
+        },
+        {
+          "rawName": "방어",
+          "canonicalId": "BM-SPECIES-000501",
+          "matchType": "EXACT_CANONICAL"
+        }
+      ],
+      "tripType": "LURE_FISHING",
+      "price": {
+        "amount": null,
+        "currency": "KRW",
+        "unit": "INQUIRY",
+        "sourceFreshness": "STATIC"
+      },
+      "bookingMethod": "PHONE",
+      "status": "INQUIRY_REQUIRED",
+      "remainingSeats": null,
+      "scheduleId": null,
+      "sourceUrl": "https://www.noulbit.com/",
+      "sourceRefs": [
+        "https://www.noulbit.com/"
+      ],
+      "evidence": "계절별 가격·일정 문의 필수",
+      "verificationStatus": "SOURCE_BACKED",
+      "freshness": "STATIC",
+      "readiness": "REVIEW_REQUIRED",
+      "businessReadiness": "CONTACTABLE",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-SONGYI-FLATFISH-GROUP",
+      "operatorId": "BM-PILOT-OP-SONGYI",
+      "boatId": "BM-PILOT-BOAT-SONGYI",
+      "departurePortId": null,
+      "title": "참가자미 단체 배낚시",
+      "targetSpeciesIds": [
+        "BM-SPECIES-000544"
+      ],
+      "targetSpeciesRawNames": [
+        "참가자미"
+      ],
+      "speciesMatches": [
+        {
+          "rawName": "참가자미",
+          "canonicalId": "BM-SPECIES-000544",
+          "matchType": "EXACT_CANONICAL"
+        }
+      ],
+      "tripType": "GROUP_FISHING",
+      "price": {
+        "amount": 120000,
+        "currency": "KRW",
+        "unit": "PER_BOAT_FOUR",
+        "sourceFreshness": "STATIC"
+      },
+      "bookingMethod": "PHONE",
+      "status": "INQUIRY_REQUIRED",
+      "remainingSeats": null,
+      "scheduleId": null,
+      "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/",
+      "sourceRefs": [
+        "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/"
+      ],
+      "evidence": "4인 기준 120,000원 안내",
+      "verificationStatus": "SOURCE_BACKED",
+      "freshness": "STATIC",
+      "readiness": "REVIEW_REQUIRED",
+      "businessReadiness": "CONTACTABLE",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-SONGYI-FULL-DAY",
+      "operatorId": "BM-PILOT-OP-SONGYI",
+      "boatId": "BM-PILOT-BOAT-SONGYI",
+      "departurePortId": null,
+      "title": "7시간 종일 배낚시",
+      "targetSpeciesIds": [
+        "BM-SPECIES-001056",
+        "BM-SPECIES-000408",
+        "BM-SPECIES-000002"
+      ],
+      "targetSpeciesRawNames": [
+        "대구",
+        "문어",
+        "삼치",
+        "볼락"
+      ],
+      "speciesMatches": [
+        {
+          "rawName": "대구",
+          "canonicalId": "BM-SPECIES-001056",
+          "matchType": "EXACT_CANONICAL"
+        },
+        {
+          "rawName": "문어",
+          "canonicalId": null,
+          "matchType": "UNRESOLVED"
+        },
+        {
+          "rawName": "삼치",
+          "canonicalId": "BM-SPECIES-000408",
+          "matchType": "EXACT_CANONICAL"
+        },
+        {
+          "rawName": "볼락",
+          "canonicalId": "BM-SPECIES-000002",
+          "matchType": "EXACT_CANONICAL"
+        }
+      ],
+      "tripType": "FULL_DAY",
+      "price": {
+        "amount": 100000,
+        "currency": "KRW",
+        "unit": "PER_PERSON",
+        "sourceFreshness": "STATIC"
+      },
+      "bookingMethod": "PHONE",
+      "status": "INQUIRY_REQUIRED",
+      "remainingSeats": null,
+      "scheduleId": null,
+      "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/",
+      "sourceRefs": [
+        "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/"
+      ],
+      "evidence": "7시간 1인 100,000원, 최소 5인 안내",
+      "verificationStatus": "SOURCE_BACKED",
+      "freshness": "STATIC",
+      "readiness": "REVIEW_REQUIRED",
+      "businessReadiness": "CONTACTABLE",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "어종 미해결: 문어",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-SONGYI-HALF-DAY",
+      "operatorId": "BM-PILOT-OP-SONGYI",
+      "boatId": "BM-PILOT-BOAT-SONGYI",
+      "departurePortId": null,
+      "title": "4시간 배낚시",
+      "targetSpeciesIds": [
+        "BM-SPECIES-001056",
+        "BM-SPECIES-000408",
+        "BM-SPECIES-000002"
+      ],
+      "targetSpeciesRawNames": [
+        "대구",
+        "문어",
+        "삼치",
+        "볼락"
+      ],
+      "speciesMatches": [
+        {
+          "rawName": "대구",
+          "canonicalId": "BM-SPECIES-001056",
+          "matchType": "EXACT_CANONICAL"
+        },
+        {
+          "rawName": "문어",
+          "canonicalId": null,
+          "matchType": "UNRESOLVED"
+        },
+        {
+          "rawName": "삼치",
+          "canonicalId": "BM-SPECIES-000408",
+          "matchType": "EXACT_CANONICAL"
+        },
+        {
+          "rawName": "볼락",
+          "canonicalId": "BM-SPECIES-000002",
+          "matchType": "EXACT_CANONICAL"
+        }
+      ],
+      "tripType": "HALF_DAY",
+      "price": {
+        "amount": 60000,
+        "currency": "KRW",
+        "unit": "PER_PERSON",
+        "sourceFreshness": "STATIC"
+      },
+      "bookingMethod": "PHONE",
+      "status": "INQUIRY_REQUIRED",
+      "remainingSeats": null,
+      "scheduleId": null,
+      "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/",
+      "sourceRefs": [
+        "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/"
+      ],
+      "evidence": "4시간 1인 60,000원, 최소 5인 안내",
+      "verificationStatus": "SOURCE_BACKED",
+      "freshness": "STATIC",
+      "readiness": "REVIEW_REQUIRED",
+      "businessReadiness": "CONTACTABLE",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "어종 미해결: 문어",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-ACEHO-HAIRTAIL",
+      "operatorId": "BM-PILOT-OP-ACEHO",
+      "boatId": "BM-PILOT-BOAT-ACEHO",
+      "departurePortId": null,
+      "title": "갈치 선상 출조",
+      "targetSpeciesIds": [
+        "BM-SPECIES-000444"
+      ],
+      "targetSpeciesRawNames": [
+        "갈치"
+      ],
+      "speciesMatches": [
+        {
+          "rawName": "갈치",
+          "canonicalId": "BM-SPECIES-000444",
+          "matchType": "EXACT_CANONICAL"
+        }
+      ],
+      "tripType": "SEASONAL_FISHING",
+      "price": {
+        "amount": null,
+        "currency": "KRW",
+        "unit": "INQUIRY",
+        "sourceFreshness": "RECENT"
+      },
+      "bookingMethod": "PHONE",
+      "status": "INQUIRY_REQUIRED",
+      "remainingSeats": null,
+      "scheduleId": null,
+      "sourceUrl": "https://aceho.co.kr/",
+      "sourceRefs": [
+        "https://aceho.co.kr/"
+      ],
+      "evidence": "갈치 전문 출조 및 전화 예약 안내",
+      "verificationStatus": "SOURCE_BACKED",
+      "freshness": "RECENT",
+      "readiness": "REVIEW_REQUIRED",
+      "businessReadiness": "CONTACTABLE",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-ACEHO-SQUID",
+      "operatorId": "BM-PILOT-OP-ACEHO",
+      "boatId": "BM-PILOT-BOAT-ACEHO",
+      "departurePortId": null,
+      "title": "한치 선상 출조",
+      "targetSpeciesIds": [],
+      "targetSpeciesRawNames": [
+        "한치"
+      ],
+      "speciesMatches": [
+        {
+          "rawName": "한치",
+          "canonicalId": null,
+          "matchType": "UNRESOLVED"
+        }
+      ],
+      "tripType": "SEASONAL_FISHING",
+      "price": {
+        "amount": null,
+        "currency": "KRW",
+        "unit": "INQUIRY",
+        "sourceFreshness": "SEASONAL"
+      },
+      "bookingMethod": "PHONE",
+      "status": "INQUIRY_REQUIRED",
+      "remainingSeats": null,
+      "scheduleId": null,
+      "sourceUrl": "https://aceho.co.kr/",
+      "sourceRefs": [
+        "https://aceho.co.kr/"
+      ],
+      "evidence": "한치 전문 출조 및 전화 예약 안내",
+      "verificationStatus": "SOURCE_BACKED",
+      "freshness": "SEASONAL",
+      "readiness": "REVIEW_REQUIRED",
+      "businessReadiness": "CONTACTABLE",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "어종 미해결: 한치",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-ACEHO-CUTTLEFISH",
+      "operatorId": "BM-PILOT-OP-ACEHO",
+      "boatId": "BM-PILOT-BOAT-ACEHO",
+      "departurePortId": null,
+      "title": "갑오징어 선상 출조",
+      "targetSpeciesIds": [],
+      "targetSpeciesRawNames": [
+        "갑오징어"
+      ],
+      "speciesMatches": [
+        {
+          "rawName": "갑오징어",
+          "canonicalId": null,
+          "matchType": "UNRESOLVED"
+        }
+      ],
+      "tripType": "SEASONAL_FISHING",
+      "price": {
+        "amount": null,
+        "currency": "KRW",
+        "unit": "INQUIRY",
+        "sourceFreshness": "SEASONAL"
+      },
+      "bookingMethod": "PHONE",
+      "status": "INQUIRY_REQUIRED",
+      "remainingSeats": null,
+      "scheduleId": null,
+      "sourceUrl": "https://aceho.co.kr/",
+      "sourceRefs": [
+        "https://aceho.co.kr/"
+      ],
+      "evidence": "갑오징어 전문 출조 및 전화 예약 안내",
+      "verificationStatus": "SOURCE_BACKED",
+      "freshness": "SEASONAL",
+      "readiness": "REVIEW_REQUIRED",
+      "businessReadiness": "CONTACTABLE",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "어종 미해결: 갑오징어",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-BOYS-FISHING-TIPRUN",
+      "operatorId": "BM-PILOT-OP-BOYS-FISHING",
+      "boatId": "BM-PILOT-BOAT-BOYS-FISHING",
+      "departurePortId": "BM-PILOT-PORT-BOYS-FISHING",
+      "title": "무늬오징어 팁런 출조",
+      "targetSpeciesIds": [],
+      "targetSpeciesRawNames": [
+        "무늬오징어"
+      ],
+      "speciesMatches": [
+        {
+          "rawName": "무늬오징어",
+          "canonicalId": null,
+          "matchType": "UNRESOLVED"
+        }
+      ],
+      "tripType": "LURE_FISHING",
+      "price": {
+        "amount": null,
+        "currency": "KRW",
+        "unit": "INQUIRY",
+        "sourceFreshness": "RECENT"
+      },
+      "bookingMethod": "PHONE",
+      "status": "INQUIRY_REQUIRED",
+      "remainingSeats": null,
+      "scheduleId": null,
+      "sourceUrl": "https://www.sunrise1.co.kr/bf/home",
+      "sourceRefs": [
+        "https://www.sunrise1.co.kr/bf/home"
+      ],
+      "evidence": "공식 예약 화면에 무늬팁런 출조 상품 표시. 날짜별 가격과 좌석은 복제하지 않음",
+      "verificationStatus": "SOURCE_BACKED",
+      "freshness": "RECENT",
+      "readiness": "REVIEW_REQUIRED",
+      "businessReadiness": "CONTACTABLE",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "어종 미해결: 무늬오징어"
+      ]
+    }
+  ],
+  "schedules": [],
+  "submissions": [
+    {
+      "submissionId": "BM-PILOT-SUB-YUD3004",
+      "rawPayload": {
+        "submissionType": "BULK_IMPORT",
+        "sourceIdentity": {
+          "sourceName": "삼천포 여의도호",
+          "sourceUrl": "https://yud3004.cafe24.com/"
+        },
+        "operator": {
+          "name": "삼천포 여의도호",
+          "phone": "010-9811-1006",
+          "websiteUrl": "https://yud3004.cafe24.com/",
+          "region": "경남 사천"
+        },
+        "boats": [
+          {
+            "name": "여의도호",
+            "capacity": 12,
+            "registrationInfo": null
+          }
+        ],
+        "ports": [
+          {
+            "name": "대방동 선착장",
+            "region": "경남 사천",
+            "latitude": null,
+            "longitude": null
+          }
+        ],
+        "charters": [
+          {
+            "title": "주꾸미·문어 병행 출조",
+            "targetSpecies": [
+              "주꾸미",
+              "문어"
+            ],
+            "price": null,
+            "priceUnit": "INQUIRY",
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          },
+          {
+            "title": "겨울 선상 감성돔 출조",
+            "targetSpecies": [
+              "감성돔"
+            ],
+            "price": null,
+            "priceUnit": "INQUIRY",
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          }
+        ],
+        "schedules": []
+      },
+      "normalizedPayload": {
+        "submissionId": "BM-PILOT-SUB-YUD3004",
+        "submissionType": "BULK_IMPORT",
+        "submittedAt": null,
+        "state": "DRAFT",
+        "verificationStatus": "UNVERIFIED",
+        "sourceIdentity": {
+          "sourceType": "BULK_IMPORT",
+          "sourceName": "삼천포 여의도호",
+          "sourceUrl": "https://yud3004.cafe24.com/",
+          "submittedAt": null
+        },
+        "operator": {
+          "name": "삼천포 여의도호",
+          "representativeName": null,
+          "phone": "01098111006",
+          "email": null,
+          "websiteUrl": "https://yud3004.cafe24.com/",
+          "region": "경남 사천"
+        },
+        "boats": [
+          {
+            "name": "여의도호",
+            "capacity": 12,
+            "vesselType": null,
+            "registrationInfo": null
+          }
+        ],
+        "ports": [
+          {
+            "name": "대방동 선착장",
+            "region": "경남 사천",
+            "address": null,
+            "latitude": null,
+            "longitude": null,
+            "coordinateStatus": "UNKNOWN"
+          }
+        ],
+        "charters": [
+          {
+            "title": "주꾸미·문어 병행 출조",
+            "targetSpecies": [
+              {
+                "rawName": "주꾸미",
+                "canonicalId": "47aa9b93-2b32-4df4-9a2a-45ed3abbd484",
+                "matchType": "EXACT_CANONICAL"
+              },
+              {
+                "rawName": "문어",
+                "canonicalId": null,
+                "matchType": "UNRESOLVED"
+              }
+            ],
+            "price": null,
+            "priceUnit": "INQUIRY",
+            "departureTime": null,
+            "returnTime": null,
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          },
+          {
+            "title": "겨울 선상 감성돔 출조",
+            "targetSpecies": [
+              {
+                "rawName": "감성돔",
+                "canonicalId": "BM-SPECIES-000751",
+                "matchType": "EXACT_CANONICAL"
+              }
+            ],
+            "price": null,
+            "priceUnit": "INQUIRY",
+            "departureTime": null,
+            "returnTime": null,
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          }
+        ],
+        "schedules": [],
+        "documents": [
+          {
+            "kind": "PUBLIC_OPERATOR_PAGE",
+            "reference": "삼천포 여의도호",
+            "sourceUrl": "https://yud3004.cafe24.com/"
+          }
+        ],
+        "validationIssues": []
+      },
+      "validation": {
+        "errors": [],
+        "warnings": [
+          {
+            "field": "charters[0].targetSpecies",
+            "code": "SPECIES_REVIEW_REQUIRED",
+            "severity": "WARNING",
+            "message": "정확한 canonical 또는 승인 alias로 확인되지 않은 어종은 검토가 필요합니다."
+          }
+        ]
+      },
+      "crosswalk": {
+        "status": "NO_MATCH",
+        "registrationId": null,
+        "reasons": [],
+        "autoApproved": false
+      },
+      "offlineReview": "REVIEW_REQUIRED",
+      "authenticatedAdminReview": false
+    },
+    {
+      "submissionId": "BM-PILOT-SUB-NOULBIT",
+      "rawPayload": {
+        "submissionType": "BULK_IMPORT",
+        "sourceIdentity": {
+          "sourceName": "놀빛바다호",
+          "sourceUrl": "https://www.noulbit.com/"
+        },
+        "operator": {
+          "name": "놀빛바다호",
+          "phone": "010-3698-7770",
+          "websiteUrl": "https://www.noulbit.com/",
+          "region": "제주 제주시"
+        },
+        "boats": [
+          {
+            "name": "놀빛바다호",
+            "capacity": null,
+            "registrationInfo": null
+          }
+        ],
+        "ports": [
+          {
+            "name": null,
+            "region": "제주 제주시",
+            "latitude": null,
+            "longitude": null
+          }
+        ],
+        "charters": [
+          {
+            "title": "배낚시·돌고래 관찰 체험",
+            "targetSpecies": [],
+            "price": 30000,
+            "priceUnit": "PER_ADULT",
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          },
+          {
+            "title": "야간 배낚시 체험",
+            "targetSpecies": [
+              "한치",
+              "고등어",
+              "참돔"
+            ],
+            "price": 50000,
+            "priceUnit": "PER_ADULT",
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          },
+          {
+            "title": "타이라바 체험",
+            "targetSpecies": [
+              "참돔",
+              "방어"
+            ],
+            "price": null,
+            "priceUnit": "INQUIRY",
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          }
+        ],
+        "schedules": []
+      },
+      "normalizedPayload": {
+        "submissionId": "BM-PILOT-SUB-NOULBIT",
+        "submissionType": "BULK_IMPORT",
+        "submittedAt": null,
+        "state": "DRAFT",
+        "verificationStatus": "UNVERIFIED",
+        "sourceIdentity": {
+          "sourceType": "BULK_IMPORT",
+          "sourceName": "놀빛바다호",
+          "sourceUrl": "https://www.noulbit.com/",
+          "submittedAt": null
+        },
+        "operator": {
+          "name": "놀빛바다호",
+          "representativeName": null,
+          "phone": "01036987770",
+          "email": null,
+          "websiteUrl": "https://www.noulbit.com/",
+          "region": "제주 제주시"
+        },
+        "boats": [
+          {
+            "name": "놀빛바다호",
+            "capacity": null,
+            "vesselType": null,
+            "registrationInfo": null
+          }
+        ],
+        "ports": [
+          {
+            "name": null,
+            "region": "제주 제주시",
+            "address": null,
+            "latitude": null,
+            "longitude": null,
+            "coordinateStatus": "UNKNOWN"
+          }
+        ],
+        "charters": [
+          {
+            "title": "배낚시·돌고래 관찰 체험",
+            "targetSpecies": [],
+            "price": 30000,
+            "priceUnit": "PER_ADULT",
+            "departureTime": null,
+            "returnTime": null,
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          },
+          {
+            "title": "야간 배낚시 체험",
+            "targetSpecies": [
+              {
+                "rawName": "한치",
+                "canonicalId": null,
+                "matchType": "UNRESOLVED"
+              },
+              {
+                "rawName": "고등어",
+                "canonicalId": "BM-SPECIES-000417",
+                "matchType": "EXACT_CANONICAL"
+              },
+              {
+                "rawName": "참돔",
+                "canonicalId": "BM-SPECIES-000755",
+                "matchType": "EXACT_CANONICAL"
+              }
+            ],
+            "price": 50000,
+            "priceUnit": "PER_ADULT",
+            "departureTime": null,
+            "returnTime": null,
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          },
+          {
+            "title": "타이라바 체험",
+            "targetSpecies": [
+              {
+                "rawName": "참돔",
+                "canonicalId": "BM-SPECIES-000755",
+                "matchType": "EXACT_CANONICAL"
+              },
+              {
+                "rawName": "방어",
+                "canonicalId": "BM-SPECIES-000501",
+                "matchType": "EXACT_CANONICAL"
+              }
+            ],
+            "price": null,
+            "priceUnit": "INQUIRY",
+            "departureTime": null,
+            "returnTime": null,
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          }
+        ],
+        "schedules": [],
+        "documents": [
+          {
+            "kind": "PUBLIC_OPERATOR_PAGE",
+            "reference": "놀빛바다호",
+            "sourceUrl": "https://www.noulbit.com/"
+          }
+        ],
+        "validationIssues": []
+      },
+      "validation": {
+        "errors": [],
+        "warnings": [
+          {
+            "field": "ports[0].name",
+            "code": "MISSING_OPTIONAL",
+            "severity": "WARNING",
+            "message": "출항항명이 없습니다."
+          }
+        ]
+      },
+      "crosswalk": {
+        "status": "NO_MATCH",
+        "registrationId": null,
+        "reasons": [],
+        "autoApproved": false
+      },
+      "offlineReview": "REVIEW_REQUIRED",
+      "authenticatedAdminReview": false
+    },
+    {
+      "submissionId": "BM-PILOT-SUB-SONGYI",
+      "rawPayload": {
+        "submissionType": "BULK_IMPORT",
+        "sourceIdentity": {
+          "sourceName": "송이호 배낚시",
+          "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/"
+        },
+        "operator": {
+          "name": "송이호 배낚시",
+          "phone": "010-5367-2477",
+          "websiteUrl": "https://songyifishing.com/",
+          "region": "강원 양양"
+        },
+        "boats": [
+          {
+            "name": "송이호",
+            "capacity": null,
+            "registrationInfo": null
+          }
+        ],
+        "ports": [
+          {
+            "name": null,
+            "region": "강원 양양",
+            "latitude": null,
+            "longitude": null
+          }
+        ],
+        "charters": [
+          {
+            "title": "참가자미 단체 배낚시",
+            "targetSpecies": [
+              "참가자미"
+            ],
+            "price": 120000,
+            "priceUnit": "PER_BOAT_FOUR",
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          },
+          {
+            "title": "7시간 종일 배낚시",
+            "targetSpecies": [
+              "대구",
+              "문어",
+              "삼치",
+              "볼락"
+            ],
+            "price": 100000,
+            "priceUnit": "PER_PERSON",
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          },
+          {
+            "title": "4시간 배낚시",
+            "targetSpecies": [
+              "대구",
+              "문어",
+              "삼치",
+              "볼락"
+            ],
+            "price": 60000,
+            "priceUnit": "PER_PERSON",
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          }
+        ],
+        "schedules": []
+      },
+      "normalizedPayload": {
+        "submissionId": "BM-PILOT-SUB-SONGYI",
+        "submissionType": "BULK_IMPORT",
+        "submittedAt": null,
+        "state": "DRAFT",
+        "verificationStatus": "UNVERIFIED",
+        "sourceIdentity": {
+          "sourceType": "BULK_IMPORT",
+          "sourceName": "송이호 배낚시",
+          "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/",
+          "submittedAt": null
+        },
+        "operator": {
+          "name": "송이호 배낚시",
+          "representativeName": null,
+          "phone": "01053672477",
+          "email": null,
+          "websiteUrl": "https://songyifishing.com/",
+          "region": "강원 양양"
+        },
+        "boats": [
+          {
+            "name": "송이호",
+            "capacity": null,
+            "vesselType": null,
+            "registrationInfo": null
+          }
+        ],
+        "ports": [
+          {
+            "name": null,
+            "region": "강원 양양",
+            "address": null,
+            "latitude": null,
+            "longitude": null,
+            "coordinateStatus": "UNKNOWN"
+          }
+        ],
+        "charters": [
+          {
+            "title": "참가자미 단체 배낚시",
+            "targetSpecies": [
+              {
+                "rawName": "참가자미",
+                "canonicalId": "BM-SPECIES-000544",
+                "matchType": "EXACT_CANONICAL"
+              }
+            ],
+            "price": 120000,
+            "priceUnit": "PER_BOAT_FOUR",
+            "departureTime": null,
+            "returnTime": null,
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          },
+          {
+            "title": "7시간 종일 배낚시",
+            "targetSpecies": [
+              {
+                "rawName": "대구",
+                "canonicalId": "BM-SPECIES-001056",
+                "matchType": "EXACT_CANONICAL"
+              },
+              {
+                "rawName": "문어",
+                "canonicalId": null,
+                "matchType": "UNRESOLVED"
+              },
+              {
+                "rawName": "삼치",
+                "canonicalId": "BM-SPECIES-000408",
+                "matchType": "EXACT_CANONICAL"
+              },
+              {
+                "rawName": "볼락",
+                "canonicalId": "BM-SPECIES-000002",
+                "matchType": "EXACT_CANONICAL"
+              }
+            ],
+            "price": 100000,
+            "priceUnit": "PER_PERSON",
+            "departureTime": null,
+            "returnTime": null,
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          },
+          {
+            "title": "4시간 배낚시",
+            "targetSpecies": [
+              {
+                "rawName": "대구",
+                "canonicalId": "BM-SPECIES-001056",
+                "matchType": "EXACT_CANONICAL"
+              },
+              {
+                "rawName": "문어",
+                "canonicalId": null,
+                "matchType": "UNRESOLVED"
+              },
+              {
+                "rawName": "삼치",
+                "canonicalId": "BM-SPECIES-000408",
+                "matchType": "EXACT_CANONICAL"
+              },
+              {
+                "rawName": "볼락",
+                "canonicalId": "BM-SPECIES-000002",
+                "matchType": "EXACT_CANONICAL"
+              }
+            ],
+            "price": 60000,
+            "priceUnit": "PER_PERSON",
+            "departureTime": null,
+            "returnTime": null,
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          }
+        ],
+        "schedules": [],
+        "documents": [
+          {
+            "kind": "PUBLIC_OPERATOR_PAGE",
+            "reference": "송이호 배낚시",
+            "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/"
+          }
+        ],
+        "validationIssues": []
+      },
+      "validation": {
+        "errors": [],
+        "warnings": [
+          {
+            "field": "ports[0].name",
+            "code": "MISSING_OPTIONAL",
+            "severity": "WARNING",
+            "message": "출항항명이 없습니다."
+          }
+        ]
+      },
+      "crosswalk": {
+        "status": "NO_MATCH",
+        "registrationId": null,
+        "reasons": [],
+        "autoApproved": false
+      },
+      "offlineReview": "REVIEW_REQUIRED",
+      "authenticatedAdminReview": false
+    },
+    {
+      "submissionId": "BM-PILOT-SUB-ACEHO",
+      "rawPayload": {
+        "submissionType": "BULK_IMPORT",
+        "sourceIdentity": {
+          "sourceName": "제주 에이스호",
+          "sourceUrl": "https://aceho.co.kr/"
+        },
+        "operator": {
+          "name": "제주 에이스호",
+          "phone": "010-3548-3472",
+          "websiteUrl": "https://aceho.co.kr/",
+          "region": "제주 제주시"
+        },
+        "boats": [
+          {
+            "name": "에이스호",
+            "capacity": null,
+            "registrationInfo": null
+          }
+        ],
+        "ports": [
+          {
+            "name": null,
+            "region": "제주 제주시",
+            "latitude": null,
+            "longitude": null
+          }
+        ],
+        "charters": [
+          {
+            "title": "갈치 선상 출조",
+            "targetSpecies": [
+              "갈치"
+            ],
+            "price": null,
+            "priceUnit": "INQUIRY",
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          },
+          {
+            "title": "한치 선상 출조",
+            "targetSpecies": [
+              "한치"
+            ],
+            "price": null,
+            "priceUnit": "INQUIRY",
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          },
+          {
+            "title": "갑오징어 선상 출조",
+            "targetSpecies": [
+              "갑오징어"
+            ],
+            "price": null,
+            "priceUnit": "INQUIRY",
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          }
+        ],
+        "schedules": []
+      },
+      "normalizedPayload": {
+        "submissionId": "BM-PILOT-SUB-ACEHO",
+        "submissionType": "BULK_IMPORT",
+        "submittedAt": null,
+        "state": "DRAFT",
+        "verificationStatus": "UNVERIFIED",
+        "sourceIdentity": {
+          "sourceType": "BULK_IMPORT",
+          "sourceName": "제주 에이스호",
+          "sourceUrl": "https://aceho.co.kr/",
+          "submittedAt": null
+        },
+        "operator": {
+          "name": "제주 에이스호",
+          "representativeName": null,
+          "phone": "01035483472",
+          "email": null,
+          "websiteUrl": "https://aceho.co.kr/",
+          "region": "제주 제주시"
+        },
+        "boats": [
+          {
+            "name": "에이스호",
+            "capacity": null,
+            "vesselType": null,
+            "registrationInfo": null
+          }
+        ],
+        "ports": [
+          {
+            "name": null,
+            "region": "제주 제주시",
+            "address": null,
+            "latitude": null,
+            "longitude": null,
+            "coordinateStatus": "UNKNOWN"
+          }
+        ],
+        "charters": [
+          {
+            "title": "갈치 선상 출조",
+            "targetSpecies": [
+              {
+                "rawName": "갈치",
+                "canonicalId": "BM-SPECIES-000444",
+                "matchType": "EXACT_CANONICAL"
+              }
+            ],
+            "price": null,
+            "priceUnit": "INQUIRY",
+            "departureTime": null,
+            "returnTime": null,
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          },
+          {
+            "title": "한치 선상 출조",
+            "targetSpecies": [
+              {
+                "rawName": "한치",
+                "canonicalId": null,
+                "matchType": "UNRESOLVED"
+              }
+            ],
+            "price": null,
+            "priceUnit": "INQUIRY",
+            "departureTime": null,
+            "returnTime": null,
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          },
+          {
+            "title": "갑오징어 선상 출조",
+            "targetSpecies": [
+              {
+                "rawName": "갑오징어",
+                "canonicalId": null,
+                "matchType": "UNRESOLVED"
+              }
+            ],
+            "price": null,
+            "priceUnit": "INQUIRY",
+            "departureTime": null,
+            "returnTime": null,
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          }
+        ],
+        "schedules": [],
+        "documents": [
+          {
+            "kind": "PUBLIC_OPERATOR_PAGE",
+            "reference": "제주 에이스호",
+            "sourceUrl": "https://aceho.co.kr/"
+          }
+        ],
+        "validationIssues": []
+      },
+      "validation": {
+        "errors": [],
+        "warnings": [
+          {
+            "field": "ports[0].name",
+            "code": "MISSING_OPTIONAL",
+            "severity": "WARNING",
+            "message": "출항항명이 없습니다."
+          }
+        ]
+      },
+      "crosswalk": {
+        "status": "NO_MATCH",
+        "registrationId": null,
+        "reasons": [],
+        "autoApproved": false
+      },
+      "offlineReview": "REVIEW_REQUIRED",
+      "authenticatedAdminReview": false
+    },
+    {
+      "submissionId": "BM-PILOT-SUB-BOYS-FISHING",
+      "rawPayload": {
+        "submissionType": "BULK_IMPORT",
+        "sourceIdentity": {
+          "sourceName": "보이스피싱호",
+          "sourceUrl": "https://www.sunrise1.co.kr/bf/home"
+        },
+        "operator": {
+          "name": "보이스피싱호",
+          "phone": "010-5766-0007",
+          "websiteUrl": "https://www.sunrise1.co.kr/bf/home",
+          "region": "경북 포항"
+        },
+        "boats": [
+          {
+            "name": "보이스피싱호",
+            "capacity": null,
+            "registrationInfo": null
+          }
+        ],
+        "ports": [
+          {
+            "name": "강사1리 방파제",
+            "region": "경북 포항",
+            "latitude": null,
+            "longitude": null
+          }
+        ],
+        "charters": [
+          {
+            "title": "무늬오징어 팁런 출조",
+            "targetSpecies": [
+              "무늬오징어"
+            ],
+            "price": null,
+            "priceUnit": "INQUIRY",
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          }
+        ],
+        "schedules": []
+      },
+      "normalizedPayload": {
+        "submissionId": "BM-PILOT-SUB-BOYS-FISHING",
+        "submissionType": "BULK_IMPORT",
+        "submittedAt": null,
+        "state": "DRAFT",
+        "verificationStatus": "UNVERIFIED",
+        "sourceIdentity": {
+          "sourceType": "BULK_IMPORT",
+          "sourceName": "보이스피싱호",
+          "sourceUrl": "https://www.sunrise1.co.kr/bf/home",
+          "submittedAt": null
+        },
+        "operator": {
+          "name": "보이스피싱호",
+          "representativeName": null,
+          "phone": "01057660007",
+          "email": null,
+          "websiteUrl": "https://www.sunrise1.co.kr/bf/home",
+          "region": "경북 포항"
+        },
+        "boats": [
+          {
+            "name": "보이스피싱호",
+            "capacity": null,
+            "vesselType": null,
+            "registrationInfo": null
+          }
+        ],
+        "ports": [
+          {
+            "name": "강사1리 방파제",
+            "region": "경북 포항",
+            "address": null,
+            "latitude": null,
+            "longitude": null,
+            "coordinateStatus": "UNKNOWN"
+          }
+        ],
+        "charters": [
+          {
+            "title": "무늬오징어 팁런 출조",
+            "targetSpecies": [
+              {
+                "rawName": "무늬오징어",
+                "canonicalId": null,
+                "matchType": "UNRESOLVED"
+              }
+            ],
+            "price": null,
+            "priceUnit": "INQUIRY",
+            "departureTime": null,
+            "returnTime": null,
+            "bookingMethod": "PHONE",
+            "bookingUrl": null
+          }
+        ],
+        "schedules": [],
+        "documents": [
+          {
+            "kind": "PUBLIC_OPERATOR_PAGE",
+            "reference": "보이스피싱호",
+            "sourceUrl": "https://www.sunrise1.co.kr/bf/home"
+          }
+        ],
+        "validationIssues": []
+      },
+      "validation": {
+        "errors": [],
+        "warnings": [
+          {
+            "field": "charters[0].targetSpecies",
+            "code": "SPECIES_REVIEW_REQUIRED",
+            "severity": "WARNING",
+            "message": "정확한 canonical 또는 승인 alias로 확인되지 않은 어종은 검토가 필요합니다."
+          }
+        ]
+      },
+      "crosswalk": {
+        "status": "NO_MATCH",
+        "registrationId": null,
+        "reasons": [],
+        "autoApproved": false
+      },
+      "offlineReview": "REVIEW_REQUIRED",
+      "authenticatedAdminReview": false
+    }
+  ],
+  "productionActivated": false,
+  "authenticatedAdminApprovals": 0,
+  "promotionCandidates": []
+}

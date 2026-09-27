@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "decision": "CHARTER_VERIFIED_SUPPLY_PILOT_BLOCKED",
+  "reason": "No supplier publication consent or authenticated charter_admin review; source-backed research is not an approved supply pilot.",
+  "totalSourceEntities": 12,
+  "normalized": 12,
+  "suppliers": 5,
+  "review": {
+    "ready": 0,
+    "readyWithLimitations": 0,
+    "reviewRequired": 12,
+    "rejected": 0
+  },
+  "coverage": {
+    "operator": 5,
+    "boat": 5,
+    "port": 2,
+    "species": 8,
+    "price": 5,
+    "schedule": 0,
+    "contact": 12
+  },
+  "crosswalk": {
+    "EXACT_MATCH": 0,
+    "HIGH_CONFIDENCE": 0,
+    "CANDIDATE": 0,
+    "NO_MATCH": 5
+  },
+  "publicListingCandidates": 0,
+  "promotionCandidates": 0,
+  "productionActivated": false,
+  "limitations": [
+    "Formal supplier identity/consent review pending",
+    "MOF vessel matching is not established by name alone",
+    "No authenticated admin review or server persistence",
+    "No current schedule or live availability copied"
+  ],
+  "sourceRefs": [
+    "https://aceho.co.kr/",
+    "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/",
+    "https://www.noulbit.com/",
+    "https://www.sunrise1.co.kr/bf/home",
+    "https://yud3004.cafe24.com/"
+  ]
+}

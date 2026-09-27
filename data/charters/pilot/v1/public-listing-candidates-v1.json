@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "candidates": [],
+  "researchPreviewEntries": [
+    {
+      "id": "BM-PILOT-CHARTER-YUD3004-JUKKUMI-OCTOPUS",
+      "label": "PILOT RESEARCH / NOT APPROVED",
+      "title": "주꾸미·문어 병행 출조",
+      "operator": "삼천포 여의도호",
+      "region": "경남 사천",
+      "port": "대방동 선착장",
+      "targetSpeciesRawNames": [
+        "주꾸미",
+        "문어"
+      ],
+      "sourcePrice": null,
+      "priceDisplay": null,
+      "contact": {
+        "type": "tel",
+        "href": "tel:01098111006"
+      },
+      "sourceUrl": "https://yud3004.cafe24.com/",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "어종 미해결: 문어"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-YUD3004-WINTER-BLACK-PORGY",
+      "label": "PILOT RESEARCH / NOT APPROVED",
+      "title": "겨울 선상 감성돔 출조",
+      "operator": "삼천포 여의도호",
+      "region": "경남 사천",
+      "port": "대방동 선착장",
+      "targetSpeciesRawNames": [
+        "감성돔"
+      ],
+      "sourcePrice": null,
+      "priceDisplay": null,
+      "contact": {
+        "type": "tel",
+        "href": "tel:01098111006"
+      },
+      "sourceUrl": "https://yud3004.cafe24.com/",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-NOULBIT-DOLPHIN-FISHING",
+      "label": "PILOT RESEARCH / NOT APPROVED",
+      "title": "배낚시·돌고래 관찰 체험",
+      "operator": "놀빛바다호",
+      "region": "제주 제주시",
+      "port": null,
+      "targetSpeciesRawNames": [],
+      "sourcePrice": 30000,
+      "priceDisplay": null,
+      "contact": {
+        "type": "tel",
+        "href": "tel:01036987770"
+      },
+      "sourceUrl": "https://www.noulbit.com/",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-NOULBIT-NIGHT-FISHING",
+      "label": "PILOT RESEARCH / NOT APPROVED",
+      "title": "야간 배낚시 체험",
+      "operator": "놀빛바다호",
+      "region": "제주 제주시",
+      "port": null,
+      "targetSpeciesRawNames": [
+        "한치",
+        "고등어",
+        "참돔"
+      ],
+      "sourcePrice": 50000,
+      "priceDisplay": null,
+      "contact": {
+        "type": "tel",
+        "href": "tel:01036987770"
+      },
+      "sourceUrl": "https://www.noulbit.com/",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "어종 미해결: 한치",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-NOULBIT-TAI-RUBBER",
+      "label": "PILOT RESEARCH / NOT APPROVED",
+      "title": "타이라바 체험",
+      "operator": "놀빛바다호",
+      "region": "제주 제주시",
+      "port": null,
+      "targetSpeciesRawNames": [
+        "참돔",
+        "방어"
+      ],
+      "sourcePrice": null,
+      "priceDisplay": null,
+      "contact": {
+        "type": "tel",
+        "href": "tel:01036987770"
+      },
+      "sourceUrl": "https://www.noulbit.com/",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-SONGYI-FLATFISH-GROUP",
+      "label": "PILOT RESEARCH / NOT APPROVED",
+      "title": "참가자미 단체 배낚시",
+      "operator": "송이호 배낚시",
+      "region": "강원 양양",
+      "port": null,
+      "targetSpeciesRawNames": [
+        "참가자미"
+      ],
+      "sourcePrice": 120000,
+      "priceDisplay": null,
+      "contact": {
+        "type": "tel",
+        "href": "tel:01053672477"
+      },
+      "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-SONGYI-FULL-DAY",
+      "label": "PILOT RESEARCH / NOT APPROVED",
+      "title": "7시간 종일 배낚시",
+      "operator": "송이호 배낚시",
+      "region": "강원 양양",
+      "port": null,
+      "targetSpeciesRawNames": [
+        "대구",
+        "문어",
+        "삼치",
+        "볼락"
+      ],
+      "sourcePrice": 100000,
+      "priceDisplay": null,
+      "contact": {
+        "type": "tel",
+        "href": "tel:01053672477"
+      },
+      "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "어종 미해결: 문어",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-SONGYI-HALF-DAY",
+      "label": "PILOT RESEARCH / NOT APPROVED",
+      "title": "4시간 배낚시",
+      "operator": "송이호 배낚시",
+      "region": "강원 양양",
+      "port": null,
+      "targetSpeciesRawNames": [
+        "대구",
+        "문어",
+        "삼치",
+        "볼락"
+      ],
+      "sourcePrice": 60000,
+      "priceDisplay": null,
+      "contact": {
+        "type": "tel",
+        "href": "tel:01053672477"
+      },
+      "sourceUrl": "https://songyifishing.com/%EC%98%88%EC%95%BD-%EB%B0%8F-%EC%9A%94%EA%B8%88%EC%95%88%EB%82%B4/",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "어종 미해결: 문어",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-ACEHO-HAIRTAIL",
+      "label": "PILOT RESEARCH / NOT APPROVED",
+      "title": "갈치 선상 출조",
+      "operator": "제주 에이스호",
+      "region": "제주 제주시",
+      "port": null,
+      "targetSpeciesRawNames": [
+        "갈치"
+      ],
+      "sourcePrice": null,
+      "priceDisplay": null,
+      "contact": {
+        "type": "tel",
+        "href": "tel:01035483472"
+      },
+      "sourceUrl": "https://aceho.co.kr/",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-ACEHO-SQUID",
+      "label": "PILOT RESEARCH / NOT APPROVED",
+      "title": "한치 선상 출조",
+      "operator": "제주 에이스호",
+      "region": "제주 제주시",
+      "port": null,
+      "targetSpeciesRawNames": [
+        "한치"
+      ],
+      "sourcePrice": null,
+      "priceDisplay": null,
+      "contact": {
+        "type": "tel",
+        "href": "tel:01035483472"
+      },
+      "sourceUrl": "https://aceho.co.kr/",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "어종 미해결: 한치",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-ACEHO-CUTTLEFISH",
+      "label": "PILOT RESEARCH / NOT APPROVED",
+      "title": "갑오징어 선상 출조",
+      "operator": "제주 에이스호",
+      "region": "제주 제주시",
+      "port": null,
+      "targetSpeciesRawNames": [
+        "갑오징어"
+      ],
+      "sourcePrice": null,
+      "priceDisplay": null,
+      "contact": {
+        "type": "tel",
+        "href": "tel:01035483472"
+      },
+      "sourceUrl": "https://aceho.co.kr/",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "가격·시즌 재확인 필요",
+        "어종 미해결: 갑오징어",
+        "정확한 출항항 미확인"
+      ]
+    },
+    {
+      "id": "BM-PILOT-CHARTER-BOYS-FISHING-TIPRUN",
+      "label": "PILOT RESEARCH / NOT APPROVED",
+      "title": "무늬오징어 팁런 출조",
+      "operator": "보이스피싱호",
+      "region": "경북 포항",
+      "port": "강사1리 방파제",
+      "targetSpeciesRawNames": [
+        "무늬오징어"
+      ],
+      "sourcePrice": null,
+      "priceDisplay": null,
+      "contact": {
+        "type": "tel",
+        "href": "tel:01057660007"
+      },
+      "sourceUrl": "https://www.sunrise1.co.kr/bf/home",
+      "limitations": [
+        "공급자 제휴·공개 승인 미확인",
+        "실시간 일정·잔여석 미연동",
+        "어종 미해결: 무늬오징어"
+      ]
+    }
+  ],
+  "productionEligible": false,
+  "note": "Research cards only; no approved public listings."
+}
