@@ -36,10 +36,11 @@ test("partner template contains requested fields and every existing import colum
   assert.doesNotMatch(template[1], /@SUM|=HYPERLINK/);
 });
 
-test("outreach tracker starts empty with no fabricated contact status", () => {
+test("outreach tracker retains no fabricated contact activity after prospect selection", () => {
   const tracker = read("data/charters/partners/v1/partner-outreach-tracker.csv").trim().split(/\r?\n/);
-  assert.equal(tracker.length, 1);
-  assert.deepEqual(tracker[0].split(","), ["partner_id", "operator_name", "region", "source_url", "phone", "email", "contacted_at", "contact_method", "response_status", "submission_status", "review_status", "notes"]);
+  assert.equal(tracker.length, 21);
+  assert.ok(tracker[0].startsWith("partner_id,operator_name,region,source_url,phone,email,contacted_at,contact_method,response_status,submission_status,review_status,notes"));
+  for (const row of tracker.slice(1)) assert.match(row, /"NOT_CONTACTED","NONE","NONE"/);
   assert.equal(report.pilot.currentContacted, 0);
   assert.equal(report.tracker.rows, 0);
 });

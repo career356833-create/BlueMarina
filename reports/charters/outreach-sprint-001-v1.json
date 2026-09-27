@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-09-27",
+  "decision": "CHARTER_OUTREACH_SPRINT_001_READY_WITH_LIMITATIONS",
+  "scope": "Internal prospect research and outreach preparation only; no contact sent, reuse permission obtained, submission, approval, or publication.",
+  "targets": {
+    "total": 20,
+    "priority": {
+      "A_PRIORITY": 7,
+      "B_PRIORITY": 7,
+      "C_PRIORITY": 6
+    },
+    "regions": {
+      "경남 사천": 4,
+      "경북 포항": 1,
+      "인천": 4,
+      "충남 서천": 1,
+      "제주 제주시": 4,
+      "충남 홍성": 1,
+      "충남 태안": 1,
+      "전북 군산": 2,
+      "경남 통영": 1,
+      "강원 양양": 1
+    },
+    "operatorOwnedPageOrPriorPilotEvidence": 20,
+    "livePageRecheckUnavailable": 2,
+    "datedOrSeasonalActivityEvidence": 16,
+    "activityUnconfirmed": 4,
+    "phone": 20,
+    "sms": 0,
+    "email": 0,
+    "contactForm": 0,
+    "dm": 0,
+    "publicInfoReuseApproved": {
+      "YES": 0,
+      "NO": 0,
+      "PENDING": 20
+    }
+  },
+  "currentKpi": {
+    "contacted": 0,
+    "responses": 0,
+    "submissions": 0,
+    "approvedOperators": 0,
+    "publishedOffers": 0
+  },
+  "sprintKpiTargets": {
+    "contacts": 20,
+    "positiveResponses": "3-5",
+    "submissions": "2-5",
+    "approvedOperators": "1-3",
+    "publishedOffers": "3-10"
+  },
+  "dailyPlan": [
+    {
+      "day": 1,
+      "queueOrders": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "day": 2,
+      "queueOrders": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "day": 3,
+      "queueOrders": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "day": 4,
+      "queueOrders": [
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "day": 5,
+      "queueOrders": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "additional": "Due follow-ups only"
+    }
+  ],
+  "followUpPolicy": "If no response, one follow-up after 3-5 business days; after two unanswered attempts mark NO_RESPONSE and pause.",
+  "nextGate": "Verify each contact and current operations; obtain explicit supplier permission, submission and admin review before any publication.",
+  "risks": [
+    "Public operator pages do not grant Blue Marina reuse permission; all permissions PENDING.",
+    "Two prior pilot websites could not be reopened during this review; verify before contacting.",
+    "Operator microsites depend on a third-party booking platform; prospect research is not content ingestion.",
+    "Phone numbers are publicly shown as reservation contacts; suitability for partnership outreach must be checked courteously.",
+    "Free-pilot registration cannot be promised until the fee policy is approved.",
+    "Current schedules, prices and remaining seats were not copied or represented as live."
+  ],
+  "artifacts": {
+    "targets": "data/charters/partners/v1/outreach-targets-sprint-001-v1.json",
+    "tracker": "data/charters/partners/v1/partner-outreach-tracker.csv",
+    "queue": "data/charters/partners/v1/outreach-sprint-001.csv",
+    "docs": "docs/BLUE_MARINA_CHARTER_OUTREACH_SPRINT_001_V1.md",
+    "tests": "tests/charters/outreach-sprint-001-v1.test.cjs"
+  },
+  "invariants": {
+    "actualOutreach": 0,
+    "publicInfoReuseApproved": 0,
+    "productionPublish": 0,
+    "dbSupabaseMutation": 0,
+    "staged": 0,
+    "commits": 0,
+    "pushes": 0
+  }
+}

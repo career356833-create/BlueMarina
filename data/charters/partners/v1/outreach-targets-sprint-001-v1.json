@@ -1,0 +1,666 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-09-27",
+  "researchOnly": true,
+  "sourcePolicy": "Individually reviewed operator-owned public pages and prior pilot evidence; no bulk scraping or content reuse approval inferred.",
+  "targets": [
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-01",
+      "operatorName": "삼천포 여의도호",
+      "region": "경남 사천",
+      "officialUrl": "https://yud3004.cafe24.com/",
+      "bookingUrl": "https://yud3004.cafe24.com/",
+      "phone": "010-9811-1006",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "대방동 선착장",
+      "boatName": "여의도호",
+      "knownTargetSpecies": [
+        "주꾸미",
+        "문어"
+      ],
+      "knownOfferEvidence": [
+        "2026년 9월 주꾸미·문어 병행 출조 안내"
+      ],
+      "sourceRefs": [
+        "https://yud3004.cafe24.com/",
+        "data/charters/pilot/v1/source-evidence-v1.json"
+      ],
+      "lastObservedActivity": "2026-09",
+      "priority": "A_PRIORITY",
+      "priorityReason": "자체 홈페이지·전화·출항지·2026 시즌 안내",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "DIRECT_ONBOARDING",
+      "personalizedOpening": "2026 시즌 주꾸미·문어 병행 출조 안내와 대방동 선착장 정보를 보고 연락드렸습니다. 업체가 확인한 상품 정보만 Blue Marina 파일럿에 등록하는 방안을 여쭙고 싶습니다.",
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "자체 사이트의 게시일·일정 최신성 통화 확인"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-02",
+      "operatorName": "보이스피싱호",
+      "region": "경북 포항",
+      "officialUrl": "https://www.sunrise1.co.kr/bf/home",
+      "bookingUrl": "https://www.sunrise1.co.kr/bf/home",
+      "phone": "010-5766-0007",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "강사1리 방파제",
+      "boatName": "보이스피싱호",
+      "knownTargetSpecies": [
+        "무늬오징어"
+      ],
+      "knownOfferEvidence": [
+        "공식 예약 화면의 무늬오징어 팁런 출조"
+      ],
+      "sourceRefs": [
+        "https://www.sunrise1.co.kr/bf/home",
+        "data/charters/pilot/v1/source-evidence-v1.json"
+      ],
+      "lastObservedActivity": "ACTIVITY_UNCONFIRMED",
+      "priority": "A_PRIORITY",
+      "priorityReason": "자체 예약 페이지·전화·항구·상품 명확; 일정 최신성 확인 필요",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": "강사1리 방파제 출항과 무늬오징어 팁런 상품을 공식 예약 페이지에서 확인했습니다. 업체 승인 후 상품 정보를 Blue Marina 파일럿에 소개해도 될지 여쭙고 싶습니다.",
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "예약 페이지의 실제 현재 일정 통화 확인"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-03",
+      "operatorName": "인천 엔젤호",
+      "region": "인천",
+      "officialUrl": "https://angel.sunsang24.com/ship/board",
+      "bookingUrl": "https://angel.sunsang24.com/ship/board",
+      "phone": "010-6653-7447",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "인천 남항",
+      "boatName": "엔젤호",
+      "knownTargetSpecies": [
+        "주꾸미"
+      ],
+      "knownOfferEvidence": [
+        "2026-09-06 엔젤호 주꾸미 조황·예약 문의"
+      ],
+      "sourceRefs": [
+        "https://angel.sunsang24.com/ship/board"
+      ],
+      "lastObservedActivity": "2026-09-06",
+      "priority": "A_PRIORITY",
+      "priorityReason": "업체 게시물에 번호·출항지·2026 활동 확인",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": "인천 남항 엔젤호의 9월 주꾸미 조황과 예약 문의 안내를 확인했습니다. 공개 상품 정보를 업체 승인 아래 Blue Marina 파일럿에 연결해도 될지 여쭙고 싶습니다.",
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "공유 조황 피드에 타 선박 게시물 혼재; 게시물/번호 재확인"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-04",
+      "operatorName": "인천 365낚시",
+      "region": "인천",
+      "officialUrl": "https://365.sunsang24.com/ship/board/back",
+      "bookingUrl": "https://365.sunsang24.com/ship/board/back",
+      "phone": "010-6686-1919",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "광명항",
+      "boatName": null,
+      "knownTargetSpecies": [
+        "주꾸미",
+        "갑오징어"
+      ],
+      "knownOfferEvidence": [
+        "2026년 9월 주꾸미·갑오징어 게시물"
+      ],
+      "sourceRefs": [
+        "https://365.sunsang24.com/ship/board/back"
+      ],
+      "lastObservedActivity": "2026-09",
+      "priority": "A_PRIORITY",
+      "priorityReason": "예약 채널·전화·상품·최근 게시 확인",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": "광명항 출조와 9월 주꾸미·갑오징어 안내를 확인했습니다. 실제 운영 중인 상품만 업체 검토를 거쳐 Blue Marina에 연결하는 파일럿을 제안드리고 싶습니다.",
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "업체명과 선박명 별도 확인; 플랫폼 이용 약관"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-05",
+      "operatorName": "홍원항 한스타호",
+      "region": "충남 서천",
+      "officialUrl": "https://hanstar.sunsang24.com/ship/board",
+      "bookingUrl": "https://hanstar.sunsang24.com/ship/board",
+      "phone": "010-5851-0216",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "홍원항",
+      "boatName": "한스타호",
+      "knownTargetSpecies": [
+        "주꾸미",
+        "갑오징어"
+      ],
+      "knownOfferEvidence": [
+        "2026년 9월 주꾸미·갑오징어 조황 게시물"
+      ],
+      "sourceRefs": [
+        "https://hanstar.sunsang24.com/ship/board"
+      ],
+      "lastObservedActivity": "2026-09",
+      "priority": "A_PRIORITY",
+      "priorityReason": "홍원항·선박·전화·최근 조황 명확",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": "홍원항 한스타호의 9월 주꾸미·갑오징어 출조 게시물을 확인했습니다. 업체가 승인한 상품과 문의 경로만 파일럿에 등록할 수 있을지 여쭙고 싶습니다.",
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "예약 플랫폼 종속; 재사용 승인 필요"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-06",
+      "operatorName": "삼천포 뉴펄스호",
+      "region": "경남 사천",
+      "officialUrl": "https://newpulse.sunsang24.com/ship/board",
+      "bookingUrl": "https://newpulse.sunsang24.com/ship/board",
+      "phone": "010-5811-6935",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "팔포항",
+      "boatName": "뉴펄스호",
+      "knownTargetSpecies": [
+        "주꾸미",
+        "문어"
+      ],
+      "knownOfferEvidence": [
+        "2026년 9월 주꾸미·문어 조황 게시물"
+      ],
+      "sourceRefs": [
+        "https://newpulse.sunsang24.com/ship/board"
+      ],
+      "lastObservedActivity": "2026-09",
+      "priority": "A_PRIORITY",
+      "priorityReason": "팔포항·선박·전화·최근 상품 명확",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": "팔포항 뉴펄스호의 9월 주꾸미·문어 출조 소식을 확인했습니다. 업체가 확인한 정보로 Blue Marina 파일럿 등록을 검토해 주실 수 있을까요?",
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "게시물 최신 일정과 재사용 승인 확인"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-07",
+      "operatorName": "제주갈치TV",
+      "region": "제주 제주시",
+      "officialUrl": "https://jejutv.sunsang24.com/ship/board",
+      "bookingUrl": "https://jejutv.sunsang24.com/ship/board",
+      "phone": "010-6525-7074",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "한림항",
+      "boatName": null,
+      "knownTargetSpecies": [
+        "갈치"
+      ],
+      "knownOfferEvidence": [
+        "2026-09-23 갈치 조황 게시물"
+      ],
+      "sourceRefs": [
+        "https://jejutv.sunsang24.com/ship/board"
+      ],
+      "lastObservedActivity": "2026-09-23",
+      "priority": "A_PRIORITY",
+      "priorityReason": "제주 갈치 최근 활동·전화·예약 페이지 명확",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": "제주갈치TV의 9월 갈치 출조 게시물을 확인했습니다. 기존 예약 경로를 유지하면서 업체 승인 정보만 소개하는 파일럿 참여를 여쭙고 싶습니다.",
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "정확한 선박·출항항 통화 확인; 재사용 승인 필요"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-08",
+      "operatorName": "놀빛바다호",
+      "region": "제주 제주시",
+      "officialUrl": "https://www.noulbit.com/",
+      "bookingUrl": "https://www.noulbit.com/",
+      "phone": "010-3698-7770",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": null,
+      "boatName": "놀빛바다호",
+      "knownTargetSpecies": [
+        "한치",
+        "고등어",
+        "참돔"
+      ],
+      "knownOfferEvidence": [
+        "공식 사이트의 배낚시·야간 낚시 체험 안내"
+      ],
+      "sourceRefs": [
+        "https://www.noulbit.com/",
+        "data/charters/pilot/v1/source-evidence-v1.json"
+      ],
+      "lastObservedActivity": "ACTIVITY_UNCONFIRMED",
+      "priority": "B_PRIORITY",
+      "priorityReason": "자체 사이트·전화·상품 명확; 최근 일정 미확인",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "DIRECT_ONBOARDING",
+      "personalizedOpening": null,
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "출항항과 현재 일정·가격 재확인"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-09",
+      "operatorName": "인천 명낚시",
+      "region": "인천",
+      "officialUrl": "https://mfish.sunsang24.com/ship/board",
+      "bookingUrl": "https://mfish.sunsang24.com/ship/board",
+      "phone": "010-5234-9476",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "만석부두",
+      "boatName": "순영호",
+      "knownTargetSpecies": [
+        "주꾸미"
+      ],
+      "knownOfferEvidence": [
+        "2026년 9월 주꾸미 게시물"
+      ],
+      "sourceRefs": [
+        "https://mfish.sunsang24.com/ship/board"
+      ],
+      "lastObservedActivity": "2026-09",
+      "priority": "B_PRIORITY",
+      "priorityReason": "공식 예약 페이지·전화·선박·상품 확인",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": null,
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "명낚시/순영호 운영 주체 일치 확인"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-10",
+      "operatorName": "남당항 은가비호",
+      "region": "충남 홍성",
+      "officialUrl": "https://eungabi.sunsang24.com/",
+      "bookingUrl": "https://eungabi.sunsang24.com/",
+      "phone": "010-2495-2060",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "남당항",
+      "boatName": "은가비호",
+      "knownTargetSpecies": [
+        "주꾸미",
+        "갑오징어"
+      ],
+      "knownOfferEvidence": [
+        "2026년 9월 조황·예약 일정"
+      ],
+      "sourceRefs": [
+        "https://eungabi.sunsang24.com/"
+      ],
+      "lastObservedActivity": "2026-09",
+      "priority": "B_PRIORITY",
+      "priorityReason": "남당항·전화·최근 일정 확인",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": null,
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "사이트 재사용 제한 문구; 승인 필수"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-11",
+      "operatorName": "안면도 황금백호",
+      "region": "충남 태안",
+      "officialUrl": "https://golden.sunsang24.com/ship/board",
+      "bookingUrl": "https://golden.sunsang24.com/ship/board",
+      "phone": "010-5761-9080",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "내포항",
+      "boatName": "황금백호",
+      "knownTargetSpecies": [
+        "주꾸미",
+        "갑오징어"
+      ],
+      "knownOfferEvidence": [
+        "2026년 9월 주꾸미·갑오징어 게시물"
+      ],
+      "sourceRefs": [
+        "https://golden.sunsang24.com/ship/board"
+      ],
+      "lastObservedActivity": "2026-09",
+      "priority": "B_PRIORITY",
+      "priorityReason": "내포항·전화·상품 확인",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": null,
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "가족 연락처와 공식 예약번호 혼동 금지"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-12",
+      "operatorName": "군산 엄지척호",
+      "region": "전북 군산",
+      "officialUrl": "https://thumb.sunsang24.com/ship/board",
+      "bookingUrl": "https://thumb.sunsang24.com/ship/board",
+      "phone": "010-4000-4493",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "비응항",
+      "boatName": "엄지척호",
+      "knownTargetSpecies": [
+        "주꾸미"
+      ],
+      "knownOfferEvidence": [
+        "2026년 9월 주꾸미 조황 게시물"
+      ],
+      "sourceRefs": [
+        "https://thumb.sunsang24.com/ship/board"
+      ],
+      "lastObservedActivity": "2026-09",
+      "priority": "B_PRIORITY",
+      "priorityReason": "비응항·전화·최근 상품 확인",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": null,
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "업체 재사용 동의 미확보"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-13",
+      "operatorName": "군산 팀루비나2호",
+      "region": "전북 군산",
+      "officialUrl": "https://lubina.sunsang24.com/ship/board",
+      "bookingUrl": "https://lubina.sunsang24.com/ship/board",
+      "phone": "010-5644-0681",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "비응항",
+      "boatName": "팀루비나2호",
+      "knownTargetSpecies": [
+        "부시리",
+        "삼치"
+      ],
+      "knownOfferEvidence": [
+        "2026년 9월 부시리·삼치 게시물"
+      ],
+      "sourceRefs": [
+        "https://lubina.sunsang24.com/ship/board"
+      ],
+      "lastObservedActivity": "2026-09",
+      "priority": "B_PRIORITY",
+      "priorityReason": "비응항·전화·출조 게시 확인",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": null,
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "선단 내 선박별 번호 확인"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-14",
+      "operatorName": "통영 뉴아시아피싱",
+      "region": "경남 통영",
+      "officialUrl": "https://asia.sunsang24.com/ship/board",
+      "bookingUrl": "https://asia.sunsang24.com/ship/board",
+      "phone": "010-3823-5566",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "중화항",
+      "boatName": null,
+      "knownTargetSpecies": [
+        "갈치"
+      ],
+      "knownOfferEvidence": [
+        "2026년 9월 갈치 조황 게시물"
+      ],
+      "sourceRefs": [
+        "https://asia.sunsang24.com/ship/board"
+      ],
+      "lastObservedActivity": "2026-09",
+      "priority": "B_PRIORITY",
+      "priorityReason": "중화항·전화·갈치 상품 확인",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": null,
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "정확한 선박명과 현재 일정 확인"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-15",
+      "operatorName": "송이호 배낚시",
+      "region": "강원 양양",
+      "officialUrl": "https://songyifishing.com/",
+      "bookingUrl": "https://songyifishing.com/",
+      "phone": "010-5367-2477",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": null,
+      "boatName": "송이호",
+      "knownTargetSpecies": [
+        "참가자미",
+        "대구",
+        "문어"
+      ],
+      "knownOfferEvidence": [
+        "기존 Pilot의 공식 가격·예약 안내 연구 기록"
+      ],
+      "sourceRefs": [
+        "https://songyifishing.com/",
+        "data/charters/pilot/v1/source-evidence-v1.json"
+      ],
+      "lastObservedActivity": "ACTIVITY_UNCONFIRMED",
+      "priority": "C_PRIORITY",
+      "priorityReason": "기존 공식 근거·전화 있으나 현재 사이트 재확인 실패",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "DIRECT_ONBOARDING",
+      "personalizedOpening": null,
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "2026-09-27 사이트 재접속 실패; 연락 전 번호·영업 상태 재확인"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-16",
+      "operatorName": "제주 에이스호",
+      "region": "제주 제주시",
+      "officialUrl": "https://aceho.co.kr/",
+      "bookingUrl": "https://aceho.co.kr/",
+      "phone": "010-3548-3472",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": null,
+      "boatName": "에이스호",
+      "knownTargetSpecies": [
+        "갈치",
+        "한치",
+        "갑오징어"
+      ],
+      "knownOfferEvidence": [
+        "기존 Pilot의 공식 갈치·한치·갑오징어 안내 연구 기록"
+      ],
+      "sourceRefs": [
+        "https://aceho.co.kr/",
+        "data/charters/pilot/v1/source-evidence-v1.json"
+      ],
+      "lastObservedActivity": "ACTIVITY_UNCONFIRMED",
+      "priority": "C_PRIORITY",
+      "priorityReason": "기존 공식 근거·전화 있으나 현재 사이트 재확인 실패",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "DIRECT_ONBOARDING",
+      "personalizedOpening": null,
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "2026-09-27 사이트 재접속 실패; 연락 전 번호·영업 상태 재확인"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-17",
+      "operatorName": "인천 팀에프호",
+      "region": "인천",
+      "officialUrl": "https://teamf.sunsang24.com/ship/board",
+      "bookingUrl": "https://teamf.sunsang24.com/ship/board",
+      "phone": "010-5102-9938",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "연안부두",
+      "boatName": "팀에프호",
+      "knownTargetSpecies": [
+        "주꾸미"
+      ],
+      "knownOfferEvidence": [
+        "2026년 9월 주꾸미 게시물"
+      ],
+      "sourceRefs": [
+        "https://teamf.sunsang24.com/ship/board"
+      ],
+      "lastObservedActivity": "2026-09",
+      "priority": "C_PRIORITY",
+      "priorityReason": "예약 페이지·전화 있으나 별도 운영자 검증 필요",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": null,
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "공유 플랫폼 운영 주체 확인"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-18",
+      "operatorName": "삼천포 박프로(흑진호)",
+      "region": "경남 사천",
+      "officialUrl": "https://3004parkpro.sunsang24.com/ship/schedule_fleet",
+      "bookingUrl": "https://3004parkpro.sunsang24.com/ship/schedule_fleet",
+      "phone": "010-4948-2612",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": null,
+      "boatName": "흑진호",
+      "knownTargetSpecies": [
+        "문어"
+      ],
+      "knownOfferEvidence": [
+        "2026년 9월 선단 일정의 문어 출조"
+      ],
+      "sourceRefs": [
+        "https://3004parkpro.sunsang24.com/ship/schedule_fleet"
+      ],
+      "lastObservedActivity": "2026-09",
+      "priority": "C_PRIORITY",
+      "priorityReason": "예약 일정·전화 있으나 선단/선박 관계 확인 필요",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": null,
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "박프로와 흑진호 동일 운영 주체 여부 확인"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-19",
+      "operatorName": "삼천포 한사리피싱",
+      "region": "경남 사천",
+      "officialUrl": "https://hansari.sunsang24.com/ship/board",
+      "bookingUrl": "https://hansari.sunsang24.com/ship/board",
+      "phone": "010-9341-8119",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "신향항",
+      "boatName": null,
+      "knownTargetSpecies": [
+        "갈치"
+      ],
+      "knownOfferEvidence": [
+        "2026년 8월 갈치 게시물"
+      ],
+      "sourceRefs": [
+        "https://hansari.sunsang24.com/ship/board"
+      ],
+      "lastObservedActivity": "2026-08",
+      "priority": "C_PRIORITY",
+      "priorityReason": "출항지·상품 게시 있지만 번호 표시 불일치 가능",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": null,
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "2026년 8월 이후 최신 활동 미확인; 재사용 승인 필요"
+      ]
+    },
+    {
+      "partnerId": "BM-CHARTER-SPRINT-001-20",
+      "operatorName": "제주 갈치호",
+      "region": "제주 제주시",
+      "officialUrl": "https://galchiho.sunsang24.com/ship/board",
+      "bookingUrl": "https://galchiho.sunsang24.com/ship/board",
+      "phone": "010-8417-8255",
+      "email": null,
+      "contactFormUrl": null,
+      "departurePort": "도두항",
+      "boatName": "갈치호",
+      "knownTargetSpecies": [
+        "갈치"
+      ],
+      "knownOfferEvidence": [
+        "2026년 9월 갈치 조황 게시물"
+      ],
+      "sourceRefs": [
+        "https://galchiho.sunsang24.com/ship/board"
+      ],
+      "lastObservedActivity": "2026-09",
+      "priority": "C_PRIORITY",
+      "priorityReason": "도두항·전화·상품 있으나 게시물 기반",
+      "preferredContactMethod": "PHONE",
+      "recommendedSubmissionMethod": "PUBLIC_INFO_WITH_PERMISSION",
+      "personalizedOpening": null,
+      "outreachStatus": "NOT_CONTACTED",
+      "publicInfoReuseApproved": "PENDING",
+      "riskNotes": [
+        "현재 예약/재사용 승인 확인"
+      ]
+    }
+  ]
+}
