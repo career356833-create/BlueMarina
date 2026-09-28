@@ -70,6 +70,8 @@ test("email login remains available and Account backend stays fail-closed", () =
   const server = read("src/lib/account/server.ts");
   assert.match(login, /auth\.signInWithPassword/);
   assert.match(login, /auth\.signUp/);
+  assert.match(login, /NEXT_PUBLIC_KAKAO_OAUTH_ENABLED === "true"/);
+  assert.match(login, /disabled=\{pending \|\| !kakaoReady\}/);
   assert.match(server, /ACCOUNT_BACKEND_ENABLED === "true"/);
   assert.match(server, /auth\.getUser\(token\)/);
 });

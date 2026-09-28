@@ -8,6 +8,9 @@
     "appId": "1525889",
     "providerEnabled": true,
     "productionLoginVerified": false,
+    "productionError": "KOE205_UNCONFIGURED_SCOPES",
+    "requestedScopes": ["account_email", "profile_image", "profile_nickname"],
+    "publicButtonEnabled": false,
     "emailScopeAvailable": false,
     "allowUsersWithoutEmail": true,
     "oauthCallbackRegistered": true,
@@ -15,20 +18,24 @@
   },
   "google": {
     "providerEnabled": true,
-    "productionLoginVerified": false,
+    "productionLoginVerified": true,
+    "profileAutoCreated": true,
+    "sessionRestoreVerified": true,
+    "logoutAndReloginVerified": true,
     "cloudConsoleMfaBlocked": false,
     "cloudProjectId": "blue-marina-auth",
     "consentSupportEmailPending": false,
     "userDataPolicyConsentPending": false,
-    "oauthAudience": "EXTERNAL_TESTING",
+    "oauthAudience": "EXTERNAL_PRODUCTION",
     "oauthClientCreationApprovalPending": false,
     "oauthClientCreated": true,
     "testUsers": 1,
-    "publicAudienceEnabled": false
+    "publicAudienceEnabled": true
   },
   "accountBackendFlag": "OFF",
+  "vercelServiceRoleKeyUpdated": true,
   "productionProfileAndSavedApiVerified": false,
-  "productionDeployCompleted": false,
+  "productionDeployCompleted": true,
   "secretsRecorded": false,
   "unrelatedChangesIncluded": false
 }
