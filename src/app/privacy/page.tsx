@@ -1,9 +1,10 @@
 import { AppFrame } from "@/components/boat/AppFrame";
+import { PageBackButton } from "@/components/boat/InformationNavigation";
 
 const contact = "chung356833@gmail.com";
 
 export default function PrivacyPage() {
-  return <AppFrame><article className="mx-auto max-w-3xl rounded-3xl border border-[#29465D] bg-[#071827] p-6 text-[#D7E4F6] sm:p-9 lg:mr-6 lg:ml-auto">
+  return <AppFrame><div className="mx-auto max-w-3xl lg:mr-6 lg:ml-auto"><PageBackButton /><article className="rounded-3xl border border-[#29465D] bg-[#071827] p-6 text-[#D7E4F6] sm:p-9">
     <h1 className="text-3xl font-black text-white">개인정보처리방침</h1>
     <p className="mt-3 text-sm leading-7">주식회사 로어아카이브는 Blue Marina의 계정과 서비스 제공에 필요한 개인정보를 아래와 같이 처리합니다. 시행일: 2026년 9월 28일.</p>
 
@@ -27,5 +28,5 @@ export default function PrivacyPage() {
     <section className="mt-8"><h2 className="text-xl font-black text-white">이용자 권리와 문의</h2>
       <p className="mt-3 text-sm leading-7">계정의 프로필은 계정 화면에서 확인·수정할 수 있습니다. 개인정보 열람·정정·삭제와 계정 탈퇴는 <a className="font-black text-[#79C9D6] underline" href={`mailto:${contact}`}>{contact}</a>로 요청할 수 있습니다. 요청자의 계정 소유 여부를 확인한 뒤 처리합니다.</p>
     </section>
-  </article></AppFrame>;
+  </article></div></AppFrame>;
 }

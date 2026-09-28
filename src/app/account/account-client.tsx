@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
-import { Bookmark, Fish, History, LogOut, MapPin, Pencil, Ship, ShoppingBag, UserRound } from "lucide-react";
+import { ArrowLeft, Bookmark, Fish, History, LogOut, MapPin, Pencil, Ship, ShoppingBag, UserRound } from "lucide-react";
 import { createClient, hasSupabaseEnv } from "@/lib/supabase/client";
 import { ACCOUNT_RECENT_STORAGE_KEY, parseRecentItems, type RecentItem } from "@/lib/account/recent";
 import { socialProviderLabel } from "@/lib/account/social-auth";
@@ -91,6 +91,7 @@ export function AccountClient({ section, previewAuthenticated = false }: { secti
 
 function AccountFrame({ section, children, onSignOut }: { section: Section; children: React.ReactNode; onSignOut?: () => void }) {
   return <div className="mx-auto w-full max-w-5xl py-4 sm:py-8">
+    <Link href={section === "overview" ? "/" : "/account"} className="mb-5 inline-flex min-h-11 items-center gap-2 rounded-full border border-[#29465D] bg-[#071827] px-4 text-sm font-black text-[#D7E4F6] hover:border-[#79C9D6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#79C9D6]"><ArrowLeft size={17} aria-hidden="true" />{section === "overview" ? "홈으로" : "계정 홈으로"}</Link>
     <header className="rounded-[28px] border border-[#1F3A50] bg-[linear-gradient(135deg,#102C46,#071827)] p-6 sm:p-8"><p className="text-xs font-black tracking-[.2em] text-[#79C9D6]">BLUE MARINA ACCOUNT</p><div className="mt-3 flex flex-wrap items-end justify-between gap-4"><div><h1 className="text-3xl font-black sm:text-5xl">나의 바다 활동</h1><p className="mt-3 max-w-2xl text-sm font-semibold leading-6 text-[#B8CBDD]">저장한 포인트와 어종, 내 등록 활동, 최근 본 콘텐츠를 계정 기준으로 관리합니다.</p></div>{onSignOut ? <button onClick={onSignOut} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[#29465D] px-4 text-sm font-black"><LogOut size={16}/>로그아웃</button> : null}</div></header>
     <nav aria-label="계정 메뉴" className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4">{tabs.map(([id, href, label, Icon]) => <Link key={id} href={href} aria-current={section === id ? "page" : undefined} className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl border px-3 text-sm font-black ${section === id ? "border-[#79C9D6] bg-[#123347] text-white" : "border-[#1F3A50] bg-[#071827] text-[#9FB3C8]"}`}><Icon size={17}/>{label}</Link>)}</nav>
     <div className="mt-5">{children}</div>

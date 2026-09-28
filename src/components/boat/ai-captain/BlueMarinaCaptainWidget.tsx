@@ -78,7 +78,7 @@ export function BlueMarinaCaptainWidget() {
   const pauseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const followModeRef = useRef(false);
   const isFishSession = pathname?.startsWith("/fish") ?? false;
-  const usesContentSafeArea = pathname === "/today-sea" || (pathname?.startsWith("/fishing-spots") ?? false);
+  const usesContentSafeArea = pathname === "/today-sea" || ["/contact", "/privacy", "/terms"].includes(pathname ?? "") || (pathname?.startsWith("/account") ?? false) || (pathname?.startsWith("/fishing-spots") ?? false);
   const panelTitle = isFishSession ? "어종 도감 안내" : `${defaultCaptainName} · ${defaultCaptainSpecies}`;
   const paused = usesContentSafeArea || isOpen || isHovered || (reducedMotion && !isFollowMode);
 

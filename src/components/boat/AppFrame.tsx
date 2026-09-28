@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Anchor, Bell, Menu, UserRound } from "lucide-react";
 import { BottomNav } from "@/components/boat/BottomNav";
 import { PlatformDesktopNav } from "@/components/platform/PlatformDesktopNav";
+import { InformationFooterLinks } from "@/components/boat/InformationNavigation";
 
 export function AppFrame({ children }: PropsWithChildren) {
   return (
@@ -53,15 +54,7 @@ export function AppFrame({ children }: PropsWithChildren) {
 
       <footer className="mx-auto hidden max-w-[1440px] items-center justify-center gap-4 px-4 pb-8 text-xs font-bold text-[#6E8299] lg:flex">
         <span>운영: Blue Marina</span>
-        <Link href="/privacy" className="hover:text-[#2E8BFF]">
-          개인정보처리방침
-        </Link>
-        <Link href="/terms" className="hover:text-[#2E8BFF]">
-          이용약관
-        </Link>
-        <Link href="/contact" className="hover:text-[#2E8BFF]">
-          문의하기
-        </Link>
+        <InformationFooterLinks />
       </footer>
 
       <Suspense fallback={null}>
