@@ -110,18 +110,33 @@ test("home renders the shared service contract without restoring long feature se
   assert.doesNotMatch(home, /ExploreSeaSection|FishingExperienceSection|FishEncyclopediaSection|TodaysSeaExperience/);
 });
 
-test("home hero uses live Market route through shared navigation", () => {
-  const hero = read("src/components/boat/home/MarineVideoHero.tsx");
-  assert.match(hero, /desktopNavigation/);
-  assert.doesNotMatch(hero, /coming-soon/);
+test("home brand header remains fixed across all routes", () => {
+  const layout = read("src/app/layout.tsx");
+  const header = read("src/components/platform/GlobalHeader.tsx");
+  assert.match(layout, /<GlobalHeader\s*\/>/);
+  assert.match(layout, /pt-20/);
+  assert.match(header, /fixed inset-x-0 top-0/);
+  assert.match(header, /<PlatformDesktopNav\s*\/>/);
+  assert.match(header, /aria-label="이전 화면으로"/);
+  assert.match(header, /router\.back\(\)/);
+  assert.match(header, /href="\/account"/);
+  assert.doesNotMatch(read("src/components/boat/home/MarineVideoHero.tsx"), /<header/);
+  assert.doesNotMatch(read("src/components/boat/AppFrame.tsx"), /<header/);
 });
 
-test("AppFrame delegates desktop navigation and exposes active semantics", () => {
-  assert.match(read("src/components/boat/AppFrame.tsx"), /<PlatformDesktopNav\s*\/>/);
-  assert.match(read("src/components/boat/home/ExploreSeaSection.tsx"), /<PlatformDesktopNav\s*\/>/);
+test("shared desktop navigation exposes active semantics", () => {
   const nav = read("src/components/platform/PlatformDesktopNav.tsx");
+  assert.match(nav, /desktopNavigation/);
   assert.match(nav, /aria-current/);
   assert.match(nav, /focus-visible/);
+  assert.doesNotMatch(read("src/components/boat/home/ExploreSeaSection.tsx"), /<header/);
+  assert.doesNotMatch(read("src/components/boat/home/TodaysSeaExperience.tsx"), /<header/);
+});
+
+test("sea map and navigation fit below the fixed header", () => {
+  assert.match(read("src/app/sea/page.tsx"), /h-\[calc\(100svh-5rem\)\]/);
+  assert.match(read("src/components/sea/MapView.tsx"), /relative h-full overflow-hidden/);
+  assert.match(read("src/components/boat/navigation/MarineNavigation.tsx"), /h-\[calc\(100svh-5rem\)\]/);
 });
 
 test("BottomNav uses shared nested matching and keeps safe area", () => {

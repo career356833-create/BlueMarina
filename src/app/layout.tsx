@@ -4,6 +4,7 @@ import Script from "next/script";
 import { BlueMarinaCaptainWidget } from "@/components/boat/ai-captain/BlueMarinaCaptainWidget";
 import { DevAuditFloatingButton } from "@/components/dev-audit/DevAuditFloatingButton";
 import { PwaRegister } from "@/components/PwaRegister";
+import { GlobalHeader } from "@/components/platform/GlobalHeader";
 import { devAuditEnabled } from "@/lib/dev-audit/audit-data";
 import { getPublicSiteUrl } from "@/lib/release/site-url";
 import "./globals.css";
@@ -50,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={inter.className}>
+      <body className={`${inter.className} pt-20`}>
         {process.env.NODE_ENV === "development" ? (
           <Script id="blue-marina-dev-sw-reset" strategy="beforeInteractive">
             {`if ("serviceWorker" in navigator) {
@@ -65,6 +66,7 @@ export default function RootLayout({
           </Script>
         ) : null}
         <PwaRegister />
+        <GlobalHeader />
         {children}
         <BlueMarinaCaptainWidget />
         {devAuditEnabled ? <DevAuditFloatingButton /> : null}

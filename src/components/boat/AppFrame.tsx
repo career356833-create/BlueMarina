@@ -1,54 +1,11 @@
 import { Suspense, type PropsWithChildren } from "react";
-import Link from "next/link";
-import { Anchor, Bell, Menu, UserRound } from "lucide-react";
 import { BottomNav } from "@/components/boat/BottomNav";
-import { PlatformDesktopNav } from "@/components/platform/PlatformDesktopNav";
 import { InformationFooterLinks } from "@/components/boat/InformationNavigation";
 
 export function AppFrame({ children }: PropsWithChildren) {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#050F19] text-white">
-      <header className="sticky top-0 z-40 border-b border-[#1F3A50] bg-[#071827]/96 text-white backdrop-blur">
-        <div className="mx-auto flex h-16 w-full max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex min-w-0 items-center gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#2E8BFF] text-white">
-              <Anchor size={23} />
-            </div>
-            <div className="min-w-0">
-              <p className="truncate text-lg font-black leading-tight text-white">Blue Marina</p>
-              <p className="truncate text-xs font-semibold text-[#9FB3C8]">바다 현장형 PWA</p>
-            </div>
-          </Link>
-
-          <PlatformDesktopNav />
-
-          <div className="flex items-center gap-2">
-            <Link
-              href="/account"
-              className="flex h-10 w-10 items-center justify-center rounded-full text-[#D7E4F6] transition hover:bg-white/8"
-              aria-label="내 계정"
-            >
-              <UserRound size={20} />
-            </Link>
-            <button
-              type="button"
-              className="hidden h-10 w-10 items-center justify-center rounded-full text-[#D7E4F6] transition hover:bg-white/8 sm:flex"
-              aria-label="알림"
-            >
-              <Bell size={20} />
-            </button>
-            <button
-              type="button"
-              className="flex h-10 w-10 items-center justify-center rounded-full text-[#D7E4F6] transition hover:bg-white/8 lg:hidden"
-              aria-label="메뉴"
-            >
-              <Menu size={24} />
-            </button>
-          </div>
-        </div>
-      </header>
-
-      <main className="mx-auto min-h-[calc(100vh-4rem)] w-full max-w-[1440px] overflow-x-hidden px-4 pb-28 pt-4 sm:px-6 lg:px-8 lg:pb-10 lg:pt-8">
+    <div className="min-h-[calc(100svh-5rem)] overflow-x-hidden bg-[#050F19] text-white">
+      <main className="mx-auto min-h-[calc(100vh-5rem)] w-full max-w-[1440px] overflow-x-hidden px-4 pb-28 pt-4 sm:px-6 lg:px-8 lg:pb-10 lg:pt-8">
         {children}
       </main>
 

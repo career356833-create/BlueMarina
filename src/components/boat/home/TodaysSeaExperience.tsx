@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Anchor, ArrowRight, Compass } from "lucide-react";
+import { Anchor, ArrowRight } from "lucide-react";
 
 export const TODAYS_SEA_VIDEO_PATH = "/media/blue-marina-todays-sea.mp4";
 
@@ -47,14 +47,10 @@ function TripBriefingCard() {
   );
 }
 
-type TodaysSeaExperienceProps = {
-  showHeader?: boolean;
-};
-
-export function TodaysSeaExperience({ showHeader = true }: TodaysSeaExperienceProps) {
+export function TodaysSeaExperience() {
   return (
     <section
-      className="relative isolate flex min-h-[100svh] overflow-hidden bg-[#030b15] text-white"
+      className="relative isolate flex min-h-[calc(100svh-5rem)] overflow-hidden bg-[#030b15] text-white"
       aria-labelledby="todays-sea-title"
     >
       <div className="absolute inset-0 -z-30 bg-[#030b15]" />
@@ -72,29 +68,8 @@ export function TodaysSeaExperience({ showHeader = true }: TodaysSeaExperiencePr
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(2,10,20,0.96)_0%,rgba(3,13,25,0.8)_36%,rgba(3,13,25,0.38)_70%,rgba(3,10,18,0.52)_100%)]" />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(2,8,16,0.66)_0%,transparent_30%,rgba(2,8,16,0.32)_58%,rgba(2,8,16,0.94)_100%)]" />
 
-      {showHeader ? (
-        <header className="absolute inset-x-0 top-0 z-20 border-b border-white/10 bg-[#050f19]/20 backdrop-blur-sm">
-          <div className="mx-auto flex h-20 w-full max-w-[1540px] items-center justify-between px-5 sm:px-8 lg:px-12">
-            <Link href="/" className="flex items-center gap-3 text-[#f3ead9]">
-              <Anchor size={25} strokeWidth={1.35} className="text-[#d5b477]" aria-hidden="true" />
-              <div>
-                <p className="font-serif text-[14px] tracking-[0.28em] sm:text-base">BLUE MARINA</p>
-                <p className="mt-1 text-[9px] tracking-[0.2em] text-white/45">TODAY&apos;S SEA</p>
-              </div>
-            </Link>
-            <Link
-              href="/sea"
-              className="inline-flex min-h-10 items-center gap-2 border border-white/20 px-3 text-xs font-semibold text-white/75 transition hover:border-[#d5b477] hover:text-[#f3d49a] sm:px-4"
-            >
-              <Compass size={16} aria-hidden="true" />
-              바다 탐색
-            </Link>
-          </div>
-        </header>
-      ) : null}
-
       <div
-        className={`relative z-10 mx-auto flex w-full max-w-[1540px] flex-1 flex-col justify-center px-5 pb-24 sm:px-8 sm:pb-28 lg:px-12 lg:pb-12 ${showHeader ? "pt-28 lg:pt-32" : "pt-20 lg:pt-24"}`}
+        className="relative z-10 mx-auto flex w-full max-w-[1540px] flex-1 flex-col justify-center px-5 pb-24 pt-28 sm:px-8 sm:pb-28 lg:px-12 lg:pb-12 lg:pt-32"
       >
         <div className="grid items-end gap-6 xl:grid-cols-[1fr_0.8fr] xl:gap-12">
           <div className="pb-2 xl:pr-12">

@@ -804,7 +804,7 @@ export function SeaMapView() {
   }
 
   return (
-    <div className="relative h-[100dvh] overflow-hidden bg-[#050F19] text-white">
+    <div className="relative h-full overflow-hidden bg-[#050F19] text-white">
       <div className="absolute inset-0">
         <div
           ref={mapContainerRef}

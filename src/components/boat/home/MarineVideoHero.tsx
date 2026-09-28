@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { Anchor, ArrowDown, ArrowRight, Compass } from "lucide-react";
-import { desktopNavigation } from "@/lib/platform/navigation";
+import { ArrowDown, ArrowRight } from "lucide-react";
 
 export const MARINE_HERO_VIDEO_PATH = "/media/blue-marina-marina-hero.mp4";
 
 export function MarineVideoHero() {
   return (
     <section
-      className="relative isolate flex min-h-[100svh] overflow-hidden bg-[#050f19] text-[#f4f0e8] lg:min-h-[850px]"
+      className="relative isolate flex min-h-[calc(100svh-5rem)] overflow-hidden bg-[#050f19] text-[#f4f0e8] lg:min-h-[770px]"
       aria-labelledby="marine-hero-title"
     >
       <div className="absolute inset-0 -z-30 bg-[#050f19]" />
@@ -24,39 +23,6 @@ export function MarineVideoHero() {
       </video>
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(5,15,25,0.94)_0%,rgba(5,15,25,0.68)_42%,rgba(5,15,25,0.2)_78%,rgba(5,15,25,0.12)_100%)]" />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(3,10,18,0.48)_0%,transparent_34%,rgba(3,10,18,0.18)_60%,rgba(3,10,18,0.84)_100%)]" />
-
-      <header className="absolute inset-x-0 top-0 z-20 border-b border-white/10 bg-[#050f19]/10 backdrop-blur-[2px]">
-        <div className="mx-auto flex h-20 w-full max-w-[1540px] items-center justify-between px-5 sm:px-8 lg:px-12">
-          <Link href="/" className="flex items-center gap-3 text-[#f3ead9]">
-            <Anchor size={27} strokeWidth={1.35} className="text-[#d5b477]" aria-hidden="true" />
-            <div>
-              <p className="font-serif text-[15px] tracking-[0.28em] sm:text-base">BLUE MARINA</p>
-              <p className="mt-1 text-[9px] tracking-[0.2em] text-white/45">MARINE · FISHING · NAVIGATION</p>
-            </div>
-          </Link>
-
-          <nav className="hidden items-center gap-9 lg:flex" aria-label="주요 메뉴">
-            {desktopNavigation.map((item) => (
-              <Link
-                key={item.id}
-                href={item.href}
-                aria-current={item.id === "home" ? "page" : undefined}
-                className={`text-sm font-medium tracking-[0.08em] transition hover:text-[#f3d49a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d5b477] ${item.id === "home" ? "text-[#f3d49a]" : "text-white/70"}`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-
-          <Link
-            href="/sea"
-            className="inline-flex h-10 w-10 items-center justify-center border border-white/20 text-white/80 backdrop-blur-sm lg:hidden"
-            aria-label="바다 지도"
-          >
-            <Compass size={19} aria-hidden="true" />
-          </Link>
-        </div>
-      </header>
 
       <div className="mx-auto flex w-full max-w-[1540px] flex-1 items-center px-5 pb-24 pt-28 sm:px-8 sm:pt-32 lg:px-12">
         <div className="max-w-3xl">

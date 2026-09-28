@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Anchor, ArrowDown, ArrowRight, MapPin, Navigation } from "lucide-react";
-import { PlatformDesktopNav } from "@/components/platform/PlatformDesktopNav";
 
 const marinePlaces = [
   {
@@ -52,7 +51,7 @@ export function ExploreSeaSection({
 
   return (
     <section
-      className="relative isolate min-h-[100svh] overflow-hidden bg-[#050f19] text-[#f4f0e8] lg:min-h-[850px]"
+      className="relative isolate min-h-[calc(100svh-5rem)] overflow-hidden bg-[#050f19] text-[#f4f0e8] lg:min-h-[770px]"
       aria-labelledby="explore-sea-title"
     >
       <video
@@ -68,18 +67,7 @@ export function ExploreSeaSection({
       </video>
       <div className="absolute inset-0 -z-20 bg-[#050f19]/45" />
       <div className="absolute inset-0 -z-10 opacity-95 [background-image:radial-gradient(circle_at_73%_45%,rgba(7,24,39,0.12),rgba(5,15,25,0.46)_58%),linear-gradient(90deg,rgba(5,15,25,0.92)_0%,rgba(5,15,25,0.65)_40%,rgba(5,15,25,0.28)_76%,rgba(5,15,25,0.5)_100%)]" />
-      <header className="absolute inset-x-0 top-0 z-20 border-b border-white/10 bg-[#050f19]/35 backdrop-blur-sm">
-        <div className="mx-auto flex h-20 w-full max-w-[1540px] items-center justify-between px-5 sm:px-8 lg:px-12">
-          <Link href="/" className="flex items-center gap-3 text-[#f3ead9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d5b477]">
-            <Anchor size={25} strokeWidth={1.35} className="text-[#d5b477]" aria-hidden="true" />
-            <span className="font-serif text-sm tracking-[0.24em]">BLUE MARINA</span>
-          </Link>
-          <PlatformDesktopNav />
-          <a href="#live-marine-map" className="inline-flex min-h-11 items-center text-xs font-semibold text-[#e4c389] lg:hidden">지도 보기</a>
-        </div>
-      </header>
-
-      <div className="mx-auto grid min-h-[100svh] w-full max-w-[1540px] items-center gap-16 px-5 py-24 sm:px-8 lg:min-h-[850px] lg:grid-cols-[0.72fr_1.28fr] lg:gap-20 lg:px-12 lg:py-28">
+      <div className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-[1540px] items-center gap-16 px-5 py-24 sm:px-8 lg:min-h-[770px] lg:grid-cols-[0.72fr_1.28fr] lg:gap-20 lg:px-12 lg:py-28">
         <div className="relative z-10 max-w-xl lg:pb-10">
           <div className="flex items-center gap-4 text-[#d5b477]">
             <span className="h-px w-12 bg-current" />
