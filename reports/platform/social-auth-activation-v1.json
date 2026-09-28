@@ -32,9 +32,16 @@
     "testUsers": 1,
     "publicAudienceEnabled": true
   },
-  "accountBackendFlag": "OFF",
+  "accountBackendFlag": "ON",
   "vercelServiceRoleKeyUpdated": true,
-  "productionProfileAndSavedApiVerified": false,
+  "productionProfileAndSavedApiVerified": true,
+  "productionAccountApiUnauthenticatedStatus": 401,
+  "productionProfileGetUpdatePersistenceVerified": true,
+  "productionSavedCreateListDeleteVerified": true,
+  "productionTestDataRestored": true,
+  "productionAuthUsers": 2,
+  "productionProfiles": 2,
+  "productionSavedItemsAfterQa": 0,
   "productionDeployCompleted": true,
   "secretsRecorded": false,
   "unrelatedChangesIncluded": false
