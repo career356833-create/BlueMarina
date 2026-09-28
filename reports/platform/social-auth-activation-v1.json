@@ -1,0 +1,34 @@
+{
+  "program": "BLUE_MARINA_SOCIAL_AUTH_ACTIVATION_V1",
+  "decision": "SOCIAL_AUTH_ACTIVATION_PARTIAL",
+  "supabaseProjectRef": "mlfvpaikfpjrgrhwlrjn",
+  "productionOrigin": "https://blue-marina.vercel.app",
+  "applicationCallbackAllowlisted": true,
+  "kakao": {
+    "appId": "1525889",
+    "providerEnabled": true,
+    "productionLoginVerified": false,
+    "emailScopeAvailable": false,
+    "allowUsersWithoutEmail": true,
+    "oauthCallbackRegistered": true,
+    "externalUnlinkWebhookConfigured": false
+  },
+  "google": {
+    "providerEnabled": true,
+    "productionLoginVerified": false,
+    "cloudConsoleMfaBlocked": false,
+    "cloudProjectId": "blue-marina-auth",
+    "consentSupportEmailPending": false,
+    "userDataPolicyConsentPending": false,
+    "oauthAudience": "EXTERNAL_TESTING",
+    "oauthClientCreationApprovalPending": false,
+    "oauthClientCreated": true,
+    "testUsers": 1,
+    "publicAudienceEnabled": false
+  },
+  "accountBackendFlag": "OFF",
+  "productionProfileAndSavedApiVerified": false,
+  "productionDeployCompleted": false,
+  "secretsRecorded": false,
+  "unrelatedChangesIncluded": false
+}

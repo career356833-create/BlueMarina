@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Bookmark, Fish, History, LogOut, MapPin, Pencil, Ship, ShoppingBag, UserRound } from "lucide-react";
 import { createClient, hasSupabaseEnv } from "@/lib/supabase/client";
 import { ACCOUNT_RECENT_STORAGE_KEY, parseRecentItems, type RecentItem } from "@/lib/account/recent";
+import { socialProviderLabel } from "@/lib/account/social-auth";
 import type { AccountReadModel, SavedItem } from "@/lib/account/types";
 
 type Section = "overview" | "profile" | "saved" | "activity";
@@ -23,6 +24,7 @@ const inputClass = "min-h-11 w-full rounded-xl border border-[#29465D] bg-[#0A20
 export function AccountClient({ section, previewAuthenticated = false }: { section: Section; previewAuthenticated?: boolean }) {
   const [authState, setAuthState] = useState<AuthState>("loading");
   const [token, setToken] = useState<string | null>(null);
+  const [provider, setProvider] = useState<string | null>(null);
   const [model, setModel] = useState<AccountReadModel | null>(null);
   const [backendMessage, setBackendMessage] = useState<string | null>(null);
   const [recent, setRecent] = useState<RecentItem[]>([]);
@@ -53,13 +55,14 @@ export function AccountClient({ section, previewAuthenticated = false }: { secti
     client.auth.getSession().then(({ data, error }) => {
       if (error) { setAuthState("expired"); return; }
       if (!data.session) { setAuthState("signed-out"); return; }
-      setAuthState("signed-in"); setToken(data.session.access_token); void load(data.session.access_token);
+      setAuthState("signed-in"); setToken(data.session.access_token); setProvider(socialProviderLabel(data.session.user.app_metadata?.provider)); void load(data.session.access_token);
     });
     const { data: listener } = client.auth.onAuthStateChange((event, session) => {
-      if (event === "SIGNED_OUT" || !session) { setAuthState("signed-out"); setToken(null); setModel(null); }
+      if (event === "SIGNED_OUT" || !session) { setAuthState("signed-out"); setToken(null); setProvider(null); setModel(null); }
       else if (event === "SIGNED_IN" || event === "TOKEN_REFRESHED") {
         setAuthState("signed-in");
         setToken(session.access_token);
+        setProvider(socialProviderLabel(session.user.app_metadata?.provider));
         // Keep network work outside the Auth callback to avoid locking session refresh.
         setTimeout(() => void load(session.access_token), 0);
       }
@@ -70,13 +73,14 @@ export function AccountClient({ section, previewAuthenticated = false }: { secti
   async function signOut() {
     const client = createClient();
     await client?.auth.signOut();
-    setModel(null); setToken(null); setAuthState("signed-out");
+    setModel(null); setToken(null); setAuthState("signed-out"); setProvider(null);
   }
 
   if (authState === "loading") return <AccountFrame section={section}><StateCard title="계정 확인 중" body="현재 로그인 상태를 안전하게 확인하고 있습니다." /></AccountFrame>;
   if (authState === "signed-out" || authState === "expired") return <AccountFrame section={section}><StateCard title={authState === "expired" ? "세션이 만료되었습니다" : "로그인이 필요합니다"} body={hasSupabaseEnv() ? "Blue Marina 계정으로 로그인하면 저장한 포인트와 내 활동을 한곳에서 확인할 수 있습니다." : "현재 환경에 인증 설정이 없어 로그인할 수 없습니다."}><Link href="/account/login" className="mt-5 inline-flex min-h-11 items-center rounded-full bg-[#2E8BFF] px-5 text-sm font-black text-white">로그인</Link></StateCard></AccountFrame>;
 
   return <AccountFrame section={section} onSignOut={signOut}>
+    {provider ? <p className="mb-3 text-xs font-bold text-[#9FB3C8]">로그인 방식: {provider}</p> : null}
     {backendMessage ? <div role="status" className="mb-5 rounded-2xl border border-amber-300/30 bg-amber-300/8 p-4 text-sm font-bold text-amber-100">{backendMessage}</div> : null}
     {section === "profile" ? <ProfilePanel model={model} token={token} onReload={load} /> : null}
     {section === "saved" ? <SavedPanel items={model?.savedItems ?? []} token={token} onReload={load} /> : null}
