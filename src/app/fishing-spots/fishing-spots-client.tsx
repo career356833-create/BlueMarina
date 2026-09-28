@@ -100,17 +100,17 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
   };
 
   return (
-    <AppFrame>
+    <AppFrame family="discovery">
       <div className="mx-auto w-full max-w-[1280px] space-y-4 pb-24 lg:space-y-5 lg:pb-10">
-        <section className="overflow-hidden rounded-[28px] border border-[#1F3A50] bg-[linear-gradient(180deg,#0F3355_0%,#0A1E30_100%)] p-4 text-white sm:p-6 lg:p-8">
+        <section className="bm-page-hero overflow-hidden p-4 sm:p-6 lg:p-8">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div className="min-w-0">
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-[#00D3C7] ring-1 ring-white/10">
                 <MapPin size={26} />
               </div>
-              <p className="mt-4 text-[11px] font-black uppercase tracking-[0.28em] text-[#9FB3C8]">Blue Marina Spots</p>
+              <p className="bm-eyebrow mt-4">Blue Marina Spots</p>
               <h1 className="mt-2 text-[28px] font-black tracking-tight text-white sm:text-4xl">출조거점 찾기</h1>
-              <p className="mt-3 max-w-3xl text-sm font-semibold leading-6 text-[#D7E4F6] sm:text-base sm:leading-7">
+              <p className="bm-lede mt-3 max-w-3xl text-sm leading-6 sm:text-base sm:leading-7">
                 선상낚시와 갯바위·방파제 포인트를 지역, 유형, 어종 기준으로 빠르게 찾습니다.
               </p>
             </div>
@@ -169,11 +169,11 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
           </div>
         </section>
 
-        <section className="rounded-[26px] border border-[#1F3A50] bg-[#071827] p-3 sm:p-4 lg:p-5">
+        <section className="bm-discovery-toolbar p-3 sm:p-4 lg:p-5">
           <div className="grid gap-3 lg:grid-cols-[1fr_0.72fr_0.72fr] lg:items-end">
             <label className="grid gap-2 text-sm font-black text-white">
               <span className="flex items-center gap-2">
-                <Search size={18} className="text-[#2E8BFF]" />
+                <Search size={18} className="text-[var(--bm-accent-ink)]" />
                 포인트 검색
               </span>
               <input
@@ -189,7 +189,7 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
 
             <label className="grid gap-2 text-sm font-black text-white">
               <span className="flex items-center gap-2">
-                <Ship size={18} className="text-[#2E8BFF]" />
+                <Ship size={18} className="text-[var(--bm-accent-ink)]" />
                 유형
               </span>
               <select
@@ -211,7 +211,7 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
 
             <label className="grid gap-2 text-sm font-black text-white">
               <span className="flex items-center gap-2">
-                <Filter size={18} className="text-[#2E8BFF]" />
+                <Filter size={18} className="text-[var(--bm-accent-ink)]" />
                 지역
               </span>
               <select
@@ -233,10 +233,10 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
           </div>
         </section>
 
-        <section className="rounded-[26px] border border-[#1F3A50] bg-[#071827] p-3 sm:p-4 lg:p-5">
+        <section className="bm-discovery-results p-3 sm:p-4 lg:p-5">
           <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#2E8BFF]">
+              <p className="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.18em] text-[var(--bm-accent-ink)]">
                 <Anchor size={16} />
                 Fishing Spot Results
               </p>
@@ -250,9 +250,9 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
           </div>
 
           {filteredSpots.length === 0 ? (
-            <div className="rounded-[24px] border border-[#1F3A50] bg-[#0E2233] p-6 text-center">
-              <p className="text-base font-black text-white">검색 결과가 없습니다.</p>
-              <p className="mt-2 text-sm font-semibold text-[#9FB3C8]">다른 지역, 어종, 유형으로 다시 찾아보세요.</p>
+            <div className="bm-card-paper p-6 text-center">
+              <p className="text-base font-black text-[var(--bm-ink)]">검색 결과가 없습니다.</p>
+              <p className="mt-2 text-sm font-semibold text-[var(--bm-ink-muted)]">다른 지역, 어종, 유형으로 다시 찾아보세요.</p>
             </div>
           ) : (
             <div className="space-y-4">
@@ -272,13 +272,13 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
                         <div className="flex min-w-0 items-start justify-between gap-3">
                           <div className="min-w-0">
                             <div className="flex flex-wrap gap-2">
-                              <span className="rounded-full bg-[#2E8BFF]/15 px-3 py-1 text-[11px] font-black text-[#2E8BFF]">
+                              <span className="rounded-full bg-[var(--bm-paper)] px-3 py-1 text-[11px] font-black text-[var(--bm-accent-ink)]">
                                 {getFishingSpotTypeLabel(spot.type)}
                               </span>
                               <span className="rounded-full bg-white/5 px-3 py-1 text-[11px] font-black text-[#9FB3C8]">{spot.region}</span>
                               <span
                                 className={`rounded-full px-3 py-1 text-[11px] font-black ${
-                                  coordinateReady ? "bg-[#35D07F]/15 text-[#35D07F]" : "bg-[#FFB020]/15 text-[#FFB020]"
+                                  coordinateReady ? "bg-emerald-50 text-emerald-800" : "bg-amber-50 text-amber-900"
                                 }`}
                               >
                                 {coordinateReady ? "좌표 확인" : "현장 확인 필요"}
@@ -288,7 +288,7 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
                             <p className="mt-2 break-words text-sm font-bold text-[#9FB3C8]">{spot.address || "주소 정보 없음"}</p>
                             <p className="mt-2 line-clamp-2 text-sm font-semibold leading-6 text-[#D7E4F6]">{spot.description}</p>
                           </div>
-                          <ChevronDown className={`mt-1 shrink-0 text-[#2E8BFF] transition ${isOpen ? "rotate-180" : ""}`} size={22} />
+                          <ChevronDown className={`mt-1 shrink-0 text-[var(--bm-accent-ink)] transition ${isOpen ? "rotate-180" : ""}`} size={22} />
                         </div>
 
                         <div className="mt-3 flex flex-wrap gap-1.5">
@@ -312,7 +312,7 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
                         <Link
                           href={`/fishing-spots/${encodeURIComponent(spot.id)}`}
                           aria-label={`${spot.name} 상세 보기`}
-                          className="inline-flex min-h-10 items-center gap-2 rounded-full border border-[#29465D] px-4 text-xs font-black text-[#79B6FF] transition hover:bg-[#2E8BFF]/10"
+                          className="inline-flex min-h-10 items-center gap-2 rounded-full border border-[var(--bm-paper-border)] px-4 text-xs font-black text-[var(--bm-accent-ink)] transition hover:border-[var(--bm-brand-accent)]"
                         >
                           상세 보기 <ChevronRight size={15} />
                         </Link>
@@ -382,8 +382,8 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
                 })}
               </div>
 
-              <div className="flex flex-col gap-3 rounded-[22px] border border-[#1F3A50] bg-[#0E2233] p-3 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-sm font-black text-[#D7E4F6]">
+              <div className="flex flex-col gap-3 rounded-[var(--bm-radius-md)] border border-[var(--bm-paper-border)] bg-[var(--bm-paper-elevated)] p-3 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-sm font-black text-[var(--bm-ink)]">
                   {currentPage} / {pageCount} 페이지
                 </p>
                 <div className="flex gap-2">
@@ -391,7 +391,7 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
                     type="button"
                     onClick={() => setPage((value) => Math.max(1, value - 1))}
                     disabled={currentPage === 1}
-                    className="inline-flex min-h-10 items-center gap-2 rounded-xl border border-[#1F3A50] bg-[#071827] px-4 text-sm font-black text-white transition enabled:hover:border-[#2E8BFF] disabled:opacity-40"
+                    className="inline-flex min-h-10 items-center gap-2 rounded-xl border border-[var(--bm-paper-border)] bg-[var(--bm-paper)] px-4 text-sm font-black text-[var(--bm-ink)] transition enabled:hover:border-[var(--bm-brand-accent)] disabled:opacity-40"
                   >
                     <ChevronLeft size={16} />
                     이전
@@ -400,7 +400,7 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
                     type="button"
                     onClick={() => setPage((value) => Math.min(pageCount, value + 1))}
                     disabled={currentPage === pageCount}
-                    className="inline-flex min-h-10 items-center gap-2 rounded-xl bg-[#2E8BFF] px-4 text-sm font-black text-white transition enabled:hover:bg-[#5aa4ff] disabled:opacity-40"
+                    className="inline-flex min-h-10 items-center gap-2 rounded-xl bg-[var(--bm-brand-accent)] px-4 text-sm font-black text-[var(--bm-ink)] transition enabled:hover:brightness-95 disabled:opacity-40"
                   >
                     다음
                     <ChevronRight size={16} />

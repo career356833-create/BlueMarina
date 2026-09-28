@@ -12,8 +12,8 @@ export function BottomNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 border-t border-[#1F3A50] bg-[#071827]/96 text-white backdrop-blur lg:hidden">
-      <div className="mx-auto grid h-[64px] max-w-[420px] grid-cols-5 pb-[env(safe-area-inset-bottom)]">
+    <nav className="fixed bottom-0 left-0 right-0 z-40 border-t border-marine-border bg-marine-background/95 text-marine-foreground shadow-[0_-12px_30px_rgba(0,0,0,.18)] backdrop-blur lg:hidden" aria-label="모바일 주요 메뉴">
+      <div className="mx-auto grid h-[calc(var(--bm-bottom-nav-height)+env(safe-area-inset-bottom))] max-w-[420px] grid-cols-5 pb-[env(safe-area-inset-bottom)]">
         {mobileNavigation.map((item) => {
           const Icon = icons[item.id as keyof typeof icons];
           const active = isPlatformNavItemActive(pathname, item);
@@ -25,8 +25,8 @@ export function BottomNav() {
               aria-current={active ? "page" : undefined}
               aria-label={item.label}
               className={cn(
-                "flex min-h-11 min-w-0 flex-col items-center justify-center gap-1 text-[10px] font-bold text-[#9FB3C8] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#79C9D6]",
-                active && "text-[#2E8BFF]"
+                "flex min-h-11 min-w-0 flex-col items-center justify-center gap-1 text-[10px] font-semibold text-marine-secondary transition hover:text-marine-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-marine-accent",
+                active && "border-t-2 border-marine-accent bg-white/[.04] text-marine-accent"
               )}
             >
               <Icon size={19} />

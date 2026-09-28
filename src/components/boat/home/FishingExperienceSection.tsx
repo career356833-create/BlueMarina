@@ -27,7 +27,7 @@ export function FishingExperienceSection() {
   return (
     <section
       id="fishing-experience"
-      className="relative isolate flex min-h-[100svh] overflow-hidden bg-[#050f19] text-[#f4f0e8] lg:min-h-[850px]"
+      className="relative isolate flex min-h-[590px] overflow-hidden bg-[#050f19] text-[#f4f0e8] lg:min-h-[660px]"
       aria-labelledby="fishing-experience-title"
     >
       <Image
@@ -41,7 +41,7 @@ export function FishingExperienceSection() {
       <div className="absolute inset-0 -z-20 bg-[#03101b]/18" />
       <div className="absolute inset-0 -z-10 [background-image:linear-gradient(90deg,rgba(3,12,23,0.97)_0%,rgba(3,12,23,0.88)_29%,rgba(3,12,23,0.38)_53%,rgba(3,12,23,0.08)_76%),linear-gradient(180deg,rgba(3,10,18,0.36)_0%,rgba(3,10,18,0.04)_48%,rgba(3,10,18,0.78)_100%)] max-lg:[background-image:linear-gradient(90deg,rgba(3,12,23,0.94)_0%,rgba(3,12,23,0.62)_62%,rgba(3,12,23,0.2)_100%),linear-gradient(180deg,rgba(3,10,18,0.35)_0%,rgba(3,10,18,0.18)_45%,rgba(3,10,18,0.88)_100%)]" />
 
-      <div className="mx-auto flex min-h-[100svh] w-full max-w-[1540px] flex-col justify-center px-5 pb-24 pt-20 sm:px-8 lg:min-h-[850px] lg:px-12 lg:py-24">
+      <div className="mx-auto flex min-h-[590px] w-full max-w-[1540px] flex-col justify-center px-5 pb-20 pt-14 sm:px-8 lg:min-h-[660px] lg:px-12 lg:py-20">
         <div className="relative z-10 max-w-xl lg:w-[40%]">
           <div className="flex items-center gap-4 text-[#d5b477]">
             <span className="h-px w-12 bg-current" />

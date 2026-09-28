@@ -110,8 +110,8 @@ const studyOrder = [
 function SectionTitle({ label, title, description }: { label: string; title: string; description?: string }) {
   return (
     <div className="mb-4">
-      <p className="text-xs font-black uppercase tracking-wide text-sky-700">{label}</p>
-      <h2 className="mt-1 text-xl font-black text-slate-950 sm:text-2xl">{title}</h2>
+      <p className="bm-eyebrow text-[var(--bm-accent-ink)]">{label}</p>
+      <h2 className="bm-section-title mt-1 text-2xl sm:text-3xl">{title}</h2>
       {description ? <p className="mt-2 text-sm font-semibold leading-6 text-slate-500">{description}</p> : null}
     </div>
   );
@@ -124,14 +124,14 @@ export default function LicenseGuidePage() {
       title="조종면허 취득 가이드"
       description="조종면허 취득 과정을 한눈에 확인할 수 있는 안내 페이지입니다."
     >
-      <section className="rounded-[2rem] border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
+      <section className="bm-content-surface p-5 sm:p-6">
         <SectionTitle label="Roadmap" title="단계별 로드맵" description="면허 취득과 학습 준비에 필요한 주요 페이지를 순서대로 정리했습니다." />
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {roadmapSteps.map((item) => {
             const Icon = item.icon;
 
             return (
-              <Link key={item.href} href={item.href} className="rounded-2xl border border-sky-100 bg-slate-50 p-4 transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md">
+              <Link key={item.href} href={item.href} className="bm-card-paper block p-4 transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--bm-brand-accent)]">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-sky-700 shadow-sm">
                     <Icon size={22} />
@@ -150,7 +150,7 @@ export default function LicenseGuidePage() {
         </div>
       </section>
 
-      <section className="rounded-[2rem] border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
+      <section className="bm-content-surface p-5 sm:p-6">
         <SectionTitle label="Study Order" title="추천 학습 순서" description="처음 준비하는 학습자가 따라가기 쉬운 순서입니다." />
         <div className="grid gap-3 lg:grid-cols-5">
           {studyOrder.map((item, index) => {
@@ -158,7 +158,7 @@ export default function LicenseGuidePage() {
 
             return (
               <div key={item.href} className="relative">
-                <Link href={item.href} className="block h-full rounded-2xl border border-sky-100 bg-slate-50 p-4 transition hover:-translate-y-0.5 hover:border-sky-300 hover:shadow-md">
+                <Link href={item.href} className="bm-card-paper block h-full p-4 transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--bm-brand-accent)]">
                   <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-sky-700 shadow-sm">
                     <Icon size={22} />
                   </div>

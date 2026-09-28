@@ -22,7 +22,7 @@ export function FishEncyclopediaSection() {
   return (
     <section
       id="fish-encyclopedia"
-      className="relative isolate min-h-[100svh] overflow-hidden bg-[#03101b] text-[#f4f0e8] lg:min-h-[850px]"
+      className="relative isolate min-h-[620px] overflow-hidden bg-[#03101b] text-[#f4f0e8] lg:min-h-[690px]"
       aria-labelledby="fish-encyclopedia-title"
     >
       <Image
@@ -36,7 +36,7 @@ export function FishEncyclopediaSection() {
       <div className="absolute inset-0 -z-10 [background-image:linear-gradient(90deg,rgba(3,12,23,0.97)_0%,rgba(3,12,23,0.88)_34%,rgba(3,12,23,0.38)_62%,rgba(3,12,23,0.16)_100%),linear-gradient(180deg,rgba(3,10,18,0.28)_0%,rgba(3,10,18,0.02)_44%,rgba(3,10,18,0.82)_100%)] max-lg:[background-image:linear-gradient(90deg,rgba(3,12,23,0.95)_0%,rgba(3,12,23,0.7)_66%,rgba(3,12,23,0.38)_100%),linear-gradient(180deg,rgba(3,10,18,0.28)_0%,rgba(3,10,18,0.22)_42%,rgba(3,10,18,0.9)_100%)]" />
       <div className="absolute inset-x-0 top-0 h-px bg-white/10" />
 
-      <div className="mx-auto grid min-h-[100svh] w-full max-w-[1540px] items-center gap-10 px-5 pb-24 pt-20 sm:px-8 lg:min-h-[850px] lg:grid-cols-[0.78fr_1.22fr] lg:gap-16 lg:px-12 lg:py-24">
+      <div className="mx-auto grid min-h-[620px] w-full max-w-[1540px] items-center gap-10 px-5 pb-20 pt-14 sm:px-8 lg:min-h-[690px] lg:grid-cols-[0.78fr_1.22fr] lg:gap-16 lg:px-12 lg:py-20">
         <div className="relative z-10 max-w-xl">
           <div className="flex items-center gap-4 text-[#d5b477]">
             <span className="h-px w-12 bg-current" />
@@ -86,7 +86,7 @@ export function FishEncyclopediaSection() {
           </div>
         </div>
 
-        <div className="relative z-10 flex min-h-[430px] flex-col justify-end lg:min-h-[680px]">
+        <div className="relative z-10 flex min-h-[380px] flex-col justify-end lg:min-h-[500px]">
           <div className="ml-auto w-full max-w-[390px] border border-white/16 bg-[#06111d]/76 p-5 shadow-[0_22px_70px_rgba(0,0,0,0.36)] backdrop-blur-xl sm:p-6">
             <div className="flex items-center justify-between gap-4">
               <p className="text-[10px] font-semibold tracking-[0.22em] text-[#d5b477]">BLUE MARINA SPECIES INDEX</p>

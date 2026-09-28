@@ -37,5 +37,5 @@ export default function AccountAuthCompletePage() {
     return () => { active = false; };
   }, []);
 
-  return <AppFrame><div className="mx-auto max-w-md py-10"><div role="status" className="rounded-[28px] border border-[#1F3A50] bg-[#071827] p-6 sm:p-8"><h1 className="text-2xl font-black">계정 연결</h1><p className="mt-3 text-sm font-semibold text-[#B8CBDD]">{message}</p><Link href="/account/login" className="mt-5 inline-flex min-h-11 items-center text-sm font-black text-[#79C9D6]">로그인으로 돌아가기</Link></div></div></AppFrame>;
+  return <AppFrame family="utility"><div className="mx-auto max-w-md py-10"><div role="status" className="rounded-[28px] border border-[#1F3A50] bg-[#071827] p-6 sm:p-8"><h1 className="text-2xl font-black">계정 연결</h1><p className="mt-3 text-sm font-semibold text-[#B8CBDD]">{message}</p><Link href="/account/login" className="mt-5 inline-flex min-h-11 items-center text-sm font-black text-[#79C9D6]">로그인으로 돌아가기</Link></div></div></AppFrame>;
 }

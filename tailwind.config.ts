@@ -5,6 +5,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        marine: {
+          background: "var(--bm-background)",
+          surface: "var(--bm-surface)",
+          elevated: "var(--bm-surface-elevated)",
+          muted: "var(--bm-surface-muted)",
+          foreground: "var(--bm-foreground)",
+          secondary: "var(--bm-foreground-muted)",
+          border: "var(--bm-border)",
+          brand: "var(--bm-brand)",
+          accent: "var(--bm-brand-accent)",
+          success: "var(--bm-success)",
+          warning: "var(--bm-warning)",
+          danger: "var(--bm-danger)"
+        },
         ink: "#17212b",
         muted: "#687586",
         line: "#dfe6ee",

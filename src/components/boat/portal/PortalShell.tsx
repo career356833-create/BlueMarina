@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import { ArrowRight, Clock, Compass, ExternalLink, FileText, MapPin, ShieldCheck } from "lucide-react";
 import { AppFrame } from "@/components/boat/AppFrame";
+import { PageHero } from "@/components/platform/DesignSystem";
 
 type PortalShellProps = {
   eyebrow: string;
@@ -21,13 +22,9 @@ type PortalCardProps = {
 
 export function PortalShell({ eyebrow, title, description, children }: PortalShellProps) {
   return (
-    <AppFrame>
-      <div className="space-y-5">
-        <section className="overflow-hidden rounded-[28px] border border-[#1F3A50] bg-[linear-gradient(180deg,#0F3355_0%,#0A1E30_100%)] p-5 text-white sm:p-6 lg:p-8">
-          <p className="text-[11px] font-black uppercase tracking-[0.28em] text-[#9FB3C8]">{eyebrow}</p>
-          <h1 className="mt-3 text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl">{title}</h1>
-          <p className="mt-4 max-w-3xl text-sm font-semibold leading-7 text-[#D7E4F6] sm:text-base">{description}</p>
-        </section>
+    <AppFrame family="content">
+      <div className="mx-auto max-w-[var(--bm-content-reading)] space-y-5">
+        <PageHero eyebrow={eyebrow} title={title} description={description} />
         {children}
       </div>
     </AppFrame>
@@ -44,17 +41,17 @@ export function PortalCard({
 }: PortalCardProps) {
   const content = (
     <>
-      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[#1F3A50] bg-[#0E2233] text-[#2E8BFF]">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[var(--bm-border)] bg-[var(--bm-surface-elevated)] text-[var(--bm-brand-accent)]">
         <Icon size={24} />
       </div>
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-2">
           <h2 className="text-base font-black text-white">{title}</h2>
-          <span className="rounded-full bg-white/5 px-2 py-1 text-[11px] font-black text-[#9FB3C8]">{status}</span>
+          <span className="rounded-full bg-white/5 px-2 py-1 text-[11px] font-black text-[var(--bm-foreground-muted)]">{status}</span>
         </div>
-        <p className="mt-1 text-sm font-semibold leading-6 text-[#9FB3C8]">{description}</p>
+        <p className="mt-1 text-sm font-semibold leading-6 text-[var(--bm-foreground-muted)]">{description}</p>
       </div>
-      <div className="hidden shrink-0 items-center gap-1 text-xs font-black text-[#2E8BFF] sm:flex">
+      <div className="hidden shrink-0 items-center gap-1 text-xs font-black text-[var(--bm-brand-accent)] sm:flex">
         {actionLabel}
         {href ? <ArrowRight size={16} /> : <ExternalLink size={15} />}
       </div>
@@ -62,7 +59,7 @@ export function PortalCard({
   );
 
   const className =
-    "flex min-h-28 items-center gap-4 rounded-[24px] border border-[#1F3A50] bg-[#0E2233] p-4 text-left transition hover:border-[#2E8BFF]/40 hover:bg-[#11293C] focus:outline-none focus:ring-2 focus:ring-[#2E8BFF]/30";
+    "bm-surface-dark flex min-h-28 items-center gap-4 p-4 text-left transition hover:border-[var(--bm-brand-accent)] hover:bg-[var(--bm-surface-elevated)] focus-visible:outline-2 focus-visible:outline-[var(--bm-brand-accent)]";
 
   if (href) {
     return (
@@ -82,17 +79,17 @@ export function PortalCard({
 export function PlaceholderContent({ title }: { title: string }) {
   return (
     <section className="grid gap-4 lg:grid-cols-[1fr_0.8fr]">
-      <div className="rounded-[24px] border border-[#1F3A50] bg-[#0E2233] p-5 sm:p-6">
+      <div className="bm-surface-dark p-5 sm:p-6">
         <div className="flex items-start gap-4">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[#1F3A50] bg-[#071827] text-[#00D3C7]">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[var(--bm-border)] bg-[var(--bm-surface-elevated)] text-[var(--bm-brand-accent)]">
             <Clock size={24} />
           </div>
           <div>
             <h2 className="text-xl font-black text-white">{title}</h2>
-            <p className="mt-2 text-sm font-semibold leading-7 text-[#9FB3C8]">
+            <p className="mt-2 text-sm font-semibold leading-7 text-[var(--bm-foreground-muted)]">
               현재는 준비중입니다. 실제 안내 콘텐츠가 추가되면 공식 화면과 같은 방식으로 보여드립니다.
             </p>
-            <button type="button" className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-xl border border-[#1F3A50] bg-[#071827] px-4 py-2 text-sm font-black text-white">
+            <button type="button" className="bm-action-secondary mt-5 gap-2 px-4 py-2 text-sm">
               공식 사이트 확인
               <ExternalLink size={16} />
             </button>
@@ -100,13 +97,13 @@ export function PlaceholderContent({ title }: { title: string }) {
         </div>
       </div>
 
-      <div className="rounded-[24px] border border-[#1F3A50] bg-[#0E2233] p-5 sm:p-6">
+      <div className="bm-surface-dark p-5 sm:p-6">
         <h3 className="text-base font-black text-white">향후 콘텐츠 항목</h3>
         <div className="mt-4 grid gap-3">
           {["안내 문구", "확인 항목", "FAQ", "관련 링크"].map((item) => (
-            <div key={item} className="rounded-[20px] border border-[#1F3A50] bg-[#071827] p-4">
+            <div key={item} className="rounded-[var(--bm-radius-md)] border border-[var(--bm-border)] bg-[var(--bm-surface-elevated)] p-4">
               <p className="text-sm font-black text-white">{item}</p>
-              <p className="mt-1 text-xs font-semibold text-[#9FB3C8]">준비중</p>
+              <p className="mt-1 text-xs font-semibold text-[var(--bm-foreground-muted)]">준비중</p>
             </div>
           ))}
         </div>
