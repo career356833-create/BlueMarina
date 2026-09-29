@@ -1,0 +1,95 @@
+{
+  "name": "BLUE MARINA MARKET BACKEND PRODUCTION ACTIVATION V1",
+  "decision": "MARKET_BACKEND_PRODUCTION_ACTIVE_WITH_LIMITATIONS",
+  "verifiedAt": "2026-09-29",
+  "production": {
+    "url": "https://blue-marina.vercel.app",
+    "deploymentStatus": "READY",
+    "deployedSha": "f9e99c43f57f9aeb4e25f1578c1ef787078576b5",
+    "mainShaMatchAtVerification": true,
+    "marketBackendEnabled": true,
+    "marketImageUploadEnabled": true,
+    "accountAndCharterFlagsChanged": false
+  },
+  "database": {
+    "projectRef": "mlfvpaikfpjrgrhwlrjn",
+    "marketTables": 5,
+    "marketTablesWithRls": 5,
+    "activationMigration": "20260929135636_blue_marina_market_remote_activation_v1.sql",
+    "marketListingsBefore": 0,
+    "marketListingsAfter": 1,
+    "testListings": 1,
+    "publicActiveListingsBeforeAndAfter": 0,
+    "fishSpeciesBeforeAndAfter": 1258,
+    "marineOrganismsBeforeAndAfter": 3016,
+    "authUsersBeforeAndAfter": 3,
+    "profilesBeforeAndAfter": 3,
+    "charterSubmissionsBeforeAndAfter": 1
+  },
+  "listingE2e": {
+    "provider": "Kakao",
+    "marker": "BLUE_MARINA_MARKET_E2E_TEST",
+    "realProductOrTransaction": false,
+    "numericPrice": null,
+    "contactMethod": "INQUIRY_PREPARED",
+    "create": "PASS",
+    "privatePersistAndOwnerLink": "PASS",
+    "ownListAndReload": "PASS",
+    "ownUpdate": "PASS",
+    "status": "SUBMITTED",
+    "moderationStatus": "REVIEW_REQUIRED",
+    "automaticActive": 0,
+    "testRecordRetainedPrivately": true
+  },
+  "storage": {
+    "bucket": "market-listing-staging",
+    "public": false,
+    "maxBytesPerImage": 8388608,
+    "allowedMimeTypes": ["image/jpeg", "image/png", "image/webp"],
+    "maxImagesPerListing": 8,
+    "signedIntent": "PASS",
+    "testPlaceholderPngUpload": "PASS",
+    "objectCount": 1,
+    "linkedObjectCount": 1,
+    "listingImageMetadataCount": 1,
+    "directStorageObjectPolicies": 0,
+    "otherBucketsChanged": false
+  },
+  "security": {
+    "anonymousMineAndAdminApiStatus": 401,
+    "regularUserAdminDetail": "FORBIDDEN",
+    "regularUserApproveRejectActivate": "DENIED_BY_ADMIN_ROLE_BOUNDARY",
+    "serviceRoleClientExposure": 0,
+    "secretOrTokenLoggingObserved": 0,
+    "securityAdvisorCriticalHigh": 0,
+    "crossUserLiveE2e": "NOT_RUN_WITHOUT_SECOND_AUTHORIZED_ACCOUNT",
+    "marketAdminSuccessE2e": "NOT_RUN_WITHOUT_APPROVED_MARKET_ADMIN",
+    "anonymousObjectGetE2e": "NOT_RUN_PRIVATE_BUCKET_AND_NO_DIRECT_POLICY_VERIFIED"
+  },
+  "ui": {
+    "routes": ["/market", "/market/new"],
+    "viewports": ["390x844", "1280x900"],
+    "horizontalOverflow": 0,
+    "publicEmptyState": "PASS",
+    "privateReviewState": "PASS",
+    "imageUploader": "PASS"
+  },
+  "verify": {
+    "targeted": { "passed": 44, "failed": 0 },
+    "total": { "passed": 1335, "failed": 0, "skipped": 1 },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "productionBuild": "PASS",
+    "localBuild": "INCONCLUSIVE_CONCURRENT_NEXT_DEV_IN_SAME_CHECKOUT",
+    "diffCheck": "PASS"
+  },
+  "limitations": [
+    "No second authorized identity was available for live cross-user edit denial; ownership checks and RLS were verified in code and schema.",
+    "No approved market_admin actor was available for a successful moderation E2E; normal-user admin access was denied.",
+    "The marked test listing and its placeholder image remain private because the workflow has no safe user deletion path; they are excluded from public marketplace KPIs.",
+    "A failed signed upload first created an orphan image intent; that test-only orphan was removed, and the browser now attaches image metadata only after the upload succeeds.",
+    "A direct anonymous Storage object GET was not run; bucket privacy and absence of a direct object policy were verified.",
+    "The local Next.js build remained in compilation while the same checkout served next dev and was stopped; Vercel built and deployed the exact code SHA successfully."
+  ],
+  "nextAction": "COMMUNITY_BACKEND_PRODUCTION_ACTIVATION"
+}
