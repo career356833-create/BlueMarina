@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { AlertTriangle, CheckCircle2, ClipboardCheck, Film, PackageOpen, PlaySquare, Route, ShieldAlert, ShipWheel } from "lucide-react";
-import { AppFrame } from "@/components/boat/AppFrame";
+import { LearningFrame } from "@/components/platform/PageFamilies";
 
 const videoCategories = [
   {
@@ -60,7 +60,7 @@ function SectionTitle({ label, title, description }: { label: string; title: str
 
 export default function PracticeVideosPage() {
   return (
-    <AppFrame>
+    <LearningFrame>
       <div className="space-y-5">
         <section className="overflow-hidden rounded-[2rem] bg-[#0F2D52] text-white shadow-sm">
           <div className="relative p-6 sm:p-8">
@@ -150,6 +150,6 @@ export default function PracticeVideosPage() {
           </div>
         </section>
       </div>
-    </AppFrame>
+    </LearningFrame>
   );
 }

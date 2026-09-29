@@ -1,4 +1,4 @@
-import { AppFrame } from "@/components/boat/AppFrame";
+import { LearningFrame } from "@/components/platform/PageFamilies";
 import { AnalysisClient } from "./analysis-client";
 
 type AnalysisPageProps = {
@@ -9,8 +9,8 @@ export default async function AnalysisPage({ searchParams }: AnalysisPageProps) 
   const params = await searchParams;
 
   return (
-    <AppFrame>
+    <LearningFrame>
       <AnalysisClient license={params?.license} />
-    </AppFrame>
+    </LearningFrame>
   );
 }

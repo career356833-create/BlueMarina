@@ -14,7 +14,7 @@ import {
   Tag
 } from "lucide-react";
 import { BannerAd } from "@/components/ads/BannerAd";
-import { AppFrame } from "@/components/boat/AppFrame";
+import { LearningFrame } from "@/components/platform/PageFamilies";
 import { getLicenseLabel, normalizeLicenseType, type LicenseType } from "@/lib/boat/questions";
 import { getRelatedQuestionsForTheory, getTheoryByTag } from "@/lib/boat/theory";
 import type { TheoryItem } from "@/data/theories";
@@ -89,7 +89,7 @@ export default function TheoryDetailPage() {
   const isReady = Boolean(theory?.content);
 
   return (
-    <AppFrame>
+    <LearningFrame>
       <div className="space-y-5">
         <Link href="/theory" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-4 text-sm font-black text-slate-600 shadow-sm">
           <ArrowLeft size={16} />
@@ -238,6 +238,6 @@ export default function TheoryDetailPage() {
           </aside>
         </div>
       </div>
-    </AppFrame>
+    </LearningFrame>
   );
 }

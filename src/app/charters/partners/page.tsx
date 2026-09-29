@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Anchor, ArrowRight, FileSpreadsheet, ShieldCheck } from "lucide-react";
-import { AppFrame } from "@/components/boat/AppFrame";
+import { FormFrame } from "@/components/platform/PageFamilies";
 import { canonicalMetadata } from "@/lib/release/site-url";
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ const faqs = [
 ] as const;
 
 export default function CharterPartnersPage() {
-  return <AppFrame><main className="mx-auto max-w-6xl px-4 py-8 text-white sm:px-6 sm:py-14">
+  return <FormFrame><div className="px-1 py-8 text-white sm:px-4 sm:py-14">
     <p className="flex items-center gap-2 text-xs font-black tracking-[.18em] text-[#79C9D6]"><Anchor size={16} /> CHARTER PARTNER PILOT</p>
     <h1 className="mt-4 max-w-3xl text-4xl font-black leading-tight sm:text-6xl">Blue Marina 출조상품 등록</h1>
     <p className="mt-5 max-w-3xl text-base leading-8 text-[#B8CBDD]">출조업체가 직접 제공한 상품 정보를 검토하여 소개하고, 기존 전화·공식 예약 경로로 문의를 연결하는 파일럿입니다. 제출만으로 게시되거나 예약이 확정되지는 않습니다.</p>
@@ -48,5 +48,5 @@ export default function CharterPartnersPage() {
     <section id="partner-inquiry" className="mt-14 scroll-mt-8 rounded-3xl border border-[#29465D] p-6"><h2 className="text-2xl font-black">제휴 문의 준비</h2><p className="mt-3 leading-7 text-[#B8CBDD]">업체명, 공개할 연락처, 선박·출항항, 상품명, 공식 홈페이지를 정리해 주세요. 현재 별도 제휴 연락처가 설정되지 않아 이 페이지에서는 문의를 전송하지 않습니다. 접수 경로가 활성화되면 기존 직접 등록 화면을 이용할 수 있습니다.</p><Link href="/charters/onboarding" className="mt-4 inline-flex min-h-11 items-center font-bold text-[#AEE8EF] underline underline-offset-4">기존 등록 화면으로 이동</Link></section>
 
     <section className="mt-14"><h2 className="text-3xl font-black">자주 묻는 질문</h2><div className="mt-5 space-y-3">{faqs.map(([question, answer]) => <details key={question} className="rounded-2xl border border-[#29465D] bg-[#071827] p-5"><summary className="cursor-pointer font-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">{question}</summary><p className="mt-3 text-sm leading-7 text-[#B8CBDD]">{answer}</p></details>)}</div></section>
-  </main></AppFrame>;
+  </div></FormFrame>;
 }

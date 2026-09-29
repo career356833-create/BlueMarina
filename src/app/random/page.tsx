@@ -3,7 +3,7 @@
 import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { ArrowRight, Percent, RotateCcw } from "lucide-react";
-import { AppFrame } from "@/components/boat/AppFrame";
+import { LearningFrame } from "@/components/platform/PageFamilies";
 import { QuestionCard } from "@/components/boat/QuestionCard";
 import { StatCard } from "@/components/boat/StatCard";
 import { getLicenseLabel, getRandomQuestions, getTotalQuestionCount, normalizeLicenseType, type Question } from "@/lib/boat/questions";
@@ -94,10 +94,10 @@ function RandomContent() {
 
 export default function RandomPage() {
   return (
-    <AppFrame>
+    <LearningFrame>
       <Suspense fallback={<div className="rounded-3xl bg-white p-6 text-sm font-bold text-slate-600">랜덤 문제를 준비하고 있습니다.</div>}>
         <RandomContent />
       </Suspense>
-    </AppFrame>
+    </LearningFrame>
   );
 }

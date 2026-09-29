@@ -1,3 +1,3 @@
-import { AppFrame } from "@/components/boat/AppFrame";
+import { FormFrame } from "@/components/platform/PageFamilies";
 import { AccountClient } from "../account-client";
-export default function AccountSavedPage() { return <AppFrame family="utility"><AccountClient section="saved" /></AppFrame>; }
+export default function AccountSavedPage() { return <FormFrame width="reading"><AccountClient section="saved" /></FormFrame>; }

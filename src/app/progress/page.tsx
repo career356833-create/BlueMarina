@@ -1,4 +1,4 @@
-import { AppFrame } from "@/components/boat/AppFrame";
+import { LearningFrame } from "@/components/platform/PageFamilies";
 import { ProgressClient } from "./progress-client";
 
 type ProgressPageProps = {
@@ -9,8 +9,8 @@ export default async function ProgressPage({ searchParams }: ProgressPageProps) 
   const params = await searchParams;
 
   return (
-    <AppFrame>
+    <LearningFrame>
       <ProgressClient license={params?.license} />
-    </AppFrame>
+    </LearningFrame>
   );
 }

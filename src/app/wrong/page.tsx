@@ -3,7 +3,7 @@
 import { Suspense, useCallback, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { NotebookTabs, Trash2 } from "lucide-react";
-import { AppFrame } from "@/components/boat/AppFrame";
+import { LearningFrame } from "@/components/platform/PageFamilies";
 import { QuestionCard } from "@/components/boat/QuestionCard";
 import { getLicenseLabel, normalizeLicenseType, type Question } from "@/lib/boat/questions";
 import { readWrongQuestions, removeWrongQuestion } from "@/lib/boat/storage";
@@ -87,10 +87,10 @@ function WrongContent() {
 
 export default function WrongPage() {
   return (
-    <AppFrame>
+    <LearningFrame>
       <Suspense fallback={<div className="rounded-3xl bg-white p-6 text-sm font-bold text-slate-600">오답노트를 불러오고 있습니다.</div>}>
         <WrongContent />
       </Suspense>
-    </AppFrame>
+    </LearningFrame>
   );
 }

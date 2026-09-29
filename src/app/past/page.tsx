@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BarChart3, BookOpenCheck, ClipboardList, FileClock, History, ListChecks, RotateCcw, Sailboat, ShipWheel, Shuffle, Trophy } from "lucide-react";
-import { AppFrame } from "@/components/boat/AppFrame";
+import { LearningFrame } from "@/components/platform/PageFamilies";
 
 const pastMenus = [
   {
@@ -70,7 +70,7 @@ function SectionTitle({ label, title, description }: { label: string; title: str
 
 export default function PastPage() {
   return (
-    <AppFrame>
+    <LearningFrame>
       <div className="space-y-5">
         <section className="overflow-hidden rounded-[2rem] bg-[#0F2D52] text-white shadow-sm">
           <div className="relative p-6 sm:p-8">
@@ -170,6 +170,6 @@ export default function PastPage() {
           </div>
         </section>
       </div>
-    </AppFrame>
+    </LearningFrame>
   );
 }

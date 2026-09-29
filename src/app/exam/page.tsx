@@ -4,7 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { ClipboardList, RotateCcw } from "lucide-react";
 import { ResultAd } from "@/components/ads/ResultAd";
-import { AppFrame } from "@/components/boat/AppFrame";
+import { LearningFrame } from "@/components/platform/PageFamilies";
 import { QuestionCard } from "@/components/boat/QuestionCard";
 import { pickMockExamQuestions, scoreExam } from "@/lib/boat/exam";
 import { getLicenseLabel, normalizeLicenseType, type Question } from "@/lib/boat/questions";
@@ -175,10 +175,10 @@ function ExamContent() {
 
 export default function ExamPage() {
   return (
-    <AppFrame>
+    <LearningFrame>
       <Suspense fallback={<div className="rounded-3xl bg-white p-6 text-sm font-bold text-slate-600">모의고사를 준비하고 있습니다.</div>}>
         <ExamContent />
       </Suspense>
-    </AppFrame>
+    </LearningFrame>
   );
 }

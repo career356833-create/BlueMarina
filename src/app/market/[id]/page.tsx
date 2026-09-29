@@ -1,7 +1,6 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ExternalLink, Mail, PackageSearch, Phone, ShieldAlert } from "lucide-react";
-import { AppFrame } from "@/components/boat/AppFrame";
+import { ExternalLink, Mail, PackageSearch, Phone, ShieldAlert } from "lucide-react";
+import { DetailFrame, DetailBackLink } from "@/components/platform/PageFamilies";
 import { AccountSaveButton } from "@/components/account/AccountSaveButton";
 import { RecentlyViewedTracker } from "@/components/account/RecentlyViewedTracker";
 import { readPublicMarketListing } from "@/lib/market/backend/public-reader";
@@ -15,8 +14,8 @@ export default async function MarketListingDetail({ params }: { params: Promise<
   if (!listing || listing.status !== "ACTIVE") notFound();
   const externalHref = listing.contact?.contactType === "EXTERNAL_LINK" ? safeExternalHref(listing.contact.destination) : null;
   const href = `/market/${encodeURIComponent(listing.id)}`;
-  return <AppFrame><RecentlyViewedTracker item={{entityType:"MARKET_LISTING",entityId:listing.id,label:listing.title,href}}/><article className="mx-auto max-w-5xl py-5 sm:py-10">
-    <Link href="/market" className="inline-flex min-h-11 items-center gap-2 text-sm font-black text-[#AEE8EF]"><ArrowLeft size={17}/>마켓으로</Link>
+  return <DetailFrame><RecentlyViewedTracker item={{entityType:"MARKET_LISTING",entityId:listing.id,label:listing.title,href}}/><article className="py-5 sm:py-10">
+    <DetailBackLink href="/market">마켓으로</DetailBackLink>
     <div className="mt-4 grid gap-6 lg:grid-cols-[1.15fr_.85fr]">
       <div className="overflow-hidden rounded-[28px] border border-[#1F3A50] bg-[#071827]">
         <div role="img" aria-label={listing.images[0]?.alt ?? `${listing.title} 이미지 없음`} className="aspect-[4/3] bg-[#0C2638] bg-cover bg-center" style={listing.images[0] ? {backgroundImage:`url(${listing.images[0].url})`} : undefined}>{listing.images.length ? null : <div className="flex h-full flex-col items-center justify-center gap-3 text-[#7890A5]"><PackageSearch size={44}/><span className="text-sm font-bold">등록된 이미지가 없습니다</span></div>}</div>
@@ -27,5 +26,5 @@ export default async function MarketListingDetail({ params }: { params: Promise<
     </div>
     <section className="mt-6 rounded-[28px] border border-[#1F3A50] bg-[#071827] p-6 sm:p-8"><h2 className="text-xl font-black">상품 설명</h2><p className="mt-4 whitespace-pre-wrap break-words text-sm font-semibold leading-7 text-[#B8CBDD]">{listing.description}</p></section>
     <section className="mt-6 flex gap-3 rounded-[22px] border border-amber-300/25 bg-amber-300/8 p-5"><ShieldAlert className="mt-0.5 shrink-0 text-amber-200" size={20}/><div><h2 className="font-black text-amber-100">거래 전 직접 확인하세요</h2><p className="mt-2 text-sm font-semibold leading-6 text-amber-50/80">판매자 설명은 안전성, 정품, 설치 적합성 또는 작동 상태를 보증하지 않습니다. 구명·통신·항법·엔진·배터리·연료 장비는 전문가 점검과 관련 규정을 확인하세요. Blue Marina는 결제와 거래 완료를 처리하지 않습니다.</p></div></section>
-  </article></AppFrame>;
+  </article></DetailFrame>;
 }

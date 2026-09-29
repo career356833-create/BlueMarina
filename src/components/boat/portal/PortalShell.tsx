@@ -3,6 +3,7 @@ import type { LucideIcon } from "lucide-react";
 import { ArrowRight, Clock, Compass, ExternalLink, FileText, MapPin, ShieldCheck } from "lucide-react";
 import { AppFrame } from "@/components/boat/AppFrame";
 import { PageHero } from "@/components/platform/DesignSystem";
+import { LearningNav } from "@/components/platform/PageFamilies";
 
 type PortalShellProps = {
   eyebrow: string;
@@ -25,6 +26,7 @@ export function PortalShell({ eyebrow, title, description, children }: PortalShe
     <AppFrame family="content">
       <div className="mx-auto max-w-[var(--bm-content-reading)] space-y-5">
         <PageHero eyebrow={eyebrow} title={title} description={description} />
+        <LearningNav />
         {children}
       </div>
     </AppFrame>

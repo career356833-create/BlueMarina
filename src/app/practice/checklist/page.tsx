@@ -1,5 +1,5 @@
 import { BadgeCheck, CalendarDays, Camera, CheckCircle2, Clock, IdCard, MapPin, PackageCheck, ShieldCheck } from "lucide-react";
-import { AppFrame } from "@/components/boat/AppFrame";
+import { LearningFrame } from "@/components/platform/PageFamilies";
 
 const dayBeforeChecklist = ["신분증 확인", "응시표 확인", "시험 일정과 장소 확인", "이동 시간 확인", "충분한 휴식", "날씨 확인"];
 
@@ -53,7 +53,7 @@ function ChecklistGrid({ items }: { items: string[] }) {
 
 export default function PracticeChecklistPage() {
   return (
-    <AppFrame>
+    <LearningFrame>
       <div className="space-y-5">
         <section className="overflow-hidden rounded-[2rem] bg-[#0F2D52] text-white shadow-sm">
           <div className="relative p-6 sm:p-8">
@@ -127,6 +127,6 @@ export default function PracticeChecklistPage() {
           </div>
         </section>
       </div>
-    </AppFrame>
+    </LearningFrame>
   );
 }

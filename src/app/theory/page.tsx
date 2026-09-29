@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ArrowRight, BookOpenCheck, Search } from "lucide-react";
-import { AppFrame } from "@/components/boat/AppFrame";
+import { LearningFrame } from "@/components/platform/PageFamilies";
 import { getTheoryCategories, theories, type TheoryItem } from "@/data/theories";
 import { getTheoryQuestionCount } from "@/lib/boat/theory";
 
@@ -45,7 +45,7 @@ export default function TheoryPage() {
   }, [query, selectedCategory]);
 
   return (
-    <AppFrame>
+    <LearningFrame>
       <div className="space-y-5">
         <section className="rounded-[2rem] border border-sky-100 bg-white p-5 shadow-sm sm:p-7">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
@@ -134,6 +134,6 @@ export default function TheoryPage() {
           </section>
         ) : null}
       </div>
-    </AppFrame>
+    </LearningFrame>
   );
 }

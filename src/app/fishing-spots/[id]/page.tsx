@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { canonicalMetadata } from "@/lib/release/site-url";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Anchor, ArrowLeft, ExternalLink, Fish, MapPin, Navigation2, ShieldAlert, Waves } from "lucide-react";
-import { AppFrame } from "@/components/boat/AppFrame";
+import { Anchor, ExternalLink, Fish, MapPin, Navigation2, ShieldAlert, Waves } from "lucide-react";
+import { DetailFrame, DetailBackLink } from "@/components/platform/PageFamilies";
 import { AccountSaveButton } from "@/components/account/AccountSaveButton";
 import { RecentlyViewedTracker } from "@/components/account/RecentlyViewedTracker";
 import { fishingSpots, getFishingSpotTypeLabel } from "@/data/fishing-spots";
@@ -59,13 +59,11 @@ export default async function FishingSpotDetailPage({ params }: PageProps) {
   const mapHref = buildFishingSpotMapHref(spot);
   const navigationHref = navigationBlocked ? null : buildNavigationHref(navigationDestinationFromFishingSpot(spot));
 
-  return <AppFrame>
+  return <DetailFrame>
     <RecentlyViewedTracker item={{ entityType: "FISHING_SPOT", entityId: spot.id, label: spot.name, href: `/fishing-spots/${encodeURIComponent(spot.id)}` }} />
-    <main className="mx-auto w-full max-w-[1180px] space-y-5 pb-24 max-sm:pr-6 lg:space-y-7 lg:pb-10">
+    <div className="w-full space-y-5 pb-24 lg:space-y-7 lg:pb-10">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <Link href="/fishing-spots" className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[#1F3A50] px-4 text-sm font-black text-[#D7E4F6] transition hover:bg-white/8">
-          <ArrowLeft size={16} /> 출조거점 목록
-        </Link>
+        <DetailBackLink href="/fishing-spots">출조거점 목록</DetailBackLink>
         <span className="text-[11px] font-black uppercase tracking-[0.2em] text-[#71889D]">Fishing spot detail</span>
       </div>
 
@@ -87,7 +85,7 @@ export default async function FishingSpotDetailPage({ params }: PageProps) {
 
       <div className="grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="space-y-5">
-          <section className="rounded-[26px] border border-[#1F3A50] bg-[#071827] p-5 sm:p-6">
+          <section className="bm-detail-section p-5 sm:p-6">
             <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#2E8BFF]">Target species</p>
             <h2 className="mt-1 text-2xl font-black text-white">대상 어종</h2>
             {species.canonical.length > 0 ? <div className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -108,7 +106,7 @@ export default async function FishingSpotDetailPage({ params }: PageProps) {
             </div> : null}
           </section>
 
-          <section className="rounded-[26px] border border-[#1F3A50] bg-[#071827] p-5 sm:p-6">
+          <section className="bm-detail-section p-5 sm:p-6">
             <h2 className="text-xl font-black text-white">포인트 정보</h2>
             <dl className="mt-4 grid gap-x-4 gap-y-4 text-sm sm:grid-cols-2">
               <div><dt className="font-black text-[#8FA7BC]">주소</dt><dd className="mt-1 font-semibold leading-6 text-[#D7E4F6]">{spot.address || <SourceMissing>원본 미기재</SourceMissing>}</dd></div>
@@ -142,7 +140,7 @@ export default async function FishingSpotDetailPage({ params }: PageProps) {
             </div>
           </section>
 
-          <section className="rounded-[26px] border border-[#1F3A50] bg-[#071827] p-5 sm:p-6">
+          <section className="bm-detail-section p-5 sm:p-6">
             <h2 className="text-xl font-black text-white">접근·출항 확인</h2>
             <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
               <div><p className="text-xs font-black text-[#79C9D6]">시설·접근</p><ul className="mt-2 space-y-1 text-xs font-semibold leading-5 text-[#9FB3C8]">{spot.facilities.length ? spot.facilities.map((item) => <li key={item}>- {item}</li>) : <li>원본 미기재</li>}</ul></div>
@@ -150,7 +148,7 @@ export default async function FishingSpotDetailPage({ params }: PageProps) {
             </div>
           </section>
 
-          <section className="rounded-[26px] border border-[#1F3A50] bg-[#071827] p-5 sm:p-6">
+          <section className="bm-detail-section p-5 sm:p-6">
             <h2 className="text-xl font-black text-white">데이터 출처</h2>
             <p className="mt-3 text-sm font-black text-[#D7E4F6]">{spot.sourceName || "출처 정보 미확인"}</p>
             <p className="mt-1 text-xs font-semibold text-[#8FA7BC]">확인일 {spot.sourceCheckedAt}</p>
@@ -164,6 +162,6 @@ export default async function FishingSpotDetailPage({ params }: PageProps) {
         <p className="flex items-center gap-2 text-sm font-black text-[#F1D9A8]"><Waves size={17} />관측 자료 선택 안내</p>
         <p className="mt-2 text-sm font-semibold leading-6 text-[#D9C49A]">이 포인트의 좌표와 해양 관측 정점은 별도입니다. 조건 분석에서는 월·자료원·관측 정점·수심을 직접 선택해야 합니다.</p>
       </section>
-    </main>
-  </AppFrame>;
+    </div>
+  </DetailFrame>;
 }

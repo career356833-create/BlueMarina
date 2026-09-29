@@ -3,7 +3,7 @@
 import { Suspense, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { ArrowRight, Layers3 } from "lucide-react";
-import { AppFrame } from "@/components/boat/AppFrame";
+import { LearningFrame } from "@/components/platform/PageFamilies";
 import { QuestionCard } from "@/components/boat/QuestionCard";
 import {
   DEFAULT_CATEGORY,
@@ -104,10 +104,10 @@ function StudyContent() {
 
 export default function StudyPage() {
   return (
-    <AppFrame>
+    <LearningFrame>
       <Suspense fallback={<div className="rounded-3xl bg-white p-6 text-sm font-bold text-slate-600">학습 화면을 준비하고 있습니다.</div>}>
         <StudyContent />
       </Suspense>
-    </AppFrame>
+    </LearningFrame>
   );
 }

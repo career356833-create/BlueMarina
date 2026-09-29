@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { AlertTriangle, BadgeCheck, CheckCircle2, ClipboardCheck, Compass, LifeBuoy, PlaySquare, Sailboat, ShieldCheck } from "lucide-react";
-import { AppFrame } from "@/components/boat/AppFrame";
+import { LearningFrame } from "@/components/platform/PageFamilies";
 
 const overviewCards = [
   {
@@ -70,7 +70,7 @@ function SectionTitle({ label, title, description }: { label: string; title: str
 
 export default function PracticePage() {
   return (
-    <AppFrame>
+    <LearningFrame>
       <div className="space-y-5">
         <section className="overflow-hidden rounded-[2rem] bg-[#0F2D52] text-white shadow-sm">
           <div className="relative p-6 sm:p-8">
@@ -182,6 +182,6 @@ export default function PracticePage() {
           </div>
         </section>
       </div>
-    </AppFrame>
+    </LearningFrame>
   );
 }

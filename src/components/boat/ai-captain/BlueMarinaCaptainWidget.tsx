@@ -78,7 +78,9 @@ export function BlueMarinaCaptainWidget() {
   const pauseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const followModeRef = useRef(false);
   const isFishSession = pathname?.startsWith("/fish") ?? false;
-  const usesContentSafeArea = pathname === "/today-sea" || ["/contact", "/privacy", "/terms"].includes(pathname ?? "") || (pathname?.startsWith("/account") ?? false) || (pathname?.startsWith("/fishing-spots") ?? false);
+  // Keep the companion out of titles and actions on document-style screens.
+  // The immersive map surfaces retain their existing free-moving behavior.
+  const usesContentSafeArea = pathname !== "/sea" && pathname !== "/sea/navigation";
   const panelTitle = isFishSession ? "어종 도감 안내" : `${defaultCaptainName} · ${defaultCaptainSpecies}`;
   const paused = usesContentSafeArea || isOpen || isHovered || (reducedMotion && !isFollowMode);
 
@@ -278,7 +280,7 @@ export function BlueMarinaCaptainWidget() {
 
   return (
     <>
-      {isFollowMode && lurePosition ? (
+      {!usesContentSafeArea && isFollowMode && lurePosition ? (
         <span
           className="blue-captain-lure"
           style={{ left: `${lurePosition.x}px`, top: `${lurePosition.y}px` }}
