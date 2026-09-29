@@ -1,0 +1,92 @@
+{
+  "program": "BLUE_MARINA_CHARTER_REMOTE_ACTIVATION_V1",
+  "asOf": "2026-09-29",
+  "decision": "CHARTER_BACKEND_PRODUCTION_ACTIVE_WITH_LIMITATIONS",
+  "production": {
+    "url": "https://blue-marina.vercel.app",
+    "ready": true,
+    "deployedSha": "a4e8a8ad25e33c07b8def983d6d71a58cb493b11",
+    "mainMatchesDeployment": true
+  },
+  "featureFlag": {
+    "name": "CHARTER_SUPPLY_INTAKE_ENABLED",
+    "productionEnabled": true,
+    "marketFlagsChanged": false
+  },
+  "auth": {
+    "provider": "Kakao",
+    "supplierRoleRequired": false,
+    "loginReturnToOnboarding": "PASS",
+    "ownerRevisit": "PASS",
+    "crossUserJwtE2E": "NOT_RUN_NO_SECOND_USER"
+  },
+  "submission": {
+    "rehearsalRows": 1,
+    "clearlyMarkedTest": true,
+    "ownerLinked": true,
+    "persisted": true,
+    "currentStatus": "REVIEW_REQUIRED",
+    "validationErrors": 0,
+    "validationWarnings": 2,
+    "repeatedValidationStable": true,
+    "mofCrosswalk": "NO_MATCH",
+    "auditEvents": 5,
+    "excludedFromRealSupplyKpi": true
+  },
+  "adminBoundary": {
+    "normalUserListDenied": true,
+    "normalUserDetailDenied": true,
+    "adminRoleRequiredForReview": true,
+    "approvedAdminE2E": "NOT_RUN_NO_CHARTER_ADMIN"
+  },
+  "publication": {
+    "reviewRows": 0,
+    "promotionCandidates": 0,
+    "publicOffers": 0,
+    "automaticPublication": 0
+  },
+  "csv": {
+    "templateHttpStatus": 200,
+    "dryRunContractTested": true,
+    "bulkTestRowsCreated": 0
+  },
+  "security": {
+    "anonymousApiHttpStatus": 401,
+    "privateNoStore": true,
+    "apiNoindexNofollow": true,
+    "charterTablesWithRls": 4,
+    "anonDirectSelectOrInsertGrants": 0,
+    "authenticatedDirectSelectOrInsertGrants": 0,
+    "securityAdvisorCriticalHigh": 0,
+    "remoteMigrationOrDdl": 0
+  },
+  "dataIntegrity": {
+    "fishSpecies": 1258,
+    "marineOrganisms": 3016,
+    "authUsers": 3,
+    "profiles": 3,
+    "savedItems": 0,
+    "accountProfileOrSavedMutations": 0,
+    "marketMutations": 0
+  },
+  "ui": {
+    "mobile": "390x844_PASS_NO_HORIZONTAL_OVERFLOW",
+    "desktop": "1280x900_PASS_NO_HORIZONTAL_OVERFLOW",
+    "routes": ["/charters", "/charters/partners", "/charters/onboarding"]
+  },
+  "verification": {
+    "targeted": "25/25 PASS",
+    "total": "1330 PASS / 1 SKIP",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "diffCheck": "PASS"
+  },
+  "limitations": [
+    "No charter_admin account for approval success E2E",
+    "No second user session for cross-user JWT E2E",
+    "Marked test submission remains REVIEW_REQUIRED and is excluded from supply KPI",
+    "Actor rate limit is per server instance"
+  ],
+  "nextAction": "MARKET_BACKEND_PRODUCTION_ACTIVATION"
+}
