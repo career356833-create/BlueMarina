@@ -43,7 +43,8 @@ export function MarketListingForm() {
       const client=createClient();const token=(await client?.auth.getSession())?.data.session?.access_token;
       if(!client||!token){setSubmitError("로그인과 활성화된 Market backend가 필요합니다.");return}
       idempotencyKey.current??=`market-${crypto.randomUUID()}`;
-      const response=await fetch(editId?`/api/market/listings/${encodeURIComponent(editId)}`:"/api/market/listings",{method:editId?"PATCH":"POST",headers:{"Content-Type":"application/json",Authorization:`Bearer ${token}`,...(!editId?{"Idempotency-Key":idempotencyKey.current}:{})},body:JSON.stringify(result.sanitized),cache:"no-store"});
+      const beforeUpload={...result.sanitized,images:existingImages};
+      const response=await fetch(editId?`/api/market/listings/${encodeURIComponent(editId)}`:"/api/market/listings",{method:editId?"PATCH":"POST",headers:{"Content-Type":"application/json",Authorization:`Bearer ${token}`,...(!editId?{"Idempotency-Key":idempotencyKey.current}:{})},body:JSON.stringify(beforeUpload),cache:"no-store"});
       const body=await response.json() as {listingId?:string;status?:string;moderationStatus?:string;record?:OwnListing;code?:string};
       const listingId=editId??body.listingId;if(!response.ok||!listingId){setSubmitError(body.code??"INTERNAL_ERROR");return}
       setEditId(listingId);
@@ -53,6 +54,10 @@ export function MarketListingForm() {
         if(!intentResponse.ok||!intent.path||!intent.token){setSubmitError(`판매글은 비공개로 저장됐지만 이미지 준비에 실패했습니다: ${intent.code??"INTERNAL_ERROR"}`);await loadMine();return}
         const uploaded=await client.storage.from("market-listing-staging").uploadToSignedUrl(intent.path,intent.token,image.file,{contentType:image.type,upsert:false});
         if(uploaded.error){setSubmitError("판매글은 비공개로 저장됐지만 이미지 업로드에 실패했습니다. 관리자 승인 전까지 공개되지 않습니다.");await loadMine();return}
+      }
+      if(images.length){
+        const attachResponse=await fetch(`/api/market/listings/${encodeURIComponent(listingId)}`,{method:"PATCH",headers:{"Content-Type":"application/json",Authorization:`Bearer ${token}`},body:JSON.stringify(result.sanitized),cache:"no-store"});
+        if(!attachResponse.ok){setSubmitError("파일은 비공개 버킷에 저장됐지만 판매글 이미지 연결을 확인하지 못했습니다. 다시 제출하지 말고 운영자에게 문의해 주세요.");await loadMine();return}
       }
       setExistingImages(result.sanitized.images);setImages([]);
       setSubmitResult({listingId,status:body.record?.listing.status??body.status??"SUBMITTED",moderationStatus:body.record?.moderationStatus??body.moderationStatus??"REVIEW_REQUIRED"});
