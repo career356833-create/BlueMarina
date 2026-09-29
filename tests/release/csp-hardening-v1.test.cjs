@@ -30,10 +30,10 @@ test('Kakao origins are allowed only in observed script and image destinations',
   assert.deepEqual(d['img-src'], ["'self'", 'data:', 'blob:', 'https://t1.daumcdn.net', 'https://mts.daumcdn.net']);
 });
 
-test('MapLibre uses its local worker and explicit OSM fetch origin', async () => {
+test('MapLibre uses its local worker and only measured OSM and Supabase fetch origins', async () => {
   const d = await directives();
   assert.deepEqual(d['worker-src'], ["'self'"]);
-  assert.deepEqual(d['connect-src'], ["'self'", 'https://tile.openstreetmap.org']);
+  assert.deepEqual(d['connect-src'], ["'self'", 'https://tile.openstreetmap.org', 'https://mlfvpaikfpjrgrhwlrjn.supabase.co']);
   const source = fs.readFileSync(path.join(root, 'src/components/boat/navigation/adapters/MapLibreNavigationProvider.ts'), 'utf8');
   assert.match(source, /setWorkerUrl\("\/maplibre\/maplibre-gl-worker.mjs"\)/);
 });
@@ -43,7 +43,7 @@ test('no wildcard global scheme eval or speculative Supabase origin is allowed',
   for (const values of Object.values(d)) for (const value of values) {
     assert.ok(!value.includes('*'));
     assert.ok(!['https:', 'http:', "'unsafe-eval'", "'wasm-unsafe-eval'"].includes(value));
-    assert.ok(!value.includes('supabase'));
+    if (value.includes('supabase')) assert.equal(value, 'https://mlfvpaikfpjrgrhwlrjn.supabase.co');
   }
   assert.deepEqual(d['media-src'], ["'self'"]);
   assert.deepEqual(d['font-src'], ["'self'"]);

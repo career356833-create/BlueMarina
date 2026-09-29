@@ -8,7 +8,7 @@ const contentSecurityPolicy = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net",
   "font-src 'self'",
-  "connect-src 'self' https://tile.openstreetmap.org",
+  "connect-src 'self' https://tile.openstreetmap.org https://mlfvpaikfpjrgrhwlrjn.supabase.co",
   "media-src 'self'",
   "worker-src 'self'",
   "frame-src 'none'",
