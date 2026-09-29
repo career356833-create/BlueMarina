@@ -30,7 +30,7 @@ export interface SupplyIntakeRepository {
   find(id: string): Promise<StoredSupplySubmission | null>;
   findByIdempotency(submittedBy: string, idempotencyKey: string): Promise<StoredSupplySubmission | null>;
   findByContentHash(submittedBy: string, contentHash: string): Promise<StoredSupplySubmission | null>;
-  list(limit: number): Promise<StoredSupplySubmission[]>;
+  list(limit: number, submittedBy?: string): Promise<StoredSupplySubmission[]>;
   create(value: StoredSupplySubmission): Promise<StoredSupplySubmission>;
   update(value: StoredSupplySubmission): Promise<StoredSupplySubmission>;
   appendReview(value: IntakeReviewRecord): Promise<void>;

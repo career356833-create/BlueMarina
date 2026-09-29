@@ -9,7 +9,7 @@ export class InMemorySupplyIntakeRepository implements SupplyIntakeRepository {
   async find(id: string) { const value = this.submissions.get(id); return value ? clone(value) : null; }
   async findByIdempotency(submittedBy: string, key: string) { return [...this.submissions.values()].find((value) => value.submittedBy === submittedBy && value.idempotencyKey === key) ?? null; }
   async findByContentHash(submittedBy: string, hash: string) { return [...this.submissions.values()].find((value) => value.submittedBy === submittedBy && value.contentHash === hash) ?? null; }
-  async list(limit: number) { return [...this.submissions.values()].sort((a, b) => b.submittedAt.localeCompare(a.submittedAt)).slice(0, limit).map(clone); }
+  async list(limit: number, submittedBy?: string) { return [...this.submissions.values()].filter((value) => !submittedBy || value.submittedBy === submittedBy).sort((a, b) => b.submittedAt.localeCompare(a.submittedAt)).slice(0, limit).map(clone); }
   async create(value: StoredSupplySubmission) { this.submissions.set(value.id, clone(value)); return clone(value); }
   async update(value: StoredSupplySubmission) { const prior = this.submissions.get(value.id); if (!prior) throw new Error("MISSING"); if (JSON.stringify(prior.rawPayload) !== JSON.stringify(value.rawPayload)) throw new Error("IMMUTABLE_SOURCE"); this.submissions.set(value.id, clone(value)); return clone(value); }
   async appendReview(value: IntakeReviewRecord) { this.reviews.push(clone(value)); }
