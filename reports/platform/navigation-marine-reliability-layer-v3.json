@@ -1,0 +1,65 @@
+{
+  "program": "BLUE_MARINA_NAVIGATION_MARINE_SOURCE_RELIABILITY_LAYER_V3",
+  "decision": "NAVIGATION_MARINE_RELIABILITY_LAYER_COMPLETE_WITH_PROVIDER_LIMITATION",
+  "observedDateKst": "2026-09-29",
+  "scope": "local artifacts and read-only KHOA collection; no production activation",
+  "navigationAids": {
+    "storage": "versioned build artifact: src/data/marine-navigation/v3/navigation-aids.json",
+    "dataMode": "SNAPSHOT",
+    "aggregateStateAtCollection": "PARTIAL",
+    "validCategories": 4,
+    "requiredCategories": 9,
+    "itemCount": 201,
+    "nineOfNineAchieved": false,
+    "collectionWindows": 2,
+    "validation": ["closed XML", "pagination and total count", "identity and names", "coordinate bounds", "unique record IDs", "full category atomic write"],
+    "resume": "previous VALID categories skipped unless force-refresh",
+    "sourceObservedAt": null,
+    "reviewIntervalEvidence": "24-hour operational review interval inherited from earlier adapter; not provider update cadence or safety guarantee",
+    "categories": [
+      { "categoryId": "A01", "state": "FAILED", "attempts": 3, "itemCount": 0, "payloadChecksum": null, "lastSuccessAt": null, "lastErrorClass": "UPSTREAM_HTTP_503" },
+      { "categoryId": "A02", "state": "FAILED", "attempts": 3, "itemCount": 0, "payloadChecksum": null, "lastSuccessAt": null, "lastErrorClass": "TIMEOUT" },
+      { "categoryId": "A03", "state": "FAILED", "attempts": 3, "itemCount": 0, "payloadChecksum": null, "lastSuccessAt": null, "lastErrorClass": "INVALID_OR_INCOMPLETE_SOURCE" },
+      { "categoryId": "A04", "state": "VALID", "attempts": 3, "itemCount": 139, "payloadChecksum": "eaf53cd21a824b9717c8033aeffe3644600e7709e1c28eb9152803cdff600651", "lastSuccessAt": "2026-09-29T09:51:52.118Z", "lastErrorClass": null },
+      { "categoryId": "A05", "state": "FAILED", "attempts": 3, "itemCount": 0, "payloadChecksum": null, "lastSuccessAt": null, "lastErrorClass": "TIMEOUT" },
+      { "categoryId": "A06", "state": "FAILED", "attempts": 3, "itemCount": 0, "payloadChecksum": null, "lastSuccessAt": null, "lastErrorClass": "TIMEOUT" },
+      { "categoryId": "A07", "state": "VALID", "attempts": 2, "itemCount": 13, "payloadChecksum": "4c2f573ade8c5864a2213c16896d96be8cba2846047d712a2e9b8c181a5d6ecc", "lastSuccessAt": "2026-09-29T09:48:00.552Z", "lastErrorClass": null },
+      { "categoryId": "A08", "state": "VALID", "attempts": 2, "itemCount": 40, "payloadChecksum": "3368ad2eeab54ac93ca6ab5e2fa46875e1747c50a7b89774ac57f816728fd1c8", "lastSuccessAt": "2026-09-29T09:48:27.036Z", "lastErrorClass": null },
+      { "categoryId": "A09", "state": "VALID", "attempts": 3, "itemCount": 9, "payloadChecksum": "467616020a757f799e4540107d8afa0d1f1b13428eedf8c88fd791d1349153c4", "lastSuccessAt": "2026-09-29T09:51:02.693Z", "lastErrorClass": null }
+    ]
+  },
+  "navigationWarnings": {
+    "storage": ["src/data/marine-navigation/v3/navigation-warning-list.json", "src/data/marine-navigation/v3/navigation-warning-details.json"],
+    "freshList": true,
+    "listCacheHit": false,
+    "listDocuments": 7,
+    "listLastSuccessAt": "2026-09-29T09:53:09.386Z",
+    "listChecksum": "d34b6d7dbc291fd8c62d377622d3a416c3d4e07c71899838ce6399720488b73a",
+    "detailSuccess": 6,
+    "detailFailure": 1,
+    "failedDocumentNumbers": ["26-329"],
+    "failedReason": "TIMEOUT",
+    "stateWithinOperationalWindow": "PARTIAL",
+    "stateAfterExpiryOrListFailure": "CURRENT_STATUS_UNAVAILABLE",
+    "freshZeroListState": "AVAILABLE_EMPTY",
+    "freshnessPolicy": "10-minute operational cutoff from previous cache; source cadence not established, REVIEW_REQUIRED",
+    "historicalCurrentFallback": false
+  },
+  "architecture": {
+    "requestTimeKhoaFetchForAidsAndWarnings": false,
+    "serverlessWritableFilesystemAssumedDurable": false,
+    "collector": "manual, sequential, bounded retry and run window, atomic per-category/document writes",
+    "scheduledRefresh": false,
+    "productionDeployment": false
+  },
+  "regressions": {
+    "forecast": { "localHttp200": "3/3", "provider": "KMA", "interpretation": "model forecast; no safety inference" },
+    "roms": { "localHttp200": "5/5", "featureCount": 8, "dataKind": "ROMS_MODEL_FORECAST", "freshFetches": 1, "cachedFetches": 4 },
+    "kmaObservation": { "localOnly": true, "stations": 76, "observations": 194, "stationsWithoutMatchingObservation": 36, "productionEnvironmentChanged": false }
+  },
+  "ui": { "mobile390x844": "PASS", "desktop1280x900": "PASS", "horizontalOverflow": false, "mapVisible": true, "layerTogglesVisible": true, "snapshotProvenanceVisible": true, "partialWarningNoticeVisible": true, "warningRevalidationSeconds": 60, "panelBackgroundFix": "rgba(6,19,26,0.94)" },
+  "safety": { "safeRouteInference": false, "landReefDepthAvoidanceInference": false, "currentWarningFromHistoricalSnapshot": false, "inventedObservations": false },
+  "verification": { "v3TargetedTests": "7/7 PASS", "fullTests": "1327 PASS / 1 SKIP / 0 FAIL", "typecheck": "PASS", "lint": "PASS", "build": "PASS", "diffCheck": "PASS" },
+  "git": { "stage": 0, "commit": 0, "push": 0 },
+  "remoteMutation": { "productionDeploy": 0, "supabase": 0, "vercelEnvironment": 0 }
+}

@@ -39,9 +39,9 @@ export function NavigationMapShell(props: {
   onOceanCurrentModelSelect: (feature: KhoaRomsPoint) => void;
   onDeepWaterRouteStateChange: (state: "loading" | "ready" | "failed") => void;
   onHarborZoneStateChange: (state: "loading" | "ready" | "failed") => void;
-  onNavigationAidsStateChange: (state: "loading" | "ready" | "failed") => void;
+  onNavigationAidsStateChange: (state: "loading" | "ready" | "partial" | "stale" | "failed") => void;
   onTrainingFiringZoneStateChange: (state: "loading" | "ready" | "failed") => void;
-  onNavigationWarningsStateChange: (state: "loading" | "ready" | "failed") => void;
+  onNavigationWarningsStateChange: (state: "loading" | "ready" | "partial" | "current-unavailable" | "failed") => void;
   onTideStationsStateChange: (state: "loading" | "ready" | "failed") => void;
   onMarineWeatherStateChange: (state: "loading" | "ready" | "failed") => void;
   onMarineObservationsStateChange: (state: "loading" | "ready" | "failed") => void;

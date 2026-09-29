@@ -2,7 +2,7 @@ import { XMLParser } from "fast-xml-parser";
 import type { LayerSpecification, SourceSpecification } from "maplibre-gl";
 import type { NavigationMarineLayerConfig } from "./navigation-map-adapter";
 
-export const KHOA_NAVIGATION_WARNINGS_DATA_URL = "/api/sea-info/navigation-warnings";
+export const KHOA_NAVIGATION_WARNINGS_DATA_URL = "/api/sea-info/navigation-warnings/snapshot";
 export const KHOA_NAVIGATION_WARNINGS_LAYER_ID = "khoa-navigation-warnings";
 export const KHOA_NAVIGATION_WARNING_CACHE_SECONDS = 600;
 export const KHOA_NAVIGATION_WARNING_FRESH_MS = 15 * 60 * 1_000;
@@ -69,6 +69,12 @@ export type KhoaNavigationWarningGeoJson = {
 
 export type KhoaNavigationWarningsResponse = {
   ok: true;
+  state?: "AVAILABLE" | "PARTIAL" | "NO_DATA" | "AVAILABLE_EMPTY" | "CURRENT_STATUS_UNAVAILABLE";
+  successfulDetailCount?: number;
+  failedDetailCount?: number;
+  failedDocumentNumbers?: string[];
+  dataMode?: "SNAPSHOT";
+  historical?: { lastSuccessAt: string | null; documentCount: number; label: string } | null;
   warnings: KhoaNavigationWarning[];
   geoJson: KhoaNavigationWarningGeoJson;
   fetchedAt: string;
@@ -316,6 +322,6 @@ export function createKhoaNavigationWarningsLayerConfig(geoJson: KhoaNavigationW
 
 export function parseKhoaNavigationWarningsResponse(value: unknown): KhoaNavigationWarningsResponse {
   const input = record(value);
-  if (!input || input.ok !== true || !Array.isArray(input.warnings) || !record(input.geoJson)) throw new Error("Invalid KHOA navigation-warning response");
+  if (!input || input.ok !== true || !Array.isArray(input.warnings) || !record(input.geoJson) || (input.state !== "AVAILABLE" && input.state !== "PARTIAL" && input.state !== "NO_DATA" && input.state !== "AVAILABLE_EMPTY" && input.state !== "CURRENT_STATUS_UNAVAILABLE")) throw new Error("Invalid KHOA navigation-warning response");
   return value as KhoaNavigationWarningsResponse;
 }

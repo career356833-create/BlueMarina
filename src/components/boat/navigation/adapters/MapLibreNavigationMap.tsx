@@ -40,9 +40,9 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   onOceanCurrentModelSelect: (feature: KhoaRomsPoint) => void;
   onDeepWaterRouteStateChange: (state: "loading" | "ready" | "failed") => void;
   onHarborZoneStateChange: (state: "loading" | "ready" | "failed") => void;
-  onNavigationAidsStateChange: (state: "loading" | "ready" | "failed") => void;
+  onNavigationAidsStateChange: (state: "loading" | "ready" | "partial" | "stale" | "failed") => void;
   onTrainingFiringZoneStateChange: (state: "loading" | "ready" | "failed") => void;
-  onNavigationWarningsStateChange: (state: "loading" | "ready" | "failed") => void;
+  onNavigationWarningsStateChange: (state: "loading" | "ready" | "partial" | "current-unavailable" | "failed") => void;
   onTideStationsStateChange: (state: "loading" | "ready" | "failed") => void;
   onMarineWeatherStateChange: (state: "loading" | "ready" | "failed") => void;
   onMarineObservationsStateChange: (state: "loading" | "ready" | "failed") => void;
@@ -168,12 +168,12 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
     fetch(KHOA_NAVIGATION_AIDS_DATA_URL, { signal: controller.signal })
       .then((response) => {
         if (!response.ok) throw new Error(`KHOA navigation-aids request failed: ${response.status}`);
-        return response.json() as Promise<{ geoJson?: unknown }>;
+        return response.json() as Promise<{ state?: string; geoJson?: unknown }>;
       })
       .then((value) => {
         const collection = parseKhoaNavigationAidsGeoJson(value.geoJson);
         providerRef.current?.addMarineLayer(createKhoaNavigationAidsLayerConfig(collection, navigationAidsVisibleRef.current));
-        onNavigationAidsStateChange("ready");
+        onNavigationAidsStateChange(value.state === "PARTIAL" ? "partial" : value.state === "STALE" ? "stale" : value.state === "UNAVAILABLE" ? "failed" : "ready");
       })
       .catch((error: unknown) => {
         if (error instanceof DOMException && error.name === "AbortError") return;
@@ -209,26 +209,38 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   }, [onTrainingFiringZoneStateChange]);
 
   useEffect(() => {
-    const controller = new AbortController();
-    onNavigationWarningsStateChange("loading");
-    fetch(KHOA_NAVIGATION_WARNINGS_DATA_URL, { signal: controller.signal })
-      .then((response) => {
+    let active = true;
+    let pending = false;
+    let controller: AbortController | null = null;
+    const refresh = async () => {
+      if (pending || !active) return;
+      pending = true;
+      controller = new AbortController();
+      try {
+        const response = await fetch(KHOA_NAVIGATION_WARNINGS_DATA_URL, { signal: controller.signal, cache: "no-store" });
         if (!response.ok) throw new Error(`KHOA navigation-warning request failed: ${response.status}`);
-        return response.json() as Promise<unknown>;
-      })
-      .then((value) => {
-        const data = parseKhoaNavigationWarningsResponse(value);
-        providerRef.current?.addMarineLayer(createKhoaNavigationWarningsLayerConfig(data.geoJson, navigationWarningsVisibleRef.current));
+        const data = parseKhoaNavigationWarningsResponse(await response.json());
+        if (!active) return;
+        providerRef.current?.removeMarineLayer(KHOA_NAVIGATION_WARNINGS_LAYER_ID);
+        if (data.state !== "CURRENT_STATUS_UNAVAILABLE") providerRef.current?.addMarineLayer(createKhoaNavigationWarningsLayerConfig(data.geoJson, navigationWarningsVisibleRef.current));
         onNavigationWarningsDataChange(data);
-        onNavigationWarningsStateChange("ready");
-      })
-      .catch((error: unknown) => {
-        if (error instanceof DOMException && error.name === "AbortError") return;
+        onNavigationWarningsStateChange(data.state === "CURRENT_STATUS_UNAVAILABLE" ? "current-unavailable" : data.state === "PARTIAL" ? "partial" : "ready");
+      } catch (error) {
+        if (!active || error instanceof DOMException && error.name === "AbortError") return;
+        providerRef.current?.removeMarineLayer(KHOA_NAVIGATION_WARNINGS_LAYER_ID);
         onNavigationWarningsDataChange(null);
-        onNavigationWarningsStateChange("failed");
-      });
+        onNavigationWarningsStateChange("current-unavailable");
+      } finally {
+        pending = false;
+      }
+    };
+    onNavigationWarningsStateChange("loading");
+    void refresh();
+    const interval = window.setInterval(() => { void refresh(); }, 60_000);
     return () => {
-      controller.abort();
+      active = false;
+      window.clearInterval(interval);
+      controller?.abort();
       providerRef.current?.removeMarineLayer(KHOA_NAVIGATION_WARNINGS_LAYER_ID);
     };
   }, [onNavigationWarningsDataChange, onNavigationWarningsStateChange]);

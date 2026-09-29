@@ -98,7 +98,8 @@ test("MapLibre and controls register the default-off warning source without expo
   const map = fs.readFileSync(mapPath, "utf8");
   const control = fs.readFileSync(controlPath, "utf8");
   assert.match(map, /KHOA_NAVIGATION_WARNINGS_DATA_URL/);
-  assert.match(map, /onNavigationWarningsStateChange\("failed"\)/);
+  assert.match(map, /onNavigationWarningsStateChange\("current-unavailable"\)/);
+  assert.match(map, /removeMarineLayer\(KHOA_NAVIGATION_WARNINGS_LAYER_ID\)/);
   assert.doesNotMatch(map, /ServiceKey|KHOA_NAVIGATION_WARNING_API_KEY/);
   assert.match(control, /label="항행경보"/);
   assert.match(control, /기본 OFF/);

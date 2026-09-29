@@ -68,11 +68,11 @@ export function MarineNavigation({ initialDestination, initialQueryError, destin
   const [harborZoneVisible, setHarborZoneVisible] = useState(false);
   const [harborZoneState, setHarborZoneState] = useState<"loading" | "ready" | "failed">("loading");
   const [navigationAidsVisible, setNavigationAidsVisible] = useState(false);
-  const [navigationAidsState, setNavigationAidsState] = useState<"loading" | "ready" | "failed">("loading");
+  const [navigationAidsState, setNavigationAidsState] = useState<"loading" | "ready" | "partial" | "stale" | "failed">("loading");
   const [trainingFiringZoneVisible, setTrainingFiringZoneVisible] = useState(false);
   const [trainingFiringZoneState, setTrainingFiringZoneState] = useState<"loading" | "ready" | "failed">("loading");
   const [navigationWarningsVisible, setNavigationWarningsVisible] = useState(false);
-  const [navigationWarningsState, setNavigationWarningsState] = useState<"loading" | "ready" | "failed">("loading");
+  const [navigationWarningsState, setNavigationWarningsState] = useState<"loading" | "ready" | "partial" | "current-unavailable" | "failed">("loading");
   const [navigationWarningsData, setNavigationWarningsData] = useState<KhoaNavigationWarningsResponse | null>(null);
   const [navigationWarningFocus, setNavigationWarningFocus] = useState<KhoaNavigationWarning | null>(null);
   const [tideStationsVisible, setTideStationsVisible] = useState(false);

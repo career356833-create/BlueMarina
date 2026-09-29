@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Anchor, CloudSun, Layers3, LocateFixed, Navigation, ShieldAlert, Waves, X } from "lucide-react";
 import type { KhoaDeepWaterRouteProperties } from "@/lib/marine-navigation/adapters/khoa-deep-water-route";
 import type { KhoaHarborZoneProperties } from "@/lib/marine-navigation/adapters/khoa-harbor-zone";
@@ -14,7 +15,8 @@ import { MarineWeatherDetails } from "./MarineWeatherDetails";
 import { OceanCurrentModelDetails } from "./OceanCurrentModelDetails";
 import { TideStationDetails } from "./TideStationDetails";
 
-export type MarineLayerState = "loading" | "ready" | "failed";
+export type MarineLayerState = "loading" | "ready" | "partial" | "stale" | "current-unavailable" | "failed";
+type SnapshotHealth = { navigationAids: { state: string; categoriesComplete: number; categoriesPresent: number; lastSuccessAt: string | null }; navigationWarnings: { currentState: string; lastSuccessAt: string | null; documentCount: number; historicalOnly: boolean } };
 export type SelectedMarineFeature =
   | { kind: "deep-water-route"; properties: KhoaDeepWaterRouteProperties }
   | { kind: "harbor-zone"; properties: KhoaHarborZoneProperties }
@@ -28,10 +30,10 @@ export type SelectedMarineFeature =
 type GenericMarineFeature = Exclude<SelectedMarineFeature, { kind: "tide-station" } | { kind: "marine-weather" } | { kind: "marine-observation" } | { kind: "ocean-current-model" }>;
 
 function stateLabel(state: MarineLayerState, provider: "KHOA" | "KMA") {
-  return state === "loading" ? "LOADING" : state === "failed" ? "UNAVAILABLE" : provider;
+  return state === "loading" ? "LOADING" : state === "partial" ? "PARTIAL" : state === "stale" ? "STALE" : state === "current-unavailable" ? "CURRENT STATUS UNAVAILABLE" : state === "failed" ? "UNAVAILABLE" : provider;
 }
 
-function LayerToggle({ label, description, visible, state, onChange, icon, provider }: {
+function LayerToggle({ label, description, visible, state, onChange, icon, provider, provenance }: {
   label: string;
   description: string;
   visible: boolean;
@@ -39,17 +41,22 @@ function LayerToggle({ label, description, visible, state, onChange, icon, provi
   onChange: (visible: boolean) => void;
   icon: "layers" | "anchor" | "navigation" | "warning" | "tide" | "weather";
   provider?: "KHOA" | "KMA";
+  provenance?: string;
 }) {
   const Icon = icon === "anchor" ? Anchor : icon === "navigation" ? Navigation : icon === "warning" ? ShieldAlert : icon === "tide" ? Waves : icon === "weather" ? CloudSun : Layers3;
   return (
     <label className="flex cursor-pointer items-start gap-2.5 border-b border-white/10 py-1.5 last:border-b-0 sm:py-2.5">
-      <input type="checkbox" checked={visible} disabled={state === "failed" && !visible} onChange={(event) => onChange(event.target.checked)} className="mt-0.5 size-4 accent-[#c8a66c]" />
+      <input type="checkbox" checked={visible} disabled={(state === "failed" || state === "current-unavailable") && !visible} onChange={(event) => onChange(event.target.checked)} className="mt-0.5 size-4 accent-[#c8a66c]" />
       <Icon size={15} className="mt-0.5 text-[#d2b178]" aria-hidden="true" />
       <span className="min-w-0 flex-1">
         <span className="block text-xs">{label}</span>
         <span className="mt-0.5 hidden text-[9px] text-[#899793] sm:block">{description}</span>
+        {state === "partial" ? <span className="block text-[9px] text-[#d6a878]">일부 자료만 조회됨</span> : null}
+        {state === "stale" ? <span className="block text-[9px] text-[#d6a878]">마지막 검증 자료 · 현재 상태 아님</span> : null}
+        {state === "current-unavailable" ? <span className="block text-[9px] text-[#d6a878]">현재 경보 상태를 조회할 수 없음</span> : null}
+        {provenance ? <span className="block text-[9px] text-[#9baba5]">{provenance}</span> : null}
       </span>
-      <span className={`pt-0.5 text-[9px] ${state === "failed" ? "text-[#d58a7a]" : "text-[#879b96]"}`}>{stateLabel(state, provider ?? "KHOA")}</span>
+      <span className={`max-w-[100px] pt-0.5 text-right text-[9px] ${state === "failed" || state === "partial" || state === "stale" || state === "current-unavailable" ? "text-[#d6a878]" : "text-[#879b96]"}`}>{stateLabel(state, provider ?? "KHOA")}</span>
     </label>
   );
 }
@@ -118,13 +125,17 @@ function FeatureDetails({ selected, onClose }: { selected: GenericMarineFeature;
 }
 
 function NavigationWarningList({ data, onFocus }: { data: KhoaNavigationWarningsResponse; onFocus: (warning: KhoaNavigationWarning) => void }) {
-  const freshnessLabel = data.freshness === "fresh" ? "최신" : data.freshness === "stale" ? "갱신 지연" : "사용 불가";
+  const freshnessLabel = data.freshness === "fresh" ? "최근 수신" : data.freshness === "stale" ? "갱신 지연" : "사용 불가";
+  const documentCount = new Set(data.warnings.map((warning) => warning.documentNumber)).size;
   return (
-    <section className="mt-2 border border-white/15 bg-[#06131a]/96 p-3 shadow-xl backdrop-blur-md" aria-label="항행경보 목록">
+    <section className="mt-2 border border-white/15 p-3 shadow-xl backdrop-blur-md" style={{ backgroundColor: "rgba(6, 19, 26, 0.96)" }} aria-label="항행경보 목록">
       <div className="flex items-center justify-between gap-3 border-b border-white/10 pb-2">
-        <div><p className="text-[9px] tracking-[0.12em] text-[#d2b178]">DYNAMIC SAFETY</p><p className="mt-0.5 text-xs">항행경보 {data.warnings.length}건</p></div>
+        <div><p className="text-[9px] tracking-[0.12em] text-[#d2b178]">DYNAMIC SAFETY</p><p className="mt-0.5 text-xs">{data.state === "CURRENT_STATUS_UNAVAILABLE" ? "항행경보 현재 상태 미확인" : `항행경보 문서 ${documentCount}건`}</p></div>
         <span className={`text-[9px] ${data.freshness === "fresh" ? "text-[#8bbca9]" : "text-[#d6a878]"}`}>{freshnessLabel}</span>
       </div>
+      {data.state === "PARTIAL" ? <p className="mt-2 border-l-2 border-[#d6a878] px-2 text-[9px] leading-4 text-[#dbc8a9]">일부 상세자료를 받지 못했습니다. 위치가 표시되지 않을 수 있습니다.</p> : null}
+      {data.state === "CURRENT_STATUS_UNAVAILABLE" ? <p className="mt-2 border-l-2 border-[#d6a878] px-2 text-[9px] leading-4 text-[#dbc8a9]">현재 경보 상태를 조회할 수 없음 · 과거 자료는 현재 경보나 안전 판정에 사용하지 않습니다.</p> : null}
+      {data.state === "NO_DATA" || data.state === "AVAILABLE_EMPTY" ? <p className="mt-2 text-[9px] text-[#dbc8a9]">현재 조회된 경보 없음 · 안전 판정 아님</p> : null}
       <div className="bm-navigation-scrollbar max-h-44 overflow-y-auto">
         {data.warnings.map((warning) => (
           <button key={warning.id} type="button" onClick={() => onFocus(warning)} className="flex w-full items-start gap-2 border-b border-white/8 py-2 text-left last:border-0">
@@ -134,7 +145,7 @@ function NavigationWarningList({ data, onFocus }: { data: KhoaNavigationWarnings
           </button>
         ))}
       </div>
-      <p className="mt-2 text-[8px] leading-3 text-[#899793]">마지막 성공 수신 {new Date(data.lastSuccessfulFetchAt).toLocaleString("ko-KR")}</p>
+      <p className="mt-2 text-[8px] leading-3 text-[#899793]">마지막 성공 수신 {data.lastSuccessfulFetchAt ? new Date(data.lastSuccessfulFetchAt).toLocaleString("ko-KR") : "없음"}</p>
     </section>
   );
 }
@@ -199,14 +210,24 @@ export function MarineLayerControl({ deepWaterRouteVisible, deepWaterRouteState,
   onNavigationWarningFocus: (warning: KhoaNavigationWarning) => void;
   onCloseFeature: () => void;
 }) {
+  const [snapshotHealth, setSnapshotHealth] = useState<SnapshotHealth | null>(null);
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch("/api/sea-info/navigation-source-health", { signal: controller.signal, cache: "no-store" })
+      .then((response) => response.ok ? response.json() as Promise<SnapshotHealth> : null)
+      .then((value) => { if (value) setSnapshotHealth(value); })
+      .catch(() => {});
+    return () => controller.abort();
+  }, []);
+  const formatLastSuccess = (value: string | null | undefined) => value ? new Date(value).toLocaleString("ko-KR") : "없음";
   return (
     <div className="bm-navigation-scrollbar absolute right-[calc(3.5rem+env(safe-area-inset-right))] top-[calc(max(0.75rem,env(safe-area-inset-top))+6.75rem)] z-[500] max-h-[calc(100%-13rem)] w-[min(292px,calc(100%-4.25rem-env(safe-area-inset-right)))] sm:right-3 sm:top-14 sm:w-[min(292px,calc(100vw-24px))] overflow-y-auto text-[#f2eee3]">
-      {selected?.kind !== "tide-station" && selected?.kind !== "marine-weather" && selected?.kind !== "marine-observation" && selected?.kind !== "ocean-current-model" ? <div className="border border-white/15 bg-[#06131a]/94 px-3 shadow-xl backdrop-blur-md" aria-label="해양 레이어">
+      {selected?.kind !== "tide-station" && selected?.kind !== "marine-weather" && selected?.kind !== "marine-observation" && selected?.kind !== "ocean-current-model" ? <div className="border border-white/15 px-3 shadow-xl backdrop-blur-md" style={{ backgroundColor: "rgba(6, 19, 26, 0.94)" }} aria-label="해양 레이어">
         <LayerToggle label="깊은수심 항로" description="국립해양조사원 공개 공간정보" visible={deepWaterRouteVisible} state={deepWaterRouteState} onChange={onDeepWaterRouteVisibleChange} icon="layers" />
         <LayerToggle label="항만구역" description="전자해도 기반 항만 면형정보" visible={harborZoneVisible} state={harborZoneState} onChange={onHarborZoneVisibleChange} icon="anchor" />
-        <LayerToggle label="항행표지" description="전국 항로표지 · 기본 OFF" visible={navigationAidsVisible} state={navigationAidsState} onChange={onNavigationAidsVisibleChange} icon="navigation" />
+        <LayerToggle label="항행표지" description="전국 항로표지 · 기본 OFF" visible={navigationAidsVisible} state={navigationAidsState} onChange={onNavigationAidsVisibleChange} icon="navigation" provenance={snapshotHealth ? `SNAPSHOT ${snapshotHealth.navigationAids.categoriesComplete}/9 · 마지막 검증 ${formatLastSuccess(snapshotHealth.navigationAids.lastSuccessAt)}` : undefined} />
         <LayerToggle label="훈련·사격구역" description="공개 경계 · 활성 상태 아님" visible={trainingFiringZoneVisible} state={trainingFiringZoneState} onChange={onTrainingFiringZoneVisibleChange} icon="warning" />
-        <LayerToggle label="항행경보" description="동적 안전정보 · 기본 OFF" visible={navigationWarningsVisible} state={navigationWarningsState} onChange={onNavigationWarningsVisibleChange} icon="warning" />
+        <LayerToggle label="항행경보" description="동적 안전정보 · 기본 OFF" visible={navigationWarningsVisible} state={navigationWarningsState} onChange={onNavigationWarningsVisibleChange} icon="warning" provenance={snapshotHealth ? `SNAPSHOT · 마지막 성공 ${formatLastSuccess(snapshotHealth.navigationWarnings.lastSuccessAt)}${snapshotHealth.navigationWarnings.historicalOnly ? " · 과거 자료" : ""}` : undefined} />
         <LayerToggle label="조석 관측소" description="공식 고·저조 예측 · 기본 OFF" visible={tideStationsVisible} state={tideStationsState} onChange={onTideStationsVisibleChange} icon="tide" />
         <LayerToggle label="해양기상 예보" description="KMA 소해구 모델 예측 · 기본 OFF" visible={marineWeatherVisible} state={marineWeatherState} onChange={onMarineWeatherVisibleChange} icon="weather" provider="KMA" />
         <LayerToggle label="해양기상 관측" description="KMA 실측 관측소 · 기본 OFF" visible={marineObservationsVisible} state={marineObservationsState} onChange={onMarineObservationsVisibleChange} icon="weather" provider="KMA" />

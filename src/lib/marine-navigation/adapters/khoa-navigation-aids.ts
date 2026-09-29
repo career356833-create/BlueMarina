@@ -5,7 +5,7 @@ export const KHOA_NAVIGATION_AIDS_ENDPOINT = "https://apis.data.go.kr/1192136/Bu
 export const KHOA_NAVIGATION_AIDS_SOURCE = "국립해양조사원(KHOA)" as const;
 export const KHOA_NAVIGATION_AIDS_REVALIDATE_SECONDS = 86_400;
 export const KHOA_NAVIGATION_AIDS_LAYER_ID = "khoa-navigation-aids";
-export const KHOA_NAVIGATION_AIDS_DATA_URL = "/api/sea-info/navigation-aids";
+export const KHOA_NAVIGATION_AIDS_DATA_URL = "/api/sea-info/navigation-aids/snapshot";
 
 export const KHOA_NAVIGATION_AID_CATEGORY_LABELS = {
   A01: "고정표지",
