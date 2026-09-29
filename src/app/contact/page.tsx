@@ -1,4 +1,4 @@
-import { AppFrame } from "@/components/boat/AppFrame";
+import { DetailFrame } from "@/components/platform/PageFamilies";
 import { PageBackButton } from "@/components/boat/InformationNavigation";
 
 const email = "chung356833@gmail.com";
@@ -12,16 +12,16 @@ const labels = {
 
 export default function ContactPage() {
   return (
-    <AppFrame>
+    <DetailFrame width="reading">
       <PageBackButton />
-      <section className="rounded-3xl border border-sky-100 bg-white p-6 shadow-sm">
-        <p className="text-sm font-black text-sky-700">Blue Marina</p>
-        <h1 className="mt-2 text-2xl font-black text-slate-950">{labels.title}</h1>
-        <div className="mt-5 space-y-4 text-sm font-semibold leading-7 text-slate-600">
+      <section className="bm-detail-section mt-5 p-6 sm:p-9">
+        <p className="bm-eyebrow">Blue Marina</p>
+        <h1 className="mt-2 text-3xl">{labels.title}</h1>
+        <div className="mt-5 space-y-4 text-sm leading-7 text-[var(--bm-foreground-muted)]">
           <p>{labels.operator}</p>
-          <div className="rounded-2xl bg-slate-50 p-4">
-            <p className="text-xs font-black text-slate-500">{labels.emailLabel}</p>
-            <a className="mt-1 block break-all text-base font-black text-sky-700" href={`mailto:${email}`}>
+          <div className="rounded-2xl border border-[var(--bm-border)] bg-[var(--bm-surface-elevated)] p-4">
+            <p className="text-xs font-bold">{labels.emailLabel}</p>
+            <a className="mt-1 block break-all text-base font-bold text-[var(--bm-brand-accent)] underline" href={`mailto:${email}`}>
               {email}
             </a>
           </div>
@@ -29,6 +29,6 @@ export default function ContactPage() {
           <p>{labels.body}</p>
         </div>
       </section>
-    </AppFrame>
+    </DetailFrame>
   );
 }

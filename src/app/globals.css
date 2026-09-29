@@ -154,6 +154,7 @@ select {
 .bm-status-notice[data-tone="success"] { border-color: var(--bm-success); }
 .bm-status-notice[data-tone="warning"], .bm-status-notice[data-tone="limited"] { border-color: var(--bm-warning); }
 .bm-status-notice[data-tone="danger"], .bm-status-notice[data-tone="blocked"] { border-color: var(--bm-danger); }
+.bm-v3-public :is(button, a, input, select, textarea):focus-visible { outline: 2px solid var(--bm-brand-accent); outline-offset: 3px; }
 @media (max-width: 639px) {
   .bm-learning-page { padding: 1rem; }
 }

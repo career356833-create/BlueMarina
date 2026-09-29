@@ -60,47 +60,46 @@ export default function DictionaryPage() {
   };
 
   return (
-    <AppFrame>
-      <div className="space-y-5">
-        <section className="overflow-hidden rounded-[2rem] bg-[#0F2D52] text-white shadow-sm">
+    <AppFrame family="discovery">
+      <div className="bm-v3-public mx-auto max-w-[var(--bm-content-reading)] space-y-5">
+        <section className="bm-page-hero overflow-hidden">
           <div className="relative p-6 sm:p-8">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(56,189,248,0.38),transparent_35%),linear-gradient(135deg,rgba(14,116,144,0.42),transparent_55%)]" />
-            <div className="relative">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 text-sky-100 ring-1 ring-white/20">
+                        <div className="relative">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--bm-surface)]/15 text-white/75 ring-1 ring-white/20">
                 <BookOpen size={30} />
               </div>
-              <p className="mt-5 text-sm font-black text-sky-100">Blue Marina Dictionary</p>
-              <h1 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">해양용어사전</h1>
-              <p className="mt-3 max-w-2xl text-sm font-semibold leading-7 text-sky-50 sm:text-base">
+              <p className="mt-5 text-sm font-black text-white/75">Blue Marina Dictionary</p>
+              <h1 className="mt-2 text-3xl font-serif font-normal tracking-tight sm:text-4xl">해양용어사전</h1>
+              <p className="mt-3 max-w-2xl text-sm font-semibold leading-7 text-white/80 sm:text-base">
                 조종면허 학습과 해양레저 활동에서 자주 만나는 용어를 쉽게 찾아볼 수 있는 기본 사전입니다.
               </p>
               <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                <div className="rounded-2xl bg-white/10 p-4">
+                <div className="rounded-2xl bg-[var(--bm-surface)]/10 p-4">
                   <p className="text-2xl font-black">{marineDictionary.length}</p>
-                  <p className="mt-1 text-xs font-bold text-sky-100">등록 용어</p>
+                  <p className="mt-1 text-xs font-bold text-white/75">등록 용어</p>
                 </div>
-                <div className="rounded-2xl bg-white/10 p-4">
+                <div className="rounded-2xl bg-[var(--bm-surface)]/10 p-4">
                   <p className="text-2xl font-black">{marineDictionaryCategories.length}</p>
-                  <p className="mt-1 text-xs font-bold text-sky-100">카테고리</p>
+                  <p className="mt-1 text-xs font-bold text-white/75">카테고리</p>
                 </div>
-                <div className="rounded-2xl bg-white/10 p-4">
+                <div className="rounded-2xl bg-[var(--bm-surface)]/10 p-4">
                   <p className="text-2xl font-black">모바일</p>
-                  <p className="mt-1 text-xs font-bold text-sky-100">검색 최적화</p>
+                  <p className="mt-1 text-xs font-bold text-white/75">검색 최적화</p>
                 </div>
-                <div className="rounded-2xl bg-white/10 p-4">
+                <div className="rounded-2xl bg-[var(--bm-surface)]/10 p-4">
                   <p className="text-2xl font-black">기초</p>
-                  <p className="mt-1 text-xs font-bold text-sky-100">초보자 기준</p>
+                  <p className="mt-1 text-xs font-bold text-white/75">초보자 기준</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="rounded-[2rem] border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
+        <section className="rounded-[2rem] border border-[var(--bm-border)] bg-[var(--bm-surface)] p-5 shadow-sm sm:p-6">
           <div className="grid gap-4 lg:grid-cols-[1fr_0.8fr] lg:items-end">
-            <label className="grid gap-2 text-sm font-black text-slate-800">
+            <label className="grid gap-2 text-sm font-black text-[var(--bm-foreground)]">
               <span className="flex items-center gap-2">
-                <Search size={18} className="text-sky-700" />
+                <Search size={18} className="text-[var(--bm-brand-accent)]" />
                 용어 검색
               </span>
               <input
@@ -110,19 +109,19 @@ export default function DictionaryPage() {
                   setPage(1);
                 }}
                 placeholder="좌현, 만조, 엔진, 감성돔..."
-                className="min-h-12 rounded-2xl border border-sky-100 bg-slate-50 px-4 text-sm font-bold text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-sky-400 focus:bg-white"
+                className="min-h-12 rounded-2xl border border-[var(--bm-border)] bg-[var(--bm-surface-elevated)] px-4 text-sm font-bold text-[var(--bm-foreground)] outline-none transition placeholder:text-[var(--bm-foreground-muted)] focus:border-[var(--bm-brand-accent)] focus:bg-[var(--bm-surface)]"
               />
             </label>
 
-            <label className="grid gap-2 text-sm font-black text-slate-800">
+            <label className="grid gap-2 text-sm font-black text-[var(--bm-foreground)]">
               <span className="flex items-center gap-2">
-                <Filter size={18} className="text-sky-700" />
+                <Filter size={18} className="text-[var(--bm-brand-accent)]" />
                 카테고리
               </span>
               <select
                 value={category}
                 onChange={(event) => setCategoryFilter(event.target.value as CategoryFilter)}
-                className="min-h-12 rounded-2xl border border-sky-100 bg-slate-50 px-4 text-sm font-bold text-slate-800 outline-none transition focus:border-sky-400 focus:bg-white"
+                className="min-h-12 rounded-2xl border border-[var(--bm-border)] bg-[var(--bm-surface-elevated)] px-4 text-sm font-bold text-[var(--bm-foreground)] outline-none transition focus:border-[var(--bm-brand-accent)] focus:bg-[var(--bm-surface)]"
               >
                 <option value="전체">전체 카테고리</option>
                 {marineDictionaryCategories.map((item) => (
@@ -137,9 +136,9 @@ export default function DictionaryPage() {
           <div className="mt-5 flex flex-wrap gap-2">
             <button
               type="button"
-              onClick={() => setCategoryFilter("전체")}
-              className={`min-h-10 rounded-full px-4 text-xs font-black transition ${
-                category === "전체" ? "bg-sky-700 text-white" : "bg-slate-100 text-slate-600 hover:bg-sky-50 hover:text-sky-700"
+              aria-pressed={category === "전체"} onClick={() => setCategoryFilter("전체")}
+              className={`min-h-11 rounded-full px-4 text-xs font-black transition ${
+                category === "전체" ? "bg-[var(--bm-brand-accent)] text-[var(--bm-ink)]" : "bg-[var(--bm-surface-elevated)] text-[var(--bm-foreground-muted)] hover:bg-[var(--bm-surface-elevated)] hover:text-[var(--bm-brand-accent)]"
               }`}
             >
               전체 ({marineDictionary.length})
@@ -148,9 +147,9 @@ export default function DictionaryPage() {
               <button
                 key={item}
                 type="button"
-                onClick={() => setCategoryFilter(item)}
-                className={`min-h-10 rounded-full px-4 text-xs font-black transition ${
-                  category === item ? "bg-sky-700 text-white" : "bg-slate-100 text-slate-600 hover:bg-sky-50 hover:text-sky-700"
+                aria-pressed={category === item} onClick={() => setCategoryFilter(item)}
+                className={`min-h-11 rounded-full px-4 text-xs font-black transition ${
+                  category === item ? "bg-[var(--bm-brand-accent)] text-[var(--bm-ink)]" : "bg-[var(--bm-surface-elevated)] text-[var(--bm-foreground-muted)] hover:bg-[var(--bm-surface-elevated)] hover:text-[var(--bm-brand-accent)]"
                 }`}
               >
                 {item} ({getCategoryCount(item)})
@@ -158,14 +157,14 @@ export default function DictionaryPage() {
             ))}
           </div>
 
-          <div className="mt-5 rounded-2xl border border-sky-100 bg-sky-50/60 p-3">
-            <p className="mb-2 text-xs font-black text-sky-800">가나다 색인</p>
+          <div className="mt-5 rounded-2xl border border-[var(--bm-border)] bg-[var(--bm-surface-elevated)]/60 p-3">
+            <p className="mb-2 text-xs font-black text-[var(--bm-brand-accent)]">가나다 색인</p>
             <div className="flex flex-wrap gap-2">
               <button
                 type="button"
-                onClick={() => setInitialFilter("전체")}
-                className={`min-h-9 rounded-full px-3 text-xs font-black transition ${
-                  initial === "전체" ? "bg-[#0F2D52] text-white" : "bg-white text-slate-600 hover:bg-sky-100 hover:text-sky-800"
+                aria-pressed={initial === "전체"} onClick={() => setInitialFilter("전체")}
+                className={`min-h-11 rounded-full px-3 text-xs font-black transition ${
+                  initial === "전체" ? "bg-[var(--bm-brand-accent)] text-[var(--bm-ink)]" : "bg-[var(--bm-surface)] text-[var(--bm-foreground-muted)] hover:bg-[var(--bm-surface-elevated)] hover:text-[var(--bm-brand-accent)]"
                 }`}
               >
                 전체
@@ -174,9 +173,9 @@ export default function DictionaryPage() {
                 <button
                   key={item}
                   type="button"
-                  onClick={() => setInitialFilter(item)}
-                  className={`min-h-9 min-w-9 rounded-full px-3 text-xs font-black transition ${
-                    initial === item ? "bg-[#0F2D52] text-white" : "bg-white text-slate-600 hover:bg-sky-100 hover:text-sky-800"
+                  aria-pressed={initial === item} onClick={() => setInitialFilter(item)}
+                  className={`min-h-11 min-w-9 rounded-full px-3 text-xs font-black transition ${
+                    initial === item ? "bg-[var(--bm-brand-accent)] text-[var(--bm-ink)]" : "bg-[var(--bm-surface)] text-[var(--bm-foreground-muted)] hover:bg-[var(--bm-surface-elevated)] hover:text-[var(--bm-brand-accent)]"
                   }`}
                 >
                   {item}
@@ -186,44 +185,44 @@ export default function DictionaryPage() {
           </div>
         </section>
 
-        <section className="rounded-[2rem] border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
+        <section className="rounded-[2rem] border border-[var(--bm-border)] bg-[var(--bm-surface)] p-5 shadow-sm sm:p-6">
           <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="flex items-center gap-2 text-xs font-black uppercase tracking-wide text-sky-700">
+              <p className="flex items-center gap-2 text-xs font-black uppercase tracking-wide text-[var(--bm-brand-accent)]">
                 <Anchor size={16} />
                 Dictionary Results
               </p>
-              <h2 className="mt-1 text-xl font-black text-slate-950">색인 결과 {filteredItems.length}개</h2>
+              <h2 className="mt-1 text-xl font-black text-[var(--bm-foreground)]">색인 결과 {filteredItems.length}개</h2>
             </div>
-            <p className="text-xs font-bold text-slate-500">1페이지 10개씩, 용어 색인만 표시합니다.</p>
+            <p className="text-xs font-bold text-[var(--bm-foreground-muted)]">1페이지 10개씩, 용어 색인만 표시합니다.</p>
           </div>
 
           {filteredItems.length === 0 ? (
-            <div className="rounded-3xl bg-slate-50 p-6 text-center">
-              <p className="text-base font-black text-slate-900">검색 결과가 없습니다.</p>
-              <p className="mt-2 text-sm font-semibold text-slate-500">다른 용어명이나 카테고리로 다시 검색해보세요.</p>
+            <div className="rounded-3xl bg-[var(--bm-surface-elevated)] p-6 text-center">
+              <p className="text-base font-black text-[var(--bm-foreground)]">검색 결과가 없습니다.</p>
+              <p className="mt-2 text-sm font-semibold text-[var(--bm-foreground-muted)]">다른 용어명이나 카테고리로 다시 검색해보세요.</p>
             </div>
           ) : (
             <div className="space-y-4">
               <div className="grid gap-2">
                 {pagedItems.map((item, index) => (
-                  <article key={item.id} className="min-w-0 rounded-2xl border border-sky-100 bg-slate-50 px-4 py-3">
+                  <article key={item.id} className="min-w-0 rounded-2xl border border-[var(--bm-border)] bg-[var(--bm-surface-elevated)] px-4 py-3">
                     <div className="flex min-w-0 items-center gap-3">
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-xs font-black text-sky-800 ring-1 ring-sky-100">
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--bm-surface)] text-xs font-black text-[var(--bm-brand-accent)] ring-1 ring-[var(--bm-border)]">
                         {(currentPage - 1) * PAGE_SIZE + index + 1}
                       </span>
                       <div className="min-w-0 flex-1">
-                        <h3 className="break-words text-base font-black text-slate-950">{item.term}</h3>
-                        <p className="mt-1 text-xs font-bold text-sky-700">{item.category}</p>
+                        <h3 className="break-words text-base font-black text-[var(--bm-foreground)]">{item.term}</h3>
+                        <p className="mt-1 text-xs font-bold text-[var(--bm-brand-accent)]">{item.category}</p>
                       </div>
-                      <span className="rounded-full bg-white px-3 py-1 text-[11px] font-black text-slate-500 ring-1 ring-sky-100">{getInitialIndex(item.term)}</span>
+                      <span className="rounded-full bg-[var(--bm-surface)] px-3 py-1 text-[11px] font-black text-[var(--bm-foreground-muted)] ring-1 ring-[var(--bm-border)]">{getInitialIndex(item.term)}</span>
                     </div>
                   </article>
                 ))}
               </div>
 
-              <div className="flex flex-col gap-3 border-t border-sky-100 pt-4 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-xs font-black text-slate-500">
+              <div className="flex flex-col gap-3 border-t border-[var(--bm-border)] pt-4 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-xs font-black text-[var(--bm-foreground-muted)]">
                   {currentPage} / {pageCount} 페이지
                 </p>
                 <div className="flex items-center gap-2">
@@ -231,7 +230,7 @@ export default function DictionaryPage() {
                     type="button"
                     onClick={() => setPage((value) => Math.max(1, value - 1))}
                     disabled={currentPage === 1}
-                    className="inline-flex min-h-10 items-center gap-2 rounded-full bg-slate-100 px-4 text-xs font-black text-slate-700 transition hover:bg-sky-100 disabled:cursor-not-allowed disabled:opacity-40"
+                    className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[var(--bm-surface-elevated)] px-4 text-xs font-black text-[var(--bm-foreground-muted)] transition hover:bg-[var(--bm-surface-elevated)] disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     <ChevronLeft size={16} />
                     이전
@@ -240,7 +239,7 @@ export default function DictionaryPage() {
                     type="button"
                     onClick={() => setPage((value) => Math.min(pageCount, value + 1))}
                     disabled={currentPage === pageCount}
-                    className="inline-flex min-h-10 items-center gap-2 rounded-full bg-sky-700 px-4 text-xs font-black text-white transition hover:bg-sky-800 disabled:cursor-not-allowed disabled:opacity-40"
+                    className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[var(--bm-brand-accent)] px-4 text-xs font-black text-[var(--bm-ink)] transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     다음
                     <ChevronRight size={16} />

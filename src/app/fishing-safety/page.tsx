@@ -44,26 +44,25 @@ const avoidItems = ["테트라포드 위 단독 진입", "파도 맞는 자리�
 
 export default function FishingSafetyPage() {
   return (
-    <AppFrame>
-      <div className="space-y-5">
-        <section className="overflow-hidden rounded-[2rem] bg-[#0F2D52] text-white shadow-sm">
+    <AppFrame family="content">
+      <div className="bm-v3-public mx-auto max-w-[var(--bm-content-reading)] space-y-5">
+        <section className="bm-page-hero overflow-hidden">
           <div className="relative p-6 sm:p-8">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(56,189,248,0.35),transparent_34%),linear-gradient(135deg,rgba(14,116,144,0.42),transparent_58%)]" />
-            <div className="relative">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 text-sky-100 ring-1 ring-white/20">
+                        <div className="relative">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[var(--bm-surface)]/15 text-white/75 ring-1 ring-white/20">
                 <ShieldCheck size={30} />
               </div>
-              <p className="mt-5 text-sm font-black text-sky-100">Blue Marina Safety Guide</p>
-              <h1 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">출조 안전 가이드</h1>
-              <p className="mt-3 max-w-2xl text-sm font-semibold leading-7 text-sky-50 sm:text-base">
+              <p className="mt-5 text-sm font-black text-white/75">Blue Marina Safety Guide</p>
+              <h1 className="mt-2 text-3xl font-serif font-normal tracking-tight sm:text-4xl">출조 안전 가이드</h1>
+              <p className="mt-3 max-w-2xl text-sm font-semibold leading-7 text-white/80 sm:text-base">
                 바다낚시와 선상낚시를 시작하기 전에 확인해야 할 기본 안전 기준입니다. 정확한 통제 정보와 현장 기준은 출조 전 공식 안내와 현장 상황을 반드시 확인하세요.
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <Link href="/fishing-spots" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-white px-5 text-sm font-black text-[#0F2D52] transition hover:bg-sky-50">
+                <Link href="/fishing-spots" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-[var(--bm-surface)] px-5 text-sm font-black text-[var(--bm-foreground)] transition hover:bg-[var(--bm-surface-elevated)]">
                   <MapPin size={18} />
                   출조거점 보기
                 </Link>
-                <Link href="/sea-info" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-sky-600 px-5 text-sm font-black text-white transition hover:bg-sky-700">
+                <Link href="/sea-info" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-[var(--bm-brand-accent)] px-5 text-sm font-black text-[var(--bm-ink)] transition hover:brightness-110">
                   <Waves size={18} />
                   오늘의 바다 확인
                 </Link>
@@ -77,17 +76,17 @@ export default function FishingSafetyPage() {
             const Icon = section.icon;
 
             return (
-              <article key={section.title} className="rounded-[1.5rem] border border-sky-100 bg-white p-5 shadow-sm">
+              <article key={section.title} className="rounded-[1.5rem] border border-[var(--bm-border)] bg-[var(--bm-surface)] p-5 shadow-sm">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-sky-50 text-sky-700">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[var(--bm-surface-elevated)] text-[var(--bm-brand-accent)]">
                     <Icon size={22} />
                   </div>
-                  <h2 className="text-lg font-black text-slate-950">{section.title}</h2>
+                  <h2 className="text-lg font-black text-[var(--bm-foreground)]">{section.title}</h2>
                 </div>
                 <div className="mt-4 grid gap-2">
                   {section.points.map((point) => (
-                    <p key={point} className="flex gap-2 text-sm font-semibold leading-6 text-slate-700">
-                      <CheckCircle2 className="mt-0.5 shrink-0 text-sky-700" size={16} />
+                    <p key={point} className="flex gap-2 text-sm font-semibold leading-6 text-[var(--bm-foreground-muted)]">
+                      <CheckCircle2 className="mt-0.5 shrink-0 text-[var(--bm-brand-accent)]" size={16} />
                       <span>{point}</span>
                     </p>
                   ))}
@@ -97,23 +96,23 @@ export default function FishingSafetyPage() {
           })}
         </section>
 
-        <section className="rounded-[2rem] border border-sky-100 bg-white p-5 shadow-sm sm:p-6">
+        <section className="rounded-[2rem] border border-[var(--bm-border)] bg-[var(--bm-surface)] p-5 shadow-sm sm:p-6">
           <div className="flex items-center gap-3">
-            <Anchor className="text-sky-700" size={24} />
+            <Anchor className="text-[var(--bm-brand-accent)]" size={24} />
             <div>
-              <p className="text-xs font-black uppercase tracking-wide text-sky-700">Checklist</p>
-              <h2 className="mt-1 text-xl font-black text-slate-950">출조 전 체크리스트</h2>
+              <p className="text-xs font-black uppercase tracking-wide text-[var(--bm-brand-accent)]">Checklist</p>
+              <h2 className="mt-1 text-xl font-black text-[var(--bm-foreground)]">출조 전 체크리스트</h2>
             </div>
           </div>
 
           <div className="mt-5 grid gap-3 lg:grid-cols-3">
             {checklistGroups.map((group) => (
-              <article key={group.title} className="rounded-2xl bg-slate-50 p-4">
-                <h3 className="text-base font-black text-slate-950">{group.title}</h3>
+              <article key={group.title} className="rounded-2xl bg-[var(--bm-surface-elevated)] p-4">
+                <h3 className="text-base font-black text-[var(--bm-foreground)]">{group.title}</h3>
                 <div className="mt-3 grid gap-2">
                   {group.items.map((item) => (
-                    <label key={item} className="flex min-h-9 items-center gap-2 rounded-xl bg-white px-3 py-2 text-sm font-semibold text-slate-700 ring-1 ring-sky-100">
-                      <input type="checkbox" className="h-4 w-4 rounded border-sky-200 text-sky-700" />
+                    <label key={item} className="flex min-h-11 items-center gap-2 rounded-xl bg-[var(--bm-surface)] px-3 py-2 text-sm font-semibold text-[var(--bm-foreground-muted)] ring-1 ring-[var(--bm-border)]">
+                      <input type="checkbox" className="h-4 w-4 rounded border-[var(--bm-border)] text-[var(--bm-brand-accent)]" />
                       <span>{item}</span>
                     </label>
                   ))}
@@ -134,16 +133,16 @@ export default function FishingSafetyPage() {
 
           <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {avoidItems.map((item) => (
-              <div key={item} className="rounded-2xl bg-white px-4 py-3 text-sm font-black text-amber-900 ring-1 ring-amber-100">
+              <div key={item} className="rounded-2xl bg-[var(--bm-surface)] px-4 py-3 text-sm font-black text-amber-900 ring-1 ring-amber-100">
                 {item}
               </div>
             ))}
           </div>
         </section>
 
-        <section className="rounded-[2rem] border border-sky-100 bg-sky-50 p-5 shadow-sm">
-          <p className="text-sm font-black text-sky-900">Blue Marina 안내</p>
-          <p className="mt-2 text-sm font-semibold leading-6 text-slate-700">
+        <section className="rounded-[2rem] border border-[var(--bm-border)] bg-[var(--bm-surface-elevated)] p-5 shadow-sm">
+          <p className="text-sm font-black text-[var(--bm-foreground)]">Blue Marina 안내</p>
+          <p className="mt-2 text-sm font-semibold leading-6 text-[var(--bm-foreground-muted)]">
             이 가이드는 출조 전 기본 점검을 돕는 참고 자료입니다. 지역별 출입 통제, 해상특보, 선박 운항, 낚시 금지구역, 안전 장비 기준은 변경될 수 있으므로 공식 안내와 현장 책임자의 안내를 우선하세요.
           </p>
         </section>

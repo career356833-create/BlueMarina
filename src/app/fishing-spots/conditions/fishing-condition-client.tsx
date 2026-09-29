@@ -277,8 +277,8 @@ export function FishingConditionClient({ initialSpeciesId = "", spotContext, jou
 
   const depthSummary = availableDepths.map((item) => item.label).join("/");
 
-  return <AppFrame>
-    <div className="mx-auto w-full max-w-[1180px] space-y-5 pb-24 max-sm:pr-6 lg:space-y-7 lg:pb-10">
+  return <AppFrame family="content">
+    <div className="mx-auto w-full max-w-[var(--bm-content-reading)] space-y-5 pb-24 lg:space-y-7 lg:pb-10">
       <div className="flex items-center justify-between gap-3">
         <Link href={spotContext?.detailHref ?? "/fishing-spots"} className="inline-flex min-h-10 items-center gap-2 rounded-full border border-[#1F3A50] px-4 text-sm font-black text-[#D7E4F6] transition hover:bg-white/8"><ArrowLeft size={16} /> {spotContext ? "포인트 상세" : "출조거점"}</Link>
         <span className="text-[11px] font-black uppercase tracking-[0.2em] text-[#6E8299]">Evidence-led view</span>
