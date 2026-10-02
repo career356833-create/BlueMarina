@@ -1,0 +1,84 @@
+{
+  "version": "v1",
+  "dateKst": "2026-10-02",
+  "decision": "COMMUNITY_BACKEND_PRODUCTION_ACTIVE_WITH_LIMITATIONS",
+  "project": {
+    "productionUrl": "https://blue-marina.vercel.app",
+    "supabaseRef": "mlfvpaikfpjrgrhwlrjn",
+    "codeCommit": "de390e9695fb4834ef360c376aadc8ffba7425a2",
+    "deploymentId": "dpl_48WSb6cy96Tv69ypE3hCqu9iJbCY",
+    "deploymentReady": true,
+    "featureFlagEnabled": true
+  },
+  "migration": {
+    "version": "20261002054704",
+    "remoteBefore": 8,
+    "remoteAfter": 9,
+    "tables": ["community_posts", "community_comments", "community_reactions", "community_reports"],
+    "rlsEnabled": 4,
+    "backupSha256": "66C69E89F4B138B9ECDDE20CBAAB688E28C3CDB25036D7C46C112615B5C35942",
+    "backupTocEntries": 1183,
+    "fullRestoreExercised": false
+  },
+  "productionQa": {
+    "kakaoSignedIn": true,
+    "postCreate": "PASS",
+    "ownFetch": "PASS",
+    "postUpdate": "PASS",
+    "postReloadPersistence": "PASS",
+    "postState": "SUBMITTED",
+    "moderationState": "REVIEW_REQUIRED",
+    "commentCreateAndReload": "PASS",
+    "reactionCreateAndReload": "PASS",
+    "reactionCount": 1,
+    "selfReportDenied": "PASS",
+    "secondUserReportE2e": "NOT_RUN",
+    "crossUserJwtE2e": "NOT_RUN",
+    "publicFeedQaExposure": 0,
+    "qaRows": { "posts": 1, "comments": 1, "reactions": 1, "reports": 0 },
+    "qaRowsIncludedInPublicKpi": false,
+    "mobileViewport": "390x844_PASS",
+    "desktopViewport": "1280x900_PASS",
+    "physicalDevice": "NOT_RUN"
+  },
+  "security": {
+    "anonWrite": "DENIED",
+    "ownOnlyWrite": "PASS_LOCAL_SQL",
+    "crossUserWrite": "DENIED_LOCAL_SQL",
+    "directPublish": "DENIED_LOCAL_SQL",
+    "normalUserModeration": "DENIED",
+    "privateNoStore": true,
+    "noindexNofollow": true,
+    "newCriticalOrHighAdvisories": 0,
+    "communitySpecificAdvisoryWarnings": 0,
+    "preexistingAdvisorWarningsRemain": true,
+    "secretOrTokenRecorded": false
+  },
+  "dataIntegrity": {
+    "fishSpeciesBeforeAfter": [1258, 1258],
+    "marineOrganismsBeforeAfter": [3016, 3016],
+    "authUsersBeforeAfter": [3, 3],
+    "profilesBeforeAfter": [3, 3],
+    "charterSubmissionsBeforeAfter": [1, 1],
+    "marketListingsBeforeAfter": [1, 1],
+    "storageBucketsBeforeAfter": [4, 4],
+    "storageObjectsBeforeAfter": [1, 1]
+  },
+  "productBoundaries": {
+    "localDraftAutomaticUpload": 0,
+    "automaticPublish": 0,
+    "fakePublicPosts": 0,
+    "automaticEntityInference": 0,
+    "unverifiedImageUpload": 0
+  },
+  "verification": {
+    "fullTestsPassed": 1341,
+    "preexistingSkipped": 1,
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "isolatedBuild": "PASS",
+    "diffCheck": "PASS",
+    "localSqlSecurity": "PASS"
+  },
+  "nextAction": "BLUE_MARINA_RELEASE_READINESS_FINAL_V1"
+}
