@@ -5,15 +5,22 @@ import { ExternalLink, ShieldAlert } from "lucide-react";
 import { DetailFrame, DetailBackLink } from "@/components/platform/PageFamilies";
 import { RecentlyViewedTracker } from "@/components/account/RecentlyViewedTracker";
 import { getCommunityPost } from "@/lib/community/registry";
+import { publicPost } from "@/lib/community/backend";
 import { communityPostTypeLabels, linkedCommunityHref } from "@/lib/community/route-helpers";
 import { CommunityInteractions } from "./community-interactions";
+import { CommunityPrivatePost } from "./community-private-post";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "커뮤니티 글", robots: { index: false, follow: false } };
+export const dynamic = "force-dynamic";
 
 export default async function CommunityPostPage({ params }: { params: Promise<{ id: string }> }) {
-  const post = getCommunityPost((await params).id);
-  if (!post) notFound();
+  const id = (await params).id;
+  const post = process.env.COMMUNITY_BACKEND_ENABLED === "true" ? await publicPost(id) : getCommunityPost(id);
+  if (!post) {
+    if (process.env.COMMUNITY_BACKEND_ENABLED !== "true" || !/^[0-9a-f-]{36}$/i.test(id)) notFound();
+    return <DetailFrame width="reading"><CommunityPrivatePost postId={id}/></DetailFrame>;
+  }
   const links = [
     ...post.linkedSpeciesIds.map(id=>({id,label:`어종 ${id}`,href:linkedCommunityHref.species(id)})),
     ...post.linkedFishingSpotIds.map(id=>({id,label:`포인트 ${id}`,href:linkedCommunityHref.fishingSpot(id)})),
