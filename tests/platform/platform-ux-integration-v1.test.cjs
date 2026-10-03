@@ -133,10 +133,11 @@ test("shared desktop navigation exposes active semantics", () => {
   assert.doesNotMatch(read("src/components/boat/home/TodaysSeaExperience.tsx"), /<header/);
 });
 
-test("sea map and navigation fit below the fixed header", () => {
+test("sea map retains the shared header while navigation uses its immersive viewport", () => {
   assert.match(read("src/app/sea/page.tsx"), /h-\[calc\(100svh-5rem\)\]/);
   assert.match(read("src/components/sea/MapView.tsx"), /relative h-full overflow-hidden/);
-  assert.match(read("src/components/boat/navigation/MarineNavigation.tsx"), /h-\[calc\(100svh-5rem\)\]/);
+  assert.match(read("src/components/boat/navigation/MarineNavigation.tsx"), /data-navigation-immersive="true"/);
+  assert.match(read("src/app/sea/navigation/navigation-map.css"), /body:has\(\[data-navigation-immersive="true"\]\) > header/);
 });
 
 test("BottomNav uses shared nested matching and keeps safe area", () => {

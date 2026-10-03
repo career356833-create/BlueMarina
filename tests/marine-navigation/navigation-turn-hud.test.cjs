@@ -27,8 +27,8 @@ test("marine navigation mounts a translucent persistent map HUD with an independ
   const hud = fs.readFileSync(path.join(root, "src/components/boat/navigation/NavigationTurnHUD.tsx"), "utf8");
   assert.match(navigation, /hudVisibilityStorage/);
   assert.match(navigation, /aria-pressed=\{hudVisible\}/);
-  assert.match(navigation, /aria-expanded=\{mobileLayersOpen\}/);
-  assert.match(navigation, /hidden sm:block/);
+  assert.match(navigation, /aria-expanded=\{layersOpen\}/);
+  assert.match(navigation, /\{layersOpen \? <div id="navigation-layer-drawer"/);
   assert.match(navigation, /<NavigationTurnHUD navigation=\{navigation\} vessel=\{effectiveVessel\}/);
   assert.match(hud, /pointer-events-none/);
   assert.doesNotMatch(hud, /bg-\[/);

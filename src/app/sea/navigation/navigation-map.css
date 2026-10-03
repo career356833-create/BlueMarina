@@ -15,3 +15,24 @@
 .bm-navigation-map .maplibregl-ctrl-group button { border-color: rgb(255 255 255 / 12%); }
 .bm-navigation-map .maplibregl-ctrl-icon { filter: invert(1) sepia(0.2); }
 .bm-navigation-scrollbar { scrollbar-color: rgb(210 177 120 / 55%) transparent; scrollbar-width: thin; }
+
+body:has([data-navigation-immersive="true"]) { padding-top: 0 !important; overflow: hidden; }
+body:has([data-navigation-immersive="true"]) > header,
+body:has([data-navigation-immersive="true"]) > .blue-captain-widget { display: none; }
+
+#navigation-details { background-color: rgba(8, 27, 32, .97); }
+
+#navigation-layer-drawer > div {
+  position: absolute;
+  top: 4.25rem;
+  right: .75rem;
+  z-index: 535;
+  width: min(320px, calc(100vw - 1.5rem));
+  max-height: min(67dvh, 590px);
+  overflow-y: auto;
+  border-radius: .75rem;
+}
+
+@media (max-width: 640px) {
+  #navigation-layer-drawer > div { top: 4.25rem; max-height: calc(100dvh - 12rem - env(safe-area-inset-bottom)); }
+}

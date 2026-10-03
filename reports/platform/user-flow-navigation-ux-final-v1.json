@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "decision": "USER_FLOW_NAVIGATION_UX_READY_WITH_LIMITATIONS",
+  "baseline": "75d5c3deaa4e247966f361a52e084fd439cf6c31",
+  "journeys": {
+    "fishing": {
+      "routes": ["/", "/fishing-spots", "/fishing-spots/rock-151", "/fishing-spots/conditions?spotId=rock-151", "/sea/navigation"],
+      "result": "PASS",
+      "notes": "Spot ID, canonical coordinates and label reach navigation; the top-bar return opens the source spot detail. GPS was not requested."
+    },
+    "charter": {
+      "routes": ["/", "/charters", "/charters/partners", "/charters/onboarding", "/account/login"],
+      "result": "PARTIAL",
+      "notes": "CTA and internal returnTo are present. Authenticated submission was not repeated."
+    },
+    "market": {
+      "routes": ["/", "/market", "/market/new", "/account/login"],
+      "result": "PARTIAL",
+      "notes": "CTA and internal returnTo are present. Authenticated submission was not repeated."
+    },
+    "community": {
+      "routes": ["/", "/community", "/community/new", "/account/login"],
+      "result": "PARTIAL",
+      "notes": "CTA and internal returnTo are present. Authenticated submission was not repeated."
+    },
+    "account": {
+      "routes": ["/account/login", "/account", "/account/saved"],
+      "result": "PARTIAL",
+      "notes": "Saved-item link points to stored original href, but no signed-in saved item was available in this local browser session."
+    }
+  },
+  "flowFindings": [
+    "Charter partner inquiry link scrolls to preparation guidance; no direct outreach submission endpoint is presented there.",
+    "Conditions-originated navigation returns to the source spot detail, not to the unfinished Conditions form selection.",
+    "Authenticated submissions and a saved-item round trip were outside this unauthenticated local browser QA."
+  ],
+  "navigationHierarchy": {
+    "alwaysVisible": ["compact destination/back/GPS bar", "map", "heading/bearing/straight distance", "layer and HUD controls", "collapsed detail handle", "compact safety notice", "navigation start or stop"],
+    "drawerOnly": ["marine layer toggles", "source state", "snapshot provenance", "selected marine feature", "warning documents"],
+    "bottomSheetOnly": ["destination selection", "GPS/query status detail", "waypoints", "track controls", "simulation control", "compass permission", "full safety limitation"],
+    "hiddenInNavigation": ["global site header", "mobile BottomNav", "floating chatbot"]
+  },
+  "browserQA": {
+    "mobile390x844": "PASS_WITH_LIMITATIONS",
+    "desktop1280x900": "PASS",
+    "desktop1440": "PASS",
+    "mapTiles": "PASS: initial Busan map and offshore rock-151 destination coastline context rendered",
+    "mapInteraction": "drag, zoom button and tap-to-select passed; physical pinch gesture not tested",
+    "gpsPhysicalDevice": "NOT_TESTED"
+  },
+  "verification": {
+    "targetedTests": "43/43 PASS",
+    "fullTests": "1347 PASS / 1 SKIP / 0 FAIL",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS in isolated working-tree copy; 1467/1467 static pages",
+    "diffCheck": "PASS"
+  },
+  "boundaries": {
+    "apiChange": 0,
+    "databaseMutation": 0,
+    "safeRouteInference": 0,
+    "newMarineSource": 0,
+    "productionDeploy": 0
+  }
+}

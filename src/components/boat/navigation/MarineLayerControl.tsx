@@ -30,7 +30,7 @@ export type SelectedMarineFeature =
 type GenericMarineFeature = Exclude<SelectedMarineFeature, { kind: "tide-station" } | { kind: "marine-weather" } | { kind: "marine-observation" } | { kind: "ocean-current-model" }>;
 
 function stateLabel(state: MarineLayerState, provider: "KHOA" | "KMA") {
-  return state === "loading" ? "LOADING" : state === "partial" ? "PARTIAL" : state === "stale" ? "STALE" : state === "current-unavailable" ? "CURRENT STATUS UNAVAILABLE" : state === "failed" ? "UNAVAILABLE" : provider;
+  return state === "loading" ? "LOADING" : state === "partial" ? "PARTIAL" : state === "stale" ? "STALE" : state === "current-unavailable" ? "CURRENT STATUS UNAVAILABLE" : state === "failed" ? "UNAVAILABLE" : `AVAILABLE · ${provider}`;
 }
 
 function LayerToggle({ label, description, visible, state, onChange, icon, provider, provenance }: {

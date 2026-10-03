@@ -91,7 +91,8 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   focus(points: GeoPoint[]) {
     if (!this.loaded || points.length === 0) return;
     if (points.length === 1) {
-      this.map.easeTo({ center: [points[0].longitude, points[0].latitude], zoom: 14 });
+      // Keep coastline context visible for offshore destinations whose detailed raster tile is only open water.
+      this.map.easeTo({ center: [points[0].longitude, points[0].latitude], zoom: 12 });
       return;
     }
     const bounds = points.reduce((current, point) => current.extend([point.longitude, point.latitude]), new LngLatBounds([points[0].longitude, points[0].latitude], [points[0].longitude, points[0].latitude]));
