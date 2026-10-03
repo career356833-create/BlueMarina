@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0",
+  "audit": "BLUE_MARINA_PRODUCTION_RELEASE_FINAL_V1",
+  "observedAtUtc": "2026-10-03T07:30:25Z",
+  "decision": "BLUE_MARINA_PRODUCTION_RELEASE_COMPLETE_WITH_LIMITATIONS",
+  "deployment": {
+    "sourceBranch": "main",
+    "headSha": "1a1a620bd689310908c887bbb3cb7c41f0c78a12",
+    "originMainSha": "1a1a620bd689310908c887bbb3cb7c41f0c78a12",
+    "productionDeploymentId": "dpl_UxxqkCsKoH6LUevx9t5G1vYcvAbk",
+    "productionUrl": "https://blue-marina.vercel.app",
+    "status": "READY",
+    "shaMatchEvidence": "GitHub Vercel success status for the exact main SHA points to the same Vercel deployment ID; Vercel inspect reports Production Ready.",
+    "additionalDeployments": 0
+  },
+  "core": {
+    "http200": ["/", "/today-sea", "/sea", "/sea/navigation", "/fishing-spots", "/fishing-spots/rock-151", "/fishing-spots/conditions", "/fish", "/license-guide"],
+    "navigationMapRendered": true,
+    "navigationDisclaimerVisible": true,
+    "fishPublicCountShown": 336
+  },
+  "account": {
+    "existingKakaoSession": "PASS",
+    "profilePage": "PASS_READ_ONLY",
+    "savedPage": "PASS_READ_ONLY",
+    "sessionRestoreAfterReload": "PASS",
+    "logout": "PASS",
+    "freshKakaoLogin": "PENDING_USER_AUTHENTICATION"
+  },
+  "charter": {
+    "routesHttp200": ["/charters", "/charters/partners", "/charters/onboarding"],
+    "unauthenticatedPrivateApi": 401,
+    "qaSubmissionsByStatus": {"REVIEW_REQUIRED": 1},
+    "publicOffers": 0,
+    "automaticPublicationObserved": 0
+  },
+  "market": {
+    "routesHttp200": ["/market", "/market/new"],
+    "unauthenticatedPrivateApi": 401,
+    "qaListingsByStatus": {"SUBMITTED": 1},
+    "publicActiveListings": 0
+  },
+  "community": {
+    "routesHttp200": ["/community", "/community/new"],
+    "unauthenticatedPrivateApi": 401,
+    "qaPostsByStatus": {"SUBMITTED": 1},
+    "publicPublishedPosts": 0
+  },
+  "releaseCritical": {
+    "reservationsCacheControl": "no-store, must-revalidate, max-age=0, private",
+    "fishingHero": "Source-backed official spot boat-27, raw species 감성돔, and station-selected NIFS RISA observation context; no inferred spot temperature.",
+    "stationSelectionReturnedObservation": true
+  },
+  "mobile": {
+    "viewport": "390x844",
+    "routes": ["/", "/fishing-spots", "/sea/navigation", "/charters", "/market", "/community", "/account"],
+    "horizontalOverflow": 0,
+    "pageErrors": 0,
+    "navigationMapRendered": true,
+    "physicalDeviceTested": false
+  },
+  "security": {
+    "cspPresent": true,
+    "unsafeEvalAllowed": false,
+    "nosniff": true,
+    "sameOriginFramePolicy": true,
+    "privateApisWithoutToken": 401,
+    "relevantPublicTablesRlsEnabled": 15,
+    "serviceRoleKeyExposedInHomeHtml": false,
+    "liveCrossUserRlsE2e": "NOT_RUN"
+  },
+  "limitations": [
+    "Fresh Kakao login awaits user authentication; existing Kakao session, profile/saved pages, reload restore and logout passed.",
+    "Authenticated Charter, Market and Community mutation flows were not exercised in this read-only release smoke.",
+    "Physical GPS and touch gesture testing was not repeated; mobile smoke used Chromium emulation.",
+    "RLS was verified enabled by database metadata, but a live cross-user denial test was not repeated."
+  ],
+  "git": {
+    "newCodeCommits": 0,
+    "newDeployments": 0,
+    "stagedFiles": 0,
+    "unrelatedWorktreePreserved": true
+  }
+}
