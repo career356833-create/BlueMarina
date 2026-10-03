@@ -1,0 +1,183 @@
+{
+  "audit": "BLUE_MARINA_RELEASE_READINESS_FINAL_V1",
+  "asOf": "2026-10-03 Asia/Seoul",
+  "decision": "BLUE_MARINA_RELEASE_READY_WITH_LIMITATIONS",
+  "releaseScope": "Public informational core, Kakao Account, and moderated Charter/Market/Community submission flows; no approved business inventory is represented as live supply.",
+  "baseline": {
+    "branch": "main",
+    "head": "bf925245f32390dc9033c2c1d56df5010d91a987",
+    "originMain": "bf925245f32390dc9033c2c1d56df5010d91a987",
+    "productionGitSha": "bf925245f32390dc9033c2c1d56df5010d91a987",
+    "productionDeploymentId": "dpl_4TVr99veNyp5wJS6eaRgvKZQH1uT",
+    "productionDeployment": "blue-marina-qjyxnzyf2-chiweon.vercel.app",
+    "productionAlias": "https://blue-marina.vercel.app",
+    "productionStatus": "READY",
+    "supabaseProjectRef": "mlfvpaikfpjrgrhwlrjn"
+  },
+  "productionRoutes": {
+    "checkedHttp200": 21,
+    "representativePaths": ["/", "/today-sea", "/sea", "/fishing-spots", "/fishing-spots/boat-1", "/fishing-spots/conditions", "/fish", "/license-guide", "/sea/navigation", "/charters", "/charters/partners", "/charters/onboarding", "/market", "/market/new", "/community", "/community/new", "/account/login", "/account", "/account/profile", "/account/saved", "/account/activity"],
+    "invalidFishingSpot": "HTTP_404_NOINDEX",
+    "operationsUnauthorized": "HTTP_404_NOINDEX",
+    "invalidCharterMarketCommunityDetails": "HTTP_200_NOINDEX_LIMITATION",
+    "majorBrowserConsoleErrors": 0,
+    "brokenCriticalAssetsObserved": 0
+  },
+  "journeys": {
+    "account": {
+      "status": "PASS_WITH_LIMITATIONS",
+      "primaryLogin": "Kakao",
+      "productionSessionRestore": "PASS_CURRENT_BROWSER",
+      "profileGetUpdatePersistence": "PASS_PRIOR_PRODUCTION_E2E",
+      "savedCreateListReloadDelete": "PASS_CURRENT_BROWSER",
+      "logoutRelogin": "PASS_PRIOR_PRODUCTION_E2E",
+      "activityRoute": "HTTP_200_AND_VISIBLE",
+      "secondUserIsolationE2E": "NOT_RUN"
+    },
+    "charter": {
+      "status": "PASS_WITH_LIMITATIONS",
+      "selfServiceSubmission": "PASS_PRIOR_PRODUCTION_E2E",
+      "ownerRevisit": "PASS_PRIOR_PRODUCTION_E2E",
+      "reviewRequired": true,
+      "ordinaryUserAdminDenied": "PASS_PRIOR_PRODUCTION_E2E",
+      "publicOffers": 0,
+      "adminApprovalE2E": "NOT_RUN"
+    },
+    "market": {
+      "status": "PASS_WITH_LIMITATIONS",
+      "sellerSubmissionAndRevisit": "PASS_PRIOR_PRODUCTION_E2E",
+      "signedPrivateImageUpload": "PASS_PRIOR_PRODUCTION_E2E",
+      "reviewRequired": true,
+      "ordinaryUserAdminDenied": "PASS_PRIOR_PRODUCTION_E2E",
+      "activePublicListings": 0,
+      "adminApprovalE2E": "NOT_RUN"
+    },
+    "community": {
+      "status": "PASS_WITH_LIMITATIONS",
+      "postCommentReactionPersistence": "PASS_PRIOR_PRODUCTION_E2E",
+      "reviewRequired": true,
+      "publicApprovedPosts": 0,
+      "moderationSuccessE2E": "NOT_RUN"
+    }
+  },
+  "publicData": {
+    "fishingSpots": 1405,
+    "fishPublicGuide": 336,
+    "fishCanonical": 1258,
+    "conditionProfiles": 38,
+    "charterApprovedOffers": 0,
+    "marketActiveListings": 0,
+    "communityApprovedPosts": 0
+  },
+  "remoteDataIntegrity": {
+    "fishSpecies": 1258,
+    "marineOrganisms": 3016,
+    "authUsers": 3,
+    "profiles": 3,
+    "savedItemsAfterAuditCleanup": 0,
+    "charterSubmissions": 1,
+    "charterPromotionCandidates": 0,
+    "marketListings": 1,
+    "communityPosts": 1,
+    "communityComments": 1,
+    "communityReactions": 1,
+    "communityReports": 0,
+    "authUsersAreNotClaimedAsRealCustomerKpi": true
+  },
+  "qaInventory": {
+    "charterSubmission": {"count": 1, "status": "REVIEW_REQUIRED", "public": false, "excludedFromBusinessKpi": true},
+    "marketListing": {"count": 1, "status": "SUBMITTED", "moderationStatus": "REVIEW_REQUIRED", "public": false, "excludedFromBusinessKpi": true},
+    "marketStagingImage": {"count": 1, "bucketPublic": false, "excludedFromBusinessKpi": true},
+    "communityPost": {"count": 1, "status": "REVIEW_REQUIRED", "public": false, "excludedFromBusinessKpi": true},
+    "communityComment": {"count": 1, "attachedToNonPublicQaPost": true, "excludedFromBusinessKpi": true},
+    "communityReaction": {"count": 1, "attachedToNonPublicQaPost": true, "excludedFromBusinessKpi": true}
+  },
+  "featureFlags": {
+    "ACCOUNT_BACKEND_ENABLED": "EFFECTIVE_ON_INFERRED_FROM_PRODUCTION_E2E",
+    "CHARTER_SUPPLY_INTAKE_ENABLED": "EFFECTIVE_ON_INFERRED_FROM_PRODUCTION_E2E",
+    "MARKET_BACKEND_ENABLED": "EFFECTIVE_ON_INFERRED_FROM_PRODUCTION_E2E",
+    "MARKET_IMAGE_UPLOAD_ENABLED": "EFFECTIVE_ON_INFERRED_FROM_PRODUCTION_E2E",
+    "COMMUNITY_BACKEND_ENABLED": "EFFECTIVE_ON_INFERRED_FROM_PRODUCTION_E2E",
+    "directValueRead": false,
+    "allFlagNamesPresentInProductionEnv": true
+  },
+  "security": {
+    "headers": ["Content-Security-Policy", "Strict-Transport-Security", "X-Content-Type-Options", "Referrer-Policy", "Permissions-Policy", "X-Frame-Options"],
+    "unsafeEvalAllowed": false,
+    "anonymousApiChecks": {"account": 401, "charterSubmissions": 401, "communityOwnPosts": 401, "marketPublicListings": 200},
+    "privateApiCache": "Account/Community own responses: private, no-store; Charter submission response: no-store",
+    "apiRobots": "noindex,nofollow on checked endpoints",
+    "accountReturnTo": "INTERNAL_ALLOWLIST_ONLY",
+    "rlsOnCheckedBusinessTables": "8/8",
+    "anonAuthenticatedServiceRoleTruncateOnCheckedBusinessTables": 0,
+    "serviceRoleBrowserExposureObserved": false,
+    "securityAdvisorCriticalHigh": 0,
+    "securityAdvisorPreexistingWarningsRemain": true
+  },
+  "storage": {
+    "bucketCount": 4,
+    "privateFishBuckets": 3,
+    "marketStagingBucketPublic": false,
+    "marketStagingMaxBytes": 8388608,
+    "marketStagingMimeTypes": ["image/jpeg", "image/png", "image/webp"],
+    "signedUploadAndOwnerPath": "PASS_PRIOR_PRODUCTION_E2E_AND_CODE_REVIEW",
+    "unrestrictedPublicUpload": false
+  },
+  "ui": {
+    "mobile390x844Routes": 15,
+    "desktop1280x900Routes": 15,
+    "desktop1440SpotChecks": 3,
+    "horizontalOverflowObserved": 0,
+    "responsiveMajorBreakObserved": 0,
+    "keyboardAndModalInteraction": "PARTIAL_NOT_EXHAUSTIVE",
+    "designSystemTemplates": {"total": 63, "migrated": 38, "sharedShell": 6, "immersiveException": 3, "adminPrivate": 16, "remaining": 0},
+    "realDeviceGpsPwa": "NOT_VERIFIED"
+  },
+  "seo": {
+    "robotsHttp": 200,
+    "sitemapHttp": 200,
+    "sitemapUrlCount": 1424,
+    "homeCanonical": "https://blue-marina.vercel.app",
+    "privateWriteAdminNoindex": true
+  },
+  "navigationPolicy": {
+    "routeHttp": 200,
+    "straightLineAidDisclaimer": true,
+    "safeRouteClaim": false,
+    "collisionAvoidanceClaim": false,
+    "aisClaim": false,
+    "aisEnhancement": "POST_LAUNCH",
+    "marineSnapshotProviderLimits": "POST_LAUNCH"
+  },
+  "verification": {
+    "fullSuite": {"pass": 1341, "skip": 1, "fail": 0},
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS_CLEAN_COMMITTED_HEAD",
+    "diffCheck": "PASS",
+    "targeted": "PRODUCTION_BROWSER_HTTP_DB_READ_ONLY_AND_PRIOR_DOMAIN_E2E_EVIDENCE"
+  },
+  "issues": {
+    "P0": [],
+    "P1": [],
+    "P2": [
+      "No approved live Charter offers, Market listings, or Community posts; moderated submission is live but actual supply is zero.",
+      "Admin approval success and second-user cross-user RLS E2E remain unverified.",
+      "Real-device GPS/PWA and exhaustive keyboard/modal accessibility QA remain unverified.",
+      "Two out-of-repository temporary .env.local copies remain and require manual deletion after automatic approval review blocked exact-file removal."
+    ],
+    "P3": [
+      "Invalid Charter/Market/Community details return HTTP 200 with noindex rather than HTTP 404.",
+      "Some legacy marine providers and navigation snapshots are limited; AIS/safe-route capability is not claimed.",
+      "Production feature-flag values were not directly read; effective ON is inferred from successful prior E2E and current behavior."
+    ]
+  },
+  "temporarySecretCopies": {
+    "status": "TEMP_SECRET_COPIES_REMAIN",
+    "count": 2,
+    "contentReadOrLogged": false,
+    "automaticDeletion": "REJECTED_BY_AUTOMATIC_APPROVAL_REVIEW_BLOCKED_BY_POLICY",
+    "manualRemovalRequired": true
+  },
+  "git": {"staged": 0, "commit": 0, "push": 0, "unrelatedWorktreePreserved": true}
+}
