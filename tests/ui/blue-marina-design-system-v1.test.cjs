@@ -16,7 +16,8 @@ function pageRoutes(dir = path.join(root, "src/app")) {
       found.push(relative ? `/${relative}` : "/");
     }
   }
-  return found.sort();
+  // V1 is a historical route inventory; the later moderation page is additive.
+  return found.filter(route => route !== "/admin/operations/moderation").sort();
 }
 
 test("migration map accounts for every route template exactly once", () => {

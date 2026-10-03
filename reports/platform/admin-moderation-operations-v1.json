@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "1.0.0",
+  "observedDateUtc": "2026-10-03",
+  "decision": "ADMIN_MODERATION_OPERATIONS_COMPLETE_WITH_LIMITATIONS",
+  "platformDecision": "BLUE_MARINA_PLATFORM_CONNECTED_WITH_ENGINE_GAPS",
+  "baselineSha": "76140d91b37f39a27e08132df522b43e09135bec",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "migrationVersion": "20261003094425",
+  "communityReturnTo": {
+    "internalTargetAllowed": true,
+    "externalTargetsDenied": true,
+    "kakaoBrowserRoundTrip": "NOT_TESTED"
+  },
+  "adminAuth": {
+    "anonymous": "DENIED_401",
+    "normalQaUser": "DENIED_403",
+    "charterAdmin": "OWN_DOMAIN_ONLY",
+    "marketAdmin": "OWN_DOMAIN_ONLY",
+    "communityAdmin": "OWN_DOMAIN_ONLY",
+    "operationsAdmin": "ALL_COUNTS_ONLY_NO_ITEM_DETAILS",
+    "realKakaoUserDenial": "NOT_TESTED"
+  },
+  "community": {
+    "approveThenPublicThenHide": "PASS",
+    "rejectOwnerOnly": "PASS",
+    "reportDismiss": "PASS",
+    "auditEventsCreated": 4,
+    "finalPublicQaPosts": 0
+  },
+  "charter": {
+    "submittedToApproved": "PASS",
+    "promotionCandidateCreated": 1,
+    "activatedPromotionCandidates": 0,
+    "publicOfferActivation": 0
+  },
+  "market": {
+    "submittedToActiveThenHidden": "PASS",
+    "finalPublicQaListings": 0,
+    "imageUploadInThisRun": "NOT_TESTED"
+  },
+  "operations": {
+    "queues": ["charter", "market", "community", "reports"],
+    "exactDatabaseCounts": true,
+    "queueLimit": 50,
+    "qaIncludedInWorkQueueButNotBusinessKpi": true,
+    "adminDesktopVisual": "NOT_TESTED_BROWSER_PORT_BLOCKED",
+    "adminMobileVisual": "NOT_TESTED_BROWSER_PORT_BLOCKED"
+  },
+  "dataIntegrity": {
+    "fishSpeciesBeforeAfter": [1258, 1258],
+    "marineOrganismsBeforeAfter": [3016, 3016],
+    "qaIdentitiesCreatedAndBanned": 6,
+    "qaPublicResidual": 0,
+    "arbitrarySqlDelete": 0
+  },
+  "security": {
+    "auditRlsOn": true,
+    "anonAuditRead": false,
+    "authenticatedAuditRead": false,
+    "anonTransitionExecute": false,
+    "authenticatedTransitionExecute": false,
+    "serviceRoleTransitionExecute": true,
+    "newCriticalHighErrorAdvisorFindings": 0,
+    "privateNoStoreApi": true,
+    "noindexApiAndPage": true
+  },
+  "verification": {
+    "targeted": "8/8 PASS",
+    "full": "1238 PASS / 1 SKIP / 0 FAIL",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "diffCheck": "PASS",
+    "isolatedDatabase": "PASS",
+    "remoteAuthenticatedApi": "PASS"
+  },
+  "coreFlows": {
+    "fishingJourney": "COMPLETE_WITH_FRICTION",
+    "accountSaved": "COMPLETE_WITH_FRICTION",
+    "charter": "COMPLETE_WITH_FRICTION",
+    "market": "COMPLETE_WITH_FRICTION",
+    "community": "COMPLETE_WITH_FRICTION",
+    "learning": "COMPLETE_WITH_FRICTION",
+    "loginReturnTo": "COMPLETE_WITH_FRICTION"
+  },
+  "isolatedPublicRoutesRemaining": ["/boatpedia", "/coming-soon", "/dictionary", "/marine-knowledge"],
+  "engineMaturity": {
+    "charter": "PRODUCTION_READY_WITH_LIMITATIONS",
+    "market": "PRODUCTION_READY_WITH_LIMITATIONS",
+    "community": "PRODUCTION_READY_WITH_LIMITATIONS",
+    "operationsModeration": "PRODUCTION_READY_WITH_LIMITATIONS"
+  },
+  "p1ImplementationGapsRemaining": 0,
+  "limitations": [
+    "Kakao browser OAuth return round-trip not yet executed",
+    "Authenticated admin visual QA at 1280x900 and 390x844 blocked on local browser port",
+    "Market image upload E2E not repeated",
+    "Charter public supply requires provider consent and separate promotion",
+    "Four previously isolated content routes remain"
+  ]
+}

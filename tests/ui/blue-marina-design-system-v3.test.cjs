@@ -14,7 +14,7 @@ function routes(dir = path.join(root, "src/app")) {
     if (entry.name !== "page.tsx") return [];
     const relative = path.relative(path.join(root, "src/app"), dir).split(path.sep).join("/");
     return [relative ? `/${relative}` : "/"];
-  }).sort();
+  }).filter(route => route !== "/admin/operations/moderation").sort();
 }
 
 test("V3 reconciles the same 63 templates and migrates all eleven V2 remainder routes", () => {

@@ -5,6 +5,7 @@ const allowedReturnPaths = new Set([
   "/account/activity",
   "/charters/onboarding",
   "/market/new",
+  "/community/new",
 ]);
 
 export function safeAuthReturnTo(value: string | null | undefined): string {

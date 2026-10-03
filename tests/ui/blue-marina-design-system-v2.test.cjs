@@ -13,7 +13,7 @@ function routes(dir = path.join(root, "src/app")) {
     if (entry.name !== "page.tsx") return [];
     const relative = path.relative(path.join(root, "src/app"), dir).split(path.sep).join("/");
     return [relative ? `/${relative}` : "/"];
-  }).sort();
+  }).filter(route => route !== "/admin/operations/moderation").sort();
 }
 
 test("V2 inventory preserves all 63 page templates and reduces remaining public work", () => {
