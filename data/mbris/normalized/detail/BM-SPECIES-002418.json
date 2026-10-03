@@ -1,0 +1,67 @@
+{
+  "internalId": "BM-SPECIES-002418",
+  "sourceProvider": "MBRIS",
+  "sourceId": "270000022369",
+  "basic": {
+    "koreanName": "오분자기",
+    "scientificName": "Haliotis supertexta Lischke, 1870",
+    "scientificNameShort": "Haliotis supertexta"
+  },
+  "taxonomy": {
+    "kingdom": "동물계",
+    "phylum": "연체동물문",
+    "class": "복족강",
+    "order": null,
+    "family": "전복과",
+    "genus": null
+  },
+  "ecology": {
+    "habitat": null,
+    "form": null,
+    "ecologyNotes": null,
+    "domesticDistribution": "강릉, 포항, 남해",
+    "internationalDistribution": null,
+    "extra": {
+      "overview": "패각은 낮고 타원형으로 두께는 얇은 편이다. 각정은 왼쪽으로 치우쳐져 있으며 체층의 너비가 패각의 너비 대부분을 차지한다. 패각의 색은 적갈색 또는 흑갈색으로 표면에는 불규칙한 하얀 반점들이 구름무늬처럼 나타난다. 패각 표면에는 굵고 거친 성장륵과 가늘고한 약한 나륵이 나타난다. 체층의 등면 가장자리에는 나층으로 층을 이루고 7개의 호흥공이 있다. 패각 내면에는 진주광택이 강하게 나타난다. 외순은 상대적으로 얇은데 반해, 내순과 축순은 두껍고 강하며 활층이 넓다. 암반 조간대에 서식한다."
+    }
+  },
+  "taxonomicStatus": {
+    "nameType": "정명",
+    "correctedScientificName": "Haliotis supertexta Lischke, 1870"
+  },
+  "rawApiFields": {
+    "SpcTxnId": "270000022369",
+    "Kingdom": "Animalia",
+    "KingdomKR": "동물계",
+    "PhylumDivision": "Mollusca",
+    "PhylumDivisionKR": "연체동물문",
+    "Class": "Gastropoda",
+    "ClassKR": "복족강",
+    "Order": "Lepetellida",
+    "OrderKR": null,
+    "Family": "Haliotidae",
+    "FamilyKR": "전복과",
+    "SpcScitfNm": "Haliotis supertexta Lischke, 1870",
+    "SpcScitfNmShort": "Haliotis supertexta",
+    "CommKorNm": "오분자기",
+    "SpcTyp": "기타",
+    "ABST": "패각은 낮고 타원형으로 두께는 얇은 편이다. 각정은 왼쪽으로 치우쳐져 있으며 체층의 너비가 패각의 너비 대부분을 차지한다. 패각의 색은 적갈색 또는 흑갈색으로 표면에는 불규칙한 하얀 반점들이 구름무늬처럼 나타난다. 패각 표면에는 굵고 거친 성장륵과 가늘고한 약한 나륵이 나타난다. 체층의 등면 가장자리에는 나층으로 층을 이루고 7개의 호흥공이 있다. 패각 내면에는 진주광택이 강하게 나타난다. 외순은 상대적으로 얇은데 반해, 내순과 축순은 두껍고 강하며 활층이 넓다. 암반 조간대에 서식한다.",
+    "FORM": null,
+    "ECOL": null,
+    "CULTIVINF": null,
+    "BIOCHEMICAL": null,
+    "ACTIVINFO": null,
+    "NADI": "강릉, 포항, 남해",
+    "INDI": null,
+    "HABI": null,
+    "UTLZ": null,
+    "CorrNmTyp": "정명",
+    "CorrSpcScitfNm": "Haliotis supertexta Lischke, 1870"
+  },
+  "source": {
+    "apiEndpoint": "https://apis.data.go.kr/B553482/mbrisdataview3/taxonlist3",
+    "collectedAt": "2026-08-03T10:12:10.188774+00:00",
+    "responseHash": "f79918e111fcefd9e50eb29f52c2516038d2724d416908a1a0bc431505751b45"
+  },
+  "reviewStatus": "pending"
+}

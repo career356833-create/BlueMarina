@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "1.0.0",
+  "audit": "BLUE_MARINA_WORKTREE_RELEASE_RECONCILIATION_V2",
+  "asOf": "2026-10-03",
+  "decision": "CLEAN_MAIN_RELEASE_REPRODUCIBLE_WITH_LIMITATIONS",
+  "baseline": {
+    "originalHead": "53c6111cbf1eb2ad1bfeb2ce0e1e98a44c9fac5e",
+    "historicalFailureCountReported": 82,
+    "historicalFailureListAvailable": false,
+    "independentlyReproducedAfterRecovery": {
+      "tests": 1231,
+      "passed": 1146,
+      "failed": 84,
+      "skipped": 1,
+      "checkout": "Windows default autocrlf"
+    }
+  },
+  "releaseCriticalRecovery": {
+    "commit": "f147e7beef72f20ea75f86ddff0b790bdd3c6a39",
+    "files": [
+      "next.config.ts",
+      "src/app/fishing-spots/fishing-spots-client.tsx",
+      "src/components/boat/home/FishingExperienceSection.tsx",
+      "src/components/boat/home/FishingWaterTemperatureCard.tsx"
+    ],
+    "targetedTests": 42,
+    "typecheck": "PASS",
+    "relevantLint": "PASS",
+    "build": "PASS"
+  },
+  "failureClassification": {
+    "basis": "84 independently reproduced failures; the prior 82-failure run has no per-test log for identity reconciliation",
+    "A_MISSING_REQUIRED_FIXTURE": 2,
+    "B_MISSING_REQUIRED_TOOL": 0,
+    "C_STALE_TEST_EXPECTATION": 2,
+    "D_TEST_DEPENDS_ON_UNCOMMITTED_EXPERIMENT": 8,
+    "E_REAL_MAIN_BUG": 0,
+    "F_ENVIRONMENT_ONLY": 72,
+    "G_UNKNOWN": 0,
+    "sum": 84
+  },
+  "recovery": {
+    "fixturesAdded": [
+      "data/mbris/normalized/detail/BM-SPECIES-002418.json",
+      "data/mbris/normalized/detail/BM-SPECIES-000279.json"
+    ],
+    "testsUpdated": ["tests/fishing-condition/ui-v1-1.test.cjs"],
+    "researchTestsRescoped": [
+      "tests/fish-observation/migration/fish-domain-draft-consistency.research.cjs",
+      "tests/fish-observation/migration/fish-staging-incremental-schema.research.cjs",
+      "tests/fish-observation/migration/fish-staging-migration-order.research.cjs",
+      "tests/fish-observation/migration/fish-staging-rpc-security.research.cjs",
+      "tests/fish-observation/migration/fish-supabase-remote-audit-tools.research.cjs",
+      "tests/fish-observation/rpc/confirm-fish-observation-rpc-contract.research.cjs"
+    ],
+    "toolsAdded": [],
+    "runtimeBugsFixedInSecondCommit": [],
+    "checkoutAndTestConfiguration": [".gitattributes", "package.json"],
+    "notRecovered": [
+      "other MBRIS detail records and raw research dumps",
+      "Fish Observation draft migrations and audit tools",
+      "tools/species-importer research tooling",
+      "V1 RELEASE_USEFUL and POST_LAUNCH changes",
+      "logs, caches and generated build output"
+    ]
+  },
+  "isolatedProposedFileSet": {
+    "tests": 1231,
+    "passed": 1230,
+    "failed": 0,
+    "skipped": 1,
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS"
+  },
+  "limitations": [
+    "One pre-existing test remains skipped",
+    "The historical 82-failure run cannot be individually matched to the 84-failure independent reproduction without its log",
+    "Fish Observation draft-schema research tests require separate uncommitted prerequisites"
+  ],
+  "remoteMutations": {
+    "productionDeploy": 0,
+    "supabase": 0,
+    "vercelEnvironment": 0
+  }
+}

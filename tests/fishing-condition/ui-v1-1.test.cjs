@@ -10,16 +10,15 @@ const captain = fs.readFileSync(path.join(root, "src/components/boat/ai-captain/
 const css = fs.readFileSync(path.join(root, "src/app/globals.css"), "utf8");
 const fishingHero = fs.readFileSync(path.join(root, "src/components/boat/home/FishingExperienceSection.tsx"), "utf8");
 
-test("AI Captain desktop mode uses a route-aware safe area", () => {
-  assert.match(captain, /startsWith\("\/fishing-spots"\)/);
+test("AI Captain content routes use a non-overlapping document anchor", () => {
+  assert.match(captain, /pathname !== "\/sea" && pathname !== "\/sea\/navigation"/);
   assert.match(captain, /data-safe-area/);
-  assert.match(css, /blue-captain-widget\[data-safe-area="true"\]/);
-  assert.match(css, /bottom: 86px/);
+  assert.match(css, /blue-captain-widget\[data-safe-area="true"\] \{\s*position: relative/);
 });
 
-test("AI Captain mobile mode uses a compact trigger above BottomNav", () => {
+test("AI Captain mobile mode uses a compact trigger after content and clear of BottomNav", () => {
   assert.match(css, /width: 44px/);
-  assert.match(css, /bottom: 96px/);
+  assert.match(css, /margin: 16px 16px calc\(var\(--bm-bottom-nav-height\) \+ env\(safe-area-inset-bottom\) \+ 16px\)/);
 });
 
 test("temperature cards expose the profile reference range", () => {
