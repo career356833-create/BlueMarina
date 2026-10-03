@@ -1,27 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Anchor, ArrowRight, Fish, Thermometer } from "lucide-react";
+import { Anchor, ArrowRight, Fish } from "lucide-react";
+import { fishingSpots } from "@/data/fishing-spots";
+import { getFishingConditionProfileSpecies } from "@/lib/fishing-condition/profile-registry";
+import { buildFishingJourneyConditionsHref } from "@/lib/fishing-spots/journey";
+import { FishingWaterTemperatureCard } from "./FishingWaterTemperatureCard";
+
+// This is an editorial choice among source-backed records, not a live catch or suitability ranking.
+const featuredSpot = fishingSpots.find((spot) =>
+  spot.city === "통영시" && spot.name.includes("매물도")
+  && spot.sourceType === "MOF_SHARED_BOAT_FISHING_POINT" && spot.sourceUrl && spot.targetFish
+);
+const conditionSpecies = getFishingConditionProfileSpecies();
+const featuredSpecies = featuredSpot?.targetFish.split("|")
+  .map((name) => conditionSpecies.find((species) => species.name === name.trim()))
+  .find((species) => species !== undefined);
 
 const fishingHighlights = [
-  {
-    eyebrow: "어종 탐색",
-    label: "참돔",
-    detail: "어종 정보 확인",
-    icon: Fish
-  },
-  {
-    eyebrow: "포인트 예시",
-    label: "통영 매물도",
-    detail: "출조 전 현장 확인",
-    icon: Anchor
-  },
-  {
-    eyebrow: "수온",
-    label: "--°C",
-    detail: "실시간 연동 전",
-    icon: Thermometer
-  }
-] as const;
+  ...(featuredSpecies ? [{ eyebrow: "원본 대상어", label: featuredSpecies.name, detail: "어종 환경 근거 보기", href: buildFishingJourneyConditionsHref({ spotId: featuredSpot?.id, speciesId: featuredSpecies.id, source: "fishing-spots" }), icon: Fish }] : []),
+  ...(featuredSpot ? [{ eyebrow: "공식 포인트", label: featuredSpot.name, detail: "출조 전 현장 확인", href: `/fishing-spots/${encodeURIComponent(featuredSpot.id)}`, icon: Anchor }] : []),
+];
 
 export function FishingExperienceSection() {
   return (
@@ -57,43 +55,44 @@ export function FishingExperienceSection() {
           </h2>
 
           <p className="mt-7 max-w-md text-base leading-8 text-white/68 sm:text-lg">
-            실제 조황, 추천 어종,
+            공식 포인트 원본과 대상어 자료,
             <br />
-            출조 포인트를 확인하고
+            관측소별 수온을 확인하고
             <br />
             오늘의 낚시를 시작하세요.
           </p>
 
           <Link
-            href="/fishing-spots"
+            href="#fishing-spot-results"
             className="mt-9 inline-flex min-h-12 items-center gap-5 border border-[#e2bd7d]/65 bg-[#e8c58a] px-6 text-sm font-semibold text-[#07111b] shadow-[0_16px_42px_rgba(0,0,0,0.24)] transition hover:bg-[#f0d39f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f0d39f]"
           >
-            오늘 조황 보기
+            낚시 포인트 보기
             <ArrowRight size={17} aria-hidden="true" />
           </Link>
         </div>
 
-        {/* Future: bind verified catch, FishSpecies, fishingSpot and marine data here. */}
         <div className="relative z-10 mt-12 grid grid-cols-2 gap-2 sm:max-w-xl sm:gap-3 lg:absolute lg:right-12 lg:top-1/2 lg:mt-0 lg:w-[250px] lg:-translate-y-1/2 lg:grid-cols-1 lg:gap-4">
-          {fishingHighlights.map((item, index) => {
+          {fishingHighlights.map((item) => {
             const Icon = item.icon;
 
             return (
-              <article
+              <Link
                 key={item.eyebrow}
-                className={`border border-white/18 bg-[#06111d]/82 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.3)] backdrop-blur-xl sm:p-5 ${index === 2 ? "col-span-2 lg:col-span-1" : ""}`}
+                href={item.href}
+                className="min-h-28 border border-white/18 bg-[#06111d]/82 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.3)] backdrop-blur-xl transition hover:border-[#e2bd7d]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e2bd7d] sm:p-5"
               >
                 <div className="flex items-start gap-3">
                   <Icon className="mt-0.5 shrink-0 text-[#e2bd7d]" size={20} strokeWidth={1.45} aria-hidden="true" />
                   <div className="min-w-0">
                     <p className="text-[9px] font-semibold tracking-[0.18em] text-[#d5b477]">{item.eyebrow}</p>
-                    <p className="mt-2 font-serif text-xl text-[#f4f0e8]">{item.label}</p>
+                    <p className="mt-2 break-all font-serif text-sm leading-snug text-[#f4f0e8] sm:text-lg">{item.label}</p>
                     <p className="mt-1 text-[11px] text-white/48">{item.detail}</p>
                   </div>
                 </div>
-              </article>
+              </Link>
             );
           })}
+          <FishingWaterTemperatureCard />
         </div>
       </div>
     </section>

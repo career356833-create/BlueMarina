@@ -233,7 +233,7 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
           </div>
         </section>
 
-        <section className="bm-discovery-results p-3 sm:p-4 lg:p-5">
+        <section id="fishing-spot-results" className="bm-discovery-results scroll-mt-24 p-3 sm:p-4 lg:p-5">
           <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.18em] text-[var(--bm-accent-ink)]">

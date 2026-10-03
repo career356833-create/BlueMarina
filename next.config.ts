@@ -70,6 +70,10 @@ const nextConfig: NextConfig = {
       {
         source: "/community/new",
         headers: [{ key: "Cache-Control", value: "private, no-store, max-age=0, must-revalidate" }]
+      },
+      {
+        source: "/reservations",
+        headers: [{ key: "Cache-Control", value: "private, no-store, max-age=0, must-revalidate" }]
       }
     ];
   }
