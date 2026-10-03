@@ -24,12 +24,12 @@
     "approveThenPublicThenHide": "PASS",
     "rejectOwnerOnly": "PASS",
     "reportDismiss": "PASS",
-    "auditEventsCreated": 4,
+    "auditEventsCreated": 8,
     "finalPublicQaPosts": 0
   },
   "charter": {
     "submittedToApproved": "PASS",
-    "promotionCandidateCreated": 1,
+    "promotionCandidateCreated": 2,
     "activatedPromotionCandidates": 0,
     "publicOfferActivation": 0
   },
@@ -49,7 +49,7 @@
   "dataIntegrity": {
     "fishSpeciesBeforeAfter": [1258, 1258],
     "marineOrganismsBeforeAfter": [3016, 3016],
-    "qaIdentitiesCreatedAndBanned": 6,
+    "qaIdentitiesCreatedAndBanned": 11,
     "qaPublicResidual": 0,
     "arbitrarySqlDelete": 0
   },
@@ -72,7 +72,23 @@
     "build": "PASS",
     "diffCheck": "PASS",
     "isolatedDatabase": "PASS",
-    "remoteAuthenticatedApi": "PASS"
+    "remoteAuthenticatedApi": "PASS",
+    "productionAuthenticatedApi": "PASS"
+  },
+  "production": {
+    "deploymentId": "dpl_AGhWQ2NysQgimpRFmumMyPSf6eLp",
+    "deploymentSha": "cda91498fa9259764a7aaaffe0aa8010c542d816",
+    "deploymentState": "READY",
+    "canonicalDomainPromoted": true,
+    "anonymousQueueApi": "DENIED_401",
+    "normalQaQueueApi": "DENIED_403",
+    "roleIsolation": "PASS",
+    "communityApproveRejectReportHide": "PASS",
+    "charterApprovePrivateCandidate": "PASS",
+    "marketApproveHide": "PASS",
+    "finalPublicQaPosts": 0,
+    "finalPublicQaListings": 0,
+    "qaIdentitiesBanned": 11
   },
   "coreFlows": {
     "fishingJourney": "COMPLETE_WITH_FRICTION",
