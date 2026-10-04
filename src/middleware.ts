@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
+import { canAccessAdminPath } from "@/lib/operations/moderation-access";
 
 function unavailable() {
   return new NextResponse("Not found", {
@@ -26,7 +27,7 @@ export async function middleware(request: NextRequest) {
   });
   try {
     const { data, error } = await client.auth.getUser();
-    if (error || data.user?.app_metadata?.operations_role !== "operations_admin") return unavailable();
+    if (error || !data.user || !canAccessAdminPath(request.nextUrl.pathname, data.user.app_metadata)) return unavailable();
   } catch { return unavailable(); }
   response.headers.set("Cache-Control", "private, no-store");
   response.headers.set("X-Robots-Tag", "noindex, nofollow");

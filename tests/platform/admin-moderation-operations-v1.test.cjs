@@ -25,7 +25,7 @@ test("Community OAuth return target is internal and exact", () => {
 });
 
 test("role contract isolates all three moderation domains", () => {
-  const { moderationRoles, canReadModeration, canActModeration } = load("src/lib/operations/moderation-access.ts");
+  const { moderationRoles, canReadModeration, canActModeration, canAccessAdminPath } = load("src/lib/operations/moderation-access.ts");
   const normal = moderationRoles({ community_role: "community_admin", market_role: "market_admin" });
   assert.equal(canActModeration(normal, "community"), true);
   assert.equal(canActModeration(normal, "market"), true);
@@ -42,6 +42,13 @@ test("role contract isolates all three moderation domains", () => {
     assert.equal(canActModeration(operations, domain), false);
   }
   assert.equal(Object.values(moderationRoles({})).some(Boolean), false);
+  for (const metadata of [{ community_role: "community_admin" }, { charter_role: "charter_admin" }, { market_role: "market_admin" }]) {
+    assert.equal(canAccessAdminPath("/admin/operations/moderation", metadata), true);
+    assert.equal(canAccessAdminPath("/admin/operations", metadata), false);
+    assert.equal(canAccessAdminPath("/admin/operations/moderation-other", metadata), false);
+  }
+  assert.equal(canAccessAdminPath("/admin/operations", { operations_role: "operations_admin" }), true);
+  assert.equal(canAccessAdminPath("/admin/operations/moderation", {}), false);
 });
 
 test("moderation transitions are atomic and auditor records previous and next state", () => {

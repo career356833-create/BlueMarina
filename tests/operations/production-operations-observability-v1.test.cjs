@@ -32,7 +32,7 @@ test('operations route is private, noindex, nofollow and absent from sitemap', (
 test('both page and health API require verified Supabase Auth app_metadata role', () => {
   const middleware = read('src/middleware.ts');
   assert.match(middleware, /auth\.getUser\(\)/);
-  assert.match(middleware, /app_metadata\?\.operations_role !== "operations_admin"/);
+  assert.match(middleware, /canAccessAdminPath\(request\.nextUrl\.pathname, data\.user\.app_metadata\)/);
   assert.match(page, /auth\.getUser\(\)/);
   assert.match(page, /app_metadata\?\.operations_role !== "operations_admin"/);
   assert.match(server, /auth\.getUser\(token\)/);
