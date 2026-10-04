@@ -9,7 +9,7 @@
   "communityReturnTo": {
     "internalTargetAllowed": true,
     "externalTargetsDenied": true,
-    "kakaoBrowserRoundTrip": "NOT_TESTED"
+    "kakaoBrowserRoundTrip": "BLOCKED_KAKAO_BROWSER_SETTINGS"
   },
   "adminAuth": {
     "anonymous": "DENIED_401",
@@ -42,6 +42,9 @@
     "queues": ["charter", "market", "community", "reports"],
     "exactDatabaseCounts": true,
     "queueLimit": 50,
+    "pendingCommunityDetail": "PRIVATE_INLINE_PREVIEW",
+    "pendingReportDetail": "PRIVATE_INLINE_PREVIEW",
+    "ownerIdentifier": "MASKED_UUID",
     "qaIncludedInWorkQueueButNotBusinessKpi": true,
     "adminDesktopVisual": "NOT_TESTED_BROWSER_PORT_BLOCKED",
     "adminMobileVisual": "NOT_TESTED_BROWSER_PORT_BLOCKED"
@@ -108,7 +111,7 @@
   },
   "p1ImplementationGapsRemaining": 0,
   "limitations": [
-    "Kakao browser OAuth return round-trip not yet executed",
+    "Kakao browser OAuth return round-trip blocked by Kakao browser-settings error before callback",
     "Authenticated admin visual QA at 1280x900 and 390x844 blocked on local browser port",
     "Market image upload E2E not repeated",
     "Charter public supply requires provider consent and separate promotion",

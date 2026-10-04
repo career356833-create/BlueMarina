@@ -116,7 +116,7 @@ test("operational evidence distinguishes API success from browser and supply lim
   assert.equal(report.community.finalPublicQaPosts, 0);
   assert.equal(report.market.finalPublicQaListings, 0);
   assert.equal(report.charter.activatedPromotionCandidates, 0);
-  assert.equal(report.communityReturnTo.kakaoBrowserRoundTrip, "NOT_TESTED");
+  assert.equal(report.communityReturnTo.kakaoBrowserRoundTrip, "BLOCKED_KAKAO_BROWSER_SETTINGS");
   assert.equal(report.operations.adminDesktopVisual, "NOT_TESTED_BROWSER_PORT_BLOCKED");
   assert.equal(report.isolatedPublicRoutesRemaining.length, 4);
 });

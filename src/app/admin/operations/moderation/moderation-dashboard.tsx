@@ -75,7 +75,12 @@ export function ModerationDashboard() {
       <div className="mt-4 space-y-3">{data.items.map(item => <article key={item.id} className="min-w-0 rounded-xl border border-white/15 p-4">
         <p className="break-words font-semibold">{item.title}{item.qa ? <span className="ml-2 text-xs text-amber-200">QA</span> : null}</p>
         <p className="mt-1 break-all text-xs text-white/55">{item.id} · {item.status} · {item.submittedAt ?? "제출 시각 미확인"}</p>
+        {item.owner ? <p className="mt-1 text-xs text-white/55">제출자 ID {item.owner}</p> : null}
         {item.issue ? <p className="mt-2 text-xs text-amber-100">{item.issue}</p> : null}
+        {item.preview ? <details className="mt-3 rounded-lg border border-white/15 p-3 text-sm">
+          <summary className="min-h-11 cursor-pointer text-[#AEE8EF]">검토 내용 보기</summary>
+          <p className="whitespace-pre-wrap break-words pt-2 leading-6 text-white/80">{item.preview}</p>
+        </details> : null}
         {item.detail ? <Link href={item.detail} className="mt-2 inline-flex min-h-11 items-center text-sm text-[#AEE8EF] underline">상세 확인</Link> : null}
         {actions(queue, item)}
       </article>)}</div>
