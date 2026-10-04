@@ -6,7 +6,8 @@ import { createClient } from "@supabase/supabase-js";
 import { getNifsRealtimeFishingEnvironment, NifsRealtimeFishingSourceError } from "@/lib/fishing-condition/nifs-realtime-fishing-server";
 import { FISHING_CONDITION_PROFILE_REGISTRY, FISHING_CONDITION_PROFILE_SPECIES_COUNT } from "@/lib/fishing-condition/profile-registry";
 import releaseEvidence from "../../../reports/release/production-informational-release-v1.json";
-import { pageHealth, partialPageHealth, type OperationsService, type OperationsSnapshot, type OperationsSource } from "./model";
+import { partialPageHealth, type OperationsService, type OperationsSnapshot, type OperationsSource } from "./model";
+import { probePublicRoute, productionProbeOrigin } from "./public-route-probe";
 
 const SNAPSHOT_MS = 60_000;
 const PAGE_TIMEOUT_MS = 4_000;
@@ -45,6 +46,7 @@ export async function authorizeOperationsToken(token: string | null): Promise<vo
 }
 
 export function trustedOperationsOrigin(): string | null {
+  if (process.env.VERCEL_ENV === "production") return productionProbeOrigin(process.env.NEXT_PUBLIC_SITE_URL);
   const deploymentHost = process.env.VERCEL_URL;
   if (deploymentHost && /^[a-z0-9-]+\.vercel\.app$/i.test(deploymentHost)) return `https://${deploymentHost}`;
   if (process.env.NODE_ENV === "development") return "http://127.0.0.1:3000";
@@ -83,14 +85,10 @@ async function checkRisa(checkedAt: string): Promise<OperationsSource> {
 async function checkService(origin: string | null, id: string, routePath: string): Promise<OperationsService> {
   if (!origin) return { id, path: routePath, status: "UNKNOWN", lastCheckedAt: null, latencyMs: null, httpStatus: null, limitation: "Trusted deployment origin is unavailable." };
   const started = Date.now();
-  try {
-    const response = await fetch(new URL(routePath, origin), { cache: "no-store", redirect: "manual", signal: AbortSignal.timeout(PAGE_TIMEOUT_MS) });
-    return { id, path: routePath, status: pageHealth(response.status), lastCheckedAt: new Date().toISOString(), latencyMs: Date.now() - started, httpStatus: response.status,
-      limitation: "HTTP route check only; browser canvas, GPS, hydration and service worker are not measured." };
-  } catch {
-    return { id, path: routePath, status: "ERROR", lastCheckedAt: new Date().toISOString(), latencyMs: Date.now() - started, httpStatus: null,
-      limitation: "Bounded route check failed or timed out; browser rendering is not inferred." };
-  }
+  const result = await probePublicRoute(origin, routePath, fetch, AbortSignal.timeout(PAGE_TIMEOUT_MS));
+  return { id, path: routePath, status: result.status, lastCheckedAt: new Date().toISOString(), latencyMs: Date.now() - started,
+    httpStatus: result.httpStatus, finalUrl: result.finalUrl, redirectCount: result.redirectCount,
+    limitation: `${result.reason} Canvas, GPS, hydration and service worker are not measured.` };
 }
 
 async function checkStaticConditionApi(origin: string | null): Promise<{ status: number | null; latencyMs: number | null }> {

@@ -21,6 +21,8 @@ export type OperationsService = {
   lastCheckedAt: string | null;
   latencyMs: number | null;
   httpStatus: number | null;
+  finalUrl?: string | null;
+  redirectCount?: number;
   limitation: string | null;
 };
 
