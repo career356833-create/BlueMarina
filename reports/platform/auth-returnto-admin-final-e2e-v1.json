@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "1.0.0",
+  "decision": "BLUE_MARINA_PLATFORM_CONNECTED_WITH_ENGINE_GAPS",
+  "head": "a47ed74e2e40f34b25c6269ceb735debf3e1493a",
+  "originMainMatch": true,
+  "production": {
+    "deploymentId": "dpl_HmFEc6A8aLVQD4BiLJ2poTypStJW",
+    "state": "READY",
+    "canonicalDomain": "https://blue-marina.vercel.app"
+  },
+  "kakao": {
+    "providerEnabled": true,
+    "siteUrlMatchesProduction": true,
+    "callbackAllowed": true,
+    "supabaseCallbackMatchesProject": true,
+    "priorAttempt": "BAD_OAUTH_STATE_EXPIRED_NO_SESSION",
+    "freshLogin": "PASS_WITH_EXISTING_KAKAO_SSO_AFTER_NEW_OAUTH_REQUEST",
+    "callback": "PASS_AUTH_COMPLETE_OBSERVED",
+    "finalRoute": "/community/new",
+    "session": "ACTIVE_ACCOUNT_AND_PROFILE_VISIBLE",
+    "rootCause": "PRIOR_OAUTH_STATE_EXPIRED_FRESH_REQUEST_PASS"
+  },
+  "returnTo": {
+    "communityNewAllowlisted": true,
+    "marketNewAllowlisted": true,
+    "charterOnboardingAllowlisted": true,
+    "externalAndProtocolRelativeDenied": true,
+    "scriptAndDataSchemesDenied": true
+  },
+  "communityBrowserLoop": {
+    "submit": "NOT_REPEATED_EXISTING_OWNER_POST_VISIBLE",
+    "review": "PASS_PREVIOUS_PRODUCTION_API_E2E_NOT_BROWSER_REPEATED",
+    "publish": "PASS_PREVIOUS_PRODUCTION_API_E2E_NOT_BROWSER_REPEATED",
+    "publicVerify": "PASS_PREVIOUS_PRODUCTION_API_E2E_NOT_BROWSER_REPEATED",
+    "finalCleanup": "NOT_APPLICABLE_NO_NEW_QA_POST"
+  },
+  "admin": {
+    "anonymousPage": "HTTP_404_NOINDEX_PRIVATE_NO_STORE",
+    "anonymousApi": "DENIED_401_PREVIOUS_PRODUCTION_E2E",
+    "normalUserApi": "DENIED_403_PREVIOUS_PRODUCTION_E2E",
+    "normalKakaoUserPage": "DENIED_404_CURRENT_BROWSER",
+    "domainAdminApi": "PASS_PREVIOUS_PRODUCTION_E2E",
+    "operationsCountsOnly": "PASS_PRODUCTION_API_E2E",
+    "unbannedAdminIdentityAnyDomain": 0,
+    "unbannedCommunityAdminIdentity": 0,
+    "desktop1280x900": "NOT_TESTED_NO_APPROVED_ACTIVE_IDENTITY",
+    "mobile390x844": "NOT_TESTED_NO_APPROVED_ACTIVE_IDENTITY"
+  },
+  "pendingCounts": {
+    "charter": 1,
+    "market": 1,
+    "community": 1,
+    "communityReports": 0,
+    "qaMarkedPendingAcrossThreeDomains": 0
+  },
+  "p1": {
+    "communityModerationImplementation": "RESOLVED",
+    "communityFreshKakaoReturnToAcceptance": "RESOLVED",
+    "remainingAcceptanceGates": 0
+  },
+  "coreFlows": {
+    "fishingJourney": "COMPLETE_WITH_FRICTION_PRIOR_EVIDENCE",
+    "accountSaved": "COMPLETE_WITH_FRICTION_PRIOR_EVIDENCE",
+    "charterModeration": "COMPLETE_WITH_FRICTION_PRIOR_EVIDENCE",
+    "marketModeration": "COMPLETE_WITH_FRICTION_PRIOR_EVIDENCE",
+    "community": "COMPLETE_WITH_FRICTION_BROWSER_RETURN_PASS_ADMIN_VISUAL_PENDING",
+    "learningProgress": "COMPLETE_WITH_FRICTION_PRIOR_EVIDENCE",
+    "protectedLoginReturnTo": "COMPLETE_FRESH_KAKAO_SSO_RETURN_PASS"
+  },
+  "security": {
+    "newCriticalHighAdvisorFindings": 0,
+    "moderationRlsTablesEnabled": 5,
+    "oauthScopeExpanded": false,
+    "rolesChanged": false,
+    "publicQaContamination": 0
+  },
+  "dataIntegrity": {
+    "fishSpecies": 1258,
+    "marineOrganisms": 3016,
+    "fishingSpotsCommittedSource": 1405,
+    "publicQaCommunityPosts": 0,
+    "publicQaMarketListings": 0,
+    "remoteMutationThisRun": 0
+  },
+  "verification": {
+    "targeted": "12/12 PASS",
+    "cleanMainTests": "1238 PASS / 1 SKIP / 0 FAIL",
+    "cleanMainTypecheck": "PASS",
+    "cleanMainLint": "PASS",
+    "cleanMainBuild": "PASS",
+    "cleanMainDiffCheck": "PASS",
+    "dirtyWorktreeTests": "1313 PASS / 3 FAIL / 1 SKIP_UNRELATED_AUDIT_ASSERTIONS"
+  },
+  "followUp20261004": {
+    "originalAuditPreserved": true,
+    "adminVisualQa": "PASS_1280X900_AND_390X844_SUBSEQUENT_RUN",
+    "moderationPathFixCommit": "4254e727e44244a80a2f95ce7f553a5b14d07a02",
+    "qaAccountBannedAndRolesRemoved": true,
+    "authSessionsAndRefreshTokens": "0/0_AFTER_EXPOSED_JWT_EXPIRY",
+    "operationsHealthFixCommit": "b7896a5ac9bb45c076137a3eb2aff7e85d9de139",
+    "productionPublicRouteHttp": "6/6_200",
+    "productionAuthenticatedHealthCards": "UNVERIFIED_MASKED_AUTH_ENV",
+    "finalEvidence": "reports/platform/admin-ui-final-qa-v1.json"
+  },
+  "git": {
+    "staged": 0,
+    "commitThisRun": 0,
+    "pushThisRun": 0,
+    "unrelatedWorktreePreserved": true
+  }
+}

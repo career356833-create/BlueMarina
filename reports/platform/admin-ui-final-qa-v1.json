@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "1.0.0",
+  "dateKst": "2026-10-04",
+  "decision": "POST_ADMIN_SECURITY_CLOSURE_COMPLETE_WITH_LIMITATIONS",
+  "platformDecision": "BLUE_MARINA_PLATFORM_CONNECTED_WITH_ENGINE_GAPS",
+  "sourceCommits": {
+    "moderationPathFix": "4254e727e44244a80a2f95ce7f553a5b14d07a02",
+    "operationsHealthFix": "b7896a5ac9bb45c076137a3eb2aff7e85d9de139"
+  },
+  "production": {
+    "domain": "https://blue-marina.vercel.app",
+    "deploymentId": "dpl_6cqeg9h4NnR27q3GuhWAk1iRztvB",
+    "deploymentReady": true,
+    "canonicalAliasTargetsDeployment": true,
+    "deploymentShaDirectlyExposedByCli": false,
+    "authenticatedHealthE2e": "NOT_RUN_PRODUCTION_AUTH_ENV_PULL_RETURNED_MASKED_VALUES"
+  },
+  "qaAdmin": {
+    "desktop1280x900": "PASS_PRIOR_PRODUCTION_BROWSER_QA",
+    "mobile390x844": "PASS_PRIOR_PRODUCTION_BROWSER_QA",
+    "roleIsolation": "PASS_PRIOR_PRODUCTION_BROWSER_QA",
+    "operationsCountOnly": "PASS_PRIOR_PRODUCTION_BROWSER_QA",
+    "communityModeration": "PRIVATE_QA_POST_REJECTED_VIA_UI",
+    "charterModeration": "PENDING_DETAIL_AND_ACTIONS_VISIBLE_NO_APPROVAL",
+    "marketModeration": "PENDING_DETAIL_AND_ACTIONS_VISIBLE_NO_APPROVAL"
+  },
+  "tokenIncident": {
+    "incidentDecision": "QA_TOKEN_INCIDENT_CLOSED",
+    "exposureType": "TRANSIENT_TOOL_OUTPUT_ACCESS_JWT",
+    "secretPersistedToRepo": false,
+    "secretPersistedToDocs": false,
+    "qaUserBanned": true,
+    "adminRolesPresent": 0,
+    "authSessions": 0,
+    "refreshTokens": 0,
+    "exposedJwtPastExpiryAtVerification": true,
+    "explicitRevokeOperationThisRun": false,
+    "sessionRevokedThisRun": false,
+    "closure": "CLOSED_BY_EXPIRY_AND_ZERO_ACTIVE_SESSIONS_OR_REFRESH_TOKENS",
+    "residualRisk": "NO_ACTIVE_CREDENTIAL_OBSERVED;PRE_EXPIRY_USE_CANNOT_BE_RETROACTIVELY_EXCLUDED"
+  },
+  "operationsHealth": {
+    "cause": "VERCEL_URL_DEPLOYMENT_HOST_REDIRECTED_TO_VERCEL_SSO",
+    "deploymentHostInitialHttp": 302,
+    "redirectDestinationHost": "vercel.com",
+    "redirectClassification": "OFF_ORIGIN_AUTH_REDIRECT_NOT_CANONICAL",
+    "publicDomainRoutes": ["/", "/sea", "/sea/navigation", "/fishing-spots", "/fishing-spots/conditions", "/today-sea"],
+    "publicDomainDirectHttp": [200, 200, 200, 200, 200, 200],
+    "fix": "PRODUCTION_USES_VALIDATED_NEXT_PUBLIC_SITE_URL_AND_BOUNDED_REDIRECT_PROBE",
+    "expectedSameOriginCanonicalRedirect": "HEALTHY_AFTER_2XX",
+    "unexpectedSameOriginRedirect": "DEGRADED_AFTER_2XX",
+    "offOriginAuthLoopFinalFailure": "ERROR",
+    "productionAuthenticatedCardStates": "UNVERIFIED_AUTH_ENV_MASKED",
+    "browserCanvasGpsPwaInferredFromHttp": false
+  },
+  "security": {
+    "anonymousOperationsPageHttp": 404,
+    "anonymousModerationPageHttp": 404,
+    "anonymousHealthApiHttp": 401,
+    "privateNoStoreNoindex": true,
+    "normalKakaoUserModerationDenied": "PASS_PRIOR_BROWSER_QA",
+    "moderationRlsOn": "5/5",
+    "advisorCriticalHigh": 0,
+    "advisorWarn": 3,
+    "advisorInfo": 28,
+    "newAdminRoleOrAuthMutationThisRun": 0
+  },
+  "integrity": {
+    "fishSpecies": 1258,
+    "marineOrganisms": 3016,
+    "fishingSpotsCommittedSource": 1405,
+    "pending": { "charter": 1, "market": 1, "community": 0, "reports": 0 },
+    "publicQaCommunityPosts": 0,
+    "publicQaMarketListings": 0
+  },
+  "p1": { "communityReturnTo": "RESOLVED", "communityModerationPath": "RESOLVED", "remaining": 0 },
+  "engineMaturity": {
+    "charter": "PRODUCTION_READY_WITH_LIMITATIONS",
+    "market": "PRODUCTION_READY_WITH_LIMITATIONS",
+    "community": "PRODUCTION_READY_WITH_LIMITATIONS",
+    "operationsModeration": "PRODUCTION_READY_WITH_LIMITATIONS"
+  },
+  "verification": {
+    "targeted": "15/15 PASS",
+    "cleanMainPlusFixTests": "1245 PASS / 1 SKIP / 0 FAIL",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "isolatedBuild": "PASS_1467_STATIC_PAGES",
+    "diffCheck": "PASS",
+    "productionAnonymousSecurity": "PASS",
+    "productionAuthenticatedHealth": "UNVERIFIED"
+  },
+  "limitations": [
+    "Production authenticated Operations health cards were not reread after deployment because Vercel CLI supplied masked Auth env values.",
+    "Deployment Git SHA was not exposed by the CLI; commit association is based on push-triggered READY deployment and canonical alias.",
+    "Real-device GPS/PWA and full browser canvas behavior are outside HTTP route probes.",
+    "Existing Security Advisor WARN/INFO findings remain."
+  ]
+}
