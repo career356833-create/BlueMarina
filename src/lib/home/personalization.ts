@@ -32,7 +32,13 @@ const savedHrefPrefixes: Record<SavedItem["entityType"], string> = {
   MARKET_LISTING: "/market/",
 };
 
-function isSafeEntityHref(href: unknown, prefix: string) {
+function isSafeEntityHref(href: unknown, prefix: string, entityId?: string) {
+  if (typeof href !== "string" || /[\\\u0000-\u0020]/.test(href)) return false;
+  if (prefix === "/fish/" && href.startsWith("/fishing-spots/conditions?")) {
+    const url = new URL(href, "https://blue-marina.invalid");
+    return url.pathname === "/fishing-spots/conditions" && url.searchParams.get("speciesId") === entityId;
+  }
+  if (prefix === "/fish/") return false; // No public /fish/[id] route exists.
   return typeof href === "string" && href.startsWith(prefix) && !href.includes("//") && href.length > prefix.length;
 }
 
@@ -44,7 +50,7 @@ function timeValue(value: string) {
 export function getRecentHighlights(items: RecentItem[], limit = HOME_RECENT_LIMIT) {
   const seen = new Set<string>();
   return [...items]
-    .filter((item) => typeof item?.label === "string" && item.label.trim().length > 0 && isSafeEntityHref(item.href, recentHrefPrefixes[item.entityType]))
+    .filter((item) => typeof item?.label === "string" && item.label.trim().length > 0 && isSafeEntityHref(item.href, recentHrefPrefixes[item.entityType], item.entityId))
     .sort((left, right) => timeValue(right.viewedAt) - timeValue(left.viewedAt))
     .filter((item) => {
       const key = `${item.entityType}:${item.entityId}`;
@@ -60,7 +66,7 @@ export function getSavedHighlights(items: SavedItem[], limit = HOME_SAVED_GROUP_
     .map((type) => ({
       type,
       title: savedGroupLabels[type],
-      items: items.filter((item) => item.entityType === type && isSafeEntityHref(item.href, savedHrefPrefixes[type])).slice(0, limit),
+      items: items.filter((item) => item.entityType === type && isSafeEntityHref(item.href, savedHrefPrefixes[type], item.entityId)).slice(0, limit),
     }))
     .filter((group) => group.items.length > 0);
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { ClipboardList, RotateCcw } from "lucide-react";
@@ -166,6 +167,7 @@ function ExamContent() {
               다시 응시
             </button>
           </section>
+          <nav aria-label="시험 후 다음 단계" className="flex flex-wrap gap-3">{[["/wrong", "오답 복습"], ["/progress", "학습 진도"], ["/analysis", "학습 분석"]].map(([href,label]) => <Link key={href} href={`${href}?license=${licenseType}`} className="bm-action-secondary min-h-11 px-4 py-3 text-sm">{label}</Link>)}</nav>
           <ResultAd />
         </>
       )}

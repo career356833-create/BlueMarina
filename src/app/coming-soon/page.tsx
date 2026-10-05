@@ -1,3 +1,4 @@
+import { RelatedActions } from "@/components/platform/RelatedActions";
 import Link from "next/link";
 import { ArrowLeft, Clock, Waves } from "lucide-react";
 import { DetailFrame, StatusNotice } from "@/components/platform/PageFamilies";
@@ -38,6 +39,7 @@ export default async function ComingSoonPage({ searchParams }: ComingSoonPagePro
           홈으로 돌아가기
         </Link>
       </section>
+    <RelatedActions title="이어서 살펴보기" items={[{"href":"/faq","label":"서비스 도움말"},{"href":"/fishing-spots","label":"낚시 포인트 탐색"},{"href":"/study","label":"문제은행 학습"}]} />
     </DetailFrame>
   );
 }

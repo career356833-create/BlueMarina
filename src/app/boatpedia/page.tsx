@@ -1,4 +1,6 @@
 "use client";
+import { RelatedActions } from "@/components/platform/RelatedActions";
+
 
 import { useMemo, useState } from "react";
 import { Anchor, ChevronDown, Filter, Sailboat, Search, ShieldAlert, Sparkles } from "lucide-react";
@@ -219,6 +221,7 @@ export default function BoatpediaPage() {
           )}
         </section>
       </div>
+    <RelatedActions title="이어서 살펴보기" items={[{"href":"/license-guide","label":"면허·가이드로"},{"href":"/dictionary","label":"선박 용어 확인"},{"href":"/fishing-safety","label":"출항 전 안전 확인"}]} />
     </AppFrame>
   );
 }

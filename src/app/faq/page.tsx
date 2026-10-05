@@ -1,4 +1,6 @@
 "use client";
+import { RelatedActions } from "@/components/platform/RelatedActions";
+
 
 import { useMemo, useState } from "react";
 import { ChevronDown, Filter, HelpCircle, Search, ShieldCheck } from "lucide-react";
@@ -170,6 +172,7 @@ export default function FaqPage() {
           )}
         </section>
       </div>
+    <RelatedActions title="이어서 살펴보기" items={[{"href":"/contact","label":"해결되지 않은 내용 문의"},{"href":"/coming-soon","label":"준비 중 기능 안내"},{"href":"/","label":"이용 가능한 서비스"}]} />
     </AppFrame>
   );
 }

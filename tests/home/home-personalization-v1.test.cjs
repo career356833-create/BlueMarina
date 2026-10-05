@@ -25,8 +25,8 @@ test("records a compact home personalization decision with environment limits", 
 
 test("recent highlights order, deduplicate, cap, and skip unsupported records", () => {
   const recent = personal.getRecentHighlights([
-    { entityType: "FISH", entityId: "fish-1", label: "이전 어종", href: "/fish/fish-1", viewedAt: "2026-09-20T00:00:00.000Z" },
-    { entityType: "FISH", entityId: "fish-1", label: "최신 어종", href: "/fish/fish-1", viewedAt: "2026-09-22T00:00:00.000Z" },
+    { entityType: "FISH", entityId: "fish-1", label: "이전 어종", href: "/fishing-spots/conditions?speciesId=fish-1", viewedAt: "2026-09-20T00:00:00.000Z" },
+    { entityType: "FISH", entityId: "fish-1", label: "최신 어종", href: "/fishing-spots/conditions?speciesId=fish-1", viewedAt: "2026-09-22T00:00:00.000Z" },
     { entityType: "CHARTER", entityId: "stale", label: "잘못된 출조", href: "/market/stale", viewedAt: "2026-09-23T00:00:00.000Z" },
     { entityType: "COMMUNITY_POST", entityId: "post-1", label: "작성글", href: "/community/post-1", viewedAt: "2026-09-21T00:00:00.000Z" },
   ]);

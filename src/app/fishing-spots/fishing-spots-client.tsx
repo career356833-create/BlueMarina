@@ -48,10 +48,11 @@ function EmptyText({ children }: { children: React.ReactNode }) {
 type FishingSpotsClientProps = {
   spots: FishingSpot[];
   regions: string[];
+  initialQuery?: string;
 };
 
-export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) {
-  const [query, setQuery] = useState("");
+export function FishingSpotsClient({ spots, regions, initialQuery = "" }: FishingSpotsClientProps) {
+  const [query, setQuery] = useState(initialQuery);
   const [type, setType] = useState<TypeFilter>("all");
   const [region, setRegion] = useState<RegionFilter>("all");
   const [page, setPage] = useState(1);
@@ -177,6 +178,7 @@ export function FishingSpotsClient({ spots, regions }: FishingSpotsClientProps) 
                 포인트 검색
               </span>
               <input
+                id="spot-search"
                 value={query}
                 onChange={(event) => {
                   setQuery(event.target.value);

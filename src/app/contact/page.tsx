@@ -1,3 +1,4 @@
+import { RelatedActions } from "@/components/platform/RelatedActions";
 import { DetailFrame } from "@/components/platform/PageFamilies";
 import { PageBackButton } from "@/components/boat/InformationNavigation";
 
@@ -29,6 +30,7 @@ export default function ContactPage() {
           <p>{labels.body}</p>
         </div>
       </section>
+    <RelatedActions title="이어서 살펴보기" items={[{"href":"/faq","label":"자주 묻는 질문 확인"},{"href":"/","label":"서비스 탐색으로"}]} />
     </DetailFrame>
   );
 }

@@ -1,4 +1,6 @@
 "use client";
+import { RelatedActions } from "@/components/platform/RelatedActions";
+
 
 import { useMemo, useState } from "react";
 import { BookOpenCheck, ChevronDown, Filter, Search, Sparkles, Waves } from "lucide-react";
@@ -192,6 +194,7 @@ export default function MarineKnowledgePage() {
           )}
         </section>
       </div>
+    <RelatedActions title="이어서 살펴보기" items={[{"href":"/today-sea","label":"오늘의 관측 정보"},{"href":"/sea-info","label":"관측소 직접 조회"},{"href":"/license-guide","label":"가이드로 돌아가기"}]} />
     </AppFrame>
   );
 }

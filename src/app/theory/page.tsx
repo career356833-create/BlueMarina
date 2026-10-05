@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { RelatedActions } from "@/components/platform/RelatedActions";
 import { useMemo, useState } from "react";
 import { ArrowRight, BookOpenCheck, Search } from "lucide-react";
 import { LearningFrame } from "@/components/platform/PageFamilies";
@@ -134,6 +135,6 @@ export default function TheoryPage() {
           </section>
         ) : null}
       </div>
-    </LearningFrame>
+    <RelatedActions title="이론 학습 다음 단계" items={[{href:"/dictionary",label:"모르는 용어 찾기"},{href:"/study",label:"문제로 복습하기"}]} /></LearningFrame>
   );
 }

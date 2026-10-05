@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ChevronDown, Fish, Filter, Search, ShieldAlert, Sparkles, Waves } from "lucide-react";
 import { AppFrame } from "@/components/boat/AppFrame";
@@ -167,7 +168,7 @@ export default function FishPage() {
                     key={item.id}
                     className="min-w-0 rounded-2xl border border-sky-100 bg-slate-50 p-4 transition hover:border-sky-300 hover:bg-white hover:shadow-sm"
                   >
-                    <button type="button" onClick={() => setOpenId(isOpen ? null : item.id)} className="w-full text-left">
+                    <button type="button" onClick={() => setOpenId(isOpen ? null : item.id)} aria-expanded={isOpen} className="w-full text-left">
                       <div className="flex min-w-0 items-start justify-between gap-3">
                         <div className="min-w-0">
                           <span className="inline-flex rounded-full bg-[var(--bm-paper)] px-3 py-1 text-[11px] font-black text-[var(--bm-accent-ink)]">{item.category}</span>
@@ -184,6 +185,8 @@ export default function FishPage() {
 
                     {isOpen ? (
                       <div className="mt-4 space-y-3 rounded-2xl bg-white p-4">
+                        <Link href={`/fishing-spots?q=${encodeURIComponent(item.name)}&source=fish#spot-search`} className="bm-action inline-flex min-h-11 px-4 py-3 text-sm">{item.name} 포인트 검색</Link>
+                        <p className="text-xs leading-5 text-slate-600">도감 이름으로 기존 포인트 정보를 검색합니다. 종 식별이나 조황 보장을 뜻하지 않습니다.</p>
                         <div>
                           <p className="flex items-center gap-2 text-xs font-black text-slate-950">
                             <Sparkles size={15} className="text-[var(--bm-accent-ink)]" />

@@ -1,4 +1,5 @@
-import type { ReactNode } from "react";
+import { Suspense, type ReactNode } from "react";
+import { LearningNavigation } from "./LearningNavigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { AppFrame } from "@/components/boat/AppFrame";
@@ -19,17 +20,8 @@ export function LearningFrame({ children }: { children: ReactNode }) {
   return <AppFrame family="content"><div className="bm-learning-page mx-auto w-full max-w-[var(--bm-content-reading)] p-4 sm:p-7 lg:p-9"><LearningNav />{children}</div></AppFrame>;
 }
 
-const learningDestinations = [
-  { href: "/license-guide", label: "학습 안내" },
-  { href: "/study", label: "문제은행" },
-  { href: "/exam", label: "모의고사" },
-  { href: "/practice", label: "실기학습" },
-];
-
 export function LearningNav() {
-  return <nav aria-label="학습 빠른 이동" className="bm-learning-nav mb-6 flex flex-wrap gap-2">
-    {learningDestinations.map(({ href, label }) => <Link key={href} href={href} className="inline-flex min-h-11 items-center rounded-full px-4 text-xs font-bold">{label}</Link>)}
-  </nav>;
+  return <Suspense fallback={<nav aria-label="학습 빠른 이동"><Link href="/license-guide" className="inline-flex min-h-11 items-center px-4">학습 안내</Link></nav>}><LearningNavigation /></Suspense>;
 }
 
 export function FormFrame({ children, width = "wide" }: { children: ReactNode; width?: "wide" | "reading" | "narrow" }) {

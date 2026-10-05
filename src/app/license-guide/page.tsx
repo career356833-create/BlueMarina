@@ -1,3 +1,4 @@
+import { RelatedActions } from "@/components/platform/RelatedActions";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, BookOpenCheck, ClipboardList, FileText, GraduationCap, Landmark, MapPin, PenLine, Route, ShieldCheck, ShipWheel } from "lucide-react";
 import { PortalShell } from "@/components/boat/portal/PortalShell";
@@ -185,6 +186,7 @@ export default function LicenseGuidePage() {
           </p>
         </div>
       </section>
+    <RelatedActions title="바다·선박 참고자료" items={[{"href":"/boatpedia","label":"선박·장비 백과"},{"href":"/dictionary","label":"해양 용어 사전"},{"href":"/marine-knowledge","label":"해양 기초지식"},{"href":"/faq","label":"자주 묻는 질문"}]} />
     </PortalShell>
   );
 }

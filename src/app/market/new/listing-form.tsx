@@ -90,7 +90,7 @@ export function MarketListingForm() {
       <h2 className="text-xl font-black">내 판매글</h2><p className="mt-2 text-sm text-[#9FB3C8]">로그인한 본인만 검토 대기 글을 조회하고 수정할 수 있습니다. 제출만으로 공개되지 않습니다.</p>
       <button type="button" onClick={()=>void loadMine()} className="mt-4 min-h-11 rounded-full border border-[#79C9D6]/50 px-5 text-sm font-bold">내역 새로고침</button>
       {ownMessage?<p role="status" className="mt-3 text-sm text-[#B8CBDD]">{ownMessage}</p>:null}
-      <ul className="mt-4 space-y-3">{ownListings.map((row)=><li key={row.listing.id} className="rounded-xl border border-[#29465D] p-4"><p className="break-words font-bold">{row.listing.title}</p><p className="mt-1 text-xs text-[#9FB3C8]">{row.listing.status} / {row.moderationStatus}</p><button type="button" onClick={()=>void loadForEdit(row.listing.id)} className="mt-3 min-h-11 rounded-full border border-[#79C9D6]/50 px-4 text-sm font-bold">본인 글 불러오기</button></li>)}</ul>
+      <ul className="mt-4 space-y-3">{ownListings.map((row)=><li id={`listing-${row.listing.id}`} key={row.listing.id} className="rounded-xl border border-[#29465D] p-4"><p className="break-words font-bold">{row.listing.title}</p><p className="mt-1 text-xs text-[#9FB3C8]">{row.listing.status} / {row.moderationStatus}</p><button type="button" onClick={()=>void loadForEdit(row.listing.id)} className="mt-3 min-h-11 rounded-full border border-[#79C9D6]/50 px-4 text-sm font-bold">본인 글 불러오기</button></li>)}</ul>
     </section>
   </section>;
 }

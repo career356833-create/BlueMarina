@@ -1,4 +1,6 @@
 "use client";
+import { RelatedActions } from "@/components/platform/RelatedActions";
+
 
 import { useMemo, useState } from "react";
 import { Anchor, BookOpen, ChevronLeft, ChevronRight, Filter, Search } from "lucide-react";
@@ -250,6 +252,7 @@ export default function DictionaryPage() {
           )}
         </section>
       </div>
+    <RelatedActions title="이어서 살펴보기" items={[{"href":"/theory","label":"이론으로 연결"},{"href":"/boatpedia","label":"선박·장비 살펴보기"},{"href":"/license-guide","label":"가이드로 돌아가기"}]} />
     </AppFrame>
   );
 }

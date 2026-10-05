@@ -1,0 +1,5873 @@
+{
+  "schemaVersion": 1,
+  "task": "BLUE MARINA PUBLIC PAGE CONNECTIVITY FINALIZATION V1",
+  "decision": "PUBLIC_PAGE_CONNECTIVITY_COMPLETE_WITH_LIMITATIONS",
+  "platformReassessment": "BLUE_MARINA_PLATFORM_CONNECTED_AND_ENGINE_READY",
+  "date": "2026-10-05",
+  "baselineCommit": "c7f6003b670fb14ae79e3a8f90e68dd3f502a578",
+  "scope": "Clean main archive plus exact task changes. No production deployment, external account writes or data mutations.",
+  "methodology": {
+    "inventory": "47 public templates retained from prior audit; actual source now has 64 page templates including 17 gated/admin/internal templates. Account landing is public; private subpages are checked as supporting journeys.",
+    "before": "Current baseline source review, not a copy of prior audit. activePaths and dev-audit lists are not inbound UI links. Wrong/progress/analysis/FAQ had no public inbound CTA.",
+    "after": "Rendered visible anchors at 390/1280 plus conditional fish accordion click and source review. Static private paths take precedence over dynamic [id] matching.",
+    "classification": "CONNECTED: reachable public route plus useful next/back action. WEAKLY_CONNECTED: unavailable business detail templates with valid parent fallback; no active public records, so no fabricated inbound links. ISOLATED: active page lacking meaningful inbound. The three dormant business-detail templates are explicitly outside the 44 active-node reachability assertion.",
+    "limitations": "Connectivity describes navigation, not a new production functional certification. Fresh auth, provider data, GPS and publication are not simulated."
+  },
+  "previousAudit": {
+    "connected": 33,
+    "weak": 10,
+    "isolated": 4
+  },
+  "before": {
+    "CONNECTED": 34,
+    "WEAKLY_CONNECTED": 5,
+    "ISOLATED": 8
+  },
+  "after": {
+    "CONNECTED": 44,
+    "WEAKLY_CONNECTED": 3,
+    "ISOLATED": 0
+  },
+  "totalTemplates": 64,
+  "publicTemplates": 47,
+  "excludedRoutes": [
+    "/account/activity",
+    "/account/auth/complete",
+    "/account/login",
+    "/account/profile",
+    "/account/saved",
+    "/admin/operations",
+    "/admin/operations/moderation",
+    "/centers/map-test",
+    "/charters/admin/submissions",
+    "/charters/admin/submissions/[id]",
+    "/charters/onboarding",
+    "/community/new",
+    "/dev-audit",
+    "/market/admin/listings",
+    "/market/admin/listings/[id]",
+    "/market/new",
+    "/reservations"
+  ],
+  "graph": [
+    {
+      "route": "/",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/account",
+        "/analysis",
+        "/boatpedia",
+        "/centers",
+        "/charters",
+        "/charters/[id]",
+        "/charters/partners",
+        "/coming-soon",
+        "/community",
+        "/community/[id]",
+        "/contact",
+        "/dictionary",
+        "/exam",
+        "/exam-guide",
+        "/faq",
+        "/fish",
+        "/fishing-safety",
+        "/fishing-spots",
+        "/fishing-spots/[id]",
+        "/fishing-spots/conditions",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/marine-knowledge",
+        "/market",
+        "/market/[id]",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/privacy",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/sea",
+        "/sea-info",
+        "/study",
+        "/terms",
+        "/theory",
+        "/theory/[tag]",
+        "/today-sea",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "바다 지도해역과 거점 탐색",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "낚시 포인트지역과 어종별 포인트",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "어종 도감어종 정보와 조건",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "마켓지역 기반 해양 장비",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "면허·가이드",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/today-sea",
+          "href": "/today-sea",
+          "label": "오늘의 바다물때와 해양 기상",
+          "scope": "shell"
+        },
+        {
+          "target": "/charters",
+          "href": "/charters",
+          "label": "출조 찾기검증된 출조 정보 탐색",
+          "scope": "shell"
+        },
+        {
+          "target": "/community",
+          "href": "/community",
+          "label": "커뮤니티",
+          "scope": "shell"
+        }
+      ],
+      "primaryCta": "/today-sea",
+      "secondaryCta": null,
+      "backPath": null,
+      "relatedContent": [],
+      "successNextAction": "기존 경로 /today-sea에서 계속",
+      "observedRoute": "/",
+      "limitation": null
+    },
+    {
+      "route": "/account",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/",
+        "/analysis",
+        "/boatpedia",
+        "/centers",
+        "/charters",
+        "/charters/[id]",
+        "/charters/partners",
+        "/coming-soon",
+        "/community",
+        "/community/[id]",
+        "/contact",
+        "/dictionary",
+        "/exam",
+        "/exam-guide",
+        "/faq",
+        "/fish",
+        "/fishing-safety",
+        "/fishing-spots",
+        "/fishing-spots/[id]",
+        "/fishing-spots/conditions",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/marine-knowledge",
+        "/market",
+        "/market/[id]",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/privacy",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/sea",
+        "/sea-info",
+        "/study",
+        "/terms",
+        "/theory",
+        "/theory/[tag]",
+        "/today-sea",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "홈으로",
+          "scope": "main"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "계정 홈",
+          "scope": "main"
+        },
+        {
+          "target": "/account/profile",
+          "href": "/account/profile",
+          "label": "프로필",
+          "scope": "main"
+        },
+        {
+          "target": "/account/saved",
+          "href": "/account/saved",
+          "label": "저장한 콘텐츠",
+          "scope": "main"
+        },
+        {
+          "target": "/account/activity",
+          "href": "/account/activity",
+          "label": "내 활동",
+          "scope": "main"
+        },
+        {
+          "target": "/account/login",
+          "href": "/account/login?returnTo=%2Faccount",
+          "label": "로그인",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Faccount",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Faccount",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Faccount",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/account/saved",
+      "secondaryCta": "/",
+      "backPath": "/",
+      "relatedContent": [
+        "/",
+        "/account/profile",
+        "/account/activity",
+        "/account/login"
+      ],
+      "successNextAction": "인증 후 저장한 콘텐츠 또는 내 활동 원본으로 이동",
+      "observedRoute": "/account",
+      "limitation": null
+    },
+    {
+      "route": "/analysis",
+      "before": "ISOLATED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/centers",
+        "/exam",
+        "/exam-guide",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/study",
+        "/theory",
+        "/theory/[tag]",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/random",
+          "href": "/random?license=yacht",
+          "label": "복습 시작",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fanalysis",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fanalysis",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fanalysis",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/wrong",
+      "secondaryCta": "/license-guide",
+      "backPath": "/",
+      "relatedContent": [
+        "/license-guide",
+        "/study",
+        "/theory",
+        "/exam",
+        "/progress",
+        "/practice"
+      ],
+      "successNextAction": "기존 경로 /wrong에서 계속",
+      "observedRoute": "/analysis",
+      "limitation": null
+    },
+    {
+      "route": "/boatpedia",
+      "before": "ISOLATED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/dictionary",
+        "/license-guide"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "면허·가이드로",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/dictionary",
+          "href": "/dictionary",
+          "label": "선박 용어 확인",
+          "scope": "main"
+        },
+        {
+          "target": "/fishing-safety",
+          "href": "/fishing-safety",
+          "label": "출항 전 안전 확인",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fboatpedia",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fboatpedia",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fboatpedia",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/dictionary",
+      "backPath": "/",
+      "relatedContent": [
+        "/dictionary",
+        "/fishing-safety"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/boatpedia",
+      "limitation": null
+    },
+    {
+      "route": "/centers",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/license-guide"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/centers/map-test",
+          "href": "/centers/map-test",
+          "label": "지도 실험실 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fcenters",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fcenters",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fcenters",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/study",
+      "backPath": "/",
+      "relatedContent": [
+        "/study",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/centers",
+      "limitation": null
+    },
+    {
+      "route": "/charters",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/",
+        "/charters/[id]",
+        "/fishing-spots"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "바다 지도",
+          "scope": "main"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "낚시 포인트",
+          "scope": "main"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "어종 도감",
+          "scope": "main"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots/conditions",
+          "href": "/fishing-spots/conditions",
+          "label": "어종·환경 조건",
+          "scope": "main"
+        },
+        {
+          "target": "/charters/partners",
+          "href": "/charters/partners",
+          "label": "업체용 출조 정보 등록 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fcharters",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fcharters",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fcharters",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/charters/partners",
+      "secondaryCta": "/sea",
+      "backPath": "/",
+      "relatedContent": [
+        "/sea",
+        "/fishing-spots",
+        "/fish",
+        "/fishing-spots/conditions"
+      ],
+      "successNextAction": "기존 경로 /charters/partners에서 계속",
+      "observedRoute": "/charters",
+      "limitation": null
+    },
+    {
+      "route": "/charters/[id]",
+      "before": "WEAKLY_CONNECTED",
+      "after": "WEAKLY_CONNECTED",
+      "inbound": [],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/charters",
+          "href": "/charters",
+          "label": "출조 목록으로",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fcharters%2Fconnectivity-unavailable",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fcharters%2Fconnectivity-unavailable",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fcharters%2Fconnectivity-unavailable",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/charters",
+      "secondaryCta": null,
+      "backPath": "/charters",
+      "relatedContent": [],
+      "successNextAction": "공개 데이터가 없으면 정확한 unavailable 화면에서 부모 목록으로 복귀",
+      "observedRoute": "/charters/connectivity-unavailable",
+      "limitation": "No live public record was available. Parent/unavailable fallback verified; successful public detail and its conditional inbound are not claimed."
+    },
+    {
+      "route": "/charters/partners",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/charters"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/charters/onboarding",
+          "href": "/charters/onboarding",
+          "label": "기존 등록 화면으로 이동",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fcharters%2Fpartners",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fcharters%2Fpartners",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fcharters%2Fpartners",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/charters/onboarding",
+      "secondaryCta": null,
+      "backPath": "/",
+      "relatedContent": [],
+      "successNextAction": "기존 경로 /charters/onboarding에서 계속",
+      "observedRoute": "/charters/partners",
+      "limitation": null
+    },
+    {
+      "route": "/coming-soon",
+      "before": "ISOLATED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/faq"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "홈으로 돌아가기",
+          "scope": "main"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "낚시 포인트 탐색",
+          "scope": "main"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/faq",
+          "href": "/faq",
+          "label": "서비스 도움말",
+          "scope": "main"
+        },
+        {
+          "target": "/study",
+          "href": "/study",
+          "label": "문제은행 학습",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fcoming-soon",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fcoming-soon",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fcoming-soon",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/faq",
+      "secondaryCta": "/",
+      "backPath": "/",
+      "relatedContent": [
+        "/",
+        "/fishing-spots",
+        "/study"
+      ],
+      "successNextAction": "기존 경로 /faq에서 계속",
+      "observedRoute": "/coming-soon",
+      "limitation": null
+    },
+    {
+      "route": "/community",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/",
+        "/community/[id]",
+        "/fishing-spots",
+        "/market"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "낚시 포인트 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/community/new",
+          "href": "/community/new",
+          "label": "글 작성·내 글 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fcommunity",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fcommunity",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fcommunity",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/community/new",
+      "secondaryCta": "/fishing-spots",
+      "backPath": "/",
+      "relatedContent": [
+        "/fishing-spots"
+      ],
+      "successNextAction": "기존 경로 /community/new에서 계속",
+      "observedRoute": "/community",
+      "limitation": null
+    },
+    {
+      "route": "/community/[id]",
+      "before": "WEAKLY_CONNECTED",
+      "after": "WEAKLY_CONNECTED",
+      "inbound": [],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/community",
+          "href": "/community",
+          "label": "커뮤니티로",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fcommunity%2Fconnectivity-unavailable",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fcommunity%2Fconnectivity-unavailable",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fcommunity%2Fconnectivity-unavailable",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/community",
+      "secondaryCta": null,
+      "backPath": "/community",
+      "relatedContent": [],
+      "successNextAction": "공개 데이터가 없으면 정확한 unavailable 화면에서 부모 목록으로 복귀",
+      "observedRoute": "/community/connectivity-unavailable",
+      "limitation": "No live public record was available. Parent/unavailable fallback verified; successful public detail and its conditional inbound are not claimed."
+    },
+    {
+      "route": "/contact",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/account",
+        "/analysis",
+        "/boatpedia",
+        "/centers",
+        "/charters",
+        "/charters/[id]",
+        "/charters/partners",
+        "/coming-soon",
+        "/community",
+        "/community/[id]",
+        "/dictionary",
+        "/exam",
+        "/exam-guide",
+        "/faq",
+        "/fishing-safety",
+        "/fishing-spots",
+        "/fishing-spots/[id]",
+        "/fishing-spots/conditions",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/marine-knowledge",
+        "/market",
+        "/market/[id]",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/privacy",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/sea-info",
+        "/study",
+        "/terms",
+        "/theory",
+        "/theory/[tag]",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "서비스 탐색으로",
+          "scope": "main"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/faq",
+          "href": "/faq",
+          "label": "자주 묻는 질문 확인",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fcontact",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fcontact",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fcontact",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/faq",
+      "secondaryCta": "/",
+      "backPath": "/",
+      "relatedContent": [
+        "/"
+      ],
+      "successNextAction": "기존 경로 /faq에서 계속",
+      "observedRoute": "/contact",
+      "limitation": null
+    },
+    {
+      "route": "/dictionary",
+      "before": "ISOLATED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/boatpedia",
+        "/license-guide",
+        "/theory"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "가이드로 돌아가기",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory",
+          "label": "이론으로 연결",
+          "scope": "main"
+        },
+        {
+          "target": "/boatpedia",
+          "href": "/boatpedia",
+          "label": "선박·장비 살펴보기",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fdictionary",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fdictionary",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fdictionary",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/theory",
+      "secondaryCta": "/license-guide",
+      "backPath": "/license-guide",
+      "relatedContent": [
+        "/license-guide",
+        "/boatpedia"
+      ],
+      "successNextAction": "기존 경로 /theory에서 계속",
+      "observedRoute": "/dictionary",
+      "limitation": null
+    },
+    {
+      "route": "/exam",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/analysis",
+        "/centers",
+        "/exam-guide",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/study",
+        "/theory",
+        "/theory/[tag]",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fexam",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fexam",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fexam",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/progress",
+      "secondaryCta": "/license-guide",
+      "backPath": "/",
+      "relatedContent": [
+        "/license-guide",
+        "/study",
+        "/theory",
+        "/wrong",
+        "/analysis",
+        "/practice"
+      ],
+      "successNextAction": "오답 복습 / 진도 / 분석 (license 유지)",
+      "observedRoute": "/exam",
+      "limitation": null
+    },
+    {
+      "route": "/exam-guide",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/license-guide",
+        "/official-links"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/official-links",
+          "href": "/official-links",
+          "label": "공식 신청센터 이용",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fexam-guide",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fexam-guide",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fexam-guide",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/study",
+      "backPath": "/",
+      "relatedContent": [
+        "/study",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/exam-guide",
+      "limitation": null
+    },
+    {
+      "route": "/faq",
+      "before": "ISOLATED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/coming-soon",
+        "/contact",
+        "/license-guide"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "이용 가능한 서비스",
+          "scope": "main"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Ffaq",
+          "label": "문의하기",
+          "scope": "footer"
+        },
+        {
+          "target": "/coming-soon",
+          "href": "/coming-soon",
+          "label": "준비 중 기능 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Ffaq",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Ffaq",
+          "label": "이용약관",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/contact",
+      "secondaryCta": "/",
+      "backPath": "/",
+      "relatedContent": [
+        "/",
+        "/coming-soon"
+      ],
+      "successNextAction": "기존 경로 /contact에서 계속",
+      "observedRoute": "/faq",
+      "limitation": null
+    },
+    {
+      "route": "/fish",
+      "before": "WEAKLY_CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/",
+        "/account",
+        "/analysis",
+        "/boatpedia",
+        "/centers",
+        "/charters",
+        "/charters/[id]",
+        "/charters/partners",
+        "/coming-soon",
+        "/community",
+        "/community/[id]",
+        "/contact",
+        "/dictionary",
+        "/exam",
+        "/exam-guide",
+        "/faq",
+        "/fishing-safety",
+        "/fishing-spots",
+        "/fishing-spots/[id]",
+        "/fishing-spots/conditions",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/marine-knowledge",
+        "/market",
+        "/market/[id]",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/privacy",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/sea",
+        "/sea-info",
+        "/study",
+        "/terms",
+        "/theory",
+        "/theory/[tag]",
+        "/today-sea",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots?q=%EA%B0%90%EC%84%B1%EB%8F%94&source=fish#spot-search",
+          "label": "감성돔 포인트 검색",
+          "scope": "main",
+          "condition": "expanded guide card; clicked in browser"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        }
+      ],
+      "primaryCta": "/fishing-spots",
+      "secondaryCta": null,
+      "backPath": "/",
+      "relatedContent": [],
+      "successNextAction": "선택한 어종 이름으로 기존 포인트 검색; canonical identity 추정 없음",
+      "observedRoute": "/fish",
+      "limitation": null
+    },
+    {
+      "route": "/fishing-safety",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/boatpedia",
+        "/fishing-spots"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "출조거점 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea-info",
+          "href": "/sea-info",
+          "label": "오늘의 바다 확인",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Ffishing-safety",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Ffishing-safety",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Ffishing-safety",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/fishing-spots",
+      "secondaryCta": "/sea-info",
+      "backPath": "/",
+      "relatedContent": [
+        "/sea-info"
+      ],
+      "successNextAction": "기존 경로 /fishing-spots에서 계속",
+      "observedRoute": "/fishing-safety",
+      "limitation": null
+    },
+    {
+      "route": "/fishing-spots",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/",
+        "/account",
+        "/analysis",
+        "/boatpedia",
+        "/centers",
+        "/charters",
+        "/charters/[id]",
+        "/charters/partners",
+        "/coming-soon",
+        "/community",
+        "/community/[id]",
+        "/contact",
+        "/dictionary",
+        "/exam",
+        "/exam-guide",
+        "/faq",
+        "/fish",
+        "/fishing-safety",
+        "/fishing-spots/[id]",
+        "/fishing-spots/conditions",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/marine-knowledge",
+        "/market",
+        "/market/[id]",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/privacy",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/sea",
+        "/sea-info",
+        "/study",
+        "/terms",
+        "/theory",
+        "/theory/[tag]",
+        "/today-sea",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots/conditions",
+          "href": "/fishing-spots/conditions",
+          "label": "어종·환경 조건 확인",
+          "scope": "main"
+        },
+        {
+          "target": "/fishing-spots/[id]",
+          "href": "/fishing-spots/boat-10",
+          "label": "상세 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/today-sea",
+          "href": "/today-sea",
+          "label": "오늘의 바다 확인",
+          "scope": "main"
+        },
+        {
+          "target": "/fishing-safety",
+          "href": "/fishing-safety",
+          "label": "안전 체크리스트 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/charters",
+          "href": "/charters",
+          "label": "출조 찾기",
+          "scope": "main"
+        },
+        {
+          "target": "/community",
+          "href": "/community",
+          "label": "커뮤니티 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Ffishing-spots",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Ffishing-spots",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Ffishing-spots",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/fishing-spots/conditions",
+      "secondaryCta": "/fishing-spots/[id]",
+      "backPath": "/",
+      "relatedContent": [
+        "/fishing-spots/[id]",
+        "/today-sea",
+        "/fishing-safety",
+        "/charters",
+        "/community"
+      ],
+      "successNextAction": "기존 경로 /fishing-spots/conditions에서 계속",
+      "observedRoute": "/fishing-spots",
+      "limitation": null
+    },
+    {
+      "route": "/fishing-spots/[id]",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/fishing-spots"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea?spotId=rock-151&source=fishing-condition&returnTo=%2Ffishing-spots%2Frock-151#live-marine-map",
+          "label": "지도에서 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "출조거점 목록",
+          "scope": "main"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots/conditions",
+          "href": "/fishing-spots/conditions?spotId=rock-151&speciesId=BM-SPECIES-000751&source=spot-detail&returnTo=%2Ffishing-spots%2Frock-151",
+          "label": "조건 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/sea/navigation",
+          "href": "/sea/navigation?lat=36.036417&lng=126.513083&name=%EA%B0%9C%EC%95%BC%EB%8F%84+-+%EC%97%90%EA%B2%8C%EC%9D%B4+%EC%84%9C%EC%B8%A1+%EA%B0%AF%EB%B0%94%EC%9C%84&type=fishing_spot&sourceId=rock-151",
+          "label": "항법에서 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Ffishing-spots%2Frock-151",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Ffishing-spots%2Frock-151",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Ffishing-spots%2Frock-151",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/fishing-spots/conditions",
+      "secondaryCta": "/sea",
+      "backPath": "/",
+      "relatedContent": [
+        "/sea",
+        "/fishing-spots",
+        "/sea/navigation"
+      ],
+      "successNextAction": "기존 경로 /fishing-spots/conditions에서 계속",
+      "observedRoute": "/fishing-spots/rock-151",
+      "limitation": null
+    },
+    {
+      "route": "/fishing-spots/conditions",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/charters",
+        "/fishing-spots",
+        "/fishing-spots/[id]",
+        "/today-sea"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "출조거점",
+          "scope": "main"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Ffishing-spots%2Fconditions",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Ffishing-spots%2Fconditions",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Ffishing-spots%2Fconditions",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/sea",
+      "secondaryCta": "/fishing-spots",
+      "backPath": "/",
+      "relatedContent": [
+        "/fishing-spots"
+      ],
+      "successNextAction": "기존 경로 /sea에서 계속",
+      "observedRoute": "/fishing-spots/conditions",
+      "limitation": null
+    },
+    {
+      "route": "/leisure-report",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/official-links"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/official-links",
+          "href": "/official-links",
+          "label": "공식 신청센터로 이동",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fleisure-report",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fleisure-report",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fleisure-report",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/study",
+      "backPath": "/",
+      "relatedContent": [
+        "/study",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/leisure-report",
+      "limitation": null
+    },
+    {
+      "route": "/license-guide",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/",
+        "/account",
+        "/analysis",
+        "/boatpedia",
+        "/centers",
+        "/charters",
+        "/charters/[id]",
+        "/charters/partners",
+        "/coming-soon",
+        "/community",
+        "/community/[id]",
+        "/contact",
+        "/dictionary",
+        "/exam",
+        "/exam-guide",
+        "/faq",
+        "/fish",
+        "/fishing-safety",
+        "/fishing-spots",
+        "/fishing-spots/[id]",
+        "/fishing-spots/conditions",
+        "/leisure-report",
+        "/license-issue",
+        "/marine-knowledge",
+        "/market",
+        "/market/[id]",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/privacy",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/sea",
+        "/sea-info",
+        "/study",
+        "/terms",
+        "/theory",
+        "/theory/[tag]",
+        "/today-sea",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study",
+          "label": "2단계문제풀이문제은행을 풀며 약한 영역을 확인합니다.",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory",
+          "label": "1단계이론학습핵심 개념과 관련 문제를 먼저 연결합니다.",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam",
+          "label": "3단계모의고사50문항 실전 흐름으로 점수를 점검합니다.",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice",
+          "label": "5단계실기학습필기 이후 실기 준비 흐름을 확인합니다.",
+          "scope": "main"
+        },
+        {
+          "target": "/exam-guide",
+          "href": "/exam-guide",
+          "label": "01시험 안내필기와 실기시험의 기본 흐름을 먼저 확인합니다.이동하기",
+          "scope": "main"
+        },
+        {
+          "target": "/safety-guide",
+          "href": "/safety-guide",
+          "label": "02수상안전교육면허 발급 전 확인해야 하는 교육 단계를 정리합니다.이동하기",
+          "scope": "main"
+        },
+        {
+          "target": "/license-issue",
+          "href": "/license-issue",
+          "label": "03면허증 발급신규발급, 갱신, 재발급 안내로 이어집니다.이동하기",
+          "scope": "main"
+        },
+        {
+          "target": "/official-links",
+          "href": "/official-links",
+          "label": "04공식 신청센터실제 신청과 조회는 공식 사이트에서 확인합니다.이동하기",
+          "scope": "main"
+        },
+        {
+          "target": "/centers",
+          "href": "/centers",
+          "label": "05시험장·교육장 안내시험장과 교육장 정보를 찾기 위한 시설 안내입니다.이동하기",
+          "scope": "main"
+        },
+        {
+          "target": "/past",
+          "href": "/past",
+          "label": "4단계기출문제출제 흐름을 확인하는 센터로 이동합니다.",
+          "scope": "main"
+        },
+        {
+          "target": "/boatpedia",
+          "href": "/boatpedia",
+          "label": "선박·장비 백과",
+          "scope": "main"
+        },
+        {
+          "target": "/dictionary",
+          "href": "/dictionary",
+          "label": "해양 용어 사전",
+          "scope": "main"
+        },
+        {
+          "target": "/marine-knowledge",
+          "href": "/marine-knowledge",
+          "label": "해양 기초지식",
+          "scope": "main"
+        },
+        {
+          "target": "/faq",
+          "href": "/faq",
+          "label": "자주 묻는 질문",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Flicense-guide",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Flicense-guide",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Flicense-guide",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/study",
+      "secondaryCta": "/theory",
+      "backPath": "/",
+      "relatedContent": [
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis",
+        "/practice"
+      ],
+      "successNextAction": "기존 경로 /study에서 계속",
+      "observedRoute": "/license-guide",
+      "limitation": null
+    },
+    {
+      "route": "/license-issue",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/license-guide",
+        "/official-links"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/official-links",
+          "href": "/official-links",
+          "label": "공식 신청센터에서 확인하기",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Flicense-issue",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Flicense-issue",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Flicense-issue",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/study",
+      "backPath": "/",
+      "relatedContent": [
+        "/study",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/license-issue",
+      "limitation": null
+    },
+    {
+      "route": "/marine-knowledge",
+      "before": "ISOLATED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/license-guide",
+        "/sea-info"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "가이드로 돌아가기",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/today-sea",
+          "href": "/today-sea",
+          "label": "오늘의 관측 정보",
+          "scope": "main"
+        },
+        {
+          "target": "/sea-info",
+          "href": "/sea-info",
+          "label": "관측소 직접 조회",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fmarine-knowledge",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fmarine-knowledge",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fmarine-knowledge",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/today-sea",
+      "secondaryCta": "/license-guide",
+      "backPath": "/license-guide",
+      "relatedContent": [
+        "/license-guide",
+        "/sea-info"
+      ],
+      "successNextAction": "기존 경로 /today-sea에서 계속",
+      "observedRoute": "/marine-knowledge",
+      "limitation": null
+    },
+    {
+      "route": "/market",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/",
+        "/account",
+        "/analysis",
+        "/boatpedia",
+        "/centers",
+        "/charters",
+        "/charters/[id]",
+        "/charters/partners",
+        "/coming-soon",
+        "/community",
+        "/community/[id]",
+        "/contact",
+        "/dictionary",
+        "/exam",
+        "/exam-guide",
+        "/faq",
+        "/fish",
+        "/fishing-safety",
+        "/fishing-spots",
+        "/fishing-spots/[id]",
+        "/fishing-spots/conditions",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/marine-knowledge",
+        "/market/[id]",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/privacy",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/sea",
+        "/sea-info",
+        "/study",
+        "/terms",
+        "/theory",
+        "/theory/[tag]",
+        "/today-sea",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "필터 초기화",
+          "scope": "main"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/market/new",
+          "href": "/market/new",
+          "label": "판매글 작성·내 글 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/community",
+          "href": "/community",
+          "label": "커뮤니티 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fmarket",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fmarket",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fmarket",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/market/new",
+      "secondaryCta": "/community",
+      "backPath": "/",
+      "relatedContent": [
+        "/community"
+      ],
+      "successNextAction": "기존 경로 /market/new에서 계속",
+      "observedRoute": "/market",
+      "limitation": null
+    },
+    {
+      "route": "/market/[id]",
+      "before": "WEAKLY_CONNECTED",
+      "after": "WEAKLY_CONNECTED",
+      "inbound": [],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "마켓으로",
+          "scope": "main"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fmarket%2Fconnectivity-unavailable",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fmarket%2Fconnectivity-unavailable",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fmarket%2Fconnectivity-unavailable",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/market",
+      "secondaryCta": null,
+      "backPath": "/market",
+      "relatedContent": [],
+      "successNextAction": "공개 데이터가 없으면 정확한 unavailable 화면에서 부모 목록으로 복귀",
+      "observedRoute": "/market/connectivity-unavailable",
+      "limitation": "No live public record was available. Parent/unavailable fallback verified; successful public detail and its conditional inbound are not claimed."
+    },
+    {
+      "route": "/official-links",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/exam-guide",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/safety-guide"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/exam-guide",
+          "href": "/exam-guide",
+          "label": "면허시험 안내 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/safety-guide",
+          "href": "/safety-guide",
+          "label": "수상안전교육 안내 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/license-issue",
+          "href": "/license-issue",
+          "label": "면허증 발급 안내 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/leisure-report",
+          "href": "/leisure-report",
+          "label": "레저활동 신고 안내 보기",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fofficial-links",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fofficial-links",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fofficial-links",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/study",
+      "backPath": "/",
+      "relatedContent": [
+        "/study",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/official-links",
+      "limitation": null
+    },
+    {
+      "route": "/past",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/license-guide"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory",
+          "label": "이론학습30개 핵심 이론과 관련 문제를 연결해 기본기를 정리합니다.",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=yacht",
+          "label": "요트조종면허 모의고사요트조종면허 700문항에서 50문항 실전 테스트를 진행합니다.",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/random",
+          "href": "/random?license=general",
+          "label": "랜덤문제문제은행 전체에서 무작위로 출제되는 문제를 반복 학습합니다.",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fpast",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fpast",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fpast",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/study",
+      "backPath": "/",
+      "relatedContent": [
+        "/study",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/past",
+      "limitation": null
+    },
+    {
+      "route": "/practice",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/analysis",
+        "/centers",
+        "/exam",
+        "/exam-guide",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/official-links",
+        "/past",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/study",
+        "/theory",
+        "/theory/[tag]",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/practice/course",
+          "href": "/practice/course",
+          "label": "사용 가능실기 코스코스별 조종 흐름과 주의 포인트를 정리할 예정입니다.",
+          "scope": "main"
+        },
+        {
+          "target": "/practice/fail-items",
+          "href": "/practice/fail-items",
+          "label": "사용 가능실격 사유시험 전 반드시 피해야 할 주요 실격 포인트를 정리할 예정입니다.",
+          "scope": "main"
+        },
+        {
+          "target": "/practice/checklist",
+          "href": "/practice/checklist",
+          "label": "사용 가능시험 전 체크리스트시험 당일 준비물과 확인 항목을 한눈에 점검합니다.",
+          "scope": "main"
+        },
+        {
+          "target": "/practice/videos",
+          "href": "/practice/videos",
+          "label": "준비중실기 영상향후 영상 자료가 추가될 예정입니다.",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fpractice",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fpractice",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fpractice",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/study",
+      "backPath": "/",
+      "relatedContent": [
+        "/study",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/practice",
+      "limitation": null
+    },
+    {
+      "route": "/practice/checklist",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/practice",
+        "/practice/videos"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fpractice%2Fchecklist",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fpractice%2Fchecklist",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fpractice%2Fchecklist",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/study",
+      "backPath": "/practice",
+      "relatedContent": [
+        "/study",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/practice/checklist",
+      "limitation": null
+    },
+    {
+      "route": "/practice/course",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/practice",
+        "/practice/videos"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fpractice%2Fcourse",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fpractice%2Fcourse",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fpractice%2Fcourse",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/study",
+      "backPath": "/practice",
+      "relatedContent": [
+        "/study",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/practice/course",
+      "limitation": null
+    },
+    {
+      "route": "/practice/fail-items",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/practice",
+        "/practice/videos"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fpractice%2Ffail-items",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fpractice%2Ffail-items",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fpractice%2Ffail-items",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/study",
+      "backPath": "/practice",
+      "relatedContent": [
+        "/study",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/practice/fail-items",
+      "limitation": null
+    },
+    {
+      "route": "/practice/videos",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/practice"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/practice/course",
+          "href": "/practice/course",
+          "label": "실기 코스기본 코스 순서와 학습 포인트를 먼저 확인하세요.",
+          "scope": "main"
+        },
+        {
+          "target": "/practice/fail-items",
+          "href": "/practice/fail-items",
+          "label": "실격 사유불합격으로 이어질 수 있는 위험 행동을 먼저 점검하세요.",
+          "scope": "main"
+        },
+        {
+          "target": "/practice/checklist",
+          "href": "/practice/checklist",
+          "label": "체크리스트시험 전날과 당일 확인사항을 먼저 정리하세요.",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fpractice%2Fvideos",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fpractice%2Fvideos",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fpractice%2Fvideos",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/study",
+      "backPath": "/practice",
+      "relatedContent": [
+        "/study",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/practice/videos",
+      "limitation": null
+    },
+    {
+      "route": "/privacy",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/account",
+        "/analysis",
+        "/boatpedia",
+        "/centers",
+        "/charters",
+        "/charters/[id]",
+        "/charters/partners",
+        "/coming-soon",
+        "/community",
+        "/community/[id]",
+        "/contact",
+        "/dictionary",
+        "/exam",
+        "/exam-guide",
+        "/faq",
+        "/fishing-safety",
+        "/fishing-spots",
+        "/fishing-spots/[id]",
+        "/fishing-spots/conditions",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/marine-knowledge",
+        "/market",
+        "/market/[id]",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/sea-info",
+        "/study",
+        "/terms",
+        "/theory",
+        "/theory/[tag]",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fprivacy",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fprivacy",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fprivacy",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/",
+      "secondaryCta": null,
+      "backPath": "/",
+      "relatedContent": [],
+      "successNextAction": "기존 경로 /에서 계속",
+      "observedRoute": "/privacy",
+      "limitation": null
+    },
+    {
+      "route": "/progress",
+      "before": "ISOLATED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/analysis",
+        "/centers",
+        "/exam",
+        "/exam-guide",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/random",
+        "/safety-guide",
+        "/study",
+        "/theory",
+        "/theory/[tag]",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fprogress",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fprogress",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fprogress",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/study",
+      "secondaryCta": "/license-guide",
+      "backPath": "/",
+      "relatedContent": [
+        "/license-guide",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/analysis",
+        "/practice"
+      ],
+      "successNextAction": "기존 경로 /study에서 계속",
+      "observedRoute": "/progress",
+      "limitation": null
+    },
+    {
+      "route": "/random",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/analysis",
+        "/past"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Frandom",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Frandom",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Frandom",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/study",
+      "backPath": "/",
+      "relatedContent": [
+        "/study",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/random",
+      "limitation": null
+    },
+    {
+      "route": "/safety-guide",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/license-guide",
+        "/official-links"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/official-links",
+          "href": "/official-links",
+          "label": "공식 신청센터에서 확인하기",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fsafety-guide",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fsafety-guide",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fsafety-guide",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/study",
+      "backPath": "/",
+      "relatedContent": [
+        "/study",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/safety-guide",
+      "limitation": null
+    },
+    {
+      "route": "/sea",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/",
+        "/account",
+        "/analysis",
+        "/boatpedia",
+        "/centers",
+        "/charters",
+        "/charters/[id]",
+        "/charters/partners",
+        "/coming-soon",
+        "/community",
+        "/community/[id]",
+        "/contact",
+        "/dictionary",
+        "/exam",
+        "/exam-guide",
+        "/faq",
+        "/fish",
+        "/fishing-safety",
+        "/fishing-spots",
+        "/fishing-spots/[id]",
+        "/fishing-spots/conditions",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/marine-knowledge",
+        "/market",
+        "/market/[id]",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/privacy",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/sea-info",
+        "/sea/navigation",
+        "/study",
+        "/terms",
+        "/theory",
+        "/theory/[tag]",
+        "/today-sea",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/today-sea",
+          "href": "/today-sea",
+          "label": "오늘의 바다",
+          "scope": "shell"
+        }
+      ],
+      "primaryCta": "/",
+      "secondaryCta": null,
+      "backPath": "/",
+      "relatedContent": [],
+      "successNextAction": "기존 경로 /에서 계속",
+      "observedRoute": "/sea",
+      "limitation": null
+    },
+    {
+      "route": "/sea-info",
+      "before": "WEAKLY_CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/fishing-safety",
+        "/marine-knowledge"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "바다 지도",
+          "scope": "main"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/today-sea",
+          "href": "/today-sea",
+          "label": "오늘의 바다",
+          "scope": "main"
+        },
+        {
+          "target": "/marine-knowledge",
+          "href": "/marine-knowledge",
+          "label": "해양 기초지식",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fsea-info",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fsea-info",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fsea-info",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/today-sea",
+      "secondaryCta": "/sea",
+      "backPath": "/",
+      "relatedContent": [
+        "/sea",
+        "/marine-knowledge"
+      ],
+      "successNextAction": "기존 경로 /today-sea에서 계속",
+      "observedRoute": "/sea-info",
+      "limitation": null
+    },
+    {
+      "route": "/sea/navigation",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/fishing-spots/[id]",
+        "/today-sea"
+      ],
+      "outbound": [
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "",
+          "scope": "main"
+        }
+      ],
+      "primaryCta": "/sea",
+      "secondaryCta": null,
+      "backPath": "/sea",
+      "relatedContent": [],
+      "successNextAction": "기존 경로 /sea에서 계속",
+      "observedRoute": "/sea/navigation",
+      "limitation": null
+    },
+    {
+      "route": "/study",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/analysis",
+        "/centers",
+        "/coming-soon",
+        "/exam",
+        "/exam-guide",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/theory",
+        "/theory/[tag]",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fstudy",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fstudy",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fstudy",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/theory",
+      "backPath": "/",
+      "relatedContent": [
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis",
+        "/practice"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/study",
+      "limitation": null
+    },
+    {
+      "route": "/terms",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/account",
+        "/analysis",
+        "/boatpedia",
+        "/centers",
+        "/charters",
+        "/charters/[id]",
+        "/charters/partners",
+        "/coming-soon",
+        "/community",
+        "/community/[id]",
+        "/contact",
+        "/dictionary",
+        "/exam",
+        "/exam-guide",
+        "/faq",
+        "/fishing-safety",
+        "/fishing-spots",
+        "/fishing-spots/[id]",
+        "/fishing-spots/conditions",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/marine-knowledge",
+        "/market",
+        "/market/[id]",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/privacy",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/sea-info",
+        "/study",
+        "/theory",
+        "/theory/[tag]",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fterms",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fterms",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fterms",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/",
+      "secondaryCta": null,
+      "backPath": "/",
+      "relatedContent": [],
+      "successNextAction": "기존 경로 /에서 계속",
+      "observedRoute": "/terms",
+      "limitation": null
+    },
+    {
+      "route": "/theory",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/analysis",
+        "/centers",
+        "/dictionary",
+        "/exam",
+        "/exam-guide",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/study",
+        "/theory/[tag]",
+        "/wrong"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study",
+          "label": "문제로 복습하기",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/theory/[tag]",
+          "href": "/theory/%EC%9A%94%ED%8A%B8%20%EC%84%B8%EC%9D%BC%C2%B7%EB%8F%9B%20%EC%9A%B4%EC%9A%A9",
+          "label": "준비됨선박 조종술 및 운용요트 세일·돛 운용요트 세일·돛 운용은 바람을 이용해 요트가 움직이는 기본 원리와 돛 조작 판단을 다루는 단원입니다. 시험에서는 세일, ",
+          "scope": "main"
+        },
+        {
+          "target": "/dictionary",
+          "href": "/dictionary",
+          "label": "모르는 용어 찾기",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Ftheory",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Ftheory",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Ftheory",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/license-guide",
+      "secondaryCta": "/study",
+      "backPath": "/",
+      "relatedContent": [
+        "/study",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis",
+        "/practice"
+      ],
+      "successNextAction": "기존 경로 /license-guide에서 계속",
+      "observedRoute": "/theory",
+      "limitation": null
+    },
+    {
+      "route": "/theory/[tag]",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/theory"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=yacht&tag=%EC%88%98%EC%83%81%EB%A0%88%EC%A0%80%EC%95%88%EC%A0%84%EB%B2%95",
+          "label": "관련 문제 풀기",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory",
+          "label": "이론 목록",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/theory/[tag]",
+          "href": "/theory/%EC%88%98%EC%83%81%EB%A0%88%EC%A0%80%EC%95%88%EC%A0%84%EB%B2%95%EA%B3%BC%20%EC%9A%B4%ED%95%AD%20%EC%A0%9C%ED%95%9C?license=yacht",
+          "label": "요트조종면허",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Ftheory%2F%25EC%2588%2598%25EC%2583%2581%25EB%25A0%2588%25EC%25A0%2580%25EC%2595%2588%25EC%25A0%2584%25EB%25B2%2595%25EA%25B3%25BC%2520%25EC%259A%25B4%25ED%2595%25AD%2520%25EC%25A0%259C%25ED%2595%259C",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Ftheory%2F%25EC%2588%2598%25EC%2583%2581%25EB%25A0%2588%25EC%25A0%2580%25EC%2595%2588%25EC%25A0%2584%25EB%25B2%2595%25EA%25B3%25BC%2520%25EC%259A%25B4%25ED%2595%25AD%2520%25EC%25A0%259C%25ED%2595%259C",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Ftheory%2F%25EC%2588%2598%25EC%2583%2581%25EB%25A0%2588%25EC%25A0%2580%25EC%2595%2588%25EC%25A0%2584%25EB%25B2%2595%25EA%25B3%25BC%2520%25EC%259A%25B4%25ED%2595%25AD%2520%25EC%25A0%259C%25ED%2595%259C",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/study",
+      "secondaryCta": "/license-guide",
+      "backPath": "/theory",
+      "relatedContent": [
+        "/license-guide",
+        "/theory",
+        "/exam",
+        "/wrong",
+        "/progress",
+        "/analysis"
+      ],
+      "successNextAction": "기존 경로 /study에서 계속",
+      "observedRoute": "/theory/%EC%88%98%EC%83%81%EB%A0%88%EC%A0%80%EC%95%88%EC%A0%84%EB%B2%95%EA%B3%BC%20%EC%9A%B4%ED%95%AD%20%EC%A0%9C%ED%95%9C",
+      "limitation": null
+    },
+    {
+      "route": "/today-sea",
+      "before": "CONNECTED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/",
+        "/fishing-spots",
+        "/marine-knowledge",
+        "/sea",
+        "/sea-info"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "바다 지도에서 보기",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide",
+          "label": "GUIDE",
+          "scope": "shell"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots/conditions",
+          "href": "/fishing-spots/conditions",
+          "label": "Fishing Conditions 보기",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea/navigation",
+          "href": "/sea/navigation",
+          "label": "항법 화면으로 이동",
+          "scope": "shell"
+        }
+      ],
+      "primaryCta": "/",
+      "secondaryCta": null,
+      "backPath": "/",
+      "relatedContent": [],
+      "successNextAction": "기존 경로 /에서 계속",
+      "observedRoute": "/today-sea",
+      "limitation": null
+    },
+    {
+      "route": "/wrong",
+      "before": "ISOLATED",
+      "after": "CONNECTED",
+      "inbound": [
+        "/analysis",
+        "/centers",
+        "/exam",
+        "/exam-guide",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/progress",
+        "/random",
+        "/safety-guide",
+        "/study",
+        "/theory",
+        "/theory/[tag]"
+      ],
+      "outbound": [
+        {
+          "target": "/",
+          "href": "/",
+          "label": "HOME",
+          "scope": "shell"
+        },
+        {
+          "target": "/sea",
+          "href": "/sea",
+          "label": "SEA",
+          "scope": "shell"
+        },
+        {
+          "target": "/fishing-spots",
+          "href": "/fishing-spots",
+          "label": "FISHING",
+          "scope": "shell"
+        },
+        {
+          "target": "/fish",
+          "href": "/fish",
+          "label": "FISH",
+          "scope": "shell"
+        },
+        {
+          "target": "/market",
+          "href": "/market",
+          "label": "MARKET",
+          "scope": "shell"
+        },
+        {
+          "target": "/license-guide",
+          "href": "/license-guide?license=general",
+          "label": "학습 안내",
+          "scope": "main"
+        },
+        {
+          "target": "/account",
+          "href": "/account",
+          "label": "",
+          "scope": "shell"
+        },
+        {
+          "target": "/study",
+          "href": "/study?license=general",
+          "label": "문제은행",
+          "scope": "main"
+        },
+        {
+          "target": "/theory",
+          "href": "/theory?license=general",
+          "label": "이론·용어",
+          "scope": "main"
+        },
+        {
+          "target": "/exam",
+          "href": "/exam?license=general",
+          "label": "모의고사",
+          "scope": "main"
+        },
+        {
+          "target": "/wrong",
+          "href": "/wrong?license=general",
+          "label": "오답 복습",
+          "scope": "main"
+        },
+        {
+          "target": "/progress",
+          "href": "/progress?license=general",
+          "label": "학습 진도",
+          "scope": "main"
+        },
+        {
+          "target": "/analysis",
+          "href": "/analysis?license=general",
+          "label": "학습 분석",
+          "scope": "main"
+        },
+        {
+          "target": "/practice",
+          "href": "/practice?license=general",
+          "label": "실기학습",
+          "scope": "main"
+        },
+        {
+          "target": "/privacy",
+          "href": "/privacy?from=%2Fwrong",
+          "label": "개인정보처리방침",
+          "scope": "footer"
+        },
+        {
+          "target": "/terms",
+          "href": "/terms?from=%2Fwrong",
+          "label": "이용약관",
+          "scope": "footer"
+        },
+        {
+          "target": "/contact",
+          "href": "/contact?from=%2Fwrong",
+          "label": "문의하기",
+          "scope": "footer"
+        }
+      ],
+      "primaryCta": "/study",
+      "secondaryCta": "/license-guide",
+      "backPath": "/",
+      "relatedContent": [
+        "/license-guide",
+        "/theory",
+        "/exam",
+        "/progress",
+        "/analysis",
+        "/practice"
+      ],
+      "successNextAction": "기존 경로 /study에서 계속",
+      "observedRoute": "/wrong",
+      "limitation": null
+    }
+  ],
+  "newLinkEvidence": [
+    {
+      "file": "src/app/boatpedia/page.tsx",
+      "snippet": "<RelatedActions title=\"이어서 살펴보기\" items={[{\"href\":\"/license-guide\",\"label\":\"면허·가이드로\"},{\"href\":\"/dictionary\",\"label\":\"선박 용어 확인\"},{\"href\":\"/fishing-safety\",\"label\":\"출항 전 안전 확인\"}]} />"
+    },
+    {
+      "file": "src/app/dictionary/page.tsx",
+      "snippet": "<RelatedActions title=\"이어서 살펴보기\" items={[{\"href\":\"/theory\",\"label\":\"이론으로 연결\"},{\"href\":\"/boatpedia\",\"label\":\"선박·장비 살펴보기\"},{\"href\":\"/license-guide\",\"label\":\"가이드로 돌아가기\"}]} />"
+    },
+    {
+      "file": "src/app/marine-knowledge/page.tsx",
+      "snippet": "<RelatedActions title=\"이어서 살펴보기\" items={[{\"href\":\"/today-sea\",\"label\":\"오늘의 관측 정보\"},{\"href\":\"/sea-info\",\"label\":\"관측소 직접 조회\"},{\"href\":\"/license-guide\",\"label\":\"가이드로 돌아가기\"}]} />"
+    },
+    {
+      "file": "src/app/contact/page.tsx",
+      "snippet": "<RelatedActions title=\"이어서 살펴보기\" items={[{\"href\":\"/faq\",\"label\":\"자주 묻는 질문 확인\"},{\"href\":\"/\",\"label\":\"서비스 탐색으로\"}]} />"
+    },
+    {
+      "file": "src/app/faq/page.tsx",
+      "snippet": "<RelatedActions title=\"이어서 살펴보기\" items={[{\"href\":\"/contact\",\"label\":\"해결되지 않은 내용 문의\"},{\"href\":\"/coming-soon\",\"label\":\"준비 중 기능 안내\"},{\"href\":\"/\",\"label\":\"이용 가능한 서비스\"}]} />"
+    },
+    {
+      "file": "src/app/coming-soon/page.tsx",
+      "snippet": "<RelatedActions title=\"이어서 살펴보기\" items={[{\"href\":\"/faq\",\"label\":\"서비스 도움말\"},{\"href\":\"/fishing-spots\",\"label\":\"낚시 포인트 탐색\"},{\"href\":\"/study\",\"label\":\"문제은행 학습\"}]} />"
+    },
+    {
+      "file": "src/app/sea-info/page.tsx",
+      "snippet": "<RelatedActions title=\"이어서 살펴보기\" items={[{\"href\":\"/today-sea\",\"label\":\"오늘의 바다\"},{\"href\":\"/sea\",\"label\":\"바다 지도\"},{\"href\":\"/marine-knowledge\",\"label\":\"해양 기초지식\"}]} />"
+    },
+    {
+      "file": "src/app/license-guide/page.tsx",
+      "snippet": "<RelatedActions title=\"바다·선박 참고자료\" items={[{\"href\":\"/boatpedia\",\"label\":\"선박·장비 백과\"},{\"href\":\"/dictionary\",\"label\":\"해양 용어 사전\"},{\"href\":\"/marine-knowledge\",\"label\":\"해양 기초지식\"},{\"href\":\"/faq\",\"label\":\"자주 묻는 질문\"}]} />"
+    },
+    {
+      "file": "src/app/theory/page.tsx",
+      "snippet": "<RelatedActions title=\"이론 학습 다음 단계\" items={[{href:\"/dictionary\",label:\"모르는 용어 찾기\"},{href:\"/study\",label:\"문제로 복습하기\"}]} /></LearningFrame>"
+    },
+    {
+      "file": "src/components/platform/LearningNavigation.tsx",
+      "snippet": "[\"/wrong\", \"오답 복습\"], [\"/progress\", \"학습 진도\"]"
+    },
+    {
+      "file": "src/app/fish/page.tsx",
+      "snippet": "href={`/fishing-spots?q=${encodeURIComponent(item.name)}&source=fish#spot-search`}"
+    },
+    {
+      "file": "src/app/account/account-client.tsx",
+      "snippet": "href={marketActivityHref(item.id,item.status)}"
+    }
+  ],
+  "flows": [
+    {
+      "name": "Home → Fishing Spot → Conditions → Navigation",
+      "status": "COMPLETE_WITH_FRICTION",
+      "evidence": "Clicked rock-151 → 감성돔 Conditions → Navigation. spotId/label/36.036417,126.513083 and detail return preserved. Existing Navigation accepts sourceId/coordinates, not a species inference.",
+      "limitation": "Clean build has no production provider credentials; map/provider live data and GPS were not recertified."
+    },
+    {
+      "name": "Home → Fish → related action",
+      "status": "COMPLETE",
+      "evidence": "감성돔 accordion → encoded q search; destination query input and 991 matching results verified. Name search is explicitly not identity or catch assurance."
+    },
+    {
+      "name": "Home → Charter → Partner/Onboarding",
+      "status": "COMPLETE_WITH_FRICTION",
+      "evidence": "Clicked Home service → empty list → partner guide → onboarding.",
+      "limitation": "Fresh clean local environment has no backend session; submission and public offer detail not performed."
+    },
+    {
+      "name": "Home → Market → New",
+      "status": "COMPLETE_WITH_FRICTION",
+      "evidence": "Clicked Home service → empty list → listing create/manage.",
+      "limitation": "No local backend/auth credentials; no listing submitted or published."
+    },
+    {
+      "name": "Home → Community → New",
+      "status": "COMPLETE_WITH_FRICTION",
+      "evidence": "Clicked Home → feed → write/my posts.",
+      "limitation": "No local backend/auth credentials; no post created."
+    },
+    {
+      "name": "Login → Account → Saved → original content",
+      "status": "COMPLETE_WITH_FRICTION",
+      "evidence": "Signed-out saved page link retains /account/saved returnTo. Exact entity route, invalid/deleted-link fallback and private activity routing covered by tests.",
+      "limitation": "Fresh authenticated browser flow and live saved-row retrieval not performed; lexical route validity is not remote publication proof."
+    },
+    {
+      "name": "Guide → Study → Exam/Practice → Progress",
+      "status": "COMPLETE",
+      "evidence": "Clicked guide?license=yacht → study → exam → progress, preserving yacht. Practice family and result next actions covered by rendered route QA and tests."
+    }
+  ],
+  "responsiveQa": {
+    "environment": "isolated clean build served on localhost:3479, production flags/keys not copied",
+    "viewports": [
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "screenChecks": 108,
+    "distinctRoutes": 54,
+    "horizontalOverflow": 0,
+    "newNavigationCtaClipping": 0,
+    "routes": [
+      "/license-guide",
+      "/boatpedia",
+      "/dictionary",
+      "/marine-knowledge",
+      "/contact",
+      "/faq",
+      "/coming-soon",
+      "/sea-info",
+      "/study",
+      "/theory",
+      "/theory/%EC%88%98%EC%83%81%EB%A0%88%EC%A0%80%EC%95%88%EC%A0%84%EB%B2%95%EA%B3%BC%20%EC%9A%B4%ED%95%AD%20%EC%A0%9C%ED%95%9C",
+      "/exam",
+      "/wrong",
+      "/progress",
+      "/analysis",
+      "/random",
+      "/past",
+      "/practice",
+      "/practice/videos",
+      "/practice/checklist",
+      "/practice/course",
+      "/practice/fail-items",
+      "/exam-guide",
+      "/safety-guide",
+      "/license-issue",
+      "/official-links",
+      "/centers",
+      "/leisure-report",
+      "/fish",
+      "/fishing-spots",
+      "/market",
+      "/market/new",
+      "/account",
+      "/account/saved",
+      "/account/activity",
+      "/account/profile",
+      "/account/login",
+      "/",
+      "/today-sea",
+      "/sea",
+      "/sea/navigation",
+      "/fishing-spots/rock-151",
+      "/fishing-spots/conditions",
+      "/charters",
+      "/charters/partners",
+      "/charters/onboarding",
+      "/charters/connectivity-unavailable",
+      "/market/connectivity-unavailable",
+      "/community",
+      "/community/new",
+      "/community/connectivity-unavailable",
+      "/fishing-safety",
+      "/privacy",
+      "/terms"
+    ],
+    "visual": "Mobile related-actions keyboard focus and BottomNav clearance; desktop learning menu inspected by screenshot. No added CTA collision observed.",
+    "authenticatedVisualQa": "NOT_PERFORMED",
+    "touchHardware": "NOT_PERFORMED"
+  },
+  "invariants": {
+    "newDataRecords": 0,
+    "newEngine": 0,
+    "navigationEngineChanges": 0,
+    "aisChanges": 0,
+    "supabaseMutations": 0,
+    "vercelEnvChanges": 0,
+    "productionDeployments": 0,
+    "globalHeaderAndBottomNav": "unchanged 6 desktop / 5 mobile entries",
+    "immersiveNavigation": "unchanged; no global Header/BottomNav/chatbot"
+  },
+  "verification": {
+    "environment": "git archive c7f6003 plus exact changes, separate directory, dependency junction only",
+    "targeted": {
+      "passed": 14,
+      "failed": 0
+    },
+    "full": {
+      "tests": 1261,
+      "passed": 1260,
+      "skipped": 1,
+      "failed": 0
+    },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "staticPages": 1467,
+    "diff": "PASS",
+    "finalBuildBrowserRecheck": "PASS: yacht learning menu and saved login returnTo"
+  },
+  "knownLimitations": [
+    "3 unavailable business detail templates remain WEAKLY_CONNECTED; no fake data was added.",
+    "Authenticated Account saved/activity browser E2E requires the real deployment/session; helper and signed-out paths tested locally.",
+    "Current clean environment has no provider/auth credentials; this task does not redeploy or change flags.",
+    "Some legacy /fish/[id] saved URLs cannot be resolved to canonical species; Account falls back to Fish catalog and Home omits obsolete URLs.",
+    "Legacy informational/learning content and engine semantics were not rewritten."
+  ],
+  "preservation": {
+    "unrelatedFilesHashed": 1881,
+    "changed": 0,
+    "staging": "Exact 25-file whitelist only",
+    "files": [
+      "docs/BLUE_MARINA_PUBLIC_PAGE_CONNECTIVITY_FINAL_V1.md",
+      "reports/platform/public-page-connectivity-final-v1.json",
+      "src/components/platform/LearningNavigation.tsx",
+      "src/components/platform/RelatedActions.tsx",
+      "src/lib/account/content-links.ts",
+      "tests/platform/public-page-connectivity-final-v1.test.cjs",
+      "src/app/account/account-client.tsx",
+      "src/app/boatpedia/page.tsx",
+      "src/app/coming-soon/page.tsx",
+      "src/app/contact/page.tsx",
+      "src/app/dictionary/page.tsx",
+      "src/app/exam/page.tsx",
+      "src/app/faq/page.tsx",
+      "src/app/fish/page.tsx",
+      "src/app/fishing-spots/fishing-spots-client.tsx",
+      "src/app/fishing-spots/page.tsx",
+      "src/app/license-guide/page.tsx",
+      "src/app/marine-knowledge/page.tsx",
+      "src/app/market/new/listing-form.tsx",
+      "src/app/market/page.tsx",
+      "src/app/sea-info/page.tsx",
+      "src/app/theory/page.tsx",
+      "src/components/platform/PageFamilies.tsx",
+      "src/lib/home/personalization.ts",
+      "tests/home/home-personalization-v1.test.cjs"
+    ]
+  }
+}

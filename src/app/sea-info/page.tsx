@@ -1,4 +1,6 @@
 "use client";
+import { RelatedActions } from "@/components/platform/RelatedActions";
+
 
 import { useMemo, useState } from "react";
 import {
@@ -774,6 +776,7 @@ export default function SeaInfoPage() {
           {userMessage ? <p className="mt-4 rounded-2xl bg-[var(--bm-surface-elevated)] p-4 text-sm font-black leading-6 text-[var(--bm-foreground)]">{userMessage}</p> : null}
         </section>
       </div>
+    <RelatedActions title="이어서 살펴보기" items={[{"href":"/today-sea","label":"오늘의 바다"},{"href":"/sea","label":"바다 지도"},{"href":"/marine-knowledge","label":"해양 기초지식"}]} />
     </AppFrame>
   );
 }
