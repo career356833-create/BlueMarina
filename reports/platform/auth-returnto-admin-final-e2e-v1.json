@@ -107,5 +107,18 @@
     "commitThisRun": 0,
     "pushThisRun": 0,
     "unrelatedWorktreePreserved": true
+  },
+  "followUp20261005": {
+    "originalAuditPreserved": true,
+    "finalEvidence": "reports/platform/admin-ui-final-qa-v1.json",
+    "platformDecision": "BLUE_MARINA_PLATFORM_CONNECTED_AND_ENGINE_READY",
+    "explicitGlobalSignOut": true,
+    "qaAdminRoles": 0,
+    "qaSessions": 0,
+    "qaRefreshTokens": 0,
+    "legacyApiKeysDisabled": true,
+    "legacySigningKeyRevoked": true,
+    "productionAuthenticatedHealth": "PASS_6_HEALTHY_HTTP_200",
+    "productionSha": "121f458f9cc90d601df7035d667e81ab1aed7c86"
   }
 }

@@ -1,19 +1,21 @@
 {
   "schemaVersion": "1.0.0",
-  "dateKst": "2026-10-04",
+  "dateKst": "2026-10-05",
   "decision": "POST_ADMIN_SECURITY_CLOSURE_COMPLETE_WITH_LIMITATIONS",
-  "platformDecision": "BLUE_MARINA_PLATFORM_CONNECTED_WITH_ENGINE_GAPS",
+  "platformDecision": "BLUE_MARINA_PLATFORM_CONNECTED_AND_ENGINE_READY",
   "sourceCommits": {
     "moderationPathFix": "4254e727e44244a80a2f95ce7f553a5b14d07a02",
     "operationsHealthFix": "b7896a5ac9bb45c076137a3eb2aff7e85d9de139"
   },
   "production": {
     "domain": "https://blue-marina.vercel.app",
-    "deploymentId": "dpl_6cqeg9h4NnR27q3GuhWAk1iRztvB",
+    "deploymentId": "dpl_CXdh4T2LyYoawacJN558LqSKMegV",
     "deploymentReady": true,
     "canonicalAliasTargetsDeployment": true,
     "deploymentShaDirectlyExposedByCli": false,
-    "authenticatedHealthE2e": "NOT_RUN_PRODUCTION_AUTH_ENV_PULL_RETURNED_MASKED_VALUES"
+    "authenticatedHealthE2e": "PASS_MODERN_KEYS_AFTER_LEGACY_JWT_REVOCATION",
+    "deployedSha": "121f458f9cc90d601df7035d667e81ab1aed7c86",
+    "shaVerifiedBy": "AUTHENTICATED_OPERATIONS_HEALTH_RESPONSE"
   },
   "qaAdmin": {
     "desktop1280x900": "PASS_PRIOR_PRODUCTION_BROWSER_QA",
@@ -34,24 +36,52 @@
     "authSessions": 0,
     "refreshTokens": 0,
     "exposedJwtPastExpiryAtVerification": true,
-    "explicitRevokeOperationThisRun": false,
-    "sessionRevokedThisRun": false,
-    "closure": "CLOSED_BY_EXPIRY_AND_ZERO_ACTIVE_SESSIONS_OR_REFRESH_TOKENS",
-    "residualRisk": "NO_ACTIVE_CREDENTIAL_OBSERVED;PRE_EXPIRY_USE_CANNOT_BE_RETROACTIVELY_EXCLUDED"
+    "explicitRevokeOperationThisRun": true,
+    "sessionRevokedThisRun": true,
+    "closure": "OFFICIAL_ADMIN_GLOBAL_SIGNOUT_AND_QA_ROLE_REMOVAL_CONFIRMED",
+    "residualRisk": "NO_ACTIVE_CREDENTIAL_OBSERVED;PRE_EXPIRY_USE_CANNOT_BE_RETROACTIVELY_EXCLUDED",
+    "qaUsersBanned": 17,
+    "qaSessionsBefore": 16,
+    "qaRefreshTokensBefore": 16,
+    "qaUsersWithResidualAdminRolesBefore": 12,
+    "globalSignOutSuccesses": 16,
+    "roleRemovalSuccesses": 12
   },
   "operationsHealth": {
     "cause": "VERCEL_URL_DEPLOYMENT_HOST_REDIRECTED_TO_VERCEL_SSO",
     "deploymentHostInitialHttp": 302,
     "redirectDestinationHost": "vercel.com",
     "redirectClassification": "OFF_ORIGIN_AUTH_REDIRECT_NOT_CANONICAL",
-    "publicDomainRoutes": ["/", "/sea", "/sea/navigation", "/fishing-spots", "/fishing-spots/conditions", "/today-sea"],
-    "publicDomainDirectHttp": [200, 200, 200, 200, 200, 200],
+    "publicDomainRoutes": [
+      "/",
+      "/sea",
+      "/sea/navigation",
+      "/fishing-spots",
+      "/fishing-spots/conditions",
+      "/today-sea"
+    ],
+    "publicDomainDirectHttp": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
     "fix": "PRODUCTION_USES_VALIDATED_NEXT_PUBLIC_SITE_URL_AND_BOUNDED_REDIRECT_PROBE",
     "expectedSameOriginCanonicalRedirect": "HEALTHY_AFTER_2XX",
     "unexpectedSameOriginRedirect": "DEGRADED_AFTER_2XX",
     "offOriginAuthLoopFinalFailure": "ERROR",
-    "productionAuthenticatedCardStates": "UNVERIFIED_AUTH_ENV_MASKED",
-    "browserCanvasGpsPwaInferredFromHttp": false
+    "productionAuthenticatedCardStates": "PASS_6_HEALTHY_HTTP_200",
+    "browserCanvasGpsPwaInferredFromHttp": false,
+    "deploymentHostRedirectCount": 2,
+    "deploymentHostFinalClassification": "EXTERNAL_VERCEL_LOGIN_200_NOT_PUBLIC_HEALTH",
+    "sourceObservations": {
+      "risa": "AVAILABLE_HTTP_200",
+      "kakao": "UNKNOWN_BROWSER_NOT_INFERRED",
+      "maplibre": "UNKNOWN_BROWSER_NOT_INFERRED",
+      "disabledSources": "REMAIN_DISABLED_NOT_PROMOTED_BY_HTTP_HEALTH"
+    }
   },
   "security": {
     "anonymousOperationsPageHttp": 404,
@@ -63,37 +93,321 @@
     "advisorCriticalHigh": 0,
     "advisorWarn": 3,
     "advisorInfo": 28,
-    "newAdminRoleOrAuthMutationThisRun": 0
+    "newAdminRoleOrAuthMutationThisRun": "APPROVED_DISPOSABLE_QA_THEN_GLOBAL_SIGNOUT_AND_DELETE;EXISTING_QA_SIGNOUT_REBAN_AND_ROLE_REMOVAL",
+    "secretScan": {
+      "filesScanned": 2768,
+      "jwt": 0,
+      "secretKey": 0,
+      "credentialAssignment": 0,
+      "scope": "TRACKED_AND_UNTRACKED_TEXT_FILES_UNDER_3MB"
+    },
+    "qaCleanup": {
+      "usersTotal": 20,
+      "bannedQa": 17,
+      "qaAdminRoles": 0,
+      "qaSessions": 0,
+      "qaRefreshTokens": 0
+    },
+    "activeAdminIdentities": 0,
+    "moderationRlsVerifiedAgain": "5/5",
+    "privateMarketBucketVerifiedAgain": true
   },
   "integrity": {
     "fishSpecies": 1258,
     "marineOrganisms": 3016,
     "fishingSpotsCommittedSource": 1405,
-    "pending": { "charter": 1, "market": 1, "community": 0, "reports": 0 },
+    "pending": {
+      "charter": 1,
+      "market": 1,
+      "community": 0,
+      "reports": 0
+    },
     "publicQaCommunityPosts": 0,
-    "publicQaMarketListings": 0
+    "publicQaMarketListings": 0,
+    "publicMarketActiveListings": 0,
+    "publicCommunityPosts": 0,
+    "publicCharterOffers": 0,
+    "schemaMutation": 0
   },
-  "p1": { "communityReturnTo": "RESOLVED", "communityModerationPath": "RESOLVED", "remaining": 0 },
+  "p1": {
+    "communityReturnTo": "RESOLVED",
+    "communityModerationPath": "RESOLVED",
+    "remaining": 0
+  },
   "engineMaturity": {
     "charter": "PRODUCTION_READY_WITH_LIMITATIONS",
     "market": "PRODUCTION_READY_WITH_LIMITATIONS",
     "community": "PRODUCTION_READY_WITH_LIMITATIONS",
-    "operationsModeration": "PRODUCTION_READY_WITH_LIMITATIONS"
+    "operationsModeration": "PRODUCTION_READY_WITH_LIMITATIONS",
+    "accountAuth": "PRODUCTION_READY_WITH_LIMITATIONS"
   },
   "verification": {
-    "targeted": "15/15 PASS",
-    "cleanMainPlusFixTests": "1245 PASS / 1 SKIP / 0 FAIL",
+    "targeted": "16/16 PASS",
+    "cleanMainPlusFixTests": "1246 PASS / 1 SKIP / 0 FAIL",
     "typecheck": "PASS",
     "lint": "PASS",
-    "isolatedBuild": "PASS_1467_STATIC_PAGES",
+    "isolatedBuild": "PASS_1467_STATIC_PAGES_SAME_DRIVE_CLEAN_SOURCE",
     "diffCheck": "PASS",
     "productionAnonymousSecurity": "PASS",
-    "productionAuthenticatedHealth": "UNVERIFIED"
+    "productionAuthenticatedHealth": "PASS",
+    "modernKeyE2e": {
+      "phase": "after-jwt-revoke",
+      "checkedAt": "2026-10-05T07:06:46.952Z",
+      "checks": [
+        {
+          "path": "/api/account",
+          "authenticated": true,
+          "status": 200,
+          "pass": true
+        },
+        {
+          "path": "/api/charters/supply/submissions",
+          "authenticated": true,
+          "status": 200,
+          "pass": true
+        },
+        {
+          "path": "/api/market/listings?scope=mine",
+          "authenticated": true,
+          "status": 200,
+          "pass": true
+        },
+        {
+          "path": "/api/community/posts?scope=mine",
+          "authenticated": true,
+          "status": 200,
+          "pass": true
+        },
+        {
+          "path": "/api/market/listings",
+          "authenticated": false,
+          "status": 200,
+          "pass": true
+        },
+        {
+          "path": "/api/community/posts",
+          "authenticated": false,
+          "status": 200,
+          "pass": true
+        },
+        {
+          "path": "/api/operations/moderation",
+          "authenticated": true,
+          "status": 200,
+          "pass": true
+        },
+        {
+          "path": "/api/operations/health",
+          "authenticated": true,
+          "status": 200,
+          "pass": true
+        },
+        {
+          "path": "/api/account",
+          "authenticated": false,
+          "status": 401,
+          "pass": true
+        },
+        {
+          "path": "/api/operations/health",
+          "authenticated": false,
+          "status": 401,
+          "pass": true
+        }
+      ],
+      "cleanup": {
+        "globalSignOut": true,
+        "deletedDisposableUser": true
+      },
+      "login": true,
+      "refresh": true,
+      "deploymentSha": "121f458f9cc90d601df7035d667e81ab1aed7c86",
+      "services": [
+        {
+          "id": "Home",
+          "status": "HEALTHY",
+          "httpStatus": 200
+        },
+        {
+          "id": "Sea",
+          "status": "HEALTHY",
+          "httpStatus": 200
+        },
+        {
+          "id": "Navigation",
+          "status": "HEALTHY",
+          "httpStatus": 200
+        },
+        {
+          "id": "Fishing Spots",
+          "status": "HEALTHY",
+          "httpStatus": 200
+        },
+        {
+          "id": "Conditions",
+          "status": "HEALTHY",
+          "httpStatus": 200
+        },
+        {
+          "id": "Today Sea",
+          "status": "HEALTHY",
+          "httpStatus": 200
+        }
+      ],
+      "privateStorage": true,
+      "browserBundle": {
+        "modernPublishableKey": true,
+        "legacyAnonKey": false
+      },
+      "passed": true
+    },
+    "sourceScope": "GIT_ARCHIVE_121f458_PLUS_EXACT_5_EVIDENCE_TEST_FILES;NO_UNRELATED_WORKTREE_SOURCE",
+    "initialCrossDriveBuild": "FAILED_WINDOWS_CROSS_DRIVE_NODE_MODULES_JUNCTION_PATH_RESOLUTION",
+    "buildRetryScope": "SAME_DRIVE_CLEAN_GIT_ARCHIVE_WITH_UNCHANGED_DEPENDENCIES"
   },
   "limitations": [
-    "Production authenticated Operations health cards were not reread after deployment because Vercel CLI supplied masked Auth env values.",
-    "Deployment Git SHA was not exposed by the CLI; commit association is based on push-triggered READY deployment and canonical alias.",
-    "Real-device GPS/PWA and full browser canvas behavior are outside HTTP route probes.",
-    "Existing Security Advisor WARN/INFO findings remain."
-  ]
+    "No retrospective proof excludes use of exposed credentials before revocation.",
+    "Real-device GPS/PWA and browser map canvas are not inferred from HTTP health checks.",
+    "Prior Security Advisor WARN/INFO findings remain; not rerun as part of key retirement.",
+    "Publication transitions and fresh Kakao OAuth were not repeated in this key-migration smoke."
+  ],
+  "priorAudit20261004": {
+    "schemaVersion": "1.0.0",
+    "dateKst": "2026-10-04",
+    "decision": "POST_ADMIN_SECURITY_CLOSURE_COMPLETE_WITH_LIMITATIONS",
+    "platformDecision": "BLUE_MARINA_PLATFORM_CONNECTED_WITH_ENGINE_GAPS",
+    "sourceCommits": {
+      "moderationPathFix": "4254e727e44244a80a2f95ce7f553a5b14d07a02",
+      "operationsHealthFix": "b7896a5ac9bb45c076137a3eb2aff7e85d9de139"
+    },
+    "production": {
+      "domain": "https://blue-marina.vercel.app",
+      "deploymentId": "dpl_6cqeg9h4NnR27q3GuhWAk1iRztvB",
+      "deploymentReady": true,
+      "canonicalAliasTargetsDeployment": true,
+      "deploymentShaDirectlyExposedByCli": false,
+      "authenticatedHealthE2e": "NOT_RUN_PRODUCTION_AUTH_ENV_PULL_RETURNED_MASKED_VALUES"
+    },
+    "qaAdmin": {
+      "desktop1280x900": "PASS_PRIOR_PRODUCTION_BROWSER_QA",
+      "mobile390x844": "PASS_PRIOR_PRODUCTION_BROWSER_QA",
+      "roleIsolation": "PASS_PRIOR_PRODUCTION_BROWSER_QA",
+      "operationsCountOnly": "PASS_PRIOR_PRODUCTION_BROWSER_QA",
+      "communityModeration": "PRIVATE_QA_POST_REJECTED_VIA_UI",
+      "charterModeration": "PENDING_DETAIL_AND_ACTIONS_VISIBLE_NO_APPROVAL",
+      "marketModeration": "PENDING_DETAIL_AND_ACTIONS_VISIBLE_NO_APPROVAL"
+    },
+    "tokenIncident": {
+      "incidentDecision": "QA_TOKEN_INCIDENT_CLOSED",
+      "exposureType": "TRANSIENT_TOOL_OUTPUT_ACCESS_JWT",
+      "secretPersistedToRepo": false,
+      "secretPersistedToDocs": false,
+      "qaUserBanned": true,
+      "adminRolesPresent": 0,
+      "authSessions": 0,
+      "refreshTokens": 0,
+      "exposedJwtPastExpiryAtVerification": true,
+      "explicitRevokeOperationThisRun": false,
+      "sessionRevokedThisRun": false,
+      "closure": "CLOSED_BY_EXPIRY_AND_ZERO_ACTIVE_SESSIONS_OR_REFRESH_TOKENS",
+      "residualRisk": "NO_ACTIVE_CREDENTIAL_OBSERVED;PRE_EXPIRY_USE_CANNOT_BE_RETROACTIVELY_EXCLUDED"
+    },
+    "operationsHealth": {
+      "cause": "VERCEL_URL_DEPLOYMENT_HOST_REDIRECTED_TO_VERCEL_SSO",
+      "deploymentHostInitialHttp": 302,
+      "redirectDestinationHost": "vercel.com",
+      "redirectClassification": "OFF_ORIGIN_AUTH_REDIRECT_NOT_CANONICAL",
+      "publicDomainRoutes": [
+        "/",
+        "/sea",
+        "/sea/navigation",
+        "/fishing-spots",
+        "/fishing-spots/conditions",
+        "/today-sea"
+      ],
+      "publicDomainDirectHttp": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "fix": "PRODUCTION_USES_VALIDATED_NEXT_PUBLIC_SITE_URL_AND_BOUNDED_REDIRECT_PROBE",
+      "expectedSameOriginCanonicalRedirect": "HEALTHY_AFTER_2XX",
+      "unexpectedSameOriginRedirect": "DEGRADED_AFTER_2XX",
+      "offOriginAuthLoopFinalFailure": "ERROR",
+      "productionAuthenticatedCardStates": "UNVERIFIED_AUTH_ENV_MASKED",
+      "browserCanvasGpsPwaInferredFromHttp": false
+    },
+    "security": {
+      "anonymousOperationsPageHttp": 404,
+      "anonymousModerationPageHttp": 404,
+      "anonymousHealthApiHttp": 401,
+      "privateNoStoreNoindex": true,
+      "normalKakaoUserModerationDenied": "PASS_PRIOR_BROWSER_QA",
+      "moderationRlsOn": "5/5",
+      "advisorCriticalHigh": 0,
+      "advisorWarn": 3,
+      "advisorInfo": 28,
+      "newAdminRoleOrAuthMutationThisRun": 0
+    },
+    "integrity": {
+      "fishSpecies": 1258,
+      "marineOrganisms": 3016,
+      "fishingSpotsCommittedSource": 1405,
+      "pending": {
+        "charter": 1,
+        "market": 1,
+        "community": 0,
+        "reports": 0
+      },
+      "publicQaCommunityPosts": 0,
+      "publicQaMarketListings": 0
+    },
+    "p1": {
+      "communityReturnTo": "RESOLVED",
+      "communityModerationPath": "RESOLVED",
+      "remaining": 0
+    },
+    "engineMaturity": {
+      "charter": "PRODUCTION_READY_WITH_LIMITATIONS",
+      "market": "PRODUCTION_READY_WITH_LIMITATIONS",
+      "community": "PRODUCTION_READY_WITH_LIMITATIONS",
+      "operationsModeration": "PRODUCTION_READY_WITH_LIMITATIONS"
+    },
+    "verification": {
+      "targeted": "15/15 PASS",
+      "cleanMainPlusFixTests": "1245 PASS / 1 SKIP / 0 FAIL",
+      "typecheck": "PASS",
+      "lint": "PASS",
+      "isolatedBuild": "PASS_1467_STATIC_PAGES",
+      "diffCheck": "PASS",
+      "productionAnonymousSecurity": "PASS",
+      "productionAuthenticatedHealth": "UNVERIFIED"
+    },
+    "limitations": [
+      "Production authenticated Operations health cards were not reread after deployment because Vercel CLI supplied masked Auth env values.",
+      "Deployment Git SHA was not exposed by the CLI; commit association is based on push-triggered READY deployment and canonical alias.",
+      "Real-device GPS/PWA and full browser canvas behavior are outside HTTP route probes.",
+      "Existing Security Advisor WARN/INFO findings remain."
+    ]
+  },
+  "keyIncident": {
+    "exposureType": "LEGACY_SERVICE_ROLE_IN_TRANSIENT_TOOL_OUTPUT",
+    "projectRef": "mlfvpaikfpjrgrhwlrjn",
+    "approvedMigration": true,
+    "productionPublishableAndSecretKeys": "MODERN",
+    "legacyApiKeysDisabled": true,
+    "previousHs256SigningKeyRevoked": true,
+    "currentEccSigningKeyUnchanged": true,
+    "legacyApiKeyHttp": 401,
+    "legacyServiceJwtWithModernPublishableKeyHttp": 401,
+    "beforeSigningKeyRevocationMixedHeaderHttp": 200,
+    "secretPersistedToRepo": false,
+    "temporaryCredentialFileDeleted": true,
+    "otherProjectCredentialUsed": false,
+    "residualRisk": "PRE_REVOCATION_USE_CANNOT_BE_RETROACTIVELY_EXCLUDED"
+  },
+  "nextPrimaryPriority": "REAL_DEVICE_GPS_PWA_QA"
 }
