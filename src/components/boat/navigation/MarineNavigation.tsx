@@ -6,6 +6,7 @@ import { ArrowLeft, ChevronDown, Layers3, LocateFixed, MapPinned, Radio, ShieldA
 import { initialBearingDegrees, relativeBearingDegrees } from "@/lib/marine-navigation/bearing";
 import { estimateEtaMinutes } from "@/lib/marine-navigation/eta";
 import { distanceMeters, hasArrived, metersPerSecondToKnots, metersToNauticalMiles } from "@/lib/marine-navigation/geo";
+import { compassHeading, compassPermission, positionLabels, positionQuality, POSITION_MAX_AGE_MS, watchLivePosition } from "@/lib/marine-navigation/live-sensors";
 import { deriveMovement } from "@/lib/marine-navigation/speed";
 import { advanceSimulation, simulationEnabled, simulationOrigin } from "@/lib/marine-navigation/simulation";
 import { createLocalStorageAdapter, hudVisibilityStorageKey, trackStorageKey, waypointStorageKey } from "@/lib/marine-navigation/storage";
@@ -41,18 +42,13 @@ const hudVisibilityStorage = createLocalStorageAdapter<boolean>(hudVisibilitySto
 type OrientationEventWithCompass = DeviceOrientationEvent & { webkitCompassHeading?: number };
 type OrientationConstructor = typeof DeviceOrientationEvent & { requestPermission?: () => Promise<"granted" | "denied"> };
 
-function mapLocationFailure(error: GeolocationPositionError): GeolocationFailure {
-  if (error.code === error.PERMISSION_DENIED) return "permission-denied";
-  if (error.code === error.POSITION_UNAVAILABLE) return "unavailable";
-  if (error.code === error.TIMEOUT) return "timeout";
-  return "unknown";
-}
-
 export function MarineNavigation({ initialDestination, initialQueryError, destinationOptions = sampleDestinations, arrivalRadiusMeters = 75, onNavigationStart, onNavigationStop, onArrive }: MarineNavigationProps) {
   const allowSimulation = simulationEnabled();
   const [mode, setMode] = useState<"live" | "simulation">("live");
   const [vessel, setVessel] = useState<VesselPosition | null>(null);
-  const [deviceHeading, setDeviceHeading] = useState<number | null>(null);
+  const [deviceHeading, setDeviceHeading] = useState<{ degrees: number; at: number } | null>(null);
+  const [clock, setClock] = useState(0);
+  const [compassNotice, setCompassNotice] = useState<string | null>(null);
   const [destination, setDestination] = useState<NavigationDestination | null>(initialDestination ?? null);
   const [status, setStatus] = useState<NavigationState["status"]>("idle");
   const [gpsActive, setGpsActive] = useState(false);
@@ -87,7 +83,8 @@ export function MarineNavigation({ initialDestination, initialQueryError, destin
   const [weatherWarningsState, setWeatherWarningsState] = useState<"loading" | "ready" | "failed">("loading");
   const [weatherWarningsData, setWeatherWarningsData] = useState<KmaMarineWeatherWarningsResponse | null>(null);
   const [selectedMarineFeature, setSelectedMarineFeature] = useState<SelectedMarineFeature | null>(null);
-  const watchId = useRef<number | null>(null);
+  const gpsCleanup = useRef<(() => void) | null>(null);
+  const compassGeneration = useRef(0);
   const previous = useRef<VesselPosition | null>(null);
   const orientationCleanup = useRef<(() => void) | null>(null);
   const arrivedId = useRef<string | null>(null);
@@ -111,36 +108,54 @@ export function MarineNavigation({ initialDestination, initialQueryError, destin
     return () => { active = false; };
   }, []);
 
-  const stopGps = useCallback(() => { if (watchId.current != null && typeof navigator !== "undefined") navigator.geolocation.clearWatch(watchId.current); watchId.current = null; setGpsActive(false); }, []);
-  useEffect(() => () => { if (watchId.current != null) navigator.geolocation.clearWatch(watchId.current); orientationCleanup.current?.(); }, []);
+  const stopGps = useCallback(() => { gpsCleanup.current?.(); gpsCleanup.current = null; previous.current = null; setVessel(null); setGpsActive(false); }, []);
+  useEffect(() => () => { gpsCleanup.current?.(); compassGeneration.current++; orientationCleanup.current?.(); }, []);
+  useEffect(() => {
+    if (mode !== "live" || !gpsActive) return;
+    const refresh = () => setClock(Date.now());
+    refresh();
+    const timer = window.setInterval(refresh, 1_000);
+    document.addEventListener("visibilitychange", refresh);
+    return () => { window.clearInterval(timer); document.removeEventListener("visibilitychange", refresh); };
+  }, [gpsActive, mode]);
 
   const acceptPosition = useCallback((position: GeolocationPosition) => {
-    const timestamp = position.timestamp || Date.now(); const accuracyMeters = position.coords.accuracy;
+    const timestamp = position.timestamp; const accuracyMeters = position.coords.accuracy;
+    if (![position.coords.latitude, position.coords.longitude, timestamp, accuracyMeters].every(Number.isFinite) || Math.abs(position.coords.latitude) > 90 || Math.abs(position.coords.longitude) > 180 || accuracyMeters < 0) { setFailure("unavailable"); setVessel(null); previous.current = null; return; }
     const base: VesselPosition = { latitude: position.coords.latitude, longitude: position.coords.longitude, timestamp, accuracyMeters, source: "GPS_NATIVE", headingSource: "UNAVAILABLE", speedSource: "UNAVAILABLE" };
-    if (position.coords.heading != null) { base.heading = position.coords.heading; base.headingSource = "GPS_NATIVE"; }
-    if (position.coords.speed != null && position.coords.speed >= 0) { base.speedKnots = metersPerSecondToKnots(position.coords.speed); base.speedSource = "NATIVE_GEOLOCATION"; }
+    if (position.coords.heading != null && Number.isFinite(position.coords.heading) && position.coords.heading >= 0 && position.coords.heading < 360) { base.heading = position.coords.heading; base.headingSource = "GPS_NATIVE"; }
+    if (position.coords.speed != null && Number.isFinite(position.coords.speed) && position.coords.speed >= 0) { base.speedKnots = metersPerSecondToKnots(position.coords.speed); base.speedSource = "NATIVE_GEOLOCATION"; }
     else { const derived = deriveMovement(previous.current, base); if (derived.speedKnots != null) { base.speedKnots = derived.speedKnots; base.speedSource = "DERIVED"; base.source = "GPS_DERIVED"; } if (base.heading == null && derived.heading != null) { base.heading = derived.heading; base.headingSource = "DERIVED_MOVEMENT"; } }
-    previous.current = base; setVessel(base); setFailure(null);
+    previous.current = base; setVessel(base); setClock(Date.now()); setFailure(null);
   }, []);
 
   const startGps = useCallback(() => {
+    stopGps(); setMode("live"); setFailure(null); setDeviceHeading(null);
     if (typeof navigator === "undefined" || !navigator.geolocation) { setFailure("unavailable"); return; }
-    stopGps(); setMode("live");
-    watchId.current = navigator.geolocation.watchPosition(acceptPosition, (error) => { setFailure(mapLocationFailure(error)); setGpsActive(false); }, { enableHighAccuracy: true, timeout: 12_000, maximumAge: 2_000 });
-    setGpsActive(true);
+    setGpsActive(true); setClock(Date.now());
+    gpsCleanup.current = watchLivePosition(navigator.geolocation, acceptPosition, error => { setFailure(error); setGpsActive(false); setVessel(null); previous.current = null; });
   }, [acceptPosition, stopGps]);
 
   const enableCompass = useCallback(async () => {
-    if (typeof window === "undefined" || !("DeviceOrientationEvent" in window)) return;
-    const Orientation = window.DeviceOrientationEvent as OrientationConstructor;
-    if (Orientation.requestPermission && await Orientation.requestPermission() !== "granted") return;
-    orientationCleanup.current?.();
-    const listener = (event: Event) => { const reading = event as OrientationEventWithCompass; const heading = reading.webkitCompassHeading ?? (reading.alpha == null ? null : 360 - reading.alpha); if (heading != null && Number.isFinite(heading)) setDeviceHeading(((heading % 360) + 360) % 360); };
+    const generation = ++compassGeneration.current;
+    orientationCleanup.current?.(); setDeviceHeading(null);
+    if (typeof window === "undefined" || !("DeviceOrientationEvent" in window)) { setCompassNotice("나침반 미지원 · 목적지 방위만 표시합니다."); return; }
+    const granted = await compassPermission(window.DeviceOrientationEvent as OrientationConstructor);
+    if (generation !== compassGeneration.current) return;
+    if (!granted) { setCompassNotice("나침반 권한을 허용하지 않았습니다. 목적지 방위만 표시합니다."); return; }
+    setCompassNotice("나침반 수신 대기 · 센서가 없으면 목적지 방위만 표시합니다.");
+    const listener = (event: Event) => { const heading = compassHeading(event as OrientationEventWithCompass); if (heading != null) { setDeviceHeading({ degrees: heading, at: Date.now() }); setCompassNotice(null); } };
     window.addEventListener("deviceorientationabsolute", listener); window.addEventListener("deviceorientation", listener);
     orientationCleanup.current = () => { window.removeEventListener("deviceorientationabsolute", listener); window.removeEventListener("deviceorientation", listener); };
   }, []);
 
-  const effectiveVessel = useMemo(() => vessel && vessel.heading == null && deviceHeading != null ? { ...vessel, heading: deviceHeading, headingSource: "DEVICE_ORIENTATION" as const } : vessel, [deviceHeading, vessel]);
+  const quality = positionQuality(vessel, gpsActive, failure, clock);
+  const gpsLabel = mode === "simulation" ? "SIMULATION" : positionLabels[quality];
+  const effectiveVessel = useMemo(() => {
+    if (mode === "live" && quality !== "GOOD" && quality !== "LOW_ACCURACY") return null;
+    return vessel && vessel.heading == null && deviceHeading != null && clock - deviceHeading.at <= POSITION_MAX_AGE_MS
+      ? { ...vessel, heading: deviceHeading.degrees, headingSource: "DEVICE_ORIENTATION" as const } : vessel;
+  }, [clock, deviceHeading, mode, quality, vessel]);
   const navigation = useMemo<NavigationState>(() => {
     if (!effectiveVessel || !destination) return { status, destination, distanceMeters: null, bearingDegrees: null, relativeBearingDegrees: null, speedKnots: effectiveVessel?.speedKnots ?? null, etaMinutes: null };
     const distance = distanceMeters(effectiveVessel, destination); const bearing = initialBearingDegrees(effectiveVessel, destination);
@@ -165,16 +180,19 @@ export function MarineNavigation({ initialDestination, initialQueryError, destin
     <main data-navigation-immersive="true" className="fixed inset-0 z-[120] flex h-[100dvh] w-full flex-col overflow-hidden bg-[#06131a] text-[#f2eee3]">
       <header className="z-[530] flex h-[calc(3.5rem+env(safe-area-inset-top))] shrink-0 items-center justify-between gap-2 border-b border-white/10 bg-[#06131a]/95 px-3 pt-[env(safe-area-inset-top)] backdrop-blur-md sm:px-5">
         <div className="flex min-w-0 items-center gap-2"><Link href={returnHref} aria-label={destination?.sourceType === "fishing_spot" ? "낚시 포인트 상세로 돌아가기" : "바다 지도로 돌아가기"} className="grid size-11 shrink-0 place-items-center rounded-xl border border-white/20 text-[#d2b178] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8fffe9]"><ArrowLeft size={19} aria-hidden="true" /></Link><div className="min-w-0"><p className="truncate text-sm font-semibold">{destination?.name ?? "해양 항법 보조"}</p><p className="truncate text-[10px] text-[#9baea9]">직선 방위 참고 · 안전항로 아님</p></div></div>
-        <div className="flex shrink-0 items-center gap-2"><span role="status" className={`rounded-full px-2 py-1 text-[10px] font-semibold ${failure ? "bg-amber-900/70 text-amber-100" : "bg-white/10 text-[#d5e4df]"}`}>{mode === "simulation" ? "SIM" : failure ? "GPS 오류" : gpsActive ? "GPS 추적" : "GPS 꺼짐"}</span><button type="button" onClick={mode === "live" && gpsActive ? stopGps : startGps} aria-label={gpsActive ? "GPS 추적 중지" : "GPS 위치 추적 시작"} className="grid size-11 place-items-center rounded-xl border border-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8fffe9]">{gpsActive ? <Radio size={16} /> : <LocateFixed size={16} />}</button></div>
+        <div className="flex shrink-0 items-center gap-2"><span role="status" className={`rounded-full px-2 py-1 text-[10px] font-semibold ${failure ? "bg-amber-900/70 text-amber-100" : "bg-white/10 text-[#d5e4df]"}`}>{gpsLabel}</span><button type="button" onClick={mode === "live" && gpsActive ? stopGps : startGps} aria-label={gpsActive ? "GPS 추적 중지" : "GPS 위치 추적 시작"} className="grid size-11 place-items-center rounded-xl border border-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8fffe9]">{gpsActive ? <Radio size={16} /> : <LocateFixed size={16} />}</button></div>
       </header>
       <div className="relative min-h-0 flex-1">
         <aside id="navigation-details" className={`bm-navigation-scrollbar absolute inset-x-0 bottom-0 z-[525] overflow-y-auto border-t border-white/20 shadow-[0_-16px_40px_rgba(0,0,0,.35)] backdrop-blur-xl transition-[height] duration-200 lg:left-1/2 lg:right-auto lg:w-[min(560px,60vw)] lg:-translate-x-1/2 ${detailsOpen ? "h-[min(58dvh,540px)]" : "h-[calc(4.5rem+env(safe-area-inset-bottom))]"}`} aria-label="항법 상세 정보">
           <button type="button" onClick={() => setDetailsOpen((open) => !open)} aria-expanded={detailsOpen} aria-controls="navigation-details-content" className="flex min-h-[4.5rem] w-full items-center justify-between gap-3 px-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8fffe9]">
-            <span className="min-w-0"><span className="block truncate text-xs font-semibold">{destination?.name ?? "목적지 정보"}</span><span className="mt-1 block text-[10px] text-[#a9bcb6]">{navigation.bearingDegrees == null ? "방위 --" : `방위 ${Math.round(navigation.bearingDegrees)}°`} · {navigation.distanceMeters == null ? "직선거리 --" : `직선거리 ${metersToNauticalMiles(navigation.distanceMeters).toFixed(2)} NM`} · {gpsActive ? "GPS 추적" : "GPS 꺼짐"}</span></span>
+            <span className="min-w-0"><span className="block truncate text-xs font-semibold">{destination?.name ?? "목적지 정보"}</span><span className="mt-1 block text-[10px] text-[#a9bcb6]">{navigation.bearingDegrees == null ? "방위 --" : `방위 ${Math.round(navigation.bearingDegrees)}°`} · {navigation.distanceMeters == null ? "직선거리 --" : `직선거리 ${metersToNauticalMiles(navigation.distanceMeters).toFixed(2)} NM`} · {gpsLabel}</span></span>
             <ChevronDown size={18} aria-hidden="true" className={`shrink-0 transition-transform ${detailsOpen ? "rotate-180" : ""}`} />
           </button>
           <div id="navigation-details-content" hidden={!detailsOpen} className="pb-[env(safe-area-inset-bottom)]">
-          <NavigationStatus navigation={navigation} mode={mode} gpsActive={gpsActive} failure={failure} queryError={initialQueryError} />
+          <NavigationStatus gpsLabel={gpsLabel} navigation={navigation} mode={mode} gpsActive={gpsActive} failure={failure} queryError={initialQueryError} />
+          {quality === "STALE" && mode === "live" ? <p role="status" className="px-5 py-2 text-xs text-amber-200">위치 갱신이 15초 이상 지연됐습니다. 새 위치 수신 전에는 방향·거리 안내를 중지합니다.</p> : null}
+          {quality === "LOW_ACCURACY" && mode === "live" ? <p role="status" className="px-5 py-2 text-xs text-amber-200">위치 오차 약 {Math.round(vessel?.accuracyMeters ?? 0)}m · 방향·거리는 부정확할 수 있습니다.</p> : null}
+          {compassNotice ? <p role="status" className="px-5 py-2 text-xs text-amber-200">{compassNotice}</p> : null}
           <NavigationDestinationPanel destination={destination} options={destinationOptions} onSelect={selectDestination} />
           <WaypointPanel waypoints={waypoints} vessel={effectiveVessel} destination={destination} onSave={(point) => setWaypoints((current) => [...current, createSavedWaypoint(point)])} onDelete={(id) => setWaypoints((current) => current.filter((point) => point.id !== id))} onSelect={selectDestination} />
           <TrackRecorder activeTrack={activeTrack} savedTrackCount={tracks.length} onStart={startTrack} onPause={() => updateTrack("paused")} onResume={() => updateTrack("recording")} onStop={() => updateTrack("completed")} onClear={() => { setTracks([]); setActiveTrackId(null); trackStorage.clear(); }} />
