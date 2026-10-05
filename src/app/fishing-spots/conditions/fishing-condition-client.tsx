@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { ParticipationLink } from "@/components/account/ParticipationLink";
+import { communityCreationHref } from "@/lib/acquisition/contract";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, BookOpen, ChevronDown, Info, LoaderCircle, Waves } from "lucide-react";
@@ -328,7 +330,8 @@ export function FishingConditionClient({ initialSpeciesId = "", spotContext, jou
           <button type="button" disabled={!speciesId || !month || state === "loading"} onClick={() => void runProfileQuery()} className="mt-3 min-h-11 rounded-full border border-[#79C9D6] px-5 text-sm font-black text-[#AEE8EF] disabled:opacity-45">어종 근거 보기</button>
         </div>
         {spotContext && speciesId ? <Link href={buildFishingJourneySeaHref({ ...journey, spotId: spotContext.id, speciesId, source: "conditions", returnTo: "/fishing-spots/conditions" })} className="mt-3 inline-flex min-h-11 items-center rounded-full border border-[#79C9D6]/45 px-4 text-xs font-black text-[#AEE8EF]">선택한 포인트를 지도에서 보기</Link> : null}
-        <p className="mt-4 flex items-start gap-2 text-xs font-semibold leading-5 text-[#8FA7BC]"><Info size={15} className="mt-0.5 shrink-0 text-[#79C9D6]" /> 선택을 마친 뒤 버튼을 눌러 공식 자료를 조회합니다. 자동 추천이나 점수는 제공하지 않습니다.</p>
+        {FISHING_CONDITION_SPECIES.some(item=>item.id===speciesId) ? <ParticipationLink href={communityCreationHref({speciesId,spotId:spotContext?.id})} className="mt-3 inline-flex min-h-11 items-center rounded-full border border-[#79C9D6]/45 px-4 text-sm font-bold text-[#AEE8EF]">이 어종 이야기 쓰기</ParticipationLink> : null}
+          <p className="mt-4 flex items-start gap-2 text-xs font-semibold leading-5 text-[#8FA7BC]"><Info size={15} className="mt-0.5 shrink-0 text-[#79C9D6]" /> 선택을 마친 뒤 버튼을 눌러 공식 자료를 조회합니다. 자동 추천이나 점수는 제공하지 않습니다.</p>
         {locationState === "loading" ? <p role="status" aria-live="polite" className="mt-3 text-sm font-bold text-[#9FB3C8]">정점 목록을 불러오는 중입니다.</p> : null}
         {locationState === "error" && locationError ? <div role="alert" className="mt-3 flex flex-wrap items-center gap-3 text-sm font-bold text-[#EBC27D]"><span>{locationError.message}</span><button type="button" onClick={() => setLocationReloadKey((value) => value + 1)} className="min-h-10 rounded-full border border-[#EBC27D]/45 px-4 underline-offset-4 hover:underline">다시 시도</button></div> : null}
       </section>

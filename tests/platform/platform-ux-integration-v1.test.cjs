@@ -172,8 +172,8 @@ test("Community empty state offers local draft and Fishing entries", () => {
 
 test("production-empty services retain honest exact messages", () => {
   assert.match(read("src/app/charters/page.tsx"), /등록된 출조 정보가 없습니다/);
-  assert.match(read("src/app/market/page.tsx"), /등록된 판매글이 없습니다/);
-  assert.match(read("src/app/community/page.tsx"), /등록된 커뮤니티 글이 없습니다/);
+  assert.match(read("src/app/market/page.tsx"), /조건에 맞는 공개 판매글 0건/);
+  assert.match(read("src/app/community/page.tsx"), /조건에 맞는 공개 글 0건/);
 });
 
 test("global loading and not-found states provide semantic next actions", () => {

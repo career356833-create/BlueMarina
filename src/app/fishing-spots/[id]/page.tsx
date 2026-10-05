@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Anchor, ExternalLink, Fish, MapPin, Navigation2, ShieldAlert, Waves } from "lucide-react";
 import { DetailFrame, DetailBackLink } from "@/components/platform/PageFamilies";
+import { ParticipationLink } from "@/components/account/ParticipationLink";
+import { communityCreationHref } from "@/lib/acquisition/contract";
 import { AccountSaveButton } from "@/components/account/AccountSaveButton";
 import { RecentlyViewedTracker } from "@/components/account/RecentlyViewedTracker";
 import { fishingSpots, getFishingSpotTypeLabel } from "@/data/fishing-spots";
@@ -75,7 +77,7 @@ export default async function FishingSpotDetailPage({ params }: PageProps) {
         <p className="mt-5 flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.26em] text-[#EBC27D]"><Anchor size={15} /> Blue Marina Point</p>
         <h1 className="mt-2 max-w-4xl text-3xl font-black leading-tight text-white sm:text-5xl">{spot.name}</h1>
         <p className="mt-4 max-w-3xl text-sm font-semibold leading-7 text-[#B8CBDD] sm:text-base">{spot.description || "포인트 설명이 원본 자료에 없습니다."}</p>
-        <div className="mt-5"><AccountSaveButton entityType="FISHING_SPOT" entityId={spot.id} label={spot.name} href={`/fishing-spots/${encodeURIComponent(spot.id)}`} /></div>
+        <div className="mt-5 flex flex-wrap gap-3"><ParticipationLink href={communityCreationHref({spotId:spot.id})} className="bm-action-secondary px-4 text-sm">이 포인트 경험 공유</ParticipationLink><AccountSaveButton entityType="FISHING_SPOT" entityId={spot.id} label={spot.name} href={`/fishing-spots/${encodeURIComponent(spot.id)}`} /></div>
       </header>
 
       {navigationBlocked ? <aside role="note" className="rounded-[22px] border border-[#6A5735] bg-[#201B13] p-4" aria-labelledby="coordinate-review-title">

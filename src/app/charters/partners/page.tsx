@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ParticipationLink } from "@/components/account/ParticipationLink";
 import type { Metadata } from "next";
 import { Anchor, ArrowRight, FileSpreadsheet, ShieldCheck } from "lucide-react";
 import { FormFrame } from "@/components/platform/PageFamilies";
@@ -30,11 +31,11 @@ export default function CharterPartnersPage() {
     <h1 className="mt-4 max-w-3xl text-4xl font-black leading-tight sm:text-6xl">Blue Marina 출조상품 등록</h1>
     <p className="mt-5 max-w-3xl text-base leading-8 text-[#B8CBDD]">출조업체가 직접 제공한 상품 정보를 검토하여 소개하고, 기존 전화·공식 예약 경로로 문의를 연결하는 파일럿입니다. 제출만으로 게시되거나 예약이 확정되지는 않습니다.</p>
     <div className="mt-7 flex flex-wrap gap-3">
-      <Link href="/charters/onboarding" className="inline-flex min-h-12 items-center gap-2 rounded-full bg-[#2E8BFF] px-6 font-black text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">직접 등록 <ArrowRight size={17}/></Link>
+      <ParticipationLink href="/charters/onboarding" className="inline-flex min-h-12 items-center gap-2 rounded-full bg-[#2E8BFF] px-6 font-black text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">로그인 후 출조상품 등록 <ArrowRight size={17}/></ParticipationLink>
       <Link href="/charters/partners/template.csv" className="inline-flex min-h-12 items-center gap-2 rounded-full border border-[#79C9D6] px-6 font-black text-[#AEE8EF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"><FileSpreadsheet size={17}/> CSV 템플릿 받기</Link>
       <a href="#partner-inquiry" className="inline-flex min-h-12 items-center rounded-full border border-[#29465D] px-6 font-black text-[#D7E4F6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">제휴 문의 준비</a>
     </div>
-    <p className="mt-4 text-sm text-[#AFC1D4]">현재 직접 제출은 로그인과 활성화된 공급 접수 백엔드가 필요합니다. 이용할 수 없는 경우 자료를 준비해 두세요. 운영 연락처는 아직 공개되지 않았습니다.</p>
+    <p className="mt-4 text-sm text-[#AFC1D4]">로그인 후 등록 화면으로 바로 돌아옵니다. 기존 예약 전화·공식 예약 링크를 그대로 제출할 수 있으며, 검토 결과는 내 제출 상태에서 확인합니다.</p>
 
     <div className="mt-14 grid gap-5 lg:grid-cols-2">
       <section className="rounded-3xl border border-[#29465D] bg-[#071827] p-6"><h2 className="text-2xl font-black">등록하면 소개할 수 있는 정보</h2><ul className="mt-5 space-y-3 text-[#B8CBDD]">{benefits.map(item => <li key={item} className="flex gap-3"><span aria-hidden="true" className="text-[#79C9D6]">•</span>{item}</li>)}</ul><p className="mt-5 text-sm text-[#9FB3C8]">승인된 정보만 게시 후보가 됩니다. 노출·문의·매출 증가는 보장하지 않습니다.</p></section>
@@ -43,9 +44,9 @@ export default function CharterPartnersPage() {
 
     <section className="mt-14"><h2 className="text-3xl font-black">등록 방법</h2><div className="mt-5 grid gap-4 md:grid-cols-3"><article className="rounded-2xl border border-[#29465D] p-5"><h3 className="font-black">1. 직접 입력</h3><p className="mt-2 text-sm leading-7 text-[#B8CBDD]">기존 출조 정보 등록 화면에서 업체·선박·출항항·상품을 입력합니다.</p></article><article className="rounded-2xl border border-[#29465D] p-5"><h3 className="font-black">2. CSV 작성</h3><p className="mt-2 text-sm leading-7 text-[#B8CBDD]">템플릿을 작성한 뒤 기존 등록 화면에서 로컬 검증을 실행합니다. Excel은 CSV로 저장해 사용합니다.</p></article><article className="rounded-2xl border border-[#29465D] p-5"><h3 className="font-black">3. 기존 홈페이지 정보</h3><p className="mt-2 text-sm leading-7 text-[#B8CBDD]">공식 페이지 URL을 출처로 제공하고, 실제 게시할 내용을 직접 확인해 제출합니다.</p></article></div></section>
 
-    <section className="mt-14 rounded-3xl border border-[#29465D] bg-[#071827] p-6"><h2 className="flex items-center gap-2 text-2xl font-black"><ShieldCheck className="text-[#79C9D6]"/> 검토 후 게시</h2><p className="mt-4 text-[#B8CBDD]">제출 → 정보·출처 확인 → 관리자 승인 → 게시 후보 검토 순서입니다. 업체 동의, 신원, 연락 경로, 중요 충돌을 확인하며 자동 게시는 하지 않습니다.</p><p className="mt-3 text-sm text-[#9FB3C8]">현재 승인된 출조상품과 운영 중인 공개 상품은 없습니다. 아래는 절차 안내이며 실제 상품 미리보기가 아닙니다.</p></section>
+    <section className="mt-14 rounded-3xl border border-[#29465D] bg-[#071827] p-6"><h2 className="flex items-center gap-2 text-2xl font-black"><ShieldCheck className="text-[#79C9D6]"/> 검토 후 게시</h2><p className="mt-4 text-[#B8CBDD]">제출 → 정보·출처 확인 → 관리자 승인 → 게시 후보 검토 순서입니다. 업체 동의, 신원, 연락 경로, 중요 충돌을 확인하며 자동 게시는 하지 않습니다.</p><p className="mt-3 text-sm text-[#9FB3C8]">승인은 자동 공개가 아닙니다. 게시 후보를 검증한 뒤 별도 공개 절차를 진행합니다. 이 페이지는 절차 안내이며 실제 상품 미리보기가 아닙니다.</p></section>
 
-    <section id="partner-inquiry" className="mt-14 scroll-mt-8 rounded-3xl border border-[#29465D] p-6"><h2 className="text-2xl font-black">제휴 문의 준비</h2><p className="mt-3 leading-7 text-[#B8CBDD]">업체명, 공개할 연락처, 선박·출항항, 상품명, 공식 홈페이지를 정리해 주세요. 현재 별도 제휴 연락처가 설정되지 않아 이 페이지에서는 문의를 전송하지 않습니다. 접수 경로가 활성화되면 기존 직접 등록 화면을 이용할 수 있습니다.</p><Link href="/charters/onboarding" className="mt-4 inline-flex min-h-11 items-center font-bold text-[#AEE8EF] underline underline-offset-4">기존 등록 화면으로 이동</Link></section>
+    <section id="partner-inquiry" className="mt-14 scroll-mt-8 rounded-3xl border border-[#29465D] p-6"><h2 className="text-2xl font-black">제휴 문의 준비</h2><p className="mt-3 leading-7 text-[#B8CBDD]">업체명, 공개할 연락처, 선박·출항항, 상품명, 공식 홈페이지를 정리해 주세요. 현재 별도 제휴 연락처가 설정되지 않아 이 페이지에서는 문의를 전송하지 않습니다. 로그인 후 위의 출조상품 등록으로 검토를 요청해 주세요.</p><Link href="/charters/onboarding" className="mt-4 inline-flex min-h-11 items-center font-bold text-[#AEE8EF] underline underline-offset-4">기존 등록 화면으로 이동</Link></section>
 
     <section className="mt-14"><h2 className="text-3xl font-black">자주 묻는 질문</h2><div className="mt-5 space-y-3">{faqs.map(([question, answer]) => <details key={question} className="rounded-2xl border border-[#29465D] bg-[#071827] p-5"><summary className="cursor-pointer font-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">{question}</summary><p className="mt-3 text-sm leading-7 text-[#B8CBDD]">{answer}</p></details>)}</div></section>
   </div></FormFrame>;

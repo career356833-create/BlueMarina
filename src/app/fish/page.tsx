@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ParticipationLink } from "@/components/account/ParticipationLink";
 import { useMemo, useState } from "react";
 import { ChevronDown, Fish, Filter, Search, ShieldAlert, Sparkles, Waves } from "lucide-react";
 import { AppFrame } from "@/components/boat/AppFrame";
@@ -186,7 +187,7 @@ export default function FishPage() {
                     {isOpen ? (
                       <div className="mt-4 space-y-3 rounded-2xl bg-white p-4">
                         <Link href={`/fishing-spots?q=${encodeURIComponent(item.name)}&source=fish#spot-search`} className="bm-action inline-flex min-h-11 px-4 py-3 text-sm">{item.name} 포인트 검색</Link>
-                        <p className="text-xs leading-5 text-slate-600">도감 이름으로 기존 포인트 정보를 검색합니다. 종 식별이나 조황 보장을 뜻하지 않습니다.</p>
+                        <ParticipationLink href="/community/new" className="bm-action-secondary inline-flex min-h-11 px-4 py-3 text-sm">이 어종 이야기 쓰기 · 관련 어종 직접 선택</ParticipationLink><p className="text-xs leading-5 text-slate-600">도감 이름으로 기존 포인트 정보를 검색합니다. 종 식별이나 조황 보장을 뜻하지 않습니다.</p>
                         <div>
                           <p className="flex items-center gap-2 text-xs font-black text-slate-950">
                             <Sparkles size={15} className="text-[var(--bm-accent-ink)]" />

@@ -80,11 +80,11 @@ export function mapPost(row: PostRow): CommunityPost {
     moderationStatus: row.moderation_status as CommunityPost["moderationStatus"], createdAt: String(row.created_at),
     updatedAt: String(row.updated_at), sourceType: "USER_SUBMITTED" };
 }
-export async function publicPosts() {
+export async function publicPosts(strict = false) {
   const client = communityBackend();
-  if (!client) return [];
+  if (!client) { if (strict) throw new Error("PUBLIC_CONTENT_UNAVAILABLE"); return []; }
   const { data, error } = await client.from("community_posts").select("*").eq("status", "ACTIVE").eq("moderation_status", "APPROVED").order("created_at", { ascending: false }).limit(100);
-  if (error) return [];
+  if (error) { if (strict) throw new Error("PUBLIC_CONTENT_UNAVAILABLE"); return []; }
   return (data ?? []).map(mapPost);
 }
 export async function publicPost(id: string) {

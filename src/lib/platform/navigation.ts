@@ -66,11 +66,11 @@ export const mobileNavigation: readonly PlatformNavItem[] = [
 export const platformServiceEntries: readonly PlatformServiceEntry[] = [
   { id: "today-sea", title: "오늘의 바다", description: "물때와 해양 기상", href: "/today-sea", availability: "ACTIVE", priority: "PRIMARY" },
   { id: "sea", title: "바다 지도", description: "해역과 거점 탐색", href: "/sea", availability: "ACTIVE", priority: "PRIMARY" },
-  { id: "fishing", title: "낚시 포인트", description: "지역과 어종별 포인트", href: "/fishing-spots", availability: "ACTIVE", priority: "PRIMARY" },
-  { id: "charter", title: "출조 찾기", description: "검증된 출조 정보 탐색", href: "/charters", availability: "BACKEND_LIMITED", priority: "PRIMARY" },
+  { id: "fishing", title: "낚시 포인트", description: "지역·어종별 포인트 찾고 저장", href: "/fishing-spots", availability: "ACTIVE", priority: "PRIMARY" },
+  { id: "charter", title: "출조 찾기", description: "출조 찾기 · 업체 상품 등록", href: "/charters", availability: "BACKEND_LIMITED", priority: "PRIMARY" },
   { id: "fish", title: "어종 도감", description: "어종 정보와 조건", href: "/fish", availability: "ACTIVE", priority: "PRIMARY" },
-  { id: "market", title: "마켓", description: "지역 기반 해양 장비", href: "/market", availability: "BACKEND_LIMITED", priority: "PRIMARY" },
-  { id: "community", title: "커뮤니티", description: "바다 경험과 질문", href: "/community", availability: "BACKEND_LIMITED", priority: "SECONDARY" },
+  { id: "market", title: "마켓", description: "중고 장비 찾기 · 판매글 등록", href: "/market", availability: "BACKEND_LIMITED", priority: "PRIMARY" },
+  { id: "community", title: "커뮤니티", description: "바다 경험·질문 나누기", href: "/community", availability: "BACKEND_LIMITED", priority: "SECONDARY" },
   { id: "guide", title: "면허·가이드", description: "면허와 안전 학습", href: "/license-guide", availability: "ACTIVE", priority: "SECONDARY" }
 ] as const;
 

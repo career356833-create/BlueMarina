@@ -2,6 +2,7 @@ import "server-only";
 import { createClient } from "@supabase/supabase-js";
 import { productionCharterDataset } from "@/lib/charters/registry";
 import { isQaIdentity, QA_MARKER, split, summarizeQueue, type Identity, type QueueRow } from "./summary-model";
+import { buildActivationFunnel, type ReviewFact } from "../acquisition/funnel";
 
 const MAX_ROWS = 1000;
 const READ_TIMEOUT_MS = 5000;
@@ -19,7 +20,7 @@ export async function collectBusinessSummary(now = Date.now()) {
     if (!client) return null;
     try {
       const { data, error } = await client.from(table).select(fields).limit(MAX_ROWS + 1);
-      if (error || !data || data.length > MAX_ROWS) { failures.push(table); return null; }
+      if (error || !data || data.length >= MAX_ROWS) { failures.push(table); return null; }
       return data as unknown as Row[];
     } catch { failures.push(table); return null; }
   }
@@ -43,10 +44,16 @@ export async function collectBusinessSummary(now = Date.now()) {
     read("community_reactions", "post_id,actor_id,created_at"),
     read("community_reports", "id,target_type,target_id,reporter_id,status,created_at"),
   ]);
+  const [saved, charterReviews, marketReviews] = await Promise.all([
+    read("user_saved_items", "id,user_id,label,created_at"),
+    read("charter_supply_reviews", "submission_id,action,created_at"),
+    read("market_listing_reviews", "listing_id,action,created_at"),
+  ]);
+  const communityReviews = await read("community_moderation_events", "target_type,target_id,action,created_at");
   const map = (rows: Row[] | null, owner: string, stamp: string): QueueRow[] | null => rows?.map(row => ({
     id: String(row.id ?? ""), owner: String(row[owner] ?? ""), status: String(row.status ?? "RECORDED"),
     publicEligible: row.moderation_status === undefined || row.moderation_status === "APPROVED",
-    marker: `${String(row.title ?? row.name ?? "")} ${String(row.sourceName ?? "")} ${String(row.sourceUrl ?? "")}`, at: typeof row[stamp] === "string" ? row[stamp] as string : null,
+    marker: `${String(row.title ?? row.name ?? row.label ?? "")} ${String(row.sourceName ?? "")} ${String(row.sourceUrl ?? "")}`, at: typeof row[stamp] === "string" ? row[stamp] as string : null,
   })) ?? null;
   const postRows = map(posts, "author_id", "created_at");
   const qaPosts = new Set(postRows?.filter(row => isQaIdentity(owners.get(row.owner) ?? { id: "" }) || QA_MARKER.test(row.marker ?? "")).map(row => row.id));
@@ -71,8 +78,14 @@ export async function collectBusinessSummary(now = Date.now()) {
   const qa = identities.filter(isQaIdentity);
   const admin = (user: Identity) => ["operations", "charter", "market", "community"].some(role => user.app_metadata?.[`${role}_role`] === `${role}_admin`);
   const active = (user: Identity) => !user.banned_until || Date.parse(user.banned_until) <= now;
+  const reviews = (rows: Row[] | null, target: string): ReviewFact[] | null => rows?.map(row => ({ target: String(row[target]), action: String(row.action), at: typeof row.created_at === "string" ? row.created_at : null })) ?? null;
+  const acquisition = buildActivationFunnel({ identities: owners, identitiesComplete,
+    saved: map(saved, "user_id", "created_at"), charter: map(charter, "submitted_by", "submitted_at"), market: map(market, "seller_id", "submitted_at"), community: postRows,
+    charterReviews: reviews(charterReviews, "submission_id"), marketReviews: reviews(marketReviews, "listing_id"), communityReviews: reviews(communityReviews?.filter(row => row.target_type === "POST") ?? null, "target_id"),
+    charterPublic: productionCharterDataset.charters.length });
   return {
     generatedAt: new Date(now).toISOString(), readLimit: MAX_ROWS, failures,
+    acquisition,
     auth: { state: identitiesComplete ? "AVAILABLE" : "UNKNOWN", users: identitiesComplete ? identities.length : null,
       qa: identitiesComplete ? qa.length : null, real: identitiesComplete ? identities.length - qa.length : null,
       activeQA: identitiesComplete ? qa.filter(active).length : null, bannedQA: identitiesComplete ? qa.filter(u => !active(u)).length : null,

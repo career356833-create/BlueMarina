@@ -103,7 +103,7 @@ function StateCard({ title, body, children }: { title: string; body: string; chi
 
 function Overview({ model, recent }: { model: AccountReadModel | null; recent: RecentItem[] }) {
   const cards = [["저장한 콘텐츠", model?.savedItems.length ?? 0, Bookmark], ["마켓 활동", model?.marketActivity.length ?? 0, ShoppingBag], ["최근 본 항목", recent.length, History]] as const;
-  return <div className="grid gap-4 sm:grid-cols-3">{cards.map(([label, count, Icon]) => <div key={label} className="rounded-[24px] border border-[#1F3A50] bg-[#071827] p-5"><Icon className="text-[#79C9D6]"/><p className="mt-5 text-3xl font-black">{count}</p><p className="mt-1 text-sm font-bold text-[#9FB3C8]">{label}</p></div>)}</div>;
+  return <><section className="bm-surface-dark mb-4 p-5"><h2 className="font-semibold">다음 바다 활동을 시작해 보세요</h2><p className="mt-2 text-sm text-white/65">관심 포인트를 저장하거나 직접 경험한 바다 이야기를 남길 수 있습니다. 판매할 장비가 있다면 검토용 판매글을 작성하세요.</p><div className="mt-3 flex flex-wrap gap-3"><Link href="/fishing-spots" className="bm-action px-4 text-sm">포인트 찾고 저장</Link><Link href="/community/new" className="bm-action-secondary px-4 text-sm">경험·질문 작성</Link><Link href="/market/new" className="bm-action-secondary px-4 text-sm">판매글 작성</Link></div></section><div className="grid gap-4 sm:grid-cols-3">{cards.map(([label, count, Icon]) => <div key={label} className="rounded-[24px] border border-[#1F3A50] bg-[#071827] p-5"><Icon className="text-[#79C9D6]"/><p className="mt-5 text-3xl font-black">{count}</p><p className="mt-1 text-sm font-bold text-[#9FB3C8]">{label}</p></div>)}</div></>;
 }
 
 function ProfilePanel({ model, token, onReload }: { model: AccountReadModel | null; token: string | null; onReload: (token: string) => Promise<void> }) {

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { PostLaunchSummary } from "@/lib/operations/post-launch-summary";
+import { AcquisitionPanel } from "./acquisition-panel";
 import type { QueueSummary, Split } from "@/lib/operations/summary-model";
 
 const value = (input: string | number | boolean | null | undefined) => input === null || input === undefined || input === "" ? "UNKNOWN" : String(input);
@@ -46,6 +47,7 @@ export function PostLaunchPanels({ summary }: { summary: PostLaunchSummary }) {
       <div className="mt-4 grid gap-4 lg:grid-cols-3"><Queue name="Charter" data={business.charter} /><Queue name="Market" data={business.market} /><Queue name="Community" data={business.community} /></div>
       <div className="mt-4 grid gap-4 text-sm sm:grid-cols-3"><p>미해결 신고: <Partition data={business.reports.pending} /></p><p>댓글 전체: <Partition data={business.comments} /></p><p>반응 전체: <Partition data={business.reactions} /></p></div>
       <p className="mt-3 text-xs leading-5 text-white/50">{business.limitation}</p></section>
+    <AcquisitionPanel funnel={business.acquisition}/>
     <div className="grid gap-4 lg:grid-cols-2">
       <section aria-label="Auth aggregates" className="min-w-0 rounded-xl border border-white/15 bg-[#0a1b2a] p-5"><h2 className="text-xl font-semibold">Auth · 개인정보 없는 집계</h2><dl className="mt-4 grid grid-cols-2 gap-4">
         <Stat label="사용자 Total / QA / Real">{value(business.auth.users)} / {value(business.auth.qa)} / {value(business.auth.real)}</Stat>

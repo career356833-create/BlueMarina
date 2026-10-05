@@ -1,0 +1,329 @@
+{
+  "schemaVersion": 1,
+  "program": "BLUE_MARINA_POST_LAUNCH_ACQUISITION_CONTENT_ACTIVATION_V1",
+  "decision": "ACQUISITION_CONTENT_ACTIVATION_READY_WITH_LIMITATIONS",
+  "baseline": "0899f1b3c552d68ce5e78c9a61a2477d771492b8",
+  "evidenceDate": "2026-10-05",
+  "entrySurfaces": [
+    {
+      "route": "/",
+      "before": "GOOD",
+      "after": "GOOD",
+      "action": "기존 영상과 6 primary / 2 secondary 유지. 포인트 저장·업체 등록·판매글 문구만 구체화."
+    },
+    {
+      "route": "/fishing-spots",
+      "before": "FRICTION",
+      "after": "GOOD",
+      "action": "실제 포인트 → 상세 → 저장 로그인 복귀 / 해당 포인트 경험 공유."
+    },
+    {
+      "route": "/fish",
+      "before": "FRICTION",
+      "after": "FRICTION",
+      "action": "336 legacy 도감에는 canonical ID가 없어 이름 매핑 금지. 글쓰기는 직접 관련 어종 선택; Conditions 38종에는 exact ID CTA."
+    },
+    {
+      "route": "/today-sea",
+      "before": "GOOD",
+      "after": "GOOD",
+      "action": "관측 정보 읽기 → 기존 바다 지도·Conditions. 가입을 강제하지 않음."
+    },
+    {
+      "route": "/charters",
+      "before": "FRICTION",
+      "after": "GOOD",
+      "action": "0개 공개 상태, 출조상품 등록·업체 안내를 함께 노출."
+    },
+    {
+      "route": "/charters/partners",
+      "before": "MISALIGNED",
+      "after": "GOOD",
+      "action": "접수 활성화 이전 문구 제거. 로그인 후 onboarding, 기존 전화/예약 링크, 수동 게시 절차 안내."
+    },
+    {
+      "route": "/market",
+      "before": "FRICTION",
+      "after": "GOOD",
+      "action": "검색 결과 0건 → 첫 판매글 등록 → 정확한 로그인 복귀."
+    },
+    {
+      "route": "/community",
+      "before": "FRICTION",
+      "after": "GOOD",
+      "action": "검색 결과 0건 → 첫 글 작성. 조회 실패를 빈 콘텐츠로 표시하지 않음."
+    },
+    {
+      "route": "/license-guide",
+      "before": "GOOD",
+      "after": "GOOD",
+      "action": "기존 면허 안내·학습 다음 행동 유지. 가입/판매 강제 없음."
+    }
+  ],
+  "segments": {
+    "fisher": "information → save / explicit Community context",
+    "supplier": "Charter partners → login → onboarding → review → verified registry release",
+    "seller": "Market → login → new → review → public detail / owner status"
+  },
+  "auth": {
+    "primary": "KAKAO_UNCHANGED",
+    "returnTo": "INTERNAL_ALLOWLIST_AND_EXACT_CONTEXT",
+    "freshOAuthE2E": "NOT_REPLAYED",
+    "localUnauthenticatedCta": "PASS",
+    "savedBehavior": "LOGIN_RETURN_TO_ORIGINAL_THEN_USER_SAVES; NO_AUTOMATIC_WRITE"
+  },
+  "attribution": {
+    "state": "DESIGN_ONLY_NOT_COLLECTED",
+    "default": "UNKNOWN",
+    "fields": [
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "coarse_referrer"
+    ],
+    "rawUrlOrPiiStored": false
+  },
+  "actual": {
+    "auth": {
+      "total": 21,
+      "qa": 18,
+      "realRegistered": 3
+    },
+    "retainedFirstActions": {
+      "real": 0,
+      "qa": 5,
+      "admin": 0
+    },
+    "savedItems": 0,
+    "realSubmissions": {
+      "charter": 0,
+      "market": 0,
+      "community": 0
+    },
+    "qaSubmissions": {
+      "charter": 3,
+      "market": 3,
+      "community": 7
+    },
+    "realApprovals": {
+      "charter": 0,
+      "market": 0,
+      "community": 0
+    },
+    "qaDistinctApproved": {
+      "charter": 2,
+      "market": 2,
+      "community": 2
+    },
+    "qaDistinctRejected": {
+      "charter": 0,
+      "market": 0,
+      "community": 4
+    },
+    "currentPublic": {
+      "charter": 0,
+      "market": 0,
+      "community": 0
+    },
+    "visitors": null,
+    "loginStarted": null,
+    "loginCompleted": null,
+    "submissionStarted": null,
+    "loginToFirstActionPercent": null,
+    "source": "READ_ONLY_REMOTE_AGGREGATES_RECONCILED_WITH_EXISTING_QA_MARKERS"
+  },
+  "proposedTargets": {
+    "status": "PLANNING_ONLY_NOT_RESULTS",
+    "window": "FIRST_CONTROLLED_ACQUISITION_EXPERIMENT",
+    "realFirstSavedUsers": 1,
+    "realFirstSubmissions": {
+      "charter": 1,
+      "market": 1,
+      "community": 1
+    },
+    "realPublishedContent": 1,
+    "conversionTargets": null
+  },
+  "verification": {
+    "targeted": {
+      "pass": 15,
+      "fail": 0
+    },
+    "cleanFull": {
+      "pass": 1293,
+      "skip": 1,
+      "fail": 0
+    },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "diff": "PASS",
+    "browser": {
+      "environment": "CLEAN_MAIN_PLUS_EXACT_CHANGESET_LOCAL_PRODUCTION_BUILD_NO_AUTH_ENV",
+      "mobile": "390x844",
+      "desktop": "1280x900",
+      "entryRoutes": 9,
+      "horizontalOverflow": 0,
+      "ctaToLogin": "CHARTER_MARKET_COMMUNITY_PASS",
+      "explicitSpotContext": "rock-151 preserved through create/login URL",
+      "authenticatedE2E": "NOT_REPLAYED"
+    },
+    "productionBaselineHttp": [
+      {
+        "path": "/",
+        "status": 200,
+        "canonical": "https://blue-marina.vercel.app",
+        "noindex": false,
+        "cache": "public, max-age=0, must-revalidate",
+        "nosniff": "nosniff",
+        "unsafeEval": false
+      },
+      {
+        "path": "/fishing-spots",
+        "status": 200,
+        "canonical": "https://blue-marina.vercel.app/fishing-spots",
+        "noindex": false,
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "nosniff": "nosniff",
+        "unsafeEval": false
+      },
+      {
+        "path": "/fish",
+        "status": 200,
+        "canonical": "https://blue-marina.vercel.app/fish",
+        "noindex": false,
+        "cache": "public, max-age=0, must-revalidate",
+        "nosniff": "nosniff",
+        "unsafeEval": false
+      },
+      {
+        "path": "/today-sea",
+        "status": 200,
+        "canonical": "https://blue-marina.vercel.app/today-sea",
+        "noindex": false,
+        "cache": "public, max-age=0, must-revalidate",
+        "nosniff": "nosniff",
+        "unsafeEval": false
+      },
+      {
+        "path": "/charters",
+        "status": 200,
+        "canonical": "https://blue-marina.vercel.app/charters",
+        "noindex": false,
+        "cache": "public, max-age=0, must-revalidate",
+        "nosniff": "nosniff",
+        "unsafeEval": false
+      },
+      {
+        "path": "/charters/partners",
+        "status": 200,
+        "canonical": "https://blue-marina.vercel.app/charters/partners",
+        "noindex": false,
+        "cache": "public, max-age=0, must-revalidate",
+        "nosniff": "nosniff",
+        "unsafeEval": false
+      },
+      {
+        "path": "/market",
+        "status": 200,
+        "canonical": "https://blue-marina.vercel.app/market",
+        "noindex": false,
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "nosniff": "nosniff",
+        "unsafeEval": false
+      },
+      {
+        "path": "/community",
+        "status": 200,
+        "canonical": "https://blue-marina.vercel.app/community",
+        "noindex": false,
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "nosniff": "nosniff",
+        "unsafeEval": false
+      },
+      {
+        "path": "/license-guide",
+        "status": 200,
+        "canonical": "https://blue-marina.vercel.app/license-guide",
+        "noindex": false,
+        "cache": "public, max-age=0, must-revalidate",
+        "nosniff": "nosniff",
+        "unsafeEval": false
+      },
+      {
+        "path": "/api/account",
+        "status": 401,
+        "canonical": null,
+        "noindex": false,
+        "cache": "private, no-store",
+        "nosniff": "nosniff",
+        "unsafeEval": false
+      },
+      {
+        "path": "/api/charters/supply/submissions",
+        "status": 401,
+        "canonical": null,
+        "noindex": false,
+        "cache": "no-store",
+        "nosniff": "nosniff",
+        "unsafeEval": false
+      },
+      {
+        "path": "/api/market/listings",
+        "status": 200,
+        "canonical": null,
+        "noindex": false,
+        "cache": "no-store",
+        "nosniff": "nosniff",
+        "unsafeEval": false
+      },
+      {
+        "path": "/api/community/posts",
+        "status": 200,
+        "canonical": null,
+        "noindex": false,
+        "cache": "private, no-store",
+        "nosniff": "nosniff",
+        "unsafeEval": false
+      },
+      {
+        "path": "/api/operations/health",
+        "status": 401,
+        "canonical": null,
+        "noindex": false,
+        "cache": "private, no-store",
+        "nosniff": "nosniff",
+        "unsafeEval": false
+      }
+    ],
+    "staticPages": 1467
+  },
+  "security": {
+    "newVendor": 0,
+    "dbMutation": 0,
+    "authRoleMutation": 0,
+    "featureFlagMutation": 0,
+    "publicQaContamination": 0,
+    "automaticPublication": 0,
+    "externalRedirect": 0,
+    "secretInArtifacts": 0,
+    "adsExecuted": 0,
+    "outreach": 0
+  },
+  "limitations": [
+    "Fresh Kakao authentication, authenticated owner submission and authenticated operations browser E2E were not replayed in this task. Local UI checked CTA-to-login paths; existing callback/ownership/moderation tests passed.",
+    "No landing/login/start event store exists. Those stages and conversion rates are UNKNOWN. Attribution is an allowlisted design contract only; no collection, persistence or transmission.",
+    "First actions are unique owners of retained saves/non-DRAFT submissions, not lifetime event analytics. Deleted saves cannot be reconstructed. Current public stock is not a publication event count or cohort rate.",
+    "Charter approval creates a candidate. Verified provider consent and a separate reviewed registry release are still required before public detail publication; no automated activation was added.",
+    "Legacy /fish guide IDs are not canonical IDs. No name inference; manually select a related species. Exact species context is supported by the existing 38-species Conditions catalog.",
+    "Operations reads are capped below 1000 rows per collection and use existing 60-second cache. Failed/capped reads and unknown owners yield UNKNOWN. Storage count may remain unavailable under existing schema exposure policy.",
+    "Physical GPS/PWA/gesture and paid advertising are outside this task."
+  ],
+  "nextPrimaryPriority": "CONTROLLED_REAL_ACQUISITION_EXPERIMENT",
+  "nextPriorityGate": "Finish a fresh Kakao-to-submission QA before spending; monitor retained Real submissions/reviews. Do not claim channel attribution or paid conversion rates.",
+  "git": {
+    "exactScope": true,
+    "unrelatedPreserved": true,
+    "stageAtCompletion": 0
+  }
+}

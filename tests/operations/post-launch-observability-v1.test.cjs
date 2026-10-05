@@ -55,7 +55,7 @@ test('runtime aggregation counts bounded errors and strips PII, query, ids, mess
 test('unknown routes are collapsed rather than leaking path fragments',()=>{assert.equal(m.routeTemplate('/account/auth/callback?code=secret'),'/account/auth/callback');assert.equal(m.routeTemplate('/hidden/person@email.test'),'OTHER');});
 test('data integrity reference values are explicit, timestamped and not per-request scans',()=>{assert.equal(m.DATA_REFERENCE.fishingSpots,1405);assert.equal(m.DATA_REFERENCE.fishSpecies,1258);assert.equal(m.DATA_REFERENCE.marineOrganisms,3016);assert.match(read('src/lib/operations/post-launch-summary.ts'),/AUDITED_REFERENCE_NOT_LIVE_SCAN/);});
 test('bounded DB reads contain no mutations and return aggregate-only auth',()=>{
-  const source=read('src/lib/operations/business-summary.ts');assert.match(source,/MAX_ROWS = 1000/);assert.match(source,/READ_TIMEOUT_MS = 5000/);assert.match(source,/data.length > MAX_ROWS/);assert.doesNotMatch(source,/\.insert\(|\.update\(|\.delete\(|\.upsert\(|\.rpc\(/);
+  const source=read('src/lib/operations/business-summary.ts');assert.match(source,/MAX_ROWS = 1000/);assert.match(source,/READ_TIMEOUT_MS = 5000/);assert.match(source,/data.length >= MAX_ROWS/);assert.doesNotMatch(source,/\.insert\(|\.update\(|\.delete\(|\.upsert\(|\.rpc\(/);
   assert.match(source,/blue_marina_qa|isQaIdentity/);assert.doesNotMatch(source,/user\.email|user\.user_metadata/);
 });
 test('private endpoint verifies actor before any read and sends no-store/noindex',()=>{const api=read('src/app/api/operations/health/route.ts');assert.ok(api.indexOf('await authorizeOperationsToken')<api.indexOf('await getOperationsSnapshot'));assert.match(api,/private, no-store/);assert.match(api,/noindex, nofollow/);});

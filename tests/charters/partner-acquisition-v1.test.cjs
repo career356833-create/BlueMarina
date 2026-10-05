@@ -66,7 +66,7 @@ test("review checklist and publication gate require supplier evidence and admin 
 test("FAQ answers nine pilot questions without false promises or fake contact action", () => {
   const questions = ["등록 비용", "어떤 정보", "가격과 일정", "예약 링크", "상품 수정", "승인까지", "실시간 잔여석", "정보는 어떻게 검증", "삭제 요청"];
   for (const question of questions) assert.ok(landing.includes(question), question);
-  assert.match(landing, /운영 연락처는 아직 공개되지 않았습니다/);
+  assert.match(landing, /이 페이지에서는 문의를 전송하지 않습니다/);
   assert.doesNotMatch(landing, /mailto:|tel:|매출 증가를 보장|예약 증가를 보장/);
 });
 
