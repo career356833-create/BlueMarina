@@ -1,4 +1,5 @@
-export type OperationsSourceStatus = "AVAILABLE" | "STALE" | "DISABLED" | "ERROR" | "UNKNOWN";
+import type { PostLaunchSummary } from "./post-launch-summary";
+export type OperationsSourceStatus = "AVAILABLE" | "PARTIAL" | "TIMEOUT" | "STALE" | "DISABLED" | "ERROR" | "UNKNOWN";
 export type OperationsHealth = "HEALTHY" | "DEGRADED" | "DISABLED" | "ERROR" | "UNKNOWN";
 
 export type OperationsSource = {
@@ -28,6 +29,7 @@ export type OperationsService = {
 
 export type OperationsSnapshot = {
   checkedAt: string;
+  postLaunch: PostLaunchSummary;
   deployment: { sha: string | null; deployedAt: string | null; url: string | null; environment: string; appVersion: string; serviceWorkerVersion: string | null };
   featureFlags: Record<string, boolean>;
   services: OperationsService[];
@@ -41,8 +43,9 @@ export type OperationsSnapshot = {
 
 export function sourceHealth(status: OperationsSourceStatus): OperationsHealth {
   if (status === "AVAILABLE") return "HEALTHY";
-  if (status === "STALE") return "DEGRADED";
+  if (status === "STALE" || status === "PARTIAL") return "DEGRADED";
   if (status === "DISABLED") return "DISABLED";
+  if (status === "TIMEOUT") return "ERROR";
   return status;
 }
 

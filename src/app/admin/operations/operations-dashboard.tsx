@@ -1,16 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import { PostLaunchPanels } from "./post-launch-panels";
 import { createClient } from "@/lib/supabase/client";
 import { loadKakaoMaps } from "@/lib/sea/kakao-maps";
 import type { OperationsHealth, OperationsSnapshot, OperationsSourceStatus } from "@/lib/operations/model";
-import type { ModerationSnapshot } from "@/lib/operations/moderation";
 
 function Badge({ value }: { value: OperationsHealth | OperationsSourceStatus }) {
   const tone = value === "HEALTHY" || value === "AVAILABLE" ? "text-emerald-300 border-emerald-300/30"
     : value === "ERROR" ? "text-rose-300 border-rose-300/30"
-      : value === "STALE" || value === "DEGRADED" ? "text-amber-300 border-amber-300/30"
+      : value === "STALE" || value === "PARTIAL" || value === "TIMEOUT" || value === "DEGRADED" ? "text-amber-300 border-amber-300/30"
         : "text-slate-300 border-slate-300/30";
   return <span className={`rounded-full border px-2.5 py-1 text-xs font-semibold ${tone}`}>{value}</span>;
 }
@@ -24,7 +23,6 @@ export function OperationsDashboard() {
   const [message, setMessage] = useState("운영 상태를 불러오는 중입니다.");
   const [busy, setBusy] = useState(false);
   const [kakao, setKakao] = useState<OperationsSourceStatus>("UNKNOWN");
-  const [moderation, setModeration] = useState<ModerationSnapshot | null>(null);
 
   async function load() {
     setBusy(true);
@@ -37,11 +35,6 @@ export function OperationsDashboard() {
       if (!response.ok || !body.snapshot) { setSnapshot(null); setMessage(body.code ?? "운영 정보를 불러올 수 없습니다."); return; }
       setSnapshot(body.snapshot);
       setMessage("");
-      try {
-        const moderationResponse = await fetch("/api/operations/moderation", { headers: { Authorization: `Bearer ${token}` }, cache: "no-store" });
-        const moderationBody = await moderationResponse.json() as { snapshot?: ModerationSnapshot };
-        setModeration(moderationResponse.ok ? moderationBody.snapshot ?? null : null);
-      } catch { setModeration(null); }
     } catch { setSnapshot(null); setMessage("운영 정보를 불러올 수 없습니다."); }
     finally { setBusy(false); }
   }
@@ -64,12 +57,7 @@ export function OperationsDashboard() {
       </div>
       {message ? <p role="status" className="mt-6 rounded-xl border border-white/20 bg-white/5 p-4 text-sm">{message}</p> : null}
       {snapshot ? <>
-        <section aria-label="검토 대기" className="mt-8 rounded-xl border border-white/15 bg-[#0a1b2a] p-5">
-          <h2 className="font-serif text-2xl">관리자 검토 대기</h2>
-          <p className="mt-2 text-sm text-white/65">현재 DB 대기열입니다. QA 항목은 공개 KPI에 포함되지 않습니다.</p>
-          {moderation ? <div className="mt-4 grid gap-2 text-sm sm:grid-cols-4"><p>Charter {moderation.charter.available ? moderation.charter.count : "접근 불가"}</p><p>Market {moderation.market.available ? moderation.market.count : "접근 불가"}</p><p>Community {moderation.community.available ? moderation.community.count : "접근 불가"}</p><p>신고 {moderation.reports.available ? moderation.reports.count : "접근 불가"}</p></div> : <p className="mt-3 text-sm text-white/50">검토 건수를 확인할 수 없습니다.</p>}
-          <Link href="/admin/operations/moderation" className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-[#AEE8EF] underline">검토 화면 열기</Link>
-        </section>
+        <PostLaunchPanels summary={snapshot.postLaunch} />
         <section aria-label="배포 정보" className="mt-8 grid gap-3 rounded-xl border border-white/15 bg-[#0a1b2a] p-5 text-sm sm:grid-cols-2 lg:grid-cols-4">
           <div><p className="text-white/50">환경</p><p className="mt-1 font-semibold">{snapshot.deployment.environment}</p></div>
           <div><p className="text-white/50">SHA</p><p className="mt-1 break-all font-mono text-xs">{snapshot.deployment.sha ?? "확인 불가"}</p></div>

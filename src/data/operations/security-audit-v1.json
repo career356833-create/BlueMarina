@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-05T12:53:33.419Z",
+  "kind": "READ_ONLY_REMOTE_AUDIT",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "rlsTables": 16,
+  "rlsEnabled": 16,
+  "advisorError": 0,
+  "advisorWarn": 3,
+  "advisorInfo": 28,
+  "criticalHigh": null,
+  "severityLimitation": "Advisor returns ERROR/WARN/INFO, not CRITICAL/HIGH; no invented severity conversion. WARN: two legacy fish SECURITY DEFINER functions, leaked-password protection disabled.",
+  "privateBuckets": 4,
+  "publicBuckets": 0,
+  "marketStagingObjects": 1,
+  "dataIntegrity": { "fishingSpots": 1405, "fishSpecies": 1258, "marineOrganisms": 3016 }
+}

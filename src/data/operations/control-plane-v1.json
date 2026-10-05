@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "production": {
+    "checkedAt": "2026-10-05T12:57:18.618Z",
+    "deploymentId": "dpl_CuZQmovusLmpVGxt8Ya17NJN3bd5",
+    "state": "READY",
+    "deployedSha": "c06a699ccc078c51dd90e69942524fbcae2072d1",
+    "mainSha": "c06a699ccc078c51dd90e69942524fbcae2072d1",
+    "deployedAt": "2026-10-05T07:58:40.178Z",
+    "rollback": {
+      "url": "https://blue-marina-gs64vwew3-chiweon.vercel.app",
+      "sha": "c7f6003b670fb14ae79e3a8f90e68dd3f502a578",
+      "state": "READY"
+    }
+  },
+  "runtime": {
+    "checkedAt": "2026-10-05T12:57:18.618Z",
+    "window": "24h",
+    "scope": "BOUNDED_REQUEST_LOG_SAMPLE",
+    "sampleSize": 1,
+    "possiblyTruncated": false,
+    "errorCount": 0,
+    "http4xx": 0,
+    "http5xx": 0,
+    "http401": 0,
+    "http403": 0,
+    "topFailingRoute": null,
+    "lastErrorAt": null,
+    "successfulSessions": null,
+    "authFailures": null,
+    "callbackFailures": null,
+    "badOauthState": null
+  }
+}

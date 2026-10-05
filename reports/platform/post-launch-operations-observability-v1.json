@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "program": "BLUE_MARINA_POST_LAUNCH_OPERATIONS_OBSERVABILITY_V1",
+  "decision": "VERIFIED_LOCALLY_PRODUCTION_QA_PENDING",
+  "baseline": "c06a699ccc078c51dd90e69942524fbcae2072d1",
+  "readOnly": true,
+  "implementation": {
+    "existingHome": "/admin/operations",
+    "existingApi": "GET /api/operations/health",
+    "newMutationApi": 0,
+    "cacheSeconds": 60,
+    "maxRowsPerTable": 1000,
+    "requestTimeoutMs": 5000,
+    "businessReadConcurrency": 3,
+    "publicProbeConcurrency": 4,
+    "externalProvidersPerRefresh": "existing bounded RISA read only; no new provider fan-out",
+    "sourceCards": 11
+  },
+  "businessReadOnlySample": {
+    "generatedAt": "2026-10-05T13:14:04.585Z",
+    "readLimit": 1000,
+    "failures": [],
+    "auth": {
+      "state": "AVAILABLE",
+      "users": 21,
+      "qa": 18,
+      "real": 3,
+      "activeQA": 1,
+      "bannedQA": 17,
+      "activeAdmins": 1,
+      "activeQAAdmins": 1
+    },
+    "charter": {
+      "state": "AVAILABLE",
+      "states": {
+        "APPROVED": {
+          "total": 2,
+          "qa": 2,
+          "real": 0,
+          "unclassified": 0
+        },
+        "REVIEW_REQUIRED": {
+          "total": 1,
+          "qa": 1,
+          "real": 0,
+          "unclassified": 0
+        }
+      },
+      "pending": {
+        "total": 1,
+        "qa": 1,
+        "real": 0,
+        "unclassified": 0
+      },
+      "public": {
+        "total": 0,
+        "qa": 0,
+        "real": 0,
+        "unclassified": 0
+      },
+      "oldestPendingAt": "2026-09-29T13:13:29.6+00:00",
+      "oldestPendingHours": 144,
+      "latestSubmissionAt": "2026-10-03T10:09:56.466+00:00",
+      "oldestRealPendingHours": null
+    },
+    "market": {
+      "state": "AVAILABLE",
+      "states": {
+        "HIDDEN": {
+          "total": 2,
+          "qa": 2,
+          "real": 0,
+          "unclassified": 0
+        },
+        "SUBMITTED": {
+          "total": 1,
+          "qa": 1,
+          "real": 0,
+          "unclassified": 0
+        }
+      },
+      "pending": {
+        "total": 1,
+        "qa": 1,
+        "real": 0,
+        "unclassified": 0
+      },
+      "public": {
+        "total": 0,
+        "qa": 0,
+        "real": 0,
+        "unclassified": 0
+      },
+      "oldestPendingAt": "2026-09-29T14:07:37.607+00:00",
+      "oldestPendingHours": 143.1,
+      "latestSubmissionAt": "2026-10-03T10:10:03.018+00:00",
+      "oldestRealPendingHours": null
+    },
+    "community": {
+      "state": "AVAILABLE",
+      "states": {
+        "HIDDEN": {
+          "total": 2,
+          "qa": 2,
+          "real": 0,
+          "unclassified": 0
+        },
+        "REJECTED": {
+          "total": 5,
+          "qa": 5,
+          "real": 0,
+          "unclassified": 0
+        }
+      },
+      "pending": {
+        "total": 0,
+        "qa": 0,
+        "real": 0,
+        "unclassified": 0
+      },
+      "public": {
+        "total": 0,
+        "qa": 0,
+        "real": 0,
+        "unclassified": 0
+      },
+      "oldestPendingAt": null,
+      "oldestPendingHours": null,
+      "latestSubmissionAt": "2026-10-04T03:15:58.355486+00:00",
+      "oldestRealPendingHours": null
+    },
+    "reports": {
+      "state": "AVAILABLE",
+      "states": {
+        "REVIEWED": {
+          "total": 2,
+          "qa": 2,
+          "real": 0,
+          "unclassified": 0
+        }
+      },
+      "pending": {
+        "total": 0,
+        "qa": 0,
+        "real": 0,
+        "unclassified": 0
+      },
+      "public": {
+        "total": 0,
+        "qa": 0,
+        "real": 0,
+        "unclassified": 0
+      },
+      "oldestPendingAt": null,
+      "oldestPendingHours": null,
+      "latestSubmissionAt": "2026-10-03T10:09:50.70493+00:00",
+      "oldestRealPendingHours": null
+    },
+    "comments": {
+      "total": 1,
+      "qa": 1,
+      "real": 0,
+      "unclassified": 0
+    },
+    "reactions": {
+      "total": 1,
+      "qa": 1,
+      "real": 0,
+      "unclassified": 0
+    },
+    "storage": {
+      "state": "AVAILABLE",
+      "privateBuckets": 4,
+      "publicBuckets": 0,
+      "marketStagingObjects": null
+    },
+    "limitation": "Bounded reads (1000 per table); incomplete tables are UNKNOWN. QA uses trusted identity metadata and explicit record markers. Unclassified owners never become Real KPI. Storage objects can be UNKNOWN when the storage schema is not exposed. Read-only, 60-second per-instance cache."
+  },
+  "qaClassification": {
+    "trustedMetadata": "app_metadata.blue_marina_qa === true",
+    "markers": [
+      "[QA]",
+      "QA word",
+      "BLUE_MARINA_MARKET_E2E_TEST",
+      "blue-marina-e2e-test"
+    ],
+    "unclassifiedOwner": "UNKNOWN real count; never silently real"
+  },
+  "controlPlane": {
+    "schemaVersion": 1,
+    "production": {
+      "checkedAt": "2026-10-05T12:57:18.618Z",
+      "deploymentId": "dpl_CuZQmovusLmpVGxt8Ya17NJN3bd5",
+      "state": "READY",
+      "deployedSha": "c06a699ccc078c51dd90e69942524fbcae2072d1",
+      "mainSha": "c06a699ccc078c51dd90e69942524fbcae2072d1",
+      "deployedAt": "2026-10-05T07:58:40.178Z",
+      "rollback": {
+        "url": "https://blue-marina-gs64vwew3-chiweon.vercel.app",
+        "sha": "c7f6003b670fb14ae79e3a8f90e68dd3f502a578",
+        "state": "READY"
+      }
+    },
+    "runtime": {
+      "checkedAt": "2026-10-05T12:57:18.618Z",
+      "window": "24h",
+      "scope": "BOUNDED_REQUEST_LOG_SAMPLE",
+      "sampleSize": 1,
+      "possiblyTruncated": false,
+      "errorCount": 0,
+      "http4xx": 0,
+      "http5xx": 0,
+      "http401": 0,
+      "http403": 0,
+      "topFailingRoute": null,
+      "lastErrorAt": null,
+      "successfulSessions": null,
+      "authFailures": null,
+      "callbackFailures": null,
+      "badOauthState": null
+    }
+  },
+  "securityAudit": {
+    "checkedAt": "2026-10-05T12:53:33.419Z",
+    "kind": "READ_ONLY_REMOTE_AUDIT",
+    "projectRef": "mlfvpaikfpjrgrhwlrjn",
+    "rlsTables": 16,
+    "rlsEnabled": 16,
+    "advisorError": 0,
+    "advisorWarn": 3,
+    "advisorInfo": 28,
+    "criticalHigh": null,
+    "severityLimitation": "Advisor returns ERROR/WARN/INFO, not CRITICAL/HIGH; no invented severity conversion. WARN: two legacy fish SECURITY DEFINER functions, leaked-password protection disabled.",
+    "privateBuckets": 4,
+    "publicBuckets": 0,
+    "marketStagingObjects": 1,
+    "dataIntegrity": {
+      "fishingSpots": 1405,
+      "fishSpecies": 1258,
+      "marineOrganisms": 3016
+    }
+  },
+  "verification": {
+    "operationsTargeted": {
+      "pass": 31,
+      "fail": 0
+    },
+    "newTests": 15,
+    "cleanFull": {
+      "pass": 1275,
+      "skip": 1,
+      "fail": 0
+    },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "diff": "PASS",
+    "localBrowser": {
+      "desktop": "1280x900 PASS",
+      "mobile": "390x844 PASS",
+      "horizontalOverflow": 0,
+      "queueLinkHeightPx": 44
+    },
+    "production": "PENDING_AFTER_GIT_DEPLOY"
+  },
+  "qaIdentity": {
+    "temporaryCreated": 1,
+    "scope": "operations_admin only",
+    "roleRevocation": "PENDING_AFTER_PRODUCTION_QA"
+  },
+  "mutations": {
+    "businessRows": 0,
+    "schema": 0,
+    "featureFlags": 0,
+    "vercelSettings": 0,
+    "automaticAlerts": 0,
+    "newAnalyticsVendor": 0
+  },
+  "limitations": [
+    "Deployment READY/rollback and runtime logs are manually collected timestamped evidence; new runtime deployments do not inherit READY.",
+    "No Auth event stream: sessions/auth/callback/bad_oauth_state counts remain UNKNOWN.",
+    "Runtime request-log sample is not total traffic or an error-rate denominator.",
+    "Storage SQL schema is not exposed: live object count UNKNOWN; audit count 1 is labeled with timestamp.",
+    "MapLibre canvas and station/grid-specific sources are UNKNOWN unless actually observed.",
+    "Data integrity and RLS/advisor counts are timestamped audits, not live scans.",
+    "Real-device GPS/PWA remains unverified."
+  ],
+  "nextPrimaryPriority": "SUPPLY_CONTENT_ACQUISITION"
+}

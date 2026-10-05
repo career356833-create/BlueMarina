@@ -1,3 +1,4 @@
+import { collectPostLaunchSummary } from "./post-launch-summary";
 import "server-only";
 
 import { readFile } from "node:fs/promises";
@@ -12,6 +13,7 @@ import { probePublicRoute, productionProbeOrigin } from "./public-route-probe";
 const SNAPSHOT_MS = 60_000;
 const PAGE_TIMEOUT_MS = 4_000;
 const SERVICE_PATHS = [
+  ["Fish", "/fish"], ["Charter", "/charters"], ["Market", "/market"], ["Community", "/community"], ["Login", "/account/login"],
   ["Home", "/"], ["Sea", "/sea"], ["Navigation", "/sea/navigation"],
   ["Fishing Spots", "/fishing-spots"], ["Conditions", "/fishing-spots/conditions"], ["Today Sea", "/today-sea"],
 ] as const;
@@ -23,6 +25,7 @@ const FLAGS = {
   KHOA_NAV_WARNING: "KHOA_NAVIGATION_WARNING_ENABLED",
   CHARTER_BACKEND: "CHARTER_SUPPLY_INTAKE_ENABLED",
   MARKET_BACKEND: "MARKET_BACKEND_ENABLED",
+  COMMUNITY_BACKEND: "COMMUNITY_BACKEND_ENABLED",
   ACCOUNT_BACKEND: "ACCOUNT_BACKEND_ENABLED",
   IMAGE_UPLOAD: "MARKET_IMAGE_UPLOAD_ENABLED",
 } as const;
@@ -75,7 +78,7 @@ async function checkRisa(checkedAt: string): Promise<OperationsSource> {
     };
   } catch (error) {
     const code = error instanceof NifsRealtimeFishingSourceError ? error.code : "UPSTREAM_ERROR";
-    return { id: "RISA", status: code === "SOURCE_DISABLED" ? "DISABLED" : "ERROR", lastCheckedAt: new Date().toISOString(), sourceTimestamp: null, fetchedAt: null,
+    return { id: "RISA", status: code === "SOURCE_DISABLED" ? "DISABLED" : code === "UPSTREAM_TIMEOUT" ? "TIMEOUT" : "ERROR", lastCheckedAt: new Date().toISOString(), sourceTimestamp: null, fetchedAt: null,
       latencyMs: Date.now() - started, recordCount: null, httpStatus: code === "UPSTREAM_TIMEOUT" ? 504 : code === "SOURCE_DISABLED" || code === "API_KEY_MISSING" ? 503 : 502,
       limitation: `${code}; other source cards remain independent.`,
     };
@@ -114,11 +117,18 @@ async function serviceWorkerVersion(): Promise<string | null> {
 async function collectSnapshot(origin: string | null): Promise<OperationsSnapshot> {
   const checkedAt = new Date().toISOString();
   const featureFlags = Object.fromEntries(Object.entries(FLAGS).map(([label, name]) => [label, process.env[name] === "true"]));
-  const [serviceResults, risaResult, swResult, conditionApi] = await Promise.all([
-    Promise.allSettled(SERVICE_PATHS.map(([id, routePath]) => checkService(origin, id, routePath))),
+  const [serviceResults, risaResult, swResult, conditionApi, postLaunch] = await Promise.all([
+    (async () => {
+      const results: PromiseSettledResult<OperationsService>[] = [];
+      for (let index = 0; index < SERVICE_PATHS.length; index += 4) {
+        results.push(...await Promise.allSettled(SERVICE_PATHS.slice(index, index + 4).map(([id, routePath]) => checkService(origin, id, routePath))));
+      }
+      return results;
+    })(),
     checkRisa(checkedAt),
     serviceWorkerVersion(),
     checkStaticConditionApi(origin),
+    collectPostLaunchSummary(),
   ]);
   const services = serviceResults.map((result, index): OperationsService => result.status === "fulfilled" ? result.value : {
     id: SERVICE_PATHS[index][0], path: SERVICE_PATHS[index][1], status: "ERROR", lastCheckedAt: checkedAt, latencyMs: null, httpStatus: null, limitation: "Route check failed independently.",
@@ -135,11 +145,20 @@ async function collectSnapshot(origin: string | null): Promise<OperationsSnapsho
     process.env.KHOA_API_KEY ? unknown("KHOA tide", checkedAt, "No explicit station/date; prediction datum and source timezone remain undocumented.") : disabled("KHOA tide", checkedAt, "Tide key is absent; source remains off."),
     featureFlags.KHOA_NAV_WARNING ? unknown("KHOA navigation warning", checkedAt, "Lifecycle is UNKNOWN; automatic current/expired inference prohibited.") : disabled("KHOA navigation warning", checkedAt, "Navigation-warning flag is off; lifecycle remains UNKNOWN."),
   ];
+  sources.push({ ...unknown("Navigation aids snapshot", checkedAt, postLaunch.navigation.limitation),
+    status: postLaunch.navigation.aidsState === "AVAILABLE" ? "AVAILABLE" : postLaunch.navigation.aidsState === "PARTIAL" ? "PARTIAL" : postLaunch.navigation.aidsState === "STALE" ? "STALE" : "UNKNOWN",
+    recordCount: postLaunch.navigation.records, fetchedAt: postLaunch.navigation.lastSuccessAt });
+  sources.push(unknown("ROMS", checkedAt, "No selected grid/time; no live provider fan-out. API key or prior 5/5 audit cannot prove current model availability."));
+  const warningIndex = sources.findIndex(item => item.id === "KHOA navigation warning");
+  if (featureFlags.KHOA_NAV_WARNING) sources[warningIndex] = { ...sources[warningIndex],
+    status: postLaunch.navigation.warningState === "CURRENT_STATUS_UNAVAILABLE" ? "STALE" : postLaunch.navigation.warningState === "PARTIAL" ? "PARTIAL" : "AVAILABLE",
+    recordCount: postLaunch.navigation.currentWarnings, fetchedAt: postLaunch.navigation.warningLastSuccessAt,
+    limitation: postLaunch.navigation.limitation };
   const source = (id: string) => sources.find((item) => item.id === id)!;
   const conditionsPage = services.find((item) => item.id === "Conditions")!;
   const todaySeaPage = services.find((item) => item.id === "Today Sea")!;
   return {
-    checkedAt,
+    checkedAt, postLaunch,
     deployment: { sha: process.env.VERCEL_GIT_COMMIT_SHA ?? null, deployedAt: process.env.VERCEL_DEPLOYMENT_CREATED_AT ?? null,
       url: process.env.VERCEL_ENV === "production" ? process.env.NEXT_PUBLIC_SITE_URL ?? origin : origin,
       environment: process.env.VERCEL_ENV ?? "local", appVersion: process.env.npm_package_version ?? "0.1.0", serviceWorkerVersion: swResult },
@@ -154,7 +173,7 @@ async function collectSnapshot(origin: string | null): Promise<OperationsSnapsho
       + (conditionApi.status !== null && conditionApi.status >= 500 ? 1 : 0),
     releaseEvidence: { decision: releaseEvidence.decision, checkedAt: releaseEvidence.checkedAt, kind: "HISTORICAL_AUDIT" },
     limitations: ["Current 5xx is a bounded sample, not historical rate or SLA.", "Per-instance 60-second snapshot cache; no cross-instance deduplication or long-term history.",
-      "Real-device GPS/PWA QA remains blocked.", "RISA source timestamp timezone and provider quotas are undocumented.", "FEMO is held as reference-only; KMA Production sources are disabled.",
+      "Real-device GPS/PWA QA remains blocked.", "RISA source timestamp timezone and provider quotas are undocumented.", "FEMO is held as reference-only; unprobed sources remain UNKNOWN when enabled.",
       "Kakao SDK and MapLibre canvas need authenticated browser checks; route HTTP 200 alone does not prove rendering."],
   };
 }
