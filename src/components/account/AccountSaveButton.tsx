@@ -14,16 +14,17 @@ export function AccountSaveButton(props: Props) {
   useEffect(() => {
     const client = createClient();
     if (!client) { setState("unavailable"); return; }
-    client.auth.getSession().then(({ data }) => setState(data.session ? "idle" : "auth"));
+    client.auth.getUser().then(({ data, error }) => setState(data.user && !error ? "idle" : "auth")).catch(() => setState("auth"));
   }, []);
 
   async function save() {
     const client = createClient();
     if (!client) { setState("unavailable"); return; }
-    const { data } = await client.auth.getSession();
-    if (!data.session) { setState("auth"); window.location.assign(`/account/login?returnTo=${encodeURIComponent(safeAuthReturnTo(props.href))}`); return; }
-    setState("saving");
     try {
+      const user = await client.auth.getUser();
+      const { data } = await client.auth.getSession();
+      if (user.error || !user.data.user || !data.session) { setState("auth"); window.location.assign(`/account/login?returnTo=${encodeURIComponent(safeAuthReturnTo(props.href))}`); return; }
+      setState("saving");
       const response = await fetch("/api/account", { method: "POST", headers: { "content-type": "application/json", authorization: `Bearer ${data.session.access_token}` }, body: JSON.stringify(props) });
       setState(response.ok ? "saved" : response.status === 401 ? "auth" : "unavailable");
     } catch { setState("unavailable"); }

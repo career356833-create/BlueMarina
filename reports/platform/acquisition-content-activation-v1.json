@@ -70,7 +70,8 @@
     "returnTo": "INTERNAL_ALLOWLIST_AND_EXACT_CONTEXT",
     "freshOAuthE2E": "NOT_REPLAYED",
     "localUnauthenticatedCta": "PASS",
-    "savedBehavior": "LOGIN_RETURN_TO_ORIGINAL_THEN_USER_SAVES; NO_AUTOMATIC_WRITE"
+    "savedBehavior": "LOGIN_RETURN_TO_ORIGINAL_THEN_USER_SAVES; NO_AUTOMATIC_WRITE",
+    "sessionGate": "AUTH_GET_USER_REQUIRED; CACHED_SESSION_ALONE_NOT_TRUSTED"
   },
   "attribution": {
     "state": "DESIGN_ONLY_NOT_COLLECTED",
@@ -146,11 +147,11 @@
   },
   "verification": {
     "targeted": {
-      "pass": 15,
+      "pass": 16,
       "fail": 0
     },
     "cleanFull": {
-      "pass": 1293,
+      "pass": 1294,
       "skip": 1,
       "fail": 0
     },
@@ -296,7 +297,16 @@
         "unsafeEval": false
       }
     ],
-    "staticPages": 1467
+    "staticPages": 1467,
+    "initialProductionDeployment": {
+      "id": "dpl_ppd3unJeHBWaD3zWkH5FtFNcKDYV",
+      "sha": "b325f5c5db039eab10dd298df763cca98d01c457",
+      "status": "READY",
+      "newMarketEmptyCta": "OBSERVED",
+      "charterCtaToLogin": "PASS",
+      "kakaoButton": "ENABLED",
+      "followup": "Authoritative getUser check added to prevent cached sessions deciding participation routes; authenticated writes not replayed."
+    }
   },
   "security": {
     "newVendor": 0,

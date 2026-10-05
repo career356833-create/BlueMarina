@@ -13,7 +13,9 @@ export function ParticipationLink({ href, children, className }: { href: string;
   return <Link href={login} className={className} aria-busy={pending} onClick={async event => {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault(); if (pending) return; setPending(true);
-    try { const session = await createClient()?.auth.getSession(); router.push(session?.data.session ? target : login); }
+    // A cached session can survive expiry, revocation or QA account suspension.
+    // Validate with Auth before skipping the login entry.
+    try { const result = await createClient()?.auth.getUser(); router.push(result?.data.user && !result.error ? target : login); }
     catch { router.push(login); }
     finally { setPending(false); }
   }}>{children}</Link>;

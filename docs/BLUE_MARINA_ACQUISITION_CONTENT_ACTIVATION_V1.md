@@ -24,7 +24,7 @@
 - 업체: Charter/Partners → 로그인 → 기존 onboarding → 기존 검토 이력/owner 상태. 전화·공식 예약 링크를 제출하며 자동 게시는 없다.
 - 판매자: Market → 로그인 → 기존 판매글 작성 → 검토 → ACTIVE일 때 공개 상세. 빈 목록에는 첫 판매글 등록을 제공한다.
 - Home 영상/레이아웃/primary 6·secondary 2 유지. 설명 문구만 최소 변경했다.
-- ParticipationLink는 세션 유무에 따라 보호 목적지 또는 login?returnTo로 이동한다. JS가 없으면 로그인 링크가 남는다.
+- ParticipationLink는 Auth getUser로 사용자 유효성을 확인한 뒤 보호 목적지 또는 login?returnTo로 이동한다. JS가 없으면 로그인 링크가 남는다. 만료·취소·QA 계정 정지 후 남은 캐시 세션만으로 작성 화면으로 보내지 않는다. 검증된 사용자/만료/네트워크 오류 분기를 runtime test로 확인했다.
 - Saved 비로그인 버튼이 안내 문구만 바꾸던 동작을 실제 로그인 이동으로 고쳤다. 원본 복귀 후 사용자가 다시 저장해야 한다. 자동 저장하지 않는다.
 - Account에는 포인트 저장·Community·Market 다음 행동을 추가했다. 기존 Saved 원본 링크의 entity ID 검증을 유지했다.
 - Spot의 exact ID, Conditions의 기존 canonical ID만 Community로 전달한다. destination의 기존 catalog에서 재검증하며 배열/알 수 없는 ID는 무시한다. legacy /fish 이름을 canonical로 추론하지 않는다.
@@ -53,7 +53,7 @@ UTM source/medium/campaign은 작은 고정 allowlist, referrer는 알려진 hos
 
 별도 git archive(main)+정확한 26개 코드/테스트 파일 복사본으로 검증했다. 기존 dirty worktree의 파일은 포함하지 않았다. 문서 3개를 더해 최종 commit scope 29개다.
 
-- targeted 15 PASS; clean full 1,293 PASS / 1 SKIP. typecheck/lint/build/diff 모두 PASS; static pages 1,467.
+- targeted 16 PASS; clean full 1,294 PASS / 1 SKIP. typecheck/lint/build/diff 모두 PASS; static pages 1,467.
 - 390×844/1280×900: 9개 진입면, 포인트 상세/글쓰기 문맥, 보호 CTA, 가로 overflow 0. Charter/Market/Community CTA 클릭 후 정확한 returnTo를 관측했다.
 - 로컬 clean build에는 Production auth env를 넣지 않았다. 카카오 버튼의 준비 중 표시는 이 로컬 환경의 제한이다. 새 OAuth 완료/로그인 후 작성·관리자 화면을 이번 턴의 실검증 PASS로 기록하지 않는다.
 - Production baseline 9개 공개 경로 HTTP 200, production canonical 일치. Account/Charter private/Operations API 무인증 401. Market/Community 공개 GET은 정상 200이며 private 접근 PASS로 오인하지 않는다. CSP unsafe-eval 차단 유지.

@@ -78,7 +78,8 @@ test('login return preserves exact creation and saved content routes without ext
 });
 test('participation and saved CTA require session and retain safe internal return',()=>{
   const link=read('src/components/account/ParticipationLink.tsx'),save=read('src/components/account/AccountSaveButton.tsx');
-  assert.match(link,/safeAuthReturnTo\(href\)/);assert.match(link,/auth\.getSession/);assert.match(link,/session\?\.data\.session \? target : login/);
+  assert.match(link,/safeAuthReturnTo\(href\)/);assert.match(link,/auth\.getUser/);assert.match(link,/result\?\.data\.user && !result.error \? target : login/);
+  assert.doesNotMatch(link,/auth\.getSession/);assert.match(save,/user.error \|\| !user.data.user \|\| !data.session/);
   assert.match(save,/window\.location\.assign/);assert.match(save,/safeAuthReturnTo\(props.href\)/);
   for(const file of ['src/app/market/page.tsx','src/app/community/page.tsx','src/app/charters/partners/page.tsx']) assert.match(read(file),/ParticipationLink/);
 });
@@ -114,4 +115,26 @@ test('server adapter reconciles saved, submissions and POST review facts without
 test('server cap cannot present a truncated table as a complete real funnel',async()=>{
   const data=await businessReader({user_saved_items:Array.from({length:1000},(_,i)=>({id:String(i),user_id:'real'}))})();
   assert.equal(data.acquisition.firstSaved,null);assert.equal(data.acquisition.firstActions,null);assert.ok(data.failures.includes('user_saved_items'));
+});
+
+test('CTA runtime validates Auth: revoked sessions go to login, verified users keep exact context',async()=>{
+  async function click(result) {
+    const exports={},destinations=[];
+    const client={auth:{getUser:async()=>{if(result instanceof Error)throw result;return result},getSession:()=>{throw Error('cached session must not decide routing')}}};
+    vm.runInNewContext(ts.transpileModule(read('src/components/account/ParticipationLink.tsx'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText,{exports,require:name=>{
+      if(name==='react/jsx-runtime')return{jsx:(type,props)=>({type,props})};
+      if(name==='react')return{useState:()=>[false,()=>{}]};
+      if(name==='next/navigation')return{useRouter:()=>({push:href=>destinations.push(href)})};
+      if(name==='next/link')return{default:()=>null};
+      if(name.includes('supabase/client'))return{createClient:()=>client};
+      if(name.includes('auth-return'))return{safeAuthReturnTo};
+      throw Error(name);
+    }});
+    const element=exports.ParticipationLink({href:'/community/new?spotId=rock-151',children:'Write'});
+    await element.props.onClick({preventDefault(){}});return destinations[0];
+  }
+  assert.equal(await click({data:{user:{id:'fixture'}},error:null}),'/community/new?spotId=rock-151');
+  const login='/account/login?returnTo=%2Fcommunity%2Fnew%3FspotId%3Drock-151';
+  assert.equal(await click({data:{user:null},error:{code:'session_expired'}}),login);
+  assert.equal(await click(new Error('unavailable')),login);
 });
