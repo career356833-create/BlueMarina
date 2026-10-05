@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "program": "BLUE_MARINA_POST_LAUNCH_OPERATIONS_OBSERVABILITY_V1",
-  "decision": "VERIFIED_LOCALLY_PRODUCTION_QA_PENDING",
+  "decision": "POST_LAUNCH_OPERATIONS_OBSERVABILITY_READY_WITH_LIMITATIONS",
   "baseline": "c06a699ccc078c51dd90e69942524fbcae2072d1",
   "readOnly": true,
   "implementation": {
@@ -17,7 +17,7 @@
     "sourceCards": 11
   },
   "businessReadOnlySample": {
-    "generatedAt": "2026-10-05T13:14:04.585Z",
+    "generatedAt": "2026-10-05T13:34:33.799Z",
     "readLimit": 1000,
     "failures": [],
     "auth": {
@@ -59,7 +59,7 @@
         "unclassified": 0
       },
       "oldestPendingAt": "2026-09-29T13:13:29.6+00:00",
-      "oldestPendingHours": 144,
+      "oldestPendingHours": 144.4,
       "latestSubmissionAt": "2026-10-03T10:09:56.466+00:00",
       "oldestRealPendingHours": null
     },
@@ -92,7 +92,7 @@
         "unclassified": 0
       },
       "oldestPendingAt": "2026-09-29T14:07:37.607+00:00",
-      "oldestPendingHours": 143.1,
+      "oldestPendingHours": 143.4,
       "latestSubmissionAt": "2026-10-03T10:10:03.018+00:00",
       "oldestRealPendingHours": null
     },
@@ -242,12 +242,12 @@
   },
   "verification": {
     "operationsTargeted": {
-      "pass": 31,
+      "pass": 34,
       "fail": 0
     },
-    "newTests": 15,
+    "newTests": 18,
     "cleanFull": {
-      "pass": 1275,
+      "pass": 1278,
       "skip": 1,
       "fail": 0
     },
@@ -261,12 +261,42 @@
       "horizontalOverflow": 0,
       "queueLinkHeightPx": 44
     },
-    "production": "PENDING_AFTER_GIT_DEPLOY"
+    "production": {
+      "state": "PASS_WITH_LIMITATIONS",
+      "desktop": "1280x900 PASS",
+      "mobile": "390x844 PASS",
+      "horizontalOverflow": 0,
+      "queueLinkHeightPx": 44,
+      "existingModerationLink": "PASS",
+      "operationsOnlyMutationControls": 0
+    },
+    "cleanScope": {
+      "baseline": "c06a699ccc078c51dd90e69942524fbcae2072d1",
+      "exactFiles": 15,
+      "unrelatedExcluded": true
+    },
+    "roleIsolation": {
+      "operationsAdmin": "PRODUCTION_PASS",
+      "anonymous": "PRODUCTION_401_API_404_PAGE",
+      "normalUser": "PRODUCTION_403_AFTER_ROLE_REMOVAL",
+      "domainAdmins": "AUTOMATED_TEST_PASS_NO_REMOTE_ROLE_GRANTED"
+    }
   },
   "qaIdentity": {
     "temporaryCreated": 1,
     "scope": "operations_admin only",
-    "roleRevocation": "PENDING_AFTER_PRODUCTION_QA"
+    "roleRevocation": "COMPLETE",
+    "cleanup": {
+      "checkedAt": "2026-10-05T13:36:11.556Z",
+      "temporaryIdentityCount": 1,
+      "operationsRoleRevoked": true,
+      "normalUserDenied": 403,
+      "globalSessionRevoked": true,
+      "temporaryIdentityBanned": true,
+      "postCleanupDenied": 401,
+      "businessRowsWritten": 0
+    },
+    "retained": "One banned QA identity and its auto-created profile; no existing identity deleted."
   },
   "mutations": {
     "businessRows": 0,
@@ -277,7 +307,7 @@
     "newAnalyticsVendor": 0
   },
   "limitations": [
-    "Deployment READY/rollback and runtime logs are manually collected timestamped evidence; new runtime deployments do not inherit READY.",
+    "Current Production READY requires live public GitHub/Vercel Production SHA and exact deployment URL match; lookup failure/rate limit is UNKNOWN. Rollback and runtime logs remain manually collected timestamped evidence.",
     "No Auth event stream: sessions/auth/callback/bad_oauth_state counts remain UNKNOWN.",
     "Runtime request-log sample is not total traffic or an error-rate denominator.",
     "Storage SQL schema is not exposed: live object count UNKNOWN; audit count 1 is labeled with timestamp.",
@@ -285,5 +315,185 @@
     "Data integrity and RLS/advisor counts are timestamped audits, not live scans.",
     "Real-device GPS/PWA remains unverified."
   ],
-  "nextPrimaryPriority": "SUPPLY_CONTENT_ACQUISITION"
+  "nextPrimaryPriority": "SUPPLY_CONTENT_ACQUISITION",
+  "completedAt": "2026-10-05T13:38:13.127Z",
+  "businessReadOnlySamplePhase": "DURING_AUTHORIZED_TEMPORARY_QA",
+  "productionVerification": {
+    "checkedAt": "2026-10-05T13:34:37.299Z",
+    "implementationSha": "634686624cbd2c44e375cdc4338b879595c2772b",
+    "deploymentId": "dpl_54APVJG3gwKD9Phsbpiwas95fNqN",
+    "state": "READY",
+    "mainMatch": true,
+    "evidence": "GITHUB_VERCEL_PRODUCTION_SHA_AND_URL_MATCH",
+    "anonymousApi": 401,
+    "anonymousHome": 404,
+    "privilegedApi": 200,
+    "cacheControl": "private, no-store",
+    "robots": "noindex, nofollow",
+    "latencyMs": 4335,
+    "noCredentialOrIdentityExposure": true,
+    "services": [
+      {
+        "id": "Fish",
+        "status": "HEALTHY",
+        "httpStatus": 200
+      },
+      {
+        "id": "Charter",
+        "status": "HEALTHY",
+        "httpStatus": 200
+      },
+      {
+        "id": "Market",
+        "status": "HEALTHY",
+        "httpStatus": 200
+      },
+      {
+        "id": "Community",
+        "status": "HEALTHY",
+        "httpStatus": 200
+      },
+      {
+        "id": "Login",
+        "status": "HEALTHY",
+        "httpStatus": 200
+      },
+      {
+        "id": "Home",
+        "status": "HEALTHY",
+        "httpStatus": 200
+      },
+      {
+        "id": "Sea",
+        "status": "HEALTHY",
+        "httpStatus": 200
+      },
+      {
+        "id": "Navigation",
+        "status": "HEALTHY",
+        "httpStatus": 200
+      },
+      {
+        "id": "Fishing Spots",
+        "status": "HEALTHY",
+        "httpStatus": 200
+      },
+      {
+        "id": "Conditions",
+        "status": "HEALTHY",
+        "httpStatus": 200
+      },
+      {
+        "id": "Today Sea",
+        "status": "HEALTHY",
+        "httpStatus": 200
+      }
+    ],
+    "sources": [
+      {
+        "id": "Kakao Maps",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "MapLibre/base map",
+        "status": "UNKNOWN"
+      },
+      {
+        "id": "RISA",
+        "status": "AVAILABLE"
+      },
+      {
+        "id": "FEMO",
+        "status": "DISABLED"
+      },
+      {
+        "id": "KMA observation",
+        "status": "DISABLED"
+      },
+      {
+        "id": "KMA warning",
+        "status": "DISABLED"
+      },
+      {
+        "id": "KMA forecast",
+        "status": "DISABLED"
+      },
+      {
+        "id": "KHOA tide",
+        "status": "DISABLED"
+      },
+      {
+        "id": "KHOA navigation warning",
+        "status": "DISABLED"
+      },
+      {
+        "id": "Navigation aids snapshot",
+        "status": "PARTIAL"
+      },
+      {
+        "id": "ROMS",
+        "status": "UNKNOWN"
+      }
+    ],
+    "kakaoBrowser": "AVAILABLE",
+    "navigation": {
+      "aidsState": "PARTIAL",
+      "validCategories": 0,
+      "storedValidatedCategories": 4,
+      "totalCategories": 9,
+      "records": 201,
+      "lastSuccessAt": "2026-09-29T09:51:52.118Z",
+      "ageHours": 147.7,
+      "warningState": "CURRENT_STATUS_UNAVAILABLE",
+      "warningLastSuccessAt": "2026-09-29T09:53:09.386Z",
+      "warningAgeHours": 147.7,
+      "currentWarnings": null,
+      "limitation": "Stored validated categories can be stale; present != fresh. Provider failures remain unresolved. A stale warning list is never current. Zero warnings is not SAFE. Navigation Beta does not establish a safe route."
+    }
+  },
+  "finalReadOnlyIntegrity": {
+    "checkedAt": "2026-10-05T13:36:33.128985+00:00",
+    "authUsers": 21,
+    "qaUsers": 18,
+    "realUsers": 3,
+    "activeQA": 0,
+    "activeQAAdmins": 0,
+    "bannedQA": 18,
+    "fishSpecies": 1258,
+    "marineOrganisms": 3016,
+    "charterRows": 3,
+    "marketRows": 3,
+    "communityRows": 7,
+    "marketPublic": 0,
+    "communityPublic": 0,
+    "charterPublicRegistry": 0,
+    "privateBuckets": 4,
+    "publicBuckets": 0,
+    "storageObjects": 1
+  },
+  "git": {
+    "implementationCommits": [
+      "3e7d172ff4fcfaec379c7270e9bed3246d218826",
+      "634686624cbd2c44e375cdc4338b879595c2772b"
+    ],
+    "exactFiles": [
+      "src/lib/operations/model.ts",
+      "src/lib/operations/server.ts",
+      "src/lib/operations/summary-model.ts",
+      "src/lib/operations/business-summary.ts",
+      "src/lib/operations/post-launch-summary.ts",
+      "src/app/admin/operations/operations-dashboard.tsx",
+      "src/app/admin/operations/post-launch-panels.tsx",
+      "src/data/operations/control-plane-v1.json",
+      "src/data/operations/security-audit-v1.json",
+      "tools/operations/collect-control-plane.mjs",
+      "tests/operations/post-launch-observability-v1.test.cjs",
+      "docs/BLUE_MARINA_POST_LAUNCH_OPERATIONS_OBSERVABILITY_V1.md",
+      "docs/BLUE_MARINA_RELEASE_DEPLOYMENT_POLICY_V1.md",
+      "reports/platform/post-launch-operations-observability-v1.json",
+      "src/lib/operations/production-status.ts"
+    ],
+    "finalEvidenceCommit": "Contains this report; resolve from Git history.",
+    "autoDeploy": "Existing main integration unchanged; evidence-only push can trigger deployment."
+  }
 }
