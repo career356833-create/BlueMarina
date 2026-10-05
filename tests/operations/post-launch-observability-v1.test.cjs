@@ -6,7 +6,7 @@ const vm = require('node:vm');
 const ts = require('typescript');
 const root = path.resolve(__dirname, '../..');
 const read = p => fs.readFileSync(path.join(root, p), 'utf8');
-function load(p) { const context = { exports: {} }; vm.runInNewContext(ts.transpileModule(read(p), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText, context); return context.exports; }
+function load(p) { const context = { exports: {}, AbortSignal, URL }; vm.runInNewContext(ts.transpileModule(read(p), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText, context); return context.exports; }
 const m = load('src/lib/operations/summary-model.ts');
 const roles = load('src/lib/operations/moderation-access.ts');
 const health = load('src/lib/operations/model.ts');
@@ -63,3 +63,10 @@ test('control-plane evidence cannot label a different deployment READY',()=>{con
 test('UI uses shared health summary, manual refresh and existing moderation navigation',()=>{const ui=read('src/app/admin/operations/operations-dashboard.tsx');const panel=read('src/app/admin/operations/post-launch-panels.tsx');assert.match(ui,/PostLaunchPanels/);assert.doesNotMatch(ui,/fetch\("\/api\/operations\/moderation/);assert.doesNotMatch(ui+panel,/setInterval|SUPABASE_SERVICE_ROLE_KEY|user_metadata/);assert.match(panel,/\/admin\/operations\/moderation/);assert.match(panel,/UNKNOWN/);});
 
 test('legacy activation QA markers remain QA even for a real Kakao owner',()=>{for(const marker of ['BLUE_MARINA_CHARTER_E2E_TEST','BLUE_MARINA_MARKET_E2E_TEST','https://blue-marina.vercel.app/blue-marina-e2e-test']){const result=m.split([row('old','real','SUBMITTED',marker)],owners,true);assert.equal(result.qa,1);assert.equal(result.real,0);}});
+
+const production=load('src/lib/operations/production-status.ts');
+const sha='a'.repeat(40),host='blue-marina-test.vercel.app';
+const statusFetch=(overrides={})=>async url=>({ok:true,json:async()=>url.includes('/statuses')?[{state:'success',environment:'Production',environment_url:'https://'+host,created_at:'2026-10-05T12:00:00Z',...overrides}]:[{id:123,sha,environment:'Production'}]});
+test('current Production READY requires both exact SHA and runtime deployment URL',async()=>{const result=await production.readProductionStatus(sha,host,statusFetch());assert.equal(result.state,'READY');assert.equal(result.evidence,'GITHUB_VERCEL_PRODUCTION_SHA_AND_URL_MATCH');});
+test('Preview, different host and failed GitHub lookup never become READY',async()=>{for(const change of [{environment:'Preview'},{environment_url:'https://another.vercel.app'},{environment_url:'https://'+host+'/?secret=x'}])assert.equal((await production.readProductionStatus(sha,host,statusFetch(change))).state,'UNKNOWN');assert.equal((await production.readProductionStatus(sha,host,async()=>{throw Error('TIMEOUT')})).state,'UNKNOWN');});
+test('missing SHA/host and mismatched deployment SHA stay UNKNOWN without unsafe fetches',async()=>{assert.equal((await production.readProductionStatus(null,host,statusFetch())).state,'UNKNOWN');assert.equal((await production.readProductionStatus(sha,'attacker.example',statusFetch())).state,'UNKNOWN');assert.equal((await production.readProductionStatus(sha,host,async()=>({ok:true,json:async()=>[{id:123,sha:'b'.repeat(40),environment:'Production'}]}))).state,'UNKNOWN');});

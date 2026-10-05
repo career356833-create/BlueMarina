@@ -7,6 +7,7 @@ import detailData from "@/data/marine-navigation/v3/navigation-warning-details.j
 import { evaluateAids, evaluateWarnings, type AidStore, type WarningListStore, type WarningDetailStore } from "@/lib/marine-navigation/reliability-v3";
 import { collectBusinessSummary } from "./business-summary";
 import { ageHours, DATA_REFERENCE, type summarizeRuntime } from "./summary-model";
+import { readProductionStatus } from "./production-status";
 
 type ControlPlane = {
   production: null | { checkedAt: string; deploymentId: string; state: string; deployedSha: string | null; mainSha: string | null; deployedAt: string;
@@ -31,14 +32,16 @@ export async function collectPostLaunchSummary() {
   const deploymentId = process.env.VERCEL_DEPLOYMENT_ID || null;
   const audit = controlPlane.production;
   const sameDeployment = !!deploymentId && deploymentId === audit?.deploymentId;
+  const liveProduction = await readProductionStatus(deployedSha, process.env.VERCEL_URL);
   const aids = evaluateAids(aidsData as unknown as AidStore, now);
   const warnings = evaluateWarnings(listData as unknown as WarningListStore, detailData as unknown as WarningDetailStore, now);
   return {
     business,
     production: { deploymentId, deployedSha, mainSha, match: mainSha && deployedSha ? mainSha === deployedSha : null,
-      state: sameDeployment && audit && (ageHours(audit.checkedAt, now) ?? Infinity) < 1 ? audit.state : "UNKNOWN",
-      deployedAt: sameDeployment && audit ? audit.deployedAt : null, lastAudit: audit,
-      limitation: "Runtime identity is live; READY and rollback are timestamped control-plane evidence. A new deployment does not inherit the previous READY state. Main SHA uses the public GitHub repository; failed lookup is UNKNOWN." },
+      state: liveProduction.state !== "UNKNOWN" ? liveProduction.state : sameDeployment && audit && (ageHours(audit.checkedAt, now) ?? Infinity) < 1 ? audit.state : "UNKNOWN",
+      deployedAt: liveProduction.deployedAt ?? (sameDeployment && audit ? audit.deployedAt : null), lastAudit: audit,
+      evidence: liveProduction.evidence, checkedAt: liveProduction.checkedAt,
+      limitation: "Current READY requires GitHub's Vercel Production status with matching running SHA and deployment URL. Failed lookup is UNKNOWN; no credentials added. Rollback is separately timestamped prior READY evidence, requiring revalidation before action." },
     runtime: { evidence: controlPlane.runtime, ageHours: ageHours(controlPlane.runtime?.checkedAt ?? null, now),
       state: controlPlane.runtime ? (ageHours(controlPlane.runtime.checkedAt, now) ?? Infinity) < 1 ? "AVAILABLE" : "STALE" : "UNKNOWN",
       limitation: "Read-only Vercel request-log sample, manually collected. Not total traffic, error rate or session analytics. No auth-event source: successful sessions, auth failures, callback failures and bad_oauth_state remain UNKNOWN." },

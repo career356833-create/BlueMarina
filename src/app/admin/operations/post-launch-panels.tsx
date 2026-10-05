@@ -38,7 +38,7 @@ export function PostLaunchPanels({ summary }: { summary: PostLaunchSummary }) {
     <section aria-label="Production and rollback" className="min-w-0 rounded-xl border border-white/15 bg-[#0a1b2a] p-5"><h2 className="text-xl font-semibold">Production · Release</h2>
       <dl className="mt-4 grid min-w-0 gap-4 md:grid-cols-2 xl:grid-cols-3"><Stat label="실행 중 deployment ID">{value(production.deploymentId)}</Stat><Stat label="Control-plane 상태">{production.state}</Stat>
         <Stat label="실행 중 SHA">{value(production.deployedSha)}</Stat><Stat label="현재 main SHA">{value(production.mainSha)}</Stat><Stat label="main 일치">{value(production.match)}</Stat>
-        <Stat label="배포 시각">{value(production.deployedAt)}</Stat>
+        <Stat label="배포 시각">{value(production.deployedAt)}</Stat><Stat label="배포 확인 근거 · 시각">{production.evidence} · {production.checkedAt}</Stat>
         <Stat label="마지막 확인 배포">{production.lastAudit?.deploymentId} · {production.lastAudit?.state}</Stat><Stat label="배포 감사 시각">{value(production.lastAudit?.checkedAt)}</Stat>
         <Stat label="이전 READY rollback 후보">{value(production.lastAudit?.rollback?.url)}</Stat></dl>
       <p className="mt-4 text-xs leading-5 text-white/55">{production.limitation} Rollback은 CLI/콘솔에서 별도 승인 후 실행하며 이 화면은 읽기 전용입니다.</p></section>
