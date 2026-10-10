@@ -84,7 +84,50 @@
     "authenticatedVisualQa": "PENDING"
   },
   "productionVerification": {
-    "status": "PENDING_APP_DEPLOYMENT"
+    "status": "PASS",
+    "runtimeCommit": "cbbdcf5201369003ecad11138405cd42965fdad3",
+    "deployment": "dpl_2UuzCXHNVdRjG7ggi6WwfKJCvyh8",
+    "ready": true,
+    "url": "https://blue-marina.vercel.app",
+    "smoke": {
+      "/api/operations/retention": {
+        "status": 401,
+        "cache": "private, no-store",
+        "robots": "noindex, nofollow"
+      },
+      "/api/operations/funnel": {
+        "status": 401,
+        "cache": "private, no-store",
+        "robots": "noindex, nofollow"
+      },
+      "first": {
+        "status": 204
+      },
+      "replay": {
+        "status": 204
+      },
+      "cookieContract": [
+        {
+          "httpOnly": true,
+          "secure": true,
+          "sameSite": "lax"
+        }
+      ],
+      "invalidEvent": 400,
+      "foreignOrigin": 403,
+      "privacy": {
+        "status": 200,
+        "retentionTextPresent": true
+      }
+    },
+    "rawRowsAfter": 3,
+    "newAnonymousSmokeRows": 1,
+    "identifiedRows": 0,
+    "duplicateAddedRows": 0,
+    "eligibleRows": 0,
+    "deletedRows": 0,
+    "businessIntegrityDigestsUnchanged": true,
+    "note": "Deliberate anonymous smoke is not verified Real activation. Documentation-only follow-up commits do not change runtime evidence."
   },
   "verification": {
     "targeted": "27/27 PASS",

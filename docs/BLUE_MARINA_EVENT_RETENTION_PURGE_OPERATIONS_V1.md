@@ -75,3 +75,9 @@ Authenticated event and Operations visual E2E are pending. Technical privacy tex
 ## Next primary priority
 
 Freeze current Production and wait for actual use. Do not fabricate traffic or reopen either parked gate.
+
+## Final Production evidence
+
+Runtime commit `cbbdcf5201369003ecad11138405cd42965fdad3`, deployment `dpl_2UuzCXHNVdRjG7ggi6WwfKJCvyh8` READY on https://blue-marina.vercel.app. Production ingest first/replay 204/204; raw rows 2→3 only, distinct dedupe keys 3, identified rows 0. The deliberate anonymous smoke is not verified Real activation. Retention/funnel unauthorized APIs both 401 with private/no-store and noindex/nofollow. Invalid event 400, foreign Origin 403, privacy 200 with actual retention text. Cookie HttpOnly/Secure/SameSite=Lax unchanged. Eligible 0, purge SUCCESS/deleted 0, cron active. All 22 business/core/Auth/Storage/baseline fingerprints still unchanged after deployment.
+
+Clean-source validation: targeted 27/27 (new retention/SQL 10 + existing funnel 17), full 1329 PASS / 1 existing SKIP, typecheck/lint/build/diff PASS. Clean HEAD archive plus exact whitelist; 2,099 source files matched the commit, excluding two prebuild-regenerated MapLibre assets during comparison (restored to committed input bytes before deployment). The local dependency installation builds Next 15.5.27; Vercel installs the committed lockfile separately. Documentation-only follow-up commits do not change verified runtime behavior. Authenticated visual E2E and first natural daily Cron execution remain unverified.
