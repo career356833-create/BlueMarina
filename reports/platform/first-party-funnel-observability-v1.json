@@ -2,14 +2,14 @@
   "version": 1,
   "decision": "FIRST_PARTY_FUNNEL_OBSERVABILITY_READY_WITH_LIMITATIONS",
   "baseline": "d3df4a63dc0826de457f972f823be3d73ac7122c",
-  "checkedAt": "2026-10-10",
+  "checkedAt": "2026-10-10T12:58:40.411Z",
   "architecture": "existing acquisition and operations classification extended",
   "eventCount": 13,
   "landingSurfaces": 8,
   "sessionLifetimeMinutes": 30,
   "clientPayloadBytes": 1024,
   "serverWriteMode": "NEXT_AFTER_BEST_EFFORT",
-  "networkTimeoutMs": 1500,
+  "networkTimeoutMs": 3000,
   "rawHistoryDaysScanned": 90,
   "aggregateRowCap": 10000,
   "rawRetentionDaysRecommended": 90,
@@ -39,8 +39,8 @@
     "newAdvisorWarnings": 0
   },
   "preview": {
-    "url": "https://blue-marina-71riws314-chiweon.vercel.app",
-    "deployment": "dpl_HfEQ1J8KMGvZo2jQtLi3pGcb7Fmm",
+    "url": "https://blue-marina-97yhwfa5a-chiweon.vercel.app",
+    "deployment": "dpl_GtMJMZ6iuE3pavqZo9nLreZbjYKx",
     "status": "READY",
     "homeAndPrivacyRender": "PASS",
     "invalidOrigin": 403,
@@ -51,8 +51,42 @@
     "environmentChanges": 0
   },
   "production": {
-    "status": "SMOKE_PENDING_RELEASE",
-    "authenticatedE2E": "AUTHENTICATED_EVENT_E2E_PENDING"
+    "status": "READY",
+    "url": "https://blue-marina.vercel.app",
+    "deployment": "dpl_62MqmnEMkuXFZrGuFTecSFrA5LoJ",
+    "verifiedCodeSha": "f90da967c3dfb145ffa7b733868de05eded2928b",
+    "observedSince": "2026-10-10T12:50:46.121664Z",
+    "smoke": {
+      "first": 204,
+      "replay": 204,
+      "firstLatencyMs": 2984,
+      "cookieHttpOnly": true,
+      "cookieSecure": true,
+      "cookieSameSiteLax": true,
+      "cookieThirtyMinutes": true,
+      "operations": 401,
+      "cacheControl": "private, no-store",
+      "robots": "noindex, nofollow",
+      "unsupported": 400,
+      "crossOrigin": 403,
+      "checkedAt": "2026-10-10T12:58:40.411Z"
+    },
+    "dedupe": "PASS_TWO_REQUESTS_ONE_ADDITIONAL_ROW",
+    "readOnlyDatabaseAggregate": {
+      "event": "landing_view",
+      "actor": "ANONYMOUS",
+      "events": 2,
+      "sessions": 2,
+      "users": 0,
+      "note": "Both sessions are anonymous smoke activity; not verified Real users."
+    },
+    "authenticatedE2E": "AUTHENTICATED_EVENT_E2E_PENDING",
+    "authenticatedOperationsVisualQA": "NOT_RUN",
+    "initialTransient503": {
+      "observed": true,
+      "detailedCause": "NOT_PERSISTED_NOT_CONFIRMED",
+      "followUp": "Network timeout increased from 1500 to 3000 ms; post-release checks both 204. No claim that all future loss is eliminated."
+    }
   },
   "verify": {
     "targetedPass": 17,
@@ -63,7 +97,9 @@
     "isolatedBuild": "PASS",
     "prerenderedPages": 1467,
     "isolatedSqlRehearsal": "PASS",
-    "diff": "PASS"
+    "diff": "PASS",
+    "committedSourceComparison": "MATCH_EXCEPT_GENERATED_MAPLIBRE_BUILD_ASSETS_NOT_COMMITTED",
+    "lockedDependencyVercelBuild": "PASS"
   },
   "limitations": [
     "AUTHENTICATED_EVENT_E2E_PENDING",
@@ -76,5 +112,33 @@
     "GOOGLE_EMAIL_LOGIN_NOT_IN_V1_CONTRACT"
   ],
   "nextPrimaryPriority": "APPROVE_RETENTION_OPERATIONS_AND_AUTHENTICATED_QA_WHEN_AVAILABLE",
-  "prohibitedPayloadFieldsStored": 0
+  "prohibitedPayloadFieldsStored": 0,
+  "beforeAfter": {
+    "fishSpecies": [
+      1258,
+      1258
+    ],
+    "marineOrganisms": [
+      3016,
+      3016
+    ],
+    "authUsers": [
+      21,
+      21
+    ],
+    "profiles": [
+      21,
+      21
+    ],
+    "savedItems": [
+      0,
+      0
+    ]
+  },
+  "gitScope": {
+    "uniqueFiles": 25,
+    "unrelatedIncluded": 0,
+    "preservationPaths": 3932,
+    "unexpectedPreservationChanges": 0
+  }
 }
