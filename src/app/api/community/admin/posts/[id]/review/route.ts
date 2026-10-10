@@ -1,3 +1,4 @@
+import { observeMutation } from "@/lib/acquisition/event-server";
 import type { NextRequest } from "next/server";
 import { communityActor, communityFailure, communityJson, communityReply, CommunityError, mapPost } from "@/lib/community/backend";
 
@@ -14,6 +15,9 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     if (error?.code === "22023") throw new CommunityError("INVALID_STATE", 409);
     if (error?.code === "42501") throw new CommunityError("FORBIDDEN", 403);
     if (error || !data) throw error ?? new Error("review failed");
+    const event = { domain: "COMMUNITY" as const, actorId: userId, ownerId: data.author_id, entityId: data.id, marker: data.title, revision: data.updated_at };
+    if (body.action === "APPROVE" || body.action === "REJECT") observeMutation(request, { ...event, name: body.action === "APPROVE" ? "moderation_approved" : "moderation_rejected" });
+    if (data.status === "ACTIVE" && data.moderation_status === "APPROVED") observeMutation(request, { ...event, name: "content_published" });
     return communityReply({ post: mapPost(data) });
   } catch (error) { return communityFailure(error); }
 }

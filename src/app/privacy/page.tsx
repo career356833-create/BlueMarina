@@ -17,6 +17,10 @@ export default function PrivacyPage() {
       </ul>
     </section>
 
+    <section className="mt-8"><h2 className="text-xl font-black text-white">서비스 운영 단계 관측</h2>
+      <p className="mt-3 text-sm leading-7">주요 진입 화면, 카카오 로그인 시작·완료, 작성 시작, 저장·제출 성공과 관리자 승인·공개 단계를 제한적으로 기록합니다. 이벤트 종류·시각·서비스 분류, 로그인한 경우 계정 식별자, 필요한 콘텐츠 식별자와 허용 목록으로 정제한 유입 분류를 사용합니다. 로그인 전후의 같은 방문 흐름은 30분 만료의 무작위 자사 쿠키로 구분하며, 다른 사이트의 광고 추적에 사용하지 않습니다. 운영 화면에는 집계만 표시합니다. 이 이벤트에는 이메일·전화번호·비밀번호·인증 토큰·정확한 위치·원본 IP·User-Agent·전체 유입 URL·작성 내용을 저장하지 않습니다. 이벤트 저장소도 아래 Supabase 환경을 사용하며, 삭제 관련 문의는 아래 연락처로 접수할 수 있습니다.</p>
+    </section>
+
     <section className="mt-8"><h2 className="text-xl font-black text-white">보유 및 삭제</h2>
       <p className="mt-3 text-sm leading-7">계정 프로필과 저장 항목은 계정 유지 기간 동안 보유합니다. 탈퇴·삭제 요청은 아래 이메일로 접수하며, 본인 확인 후 삭제합니다. 법령상 보존 의무가 있는 정보는 해당 기간 동안 분리하여 보관합니다. 기기 내 기록은 브라우저 저장소를 삭제하면 제거할 수 있습니다.</p>
     </section>

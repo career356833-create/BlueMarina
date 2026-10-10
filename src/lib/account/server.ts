@@ -1,3 +1,4 @@
+import { observeMutation } from "@/lib/acquisition/event-server";
 import "server-only";
 import { createServiceClient } from "@/lib/supabase/server";
 import type { AccountProfile, AccountReadModel, MarketActivity, SavedItem } from "./types";
@@ -57,8 +58,14 @@ export async function updateAccountProfile(request: Request, input: unknown) {
 export async function saveAccountItem(request: Request, input: unknown) {
   const { client, user } = await authenticateAccountRequest(request);
   const value = validateSavedItem(input);
-  const { error } = await client.from("user_saved_items").upsert({ user_id: user.id, entity_type: value.entityType, entity_id: value.entityId, label: value.label, href: value.href }, { onConflict: "user_id,entity_type,entity_id" });
+  const record = { user_id: user.id, entity_type: value.entityType, entity_id: value.entityId, label: value.label, href: value.href };
+  const { data, error } = await client.from("user_saved_items").upsert(record, { onConflict: "user_id,entity_type,entity_id", ignoreDuplicates: true }).select("id");
   if (error) throw new AccountApiError(500, "SAVE_FAILED");
+  if (data?.[0]) observeMutation(request, { name: "saved_item_created", domain: "GENERAL", actorId: user.id, ownerId: user.id, entityId: data[0].id, marker: value.label ?? undefined });
+  else {
+    const result = await client.from("user_saved_items").update({ label: value.label, href: value.href }).eq("user_id", user.id).eq("entity_type", value.entityType).eq("entity_id", value.entityId);
+    if (result.error) throw new AccountApiError(500, "SAVE_FAILED");
+  }
   return value;
 }
 

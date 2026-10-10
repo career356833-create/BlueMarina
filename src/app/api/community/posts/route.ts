@@ -1,3 +1,4 @@
+import { observeMutation } from "@/lib/acquisition/event-server";
 import type { NextRequest } from "next/server";
 import { checkedDraft, communityActor, communityFailure, communityJson, communityRateLimit, communityReply, mapPost, newCommunityId, postColumns, publicPosts } from "@/lib/community/backend";
 
@@ -23,6 +24,7 @@ export async function POST(request: NextRequest) {
     const { data, error } = await client.from("community_posts").insert({ id: newCommunityId(), author_id: userId,
       ...postColumns(result.sanitized), status: "SUBMITTED", moderation_status: "REVIEW_REQUIRED" }).select("*").single();
     if (error || !data) throw error ?? new Error("insert failed");
+    observeMutation(request, { name: "community_submission_complete", domain: "COMMUNITY", actorId: userId, ownerId: data.author_id, entityId: data.id, marker: data.title });
     return communityReply({ post: mapPost(data), warnings: result.warnings }, 201);
   } catch (error) { return communityFailure(error); }
 }

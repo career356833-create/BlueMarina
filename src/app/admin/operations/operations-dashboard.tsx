@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { PostLaunchPanels } from "./post-launch-panels";
+import { ObservedFunnelPanel } from "./observed-funnel-panel";
 import { createClient } from "@/lib/supabase/client";
 import { loadKakaoMaps } from "@/lib/sea/kakao-maps";
 import type { OperationsHealth, OperationsSnapshot, OperationsSourceStatus } from "@/lib/operations/model";
@@ -57,6 +58,7 @@ export function OperationsDashboard() {
       </div>
       {message ? <p role="status" className="mt-6 rounded-xl border border-white/20 bg-white/5 p-4 text-sm">{message}</p> : null}
       {snapshot ? <>
+        <ObservedFunnelPanel />
         <PostLaunchPanels summary={snapshot.postLaunch} />
         <section aria-label="배포 정보" className="mt-8 grid gap-3 rounded-xl border border-white/15 bg-[#0a1b2a] p-5 text-sm sm:grid-cols-2 lg:grid-cols-4">
           <div><p className="text-white/50">환경</p><p className="mt-1 font-semibold">{snapshot.deployment.environment}</p></div>

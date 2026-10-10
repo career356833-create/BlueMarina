@@ -1,5 +1,7 @@
 "use client";
 
+import { observeClient } from "@/lib/acquisition/event-client";
+import { routeKey } from "@/lib/acquisition/events";
 import { useState } from "react";
 import Link from "next/link";
 import { AppFrame } from "@/components/boat/AppFrame";
@@ -27,6 +29,7 @@ export default function AccountLoginPage() {
       } catch {
         // OAuth still works when browser storage is blocked; completion returns to /account.
       }
+      if (provider === "kakao") observeClient("kakao_login_start", "LOGIN", routeKey(returnTo.split("?")[0]));
       const { error } = await client.auth.signInWithOAuth({
         provider,
         options: { redirectTo: `${window.location.origin}${SOCIAL_AUTH_CALLBACK_PATH}` },

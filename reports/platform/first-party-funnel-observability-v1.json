@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "decision": "FIRST_PARTY_FUNNEL_OBSERVABILITY_READY_WITH_LIMITATIONS",
+  "baseline": "d3df4a63dc0826de457f972f823be3d73ac7122c",
+  "checkedAt": "2026-10-10",
+  "architecture": "existing acquisition and operations classification extended",
+  "eventCount": 13,
+  "landingSurfaces": 8,
+  "sessionLifetimeMinutes": 30,
+  "clientPayloadBytes": 1024,
+  "serverWriteMode": "NEXT_AFTER_BEST_EFFORT",
+  "networkTimeoutMs": 1500,
+  "rawHistoryDaysScanned": 90,
+  "aggregateRowCap": 10000,
+  "rawRetentionDaysRecommended": 90,
+  "automaticPurgeImplemented": false,
+  "historicalBackfill": 0,
+  "externalAnalyticsVendors": 0,
+  "newAuthIdentities": 0,
+  "businessDataMutations": 0,
+  "parkedGatesRetested": 0,
+  "migration": {
+    "file": "supabase/migrations/20261010123757_first_party_funnel_observability_v1.sql",
+    "remoteVersion": "20261010123757",
+    "projectRef": "mlfvpaikfpjrgrhwlrjn",
+    "applied": true,
+    "newTables": [
+      "operational_funnel_events",
+      "operational_funnel_baselines"
+    ],
+    "rlsEnabled": 2,
+    "anonReadWrite": false,
+    "authenticatedReadWrite": false,
+    "serviceRolePrivileges": [
+      "SELECT",
+      "INSERT"
+    ],
+    "existingBusinessTablesChanged": 0,
+    "newAdvisorWarnings": 0
+  },
+  "preview": {
+    "url": "https://blue-marina-71riws314-chiweon.vercel.app",
+    "deployment": "dpl_HfEQ1J8KMGvZo2jQtLi3pGcb7Fmm",
+    "status": "READY",
+    "homeAndPrivacyRender": "PASS",
+    "invalidOrigin": 403,
+    "invalidEvent": 400,
+    "operationsWithoutAuth": 401,
+    "validIngest": 503,
+    "limitation": "PREVIEW_SUPABASE_ENV_NOT_CONFIGURED_FAIL_CLOSED",
+    "environmentChanges": 0
+  },
+  "production": {
+    "status": "SMOKE_PENDING_RELEASE",
+    "authenticatedE2E": "AUTHENTICATED_EVENT_E2E_PENDING"
+  },
+  "verify": {
+    "targetedPass": 17,
+    "fullPass": 1319,
+    "fullSkip": 1,
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "isolatedBuild": "PASS",
+    "prerenderedPages": 1467,
+    "isolatedSqlRehearsal": "PASS",
+    "diff": "PASS"
+  },
+  "limitations": [
+    "AUTHENTICATED_EVENT_E2E_PENDING",
+    "PREVIEW_SUPABASE_ENV_NOT_CONFIGURED_FAIL_CLOSED",
+    "BEST_EFFORT_EVENT_LOSS_POSSIBLE",
+    "ANONYMOUS_SESSIONS_NOT_VERIFIED_REAL",
+    "PER_INSTANCE_NOT_DISTRIBUTED_RATE_LIMIT",
+    "RETENTION_PURGE_AND_POLICY_REVIEW_PENDING",
+    "FIRST_SAVE_AND_PUBLICATION_ARE_OBSERVED_NOT_LIFETIME",
+    "GOOGLE_EMAIL_LOGIN_NOT_IN_V1_CONTRACT"
+  ],
+  "nextPrimaryPriority": "APPROVE_RETENTION_OPERATIONS_AND_AUTHENTICATED_QA_WHEN_AVAILABLE",
+  "prohibitedPayloadFieldsStored": 0
+}

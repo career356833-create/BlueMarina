@@ -1,3 +1,5 @@
+import { actorClass, eventDomain, isKakaoSession } from "@/lib/acquisition/events";
+import { bestEffort, checkedCookie, cookieValue, LOGIN_COOKIE, sessionFor, writeEvent } from "@/lib/acquisition/event-server";
 import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 
@@ -33,8 +35,17 @@ export async function GET(request: NextRequest) {
     },
   });
   try {
-    const { error } = await client.auth.exchangeCodeForSession(code);
+    const { data, error } = await client.auth.exchangeCodeForSession(code);
     if (error) return redirect(request, "/account/login");
+    try {
+    const attempt = checkedCookie(cookieValue(request, LOGIN_COOKIE));
+    const sessionId = sessionFor(request)?.id;
+    if (data?.session && data.user && isKakaoSession(data.user) && attempt && sessionId) {
+      const user = data.user;
+      bestEffort(() => writeEvent({ name: "kakao_login_complete", route: "LOGIN", returnRoute: attempt.route ?? "UNKNOWN", domain: eventDomain("kakao_login_complete", attempt.route ?? "UNKNOWN"), actor: actorClass(user), userId: user.id, sessionId, dedupe: `login:${attempt.id}` }));
+    }
+    response.cookies.delete(LOGIN_COOKIE);
+    } catch { /* Telemetry cannot turn a successful OAuth exchange into a login failure. */ }
     return response;
   } catch {
     return redirect(request, "/account/login");

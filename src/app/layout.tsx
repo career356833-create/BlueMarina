@@ -1,3 +1,4 @@
+import { FunnelObserver } from "@/components/platform/FunnelObserver";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
@@ -66,6 +67,7 @@ export default function RootLayout({
           </Script>
         ) : null}
         <PwaRegister />
+        <FunnelObserver />
         <GlobalHeader />
         {children}
         <BlueMarinaCaptainWidget />
