@@ -11,7 +11,7 @@ export const PRIVATE_HEADERS = { "Cache-Control": "private, no-store", "X-Robots
 export const environment = () => process.env.VERCEL_ENV === "production" ? "production" : process.env.VERCEL_ENV === "preview" ? "preview" : "development";
 export function eventClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL, key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  return url && key ? createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false }, global: { fetch: (url, options) => fetch(url, { ...options, signal: AbortSignal.timeout(1500) }) } }) : null;
+  return url && key ? createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false }, global: { fetch: (url, options) => fetch(url, { ...options, signal: AbortSignal.timeout(3000) }) } }) : null;
 }
 function signed(value: string) {
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;

@@ -13,7 +13,7 @@ export function observeClient(name: EventName, route: string, returnRoute?: stri
   pending = pending.then(async () => {
     try {
       const token = (await createClient()?.auth.getSession())?.data.session?.access_token;
-      const response = await fetch("/api/acquisition/events", { method: "POST", credentials: "same-origin", keepalive: true, cache: "no-store", signal: AbortSignal.timeout(5000),
+      const response = await fetch("/api/acquisition/events", { method: "POST", credentials: "same-origin", keepalive: true, cache: "no-store", signal: AbortSignal.timeout(10000),
         headers: { "Content-Type": "application/json", ...(token ? { Authorization: `Bearer ${token}` } : {}) }, body: JSON.stringify({ name, route, ...clean, ...(returnRoute ? { returnRoute } : {}) }) });
       if (!response.ok) seen.delete(key);
     } catch { seen.delete(key); }
