@@ -1,0 +1,112 @@
+{
+  "program": "BLUE_MARINA_EVENT_RETENTION_PURGE_OPERATIONS_V1",
+  "decision": "EVENT_RETENTION_PURGE_READY_WITH_LIMITATIONS",
+  "baseline": "a58095bfb623d335c1e7a6889cb0f4e9f41b50cb",
+  "projectRef": "mlfvpaikfpjrgrhwlrjn",
+  "retention": {
+    "rawTable": "public.operational_funnel_events",
+    "days": 90,
+    "predicate": "occurred_at < now() - interval '90 days'",
+    "allEnvironmentsAndActorClasses": true,
+    "exactBoundaryRetained": true,
+    "futureRowsPreservedAndFlagged": true,
+    "malformedNullInfiniteRejected": true,
+    "cookieMinutes": 30,
+    "timing": "90-day threshold; deletion on next daily run, delays possible on failure",
+    "maximum90DayGuarantee": false,
+    "backfill": 0,
+    "longTermAggregateStore": false,
+    "businessRecordsIncluded": false
+  },
+  "dataBefore": {
+    "rawRows": 2,
+    "eligibleRows": 0,
+    "futureRows": 0,
+    "baselineRows": 1,
+    "oldest": "2026-10-10T12:50:47.995329Z",
+    "newest": "2026-10-10T12:58:36.750822Z"
+  },
+  "database": {
+    "migration": "20261010132815_event_retention_purge_operations_v1.sql",
+    "applied": true,
+    "newTables": 1,
+    "newFunctions": 2,
+    "newIndexes": 0,
+    "existingIndexPlan": "operational_funnel_events_window Index Scan",
+    "securityDefinerAdded": 0,
+    "publicPurgeEndpoint": false,
+    "anonAuthenticatedPurgeExecute": false,
+    "serviceRolePurgeExecute": false,
+    "serviceRoleRawDelete": false,
+    "statusRls": true,
+    "statusServerGrant": "SELECT ONLY",
+    "aggregateRpc": "SECURITY INVOKER; service_role EXECUTE only",
+    "integrityTablesCompared": 22,
+    "integrityDigestsUnchanged": true,
+    "fishSpecies": 1258,
+    "marineOrganisms": 3016,
+    "authUsers": 21,
+    "newAdvisorWarningsOrErrors": 0,
+    "expectedNewServerOnlyRlsInfo": 1,
+    "unchangedAdvisorWarnings": 3
+  },
+  "scheduler": {
+    "provider": "Supabase pg_cron",
+    "job": "blue-marina-funnel-retention-v1",
+    "scheduleUtc": "17 3 * * *",
+    "scheduleKst": "12:17 daily",
+    "activeVerified": true,
+    "role": "postgres",
+    "statementTimeoutSeconds": 30,
+    "lockTimeoutSeconds": 2,
+    "secretsStored": 0,
+    "manualZeroEligibleGuardedCheck": "SUCCESS",
+    "deletedRows": 0,
+    "naturalScheduledRunObserved": false
+  },
+  "operations": {
+    "endpoint": "/api/operations/retention",
+    "auth": "existing operations_admin auth.getUser boundary",
+    "headers": [
+      "private, no-store",
+      "noindex, nofollow"
+    ],
+    "fields": [
+      "oldestRetained",
+      "eligibleRows",
+      "futureRows",
+      "lastRunAt",
+      "lastDeletedRows",
+      "lastResult"
+    ],
+    "missedRunAttentionHours": 26,
+    "failureIsolatedFromFunnelAndIngest": true,
+    "authenticatedVisualQa": "PENDING"
+  },
+  "productionVerification": {
+    "status": "PENDING_APP_DEPLOYMENT"
+  },
+  "verification": {
+    "targeted": "27/27 PASS",
+    "isolatedPostgresAndTargeted": "10/10 PASS",
+    "funnelRegression": "17/17 PASS",
+    "full": "1329 PASS / 1 SKIP",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS (clean HEAD archive + exact changes)",
+    "diff": "PASS"
+  },
+  "limitations": [
+    "AUTHENTICATED_EVENT_E2E_PENDING",
+    "AUTHENTICATED_OPERATIONS_VISUAL_QA_PENDING",
+    "FIRST_NATURAL_DAILY_CRON_RUN_NOT_YET_OBSERVED",
+    "DAILY_PURGE_CAN_RETAIN_BEYOND_90_DAYS",
+    "LEGAL_BASIS_AND_POLICY_EFFECTIVE_DATE_REVIEW_NOT_CERTIFIED",
+    "BACKUP_RETENTION_SEPARATE_FROM_LIVE_RAW_TABLE_DELETION"
+  ],
+  "parkedGates": [
+    "Fresh Kakao Acquisition Gate",
+    "Real Device Navigation Gate"
+  ],
+  "nextPrimaryPriority": "FREEZE_PRODUCTION_AND_WAIT_FOR_ACTUAL_USE"
+}

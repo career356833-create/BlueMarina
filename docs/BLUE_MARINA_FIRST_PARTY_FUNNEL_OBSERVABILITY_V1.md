@@ -63,7 +63,7 @@ Filters: Today (KST midnight), rolling 7 days, rolling 30 days; ALL/GENERAL/CHAR
 
 The public privacy page adds only implemented facts about the limited operational events, account/content identifiers, first-party cookie and existing Supabase storage. It does not announce a new legal basis, consent exemption or a false deletion guarantee.
 
-Recommended raw retention: 90 days. Automatic purge is **not implemented**, and the 90-day aggregate scan is not deletion. Before day 90, the operator should approve a retention schedule, rights/deletion handling (including anonymous cookie deletion requests), policy effective-date update and a scheduled privileged purge. No long-term aggregate store is introduced by V1. Legal basis/consent requirements remain a policy review item rather than an invented legal conclusion.
+Retention is now defined in BLUE_MARINA_EVENT_RETENTION_PURGE_OPERATIONS_V1.md: raw events expire after 90 days and are deleted at the next daily DB job. Missed/failed runs may delay deletion and surface in Operations; the 90-day aggregate scan itself is not deletion. Rights/deletion handling (including anonymous cookie deletion requests) and policy effective-date review remain operator responsibilities. No long-term aggregate store is introduced by V1. Legal basis/consent requirements remain a policy review item rather than an invented legal conclusion.
 
 ## Verification and limitations
 

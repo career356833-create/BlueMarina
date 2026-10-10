@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import type { aggregateEvents } from "@/lib/acquisition/events";
+import { RetentionPanel } from "./retention-panel";
 
 type Snapshot = { status: string; observedSince: string | null; environment: string; metrics: ReturnType<typeof aggregateEvents> };
 const labels: Record<string, string> = { landing_view: "Landing (익명 포함)", kakao_login_start: "Kakao 로그인 시작", kakao_login_complete: "Kakao 로그인 완료", charter_submission_start: "Charter 작성 시작", market_new_start: "Market 작성 시작", community_new_start: "Community 작성 시작", saved_item_created: "저장 성공", charter_submission_complete: "Charter 제출", market_submission_complete: "Market 제출", community_submission_complete: "Community 제출", moderation_approved: "승인 (대상 콘텐츠 기준)", moderation_rejected: "반려 (대상 콘텐츠 기준)", content_published: "최초 관측 공개 (대상 콘텐츠 기준)" };
@@ -27,6 +28,7 @@ export function ObservedFunnelPanel() {
   const percent = (value: { percent: number | null; numerator: number; denominator: number }) => value.percent === null ? "N/A" : `${value.percent}% (${value.numerator}/${value.denominator})`;
   return <section aria-labelledby="observed-funnel" className="mt-8 min-w-0 rounded-xl border border-white/15 bg-[#0a1b2a] p-4 sm:p-5">
     <h2 id="observed-funnel" className="font-serif text-2xl">실제 관측 퍼널</h2>
+    <RetentionPanel />
     <p className="mt-2 break-words text-sm text-white/65">OBSERVED SINCE {snapshot?.observedSince ?? "수집 시작 기록 없음"} · {snapshot?.environment ?? "확인 중"}. 아래 현재 상태(CURRENT STATE) 집계와 별도입니다. 과거 데이터는 소급하지 않습니다.</p>
     <div className="mt-4 flex flex-wrap gap-3">
       <label className="text-sm">기간<select value={period} onChange={e => setPeriod(e.target.value)} className="ml-2 min-h-11 rounded bg-slate-800 px-2"><option value="today">Today (KST)</option><option value="7d">7 days</option><option value="30d">30 days</option></select></label>

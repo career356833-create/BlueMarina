@@ -24,4 +24,4 @@ Client envelope: `name`, `route`, optional `returnRoute` (login only), `source`,
 
 Server envelope: explicit environment/event/time, nullable user/session, actor and subject classifications, domain/route/return category, optional entity ID, hashed dedupe key, finite attribution, metadata version 1. No JSON, content, contact data or raw URLs. Moderation revisions are used only to produce the dedupe hash.
 
-Storage timestamps are UTC. Today reporting is KST. Cookie lifetime is 30 minutes. Raw retention recommendation is 90 days; automatic deletion is not yet provisioned. Aggregates return no underlying user/session/entity IDs.
+Storage timestamps are UTC. Today reporting is KST. Cookie lifetime is 30 minutes. Raw retention is 90 days, with deletion at the next daily DB purge; failures may delay deletion. See BLUE_MARINA_EVENT_RETENTION_PURGE_OPERATIONS_V1.md. Aggregates return no underlying user/session/entity IDs.
