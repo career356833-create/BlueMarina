@@ -1,0 +1,259 @@
+{
+  "program": "BLUE MARINA NAVIGATION V4 — REAL 3D COASTAL TERRAIN + COCKPIT UX",
+  "decision": "NAVIGATION_V4_COMPLETE_WITH_LIMITATIONS",
+  "baseline": "c02548ec631adf711c3009e6d9ec90b45059cf37",
+  "verifiedAt": "2026-10-25T19:03:53.752872+00:00",
+  "terrain": {
+    "implemented": true,
+    "visualVerdict": "REAL_3D_TERRAIN_PASS",
+    "maplibreVersion": "6.6.0",
+    "format": "raster-dem / Terrarium",
+    "source": "Mapzen Terrain Tiles, AWS Open Data elevation-tiles-prod",
+    "koreanSources": [
+      "USGS SRTM",
+      "GMTED2010"
+    ],
+    "sourceMetadataProbe": "srtm/N37E130.tif, gmted/30N120E_20101117_gmted_mea075.tif",
+    "bounds": [
+      124,
+      32,
+      132,
+      39.5
+    ],
+    "minZoom": 7,
+    "maxSourceZoom": 12,
+    "exaggeration": 1,
+    "seaTreatment": "negative elevations clamped to 0m; positive terrain unchanged; no bathymetry rendered",
+    "accuracy": "SRTM nominal 30m pixels, not survey-grade; low zoom generalized; no coastline or navigability guarantee",
+    "license": "USGS-produced data public domain; Mapzen/AWS dataset attribution retained; joerd software license is not treated as a blanket data license",
+    "quota": "No published hard request quota or SLA found; not an unlimited-use guarantee",
+    "cache": "24h process/Next cache; public CDN 7d; 96 tile process cap; 16 concurrent tasks; failed tiles not cached",
+    "timeoutSeconds": 6,
+    "decodeLimit": "512 KiB input; 256x256 8-bit noninterlaced RGB/RGBA; CRC checked",
+    "fallback": [
+      "2D flat",
+      "3D pitch-only when disabled, unsupported, timeout or error",
+      "explicit retry"
+    ],
+    "sources": [
+      "https://registry.opendata.aws/terrain-tiles/",
+      "https://github.com/tilezen/joerd/blob/master/docs/data-sources.md",
+      "https://github.com/tilezen/joerd/blob/master/docs/attribution.md",
+      "https://www.usgs.gov/faqs/are-usgs-reportspublications-copyrighted?qt-news_science_products=0",
+      "https://maplibre.org/maplibre-gl-js/docs/examples/3d-terrain/"
+    ],
+    "upstreamProbes": [
+      {
+        "name": "Ulleung",
+        "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/12/3537/1587.png",
+        "status": 200,
+        "bytes": 19641,
+        "ms": 903,
+        "width": 256,
+        "channels": 3,
+        "min": -66,
+        "max": 961,
+        "positive": 19129,
+        "source": "srtm/N37E130.tif, gmted/30N120E_20101117_gmted_mea075.tif"
+      },
+      {
+        "name": "Geoje",
+        "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/12/3511/1624.png",
+        "status": 200,
+        "bytes": 50436,
+        "ms": 479,
+        "width": 256,
+        "channels": 3,
+        "min": -7,
+        "max": 562,
+        "positive": 64877,
+        "source": "srtm/N34E128.tif, gmted/30N120E_20101117_gmted_mea075.tif"
+      },
+      {
+        "name": "Jeju",
+        "url": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/12/3487/1644.png",
+        "status": 200,
+        "bytes": 43031,
+        "ms": 303,
+        "width": 256,
+        "channels": 3,
+        "min": 422,
+        "max": 1935,
+        "positive": 65536,
+        "source": "srtm/N33E126.tif"
+      }
+    ]
+  },
+  "cockpit": {
+    "dominantSog": true,
+    "boatAnchor": "V3 67–72% retained",
+    "gpsEngine": "unchanged",
+    "trackEngine": "unchanged; session memory only",
+    "duplicateCompassRemoved": true,
+    "initialDestinationRaceFixed": true,
+    "attributionRaisedAboveBottomPanel": true
+  },
+  "qa": {
+    "viewports": [
+      360,
+      390,
+      430,
+      1280
+    ],
+    "realTerrainLocation": "Ulleungdo, manually selected test location; never represented as real GPS",
+    "comparison": [
+      "ulleung-2d.jpg",
+      "ulleung-pitch-only.jpg",
+      "ulleung-terrain-390.jpg",
+      "terrain-1280-ready.jpg"
+    ],
+    "screenshotsDirectory": "outputs/navigation-v4 (local review artifacts; excluded from deployment)",
+    "gpsSimulation": [
+      "unavailable",
+      "acquired",
+      "stationary 0kn",
+      "8kn",
+      "15kn",
+      "acceleration 5 to 15kn",
+      "deceleration 15 to 3kn",
+      "direction change",
+      "low accuracy",
+      "stale",
+      "jump rejection",
+      "signal loss",
+      "drag disables follow",
+      "recenter enables follow",
+      "repeated 2D/3D",
+      "track toggle"
+    ],
+    "failureTesting": "browser controller fault injection + unit HTTP rejection/timeout; not physical network or GPS testing",
+    "lifecycle": [
+      "style reload restores terrain and navigation layers",
+      "same map reused",
+      "listener cleanup",
+      "entry/re-entry"
+    ],
+    "tileReleaseError": "not reproduced in V4 browser checks; no speculative MapLibre upgrade",
+    "browserErrors": 0,
+    "physicalDevice": "REAL_DEVICE_NAVIGATION_NOT_VERIFIED",
+    "screenshots": [
+      "ulleung-2d.jpg",
+      "ulleung-pitch-only.jpg",
+      "ulleung-terrain-390.jpg",
+      "terrain-1280-ready.jpg",
+      "sim-8kn-390.jpg",
+      "sim-360.jpg",
+      "drawer-430.jpg",
+      "preview-verified-390.jpg",
+      "production-terrain-390.jpg",
+      "production-spot-handoff.jpg"
+    ]
+  },
+  "verification": {
+    "targeted": {
+      "passed": 53,
+      "failed": 0
+    },
+    "full": {
+      "passed": 1382,
+      "skipped": 1,
+      "failed": 0
+    },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS: clean local npm run build; final exact Preview cloud npm run build 1467/1467; Production READY",
+    "diff": "PASS"
+  },
+  "preview": {
+    "id": "dpl_45pUCPeCbV1JLg29yyAxQAC7REU5",
+    "url": "https://blue-marina-o8nm0e8es-chiweon.vercel.app",
+    "status": "READY",
+    "terrain": "VISUALLY_VERIFIED",
+    "mobile": "390px no overflow or control collision",
+    "developmentControlsExposed": 0
+  },
+  "production": {
+    "id": "dpl_8czgYA58hSBDmLG8TbjgJmQ5k5Fo",
+    "sha": "6502d34cf841fab7568183b8e25db758c8ff86d2",
+    "url": "https://blue-marina.vercel.app/sea/navigation",
+    "status": "READY",
+    "terrain": "VISUALLY_VERIFIED",
+    "smoke": {
+      "checks": [
+        {
+          "path": "/sea/navigation",
+          "status": 200
+        },
+        {
+          "path": "/fishing-spots/rock-151",
+          "status": 200
+        },
+        {
+          "path": "/fishing-spots/conditions",
+          "status": 200
+        },
+        {
+          "path": "/api/navigation/terrain/v1/99/0/0",
+          "status": 404
+        }
+      ],
+      "dem": {
+        "status": 200,
+        "ms": 550,
+        "bytes": 20641,
+        "type": "image/png",
+        "model": "mapzen-land-only-v1",
+        "cache": "public, max-age=86400",
+        "min": 0,
+        "max": 961,
+        "width": 256,
+        "height": 256
+      }
+    },
+    "journey": "PASS: rock-151 -> Conditions (BM-SPECIES-000188) -> Navigation with exact 36.036417,126.513083 and label -> return to rock-151",
+    "developmentControlsExposed": 0
+  },
+  "safety": {
+    "safeRouteInference": 0,
+    "landReefAvoidance": 0,
+    "fabricatedBathymetry": 0,
+    "AIS": 0,
+    "navigationEquipmentReplacementClaim": 0,
+    "databaseAuthMutation": 0,
+    "environmentMutation": 0,
+    "otherBusinessDomainChanges": 0
+  },
+  "limitations": [
+    "REAL_DEVICE_NAVIGATION_NOT_VERIFIED",
+    "DEM is an approximate historical land elevation model, not current hydrography or an electronic nautical chart",
+    "Sea-level clamp also flattens genuine below-sea-level land; shoreline interpolation can differ from OSM",
+    "Provider availability and platform bandwidth/compute costs remain external limitations",
+    "Cold tile loading can show temporary gaps before loaded state; persistent errors fall back",
+    "Existing Supabase Edge Runtime build warning remains outside this change"
+  ],
+  "git": {
+    "codeFiles": [
+      "package.json",
+      "package-lock.json",
+      "src/app/api/navigation/terrain/v1/[z]/[x]/[y]/route.ts",
+      "src/app/sea/navigation/navigation-map.css",
+      "src/lib/marine-navigation/coastal-terrain.ts",
+      "src/lib/marine-navigation/terrain-tile-server.ts",
+      "src/components/boat/navigation/adapters/CoastalTerrainController.ts",
+      "src/components/boat/navigation/adapters/MapLibreNavigationProvider.ts",
+      "src/components/boat/navigation/adapters/MapLibreNavigationMap.tsx",
+      "src/components/boat/navigation/NavigationInstruments.tsx",
+      "tests/marine-navigation/navigation-v4-real-3d.test.cjs",
+      "tests/marine-navigation/navigation-v3-advanced-ux.test.cjs",
+      "tests/marine-navigation/navigation-ux-v2.test.cjs",
+      "tests/marine-navigation/mobile-hud-overlap-fix-v1.test.cjs"
+    ],
+    "unrelatedPreservation": "1885 dirty files byte-identical; mixed MapLibreNavigationMap retains only prior 3/3 ROMS lines; staged 0 after code commit",
+    "codeCommit": "6502d34cf841fab7568183b8e25db758c8ff86d2",
+    "evidenceFiles": [
+      "docs/BLUE_MARINA_NAVIGATION_V4_REAL_3D.md",
+      "reports/platform/navigation-v4-real-3d.json"
+    ],
+    "stagingPolicy": "Exact 14 code files plus 2 evidence files; mixed ROMS hunks excluded"
+  }
+}
