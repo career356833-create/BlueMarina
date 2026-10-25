@@ -36,3 +36,7 @@ body:has([data-navigation-immersive="true"]) > .blue-captain-widget { display: n
 @media (max-width: 640px) {
   #navigation-layer-drawer > div { top: 4.25rem; max-height: calc(100dvh - 12rem - env(safe-area-inset-bottom)); }
 }
+
+/* Keep DEM/data attribution above the collapsed details and start controls. */
+.bm-navigation-map .maplibregl-ctrl-bottom-right { bottom: 8rem; }
+.bm-navigation-map .maplibregl-ctrl-attrib-inner { max-width: min(24rem, calc(100vw - 3rem)); }

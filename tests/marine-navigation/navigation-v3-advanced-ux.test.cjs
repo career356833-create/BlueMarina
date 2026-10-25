@@ -27,19 +27,21 @@ class FakeMap {
  once(event,fn){return this.on(event,fn);}
  off(){return this;}
  emit(event,data={}){for(const fn of this.handlers[event]??[])fn(data);}
+ getCenter(){return {lng:129,lat:35};} getZoom(){return 12;} getTerrain(){return this.terrain;} setTerrain(t){this.terrain=t;} isSourceLoaded(){return true;}
  stop(){this.stopped=true;} addControl(){} addImage(){} setLayoutProperty(){} resize(){}
  addSource(id){this.sources[id]={setData(data){this.data=data;}};}
  getSource(id){return this.sources[id];}
  addLayer(layer){this.layers[layer.id]=layer;}
  getLayer(id){return this.layers[id];}
  getContainer(){return {clientHeight:600};}
+ jumpTo(options){this.center=options.center;this.moves.push(options);}
  easeTo(options){this.moves.push(options);}
  remove(){this.removed=true;}
 }
 const providerModule=load('src/components/boat/navigation/adapters/MapLibreNavigationProvider.ts',{'maplibre-gl':{Map:FakeMap,setWorkerUrl(){},NavigationControl:class{},AttributionControl:class{},LngLatBounds:class{extend(){return this;}}}});
 function provider(){
  const saved=global.document;global.document={createElement(){return {getContext(){return null;}}}};
- const p=new providerModule.MapLibreNavigationProvider({},()=>{});const map=FakeMap.instances.at(-1);map.emit('load');global.document=saved;
+ const p=new providerModule.MapLibreNavigationProvider({},()=>{});const map=FakeMap.instances.at(-1);map.emit('style.load');global.document=saved;
  return {p,map,present(extra={}){p.setPresentation({vessel,destination:null,waypoints:[],track:[],camera,...extra});}};
 }
 const trail=load('src/lib/marine-navigation/session-track.ts');
@@ -66,3 +68,6 @@ test('NAV-V3-17 three entry/exit cycles remove map and dev scenario timer has cl
 test('NAV-V3-18 destination handoff survives 3D and track options',()=>{const d=load('src/lib/marine-navigation/adapters/navigation-destination-adapter.ts');const dest=d.navigationDestinationFromFishingSpot({id:'rock-151',name:'개야도',lat:36.036417,lng:126.513083});assert.deepEqual(d.parseNavigationDestinationQuery(Object.fromEntries(new URL(d.buildNavigationHref(dest),'https://example.com').searchParams)).destination,dest);});
 test('NAV-V3-19 visual QA contract: dominant SOG, 44px controls, pointer-transparent HUD',()=>{assert.match(read('src/components/boat/navigation/NavigationInstruments.tsx'),/text-\[clamp\(3rem/);assert.match(read('src/components/boat/navigation/TrackRecorder.tsx'),/size-11/);assert.match(read('src/components/boat/navigation/NavigationTurnHUD.tsx'),/pointer-events-none/);});
 test('NAV-V3-20 dev scenarios A–K use real filter path, never production or safety claims',()=>{for(let i=0;i<12;i++){const frame=scenarios.testGpsFrame(i,1,vessel,100000);if(i===7)assert.equal(frame,null);else assert.ok(Number.isFinite(frame.coords.latitude));}const s=read('src/components/boat/navigation/MarineNavigation.tsx');assert.match(s,/acceptPosition\(fix, true\)/);assert.match(s,/process.env.NODE_ENV !== "production"/);assert.match(s,/안전항로가 아닙니다/);assert.doesNotMatch(read('src/lib/marine-navigation/simulation.ts'),/NEXT_PUBLIC_MARINE_NAVIGATION_SIMULATION/);});
+
+
+test('NAV-V4 initial destination is established before an interrupted animation or resize',()=>{const x=provider(); const destination={id:'manual:ulleung',name:'DEM QA',latitude:37.45,longitude:130.9,sourceType:'manual'};x.present({vessel:null,destination});assert.deepEqual(x.map.center,[130.9,37.45]);x.p.resize();x.present({vessel:null,destination,camera:{...camera,mode:'3d'}});assert.deepEqual(x.map.center,[130.9,37.45]);x.p.destroy();});

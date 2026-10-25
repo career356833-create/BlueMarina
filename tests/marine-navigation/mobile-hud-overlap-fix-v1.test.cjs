@@ -11,7 +11,7 @@ test('mobile map controls keep the MapLibre right rail while HUD and layers occu
   assert.match(navigation, /absolute left-3 top-3 z-\[520\] flex gap-2/);
   assert.match(navigation, /onClick=\{toggleHud\}/);
   assert.match(navigation, /aria-controls="navigation-layer-drawer"/);
-  assert.match(read('src/components/boat/navigation/adapters/MapLibreNavigationProvider.ts'), /new NavigationControl\(\{ showCompass: true, showZoom: true \}\), "top-right"/);
+  assert.match(read('src/components/boat/navigation/adapters/MapLibreNavigationProvider.ts'), /new NavigationControl\(\{ showCompass: false, showZoom: true \}\), "top-right"/);
 });
 
 test('expanded layer drawer clears the top controls and remains bounded on mobile', () => {

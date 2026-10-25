@@ -1,3 +1,5 @@
+import { CoastalTerrainController } from "./CoastalTerrainController";
+import type { TerrainState } from "@/lib/marine-navigation/coastal-terrain";
 import { distanceMeters } from "@/lib/marine-navigation/geo";
 import { cameraView, reliableMovementCourse, smoothBearing } from "@/lib/marine-navigation/vessel-instruments";
 import { AttributionControl, LngLatBounds, Map as MapLibreMap, NavigationControl, setWorkerUrl, type GeoJSONSource, type LayerSpecification, type MapMouseEvent, type SourceSpecification, type StyleSpecification } from "maplibre-gl";
@@ -36,6 +38,8 @@ function emptyGeoJson() {
 
 export class MapLibreNavigationProvider implements NavigationMapProvider<SourceSpecification, LayerSpecification> {
   private readonly map: MapLibreMap;
+  private readonly terrain: CoastalTerrainController;
+  private destroyed = false;
   private latestPresentation: MapPresentation | null = null;
   private loaded = false;
   private manualMoveHandler: () => void = () => undefined;
@@ -50,6 +54,7 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   private lastFocusedDestinationId: string | null = null;
   private pointSelectHandler: (point: GeoPoint) => void;
   private marineFeatureSelectHandler: (layerId: string, properties: unknown) => void;
+  private readonly marineClicks = new Map<string, (event: MapMouseEvent & { features?: GeoJSON.Feature[] }) => void>();
   private readonly marineLayers = new Map<string, string[]>();
   private readonly marineLayerConfigs = new Map<string, MapLibreMarineLayerConfig>();
 
@@ -63,6 +68,7 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
       zoom: mapLibrePrototypeAdapter.defaultZoom,
       attributionControl: false,
     });
+    this.terrain = new CoastalTerrainController(this.map);
     const beginGesture = () => { this.gestureActive = true; this.map.stop(); };
     const endGesture = () => { this.gestureActive = false; };
     this.map.on("mousedown", beginGesture);
@@ -73,11 +79,11 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
     this.map.on("dragend", endGesture);
     this.map.on("dragstart", () => this.manualMoveHandler());
     this.map.on("rotatestart", event => { if (event.originalEvent) this.manualMoveHandler(); });
-    this.map.addControl(new NavigationControl({ showCompass: true, showZoom: true }), "top-right");
+    this.map.addControl(new NavigationControl({ showCompass: false, showZoom: true }), "top-right");
     this.map.addControl(new AttributionControl({ compact: true }), "bottom-right");
     this.map.on("click", (event: MapMouseEvent) => {
       window.setTimeout(() => {
-        if (event.defaultPrevented) return;
+        if (this.destroyed || event.defaultPrevented) return;
         const marineLayerIds = [...this.marineLayers.values()].flat().filter((id) => this.map.getLayer(id));
         const marineFeature = marineLayerIds.length > 0 ? this.map.queryRenderedFeatures(event.point, { layers: marineLayerIds })[0] : null;
         if (marineFeature?.properties) {
@@ -88,12 +94,28 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
         this.pointSelectHandler({ latitude: event.lngLat.lat, longitude: event.lngLat.lng });
       }, 0);
     });
-    this.map.once("load", () => {
+    this.map.on("style.load", () => {
       this.loaded = true;
+      for (const [id, handler] of this.marineClicks) this.map.off("click", id, handler);
+      this.marineClicks.clear();
+      this.marineLayers.clear();
+      this.lastTrack = null;
+      this.lastCameraKey = "";
       this.installNavigationLayers();
       for (const config of this.marineLayerConfigs.values()) this.installMarineLayer(config);
       if (this.latestPresentation) this.renderPresentation(this.latestPresentation);
+      this.terrain.styleLoaded();
     });
+  }
+
+  setTerrainStateHandler(handler: (state: TerrainState) => void) { this.terrain.setListener(handler); }
+  setTerrainEnabled(enabled: boolean) { this.terrain.setEnabled(enabled); }
+  testTerrain(action: "ulleung" | "geoje" | "reload" | "failure") {
+    if (process.env.NODE_ENV === "production") return;
+    if (action === "failure") { this.terrain.simulateFailure(); return; }
+    if (action === "reload") { this.map.setStyle(TEMPORARY_BASE_STYLE, { diff: false }); return; }
+    this.manualMoveHandler();
+    this.map.jumpTo({ center: action === "ulleung" ? [130.9, 37.45] : [128.66, 34.77], zoom: action === "ulleung" ? 11.7 : 11.2, bearing: 0 });
   }
 
   setManualMoveHandler(handler: () => void) { this.manualMoveHandler = handler; }
@@ -142,7 +164,7 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
       const layerId = `marine-layer:${config.id}:${layer.id}`;
       this.map.addLayer({ ...layer, id: layerId, source: sourceId } as LayerSpecification, beforeId);
       this.map.setLayoutProperty(layerId, "visibility", config.visible === false ? "none" : "visible");
-      this.map.on("click", layerId, (event) => {
+      const clickHandler = (event: MapMouseEvent & { features?: GeoJSON.Feature[] }) => {
         const properties = event.features?.[0]?.properties;
         if (!properties) return;
         if (properties.cluster_id != null) {
@@ -155,7 +177,9 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
         }
         event.preventDefault();
         this.marineFeatureSelectHandler(config.id, { ...properties, id: properties.id ?? event.features?.[0]?.id });
-      });
+      };
+      this.map.on("click", layerId, clickHandler);
+      this.marineClicks.set(layerId, clickHandler);
       layerIds.push(layerId);
     }
     this.marineLayers.set(config.id, layerIds);
@@ -164,7 +188,12 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   removeMarineLayer(id: string) {
     this.marineLayerConfigs.delete(id);
     const layerIds = this.marineLayers.get(id) ?? [];
-    for (const layerId of [...layerIds].reverse()) if (this.map.getLayer(layerId)) this.map.removeLayer(layerId);
+    for (const layerId of [...layerIds].reverse()) {
+      const handler = this.marineClicks.get(layerId);
+      if (handler) this.map.off("click", layerId, handler);
+      this.marineClicks.delete(layerId);
+      if (this.map.getLayer(layerId)) this.map.removeLayer(layerId);
+    }
     const sourceId = `marine-source:${id}`;
     if (this.map.getSource(sourceId)) this.map.removeSource(sourceId);
     this.marineLayers.delete(id);
@@ -206,6 +235,8 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   }
 
   destroy() {
+    this.destroyed = true;
+    this.terrain.destroy();
     this.map.remove();
     this.marineLayers.clear();
     this.marineLayerConfigs.clear();
@@ -257,9 +288,12 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
     (this.map.getSource(sourceIds.accuracy) as GeoJSONSource).setData(toAccuracyGeoJson(presentation.vessel));
 
     const camera = presentation.camera;
+    this.terrain.setMode(camera?.mode ?? "2d");
     const newDestination = presentation.destination && presentation.destination.id !== this.lastFocusedDestinationId;
     if (newDestination && presentation.destination) {
       this.lastFocusedDestinationId = presentation.destination.id;
+      // Establish an initial destination before resize/mode updates can interrupt an ease.
+      if (camera && !presentation.vessel) this.map.jumpTo({ center: [presentation.destination.longitude, presentation.destination.latitude], zoom: 12 });
       if (!camera) this.focus(presentation.vessel ? [presentation.vessel, presentation.destination] : [presentation.destination]);
     }
     if (camera) {

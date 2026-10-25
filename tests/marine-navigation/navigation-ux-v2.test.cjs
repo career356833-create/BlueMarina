@@ -27,19 +27,21 @@ class FakeMap {
  once(event,fn){return this.on(event,fn);}
  off(){return this;}
  emit(event,data={}){for(const fn of this.handlers[event]??[])fn(data);}
+ getCenter(){return {lng:129,lat:35};} getZoom(){return 12;} getTerrain(){return this.terrain;} setTerrain(t){this.terrain=t;} isSourceLoaded(){return true;}
  stop(){this.stopped=true;} addControl(){} addImage(){} setLayoutProperty(){} resize(){}
  addSource(id){this.sources[id]={setData(data){this.data=data;}};}
  getSource(id){return this.sources[id];}
  addLayer(layer){this.layers[layer.id]=layer;}
  getLayer(id){return this.layers[id];}
  getContainer(){return {clientHeight:600};}
+ jumpTo(options){this.center=options.center;this.moves.push(options);}
  easeTo(options){this.moves.push(options);}
  remove(){this.removed=true;}
 }
 const providerModule=load('src/components/boat/navigation/adapters/MapLibreNavigationProvider.ts',{'maplibre-gl':{Map:FakeMap,setWorkerUrl(){},NavigationControl:class{},AttributionControl:class{},LngLatBounds:class{extend(){return this;}}}});
 function provider(){
  const saved=global.document;global.document={createElement(){return {getContext(){return null;}}}};
- const p=new providerModule.MapLibreNavigationProvider({},()=>{});const map=FakeMap.instances.at(-1);map.emit('load');global.document=saved;
+ const p=new providerModule.MapLibreNavigationProvider({},()=>{});const map=FakeMap.instances.at(-1);map.emit('style.load');global.document=saved;
  return {p,map,present(extra={}){p.setPresentation({vessel,destination:null,waypoints:[],track:[],camera,...extra});}};
 }
 test('NAV-V2-01 mode changes retain follow state',()=>{const c={...camera,mode:'3d',follow:false};assert.equal(instruments.cameraView(c,vessel,600).pitch,55);assert.equal(c.follow,false);});

@@ -14,6 +14,7 @@ import { createKhoaRomsLayerConfig, KHOA_OCEAN_CURRENT_MODEL_LAYER_ID, KHOA_OCEA
 import type { KmaMarineStation } from "@/lib/sea-info/kma-marine-observation";
 import { buildViewportSampleBbox, type KhoaRomsPoint } from "@/lib/sea-info/khoa-roms";
 import type { GeoPoint } from "@/lib/marine-navigation/types";
+import { terrainLabels, type TerrainState } from "@/lib/marine-navigation/coastal-terrain";
 import { MapLibreNavigationProvider } from "./MapLibreNavigationProvider";
 
 export default function MapLibreNavigationMap({ presentation, onManualMove, deepWaterRouteVisible, harborZoneVisible, navigationAidsVisible, trainingFiringZoneVisible, navigationWarningsVisible, tideStationsVisible, marineWeatherVisible, marineObservationsVisible, oceanCurrentModelVisible, navigationWarningFocus, onPointSelect, onDeepWaterRouteSelect, onHarborZoneSelect, onNavigationAidSelect, onTrainingFiringZoneSelect, onNavigationWarningSelect, onTideStationSelect, onMarineWeatherSelect, onMarineObservationSelect, onOceanCurrentModelSelect, onDeepWaterRouteStateChange, onHarborZoneStateChange, onNavigationAidsStateChange, onTrainingFiringZoneStateChange, onNavigationWarningsStateChange, onTideStationsStateChange, onMarineWeatherStateChange, onMarineObservationsStateChange, onOceanCurrentModelStateChange, onNavigationWarningsDataChange }: {
@@ -50,6 +51,8 @@ export default function MapLibreNavigationMap({ presentation, onManualMove, deep
   onOceanCurrentModelStateChange: (state: "loading" | "ready" | "failed") => void;
   onNavigationWarningsDataChange: (data: KhoaNavigationWarningsResponse | null) => void;
 }) {
+  const [terrainState, setTerrainState] = useState<TerrainState>("FLAT");
+  const [terrainEnabled, setTerrainEnabled] = useState(true);
   const elementRef = useRef<HTMLDivElement>(null);
   const providerRef = useRef<MapLibreNavigationProvider | null>(null);
   const manualMoveRef = useRef(onManualMove);
@@ -109,6 +112,7 @@ export default function MapLibreNavigationMap({ presentation, onManualMove, deep
         if (point) oceanCurrentModelSelectRef.current(point);
       }
     });
+    provider.setTerrainStateHandler(setTerrainState);
     provider.setManualMoveHandler(() => manualMoveRef.current?.());
     const resizeObserver = new ResizeObserver(() => provider.resize());
     resizeObserver.observe(elementRef.current);
@@ -450,5 +454,10 @@ export default function MapLibreNavigationMap({ presentation, onManualMove, deep
     providerRef.current?.setPresentation(presentation);
   }, [presentation]);
 
-  return <div className="relative h-full w-full"><div ref={elementRef} className="bm-navigation-map h-full w-full" aria-label="MapLibre marine navigation map" />{oceanCurrentModelVisible && romsValidTimes.length > 0 ? <label className="absolute right-3 bottom-[calc(8rem+env(safe-area-inset-bottom))] z-[450] border border-white/20 bg-[#06131a]/92 px-2.5 py-2 text-[9px] text-[#d9d3c5] shadow-lg backdrop-blur-md"><span className="mb-1 block text-[#d2b178]">KHOA ROMS MODEL · 유효 시각 원문</span><select value={romsSelectedValidAt} onChange={(event) => { requestedRomsValidAtRef.current = event.target.value; setRomsSelectedValidAt(event.target.value); setRomsTimeRevision((value) => value + 1); }} className="h-8 max-w-[220px] border border-white/15 bg-[#07161b] px-2 text-[10px] text-[#f2eee3] outline-none"><option value={romsSelectedValidAt}>{romsSelectedValidAt}</option>{romsValidTimes.filter((value) => value !== romsSelectedValidAt).map((value) => <option key={value} value={value}>{value}</option>)}</select><span className="mt-1 block text-[#899793]">시간대·모델 lead 미명시</span></label> : null}</div>;
+  return <div className="relative h-full w-full"><div ref={elementRef} className="bm-navigation-map h-full w-full" aria-label="MapLibre marine navigation map" />
+    <button type="button" aria-label="육상 3D 지형 전환" aria-pressed={terrainEnabled} title="육상 고도 참고용 · 수심 아님 · 전자해도 대체 불가" onClick={() => { const next = !terrainEnabled; setTerrainEnabled(next); providerRef.current?.setTerrainEnabled(next); }} className="absolute left-[11.5rem] right-[4.25rem] top-3 z-[510] min-h-11 max-w-48 rounded-xl border border-white/25 bg-[#06131a]/95 px-1.5 py-1 text-center text-white">
+      <span className="block text-[11px] font-semibold">육상 지형 {terrainEnabled ? "ON" : "OFF"}</span><span role="status" data-testid="terrain-state" className="block text-[9px] leading-tight text-[#b5eee1]">{terrainLabels[terrainState]}</span>
+    </button>
+    {process.env.NODE_ENV !== "production" ? <details className="absolute bottom-28 left-3 z-[510] max-w-60 rounded-lg border border-amber-300 bg-[#142329] p-2 text-xs text-amber-100"><summary className="min-h-11 cursor-pointer">개발 전용 지형 QA</summary><p>지도 시험 위치 · 실제 GPS 아님</p>{([['ulleung','울릉도 DEM 테스트'],['geoje','거제도 DEM 테스트'],['reload','스타일 다시 불러오기'],['failure','DEM 실패 모의']] as const).map(([action,label]) => <button key={action} type="button" className="m-1 min-h-11 border border-white/30 px-2" onClick={() => providerRef.current?.testTerrain(action)}>{label}</button>)}</details> : null}
+    {oceanCurrentModelVisible && romsValidTimes.length > 0 ? <label className="absolute right-3 bottom-[calc(8rem+env(safe-area-inset-bottom))] z-[450] border border-white/20 bg-[#06131a]/92 px-2.5 py-2 text-[9px] text-[#d9d3c5] shadow-lg backdrop-blur-md"><span className="mb-1 block text-[#d2b178]">KHOA ROMS MODEL · 유효 시각 원문</span><select value={romsSelectedValidAt} onChange={(event) => { requestedRomsValidAtRef.current = event.target.value; setRomsSelectedValidAt(event.target.value); setRomsTimeRevision((value) => value + 1); }} className="h-8 max-w-[220px] border border-white/15 bg-[#07161b] px-2 text-[10px] text-[#f2eee3] outline-none"><option value={romsSelectedValidAt}>{romsSelectedValidAt}</option>{romsValidTimes.filter((value) => value !== romsSelectedValidAt).map((value) => <option key={value} value={value}>{value}</option>)}</select><span className="mt-1 block text-[#899793]">시간대·모델 lead 미명시</span></label> : null}</div>;
 }

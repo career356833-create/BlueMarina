@@ -54,6 +54,7 @@
     "maplibre-gl": "^6.6.0",
     "next": "^15.1.0",
     "openai": "^4.77.0",
+    "pngjs": "7.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sharp": "^0.35.3",
@@ -62,6 +63,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "@types/pngjs": "6.0.5",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "autoprefixer": "^10.4.20",
