@@ -1,0 +1,227 @@
+{
+  "program": "BLUE MARINA NAVIGATION V3 — ADVANCED BOAT VIEW + GPS TRACKING + VISUAL QA",
+  "decision": "NAVIGATION_V3_COMPLETE_WITH_LIMITATIONS",
+  "realDevice": "REAL_DEVICE_NAVIGATION_NOT_VERIFIED",
+  "checkedAt": "2026-10-25T15:28:44.416577+00:00",
+  "baseline": {
+    "main": "115fdf31ec5c6e22a1889e8772a59691af0caf90",
+    "production": "115fdf31ec5c6e22a1889e8772a59691af0caf90",
+    "productionId": "dpl_3AwDUG3H1iY9TnDBdzCTAjpBmsuU"
+  },
+  "codeCommit": "4f0fde2bac1987970ef616b53fa10a8a5343c46a",
+  "codeFiles": [
+    "src/lib/marine-navigation/vessel-instruments.ts",
+    "src/lib/marine-navigation/session-track.ts",
+    "src/lib/marine-navigation/types.ts",
+    "src/lib/marine-navigation/adapters/navigation-map-adapter.ts",
+    "src/lib/marine-navigation/adapters/navigation-map-geojson.ts",
+    "src/lib/marine-navigation/gps-test-scenarios.ts",
+    "src/lib/marine-navigation/simulation.ts",
+    "src/components/boat/navigation/NavigationInstruments.tsx",
+    "src/components/boat/navigation/NavigationGpsSimulator.tsx",
+    "src/components/boat/navigation/MarineNavigation.tsx",
+    "src/components/boat/navigation/TrackRecorder.tsx",
+    "src/components/boat/navigation/NavigationTurnHUD.tsx",
+    "src/components/boat/navigation/adapters/MapLibreNavigationProvider.ts",
+    "tests/marine-navigation/navigation-ux-v2.test.cjs",
+    "tests/marine-navigation/navigation-v3-advanced-ux.test.cjs",
+    "tests/marine-navigation/live-sensors.test.cjs"
+  ],
+  "comparison": {
+    "speed": "V2 equal-size numbers → dominant 48–64px SOG with separate destination measurements",
+    "marker": "V2 north-facing default arrow → directional hull only when direction known, neutral position dot otherwise",
+    "camera": "V2 fixed height/6 offset → responsive 67–72% boat anchor; COG-only rotation, wrapped angle smoothing, jitter suppression",
+    "track": "existing persistent local recorder → bounded session memory, accuracy/age/jump filters, segmented gaps, visibility/clear controls",
+    "hud": "smaller transparent HUD; hidden when no usable position"
+  },
+  "camera": {
+    "pitch2D": 0,
+    "pitch3D": 55,
+    "anchorFraction": [
+      0.67,
+      0.72
+    ],
+    "courseUp": "reliable native/simulation movement COG only; compass is not substituted",
+    "unreliableCourse": "north fallback around last camera anchor, no new live-coordinate inference",
+    "drag": "suspends follow",
+    "recenter": "resumes follow",
+    "throttleMs": 750,
+    "positionDeadband": "max(3m, accuracy/2)",
+    "headingSmoothing": "shortest wrapped angle, 65% delta capped at 35 degrees per update",
+    "terrainDem": false
+  },
+  "gps": {
+    "nativeSpeedOnly": true,
+    "defaultUnit": "kn",
+    "alternateUnit": "km/h",
+    "nullSpeed": "unknown; never zero",
+    "validZero": "0.0",
+    "freshnessMs": 15000,
+    "maxAccuracyMeters": 50,
+    "smoothing": "existing V2 2-second exponential filter; verified acceleration/deceleration response",
+    "positionJump": "reject displacement greater than 60m/s × elapsed + both accuracy radii",
+    "states": [
+      "LIVE",
+      "LOW_ACCURACY",
+      "STALE",
+      "UNAVAILABLE"
+    ],
+    "stale": "gray last-position dot; no speed/distance/bearing calculation",
+    "directionUnknown": "non-directional dot; never implied north-facing hull",
+    "watcher": "existing watchLivePosition; cleanup + visibility freshness maintained"
+  },
+  "track": {
+    "storage": "React session memory only",
+    "pointsPerSessionMax": 2400,
+    "appendDistanceMeters": "max(5, min(15, accuracy))",
+    "gapBreakMs": 15000,
+    "breaks": [
+      "pause/resume",
+      "GPS restart",
+      "invalid fix",
+      "source change",
+      "age gap"
+    ],
+    "line": "blue with white casing, distinct from gold dashed direct-bearing line",
+    "toggle": true,
+    "clear": true,
+    "resetOnNavigationExitOrReload": true,
+    "serverUpload": false,
+    "accountActivity": false,
+    "legacyLocalStorageKey": "not read/written/deleted by V3"
+  },
+  "simulation": {
+    "access": "NODE_ENV != production only; no production query/env opt-in",
+    "label": "TEST / SIMULATION",
+    "pipeline": "same acceptPosition and speed/quality/plausibility path",
+    "scenarios": [
+      "0 kn",
+      "2.5 kn",
+      "8 kn",
+      "15 kn",
+      "5→15 kn acceleration",
+      "15→3 kn deceleration",
+      "150m accuracy",
+      "unavailable",
+      "20s stale",
+      "8-degree coordinate jump",
+      "turning COG",
+      "away from destination",
+      "exit/reenter"
+    ],
+    "observed": {
+      "rest": 0,
+      "moving": [
+        8,
+        15
+      ],
+      "low": 2.5,
+      "acceleration": "5.0 → 14.9",
+      "deceleration": "15.0 → 3.0",
+      "awayDistanceNm": "0.30 → 0.43",
+      "jump": "excluded notice; no teleport",
+      "trail": "79 points observed; clear while paused returned 0"
+    },
+    "realMeasurements": false,
+    "productionTelemetry": false
+  },
+  "verification": {
+    "targetedV3": 20,
+    "targetedV2V3Sensors": 46,
+    "full": {
+      "pass": 1367,
+      "skip": 1,
+      "fail": 0
+    },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "staticPages": 1467,
+    "diff": "PASS",
+    "cleanReproducibility": "git archive baseline + exact 16 files; reused locked npm-ci dependencies from preceding isolated validation, no package changes",
+    "localDbTests": "isolated PGlite; no remote DB"
+  },
+  "browser": {
+    "widths": [
+      360,
+      390,
+      430,
+      1280
+    ],
+    "heights": [
+      844,
+      900
+    ],
+    "horizontalOverflow": 0,
+    "primaryControlsMinPx": 44,
+    "localEntryExitCycles": 3,
+    "localGpsSimulation": "PASS",
+    "dragRecenter": "PASS",
+    "trackToggleClear": "PASS",
+    "destinationHandoff": "rock-151 → Conditions → Navigation; name/coords/return preserved",
+    "mapLifecycleErrorReproduced": false,
+    "mapConsoleErrors": 0,
+    "preview": "PASS",
+    "production": "PASS",
+    "physicalPinch": false
+  },
+  "preview": {
+    "id": "dpl_5eXRgApVhUR5d5aTmY23w39GVuoU",
+    "url": "https://blue-marina-60dur5spv-chiweon.vercel.app",
+    "state": "READY"
+  },
+  "production": {
+    "id": "dpl_EtrTot2mMk8qqCmuzVP7m9fzs98c",
+    "url": "https://blue-marina-aknkz77x7-chiweon.vercel.app",
+    "alias": "https://blue-marina.vercel.app/sea/navigation",
+    "state": "READY",
+    "sha": "4f0fde2bac1987970ef616b53fa10a8a5343c46a",
+    "observedSourceStates": {
+      "navigationAids": "PARTIAL",
+      "navigationWarning": "CURRENT STATUS UNAVAILABLE",
+      "marineWeatherObservation": "UNAVAILABLE",
+      "marineWarning": "UNAVAILABLE"
+    },
+    "returnToSpotDetail": "PASS: rock-151; reentry retained target"
+  },
+  "boundaries": {
+    "databaseMutation": 0,
+    "authChange": 0,
+    "businessBackendChange": 0,
+    "environmentChange": 0,
+    "funnelChange": 0,
+    "gpsTelemetryAdded": 0,
+    "safeRouteInference": 0,
+    "ais": 0,
+    "dem": 0,
+    "maplibreUpgrade": 0
+  },
+  "limitations": [
+    "Physical GPS, compass, actual acceleration/speed, pinch, sunlight and screen-lock/background resume remain unverified.",
+    "Position and speed rejection thresholds are display plausibility heuristics, not safe-speed or vessel capability limits.",
+    "3D is camera perspective, not surveyed seabed geometry.",
+    "Existing partial/unavailable marine data states remain; source activation is outside scope.",
+    "Base-map tile requests continue as before; no new GPS/track payload is transmitted."
+  ],
+  "git": {
+    "unrelatedOriginalFilesPreserved": 1886,
+    "stagedAfterCommit": 0,
+    "evidenceCommit": "documentation-only commit after code deployment"
+  },
+  "screenshotsRoot": "D:/Projects/bm-navigation-v3-115fdf3/outputs/navigation-v3",
+  "nextPrimaryPriority": "실제 선상 스마트폰 GPS/SOG/COG·직사광선·핀치·잠금 후 복귀 검증",
+  "screenshots": [
+    "390-2d-rest.jpg",
+    "390-3d-8kn-trail.jpg",
+    "390-3d-15kn.jpg",
+    "390-2d-track.jpg",
+    "390-low-accuracy.jpg",
+    "390-gps-unavailable.jpg",
+    "390-stale.jpg",
+    "360.jpg",
+    "430.jpg",
+    "1280.jpg",
+    "preview-390.jpg",
+    "production-390.jpg"
+  ]
+}
