@@ -1,0 +1,173 @@
+{
+  "program": "BLUE MARINA NAVIGATION UX V2",
+  "decision": "NAVIGATION_UX_V2_COMPLETE_WITH_LIMITATIONS",
+  "checkedAt": "2026-10-25T14:37:59.580535+00:00",
+  "baseline": "49c0bee602cbbf19104beb6c2b7beb669a5a1ea4",
+  "codeCommit": "0368b9843e43236aeff6d04e68b59465dd63839d",
+  "maplibre": {
+    "lockedVersion": "6.6.0",
+    "versionChanged": false,
+    "sharedAndWorkerAssetsUnchanged": true,
+    "engine": "existing MapLibreNavigationProvider",
+    "baseMap": "OpenStreetMap raster",
+    "terrainDem": false
+  },
+  "priorState": [
+    "destination-only focus; no vessel follow or pitch controls",
+    "native speed was not smoothed or spike-filtered; coordinate-derived fallback existed",
+    "small arrow marker; speed not prominent in immersive view"
+  ],
+  "camera": {
+    "twoDimensionalPitch": 0,
+    "threeDimensionalPitch": 55,
+    "followOffset": "positive viewport height / 6; vessel near lower third",
+    "followDefault": true,
+    "dragSuspendsFollow": true,
+    "recenterResumesFollow": true,
+    "gpsCameraThrottleMs": 750,
+    "gestureStopsCameraAnimation": true,
+    "modeChangeReusesMap": true
+  },
+  "boat": {
+    "shape": "high-contrast hull with cabin, white border",
+    "validPositionRequired": true,
+    "stalePositionHidden": true,
+    "accuracyCircleRetained": true
+  },
+  "sog": {
+    "source": "native GeolocationCoordinates.speed only",
+    "defaultUnit": "kn",
+    "alternateUnit": "km/h",
+    "knotsPerMps": 1.943844,
+    "kmhPerMps": 3.6,
+    "nullNaNNegative": "unknown, not zero",
+    "nativeZero": "0.0",
+    "maxFixAgeMs": 15000,
+    "maxAccuracyMeters": 50,
+    "smoothing": "exponential, 2-second time constant; native zero remains zero",
+    "spikeFilter": "reject >60 m/s or increase >max(4 m/s, elapsed * 3 m/s²) within 15 seconds of last accepted sample",
+    "filterMeaning": "display plausibility heuristic, not vessel safety/capability validation",
+    "derivedSpeedFallback": false
+  },
+  "heading": {
+    "destinationBearingSeparate": true,
+    "nativeCogMinRawSpeedMps": 1,
+    "nativeCogAlsoRequiresFilteredSpeed": true,
+    "absoluteDeviceCompassFallback": true,
+    "relativeOrientationRejected": true,
+    "unreliableCameraHeading": "north"
+  },
+  "destination": {
+    "distance": "straight line / nautical miles",
+    "staleCalculationsSuppressed": true,
+    "spotId": "rock-151",
+    "name": "개야도 - 에게이 서측 갯바위",
+    "latitude": 36.036417,
+    "longitude": 126.513083,
+    "localJourney": "Spot → Conditions → Navigation → Spot detail PASS",
+    "previewReturnAndReentry": "PASS"
+  },
+  "verification": {
+    "targetedV2": {
+      "pass": 18,
+      "fail": 0
+    },
+    "targetedWithLiveSensors": {
+      "pass": 26,
+      "fail": 0
+    },
+    "full": {
+      "pass": 1347,
+      "skip": 1,
+      "fail": 0
+    },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "cleanLockedDependencyBuild": "PASS",
+    "staticPages": 1467,
+    "diffCheck": "PASS",
+    "scope": "clean archive of main + exact V2 files; npm ci; existing local installed MapLibre 6.12.0 was not used for release validation",
+    "isolatedDatabaseTests": "PGlite 0.5.8 outside repository; no remote DB access"
+  },
+  "browser": {
+    "local": "PASS",
+    "preview": "real production-mode bundle; 2D/3D, map render, unit switch, unknown GPS, drawer, zoom and destination tested",
+    "widths": [
+      360,
+      390,
+      430,
+      1280
+    ],
+    "mobileHeight": 844,
+    "desktopHeight": 900,
+    "horizontalOverflow": 0,
+    "newControlsAndZoomTouchMinPx": 44,
+    "localSimulation": "existing clearly labeled SIMULATION mode; moving boat, SOG 7.8 kn / 14.4 km/h, 3D lower-third follow, drag suspension, recenter, rotation and unit switch observed",
+    "localReentryCycles": 3,
+    "previewReentryCycles": 3,
+    "tileReleaseUnloadErrorReproduced": false,
+    "lifecycleSpeculativeFix": false,
+    "consoleErrorsInCheckedNavigationSessions": 0,
+    "physicalGpsTested": false,
+    "physicalPinchTested": false
+  },
+  "preview": {
+    "id": "dpl_2MP5MSNkh7NLAidGgKuZbanvuTpi",
+    "url": "https://blue-marina-2v18zq7nv-chiweon.vercel.app",
+    "state": "READY"
+  },
+  "production": {
+    "id": "dpl_A23D7c9zULpVwacBSk1dTRBGb7oT",
+    "url": "https://blue-marina-7bhhreyj7-chiweon.vercel.app",
+    "alias": "https://blue-marina.vercel.app",
+    "state": "READY",
+    "codeSha": "0368b9843e43236aeff6d04e68b59465dd63839d",
+    "smoke": "PASS: alias navigation, real 2D/3D map, unit switch, unknown GPS, rock-151 return context, mobile controls"
+  },
+  "boundaries": {
+    "databaseMutation": 0,
+    "authChange": 0,
+    "businessBackendChange": 0,
+    "funnelChange": 0,
+    "environmentMutation": 0,
+    "ais": 0,
+    "safeRouteInference": 0,
+    "avoidanceInference": 0,
+    "fabricatedLiveGps": 0
+  },
+  "limitations": [
+    "Physical smartphone GPS, permission deny/re-allow, real movement/speed/compass and pinch have not been measured. REAL_DEVICE_NAVIGATION_READY is not claimed.",
+    "Speed/heading browser checks use the existing labeled local simulator; native sensor invalid/stale cases use automated sensor fixtures.",
+    "No verified DEM: 3D is camera perspective, not seabed geometry.",
+    "Existing PARTIAL / CURRENT STATUS UNAVAILABLE marine-source states remain unchanged.",
+    "Speed thresholds are conservative display heuristics requiring field validation; unknown native speed stays unknown."
+  ],
+  "git": {
+    "codeFiles": [
+      "src/app/sea/navigation/navigation-map.css",
+      "src/components/boat/navigation/MarineNavigation.tsx",
+      "src/components/boat/navigation/NavigationMapShell.tsx",
+      "src/components/boat/navigation/adapters/MapLibreNavigationMap.tsx",
+      "src/components/boat/navigation/adapters/MapLibreNavigationProvider.ts",
+      "src/lib/marine-navigation/adapters/navigation-map-adapter.ts",
+      "src/components/boat/navigation/NavigationInstruments.tsx",
+      "src/lib/marine-navigation/vessel-instruments.ts",
+      "tests/marine-navigation/navigation-ux-v2.test.cjs"
+    ],
+    "evidenceFiles": [
+      "docs/BLUE_MARINA_NAVIGATION_UX_V2.md",
+      "reports/platform/navigation-ux-v2.json"
+    ],
+    "unrelatedFilesHashPreserved": 1883,
+    "mixedFilesResidualDiffPreserved": 3,
+    "totalOriginalDirtyFilesPreserved": 1886,
+    "evidenceCommit": "documentation-only commit follows deployed code; no runtime changes"
+  },
+  "screenshots": {
+    "preview": "D:/Projects/bm-navigation-v2-49c0bee/outputs/navigation-ux-v2/preview-final-390.jpg",
+    "localSimulation": "D:/Projects/bm-navigation-v2-49c0bee/outputs/navigation-ux-v2/local-1280.jpg",
+    "production": "D:/Projects/bm-navigation-v2-49c0bee/outputs/navigation-ux-v2/production-390.jpg"
+  },
+  "reference": "https://maplibre.org/maplibre-gl-js/docs/API/type-aliases/CameraOptions/",
+  "nextPriority": "실제 스마트폰을 선상에서 사용하여 GPS/SOG/COG·권한·백그라운드 복귀·핀치 검증"
+}
