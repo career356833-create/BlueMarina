@@ -1,3 +1,4 @@
+import { cameraView } from "@/lib/marine-navigation/vessel-instruments";
 import { AttributionControl, LngLatBounds, Map as MapLibreMap, NavigationControl, setWorkerUrl, type GeoJSONSource, type LayerSpecification, type MapMouseEvent, type SourceSpecification, type StyleSpecification } from "maplibre-gl";
 import { toAccuracyGeoJson, toBearingGeoJson, toNavigationPointGeoJson, toTrackGeoJson } from "@/lib/marine-navigation/adapters/navigation-map-geojson";
 import { mapLibrePrototypeAdapter, type MapPresentation, type NavigationMapProvider, type NavigationMarineLayerConfig } from "@/lib/marine-navigation/adapters/navigation-map-adapter";
@@ -36,6 +37,12 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   private readonly map: MapLibreMap;
   private latestPresentation: MapPresentation | null = null;
   private loaded = false;
+  private manualMoveHandler: () => void = () => undefined;
+  private lastCameraKey = "";
+  private lastCameraFollow = false;
+  private gestureActive = false;
+  private lastCameraAt = 0;
+  private lastCameraTimestamp = -1;
   private lastFocusedDestinationId: string | null = null;
   private pointSelectHandler: (point: GeoPoint) => void;
   private marineFeatureSelectHandler: (layerId: string, properties: unknown) => void;
@@ -52,6 +59,16 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
       zoom: mapLibrePrototypeAdapter.defaultZoom,
       attributionControl: false,
     });
+    const beginGesture = () => { this.gestureActive = true; this.map.stop(); };
+    const endGesture = () => { this.gestureActive = false; };
+    this.map.on("mousedown", beginGesture);
+    this.map.on("touchstart", beginGesture);
+    this.map.on("mouseup", endGesture);
+    this.map.on("touchend", endGesture);
+    this.map.on("touchcancel", endGesture);
+    this.map.on("dragend", endGesture);
+    this.map.on("dragstart", () => this.manualMoveHandler());
+    this.map.on("rotatestart", event => { if (event.originalEvent) this.manualMoveHandler(); });
     this.map.addControl(new NavigationControl({ showCompass: true, showZoom: true }), "top-right");
     this.map.addControl(new AttributionControl({ compact: true }), "bottom-right");
     this.map.on("click", (event: MapMouseEvent) => {
@@ -74,6 +91,8 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
       if (this.latestPresentation) this.renderPresentation(this.latestPresentation);
     });
   }
+
+  setManualMoveHandler(handler: () => void) { this.manualMoveHandler = handler; }
 
   setPointSelectHandler(handler: (point: GeoPoint) => void) {
     this.pointSelectHandler = handler;
@@ -203,20 +222,23 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
     vesselImage.height = 64;
     const context = vesselImage.getContext("2d");
     if (context) {
-      context.fillStyle = "#1c5b60";
+      context.fillStyle = "#087f8c";
       context.strokeStyle = "#f2eee3";
       context.lineWidth = 4;
       context.beginPath();
       context.moveTo(32, 5);
-      context.lineTo(55, 54);
-      context.lineTo(32, 44);
-      context.lineTo(9, 54);
+      context.lineTo(49, 29);
+      context.lineTo(46, 57);
+      context.lineTo(18, 57);
+      context.lineTo(15, 29);
       context.closePath();
       context.fill();
       context.stroke();
+      context.fillStyle = "#f2eee3";
+      context.fillRect(25, 28, 14, 17);
       this.map.addImage("navigation-vessel-arrow", context.getImageData(0, 0, 64, 64), { pixelRatio: 2 });
     }
-    this.map.addLayer({ id: "navigation-vessel", type: "symbol", source: sourceIds.points, filter: ["==", ["get", "kind"], "vessel"], layout: { "icon-image": "navigation-vessel-arrow", "icon-rotate": ["get", "heading"], "icon-rotation-alignment": "map", "icon-allow-overlap": true } });
+    this.map.addLayer({ id: "navigation-vessel", type: "symbol", source: sourceIds.points, filter: ["==", ["get", "kind"], "vessel"], layout: { "icon-image": "navigation-vessel-arrow", "icon-rotate": ["get", "heading"], "icon-rotation-alignment": "map", "icon-allow-overlap": true, "icon-size": 1.3 } });
   }
 
   private renderPresentation(presentation: MapPresentation) {
@@ -225,9 +247,28 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
     (this.map.getSource(sourceIds.bearing) as GeoJSONSource).setData(toBearingGeoJson(presentation.vessel, presentation.destination));
     (this.map.getSource(sourceIds.accuracy) as GeoJSONSource).setData(toAccuracyGeoJson(presentation.vessel));
 
-    if (presentation.destination && presentation.destination.id !== this.lastFocusedDestinationId) {
+    const camera = presentation.camera;
+    const newDestination = presentation.destination && presentation.destination.id !== this.lastFocusedDestinationId;
+    if (newDestination && presentation.destination) {
       this.lastFocusedDestinationId = presentation.destination.id;
-      this.focus(presentation.vessel ? [presentation.vessel, presentation.destination] : [presentation.destination]);
+      if (!camera) this.focus(presentation.vessel ? [presentation.vessel, presentation.destination] : [presentation.destination]);
+    }
+    if (camera) {
+      const key = JSON.stringify([camera.mode, camera.courseUp, camera.recenter, camera.follow && Boolean(presentation.vessel)]);
+      const changed = key !== this.lastCameraKey;
+      const justSuspended = this.lastCameraFollow && !camera.follow;
+      this.lastCameraFollow = camera.follow;
+      if (justSuspended) { this.lastCameraKey = key; return; }
+      const now = Date.now();
+      const vessel = presentation.vessel;
+      const update = !this.gestureActive && camera.follow && vessel && vessel.timestamp !== this.lastCameraTimestamp && now - this.lastCameraAt >= 750;
+      if (changed || update || newDestination) {
+        this.lastCameraKey = key;
+        this.lastCameraAt = now;
+        this.lastCameraTimestamp = vessel?.timestamp ?? -1;
+        const view = cameraView(camera, vessel, this.map.getContainer().clientHeight);
+        this.map.easeTo({ ...view, ...(camera.follow && vessel ? { center: [vessel.longitude, vessel.latitude] as [number, number] } : newDestination && presentation.destination ? { center: [presentation.destination.longitude, presentation.destination.latitude] as [number, number], zoom: 12 } : {}), duration: changed ? 550 : 650 });
+      }
     }
   }
 }

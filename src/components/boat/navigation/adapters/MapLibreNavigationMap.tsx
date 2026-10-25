@@ -16,7 +16,7 @@ import { buildViewportSampleBbox, type KhoaRomsPoint } from "@/lib/sea-info/khoa
 import type { GeoPoint } from "@/lib/marine-navigation/types";
 import { MapLibreNavigationProvider } from "./MapLibreNavigationProvider";
 
-export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisible, harborZoneVisible, navigationAidsVisible, trainingFiringZoneVisible, navigationWarningsVisible, tideStationsVisible, marineWeatherVisible, marineObservationsVisible, oceanCurrentModelVisible, navigationWarningFocus, onPointSelect, onDeepWaterRouteSelect, onHarborZoneSelect, onNavigationAidSelect, onTrainingFiringZoneSelect, onNavigationWarningSelect, onTideStationSelect, onMarineWeatherSelect, onMarineObservationSelect, onOceanCurrentModelSelect, onDeepWaterRouteStateChange, onHarborZoneStateChange, onNavigationAidsStateChange, onTrainingFiringZoneStateChange, onNavigationWarningsStateChange, onTideStationsStateChange, onMarineWeatherStateChange, onMarineObservationsStateChange, onOceanCurrentModelStateChange, onNavigationWarningsDataChange }: {
+export default function MapLibreNavigationMap({ presentation, onManualMove, deepWaterRouteVisible, harborZoneVisible, navigationAidsVisible, trainingFiringZoneVisible, navigationWarningsVisible, tideStationsVisible, marineWeatherVisible, marineObservationsVisible, oceanCurrentModelVisible, navigationWarningFocus, onPointSelect, onDeepWaterRouteSelect, onHarborZoneSelect, onNavigationAidSelect, onTrainingFiringZoneSelect, onNavigationWarningSelect, onTideStationSelect, onMarineWeatherSelect, onMarineObservationSelect, onOceanCurrentModelSelect, onDeepWaterRouteStateChange, onHarborZoneStateChange, onNavigationAidsStateChange, onTrainingFiringZoneStateChange, onNavigationWarningsStateChange, onTideStationsStateChange, onMarineWeatherStateChange, onMarineObservationsStateChange, onOceanCurrentModelStateChange, onNavigationWarningsDataChange }: {
   presentation: MapPresentation;
   deepWaterRouteVisible: boolean;
   harborZoneVisible: boolean;
@@ -29,6 +29,7 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
   oceanCurrentModelVisible: boolean;
   navigationWarningFocus: KhoaNavigationWarning | null;
   onPointSelect: (point: GeoPoint) => void;
+  onManualMove?: () => void;
   onDeepWaterRouteSelect: (feature: KhoaDeepWaterRouteProperties) => void;
   onHarborZoneSelect: (feature: KhoaHarborZoneProperties) => void;
   onNavigationAidSelect: (feature: KhoaNavigationAid) => void;
@@ -51,6 +52,8 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
 }) {
   const elementRef = useRef<HTMLDivElement>(null);
   const providerRef = useRef<MapLibreNavigationProvider | null>(null);
+  const manualMoveRef = useRef(onManualMove);
+  useEffect(() => { manualMoveRef.current = onManualMove; }, [onManualMove]);
   const pointSelectRef = useRef(onPointSelect);
   const deepWaterRouteSelectRef = useRef(onDeepWaterRouteSelect);
   const harborZoneSelectRef = useRef(onHarborZoneSelect);
@@ -106,6 +109,7 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
         if (point) oceanCurrentModelSelectRef.current(point);
       }
     });
+    provider.setManualMoveHandler(() => manualMoveRef.current?.());
     const resizeObserver = new ResizeObserver(() => provider.resize());
     resizeObserver.observe(elementRef.current);
     providerRef.current = provider;
@@ -446,5 +450,5 @@ export default function MapLibreNavigationMap({ presentation, deepWaterRouteVisi
     providerRef.current?.setPresentation(presentation);
   }, [presentation]);
 
-  return <div className="relative h-full w-full"><div ref={elementRef} className="bm-navigation-map h-full w-full" aria-label="MapLibre marine navigation map" />{oceanCurrentModelVisible && romsValidTimes.length > 0 ? <label className="absolute left-3 top-20 z-[450] border border-white/20 bg-[#06131a]/92 px-2.5 py-2 text-[9px] text-[#d9d3c5] shadow-lg backdrop-blur-md"><span className="mb-1 block text-[#d2b178]">KHOA ROMS MODEL · 유효 시각 원문</span><select value={romsSelectedValidAt} onChange={(event) => { requestedRomsValidAtRef.current = event.target.value; setRomsSelectedValidAt(event.target.value); setRomsTimeRevision((value) => value + 1); }} className="h-8 max-w-[220px] border border-white/15 bg-[#07161b] px-2 text-[10px] text-[#f2eee3] outline-none"><option value={romsSelectedValidAt}>{romsSelectedValidAt}</option>{romsValidTimes.filter((value) => value !== romsSelectedValidAt).map((value) => <option key={value} value={value}>{value}</option>)}</select><span className="mt-1 block text-[#899793]">시간대·모델 lead 미명시</span></label> : null}</div>;
+  return <div className="relative h-full w-full"><div ref={elementRef} className="bm-navigation-map h-full w-full" aria-label="MapLibre marine navigation map" />{oceanCurrentModelVisible && romsValidTimes.length > 0 ? <label className="absolute right-3 bottom-[calc(8rem+env(safe-area-inset-bottom))] z-[450] border border-white/20 bg-[#06131a]/92 px-2.5 py-2 text-[9px] text-[#d9d3c5] shadow-lg backdrop-blur-md"><span className="mb-1 block text-[#d2b178]">KHOA ROMS MODEL · 유효 시각 원문</span><select value={romsSelectedValidAt} onChange={(event) => { requestedRomsValidAtRef.current = event.target.value; setRomsSelectedValidAt(event.target.value); setRomsTimeRevision((value) => value + 1); }} className="h-8 max-w-[220px] border border-white/15 bg-[#07161b] px-2 text-[10px] text-[#f2eee3] outline-none"><option value={romsSelectedValidAt}>{romsSelectedValidAt}</option>{romsValidTimes.filter((value) => value !== romsSelectedValidAt).map((value) => <option key={value} value={value}>{value}</option>)}</select><span className="mt-1 block text-[#899793]">시간대·모델 lead 미명시</span></label> : null}</div>;
 }

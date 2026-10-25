@@ -28,6 +28,7 @@ export function NavigationMapShell(props: {
   oceanCurrentModelVisible: boolean;
   navigationWarningFocus: KhoaNavigationWarning | null;
   onPointSelect: (point: GeoPoint) => void;
+  onManualMove?: () => void;
   onDeepWaterRouteSelect: (feature: KhoaDeepWaterRouteProperties) => void;
   onHarborZoneSelect: (feature: KhoaHarborZoneProperties) => void;
   onNavigationAidSelect: (feature: KhoaNavigationAid) => void;

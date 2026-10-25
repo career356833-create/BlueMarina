@@ -1,6 +1,9 @@
 import type { GeoPoint, NavigationDestination, SavedWaypoint, TrackPoint, VesselPosition } from "../types";
 
+import type { VesselCamera } from "../vessel-instruments";
+
 export type MapPresentation = {
+  camera?: VesselCamera;
   vessel: VesselPosition | null;
   destination: NavigationDestination | null;
   waypoints: SavedWaypoint[];

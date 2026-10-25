@@ -12,7 +12,7 @@
 
 .bm-navigation-map .maplibregl-ctrl-attrib a { color: #f0d09a; }
 .bm-navigation-map .maplibregl-ctrl-group { border-radius: 0; background: rgb(6 19 26 / 86%); }
-.bm-navigation-map .maplibregl-ctrl-group button { border-color: rgb(255 255 255 / 12%); }
+.bm-navigation-map .maplibregl-ctrl-group button { border-color: rgb(255 255 255 / 12%); width: 44px; height: 44px; }
 .bm-navigation-map .maplibregl-ctrl-icon { filter: invert(1) sepia(0.2); }
 .bm-navigation-scrollbar { scrollbar-color: rgb(210 177 120 / 55%) transparent; scrollbar-width: thin; }
 
