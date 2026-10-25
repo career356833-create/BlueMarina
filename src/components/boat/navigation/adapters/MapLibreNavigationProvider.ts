@@ -1,4 +1,5 @@
-import { cameraView } from "@/lib/marine-navigation/vessel-instruments";
+import { distanceMeters } from "@/lib/marine-navigation/geo";
+import { cameraView, reliableMovementCourse, smoothBearing } from "@/lib/marine-navigation/vessel-instruments";
 import { AttributionControl, LngLatBounds, Map as MapLibreMap, NavigationControl, setWorkerUrl, type GeoJSONSource, type LayerSpecification, type MapMouseEvent, type SourceSpecification, type StyleSpecification } from "maplibre-gl";
 import { toAccuracyGeoJson, toBearingGeoJson, toNavigationPointGeoJson, toTrackGeoJson } from "@/lib/marine-navigation/adapters/navigation-map-geojson";
 import { mapLibrePrototypeAdapter, type MapPresentation, type NavigationMapProvider, type NavigationMarineLayerConfig } from "@/lib/marine-navigation/adapters/navigation-map-adapter";
@@ -39,6 +40,9 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   private loaded = false;
   private manualMoveHandler: () => void = () => undefined;
   private lastCameraKey = "";
+  private cameraBearing = 0;
+  private lastCameraVessel: MapPresentation["vessel"] = null;
+  private lastTrack: MapPresentation["track"] | null = null;
   private lastCameraFollow = false;
   private gestureActive = false;
   private lastCameraAt = 0;
@@ -197,6 +201,8 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
 
   resize() {
     this.map.resize();
+    this.lastCameraKey = "";
+    if (this.loaded && this.latestPresentation && !this.gestureActive) this.renderPresentation(this.latestPresentation);
   }
 
   destroy() {
@@ -213,18 +219,21 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
 
     this.map.addLayer({ id: "navigation-accuracy-fill", type: "fill", source: sourceIds.accuracy, paint: { "fill-color": "#6f9e9d", "fill-opacity": 0.08 } });
     this.map.addLayer({ id: "navigation-accuracy-line", type: "line", source: sourceIds.accuracy, paint: { "line-color": "#6f9e9d", "line-width": 1 } });
-    this.map.addLayer({ id: "navigation-track-line", type: "line", source: sourceIds.track, paint: { "line-color": "#1c6c72", "line-width": 4, "line-opacity": 0.9 } });
+    this.map.addLayer({ id: "navigation-track-casing", type: "line", source: sourceIds.track, paint: { "line-color": "#ffffff", "line-width": 7, "line-opacity": 0.85 } });
+    this.map.addLayer({ id: "navigation-track-line", type: "line", source: sourceIds.track, paint: { "line-color": "#005dc2", "line-width": 4, "line-opacity": 0.9 } });
     this.map.addLayer({ id: "navigation-bearing-line", type: "line", source: sourceIds.bearing, paint: { "line-color": "#caa66c", "line-width": 2, "line-opacity": 0.78, "line-dasharray": [3.5, 4.5] } });
     this.map.addLayer({ id: "navigation-waypoints", type: "circle", source: sourceIds.points, filter: ["==", ["get", "kind"], "waypoint"], paint: { "circle-radius": 7, "circle-color": "#193c40", "circle-stroke-color": "#c9ddd7", "circle-stroke-width": 1 } });
-    this.map.addLayer({ id: "navigation-destination", type: "circle", source: sourceIds.points, filter: ["==", ["get", "kind"], "destination"], paint: { "circle-radius": 12, "circle-color": "#7a5b2a", "circle-stroke-color": "#d2b178", "circle-stroke-width": 2 } });
+    this.map.addLayer({ id: "navigation-destination", type: "circle", source: sourceIds.points, filter: ["==", ["get", "kind"], "destination"], paint: { "circle-radius": 12, "circle-color": "#b45e00", "circle-stroke-color": "#ffffff", "circle-stroke-width": 3 } });
+    this.map.addLayer({ id: "navigation-vessel-ring", type: "circle", source: sourceIds.points, filter: ["==", ["get", "kind"], "vessel"], paint: { "circle-radius": 25, "circle-color": "#ffffff", "circle-opacity": .2, "circle-stroke-width": 2, "circle-stroke-color": ["match", ["get", "state"], "STALE", "#64748b", "LOW_ACCURACY", "#b45309", "#006b75"] } });
+    this.map.addLayer({ id: "navigation-vessel-unknown", type: "circle", source: sourceIds.points, filter: ["all", ["==", ["get", "kind"], "vessel"], ["!=", ["get", "directionKnown"], true]], paint: { "circle-radius": 9, "circle-color": ["match", ["get", "state"], "STALE", "#64748b", "LOW_ACCURACY", "#b45309", "#006b75"], "circle-stroke-width": 3, "circle-stroke-color": "#ffffff" } });
     const vesselImage = document.createElement("canvas");
     vesselImage.width = 64;
     vesselImage.height = 64;
     const context = vesselImage.getContext("2d");
     if (context) {
-      context.fillStyle = "#087f8c";
+      context.fillStyle = "#003d50";
       context.strokeStyle = "#f2eee3";
-      context.lineWidth = 4;
+      context.lineWidth = 5;
       context.beginPath();
       context.moveTo(32, 5);
       context.lineTo(49, 29);
@@ -238,12 +247,12 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
       context.fillRect(25, 28, 14, 17);
       this.map.addImage("navigation-vessel-arrow", context.getImageData(0, 0, 64, 64), { pixelRatio: 2 });
     }
-    this.map.addLayer({ id: "navigation-vessel", type: "symbol", source: sourceIds.points, filter: ["==", ["get", "kind"], "vessel"], layout: { "icon-image": "navigation-vessel-arrow", "icon-rotate": ["get", "heading"], "icon-rotation-alignment": "map", "icon-allow-overlap": true, "icon-size": 1.3 } });
+    this.map.addLayer({ id: "navigation-vessel", type: "symbol", source: sourceIds.points, filter: ["all", ["==", ["get", "kind"], "vessel"], ["==", ["get", "directionKnown"], true]], layout: { "icon-image": "navigation-vessel-arrow", "icon-rotate": ["get", "heading"], "icon-rotation-alignment": "map", "icon-allow-overlap": true, "icon-size": 1.65, "icon-pitch-alignment": "viewport" } });
   }
 
   private renderPresentation(presentation: MapPresentation) {
     (this.map.getSource(sourceIds.points) as GeoJSONSource).setData(toNavigationPointGeoJson(presentation));
-    (this.map.getSource(sourceIds.track) as GeoJSONSource).setData(toTrackGeoJson(presentation.track));
+    if (this.lastTrack !== presentation.track) { (this.map.getSource(sourceIds.track) as GeoJSONSource).setData(toTrackGeoJson(presentation.track)); this.lastTrack = presentation.track; }
     (this.map.getSource(sourceIds.bearing) as GeoJSONSource).setData(toBearingGeoJson(presentation.vessel, presentation.destination));
     (this.map.getSource(sourceIds.accuracy) as GeoJSONSource).setData(toAccuracyGeoJson(presentation.vessel));
 
@@ -254,20 +263,25 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
       if (!camera) this.focus(presentation.vessel ? [presentation.vessel, presentation.destination] : [presentation.destination]);
     }
     if (camera) {
-      const key = JSON.stringify([camera.mode, camera.courseUp, camera.recenter, camera.follow && Boolean(presentation.vessel)]);
+      const key = JSON.stringify([camera.mode, camera.courseUp, camera.recenter, camera.follow, camera.courseUp && reliableMovementCourse(presentation.vessel) != null]);
       const changed = key !== this.lastCameraKey;
       const justSuspended = this.lastCameraFollow && !camera.follow;
       this.lastCameraFollow = camera.follow;
       if (justSuspended) { this.lastCameraKey = key; return; }
       const now = Date.now();
       const vessel = presentation.vessel;
-      const update = !this.gestureActive && camera.follow && vessel && vessel.timestamp !== this.lastCameraTimestamp && now - this.lastCameraAt >= 750;
+      const moved = vessel && (!this.lastCameraVessel || distanceMeters(vessel, this.lastCameraVessel) >= Math.max(3, (vessel.accuracyMeters ?? 0) / 2));
+      const turned = camera.courseUp && reliableMovementCourse(vessel) != null && Math.abs((((reliableMovementCourse(vessel)! - this.cameraBearing) % 360 + 540) % 360) - 180) > 3;
+      const update = (moved || turned) && !this.gestureActive && camera.follow && vessel && vessel.timestamp !== this.lastCameraTimestamp && now - this.lastCameraAt >= 750;
       if (changed || update || newDestination) {
         this.lastCameraKey = key;
         this.lastCameraAt = now;
         this.lastCameraTimestamp = vessel?.timestamp ?? -1;
-        const view = cameraView(camera, vessel, this.map.getContainer().clientHeight);
-        this.map.easeTo({ ...view, ...(camera.follow && vessel ? { center: [vessel.longitude, vessel.latitude] as [number, number] } : newDestination && presentation.destination ? { center: [presentation.destination.longitude, presentation.destination.latitude] as [number, number], zoom: 12 } : {}), duration: changed ? 550 : 650 });
+        if (vessel) this.lastCameraVessel = vessel;
+        const cameraAnchor = vessel ?? (newDestination ? null : this.lastCameraVessel);
+        const view = cameraView(camera, cameraAnchor, this.map.getContainer().clientHeight, this.map.getContainer().clientWidth);
+        this.cameraBearing = camera.courseUp && reliableMovementCourse(vessel) != null ? smoothBearing(this.cameraBearing, view.bearing) : 0;
+        this.map.easeTo({ ...view, bearing: this.cameraBearing, ...(camera.follow && cameraAnchor ? { center: [cameraAnchor.longitude, cameraAnchor.latitude] as [number, number] } : newDestination && presentation.destination ? { center: [presentation.destination.longitude, presentation.destination.latitude] as [number, number], zoom: 12 } : {}), duration: changed ? 550 : 650 });
       }
     }
   }

@@ -6,6 +6,8 @@ type NavigationPointProperties = {
   kind: "vessel" | "destination" | "waypoint";
   name: string;
   heading: number;
+  directionKnown?: boolean;
+  state?: string;
 };
 
 const emptyCollection = <TGeometry extends Point | LineString | Polygon, TProperties = Record<string, never>>(): FeatureCollection<TGeometry, TProperties> => ({
@@ -23,11 +25,14 @@ function pointFeature(point: GeoPoint, properties: NavigationPointProperties): F
 
 export function toNavigationPointGeoJson(input: {
   vessel: VesselPosition | null;
+  displayVessel?: VesselPosition | null;
+  vesselState?: string;
   destination: NavigationDestination | null;
   waypoints: SavedWaypoint[];
 }): FeatureCollection<Point, NavigationPointProperties> {
   const features: Array<Feature<Point, NavigationPointProperties>> = [];
-  if (isValidMapPoint(input.vessel)) features.push(pointFeature(input.vessel, { id: "current-vessel", kind: "vessel", name: "현재 위치", heading: input.vessel.heading ?? 0 }));
+  const vessel = input.displayVessel === undefined ? input.vessel : input.displayVessel;
+  if (isValidMapPoint(vessel)) features.push(pointFeature(vessel, { id: "current-vessel", kind: "vessel", name: input.vesselState === "STALE" ? "마지막 위치 · 오래됨" : "현재 위치", heading: vessel.heading ?? 0, directionKnown: input.vesselState !== "STALE" && input.vesselState !== "LOW_ACCURACY" && Number.isFinite(vessel.heading), state: input.vesselState ?? "LIVE" }));
   if (isValidMapPoint(input.destination)) features.push(pointFeature(input.destination, { id: input.destination.id, kind: "destination", name: input.destination.name, heading: 0 }));
   for (const waypoint of input.waypoints) {
     if (isValidMapPoint(waypoint)) features.push(pointFeature(waypoint, { id: waypoint.id, kind: "waypoint", name: waypoint.name, heading: 0 }));
@@ -36,9 +41,13 @@ export function toNavigationPointGeoJson(input: {
 }
 
 export function toTrackGeoJson(track: TrackPoint[]): FeatureCollection<LineString> {
-  const coordinates = track.filter(isValidMapPoint).map((point) => [point.longitude, point.latitude]);
-  if (coordinates.length < 2) return emptyCollection<LineString>();
-  return { type: "FeatureCollection", features: [{ type: "Feature", geometry: { type: "LineString", coordinates }, properties: {} }] };
+  const segments: number[][][] = [];
+  for (const point of track) {
+    if (!isValidMapPoint(point)) continue;
+    if (!segments.length || point.segmentStart) segments.push([]);
+    segments.at(-1)!.push([point.longitude, point.latitude]);
+  }
+  return { type: "FeatureCollection", features: segments.filter(coordinates => coordinates.length >= 2).map(coordinates => ({ type: "Feature", geometry: { type: "LineString", coordinates }, properties: {} })) };
 }
 
 export function toBearingGeoJson(vessel: VesselPosition | null, destination: NavigationDestination | null): FeatureCollection<LineString> {

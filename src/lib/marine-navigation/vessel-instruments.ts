@@ -24,7 +24,21 @@ export function reliableCourse(vessel: VesselPosition | null): number | null {
   return (vessel.speedKnots ?? 0) >= KNOTS_PER_MPS && ["GPS_NATIVE", "SIMULATION"].includes(vessel.headingSource) ? vessel.heading! : null;
 }
 
+// Course-up follows movement only. A compass is never substituted for COG.
+export function reliableMovementCourse(vessel: VesselPosition | null): number | null {
+  return vessel?.headingSource === "DEVICE_ORIENTATION" ? null : reliableCourse(vessel);
+}
+
+export function forwardAnchor(height: number, width = 390): number {
+  // Responsive 67–72% anchor; reserve room above the collapsed bottom panel.
+  return height <= 0 ? 0 : Math.min(height * .22, Math.max(height * .17, width * .34));
+}
+export function smoothBearing(previous: number, next: number): number {
+  const delta = (((next - previous) % 360 + 540) % 360) - 180;
+  return previous + Math.max(-35, Math.min(35, delta * .65));
+}
+
 export type VesselCamera = { mode: "2d" | "3d"; follow: boolean; courseUp: boolean; recenter: number };
-export function cameraView(camera: VesselCamera, vessel: VesselPosition | null, height: number) {
-  return { pitch: camera.mode === "3d" ? 55 : 0, bearing: camera.courseUp ? reliableCourse(vessel) ?? 0 : 0, offset: [0, camera.mode === "3d" && camera.follow && vessel ? height / 6 : 0] as [number, number] };
+export function cameraView(camera: VesselCamera, vessel: VesselPosition | null, height: number, width = 390) {
+  return { pitch: camera.mode === "3d" ? 55 : 0, bearing: camera.courseUp ? reliableMovementCourse(vessel) ?? 0 : 0, offset: [0, camera.mode === "3d" && camera.follow && vessel ? forwardAnchor(height, width) : 0] as [number, number] };
 }

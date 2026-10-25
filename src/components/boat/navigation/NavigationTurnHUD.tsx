@@ -22,15 +22,15 @@ export function NavigationTurnHUD({ navigation, vessel }: { navigation: Navigati
     : !vessel
       ? "GPS 위치 확인 중"
       : heading == null
-        ? "나침반을 켜세요"
+        ? "방향 미확인"
         : guidance?.direction === "port"
           ? `◀ 좌현 ${guidance.angleDegrees}°`
           : guidance?.direction === "starboard"
             ? `우현 ${guidance.angleDegrees}° ▶`
-            : "◇ 침로 유지 ◇";
+            : "◇ 목적지 방향 일치 ◇";
 
   return (
-    <div className="pointer-events-none absolute inset-x-4 top-[18%] z-[510] mx-auto h-[46%] max-h-[230px] min-h-[170px] max-w-[430px] text-[#8fffe9] drop-shadow-[0_1px_2px_rgba(0,18,16,0.95)]" role="status" aria-label={`방향 HUD: ${status}`}>
+    <div className="pointer-events-none absolute inset-x-4 top-[9%] z-[510] mx-auto h-[31%] max-h-[170px] min-h-[110px] max-w-[300px] text-[#8fffe9] drop-shadow-[0_1px_2px_rgba(0,18,16,0.95)]" role="status" aria-label={`방향 HUD: ${status}`}>
       <svg viewBox="0 0 360 200" className="h-full w-full" role="img" aria-hidden="true">
         <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
           <path d="M26 72v-22h28 M306 50h28v22" strokeWidth="1.4" opacity=".78" />

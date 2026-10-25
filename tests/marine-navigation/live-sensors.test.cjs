@@ -55,7 +55,7 @@ test('iOS permission rejection/denial never leaves an unhandled promise',async()
 });
 test('component integrates quality gating, resume refresh and listener cleanup',()=>{
   const s=fs.readFileSync(path.join(root,'src/components/boat/navigation/MarineNavigation.tsx'),'utf8');
-  assert.match(s,/quality !== "GOOD" && quality !== "LOW_ACCURACY"\) return null/);
+  assert.match(s,/quality !== "GOOD"\) return null/);
   assert.match(s,/document.addEventListener\("visibilitychange", refresh\)/);
   assert.match(s,/document.removeEventListener\("visibilitychange", refresh\)/);
   assert.match(s,/gpsCleanup.current\?\.\(\); compassGeneration.current\+\+/);

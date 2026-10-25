@@ -5,7 +5,7 @@ import type { NavigationDestination, VesselPosition } from "./types";
 export const simulationOrigin = { latitude: 35.1543, longitude: 129.1267 };
 
 export function simulationEnabled(): boolean {
-  return process.env.NODE_ENV !== "production" || process.env.NEXT_PUBLIC_MARINE_NAVIGATION_SIMULATION === "true";
+  return process.env.NODE_ENV !== "production";
 }
 
 export function advanceSimulation(current: VesselPosition, destination: NavigationDestination, meters = 4): VesselPosition {

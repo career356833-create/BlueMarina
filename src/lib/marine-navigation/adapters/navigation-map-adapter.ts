@@ -4,6 +4,8 @@ import type { VesselCamera } from "../vessel-instruments";
 
 export type MapPresentation = {
   camera?: VesselCamera;
+  displayVessel?: VesselPosition | null;
+  vesselState?: "LIVE" | "LOW_ACCURACY" | "STALE" | "UNAVAILABLE";
   vessel: VesselPosition | null;
   destination: NavigationDestination | null;
   waypoints: SavedWaypoint[];

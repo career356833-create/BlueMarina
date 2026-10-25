@@ -36,7 +36,7 @@ export type NavigationState = {
 };
 
 export type SavedWaypoint = NavigationDestination & { createdAt: number };
-export type TrackPoint = VesselPosition;
+export type TrackPoint = VesselPosition & { segmentStart?: boolean };
 export type TrackSession = {
   id: string;
   name: string;
