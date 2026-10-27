@@ -11,7 +11,7 @@ export function VoyagePanel({manager:m,fix,mapPoint,onSelect}:{manager:VoyageMan
   const [name,setName]=useState('');const [latitude,setLatitude]=useState('');const [longitude,setLongitude]=useState('');const [note,setNote]=useState('');const [editing,setEditing]=useState<SavedWaypoint|null>(null);
   const [waypointOpen,setWaypointOpen]=useState(false);const [confirmDelete,setConfirmDelete]=useState<string|null>(null);
   useEffect(()=>{if(mapPoint){setLatitude(String(mapPoint.latitude));setLongitude(String(mapPoint.longitude));setName('지도 선택 지점');setEditing(null);setWaypointOpen(true);}},[mapPoint]);
-  function download(v:Voyage) {const gpx=voyageGpx(v);if(!gpx){m.setNotice('내보낼 유효 항적이 없습니다.');return;}const url=URL.createObjectURL(new Blob([gpx],{type:'application/gpx+xml'}));const a=document.createElement('a');a.href=url;a.download=gpxFilename(v);a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+  function download(v:Voyage) {const gpx=voyageGpx(v);if(!gpx){m.setNotice('내보낼 유효 항적이 없습니다.');return;}const url=URL.createObjectURL(new Blob([gpx],{type:'application/gpx+xml'}));const a=document.createElement('a');a.href=url;a.download=gpxFilename(v);a.click();m.exported();setTimeout(()=>URL.revokeObjectURL(url),1000);}
   function saveWaypoint(){
     const p:SavedWaypoint={id:editing?.id??crypto.randomUUID(),createdAt:editing?.createdAt??Date.now(),sourceType:'manual',name:name.trim(),latitude:Number(latitude),longitude:Number(longitude),note:note.trim()};
     if(!latitude.trim() || !longitude.trim() || !validWaypoint(p)){m.setNotice('이름과 위도(-90~90), 경도(-180~180)를 확인하세요.');return;}

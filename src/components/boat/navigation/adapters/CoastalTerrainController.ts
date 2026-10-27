@@ -19,6 +19,7 @@ export class CoastalTerrainController {
     map.on("error", this.onError);
   }
   setListener(listener: (state: TerrainState) => void) { this.listener = listener; listener(this.state); }
+  getState() { return this.state; }
   private publish(next: TerrainState) { if (this.state !== next) { this.state = next; this.listener(next); } }
   private clearTimer() { if (this.timer) clearTimeout(this.timer); this.timer = undefined; }
   private onData = (event: { sourceId?: string; isSourceLoaded?: boolean }) => {

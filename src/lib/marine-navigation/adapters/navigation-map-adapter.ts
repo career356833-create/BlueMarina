@@ -3,6 +3,7 @@ import type { GeoPoint, NavigationDestination, SavedWaypoint, TrackPoint, Vessel
 import type { VesselCamera } from "../vessel-instruments";
 
 export type MapPresentation = {
+  fieldObserver?: (observation: import('../field-diagnostics').MapFieldObservation) => void;
   camera?: VesselCamera;
   displayVessel?: VesselPosition | null;
   vesselState?: "LIVE" | "LOW_ACCURACY" | "STALE" | "UNAVAILABLE";

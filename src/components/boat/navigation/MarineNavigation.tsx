@@ -5,6 +5,8 @@ import dynamic from "next/dynamic";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, ChevronDown, Layers3, LocateFixed, MapPinned, Radio, ShieldAlert, X } from "lucide-react";
 import { initialBearingDegrees, relativeBearingDegrees } from "@/lib/marine-navigation/bearing";
+import { useFieldDiagnostics } from './useFieldDiagnostics';
+import { FieldDiagnosticsPanel } from './FieldDiagnosticsPanel';
 import { useVoyageManager } from "./useVoyageManager";
 import { VoyagePanel, formatVoyageTime } from "./VoyagePanel";
 import { distanceMeters, metersToNauticalMiles } from "@/lib/marine-navigation/geo";
@@ -42,6 +44,8 @@ type OrientationEventWithCompass = DeviceOrientationEvent & { webkitCompassHeadi
 type OrientationConstructor = typeof DeviceOrientationEvent & { requestPermission?: () => Promise<"granted" | "denied"> };
 
 export function MarineNavigation({ initialDestination, initialQueryError, destinationOptions = sampleDestinations, onNavigationStart, onNavigationStop, onArrive }: MarineNavigationProps) {
+  const diagnostics = useFieldDiagnostics();
+  const fieldRecorder = diagnostics.recorder;
   const allowSimulation = simulationEnabled();
   const [mode, setMode] = useState<"live" | "simulation">("live");
   const [vessel, setVessel] = useState<VesselPosition | null>(null);
@@ -137,16 +141,18 @@ export function MarineNavigation({ initialDestination, initialQueryError, destin
     if (sample) { speedSample.current = sample; base.speedKnots = sample.metersPerSecond * KNOTS_PER_MPS; base.speedSource = simulated ? "SIMULATION" : "NATIVE_GEOLOCATION"; }
     // Missing native speed stays unknown; noisy coordinate differencing is not a SOG reading.
     if (position.coords.speed == null || position.coords.speed < 1 || reliableCourse(base) == null) { base.heading = undefined; base.headingSource = "UNAVAILABLE"; }
+    fieldRecorder.fix({timestamp, speedAvailable: position.coords.speed != null && Number.isFinite(position.coords.speed) && position.coords.speed >= 0, cogAvailable: position.coords.heading != null && Number.isFinite(position.coords.heading) && position.coords.heading >= 0 && position.coords.heading < 360, simulation:simulated});
     setVessel(base); setClock(Date.now()); setFailure(null);
-  }, []);
+  }, [fieldRecorder]);
 
   const startGps = useCallback(() => {
     stopGps(); setMode("live"); setFailure(null); setDeviceHeading(null);
     if (typeof navigator === "undefined" || !navigator.geolocation) { setFailure("unavailable"); return; }
     setCamera(current => ({ ...current, follow: true, recenter: current.recenter + 1 }));
     setGpsActive(true); setClock(Date.now());
+    fieldRecorder.action('GPS_REQUESTED');
     gpsCleanup.current = watchLivePosition(navigator.geolocation, acceptPosition, error => { trackBreak.current = true; setFailure(error); setGpsActive(false); });
-  }, [acceptPosition, stopGps]);
+  }, [acceptPosition, stopGps, fieldRecorder]);
 
   const enableCompass = useCallback(async () => {
     const generation = ++compassGeneration.current;
@@ -174,7 +180,18 @@ export function MarineNavigation({ initialDestination, initialQueryError, destin
       ? { ...vessel, heading: deviceHeading.degrees, headingSource: "DEVICE_ORIENTATION" as const }
       : { ...vessel, heading: undefined, headingSource: "UNAVAILABLE" as const };
   }, [clock, deviceHeading, quality, vessel]);
-  const voyage = useVoyageManager(effectiveVessel, destination);
+  const voyage = useVoyageManager(effectiveVessel, destination, fieldRecorder.action);
+  useEffect(() => {
+    if (!diagnostics.active) return;
+    fieldRecorder.observe({gpsQuality:quality, accuracyMeters:vessel?.accuracyMeters ?? null, lastFixAt:vessel?.timestamp ?? null,
+      fixAgeMs:vessel ? Math.max(0,Date.now()-vessel.timestamp) : null,
+      sogDisplay:effectiveVessel?.speedKnots != null ? 'AVAILABLE' : 'UNAVAILABLE',
+      compassReading:deviceHeading && Date.now()-deviceHeading.at <= POSITION_MAX_AGE_MS ? 'AVAILABLE' : 'UNKNOWN',
+      camera:camera.mode,follow:camera.follow ? 'ON' : 'OFF',wake:voyage.wakeState,voyage:voyage.session?.state ?? 'IDLE',
+      validPoints:voyage.session?.points.length ?? 0,track:trackVisible ? 'VISIBLE' : 'HIDDEN',
+      ...(failure==='permission-denied' ? {permission:'DENIED'} : {}),
+    });
+  }, [diagnostics.active,fieldRecorder,quality,vessel,effectiveVessel,deviceHeading,camera.mode,camera.follow,voyage.wakeState,voyage.session,trackVisible,failure,clock]);
   const waypoints = voyage.waypoints;
   const voyageState = voyage.session?.state;
   useEffect(()=>{if(!voyageState)return;setStatus(voyageState === "RECORDING" ? "navigating" : "idle");if(voyageState === "COMPLETED")onNavigationStop?.();},[voyageState,onNavigationStop]);
@@ -223,6 +240,7 @@ export function MarineNavigation({ initialDestination, initialQueryError, destin
           {quality === "STALE" && mode === "live" ? <p role="status" className="px-5 py-2 text-xs text-amber-200">위치 갱신이 15초 이상 지연됐습니다. 새 위치 수신 전에는 방향·거리 안내를 중지합니다.</p> : null}
           {quality === "LOW_ACCURACY" && mode === "live" ? <p role="status" className="px-5 py-2 text-xs text-amber-200">위치 오차 약 {Math.round(vessel?.accuracyMeters ?? 0)}m · 방향·거리는 부정확할 수 있습니다.</p> : null}
           {compassNotice ? <p role="status" className="px-5 py-2 text-xs text-amber-200">{compassNotice}</p> : null}
+          <FieldDiagnosticsPanel diagnostics={diagnostics} />
           <VoyagePanel manager={voyage} fix={effectiveVessel} mapPoint={mapPoint} onSelect={selectDestination} />
           <details><summary className="min-h-11 cursor-pointer px-4 py-3 text-sm">다른 목적지 선택</summary><NavigationDestinationPanel destination={destination} options={destinationOptions} onSelect={selectDestination} /></details>
           {allowSimulation && NavigationGpsSimulator ? <NavigationGpsSimulator active={mode === "simulation"} destination={destination} onStart={startSimulation} onFix={acceptSimulation} onUnavailable={failSimulation} /> : null}
@@ -231,7 +249,7 @@ export function MarineNavigation({ initialDestination, initialQueryError, destin
           </div>
         </aside>
         <section className="relative h-full min-h-0 overflow-hidden" aria-label="해상 내비게이션">
-          <NavigationMapShell onManualMove={suspendFollow} presentation={{ vessel: effectiveVessel, displayVessel: effectiveVessel ?? displayVessel, vesselState, destination, waypoints, historicalTrackId: voyage.viewed?.id, track: trackVisible ? voyage.viewed?.points ?? voyage.session?.points ?? visibleTrack?.points ?? [] : [], camera }} deepWaterRouteVisible={deepWaterRouteVisible} harborZoneVisible={harborZoneVisible} navigationAidsVisible={navigationAidsVisible} trainingFiringZoneVisible={trainingFiringZoneVisible} navigationWarningsVisible={navigationWarningsVisible} tideStationsVisible={tideStationsVisible} marineWeatherVisible={marineWeatherVisible} marineObservationsVisible={marineObservationsVisible} oceanCurrentModelVisible={oceanCurrentModelVisible} navigationWarningFocus={navigationWarningFocus} onPointSelect={selectMapPoint} onDeepWaterRouteSelect={(properties: KhoaDeepWaterRouteProperties) => setSelectedMarineFeature({ kind: "deep-water-route", properties })} onHarborZoneSelect={(properties: KhoaHarborZoneProperties) => setSelectedMarineFeature({ kind: "harbor-zone", properties })} onNavigationAidSelect={(properties: KhoaNavigationAid) => setSelectedMarineFeature({ kind: "navigation-aid", properties })} onTrainingFiringZoneSelect={(properties: KhoaTrainingFiringZoneProperties) => setSelectedMarineFeature({ kind: "training-firing-zone", properties })} onNavigationWarningSelect={selectNavigationWarning} onTideStationSelect={(properties: KhoaTideStation) => setSelectedMarineFeature({ kind: "tide-station", properties })} onMarineWeatherSelect={(properties: KmaMarineWeatherForecastZone) => setSelectedMarineFeature({ kind: "marine-weather", properties })} onMarineObservationSelect={(properties: KmaMarineStation) => setSelectedMarineFeature({ kind: "marine-observation", properties })} onOceanCurrentModelSelect={(properties: KhoaRomsPoint) => setSelectedMarineFeature({ kind: "ocean-current-model", properties })} onDeepWaterRouteStateChange={setDeepWaterRouteState} onHarborZoneStateChange={setHarborZoneState} onNavigationAidsStateChange={setNavigationAidsState} onTrainingFiringZoneStateChange={setTrainingFiringZoneState} onNavigationWarningsStateChange={setNavigationWarningsState} onTideStationsStateChange={setTideStationsState} onMarineWeatherStateChange={setMarineWeatherState} onMarineObservationsStateChange={setMarineObservationsState} onOceanCurrentModelStateChange={setOceanCurrentModelState} onNavigationWarningsDataChange={setNavigationWarningsData} />
+          <NavigationMapShell onManualMove={suspendFollow} presentation={{ fieldObserver: diagnostics.active ? fieldRecorder.observe : undefined, vessel: effectiveVessel, displayVessel: effectiveVessel ?? displayVessel, vesselState, destination, waypoints, historicalTrackId: voyage.viewed?.id, track: trackVisible ? voyage.viewed?.points ?? voyage.session?.points ?? visibleTrack?.points ?? [] : [], camera }} deepWaterRouteVisible={deepWaterRouteVisible} harborZoneVisible={harborZoneVisible} navigationAidsVisible={navigationAidsVisible} trainingFiringZoneVisible={trainingFiringZoneVisible} navigationWarningsVisible={navigationWarningsVisible} tideStationsVisible={tideStationsVisible} marineWeatherVisible={marineWeatherVisible} marineObservationsVisible={marineObservationsVisible} oceanCurrentModelVisible={oceanCurrentModelVisible} navigationWarningFocus={navigationWarningFocus} onPointSelect={selectMapPoint} onDeepWaterRouteSelect={(properties: KhoaDeepWaterRouteProperties) => setSelectedMarineFeature({ kind: "deep-water-route", properties })} onHarborZoneSelect={(properties: KhoaHarborZoneProperties) => setSelectedMarineFeature({ kind: "harbor-zone", properties })} onNavigationAidSelect={(properties: KhoaNavigationAid) => setSelectedMarineFeature({ kind: "navigation-aid", properties })} onTrainingFiringZoneSelect={(properties: KhoaTrainingFiringZoneProperties) => setSelectedMarineFeature({ kind: "training-firing-zone", properties })} onNavigationWarningSelect={selectNavigationWarning} onTideStationSelect={(properties: KhoaTideStation) => setSelectedMarineFeature({ kind: "tide-station", properties })} onMarineWeatherSelect={(properties: KmaMarineWeatherForecastZone) => setSelectedMarineFeature({ kind: "marine-weather", properties })} onMarineObservationSelect={(properties: KmaMarineStation) => setSelectedMarineFeature({ kind: "marine-observation", properties })} onOceanCurrentModelSelect={(properties: KhoaRomsPoint) => setSelectedMarineFeature({ kind: "ocean-current-model", properties })} onDeepWaterRouteStateChange={setDeepWaterRouteState} onHarborZoneStateChange={setHarborZoneState} onNavigationAidsStateChange={setNavigationAidsState} onTrainingFiringZoneStateChange={setTrainingFiringZoneState} onNavigationWarningsStateChange={setNavigationWarningsState} onTideStationsStateChange={setTideStationsState} onMarineWeatherStateChange={setMarineWeatherState} onMarineObservationsStateChange={setMarineObservationsState} onOceanCurrentModelStateChange={setOceanCurrentModelState} onNavigationWarningsDataChange={setNavigationWarningsData} />
           <div className="absolute left-3 top-3 z-[520] flex gap-2"><button type="button" onClick={() => setLayersOpen((open) => !open)} aria-expanded={layersOpen} aria-controls="navigation-layer-drawer" className="flex min-h-11 items-center gap-2 rounded-xl border border-white/25 bg-[#06131a]/85 px-3 text-xs font-semibold shadow-lg backdrop-blur-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8fffe9]"><Layers3 size={16} aria-hidden="true" />레이어</button><button type="button" onClick={toggleHud} aria-pressed={hudVisible} aria-label={`방향 HUD ${hudVisible ? "끄기" : "켜기"}`} className="min-h-11 rounded-xl border border-white/25 bg-[#06131a]/85 px-3 text-xs shadow-lg backdrop-blur-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8fffe9]">HUD {hudVisible ? "ON" : "OFF"}</button></div>
           {layersOpen ? <button type="button" onClick={() => { setLayersOpen(false); setSelectedMarineFeature(null); }} aria-label="해양 레이어 닫기" className="absolute right-3 top-3 z-[540] grid size-11 place-items-center rounded-xl border border-white/25 bg-[#06131a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8fffe9]"><X size={18} aria-hidden="true" /></button> : null}
           {hudVisible && effectiveVessel ? <NavigationTurnHUD navigation={navigation} vessel={effectiveVessel} /> : null}

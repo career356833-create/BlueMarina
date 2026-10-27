@@ -1,4 +1,5 @@
 import { CoastalTerrainController } from "./CoastalTerrainController";
+import { COASTAL_DEM } from "@/lib/marine-navigation/coastal-terrain";
 import type { TerrainState } from "@/lib/marine-navigation/coastal-terrain";
 import { distanceMeters } from "@/lib/marine-navigation/geo";
 import { cameraView, reliableMovementCourse, smoothBearing } from "@/lib/marine-navigation/vessel-instruments";
@@ -42,6 +43,21 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   private destroyed = false;
   private latestPresentation: MapPresentation | null = null;
   private loaded = false;
+  private fieldObserver: MapPresentation['fieldObserver'];
+  private fieldMapError = (event: unknown) => {
+    this.fieldObserver?.({mapError: event && typeof event === 'object' && 'sourceId' in event && event.sourceId === COASTAL_DEM.id ? 'DEM_SOURCE_ERROR' : 'MAP_RESOURCE_ERROR'});
+  };
+  private fieldContextLost = () => this.fieldObserver?.({mapError:'WEBGL_CONTEXT_LOST'});
+  private fieldContextRestored = () => this.fieldObserver?.({mapError:'WEBGL_CONTEXT_RESTORED'});
+  private fieldLoaded = () => this.fieldObserver?.({map:'LOADED'});
+  private setFieldObserver(observer: MapPresentation['fieldObserver']) {
+    if (observer === this.fieldObserver) return;
+    this.map.off('error',this.fieldMapError); this.map.off('webglcontextlost',this.fieldContextLost); this.map.off('webglcontextrestored',this.fieldContextRestored); this.map.off('load',this.fieldLoaded);
+    this.fieldObserver = observer;
+    if (!observer) return;
+    this.map.on('error',this.fieldMapError); this.map.on('webglcontextlost',this.fieldContextLost); this.map.on('webglcontextrestored',this.fieldContextRestored); this.map.on('load',this.fieldLoaded);
+    observer({map:this.loaded ? 'LOADED' : 'LOADING',terrain:this.terrain.getState(),mapError:'NONE_OBSERVED'});
+  }
   private manualMoveHandler: () => void = () => undefined;
   private lastCameraKey = "";
   private cameraBearing = 0;
@@ -109,7 +125,7 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
     });
   }
 
-  setTerrainStateHandler(handler: (state: TerrainState) => void) { this.terrain.setListener(handler); }
+  setTerrainStateHandler(handler: (state: TerrainState) => void) { this.terrain.setListener(state=>{handler(state);this.fieldObserver?.({terrain:state});}); }
   setTerrainEnabled(enabled: boolean) { this.terrain.setEnabled(enabled); }
   testTerrain(action: "ulleung" | "geoje" | "reload" | "failure") {
     if (process.env.NODE_ENV === "production") return;
@@ -130,6 +146,7 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   }
 
   setPresentation(presentation: MapPresentation) {
+    this.setFieldObserver(presentation.fieldObserver);
     this.latestPresentation = presentation;
     if (this.loaded) this.renderPresentation(presentation);
   }
@@ -236,6 +253,7 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   }
 
   destroy() {
+    this.setFieldObserver(undefined);
     this.destroyed = true;
     this.terrain.destroy();
     this.map.remove();
