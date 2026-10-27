@@ -35,7 +35,7 @@ export type NavigationState = {
   etaMinutes: number | null;
 };
 
-export type SavedWaypoint = NavigationDestination & { createdAt: number };
+export type SavedWaypoint = NavigationDestination & { createdAt: number; note?: string };
 export type TrackPoint = VesselPosition & { segmentStart?: boolean };
 export type TrackSession = {
   id: string;

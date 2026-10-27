@@ -16,7 +16,7 @@ test("spot destination handoff keeps source ID and coordinate safety hold", () =
   assert.match(adapter, /NAVIGATION_BLOCKED_PENDING_REVIEW/);
   assert.match(detail, /buildNavigationHref\(navigationDestinationFromFishingSpot\(spot\)\)/);
   assert.match(conditions, /buildNavigationHref\(navigationDestinationFromFishingSpot\(spot\)\)/);
-  assert.match(navigation, /\/fishing-spots\/\$\{encodeURIComponent\(destination\.sourceId\)\}/);
+  assert.match(navigation, /\/fishing-spots\/\$\{encodeURIComponent\(journeySource\.sourceId\)\}/);
 });
 
 test("navigation has map-first top bar, accessible on-demand controls, and no site BottomNav", () => {

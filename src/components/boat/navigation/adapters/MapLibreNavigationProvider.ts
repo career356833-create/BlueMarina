@@ -46,6 +46,7 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   private lastCameraKey = "";
   private cameraBearing = 0;
   private lastCameraVessel: MapPresentation["vessel"] = null;
+  private lastHistoricalTrackId: string | undefined;
   private lastTrack: MapPresentation["track"] | null = null;
   private lastCameraFollow = false;
   private gestureActive = false;
@@ -289,6 +290,11 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
 
     const camera = presentation.camera;
     this.terrain.setMode(camera?.mode ?? "2d");
+    if (presentation.historicalTrackId) {
+      if (this.lastHistoricalTrackId !== presentation.historicalTrackId) { this.lastHistoricalTrackId = presentation.historicalTrackId; this.manualMoveHandler(); this.focus(presentation.track); }
+      return; // Historical inspection never follows the live vessel or replaces its marker.
+    }
+    this.lastHistoricalTrackId = undefined;
     const newDestination = presentation.destination && presentation.destination.id !== this.lastFocusedDestinationId;
     if (newDestination && presentation.destination) {
       this.lastFocusedDestinationId = presentation.destination.id;

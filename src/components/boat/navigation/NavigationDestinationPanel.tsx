@@ -11,7 +11,7 @@ export function NavigationDestinationPanel({ destination, options, onSelect }: {
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const lat = Number(latitude); const lng = Number(longitude);
-    if (!Number.isFinite(lat) || !Number.isFinite(lng) || lat < -90 || lat > 90 || lng < -180 || lng > 180) { setError("유효한 위도와 경도를 입력하세요."); return; }
+    if (!latitude.trim() || !longitude.trim() || !Number.isFinite(lat) || !Number.isFinite(lng) || lat < -90 || lat > 90 || lng < -180 || lng > 180) { setError("유효한 위도와 경도를 입력하세요."); return; }
     setError(null);
     onSelect({ id: `manual:${lat},${lng}`, name: "입력 좌표", latitude: lat, longitude: lng, sourceType: "manual" });
   }

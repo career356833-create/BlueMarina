@@ -10,6 +10,7 @@ export type MapPresentation = {
   destination: NavigationDestination | null;
   waypoints: SavedWaypoint[];
   track: TrackPoint[];
+  historicalTrackId?: string;
 };
 
 export type NavigationMapAdapter = {
