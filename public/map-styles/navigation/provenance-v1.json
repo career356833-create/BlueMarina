@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "capturedAt": "2026-10-31",
+  "provider": "MapTiler / OpenStreetMap",
+  "sourceStyleHashes": {
+    "streets-v4": "0ccf7a1235fac7261b62ca5d061764e9ca14c1159ca2aab47bbcca7a052ab7bc",
+    "ocean-v4": "88e5e0978092ac4b69fa1d3ff6b4ca4f0329383f5e641e9ee9c4baefd23cbe0f",
+    "ocean-v4-dark": "7da0355f4753709ea0209173498fc52268c16dc8e0ced2b2dc3aff0626f1c3ea",
+    "hybrid-v4": "ec3467da89a965b121f17663d4299503e675adb32edf9c10b779f10f52e88643"
+  },
+  "styles": {
+    "ocean": {
+      "upstream": "ocean-v4",
+      "layers": 87,
+      "sources": [
+        "contours",
+        "grid",
+        "land",
+        "maptiler_planet_v4",
+        "ocean",
+        "ocean_rgb",
+        "terrain_rgb"
+      ],
+      "sha256": "8b99ea38d8d17ab62a8f72c1e06396a64dcd06ca692f4df70c67373ed38c65d7"
+    },
+    "night": {
+      "upstream": "ocean-v4-dark",
+      "layers": 87,
+      "sources": [
+        "contours",
+        "grid",
+        "land",
+        "maptiler_planet_v4",
+        "ocean",
+        "ocean_rgb",
+        "terrain_rgb"
+      ],
+      "sha256": "2ab9a335ce7bdc301ee43dbdb7fbdeeb57a9bbcfb6c3c42d56eb87cd326e1ade"
+    },
+    "satellite": {
+      "upstream": "hybrid-v4",
+      "layers": 42,
+      "sources": [
+        "maptiler_planet",
+        "satellite",
+        "maptiler_planet_v4"
+      ],
+      "sha256": "617e2bb9127f7e65efb7f08dcb4fd2b5398d977ba35dc666041abafcd8663fc9"
+    }
+  }
+}

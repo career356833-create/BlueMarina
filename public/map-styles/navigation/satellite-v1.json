@@ -1,0 +1,4820 @@
+{
+  "version": 8,
+  "name": "Blue Marina satellite Korean marine details",
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={MAPTILER_KEY}",
+  "sources": {
+    "maptiler_planet": {
+      "url": "https://api.maptiler.com/tiles/v4/tiles.json?key={MAPTILER_KEY}",
+      "type": "vector"
+    },
+    "satellite": {
+      "url": "https://api.maptiler.com/tiles/satellite-v2/tiles.json?key={MAPTILER_KEY}",
+      "type": "raster"
+    },
+    "maptiler_planet_v4": {
+      "url": "https://api.maptiler.com/tiles/v4/tiles.json?key={MAPTILER_KEY}",
+      "type": "vector"
+    }
+  },
+  "layers": [
+    {
+      "id": "Satellite",
+      "type": "raster",
+      "source": "satellite",
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "raster-hue-rotate": 0,
+        "raster-opacity": 1
+      }
+    },
+    {
+      "id": "Tunnel",
+      "type": "line",
+      "source": "maptiler_planet",
+      "source-layer": "road",
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "miter",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "hsla(0, 0%, 100%, 0.2)",
+        "line-dasharray": [
+          0.28,
+          0.14
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            1.5
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0.5,
+          20,
+          30
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "match",
+            [
+              "get",
+              "brunnel"
+            ],
+            [
+              "tunnel"
+            ],
+            true,
+            false
+          ],
+          [
+            "any",
+            [
+              "==",
+              [
+                "get",
+                "construction"
+              ],
+              false
+            ],
+            [
+              "!",
+              [
+                "has",
+                "construction"
+              ]
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Path",
+      "type": "line",
+      "source": "maptiler_planet",
+      "source-layer": "pathway",
+      "layout": {
+        "line-cap": "square",
+        "line-join": "bevel",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "hsla(0, 0%, 97%, 0.33)",
+        "line-dasharray": [
+          1,
+          1
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            1.5
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0.5,
+          20,
+          4
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "brunnel"
+          ],
+          [
+            "bridge",
+            "ford"
+          ],
+          true,
+          [
+            "!",
+            [
+              "has",
+              "brunnel"
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Road",
+      "type": "line",
+      "source": "maptiler_planet",
+      "source-layer": "road",
+      "minzoom": 6,
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": {
+          "stops": [
+            [
+              8,
+              "hsla(0, 0%, 100%, 0.2)"
+            ],
+            [
+              14,
+              "hsla(0, 0%, 100%, 0.4)"
+            ],
+            [
+              18,
+              "hsla(0, 0%, 100%, 0.5)"
+            ]
+          ]
+        },
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "motorway",
+              "motorway_link"
+            ],
+            1,
+            0
+          ],
+          7,
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "motorway",
+              "motorway_link",
+              "trunk"
+            ],
+            1.4,
+            0
+          ],
+          8,
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "motorway",
+              "motorway_link",
+              "primary",
+              "trunk"
+            ],
+            0.75,
+            0
+          ],
+          9,
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "secondary",
+              "tertiary"
+            ],
+            0.7,
+            1
+          ],
+          10,
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "motorway",
+              "motorway_link"
+            ],
+            1.3,
+            1.3
+          ],
+          14,
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "minor",
+              "service"
+            ],
+            0.5,
+            2.4
+          ]
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "brunnel"
+          ],
+          [
+            "tunnel"
+          ],
+          false,
+          true
+        ],
+        [
+          "any",
+          [
+            "==",
+            [
+              "get",
+              "construction"
+            ],
+            false
+          ],
+          [
+            "!",
+            [
+              "has",
+              "construction"
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Railway",
+      "type": "line",
+      "source": "maptiler_planet",
+      "source-layer": "railway",
+      "minzoom": 11,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "hsla(34, 0%, 100%, 0.2)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0.5,
+          16,
+          1.3
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          1,
+          16,
+          2
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "any",
+          [
+            "==",
+            [
+              "get",
+              "construction"
+            ],
+            false
+          ],
+          [
+            "!",
+            [
+              "has",
+              "construction"
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Ferry line",
+      "type": "line",
+      "source": "maptiler_planet_v4",
+      "source-layer": "ferry",
+      "minzoom": 6,
+      "layout": {
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#72e1ff",
+        "line-dasharray": [
+          2,
+          2
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0.8,
+          12,
+          1
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          1.4,
+          14,
+          2.2
+        ]
+      },
+      "filter": [
+        "==",
+        [
+          "geometry-type"
+        ],
+        "LineString"
+      ]
+    },
+    {
+      "id": "Sub border z9",
+      "type": "line",
+      "source": "maptiler_planet_v4",
+      "source-layer": "sub_border",
+      "minzoom": 9,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "hsl(0, 0%, 70%)",
+        "line-dasharray": [
+          2,
+          1
+        ],
+        "line-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          0,
+          8,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              50
+            ],
+            1,
+            0
+          ],
+          10,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "admin_level"
+              ],
+              70
+            ],
+            1,
+            0
+          ],
+          12,
+          1
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              50
+            ],
+            1,
+            0
+          ],
+          11,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "to-number",
+                [
+                  "get",
+                  "admin_level"
+                ]
+              ],
+              60
+            ],
+            1.2,
+            0.8
+          ],
+          18,
+          [
+            "case",
+            [
+              "==",
+              [
+                "to-number",
+                [
+                  "get",
+                  "admin_level"
+                ]
+              ],
+              50
+            ],
+            2,
+            [
+              "case",
+              [
+                "<=",
+                [
+                  "to-number",
+                  [
+                    "get",
+                    "admin_level"
+                  ]
+                ],
+                60
+              ],
+              1.6,
+              1
+            ]
+          ]
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "match",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              50,
+              60,
+              61,
+              70
+            ],
+            true,
+            false
+          ],
+          [
+            "==",
+            [
+              "get",
+              "maritime"
+            ],
+            false
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Sub border z7",
+      "type": "line",
+      "source": "maptiler_planet_v4",
+      "source-layer": "sub_border",
+      "minzoom": 7,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "hsl(0, 0%, 70%)",
+        "line-dasharray": [
+          2,
+          1
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0.8,
+          8,
+          1,
+          11,
+          1.5,
+          18,
+          1.8
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "==",
+            [
+              "get",
+              "maritime"
+            ],
+            false
+          ],
+          [
+            "any",
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              40
+            ],
+            [
+              "all",
+              [
+                "in",
+                [
+                  "get",
+                  "iso_a2"
+                ],
+                [
+                  "literal",
+                  [
+                    "AR",
+                    "US",
+                    "FR"
+                  ]
+                ]
+              ],
+              [
+                "==",
+                [
+                  "get",
+                  "admin_level"
+                ],
+                50
+              ]
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Sub border z2",
+      "type": "line",
+      "source": "maptiler_planet_v4",
+      "source-layer": "sub_border",
+      "minzoom": 2,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "hsl(0, 0%, 70%)",
+        "line-dasharray": [
+          2,
+          1
+        ],
+        "line-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          0,
+          2,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              50
+            ],
+            0,
+            1
+          ],
+          6,
+          1
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0.8,
+          8,
+          1.2,
+          11,
+          1.7,
+          18,
+          2
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "==",
+            [
+              "get",
+              "maritime"
+            ],
+            false
+          ],
+          [
+            "any",
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              30
+            ],
+            [
+              "all",
+              [
+                "==",
+                [
+                  "get",
+                  "iso_a2"
+                ],
+                "BR"
+              ],
+              [
+                "==",
+                [
+                  "get",
+                  "admin_level"
+                ],
+                40
+              ]
+            ],
+            [
+              "all",
+              [
+                "==",
+                [
+                  "get",
+                  "iso_a2"
+                ],
+                "FR"
+              ],
+              [
+                "==",
+                [
+                  "get",
+                  "admin_level"
+                ],
+                50
+              ]
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Disputed border",
+      "type": "line",
+      "source": "maptiler_planet_v4",
+      "source-layer": "country_border_disputed",
+      "minzoom": 0,
+      "maxzoom": 22,
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": [
+          "step",
+          [
+            "zoom"
+          ],
+          "hsl(0, 0%, 54%)",
+          5,
+          "hsl(33, 13%, 48%)"
+        ],
+        "line-dasharray": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "literal",
+            [
+              1,
+              0
+            ]
+          ],
+          5,
+          [
+            "literal",
+            [
+              3,
+              2,
+              0.1,
+              2
+            ]
+          ]
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.3,
+          4.9,
+          0.7,
+          5,
+          1.5,
+          10,
+          2,
+          22,
+          12
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "maritime"
+          ],
+          false
+        ]
+      ]
+    },
+    {
+      "id": "Country border",
+      "type": "line",
+      "source": "maptiler_planet_v4",
+      "source-layer": "country_border",
+      "minzoom": 0,
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "hsl(0, 0%, 54%)",
+        "line-width": {
+          "stops": [
+            [
+              1,
+              0.5
+            ],
+            [
+              5,
+              1.5
+            ],
+            [
+              10,
+              2
+            ],
+            [
+              24,
+              12
+            ]
+          ]
+        }
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "maritime"
+          ],
+          false
+        ]
+      ]
+    },
+    {
+      "id": "Marine country_border",
+      "type": "line",
+      "source": "maptiler_planet_v4",
+      "source-layer": "country_border",
+      "minzoom": 4,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "maritime"
+          ],
+          true
+        ]
+      ],
+      "paint": {
+        "line-color": "#d9a5f5",
+        "line-width": 1.8,
+        "line-opacity": 0.85
+      }
+    },
+    {
+      "id": "Marine country_border_disputed",
+      "type": "line",
+      "source": "maptiler_planet_v4",
+      "source-layer": "country_border_disputed",
+      "minzoom": 4,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "maritime"
+          ],
+          true
+        ]
+      ],
+      "paint": {
+        "line-color": "#d9a5f5",
+        "line-width": 1.8,
+        "line-opacity": 0.85,
+        "line-dasharray": [
+          4,
+          2
+        ]
+      }
+    },
+    {
+      "id": "Marine sub_border",
+      "type": "line",
+      "source": "maptiler_planet_v4",
+      "source-layer": "sub_border",
+      "minzoom": 4,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "maritime"
+          ],
+          true
+        ]
+      ],
+      "paint": {
+        "line-color": "#d9a5f5",
+        "line-width": 1.2,
+        "line-opacity": 0.85,
+        "line-dasharray": [
+          4,
+          2
+        ]
+      }
+    },
+    {
+      "id": "Airport labels",
+      "type": "symbol",
+      "source": "maptiler_planet",
+      "source-layer": "poi_station",
+      "minzoom": 6,
+      "layout": {
+        "text-anchor": "top",
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-line-height": 1.2,
+        "text-max-width": 9,
+        "text-offset": [
+          0,
+          1
+        ],
+        "text-optional": true,
+        "text-overlap": "never",
+        "text-padding": 2,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          7,
+          8,
+          9,
+          9,
+          10,
+          [
+            "match",
+            [
+              "get",
+              "subclass"
+            ],
+            "international",
+            10,
+            7
+          ],
+          14,
+          [
+            "match",
+            [
+              "get",
+              "subclass"
+            ],
+            "international",
+            14,
+            12
+          ],
+          18,
+          [
+            "match",
+            [
+              "get",
+              "subclass"
+            ],
+            "international",
+            18,
+            16
+          ]
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-letter-spacing": 0,
+        "text-transform": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          7,
+          1,
+          [
+            "match",
+            [
+              "get",
+              "subclass"
+            ],
+            [
+              "international"
+            ],
+            1,
+            0
+          ],
+          12,
+          1
+        ],
+        "text-halo-blur": 0.5
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "class"
+          ],
+          [
+            "aerodrome"
+          ],
+          true,
+          false
+        ]
+      ]
+    },
+    {
+      "id": "State labels z3",
+      "type": "symbol",
+      "source": "maptiler_planet",
+      "source-layer": "state_label",
+      "minzoom": 3,
+      "maxzoom": 7,
+      "layout": {
+        "symbol-sort-key": [
+          "case",
+          [
+            "has",
+            "iso3166"
+          ],
+          1,
+          2
+        ],
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-max-width": 7,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          12,
+          7,
+          13,
+          9,
+          16
+        ],
+        "text-transform": "none",
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          0,
+          2,
+          [
+            "case",
+            [
+              "all",
+              [
+                "==",
+                [
+                  "get",
+                  "iso_a2"
+                ],
+                "GB"
+              ],
+              [
+                "==",
+                [
+                  "get",
+                  "admin_level"
+                ],
+                40
+              ]
+            ],
+            0,
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              50
+            ],
+            0,
+            1
+          ],
+          6,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              40
+            ],
+            1,
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              30
+            ],
+            1,
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              50
+            ],
+            1,
+            0
+          ]
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "all",
+          [
+            "any",
+            [
+              "all",
+              [
+                "==",
+                [
+                  "get",
+                  "admin_level"
+                ],
+                30
+              ],
+              [
+                "!=",
+                [
+                  "get",
+                  "iso_a2"
+                ],
+                "BR"
+              ]
+            ],
+            [
+              "all",
+              [
+                "==",
+                [
+                  "get",
+                  "iso_a2"
+                ],
+                "BR"
+              ],
+              [
+                "==",
+                [
+                  "get",
+                  "admin_level"
+                ],
+                40
+              ]
+            ],
+            [
+              "all",
+              [
+                "==",
+                [
+                  "get",
+                  "iso_a2"
+                ],
+                "FR"
+              ],
+              [
+                "==",
+                [
+                  "get",
+                  "admin_level"
+                ],
+                50
+              ]
+            ]
+          ],
+          [
+            "match",
+            [
+              "get",
+              "worldview:ch"
+            ],
+            [
+              "recognized"
+            ],
+            true,
+            [
+              "!",
+              [
+                "has",
+                "worldview:ch"
+              ]
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Country labels disputed",
+      "type": "symbol",
+      "source": "maptiler_planet",
+      "source-layer": "country_disputed_label",
+      "minzoom": 3,
+      "maxzoom": 12,
+      "layout": {
+        "symbol-sort-key": [
+          "case",
+          [
+            "==",
+            [
+              "get",
+              "name:en"
+            ],
+            "Israel"
+          ],
+          0,
+          1
+        ],
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 10,
+        "text-size": [
+          "interpolate",
+          [
+            "linear",
+            1
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "name:en"
+              ],
+              "Israel"
+            ],
+            13,
+            12
+          ],
+          4,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "name:en"
+              ],
+              "Israel"
+            ],
+            15,
+            14
+          ],
+          6,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "name:en"
+              ],
+              "Israel"
+            ],
+            23,
+            18
+          ],
+          9,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "name:en"
+              ],
+              "Israel"
+            ],
+            27,
+            22
+          ]
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-letter-spacing": 0,
+        "text-transform": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "worldview:ch"
+          ],
+          [
+            "recognized"
+          ],
+          true,
+          [
+            "!",
+            [
+              "has",
+              "worldview:ch"
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Continent labels",
+      "type": "symbol",
+      "source": "maptiler_planet",
+      "source-layer": "continent_label",
+      "minzoom": 0,
+      "maxzoom": 1,
+      "layout": {
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-justify": "center",
+        "text-size": [
+          "interpolate",
+          [
+            "exponential",
+            1
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          12,
+          2,
+          14
+        ],
+        "text-transform": "none",
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-letter-spacing": 0,
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5
+      },
+      "metadata": {}
+    },
+    {
+      "id": "Lake labels",
+      "type": "symbol",
+      "source": "maptiler_planet",
+      "source-layer": "water_label",
+      "minzoom": 5,
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 350,
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-line-height": 1.2,
+        "text-max-width": 10,
+        "text-padding": 2,
+        "text-pitch-alignment": "viewport",
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          12,
+          9,
+          18,
+          14,
+          21
+        ],
+        "visibility": "visible",
+        "text-rotation-alignment": "viewport-glyph",
+        "text-transform": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5
+      },
+      "metadata": {},
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "lake",
+              "reservoir"
+            ],
+            true,
+            false
+          ],
+          [
+            "match",
+            [
+              "get",
+              "worldview:ch"
+            ],
+            [
+              "recognized"
+            ],
+            true,
+            [
+              "!",
+              [
+                "has",
+                "worldview:ch"
+              ]
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Ocean labels",
+      "type": "symbol",
+      "source": "maptiler_planet",
+      "source-layer": "water_centroid",
+      "minzoom": 2,
+      "layout": {
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-line-height": 1.2,
+        "text-size": [
+          "interpolate",
+          [
+            "linear",
+            1
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          13,
+          3,
+          16,
+          9,
+          22,
+          14,
+          26
+        ],
+        "text-transform": "none",
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5
+      },
+      "metadata": {},
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "class"
+          ],
+          [
+            "ocean"
+          ],
+          true,
+          false
+        ]
+      ]
+    },
+    {
+      "id": "Strait labels",
+      "type": "symbol",
+      "source": "maptiler_planet",
+      "source-layer": "water_label",
+      "minzoom": 5,
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 350,
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-line-height": 1.2,
+        "text-max-width": 10,
+        "text-pitch-alignment": "viewport",
+        "text-size": [
+          "interpolate",
+          [
+            "linear",
+            1
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          12,
+          9,
+          18,
+          14,
+          24
+        ],
+        "visibility": "visible",
+        "text-rotation-alignment": "viewport-glyph",
+        "text-transform": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5
+      },
+      "metadata": {},
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "class"
+          ],
+          [
+            "strait"
+          ],
+          true,
+          false
+        ]
+      ]
+    },
+    {
+      "id": "Bay labels (lines)",
+      "type": "symbol",
+      "source": "maptiler_planet",
+      "source-layer": "water_label",
+      "minzoom": 3,
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-sort-key": [
+          "to-number",
+          [
+            "get",
+            "rank"
+          ]
+        ],
+        "symbol-spacing": 350,
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-line-height": 1.2,
+        "text-max-width": 10,
+        "text-pitch-alignment": "viewport",
+        "text-size": [
+          "interpolate",
+          [
+            "linear",
+            1
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          12,
+          9,
+          18,
+          14,
+          24
+        ],
+        "visibility": "visible",
+        "text-rotation-alignment": "viewport-glyph",
+        "text-transform": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          0,
+          1,
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "ocean"
+            ],
+            1,
+            0
+          ],
+          3,
+          1
+        ]
+      },
+      "metadata": {},
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "bay"
+            ],
+            true,
+            false
+          ],
+          [
+            "match",
+            [
+              "get",
+              "worldview:ch"
+            ],
+            [
+              "recognized"
+            ],
+            true,
+            [
+              "!",
+              [
+                "has",
+                "worldview:ch"
+              ]
+            ]
+          ],
+          [
+            "match",
+            [
+              "get",
+              "name"
+            ],
+            [
+              "Bay of Bengal",
+              "Golfe de Gascogne/Golfo de Vizcaya/Bay of Biscay",
+              "Golfo de México",
+              "Great Australian Bight",
+              "Gulf of America",
+              "Gulf of Guinea",
+              "Hudson Bay"
+            ],
+            false,
+            true
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Bay labels",
+      "type": "symbol",
+      "source": "maptiler_planet",
+      "source-layer": "water_centroid",
+      "minzoom": 5,
+      "layout": {
+        "symbol-sort-key": [
+          "to-number",
+          [
+            "get",
+            "rank"
+          ]
+        ],
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-line-height": 1.2,
+        "text-size": [
+          "interpolate",
+          [
+            "linear",
+            1
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          12,
+          9,
+          18,
+          14,
+          24
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-transform": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5
+      },
+      "metadata": {},
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "all",
+          [
+            "match",
+            [
+              "get",
+              "worldview:ch"
+            ],
+            [
+              "recognized"
+            ],
+            true,
+            [
+              "!",
+              [
+                "has",
+                "worldview:ch"
+              ]
+            ]
+          ],
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "bay"
+            ],
+            true,
+            false
+          ],
+          [
+            "match",
+            [
+              "get",
+              "name"
+            ],
+            [
+              "Bay of Bengal",
+              "Golfe de Gascogne/Golfo de Vizcaya/Bay of Biscay",
+              "Golfo de México",
+              "Great Australian Bight",
+              "Gulf of America",
+              "Gulf of Guinea",
+              "Hudson Bay"
+            ],
+            true,
+            false
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Sea labels",
+      "type": "symbol",
+      "source": "maptiler_planet",
+      "source-layer": "water_centroid",
+      "minzoom": 3,
+      "layout": {
+        "symbol-sort-key": [
+          "to-number",
+          [
+            "get",
+            "rank"
+          ]
+        ],
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-line-height": 1.2,
+        "text-max-width": 6,
+        "text-size": [
+          "interpolate",
+          [
+            "linear",
+            1
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          10,
+          3,
+          12,
+          4,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "rank"
+              ],
+              1
+            ],
+            14,
+            12
+          ],
+          9,
+          20,
+          14,
+          24
+        ],
+        "text-transform": "none",
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          0,
+          3,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "rank"
+              ],
+              1
+            ],
+            1,
+            0
+          ],
+          4,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "rank"
+              ],
+              3
+            ],
+            1,
+            0
+          ],
+          5,
+          1
+        ]
+      },
+      "metadata": {},
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "all",
+          [
+            "match",
+            [
+              "get",
+              "worldview:ch"
+            ],
+            [
+              "recognized"
+            ],
+            true,
+            [
+              "!",
+              [
+                "has",
+                "worldview:ch"
+              ]
+            ]
+          ],
+          [
+            "match",
+            [
+              "get",
+              "name:en"
+            ],
+            [
+              "Adriatic Sea",
+              "Balearic Sea",
+              "Baltic Sea",
+              "Red Sea"
+            ],
+            false,
+            true
+          ],
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "sea"
+            ],
+            true,
+            false
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Sea labels (lines)",
+      "type": "symbol",
+      "source": "maptiler_planet",
+      "source-layer": "water_label",
+      "minzoom": 3,
+      "layout": {
+        "symbol-placement": "line-center",
+        "symbol-sort-key": [
+          "to-number",
+          [
+            "get",
+            "rank"
+          ]
+        ],
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-line-height": 1.2,
+        "text-pitch-alignment": "viewport",
+        "text-size": [
+          "interpolate",
+          [
+            "linear",
+            1
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          10,
+          3,
+          12,
+          4,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "rank"
+              ],
+              1
+            ],
+            14,
+            12
+          ],
+          9,
+          20,
+          14,
+          24
+        ],
+        "text-transform": "none",
+        "visibility": "visible",
+        "text-rotation-alignment": "viewport-glyph",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          0,
+          3,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "rank"
+              ],
+              1
+            ],
+            1,
+            0
+          ],
+          4,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "rank"
+              ],
+              3
+            ],
+            1,
+            0
+          ],
+          5,
+          1
+        ]
+      },
+      "metadata": {},
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "match",
+            [
+              "get",
+              "worldview:ch"
+            ],
+            [
+              "recognized"
+            ],
+            true,
+            [
+              "!",
+              [
+                "has",
+                "worldview:ch"
+              ]
+            ]
+          ],
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "sea"
+            ],
+            true,
+            false
+          ],
+          [
+            "match",
+            [
+              "get",
+              "name:en"
+            ],
+            [
+              "Adriatic Sea",
+              "Balearic Sea",
+              "Baltic Sea",
+              "Red Sea"
+            ],
+            true,
+            false
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Ferry labels",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "ferry_label",
+      "minzoom": 11,
+      "layout": {
+        "symbol-placement": "line",
+        "text-anchor": "center",
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-offset": [
+          0.8,
+          0.8
+        ],
+        "text-pitch-alignment": "viewport",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [
+              13,
+              11
+            ],
+            [
+              15,
+              12
+            ]
+          ]
+        },
+        "visibility": "visible",
+        "text-rotation-alignment": "viewport-glyph",
+        "text-letter-spacing": 0,
+        "text-transform": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5
+      }
+    },
+    {
+      "id": "Pathway labels",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "pathway_label",
+      "minzoom": 16,
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 500,
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-pitch-alignment": "viewport",
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          10,
+          16,
+          12,
+          18,
+          14,
+          22,
+          18
+        ],
+        "text-rotation-alignment": "viewport-glyph",
+        "text-letter-spacing": 0,
+        "text-transform": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "class"
+          ],
+          [
+            "bridleway",
+            "corridor",
+            "cycleway",
+            "footway",
+            "path",
+            "pedestrian",
+            "steps",
+            "track"
+          ],
+          true,
+          [
+            "!",
+            [
+              "has",
+              "class"
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Road labels",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "road_label",
+      "minzoom": 10,
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": [
+          "step",
+          [
+            "zoom"
+          ],
+          250,
+          20,
+          600
+        ],
+        "text-allow-overlap": false,
+        "text-anchor": "center",
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-ignore-placement": false,
+        "text-justify": "center",
+        "text-line-height": 1.1,
+        "text-max-width": 10,
+        "text-offset": [
+          0,
+          0.15
+        ],
+        "text-optional": false,
+        "text-pitch-alignment": "viewport",
+        "text-size": [
+          "interpolate",
+          [
+            "exponential",
+            1
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          10,
+          12,
+          11,
+          14,
+          13,
+          18,
+          15
+        ],
+        "visibility": "visible",
+        "text-rotation-alignment": "viewport-glyph",
+        "text-letter-spacing": 0,
+        "text-transform": "none"
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": 1
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "class"
+          ],
+          [
+            "minor",
+            "motorway",
+            "primary",
+            "raceway",
+            "secondary",
+            "service",
+            "tertiary",
+            "trunk"
+          ],
+          true,
+          false
+        ]
+      ]
+    },
+    {
+      "id": "Place labels",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "place_label",
+      "minzoom": 9,
+      "layout": {
+        "symbol-sort-key": [
+          "to-number",
+          [
+            "get",
+            "rank"
+          ]
+        ],
+        "text-anchor": "center",
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-max-width": 10,
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-padding": 2,
+        "text-size": [
+          "interpolate",
+          [
+            "linear",
+            1
+          ],
+          [
+            "zoom"
+          ],
+          9,
+          13,
+          10,
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "suburb",
+              "neighbourhood",
+              "quarter"
+            ],
+            9.4,
+            12
+          ],
+          16,
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "suburb",
+              "neighbourhood",
+              "quarter",
+              "hamlet",
+              "isolated_dwelling"
+            ],
+            13,
+            16
+          ]
+        ],
+        "text-transform": "none",
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "hamlet",
+              "isolated_dwelling"
+            ],
+            0,
+            1
+          ],
+          12,
+          1
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "any",
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            [
+              "neighbourhood",
+              "quarter",
+              "suburb"
+            ],
+            true,
+            false
+          ],
+          [
+            "all",
+            [
+              ">=",
+              [
+                "zoom"
+              ],
+              12
+            ],
+            [
+              "match",
+              [
+                "get",
+                "class"
+              ],
+              [
+                "hamlet",
+                "isolated_dwelling"
+              ],
+              true,
+              false
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Ferry terminal",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "poi_station",
+      "minzoom": 12,
+      "layout": {
+        "symbol-sort-key": [
+          "coalesce",
+          [
+            "to-number",
+            [
+              "get",
+              "rank"
+            ]
+          ],
+          9999
+        ],
+        "text-anchor": "top",
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-line-height": 1,
+        "text-max-width": 5,
+        "text-offset": [
+          0,
+          0.8
+        ],
+        "text-padding": 2,
+        "text-radial-offset": 0,
+        "text-rotate": 0,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          12,
+          18,
+          14,
+          22,
+          16
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-letter-spacing": 0,
+        "text-transform": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": 1
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          "ferry_terminal"
+        ]
+      ]
+    },
+    {
+      "id": "Military label",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "military_label",
+      "minzoom": 8,
+      "maxzoom": 16,
+      "layout": {
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 8,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          9,
+          14,
+          13,
+          16,
+          15
+        ],
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-letter-spacing": 0,
+        "text-transform": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5
+      },
+      "filter": [
+        "==",
+        [
+          "geometry-type"
+        ],
+        "Point"
+      ]
+    },
+    {
+      "id": "Village labels",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "place_label",
+      "minzoom": 10,
+      "layout": {
+        "symbol-sort-key": [
+          "to-number",
+          [
+            "get",
+            "rank"
+          ]
+        ],
+        "text-anchor": "center",
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-max-width": 6,
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-padding": 2,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          9,
+          11,
+          11,
+          14,
+          16,
+          18
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-transform": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          0,
+          4,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "rank"
+              ],
+              3
+            ],
+            1,
+            0
+          ],
+          5,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "rank"
+              ],
+              5
+            ],
+            1,
+            0
+          ],
+          7,
+          1
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "class"
+          ],
+          [
+            "village"
+          ],
+          true,
+          false
+        ]
+      ]
+    },
+    {
+      "id": "State labels z9",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "state_label",
+      "minzoom": 9,
+      "maxzoom": 11,
+      "layout": {
+        "symbol-sort-key": [
+          "get",
+          "admin_level"
+        ],
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-max-width": 8,
+        "text-overlap": "never",
+        "text-padding": 2,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          7,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              50
+            ],
+            10,
+            9
+          ],
+          10,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              50
+            ],
+            13,
+            11
+          ]
+        ],
+        "text-transform": "none",
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          0,
+          2,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "admin_level"
+              ],
+              40
+            ],
+            1,
+            0
+          ],
+          8,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "admin_level"
+              ],
+              50
+            ],
+            1,
+            0
+          ],
+          11,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "admin_level"
+              ],
+              70
+            ],
+            1,
+            0
+          ],
+          12,
+          1
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "all",
+          [
+            "match",
+            [
+              "get",
+              "admin_level"
+            ],
+            [
+              50,
+              60,
+              61,
+              70
+            ],
+            true,
+            false
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "State labels z7",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "state_label",
+      "minzoom": 7,
+      "maxzoom": 9,
+      "layout": {
+        "symbol-sort-key": [
+          "case",
+          [
+            "has",
+            "iso3166"
+          ],
+          1,
+          2
+        ],
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-max-width": 8,
+        "text-overlap": "never",
+        "text-padding": 2,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          10,
+          9,
+          14
+        ],
+        "text-transform": "none",
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          0,
+          2,
+          [
+            "case",
+            [
+              "all",
+              [
+                "==",
+                [
+                  "get",
+                  "iso_a2"
+                ],
+                "GB"
+              ],
+              [
+                "==",
+                [
+                  "get",
+                  "admin_level"
+                ],
+                40
+              ]
+            ],
+            0,
+            1
+          ],
+          6,
+          1
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "any",
+          [
+            "==",
+            [
+              "get",
+              "admin_level"
+            ],
+            40
+          ],
+          [
+            "all",
+            [
+              "in",
+              [
+                "get",
+                "iso_a2"
+              ],
+              [
+                "literal",
+                [
+                  "AR",
+                  "FR",
+                  "US"
+                ]
+              ]
+            ],
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              50
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Island labels",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "island_label",
+      "minzoom": 5,
+      "layout": {
+        "symbol-sort-key": [
+          "to-number",
+          [
+            "get",
+            "rank"
+          ]
+        ],
+        "text-anchor": "center",
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-max-width": 6,
+        "text-offset": [
+          0,
+          0
+        ],
+        "text-overlap": "never",
+        "text-padding": 2,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          11,
+          10,
+          13,
+          15,
+          16
+        ],
+        "text-transform": "none",
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": 1
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "rank"
+          ],
+          [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          true,
+          false
+        ]
+      ]
+    },
+    {
+      "id": "Town labels",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "town_label",
+      "minzoom": 6,
+      "maxzoom": 16,
+      "layout": {
+        "symbol-sort-key": [
+          "+",
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "capital"
+              ],
+              20
+            ],
+            -1000,
+            0
+          ],
+          [
+            "to-number",
+            [
+              "get",
+              "rank"
+            ]
+          ]
+        ],
+        "text-anchor": "bottom",
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 8,
+        "text-offset": [
+          0,
+          -0.15
+        ],
+        "text-size": [
+          "interpolate",
+          [
+            "linear",
+            1
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "rank"
+              ],
+              2
+            ],
+            11,
+            10
+          ],
+          9,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "rank"
+              ],
+              4
+            ],
+            13,
+            12
+          ],
+          16,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "rank"
+              ],
+              4
+            ],
+            22,
+            20
+          ]
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-letter-spacing": 0,
+        "text-transform": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          0,
+          4,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "rank"
+              ],
+              3
+            ],
+            1,
+            0
+          ],
+          5,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "rank"
+              ],
+              5
+            ],
+            1,
+            0
+          ],
+          7,
+          1
+        ]
+      },
+      "filter": [
+        "==",
+        [
+          "geometry-type"
+        ],
+        "Point"
+      ]
+    },
+    {
+      "id": "State labels z2",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "state_label",
+      "minzoom": 2,
+      "maxzoom": 7,
+      "layout": {
+        "symbol-sort-key": [
+          "case",
+          [
+            "has",
+            "iso3166"
+          ],
+          1,
+          2
+        ],
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-max-width": 8,
+        "text-overlap": "never",
+        "text-padding": 2,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          2,
+          9,
+          6,
+          12
+        ],
+        "text-transform": "none",
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          0,
+          2,
+          [
+            "case",
+            [
+              "all",
+              [
+                "==",
+                [
+                  "get",
+                  "iso_a2"
+                ],
+                "GB"
+              ],
+              [
+                "==",
+                [
+                  "get",
+                  "admin_level"
+                ],
+                40
+              ]
+            ],
+            0,
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              50
+            ],
+            0,
+            1
+          ],
+          6,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              40
+            ],
+            1,
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              30
+            ],
+            1,
+            [
+              "==",
+              [
+                "get",
+                "admin_level"
+              ],
+              50
+            ],
+            1,
+            0
+          ]
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "all",
+          [
+            "any",
+            [
+              "all",
+              [
+                "==",
+                [
+                  "get",
+                  "admin_level"
+                ],
+                30
+              ],
+              [
+                "!=",
+                [
+                  "get",
+                  "iso_a2"
+                ],
+                "BR"
+              ]
+            ],
+            [
+              "all",
+              [
+                "==",
+                [
+                  "get",
+                  "iso_a2"
+                ],
+                "BR"
+              ],
+              [
+                "==",
+                [
+                  "get",
+                  "admin_level"
+                ],
+                40
+              ]
+            ],
+            [
+              "all",
+              [
+                "==",
+                [
+                  "get",
+                  "iso_a2"
+                ],
+                "FR"
+              ],
+              [
+                "==",
+                [
+                  "get",
+                  "admin_level"
+                ],
+                50
+              ]
+            ]
+          ],
+          [
+            "match",
+            [
+              "get",
+              "worldview:ch"
+            ],
+            [
+              "recognized"
+            ],
+            true,
+            [
+              "!",
+              [
+                "has",
+                "worldview:ch"
+              ]
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "City labels",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "city_label",
+      "minzoom": 4,
+      "maxzoom": 14,
+      "layout": {
+        "symbol-sort-key": [
+          "to-number",
+          [
+            "get",
+            "rank"
+          ]
+        ],
+        "text-anchor": "bottom",
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 8,
+        "text-offset": [
+          0,
+          -0.15
+        ],
+        "text-size": [
+          "interpolate",
+          [
+            "linear",
+            1
+          ],
+          [
+            "zoom"
+          ],
+          4,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "rank"
+              ],
+              2
+            ],
+            14,
+            12
+          ],
+          8,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "rank"
+              ],
+              2
+            ],
+            18,
+            14
+          ],
+          12,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "rank"
+              ],
+              4
+            ],
+            22,
+            18
+          ],
+          16,
+          [
+            "case",
+            [
+              "<=",
+              [
+                "get",
+                "rank"
+              ],
+              4
+            ],
+            30,
+            24
+          ]
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-letter-spacing": 0,
+        "text-transform": "none",
+        "text-allow-overlap": false,
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "capital"
+          ],
+          [
+            20
+          ],
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": "Capital city labels",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "city_label",
+      "minzoom": 3,
+      "maxzoom": 16,
+      "layout": {
+        "symbol-sort-key": [
+          "+",
+          [
+            "*",
+            1000,
+            [
+              "case",
+              [
+                "==",
+                [
+                  "to-number",
+                  [
+                    "get",
+                    "capital"
+                  ]
+                ],
+                20
+              ],
+              1,
+              0
+            ]
+          ],
+          [
+            "coalesce",
+            [
+              "to-number",
+              [
+                "get",
+                "rank"
+              ]
+            ],
+            9999
+          ]
+        ],
+        "text-allow-overlap": false,
+        "text-anchor": "bottom",
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 5,
+        "text-offset": [
+          0,
+          -0.1
+        ],
+        "text-padding": 2,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          4,
+          14,
+          8,
+          20,
+          12,
+          26,
+          16,
+          34
+        ],
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-letter-spacing": 0,
+        "text-transform": "none",
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "capital"
+          ],
+          [
+            20
+          ],
+          true,
+          false
+        ]
+      ]
+    },
+    {
+      "id": "Disputed country labels",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "country_disputed_label",
+      "minzoom": 4,
+      "maxzoom": 12,
+      "layout": {
+        "symbol-sort-key": [
+          "case",
+          [
+            "==",
+            [
+              "get",
+              "name:en"
+            ],
+            "Israel"
+          ],
+          0,
+          1
+        ],
+        "text-allow-overlap": false,
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-line-height": 1,
+        "text-max-width": {
+          "stops": [
+            [
+              1,
+              5
+            ],
+            [
+              5,
+              8
+            ]
+          ]
+        },
+        "text-padding": 1,
+        "text-size": [
+          "interpolate",
+          [
+            "linear",
+            1
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          8,
+          1,
+          10,
+          4,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "name:en"
+              ],
+              "Israel"
+            ],
+            17,
+            14
+          ],
+          8,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "name:en"
+              ],
+              "Israel"
+            ],
+            23,
+            19
+          ]
+        ],
+        "text-transform": "none",
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "case",
+            [
+              ">",
+              [
+                "get",
+                "rank"
+              ],
+              5
+            ],
+            0,
+            1
+          ],
+          4,
+          [
+            "case",
+            [
+              ">",
+              [
+                "get",
+                "rank"
+              ],
+              4
+            ],
+            0,
+            1
+          ],
+          6,
+          [
+            "case",
+            [
+              ">",
+              [
+                "get",
+                "rank"
+              ],
+              4
+            ],
+            1,
+            1
+          ]
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "worldview:ch"
+          ],
+          [
+            "recognized"
+          ],
+          true,
+          [
+            "!",
+            [
+              "has",
+              "worldview:ch"
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Country labels",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "country_label",
+      "minzoom": 2,
+      "maxzoom": 12,
+      "layout": {
+        "symbol-sort-key": [
+          "to-number",
+          [
+            "get",
+            "rank"
+          ]
+        ],
+        "text-allow-overlap": false,
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-letter-spacing": 0,
+        "text-line-height": 1,
+        "text-max-width": {
+          "stops": [
+            [
+              1,
+              5
+            ],
+            [
+              5,
+              8
+            ]
+          ]
+        },
+        "text-padding": 1,
+        "text-size": [
+          "interpolate",
+          [
+            "linear",
+            1
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          8,
+          1,
+          10,
+          4,
+          [
+            "case",
+            [
+              ">",
+              [
+                "get",
+                "rank"
+              ],
+              1
+            ],
+            14,
+            17
+          ],
+          8,
+          [
+            "case",
+            [
+              ">",
+              [
+                "get",
+                "rank"
+              ],
+              2
+            ],
+            19,
+            23
+          ]
+        ],
+        "text-transform": "none",
+        "visibility": "visible",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "viewport",
+        "text-ignore-placement": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "case",
+            [
+              ">",
+              [
+                "get",
+                "rank"
+              ],
+              5
+            ],
+            0,
+            1
+          ],
+          4,
+          [
+            "case",
+            [
+              ">",
+              [
+                "get",
+                "rank"
+              ],
+              4
+            ],
+            0,
+            1
+          ],
+          6,
+          [
+            "case",
+            [
+              ">",
+              [
+                "get",
+                "rank"
+              ],
+              4
+            ],
+            1,
+            1
+          ]
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        [
+          "any",
+          [
+            "!=",
+            [
+              "get",
+              "iso_a2"
+            ],
+            "VA"
+          ],
+          [
+            ">=",
+            [
+              "zoom"
+            ],
+            11
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "Archipelago labels",
+      "type": "symbol",
+      "source": "maptiler_planet_v4",
+      "source-layer": "archipelago_label",
+      "minzoom": 3,
+      "maxzoom": 6,
+      "layout": {
+        "symbol-avoid-edges": false,
+        "symbol-placement": "line-center",
+        "symbol-sort-key": [
+          "to-number",
+          [
+            "get",
+            "rank"
+          ]
+        ],
+        "symbol-z-order": "source",
+        "text-anchor": "center",
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:ko"
+          ],
+          [
+            "get",
+            "name"
+          ],
+          [
+            "get",
+            "name:en"
+          ],
+          ""
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-ignore-placement": false,
+        "text-letter-spacing": 0,
+        "text-max-width": 10,
+        "text-overlap": "never",
+        "text-pitch-alignment": "viewport",
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          15,
+          5,
+          17
+        ],
+        "text-transform": "none",
+        "visibility": "visible",
+        "text-rotation-alignment": "viewport-glyph",
+        "text-allow-overlap": false
+      },
+      "paint": {
+        "text-color": "#edf8ff",
+        "text-halo-color": "#061924",
+        "text-halo-width": 1.5,
+        "text-opacity": 1,
+        "text-halo-blur": 0.5
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "worldview:ch"
+          ],
+          [
+            "recognized"
+          ],
+          true,
+          [
+            "!",
+            [
+              "has",
+              "worldview:ch"
+            ]
+          ]
+        ]
+      ]
+    }
+  ]
+}

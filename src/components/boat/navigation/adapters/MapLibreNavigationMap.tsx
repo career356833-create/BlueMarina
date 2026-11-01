@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import type { MapPresentation } from "@/lib/marine-navigation/adapters/navigation-map-adapter";
 import { createKhoaDeepWaterRouteLayerConfig, KHOA_DEEP_WATER_ROUTE_DATA_URL, KHOA_DEEP_WATER_ROUTE_LAYER_ID, parseKhoaDeepWaterRouteFeatureProperties, parseKhoaDeepWaterRouteGeoJson, type KhoaDeepWaterRouteProperties } from "@/lib/marine-navigation/adapters/khoa-deep-water-route";
 import { createKhoaHarborZoneLayerConfig, KHOA_HARBOR_ZONE_DATA_URL, KHOA_HARBOR_ZONE_LAYER_ID, parseKhoaHarborZoneFeatureProperties, parseKhoaHarborZoneGeoJson, type KhoaHarborZoneProperties } from "@/lib/marine-navigation/adapters/khoa-harbor-zone";
@@ -16,6 +17,8 @@ import { buildViewportSampleBbox, type KhoaRomsPoint } from "@/lib/sea-info/khoa
 import type { GeoPoint } from "@/lib/marine-navigation/types";
 import { terrainLabels, type TerrainState } from "@/lib/marine-navigation/coastal-terrain";
 import { MapLibreNavigationProvider } from "./MapLibreNavigationProvider";
+import { NavigationBasemapPicker } from "../NavigationBasemapPicker";
+import { INITIAL_BASEMAP_STATE, hasMapTilerKey, type BasemapState } from "@/lib/marine-navigation/basemaps";
 
 export default function MapLibreNavigationMap({ presentation, onManualMove, deepWaterRouteVisible, harborZoneVisible, navigationAidsVisible, trainingFiringZoneVisible, navigationWarningsVisible, tideStationsVisible, marineWeatherVisible, marineObservationsVisible, oceanCurrentModelVisible, navigationWarningFocus, onPointSelect, onDeepWaterRouteSelect, onHarborZoneSelect, onNavigationAidSelect, onTrainingFiringZoneSelect, onNavigationWarningSelect, onTideStationSelect, onMarineWeatherSelect, onMarineObservationSelect, onOceanCurrentModelSelect, onDeepWaterRouteStateChange, onHarborZoneStateChange, onNavigationAidsStateChange, onTrainingFiringZoneStateChange, onNavigationWarningsStateChange, onTideStationsStateChange, onMarineWeatherStateChange, onMarineObservationsStateChange, onOceanCurrentModelStateChange, onNavigationWarningsDataChange }: {
   presentation: MapPresentation;
@@ -53,6 +56,7 @@ export default function MapLibreNavigationMap({ presentation, onManualMove, deep
 }) {
   const [terrainState, setTerrainState] = useState<TerrainState>("FLAT");
   const [terrainEnabled, setTerrainEnabled] = useState(true);
+  const [basemapState, setBasemapState] = useState<BasemapState>(INITIAL_BASEMAP_STATE);
   const elementRef = useRef<HTMLDivElement>(null);
   const providerRef = useRef<MapLibreNavigationProvider | null>(null);
   const manualMoveRef = useRef(onManualMove);
@@ -113,6 +117,7 @@ export default function MapLibreNavigationMap({ presentation, onManualMove, deep
       }
     });
     provider.setTerrainStateHandler(setTerrainState);
+    provider.setBasemapStateHandler(setBasemapState);
     provider.setManualMoveHandler(() => manualMoveRef.current?.());
     const resizeObserver = new ResizeObserver(() => provider.resize());
     resizeObserver.observe(elementRef.current);
@@ -455,6 +460,8 @@ export default function MapLibreNavigationMap({ presentation, onManualMove, deep
   }, [presentation]);
 
   return <div className="relative h-full w-full"><div ref={elementRef} className="bm-navigation-map h-full w-full" aria-label="MapLibre marine navigation map" />
+    <NavigationBasemapPicker state={basemapState} available={hasMapTilerKey(process.env.NEXT_PUBLIC_MAPTILER_KEY)} onSelect={id => providerRef.current?.setBasemap(id)} />
+    {basemapState.displayed !== "standard" ? <a href="https://www.maptiler.com/copyright/" target="_blank" rel="noopener noreferrer" aria-label="MapTiler 지도 출처" className="absolute bottom-48 right-3 z-[510] flex min-h-11 items-center rounded bg-white/90 px-2"><Image src="/map-attribution/maptiler-logo.svg" alt="MapTiler" width={100} height={28} unoptimized /></a> : null}
     <button type="button" aria-label="육상 3D 지형 전환" aria-pressed={terrainEnabled} title="육상 고도 참고용 · 수심 아님 · 전자해도 대체 불가" onClick={() => { const next = !terrainEnabled; setTerrainEnabled(next); providerRef.current?.setTerrainEnabled(next); }} className="absolute left-[11.5rem] right-[4.25rem] top-3 z-[510] min-h-11 max-w-48 rounded-xl border border-white/25 bg-[#06131a]/95 px-1.5 py-1 text-center text-white">
       <span className="block text-[11px] font-semibold">육상 지형 {terrainEnabled ? "ON" : "OFF"}</span><span role="status" data-testid="terrain-state" className="block text-[9px] leading-tight text-[#b5eee1]">{terrainLabels[terrainState]}</span>
     </button>

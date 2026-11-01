@@ -1,4 +1,6 @@
 import { CoastalTerrainController } from "./CoastalTerrainController";
+import { NavigationBasemapController } from "./NavigationBasemapController";
+import type { BasemapId, BasemapState } from "@/lib/marine-navigation/basemaps";
 import { COASTAL_DEM } from "@/lib/marine-navigation/coastal-terrain";
 import type { TerrainState } from "@/lib/marine-navigation/coastal-terrain";
 import { distanceMeters } from "@/lib/marine-navigation/geo";
@@ -40,6 +42,7 @@ function emptyGeoJson() {
 export class MapLibreNavigationProvider implements NavigationMapProvider<SourceSpecification, LayerSpecification> {
   private readonly map: MapLibreMap;
   private readonly terrain: CoastalTerrainController;
+  private readonly basemap: NavigationBasemapController;
   private destroyed = false;
   private latestPresentation: MapPresentation | null = null;
   private loaded = false;
@@ -86,6 +89,7 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
       attributionControl: false,
     });
     this.terrain = new CoastalTerrainController(this.map);
+    this.basemap = new NavigationBasemapController(this.map, process.env.NEXT_PUBLIC_MAPTILER_KEY);
     const beginGesture = () => { this.gestureActive = true; this.map.stop(); };
     const endGesture = () => { this.gestureActive = false; };
     this.map.on("mousedown", beginGesture);
@@ -122,10 +126,13 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
       for (const config of this.marineLayerConfigs.values()) this.installMarineLayer(config);
       if (this.latestPresentation) this.renderPresentation(this.latestPresentation);
       this.terrain.styleLoaded();
+      this.basemap.styleLoaded();
     });
   }
 
   setTerrainStateHandler(handler: (state: TerrainState) => void) { this.terrain.setListener(state=>{handler(state);this.fieldObserver?.({terrain:state});}); }
+  setBasemapStateHandler(handler: (state: BasemapState) => void) { this.basemap.setListener(handler); }
+  setBasemap(id: BasemapId) { this.basemap.select(id); }
   setTerrainEnabled(enabled: boolean) { this.terrain.setEnabled(enabled); }
   testTerrain(action: "ulleung" | "geoje" | "reload" | "failure") {
     if (process.env.NODE_ENV === "production") return;
@@ -255,6 +262,7 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   destroy() {
     this.setFieldObserver(undefined);
     this.destroyed = true;
+    this.basemap.destroy();
     this.terrain.destroy();
     this.map.remove();
     this.marineLayers.clear();

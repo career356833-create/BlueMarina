@@ -33,7 +33,7 @@ test('Kakao origins are allowed only in observed script and image destinations',
 test('MapLibre uses its local worker and only measured OSM and Supabase fetch origins', async () => {
   const d = await directives();
   assert.deepEqual(d['worker-src'], ["'self'"]);
-  assert.deepEqual(d['connect-src'], ["'self'", 'https://tile.openstreetmap.org', 'https://mlfvpaikfpjrgrhwlrjn.supabase.co']);
+  assert.deepEqual(d['connect-src'], ["'self'", 'https://tile.openstreetmap.org', 'https://api.maptiler.com', 'https://mlfvpaikfpjrgrhwlrjn.supabase.co']);
   const source = fs.readFileSync(path.join(root, 'src/components/boat/navigation/adapters/MapLibreNavigationProvider.ts'), 'utf8');
   assert.match(source, /setWorkerUrl\("\/maplibre\/maplibre-gl-worker.mjs"\)/);
 });
