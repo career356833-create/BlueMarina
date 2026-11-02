@@ -1,0 +1,192 @@
+{
+  "program": "BLUE_MARINA_NAVIGATION_V6_PHOTOREALISTIC_3D_MAP_ENGINE",
+  "date": "2026-11-02",
+  "decision": "NAVIGATION_V6_BLOCKED",
+  "blocker": "No licensed, validated Korean-coast photogrammetry dataset; Cesium 1.146 eager WebAssembly initialization is blocked by the existing Production CSP. Synthetic fixture is engine evidence only.",
+  "baseline": {
+    "main": "80237a9f49ed42affc6ad4807c6961e6ba348f54",
+    "originMain": "80237a9f49ed42affc6ad4807c6961e6ba348f54",
+    "productionSha": "80237a9f49ed42affc6ad4807c6961e6ba348f54",
+    "productionState": "READY",
+    "deploymentId": "dpl_HinGPM8AmjLvcULx3Dv7k9wWFQWy"
+  },
+  "engine": {
+    "library": "cesium",
+    "version": "1.146.0",
+    "license": "Apache-2.0",
+    "lazyLoad": true,
+    "singleNavigationCore": true,
+    "newGpsWatchers": 0,
+    "newVoyageStores": 0,
+    "simultaneousMountedCanvasCountObserved": 1,
+    "sameOriginWorkers": true,
+    "previewOptIn": "NEXT_PUBLIC_NAVIGATION_REAL3D_PREVIEW",
+    "defaultEnabled": false,
+    "distribution": "Pinned official Cesium.js loaded on demand from same-origin; type-only npm imports",
+    "minifierIssue": "Next 15 ESM optimization produced invalid octal escape in embedded Wasm string; bypassed by official prebuilt vendor distribution, no eval/CSP relaxation",
+    "runtimeGate": "Development only, even when preview opt-in is set. Production builds reject activation before loading Cesium."
+  },
+  "dataProvider": {
+    "implemented": "Same-origin, separately licensed 3D Tiles dataset contract",
+    "path": "/navigation-3d-data/<dataset>/tileset.json",
+    "googleActivated": false,
+    "cesiumIonActivated": false,
+    "keysCommitted": 0,
+    "billingChanges": 0,
+    "quotaChanges": 0,
+    "googlePriceObserved": {
+      "freeMonthlyBillableEvents": 1000,
+      "firstPaidTierUsdPer1000": 6,
+      "billingUnit": "root tileset request; consult current provider terms"
+    },
+    "googleKorea": "Official coverage table does not list the 3D marker for South Korea. No authorized city-level tile probe was performed.",
+    "cesiumCompatibleCommercialOrPublic": "No Korean photogrammetry dataset with confirmed coverage and commercial redistribution rights secured. Engine licensing does not grant data rights."
+  },
+  "coverage": [
+    {
+      "place": "부산",
+      "status": "UNAVAILABLE",
+      "scope": "CURRENT_INTEGRATION",
+      "providerCityProbe": "NOT_PERFORMED",
+      "nearCoastMeshQuality": "NOT_VERIFIED"
+    },
+    {
+      "place": "거제도",
+      "status": "UNAVAILABLE",
+      "scope": "CURRENT_INTEGRATION",
+      "providerCityProbe": "NOT_PERFORMED",
+      "nearCoastMeshQuality": "NOT_VERIFIED"
+    },
+    {
+      "place": "포항",
+      "status": "UNAVAILABLE",
+      "scope": "CURRENT_INTEGRATION",
+      "providerCityProbe": "NOT_PERFORMED",
+      "nearCoastMeshQuality": "NOT_VERIFIED"
+    },
+    {
+      "place": "울릉도",
+      "status": "UNAVAILABLE",
+      "scope": "CURRENT_INTEGRATION",
+      "providerCityProbe": "NOT_PERFORMED",
+      "nearCoastMeshQuality": "NOT_VERIFIED"
+    }
+  ],
+  "rendering": {
+    "tilesetRequest": "PASS_LOCAL_SYNTHETIC_FIXTURE",
+    "meshVisible": "PASS_LOCAL_SYNTHETIC_FIXTURE",
+    "textureVisible": "PASS_LOCAL_SYNTHETIC_FIXTURE",
+    "photorealisticMesh": "NOT_VERIFIED",
+    "fixture": "Own generated colored textured test geometry, explicitly labeled NOT REAL TERRAIN; ignored assets, not production data",
+    "actualKoreanTerrainFabricated": false
+  },
+  "camera": {
+    "modes": [
+      "TOP_DOWN",
+      "FORWARD",
+      "FREE"
+    ],
+    "heightControl": true,
+    "datasetExtentControl": true,
+    "rendererHandoff": "Approximate geographic camera transfer; scale differs by projection",
+    "follow": "Shared valid vessel and movement-only course; forward target offset; free camera stops follow",
+    "visualFollowingGps": "NOT_VERIFIED"
+  },
+  "navigation": {
+    "sogCogEta": "Existing core calculations unchanged",
+    "waypointCoordinates": "Unit PASS; live GPS visual alignment NOT_VERIFIED",
+    "trackSegments": "Existing converter reused; unit PASS",
+    "gpsAltitude": "Not inferred; visual marker height zero is not GPS altitude or bathymetry",
+    "missingGps": "No boat fabricated",
+    "historicalTrack": "Does not follow live vessel in historical view",
+    "marineOverlayParity": "NOT_IMPLEMENTED in Cesium; use MapLibre for marine overlays/HUD"
+  },
+  "reliability": {
+    "rootAndMeshDeadlineMs": 30000,
+    "httpTileFailureFallback": "PASS_BROWSER",
+    "timeoutFallback": "PASS_BROWSER",
+    "switchBack": "PASS_BROWSER",
+    "lateAsyncCleanup": "PASS_UNIT",
+    "webglContextLoss": "Handler implemented; actual GPU loss NOT_TESTED",
+    "offline": "Gate unit PASS; offline event fallback implemented, browser disconnect NOT_TESTED",
+    "lowMemory": "deviceMemory <4 GB gate unit PASS; real low-memory device NOT_TESTED",
+    "tileCacheBytes": 100663296,
+    "tileCacheOverflowBytes": 50331648,
+    "maximumScreenSpaceError": 24,
+    "physicalDevice": "REAL_DEVICE_NAVIGATION_NOT_VERIFIED"
+  },
+  "visualQa": {
+    "environment": "Isolated local Next.js preview",
+    "widths": [
+      360,
+      390,
+      430
+    ],
+    "horizontalOverflow": 0,
+    "canvasCount": 1,
+    "cameraControls": "PASS fixture only",
+    "screenshotFiles": [
+      "v6-360-mesh.png",
+      "v6-390-mesh.png",
+      "v6-430-mesh.png"
+    ],
+    "independentHostedPreview": "REAL3D_NOT_VALIDATED; feature branch may produce default-OFF automatic Preview",
+    "productionModeLocal": "Official script syntax PASS; eager WebAssembly blocked by unchanged CSP; fallback observed. Final explicit gate browser PASS: MapLibre 1 canvas, Cesium script count 0, limitation notice visible."
+  },
+  "verify": {
+    "targeted": {
+      "pass": 42,
+      "fail": 0
+    },
+    "full": {
+      "pass": 1458,
+      "skip": 2,
+      "fail": 0
+    },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "diff": "PASS",
+    "staticPages": 1467
+  },
+  "safety": {
+    "safeRouteInference": 0,
+    "landReefDepthAvoidance": 0,
+    "ais": 0,
+    "collisionAvoidance": 0,
+    "officialEquipmentReplacementClaim": 0,
+    "cspWeakened": false,
+    "compressedWasmTiles": "Runtime itself blocked by CSP, not limited to compressed tiles; no unsafe-eval or wasm-unsafe-eval permission added."
+  },
+  "git": {
+    "deliveryBranch": "codex/navigation-v6-real3d",
+    "mainUnchanged": true,
+    "files": 15,
+    "unrelatedWorktreePreserved": true,
+    "mainStaged": 0,
+    "preservedExistingFiles": 1898,
+    "mainWorktreeMutation": 0
+  },
+  "remote": {
+    "productionDeploy": 0,
+    "vercelEnvMutation": 0,
+    "supabaseMutation": 0,
+    "paidProviderActivation": 0
+  },
+  "nextRequired": [
+    "Licensed photogrammetry provider with Korea coastal coverage and delivery rights",
+    "Separate security review of Cesium WebAssembly requirements; current strict CSP and production runtime gate remain unchanged",
+    "City-level real mesh/textures and mobile performance QA",
+    "Marine-overlay parity and real GPS visual alignment before production activation"
+  ],
+  "sources": {
+    "googleCoverage": "https://developers.google.com/maps/coverage",
+    "googleTiles": "https://developers.google.com/maps/documentation/tile/3d-tiles",
+    "googlePricing": "https://developers.google.com/maps/billing-and-pricing/pricing",
+    "googleBilling": "https://developers.google.com/maps/documentation/tile/usage-and-billing",
+    "googleAttribution": "https://developers.google.com/maps/documentation/tile/policies",
+    "cesiumLicense": "https://github.com/CesiumGS/cesium/blob/main/LICENSE.md",
+    "cesiumContent": "https://cesium.com/learn/ion/content-usage-and-attribution-guide/",
+    "cspWasm": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src"
+  }
+}

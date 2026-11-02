@@ -12,3 +12,7 @@ work/*.log
 tsconfig.tsbuildinfo
 
 .vercel
+
+# Generated Cesium assets and separately licensed datasets.
+/public/cesium/
+/public/navigation-3d-data/

@@ -3,6 +3,8 @@ import type { GeoPoint, NavigationDestination, SavedWaypoint, TrackPoint, Vessel
 import type { VesselCamera } from "../vessel-instruments";
 
 export type MapPresentation = {
+  rendererView?: () => import("../real3d").RendererView | null;
+  onRendererViewChange?: (view: import("../real3d").RendererView) => void;
   fieldObserver?: (observation: import('../field-diagnostics').MapFieldObservation) => void;
   camera?: VesselCamera;
   displayVessel?: VesselPosition | null;

@@ -1,3 +1,4 @@
+import { validRendererView } from "@/lib/marine-navigation/real3d";
 import { CoastalTerrainController } from "./CoastalTerrainController";
 import { NavigationBasemapController } from "./NavigationBasemapController";
 import type { BasemapId, BasemapState } from "@/lib/marine-navigation/basemaps";
@@ -46,6 +47,7 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   private destroyed = false;
   private latestPresentation: MapPresentation | null = null;
   private loaded = false;
+  private rendererViewRestored = false;
   private fieldObserver: MapPresentation['fieldObserver'];
   private fieldMapError = (event: unknown) => {
     this.fieldObserver?.({mapError: event && typeof event === 'object' && 'sourceId' in event && event.sourceId === COASTAL_DEM.id ? 'DEM_SOURCE_ERROR' : 'MAP_RESOURCE_ERROR'});
@@ -261,6 +263,10 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
 
   destroy() {
     this.setFieldObserver(undefined);
+    const center = this.map.getCenter();
+    this.latestPresentation?.onRendererViewChange?.({ longitude: center.lng, latitude: center.lat,
+      height: Math.max(20, 40075016 * Math.cos(center.lat * Math.PI / 180) / 2 ** this.map.getZoom()),
+      heading: this.map.getBearing(), pitch: this.map.getPitch() - 90 });
     this.destroyed = true;
     this.basemap.destroy();
     this.terrain.destroy();
@@ -309,6 +315,16 @@ export class MapLibreNavigationProvider implements NavigationMapProvider<SourceS
   }
 
   private renderPresentation(presentation: MapPresentation) {
+    if (!this.rendererViewRestored) {
+      this.rendererViewRestored = true;
+      const view = presentation.rendererView?.();
+      if (view && validRendererView(view)) {
+        this.map.jumpTo({ center: [view.longitude, view.latitude],
+          zoom: Math.max(2, Math.min(18, Math.log2(40075016 * Math.cos(view.latitude * Math.PI / 180) / view.height))),
+          bearing: view.heading, pitch: Math.max(0, Math.min(55, view.pitch + 90)) });
+        this.lastFocusedDestinationId = presentation.destination?.id ?? null;
+      }
+    }
     (this.map.getSource(sourceIds.points) as GeoJSONSource).setData(toNavigationPointGeoJson(presentation));
     if (this.lastTrack !== presentation.track) { (this.map.getSource(sourceIds.track) as GeoJSONSource).setData(toTrackGeoJson(presentation.track)); this.lastTrack = presentation.track; }
     (this.map.getSource(sourceIds.bearing) as GeoJSONSource).setData(toBearingGeoJson(presentation.vessel, presentation.destination));
