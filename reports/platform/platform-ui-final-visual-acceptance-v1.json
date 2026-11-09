@@ -1,0 +1,989 @@
+{
+  "date": "2026-11-09",
+  "decision": "PLATFORM_UI_RELEASE_BLOCKED",
+  "releaseGate": "Kakao actual tiles on the final Preview origin",
+  "production": {
+    "state": "READY",
+    "id": "dpl_HinGPM8AmjLvcULx3Dv7k9wWFQWy",
+    "sha": "80237a9f49ed42affc6ad4807c6961e6ba348f54"
+  },
+  "originalPreview": "https://blue-marina-6y8kaqxwt-chiweon.vercel.app",
+  "finalPreview": {
+    "sha": "0c40fddebadc8e13b407a9b66715b24cc114d640",
+    "url": "https://blue-marina-jgfre0gpq-chiweon.vercel.app",
+    "id": "dpl_AhvSVPrtAPd8HEd53hTRDCe3CQQQ",
+    "ready": "READY"
+  },
+  "previous64": {
+    "passed": 42,
+    "limited": 13,
+    "adminAnonymousOnly": 6,
+    "internal": 3
+  },
+  "visualCases": [
+    {
+      "route": "/",
+      "width": 390,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/",
+      "width": 1280,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/account",
+      "width": 390,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/account",
+      "width": 1280,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/charters",
+      "width": 390,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/charters",
+      "width": 1280,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/community",
+      "width": 390,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/community",
+      "width": 1280,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/fish",
+      "width": 390,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/fish",
+      "width": 1280,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/fishing-spots",
+      "width": 390,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/fishing-spots",
+      "width": 1280,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/fishing-spots/conditions",
+      "width": 390,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/fishing-spots/conditions",
+      "width": 1280,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/license-guide",
+      "width": 390,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/license-guide",
+      "width": 1280,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/market",
+      "width": 390,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/market",
+      "width": 1280,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/sea",
+      "width": 390,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/sea",
+      "width": 1280,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/sea#live-marine-map",
+      "width": 390,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/sea#live-marine-map",
+      "width": 1280,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/sea/navigation",
+      "width": 390,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/sea/navigation",
+      "width": 1280,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/study",
+      "width": 390,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    },
+    {
+      "route": "/study",
+      "width": 1280,
+      "http": 200,
+      "homeClick": true,
+      "appError": false,
+      "overflow": 0
+    }
+  ],
+  "homeClicks": {
+    "390": [
+      [
+        "/",
+        "PASS"
+      ],
+      [
+        "/sea",
+        "PASS"
+      ],
+      [
+        "/account",
+        "PASS"
+      ],
+      [
+        "/today-sea",
+        "PASS"
+      ],
+      [
+        "/sea",
+        "PASS"
+      ],
+      [
+        "/today-sea",
+        "PASS"
+      ],
+      [
+        "/sea",
+        "PASS"
+      ],
+      [
+        "/fishing-spots",
+        "PASS"
+      ],
+      [
+        "/charters",
+        "PASS"
+      ],
+      [
+        "/fish",
+        "PASS"
+      ],
+      [
+        "/market",
+        "PASS"
+      ],
+      [
+        "/community",
+        "PASS"
+      ],
+      [
+        "/license-guide",
+        "PASS"
+      ],
+      [
+        "/faq",
+        "PASS"
+      ],
+      [
+        "/contact",
+        "PASS"
+      ],
+      [
+        "/",
+        "PASS"
+      ],
+      [
+        "/sea",
+        "PASS"
+      ],
+      [
+        "/charters",
+        "PASS"
+      ],
+      [
+        "/fish",
+        "PASS"
+      ],
+      [
+        "/license-guide",
+        "PASS"
+      ]
+    ],
+    "1280": [
+      [
+        "/",
+        "PASS"
+      ],
+      [
+        "/",
+        "PASS"
+      ],
+      [
+        "/sea",
+        "PASS"
+      ],
+      [
+        "/fishing-spots",
+        "PASS"
+      ],
+      [
+        "/fish",
+        "PASS"
+      ],
+      [
+        "/market",
+        "PASS"
+      ],
+      [
+        "/license-guide",
+        "PASS"
+      ],
+      [
+        "/account",
+        "PASS"
+      ],
+      [
+        "/today-sea",
+        "PASS"
+      ],
+      [
+        "/sea",
+        "PASS"
+      ],
+      [
+        "#home-services",
+        "PASS"
+      ],
+      [
+        "/today-sea",
+        "PASS"
+      ],
+      [
+        "/sea",
+        "PASS"
+      ],
+      [
+        "/fishing-spots",
+        "PASS"
+      ],
+      [
+        "/charters",
+        "PASS"
+      ],
+      [
+        "/fish",
+        "PASS"
+      ],
+      [
+        "/market",
+        "PASS"
+      ],
+      [
+        "/community",
+        "PASS"
+      ],
+      [
+        "/license-guide",
+        "PASS"
+      ],
+      [
+        "/faq",
+        "PASS"
+      ],
+      [
+        "/contact",
+        "PASS"
+      ]
+    ]
+  },
+  "homeReturn": {
+    "/": "PASS",
+    "/account": "PASS",
+    "/analysis": "PASS",
+    "/boatpedia": "PASS",
+    "/centers": "PASS",
+    "/charters": "PASS",
+    "/charters/[id]": "PASS",
+    "/charters/partners": "PASS",
+    "/coming-soon": "PASS",
+    "/community": "PASS",
+    "/community/[id]": "PASS",
+    "/contact": "PASS",
+    "/dictionary": "PASS",
+    "/exam": "PASS",
+    "/exam-guide": "PASS",
+    "/faq": "PASS",
+    "/fish": "PASS",
+    "/fishing-safety": "PASS",
+    "/fishing-spots": "PASS",
+    "/fishing-spots/[id]": "PASS",
+    "/fishing-spots/conditions": "PASS",
+    "/leisure-report": "PASS",
+    "/license-guide": "PASS",
+    "/license-issue": "PASS",
+    "/marine-knowledge": "PASS",
+    "/market": "PASS",
+    "/market/[id]": "PASS",
+    "/official-links": "PASS",
+    "/past": "PASS",
+    "/practice": "PASS",
+    "/practice/checklist": "PASS",
+    "/practice/course": "PASS",
+    "/practice/fail-items": "PASS",
+    "/practice/videos": "PASS",
+    "/privacy": "PASS",
+    "/progress": "PASS",
+    "/random": "PASS",
+    "/safety-guide": "PASS",
+    "/sea": "PASS",
+    "/sea-info": "PASS",
+    "/sea/navigation": "PASS",
+    "/study": "PASS",
+    "/terms": "PASS",
+    "/theory": "PASS",
+    "/theory/[tag]": "PASS",
+    "/today-sea": "PASS",
+    "/wrong": "PASS"
+  },
+  "publicJourneys": {
+    "A": {
+      "actualClickSteps": [
+        "/today-sea",
+        "/sea",
+        "/"
+      ],
+      "result": "LIMITED"
+    },
+    "B": {
+      "actualClickSteps": [
+        "/fishing-spots",
+        "/fishing-spots/boat-27",
+        "/fishing-spots/conditions?spotId=boat-27&speciesId=BM-SPECIES-000751&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-27",
+        "/sea/navigation?lat=34.612778&lng=128.596944&name=%EB%B9%84%EC%A7%84%EB%8F%84%C2%B7%EB%A7%A4%EB%AC%BC%EB%8F%84+-+%EC%86%8C%EB%A7%A4%EB%AC%BC%EB%8F%84%EB%93%B1%EA%B0%80%EB%8F%84%EB%B6%80%EA%B7%BC&type=fishing_spot&sourceId=boat-27",
+        "/fishing-spots/boat-27",
+        "/"
+      ],
+      "result": "PASS"
+    },
+    "C": {
+      "actualClickSteps": [
+        "/fish",
+        "/fishing-spots?q=%EA%B0%80%EB%8B%A4%EB%9E%91%EC%96%B4&source=fish",
+        "/"
+      ],
+      "result": "PASS"
+    },
+    "D": {
+      "actualClickSteps": [
+        "/charters",
+        "/charters/partners",
+        "/account/login?returnTo=%2Fcharters%2Fonboarding",
+        "/"
+      ],
+      "result": "LIMITED"
+    },
+    "E": {
+      "actualClickSteps": [
+        "/market",
+        "/account/login?returnTo=%2Fmarket%2Fnew",
+        "/"
+      ],
+      "result": "LIMITED"
+    },
+    "F": {
+      "actualClickSteps": [
+        "/community",
+        "/account/login?returnTo=%2Fcommunity%2Fnew",
+        "/"
+      ],
+      "result": "LIMITED"
+    },
+    "G": {
+      "actualClickSteps": [
+        "/license-guide",
+        "/study?license=general",
+        "/theory?license=general",
+        "/theory/%EC%88%98%EC%83%81%EB%A0%88%EC%A0%80%EC%95%88%EC%A0%84%EB%B2%95%EA%B3%BC%20%EC%9A%B4%ED%95%AD%20%EC%A0%9C%ED%95%9C?license=general",
+        "/exam?license=general",
+        "/wrong?license=general",
+        "/progress?license=general",
+        "/analysis?license=general",
+        "/"
+      ],
+      "result": "PASS"
+    },
+    "H": {
+      "actualClickSteps": [
+        "/account",
+        "/account/profile",
+        "/account/saved",
+        "/"
+      ],
+      "result": "LIMITED"
+    },
+    "I": {
+      "actualClickSteps": [
+        "/license-guide",
+        "/dictionary",
+        "/boatpedia",
+        "/fishing-safety",
+        "/"
+      ],
+      "result": "PASS"
+    },
+    "J": {
+      "actualClickSteps": [
+        "/faq",
+        "/contact",
+        "/"
+      ],
+      "result": "PASS"
+    }
+  },
+  "kakao": {
+    "preview": {
+      "http": 401,
+      "responseType": "application/json",
+      "domainMentioned": true,
+      "verifiedRefererAndClientKey": true,
+      "decodedMapTiles": 0,
+      "navigationFallback": true
+    },
+    "authorizedLocalHttps": {
+      "390": {
+        "constructors": true,
+        "tiles": 12,
+        "error": false,
+        "tileHttp200": 12,
+        "cspPathDeployed": true
+      },
+      "1280": {
+        "constructors": true,
+        "tiles": 30,
+        "error": false,
+        "tileHttp200": 30,
+        "cspPathDeployed": true
+      }
+    },
+    "productionBefore": {
+      "sdkHttp": 200,
+      "secondaryScriptBlockedByCsp": true
+    }
+  },
+  "mapsAnchor": {
+    "before": {
+      "390": {
+        "mapTop": -0.5,
+        "headerBottom": 81,
+        "ctrl": [
+          [
+            "내 위치",
+            19,
+            36,
+            false
+          ],
+          [
+            "레이어",
+            19,
+            36,
+            false
+          ],
+          [
+            "낚시\n0",
+            72,
+            37,
+            true
+          ],
+          [
+            "국가\n0",
+            72,
+            37,
+            true
+          ],
+          [
+            "지방\n0",
+            72,
+            37,
+            true
+          ],
+          [
+            "정주\n0",
+            72,
+            37,
+            true
+          ],
+          [
+            "신활력\n61",
+            72,
+            37,
+            false
+          ]
+        ]
+      },
+      "1280": {
+        "mapTop": 0,
+        "headerBottom": 81,
+        "ctrl": [
+          [
+            "현재 위치",
+            68,
+            36,
+            true
+          ],
+          [
+            "펼치기",
+            112,
+            27,
+            true
+          ],
+          [
+            "낚시포인트\n0",
+            159,
+            37,
+            true
+          ],
+          [
+            "국가어항\n0",
+            159,
+            37,
+            true
+          ],
+          [
+            "지방어항\n0",
+            159,
+            37,
+            true
+          ],
+          [
+            "어촌정주어항\n0",
+            159,
+            37,
+            true
+          ],
+          [
+            "신활력 사업지\n61",
+            159,
+            37,
+            true
+          ]
+        ]
+      }
+    },
+    "final": {
+      "390": {
+        "mapTop": 79.5,
+        "headerBottom": 81,
+        "ctrl": [
+          [
+            "내 위치",
+            99,
+            44,
+            true
+          ],
+          [
+            "레이어",
+            99,
+            44,
+            true
+          ],
+          [
+            "낚시\n0",
+            160,
+            44,
+            true
+          ],
+          [
+            "국가\n0",
+            160,
+            44,
+            true
+          ],
+          [
+            "지방\n0",
+            160,
+            44,
+            true
+          ],
+          [
+            "정주\n0",
+            160,
+            44,
+            true
+          ],
+          [
+            "신활력\n61",
+            160,
+            44,
+            false
+          ]
+        ]
+      },
+      "1280": {
+        "mapTop": 80,
+        "headerBottom": 81,
+        "ctrl": [
+          [
+            "현재 위치",
+            148,
+            44,
+            true
+          ],
+          [
+            "펼치기",
+            200,
+            27,
+            true
+          ],
+          [
+            "낚시포인트\n0",
+            247,
+            37,
+            true
+          ],
+          [
+            "국가어항\n0",
+            247,
+            37,
+            true
+          ],
+          [
+            "지방어항\n0",
+            247,
+            37,
+            true
+          ],
+          [
+            "어촌정주어항\n0",
+            247,
+            37,
+            true
+          ],
+          [
+            "신활력 사업지\n61",
+            247,
+            37,
+            true
+          ]
+        ]
+      }
+    }
+  },
+  "v5Hud": {
+    "390": [
+      [
+        "GPS 위치 추적 시작",
+        44,
+        44,
+        true
+      ],
+      [
+        "속도 단위 전환, 현재 kn",
+        117,
+        48,
+        true
+      ],
+      [
+        "Zoom in",
+        44,
+        44,
+        true
+      ],
+      [
+        "Zoom out",
+        44,
+        44,
+        true
+      ],
+      [
+        "육상 3D 지형 전환",
+        138,
+        44,
+        true
+      ],
+      [
+        "방향 HUD 끄기",
+        74,
+        44,
+        true
+      ],
+      [
+        "2D / 3D 전환",
+        56,
+        44,
+        true
+      ],
+      [
+        "내 위치로 이동",
+        56,
+        44,
+        true
+      ],
+      [
+        "보트 추적",
+        56,
+        44,
+        true
+      ],
+      [
+        "북쪽 / 이동방향 기준 전환",
+        56,
+        44,
+        true
+      ],
+      [
+        "항적 표시",
+        56,
+        44,
+        true
+      ]
+    ],
+    "1280": [
+      [
+        "GPS 위치 추적 시작",
+        44,
+        44,
+        true
+      ],
+      [
+        "속도 단위 전환, 현재 kn",
+        219,
+        63,
+        true
+      ],
+      [
+        "Zoom in",
+        44,
+        44,
+        true
+      ],
+      [
+        "Zoom out",
+        44,
+        44,
+        true
+      ],
+      [
+        "육상 3D 지형 전환",
+        192,
+        44,
+        true
+      ],
+      [
+        "방향 HUD 끄기",
+        74,
+        44,
+        true
+      ],
+      [
+        "2D / 3D 전환",
+        56,
+        44,
+        true
+      ],
+      [
+        "내 위치로 이동",
+        56,
+        44,
+        true
+      ],
+      [
+        "보트 추적",
+        56,
+        44,
+        true
+      ],
+      [
+        "북쪽 / 이동방향 기준 전환",
+        56,
+        44,
+        true
+      ],
+      [
+        "항적 표시",
+        56,
+        44,
+        true
+      ]
+    ]
+  },
+  "auth": {
+    "anonymousHttp": {
+      "/charters/admin/submissions": 404,
+      "/charters/admin/submissions/test-unavailable": 404,
+      "/market/admin/listings": 404,
+      "/market/admin/listings/test-unavailable": 404,
+      "/admin/operations": 404,
+      "/admin/operations/moderation": 404,
+      "/api/account": 503
+    },
+    "accountApi": {
+      "http": 503,
+      "code": "ACCOUNT_BACKEND_DISABLED",
+      "cache": "private, no-store",
+      "robots": "noindex, nofollow"
+    },
+    "authenticatedOwner": "NOT_VERIFIED",
+    "authenticatedAdmin": "NOT_VERIFIED"
+  },
+  "heroVideo": [
+    [
+      "/",
+      390,
+      [
+        {
+          "renderedVideoWidth": 1280,
+          "readyState": 4
+        }
+      ]
+    ],
+    [
+      "/",
+      1280,
+      [
+        {
+          "renderedVideoWidth": 1280,
+          "readyState": 4
+        }
+      ]
+    ],
+    [
+      "/sea",
+      390,
+      [
+        {
+          "renderedVideoWidth": 1280,
+          "readyState": 4
+        }
+      ]
+    ],
+    [
+      "/sea",
+      1280,
+      [
+        {
+          "renderedVideoWidth": 1280,
+          "readyState": 4
+        }
+      ]
+    ]
+  ],
+  "physicalGpsTouch": "NOT_VERIFIED",
+  "tests": {
+    "cleanMain": {
+      "passCount": 1444,
+      "skipped": 2
+    },
+    "releaseCandidate": {
+      "passCount": 1449,
+      "skipped": 2
+    },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "diff": "PASS"
+  }
+}
