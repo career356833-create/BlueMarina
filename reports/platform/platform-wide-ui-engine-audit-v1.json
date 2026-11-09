@@ -13,11 +13,13 @@
       "code": "749c526cf8f0c225cc052abade40acc6d339b21f"
     },
     "final": {
-      "url": "https://blue-marina-40dnmw9fg-chiweon.vercel.app",
-      "code": "8475f3e560573cecf1922b07ab72373a5b0dd406",
-      "deployment": "dpl_BXUgbjNBM4mkgMe6S5biX1Dg36CE",
+      "url": "https://blue-marina-6y8kaqxwt-chiweon.vercel.app",
+      "code": "ce67d91a3c60068d9cddb74dbbfe44a964cd5a4f",
+      "deployment": "dpl_8JuBawqBoEeEKYRk8pUCbd5eneyY",
+      "source": "Tracked QA branch checkout deployed directly",
+      "readyState": "READY",
       "supplement": {
-        "origin": "https://blue-marina-40dnmw9fg-chiweon.vercel.app",
+        "origin": "https://blue-marina-6y8kaqxwt-chiweon.vercel.app",
         "screens": [
           [
             "/market/new",
@@ -57,6 +59,11 @@
         ],
         "smoke": "PASS"
       }
+    },
+    "deltaCheck": {
+      "url": "https://blue-marina-40dnmw9fg-chiweon.vercel.app",
+      "code": "8475f3e560573cecf1922b07ab72373a5b0dd406",
+      "scope": "Intermediate browser check. Windows tar extraction omitted some Korean-named raw evidence files; superseded by direct working-tree deployment."
     }
   },
   "coverage": {
@@ -4740,7 +4747,11 @@
     "skipped": 2,
     "failed": 0,
     "auditTargetedPassed": 5,
-    "total": 1451
+    "total": 1451,
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "diffCheck": "PASS"
   },
   "evidenceDirectory": "reports/platform/ui-engine-audit-v1",
   "boundaries": [
