@@ -1,0 +1,4759 @@
+{
+  "task": "BLUE MARINA PLATFORM-WIDE UI/UX + ENGINE CONNECTIVITY MASTER AUDIT & REPAIR V1",
+  "date": "2026-11-09",
+  "decision": "PLATFORM_UI_ENGINE_INTEGRATION_COMPLETE_WITH_LIMITATIONS",
+  "baseline": {
+    "main": "80237a9f49ed42affc6ad4807c6961e6ba348f54",
+    "production": "dpl_HinGPM8AmjLvcULx3Dv7k9wWFQWy",
+    "v6": "3140724c98537793b890c81a1e225e09df5012e1"
+  },
+  "previews": {
+    "inventory": {
+      "url": "https://blue-marina-w6j1r4a6r-chiweon.vercel.app",
+      "code": "749c526cf8f0c225cc052abade40acc6d339b21f"
+    },
+    "final": {
+      "url": "https://blue-marina-40dnmw9fg-chiweon.vercel.app",
+      "code": "8475f3e560573cecf1922b07ab72373a5b0dd406",
+      "deployment": "dpl_BXUgbjNBM4mkgMe6S5biX1Dg36CE",
+      "supplement": {
+        "origin": "https://blue-marina-40dnmw9fg-chiweon.vercel.app",
+        "screens": [
+          [
+            "/market/new",
+            430,
+            "PASS"
+          ],
+          [
+            "/community/new",
+            320,
+            "PASS"
+          ],
+          [
+            "/market",
+            390,
+            "PASS"
+          ],
+          [
+            "/fish",
+            1280,
+            "PASS"
+          ],
+          [
+            "/sea",
+            1280,
+            "PASS"
+          ],
+          [
+            "/reservations",
+            390,
+            "PASS"
+          ],
+          [
+            "/theory?license=yacht",
+            390,
+            "PASS"
+          ]
+        ],
+        "smoke": "PASS"
+      }
+    }
+  },
+  "coverage": {
+    "templates": 64,
+    "classifications": {
+      "PUBLIC": 49,
+      "OWNER_CONTENT_LOGIN_REQUIRED": 3,
+      "INTERNAL_OR_CALLBACK": 3,
+      "ADMIN_ONLY": 6,
+      "PUBLIC_FORM_AUTHENTICATED_SUBMISSION": 3
+    },
+    "historicalPublic": 47,
+    "activePublic": 44,
+    "clickedFromHome": 44,
+    "publicReturnMissing": [],
+    "widths": [
+      320,
+      360,
+      390,
+      430,
+      768,
+      1024,
+      1280,
+      1440
+    ],
+    "beforeCases": 128,
+    "beforeCaptureErrors": 8,
+    "afterDistinctCases": 170,
+    "horizontalOverflowCases": 0,
+    "assessmentCounts": {
+      "PASS": 42,
+      "PASS_WITH_LIMITATION": 13,
+      "INTERNAL_OR_CALLBACK_ONLY": 3,
+      "AUTH_BOUNDARY_ONLY": 6
+    }
+  },
+  "inventory": [
+    {
+      "route": "/",
+      "name": "바다를 읽고,\n더 멀리 나아가다.",
+      "engine": "Home",
+      "designFamily": "brand",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/community",
+        "/contact",
+        "/faq",
+        "/fish",
+        "/fishing-spots",
+        "/license-guide",
+        "/market",
+        "/sea",
+        "/today-sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 320,
+          "http": 200,
+          "heading": [
+            "바다를 읽고,\n더 멀리 나아가다."
+          ],
+          "landed": "/",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 360,
+          "http": 200,
+          "heading": [
+            "바다를 읽고,\n더 멀리 나아가다."
+          ],
+          "landed": "/",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "바다를 읽고,\n더 멀리 나아가다."
+          ],
+          "landed": "/",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 430,
+          "http": 200,
+          "heading": [
+            "바다를 읽고,\n더 멀리 나아가다."
+          ],
+          "landed": "/",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 768,
+          "http": 200,
+          "heading": [
+            "바다를 읽고,\n더 멀리 나아가다."
+          ],
+          "landed": "/",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1024,
+          "http": 200,
+          "heading": [
+            "바다를 읽고,\n더 멀리 나아가다."
+          ],
+          "landed": "/",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "바다를 읽고,\n더 멀리 나아가다."
+          ],
+          "landed": "/",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1440,
+          "http": 200,
+          "heading": [
+            "바다를 읽고,\n더 멀리 나아가다."
+          ],
+          "landed": "/",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/account",
+      "name": "나의 바다 활동",
+      "engine": "account",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/account/activity",
+        "/account/login",
+        "/account/profile",
+        "/account/saved",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [
+        "로그인이 필요합니다"
+      ],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "나의 바다 활동"
+          ],
+          "landed": "/account",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "나의 바다 활동"
+          ],
+          "landed": "/account",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS_WITH_LIMITATION"
+    },
+    {
+      "route": "/account/activity",
+      "name": "나의 바다 활동",
+      "engine": "account",
+      "designFamily": "app shell / discovery",
+      "access": "OWNER_CONTENT_LOGIN_REQUIRED",
+      "publicInventory47": false,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/account/activity",
+        "/account/login",
+        "/account/profile",
+        "/account/saved",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [
+        "로그인이 필요합니다"
+      ],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "나의 바다 활동"
+          ],
+          "landed": "/account/activity",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "나의 바다 활동"
+          ],
+          "landed": "/account/activity",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS_WITH_LIMITATION"
+    },
+    {
+      "route": "/account/auth/complete",
+      "name": "계정 연결",
+      "engine": "account",
+      "designFamily": "app shell / discovery",
+      "access": "INTERNAL_OR_CALLBACK",
+      "publicInventory47": false,
+      "homeEntry": "NOT_EXPECTED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/account/login",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "계정 연결"
+          ],
+          "landed": "/account/auth/complete",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "계정 연결"
+          ],
+          "landed": "/account/auth/complete",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "INTERNAL_OR_CALLBACK_ONLY"
+    },
+    {
+      "route": "/account/login",
+      "name": "계속하기",
+      "engine": "account",
+      "designFamily": "form",
+      "access": "PUBLIC",
+      "publicInventory47": false,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/privacy",
+        "/sea",
+        "/terms"
+      ],
+      "primaryActions": [
+        "카카오 로그인 준비 중",
+        "Google로 계속하기",
+        "로그인",
+        "계정이 없나요? 가입하기"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 320,
+          "http": 200,
+          "heading": [
+            "계속하기"
+          ],
+          "landed": "/account/login",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 360,
+          "http": 200,
+          "heading": [
+            "계속하기"
+          ],
+          "landed": "/account/login",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "계속하기"
+          ],
+          "landed": "/account/login",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 430,
+          "http": 200,
+          "heading": [
+            "계속하기"
+          ],
+          "landed": "/account/login",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 768,
+          "http": 200,
+          "heading": [
+            "계속하기"
+          ],
+          "landed": "/account/login",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1024,
+          "http": 200,
+          "heading": [
+            "계속하기"
+          ],
+          "landed": "/account/login",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "계속하기"
+          ],
+          "landed": "/account/login",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1440,
+          "http": 200,
+          "heading": [
+            "계속하기"
+          ],
+          "landed": "/account/login",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS_WITH_LIMITATION"
+    },
+    {
+      "route": "/account/profile",
+      "name": "나의 바다 활동",
+      "engine": "account",
+      "designFamily": "app shell / discovery",
+      "access": "OWNER_CONTENT_LOGIN_REQUIRED",
+      "publicInventory47": false,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/account/activity",
+        "/account/login",
+        "/account/profile",
+        "/account/saved",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [
+        "로그인이 필요합니다"
+      ],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "나의 바다 활동"
+          ],
+          "landed": "/account/profile",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "나의 바다 활동"
+          ],
+          "landed": "/account/profile",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS_WITH_LIMITATION"
+    },
+    {
+      "route": "/account/saved",
+      "name": "나의 바다 활동",
+      "engine": "account",
+      "designFamily": "app shell / discovery",
+      "access": "OWNER_CONTENT_LOGIN_REQUIRED",
+      "publicInventory47": false,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/account/activity",
+        "/account/login",
+        "/account/profile",
+        "/account/saved",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [
+        "로그인이 필요합니다"
+      ],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "나의 바다 활동"
+          ],
+          "landed": "/account/saved",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "나의 바다 활동"
+          ],
+          "landed": "/account/saved",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS_WITH_LIMITATION"
+    },
+    {
+      "route": "/admin/operations",
+      "name": "/admin/operations",
+      "engine": "admin",
+      "designFamily": "private operations",
+      "access": "ADMIN_ONLY",
+      "publicInventory47": false,
+      "homeEntry": "NOT_EXPECTED",
+      "homeExitModes": [],
+      "relatedVisiblePaths": [],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 390,
+          "http": 404,
+          "heading": [],
+          "landed": "/admin/operations",
+          "bodyOverflowPx": 0,
+          "homeClick": false,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 404,
+          "heading": [],
+          "landed": "/admin/operations",
+          "bodyOverflowPx": 0,
+          "homeClick": false,
+          "applicationError": false
+        }
+      ],
+      "assessment": "AUTH_BOUNDARY_ONLY"
+    },
+    {
+      "route": "/admin/operations/moderation",
+      "name": "/admin/operations/moderation",
+      "engine": "admin",
+      "designFamily": "private operations",
+      "access": "ADMIN_ONLY",
+      "publicInventory47": false,
+      "homeEntry": "NOT_EXPECTED",
+      "homeExitModes": [],
+      "relatedVisiblePaths": [],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 390,
+          "http": 404,
+          "heading": [],
+          "landed": "/admin/operations/moderation",
+          "bodyOverflowPx": 0,
+          "homeClick": false,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 404,
+          "heading": [],
+          "landed": "/admin/operations/moderation",
+          "bodyOverflowPx": 0,
+          "homeClick": false,
+          "applicationError": false
+        }
+      ],
+      "assessment": "AUTH_BOUNDARY_ONLY"
+    },
+    {
+      "route": "/analysis",
+      "name": "학습 분석 리포트",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/progress",
+        "/random",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "학습 분석 리포트"
+          ],
+          "landed": "/analysis",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "학습 분석 리포트"
+          ],
+          "landed": "/analysis",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/boatpedia",
+      "name": "보트백과",
+      "engine": "information",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/dictionary",
+        "/fish",
+        "/fishing-safety",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [
+        "전체 (247)",
+        "보트 종류 (41)",
+        "엔진 종류 (42)",
+        "요트와 세일링 (39)",
+        "수상오토바이 (42)",
+        "보트 장비 (42)",
+        "안전 장비 (41)",
+        "보트 종류\nFRP 보트\n\n섬유강화플라스틱으로 만든 가장 대중적인 레저 보트입니다."
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "보트백과"
+          ],
+          "landed": "/boatpedia",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "보트백과"
+          ],
+          "landed": "/boatpedia",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/centers",
+      "name": "시험장·교육장 검색센터",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/centers/map-test",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [
+        "더 보기 (12/141)"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "시험장·교육장 검색센터"
+          ],
+          "landed": "/centers",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "시험장·교육장 검색센터"
+          ],
+          "landed": "/centers",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/centers/map-test",
+      "name": "네이버 지도 실험실",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "INTERNAL_OR_CALLBACK",
+      "publicInventory47": false,
+      "homeEntry": "NOT_EXPECTED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/centers",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "네이버 지도 실험실"
+          ],
+          "landed": "/centers/map-test",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "네이버 지도 실험실"
+          ],
+          "landed": "/centers/map-test",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "INTERNAL_OR_CALLBACK_ONLY"
+    },
+    {
+      "route": "/charters",
+      "name": "출조를 정직하게 찾다",
+      "engine": "charters",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/account/login",
+        "/charters",
+        "/charters/partners",
+        "/fish",
+        "/fishing-spots",
+        "/fishing-spots/conditions",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [
+        "공식 출처가 확인된 출조 정보만 표시합니다. 현재 공개 출조 0건입니다. 업체는 기존 전화·공식 예약 링크와 상품 정보를 제출할 수 있습니다. 관리자 검토와 별도 게시 절차를 거치며 자동 게시되지 않습니다."
+      ],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "출조를 정직하게 찾다"
+          ],
+          "landed": "/charters",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "출조를 정직하게 찾다"
+          ],
+          "landed": "/charters",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/charters/[id]",
+      "name": "확인된 출조상품이 없습니다",
+      "engine": "charters",
+      "designFamily": "detail / document",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "NO_PUBLIC_RECORD",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "확인된 출조상품이 없습니다"
+          ],
+          "landed": "/charters/audit-unavailable-v1",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "확인된 출조상품이 없습니다"
+          ],
+          "landed": "/charters/audit-unavailable-v1",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS_WITH_LIMITATION"
+    },
+    {
+      "route": "/charters/admin/submissions",
+      "name": "/charters/admin/submissions",
+      "engine": "charters",
+      "designFamily": "private operations",
+      "access": "ADMIN_ONLY",
+      "publicInventory47": false,
+      "homeEntry": "NOT_EXPECTED",
+      "homeExitModes": [],
+      "relatedVisiblePaths": [],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 390,
+          "http": 404,
+          "heading": [],
+          "landed": "/charters/admin/submissions",
+          "bodyOverflowPx": 0,
+          "homeClick": false,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 404,
+          "heading": [],
+          "landed": "/charters/admin/submissions",
+          "bodyOverflowPx": 0,
+          "homeClick": false,
+          "applicationError": false
+        }
+      ],
+      "assessment": "AUTH_BOUNDARY_ONLY"
+    },
+    {
+      "route": "/charters/admin/submissions/[id]",
+      "name": "/charters/admin/submissions/[id]",
+      "engine": "charters",
+      "designFamily": "private operations",
+      "access": "ADMIN_ONLY",
+      "publicInventory47": false,
+      "homeEntry": "NOT_EXPECTED",
+      "homeExitModes": [],
+      "relatedVisiblePaths": [],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 390,
+          "http": 404,
+          "heading": [],
+          "landed": "/charters/admin/submissions/audit-unavailable-v1",
+          "bodyOverflowPx": 0,
+          "homeClick": false,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 404,
+          "heading": [],
+          "landed": "/charters/admin/submissions/audit-unavailable-v1",
+          "bodyOverflowPx": 0,
+          "homeClick": false,
+          "applicationError": false
+        }
+      ],
+      "assessment": "AUTH_BOUNDARY_ONLY"
+    },
+    {
+      "route": "/charters/onboarding",
+      "name": "출조 정보 검토 초안 만들기",
+      "engine": "charters",
+      "designFamily": "form",
+      "access": "PUBLIC_FORM_AUTHENTICATED_SUBMISSION",
+      "publicInventory47": false,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/account/login",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [
+        "1. 업체",
+        "2. 선박",
+        "3. 출항항",
+        "4. 출조상품",
+        "5. 일정·가격",
+        "6. 검토",
+        "이전",
+        "다음"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 320,
+          "http": 200,
+          "heading": [
+            "출조 정보 검토 초안 만들기"
+          ],
+          "landed": "/charters/onboarding",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 360,
+          "http": 200,
+          "heading": [
+            "출조 정보 검토 초안 만들기"
+          ],
+          "landed": "/charters/onboarding",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "출조 정보 검토 초안 만들기"
+          ],
+          "landed": "/charters/onboarding",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 430,
+          "http": 200,
+          "heading": [
+            "출조 정보 검토 초안 만들기"
+          ],
+          "landed": "/charters/onboarding",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 768,
+          "http": 200,
+          "heading": [
+            "출조 정보 검토 초안 만들기"
+          ],
+          "landed": "/charters/onboarding",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1024,
+          "http": 200,
+          "heading": [
+            "출조 정보 검토 초안 만들기"
+          ],
+          "landed": "/charters/onboarding",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "출조 정보 검토 초안 만들기"
+          ],
+          "landed": "/charters/onboarding",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1440,
+          "http": 200,
+          "heading": [
+            "출조 정보 검토 초안 만들기"
+          ],
+          "landed": "/charters/onboarding",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS_WITH_LIMITATION"
+    },
+    {
+      "route": "/charters/partners",
+      "name": "Blue Marina 출조상품 등록",
+      "engine": "charters",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/account/login",
+        "/charters",
+        "/charters/onboarding",
+        "/charters/partners/template.csv",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [
+        "등록 비용이 있나요?",
+        "어떤 정보가 공개되나요?",
+        "가격과 일정은 필수인가요?",
+        "공식 예약 링크를 연결할 수 있나요?",
+        "상품 수정은 어떻게 하나요?",
+        "승인까지 얼마나 걸리나요?",
+        "실시간 잔여석이 없으면 어떻게 표시되나요?",
+        "업체 정보는 어떻게 검증하나요?"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "Blue Marina 출조상품 등록"
+          ],
+          "landed": "/charters/partners",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "Blue Marina 출조상품 등록"
+          ],
+          "landed": "/charters/partners",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/coming-soon",
+      "name": "준비중 기능",
+      "engine": "information",
+      "designFamily": "detail / document",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/faq",
+        "/fish",
+        "/fishing-spots",
+        "/license-guide",
+        "/sea",
+        "/study"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "준비중 기능"
+          ],
+          "landed": "/coming-soon",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "준비중 기능"
+          ],
+          "landed": "/coming-soon",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/community",
+      "name": "바다 경험을 안전하게 나누는 공간",
+      "engine": "community",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/account/login",
+        "/charters",
+        "/fish",
+        "/fishing-spots",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [
+        "적용"
+      ],
+      "emptyErrorAuthObservations": [
+        "조건에 맞는 공개 글 0건"
+      ],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "바다 경험을 안전하게 나누는 공간"
+          ],
+          "landed": "/community",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "바다 경험을 안전하게 나누는 공간"
+          ],
+          "landed": "/community",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/community/[id]",
+      "name": "게시물을 찾을 수 없습니다",
+      "engine": "community",
+      "designFamily": "detail / document",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "NO_PUBLIC_RECORD",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/community",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [
+        "게시물을 찾을 수 없습니다"
+      ],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "게시물을 찾을 수 없습니다"
+          ],
+          "landed": "/community/audit-unavailable-v1",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "게시물을 찾을 수 없습니다"
+          ],
+          "landed": "/community/audit-unavailable-v1",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS_WITH_LIMITATION"
+    },
+    {
+      "route": "/community/new",
+      "name": "커뮤니티 글 작성",
+      "engine": "community",
+      "designFamily": "form",
+      "access": "PUBLIC_FORM_AUTHENTICATED_SUBMISSION",
+      "publicInventory47": false,
+      "homeEntry": "LOGIN_GATED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/account/login",
+        "/charters",
+        "/community",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [
+        "1. 글 유형",
+        "2. 제목",
+        "3. 본문",
+        "4. 지역",
+        "5. 사진",
+        "6. 관련 어종",
+        "7. 관련 정보",
+        "8. 검토"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 320,
+          "http": 200,
+          "heading": [
+            "커뮤니티 글 작성"
+          ],
+          "landed": "/community/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 360,
+          "http": 200,
+          "heading": [
+            "커뮤니티 글 작성"
+          ],
+          "landed": "/community/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "커뮤니티 글 작성"
+          ],
+          "landed": "/community/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 430,
+          "http": 200,
+          "heading": [
+            "커뮤니티 글 작성"
+          ],
+          "landed": "/community/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 768,
+          "http": 200,
+          "heading": [
+            "커뮤니티 글 작성"
+          ],
+          "landed": "/community/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1024,
+          "http": 200,
+          "heading": [
+            "커뮤니티 글 작성"
+          ],
+          "landed": "/community/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "커뮤니티 글 작성"
+          ],
+          "landed": "/community/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1440,
+          "http": 200,
+          "heading": [
+            "커뮤니티 글 작성"
+          ],
+          "landed": "/community/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS_WITH_LIMITATION"
+    },
+    {
+      "route": "/contact",
+      "name": "문의하기",
+      "engine": "information",
+      "designFamily": "detail / document",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/faq",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [
+        "이전 화면으로"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "문의하기"
+          ],
+          "landed": "/contact",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "문의하기"
+          ],
+          "landed": "/contact",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/dev-audit",
+      "name": "바다를 읽고,\n더 멀리 나아가다.",
+      "engine": "information",
+      "designFamily": "app shell / discovery",
+      "access": "INTERNAL_OR_CALLBACK",
+      "publicInventory47": false,
+      "homeEntry": "NOT_EXPECTED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/community",
+        "/contact",
+        "/faq",
+        "/fish",
+        "/fishing-spots",
+        "/license-guide",
+        "/market",
+        "/sea",
+        "/today-sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "바다를 읽고,\n더 멀리 나아가다."
+          ],
+          "landed": "/",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "바다를 읽고,\n더 멀리 나아가다."
+          ],
+          "landed": "/",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "INTERNAL_OR_CALLBACK_ONLY"
+    },
+    {
+      "route": "/dictionary",
+      "name": "해양용어사전",
+      "engine": "information",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/boatpedia",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/sea",
+        "/theory"
+      ],
+      "primaryActions": [
+        "전체 (687)",
+        "선박 용어 (111)",
+        "항해 용어 (118)",
+        "기상 용어 (117)",
+        "기관 용어 (105)",
+        "안전 용어 (122)",
+        "낚시 용어 (114)",
+        "전체"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "해양용어사전"
+          ],
+          "landed": "/dictionary",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "해양용어사전"
+          ],
+          "landed": "/dictionary",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/exam",
+      "name": "50문항 실전 모의고사",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [
+        "갑\n헤드, 크루, 택",
+        "을\n러프, 헤드, 크루",
+        "병\n러프, 택, 크루",
+        "정\n헤드, 크루, 풋"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "50문항 실전 모의고사"
+          ],
+          "landed": "/exam",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "50문항 실전 모의고사"
+          ],
+          "landed": "/exam",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/exam-guide",
+      "name": "면허시험 안내",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/official-links",
+        "/practice",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "면허시험 안내"
+          ],
+          "landed": "/exam-guide",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "면허시험 안내"
+          ],
+          "landed": "/exam-guide",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/faq",
+      "name": "FAQ 센터",
+      "engine": "information",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/coming-soon",
+        "/contact",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [
+        "전체 (202)",
+        "면허 종류 (8)",
+        "시험 준비 (9)",
+        "합격 및 재응시 (8)",
+        "면허 발급 및 갱신 (8)",
+        "요트면허 (7)",
+        "일반 상식 (13)",
+        "바다낚시 입문 (22)"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "FAQ 센터"
+          ],
+          "landed": "/faq",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "FAQ 센터"
+          ],
+          "landed": "/faq",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/fish",
+      "name": "어종백과",
+      "engine": "fish",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [
+        "전체 (336)",
+        "바다낚시 인기어종 (57)",
+        "선상낚시 어종 (62)",
+        "방파제/갯바위 어종 (51)",
+        "계절별 대표어종 (62)",
+        "회/식용 인기어종 (53)",
+        "주의가 필요한 어종 (51)",
+        "선상낚시 어종\n가다랑어\n제철: 여름~가을\n서식지: 외해 표층, 난류권\n\n빠르게 회유하며 루어에 반응하는 다랑어류입니다."
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "어종백과"
+          ],
+          "landed": "/fish",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "어종백과"
+          ],
+          "landed": "/fish",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/fishing-safety",
+      "name": "출조 안전 가이드",
+      "engine": "information",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/fish",
+        "/fishing-spots",
+        "/license-guide",
+        "/sea",
+        "/sea-info"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "출조 안전 가이드"
+          ],
+          "landed": "/fishing-safety",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "출조 안전 가이드"
+          ],
+          "landed": "/fishing-safety",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/fishing-spots",
+      "name": "출조거점 찾기",
+      "engine": "Fishing Spots",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/community",
+        "/fish",
+        "/fishing-safety",
+        "/fishing-spots/boat-1",
+        "/fishing-spots/boat-10",
+        "/fishing-spots/boat-2",
+        "/fishing-spots/boat-27",
+        "/fishing-spots/boat-3",
+        "/fishing-spots/boat-4",
+        "/fishing-spots/boat-5",
+        "/fishing-spots/boat-6",
+        "/fishing-spots/boat-7",
+        "/fishing-spots/boat-8",
+        "/fishing-spots/boat-9",
+        "/fishing-spots/conditions",
+        "/license-guide",
+        "/sea",
+        "/today-sea"
+      ],
+      "primaryActions": [
+        "선상낚시 포인트\n경상남도\n좌표 확인\n남해도 동부·신수도·창선도 - 벽재마을앞입표부근해상\n\n경상남도 남해군\n\n경상남도 남해군에 위치한 선상낚시 포인트입니다. 공식 원본 데이터 기준 대상어는 참돔, 농어, 노래미, 볼락 등이며, 실제 출조 가능 여부는 기상과 현장 통제 상황을 확인해야 합니다.\n\n참돔\n농어\n노래미\n볼락\n우럭",
+        "선상낚시 포인트\n경상남도\n좌표 확인\n칠천도·가조도 - 슬응도부근해상\n\n경상남도 거제시\n\n경상남도 거제시에 위치한 선상낚시 포인트입니다. 공식 원본 데이터 기준 대상어는 감성돔, 노래미, 갑오징어, 도다리 등이며, 실제 출조 가능 여부는 기상과 현장 통제 상황을 확인해야 합니다.\n\n감성돔\n노래미\n갑오징어\n도다리\n볼락",
+        "선상낚시 포인트\n경상북도\n좌표 확인\n울릉도 - 남양항부근해상\n\n경상북도 울릉군\n\n경상북도 울릉군에 위치한 선상낚시 포인트입니다. 공식 원본 데이터 기준 대상어는 참돔, 부시리, 벵에돔이며, 실제 출조 가능 여부는 기상과 현장 통제 상황을 확인해야 합니다.\n\n참돔\n부시리\n벵에돔",
+        "선상낚시 포인트\n제주특별자치도\n좌표 확인\n제주도 북동부·우도 - 반다여부근\n\n제주특별자치도 제주시\n\n제주특별자치도 제주시에 위치한 선상낚시 포인트입니다. 공식 원본 데이터 기준 대상어는 참돔, 돌돔, 볼락, 벵에돔 등이며, 실제 출조 가능 여부는 기상과 현장 통제 상황을 확인해야 합니다.\n\n참돔\n돌돔\n볼락\n벵에돔\n무늬오징어\n+1",
+        "선상낚시 포인트\n전라남도\n좌표 확인\n홍도 - 모도부근\n\n전라남도 신안군\n\n전라남도 신안군에 위치한 선상낚시 포인트입니다. 공식 원본 데이터 기준 대상어는 참돔, 돌돔, 감성돔, 우럭 등이며, 실제 출조 가능 여부는 기상과 현장 통제 상황을 확인해야 합니다.\n\n참돔\n돌돔\n감성돔\n우럭\n농어",
+        "선상낚시 포인트\n전라남도\n좌표 확인\n송이도 - 양골앞바다\n\n전라남도 영광군\n\n전라남도 영광군에 위치한 선상낚시 포인트입니다. 공식 원본 데이터 기준 대상어는 감성돔, 민어, 숭어, 농어 등이며, 실제 출조 가능 여부는 기상과 현장 통제 상황을 확인해야 합니다.\n\n감성돔\n민어\n숭어\n농어\n붕장어\n+1",
+        "선상낚시 포인트\n전라남도\n좌표 확인\n고이도·매화도·선도·증도 - 선도선창부근해상\n\n전라남도 신안군\n\n전라남도 신안군에 위치한 선상낚시 포인트입니다. 공식 원본 데이터 기준 대상어는 감성돔, 노래미, 광어, 숭어 등이며, 실제 출조 가능 여부는 기상과 현장 통제 상황을 확인해야 합니다.\n\n감성돔\n노래미\n광어\n숭어\n우럭\n+3",
+        "선상낚시 포인트\n전라남도\n좌표 확인\n압해도 - 효지도철탑아래해상\n\n전라남도 신안군\n\n전라남도 신안군에 위치한 선상낚시 포인트입니다. 공식 원본 데이터 기준 대상어는 감성돔, 노래미, 농어, 볼락 등이며, 실제 출조 가능 여부는 기상과 현장 통제 상황을 확인해야 합니다.\n\n감성돔\n노래미\n농어\n볼락\n붕장어\n+1"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "출조거점 찾기"
+          ],
+          "landed": "/fishing-spots",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "출조거점 찾기"
+          ],
+          "landed": "/fishing-spots",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/fishing-spots/[id]",
+      "name": "개야도 - 에게이 서측 갯바위",
+      "engine": "Fishing Spots",
+      "designFamily": "detail / document",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/account/login",
+        "/charters",
+        "/fish",
+        "/fishing-spots",
+        "/fishing-spots/conditions",
+        "/license-guide",
+        "/sea",
+        "/sea/navigation"
+      ],
+      "primaryActions": [
+        "내 계정에 저장",
+        "내 계정에 저장",
+        "내 계정에 저장",
+        "내 계정에 저장"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "개야도 - 에게이 서측 갯바위"
+          ],
+          "landed": "/fishing-spots/rock-151",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "개야도 - 에게이 서측 갯바위"
+          ],
+          "landed": "/fishing-spots/rock-151",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/fishing-spots/conditions",
+      "name": "오늘 바다의 근거를 읽다",
+      "engine": "Conditions",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/fish",
+        "/fishing-spots",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [
+        "조건 보기",
+        "어종 근거 보기"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 320,
+          "http": 200,
+          "heading": [
+            "오늘 바다의 근거를 읽다"
+          ],
+          "landed": "/fishing-spots/conditions",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 360,
+          "http": 200,
+          "heading": [
+            "오늘 바다의 근거를 읽다"
+          ],
+          "landed": "/fishing-spots/conditions",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "오늘 바다의 근거를 읽다"
+          ],
+          "landed": "/fishing-spots/conditions",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 430,
+          "http": 200,
+          "heading": [
+            "오늘 바다의 근거를 읽다"
+          ],
+          "landed": "/fishing-spots/conditions",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 768,
+          "http": 200,
+          "heading": [
+            "오늘 바다의 근거를 읽다"
+          ],
+          "landed": "/fishing-spots/conditions",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1024,
+          "http": 200,
+          "heading": [
+            "오늘 바다의 근거를 읽다"
+          ],
+          "landed": "/fishing-spots/conditions",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "오늘 바다의 근거를 읽다"
+          ],
+          "landed": "/fishing-spots/conditions",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1440,
+          "http": 200,
+          "heading": [
+            "오늘 바다의 근거를 읽다"
+          ],
+          "landed": "/fishing-spots/conditions",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/leisure-report",
+      "name": "레저활동 신고 안내",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/official-links",
+        "/practice",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "레저활동 신고 안내"
+          ],
+          "landed": "/leisure-report",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "레저활동 신고 안내"
+          ],
+          "landed": "/leisure-report",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/license-guide",
+      "name": "조종면허 취득 가이드",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/boatpedia",
+        "/centers",
+        "/charters",
+        "/dictionary",
+        "/exam",
+        "/exam-guide",
+        "/faq",
+        "/fish",
+        "/license-guide",
+        "/license-issue",
+        "/marine-knowledge",
+        "/official-links",
+        "/past",
+        "/practice",
+        "/progress",
+        "/safety-guide",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "조종면허 취득 가이드"
+          ],
+          "landed": "/license-guide",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "조종면허 취득 가이드"
+          ],
+          "landed": "/license-guide",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/license-issue",
+      "name": "면허증 발급 안내",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/official-links",
+        "/practice",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "면허증 발급 안내"
+          ],
+          "landed": "/license-issue",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "면허증 발급 안내"
+          ],
+          "landed": "/license-issue",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/marine-knowledge",
+      "name": "해양상식센터",
+      "engine": "information",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/sea",
+        "/sea-info",
+        "/today-sea"
+      ],
+      "primaryActions": [
+        "전체 (418)",
+        "바다와 자연 (71)",
+        "날씨와 기상 (71)",
+        "조석과 물때 (68)",
+        "선박과 항해 (64)",
+        "안전과 구조 (77)",
+        "해양 생물 (67)",
+        "안전과 구조\n가족 출조에서 아이 안전은 어떻게 챙길까?\n\n출조 중 실제 사고를 예방하기 위한 행동 중심 안전 상식입니다."
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "해양상식센터"
+          ],
+          "landed": "/marine-knowledge",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "해양상식센터"
+          ],
+          "landed": "/marine-knowledge",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/market",
+      "name": "바다 장비를 가까운 곳에서",
+      "engine": "market",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/account/login",
+        "/charters",
+        "/community",
+        "/fish",
+        "/license-guide",
+        "/market",
+        "/sea"
+      ],
+      "primaryActions": [
+        "필터 적용"
+      ],
+      "emptyErrorAuthObservations": [
+        "조건에 맞는 공개 판매글 0건"
+      ],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "바다 장비를 가까운 곳에서"
+          ],
+          "landed": "/market",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "바다 장비를 가까운 곳에서"
+          ],
+          "landed": "/market",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/market/[id]",
+      "name": "공개된 상품을 찾을 수 없습니다",
+      "engine": "market",
+      "designFamily": "detail / document",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "NO_PUBLIC_RECORD",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/market",
+        "/sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [
+        "공개된 상품을 찾을 수 없습니다"
+      ],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "공개된 상품을 찾을 수 없습니다"
+          ],
+          "landed": "/market/audit-unavailable-v1",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "공개된 상품을 찾을 수 없습니다"
+          ],
+          "landed": "/market/audit-unavailable-v1",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS_WITH_LIMITATION"
+    },
+    {
+      "route": "/market/admin/listings",
+      "name": "/market/admin/listings",
+      "engine": "market",
+      "designFamily": "private operations",
+      "access": "ADMIN_ONLY",
+      "publicInventory47": false,
+      "homeEntry": "NOT_EXPECTED",
+      "homeExitModes": [],
+      "relatedVisiblePaths": [],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 390,
+          "http": 404,
+          "heading": [],
+          "landed": "/market/admin/listings",
+          "bodyOverflowPx": 0,
+          "homeClick": false,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 404,
+          "heading": [],
+          "landed": "/market/admin/listings",
+          "bodyOverflowPx": 0,
+          "homeClick": false,
+          "applicationError": false
+        }
+      ],
+      "assessment": "AUTH_BOUNDARY_ONLY"
+    },
+    {
+      "route": "/market/admin/listings/[id]",
+      "name": "/market/admin/listings/[id]",
+      "engine": "market",
+      "designFamily": "private operations",
+      "access": "ADMIN_ONLY",
+      "publicInventory47": false,
+      "homeEntry": "NOT_EXPECTED",
+      "homeExitModes": [],
+      "relatedVisiblePaths": [],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 390,
+          "http": 404,
+          "heading": [],
+          "landed": "/market/admin/listings/audit-unavailable-v1",
+          "bodyOverflowPx": 0,
+          "homeClick": false,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 404,
+          "heading": [],
+          "landed": "/market/admin/listings/audit-unavailable-v1",
+          "bodyOverflowPx": 0,
+          "homeClick": false,
+          "applicationError": false
+        }
+      ],
+      "assessment": "AUTH_BOUNDARY_ONLY"
+    },
+    {
+      "route": "/market/new",
+      "name": "판매글 검토 초안",
+      "engine": "market",
+      "designFamily": "form",
+      "access": "PUBLIC_FORM_AUTHENTICATED_SUBMISSION",
+      "publicInventory47": false,
+      "homeEntry": "LOGIN_GATED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/account/login",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/market",
+        "/sea"
+      ],
+      "primaryActions": [
+        "1. 카테고리",
+        "2. 기본정보",
+        "3. 가격",
+        "4. 상태",
+        "5. 지역",
+        "6. 거래방식",
+        "7. 이미지",
+        "8. 설명"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": "NOT_VERIFIED",
+      "viewports": [
+        {
+          "width": 320,
+          "http": 200,
+          "heading": [
+            "판매글 검토 초안"
+          ],
+          "landed": "/market/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 360,
+          "http": 200,
+          "heading": [
+            "판매글 검토 초안"
+          ],
+          "landed": "/market/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "판매글 검토 초안"
+          ],
+          "landed": "/market/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 430,
+          "http": 200,
+          "heading": [
+            "판매글 검토 초안"
+          ],
+          "landed": "/market/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 768,
+          "http": 200,
+          "heading": [
+            "판매글 검토 초안"
+          ],
+          "landed": "/market/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1024,
+          "http": 200,
+          "heading": [
+            "판매글 검토 초안"
+          ],
+          "landed": "/market/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "판매글 검토 초안"
+          ],
+          "landed": "/market/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1440,
+          "http": 200,
+          "heading": [
+            "판매글 검토 초안"
+          ],
+          "landed": "/market/new",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS_WITH_LIMITATION"
+    },
+    {
+      "route": "/official-links",
+      "name": "공식 신청센터",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/exam-guide",
+        "/fish",
+        "/leisure-report",
+        "/license-guide",
+        "/license-issue",
+        "/practice",
+        "/progress",
+        "/safety-guide",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [
+        "온라인 안전교육\n\nURL 확인중\n\n공식 홈페이지에서 확인",
+        "추가 공식 메뉴 2개 보기",
+        "추가 공식 메뉴 12개 보기",
+        "제도 변경 확인\n\nURL 확인중\n\n공식 홈페이지에서 확인"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "공식 신청센터"
+          ],
+          "landed": "/official-links",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "공식 신청센터"
+          ],
+          "landed": "/official-links",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/past",
+      "name": "기출문제 학습센터",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/progress",
+        "/random",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "기출문제 학습센터"
+          ],
+          "landed": "/past",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "기출문제 학습센터"
+          ],
+          "landed": "/past",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/practice",
+      "name": "실기시험 학습센터",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/practice/videos",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "실기시험 학습센터"
+          ],
+          "landed": "/practice",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "실기시험 학습센터"
+          ],
+          "landed": "/practice",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/practice/checklist",
+      "name": "실기시험 체크리스트",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "실기시험 체크리스트"
+          ],
+          "landed": "/practice/checklist",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "실기시험 체크리스트"
+          ],
+          "landed": "/practice/checklist",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/practice/course",
+      "name": "실기 코스 학습",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "실기 코스 학습"
+          ],
+          "landed": "/practice/course",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "실기 코스 학습"
+          ],
+          "landed": "/practice/course",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/practice/fail-items",
+      "name": "실격 사유 학습",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "실격 사유 학습"
+          ],
+          "landed": "/practice/fail-items",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "실격 사유 학습"
+          ],
+          "landed": "/practice/fail-items",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/practice/videos",
+      "name": "실기 영상 학습",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/practice/checklist",
+        "/practice/course",
+        "/practice/fail-items",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "실기 영상 학습"
+          ],
+          "landed": "/practice/videos",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "실기 영상 학습"
+          ],
+          "landed": "/practice/videos",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/privacy",
+      "name": "개인정보처리방침",
+      "engine": "information",
+      "designFamily": "detail / document",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [
+        "이전 화면으로"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "개인정보처리방침"
+          ],
+          "landed": "/privacy",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "개인정보처리방침"
+          ],
+          "landed": "/privacy",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/progress",
+      "name": "진도율 현황",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [
+        "초기화"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "진도율 현황"
+          ],
+          "landed": "/progress",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "진도율 현황"
+          ],
+          "landed": "/progress",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/random",
+      "name": "700문항에서 랜덤 풀이",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [
+        "새로 섞기",
+        "갑\n시장",
+        "을\n도지사",
+        "병\n해양수산부장관",
+        "정\n해양경찰청장"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "700문항에서 랜덤 풀이"
+          ],
+          "landed": "/random",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "700문항에서 랜덤 풀이"
+          ],
+          "landed": "/random",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/reservations",
+      "name": "예약·문의 안내",
+      "engine": "charters",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": false,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "예약·문의 안내"
+          ],
+          "landed": "/reservations",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "예약·문의 안내"
+          ],
+          "landed": "/reservations",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/safety-guide",
+      "name": "수상안전교육 안내",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/official-links",
+        "/sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "수상안전교육 안내"
+          ],
+          "landed": "/safety-guide",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "수상안전교육 안내"
+          ],
+          "landed": "/safety-guide",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/sea",
+      "name": "바다 지도",
+      "engine": "Sea",
+      "designFamily": "immersive",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/sea",
+        "/today-sea"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [
+        "카카오 지도 SDK를 불러오지 못했습니다. 환경변수와 등록 도메인을 확인해 주세요.",
+        "카카오 지도 SDK를 불러오지 못했습니다. 환경변수나 등록 도메인을 확인해 주세요."
+      ],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "바다 지도"
+          ],
+          "landed": "/sea",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "바다 지도"
+          ],
+          "landed": "/sea",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS_WITH_LIMITATION"
+    },
+    {
+      "route": "/sea-info",
+      "name": "해양정보센터",
+      "engine": "Sea",
+      "designFamily": "app shell / discovery",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/marine-knowledge",
+        "/sea",
+        "/today-sea"
+      ],
+      "primaryActions": [
+        "고·저조 조회",
+        "관측소 더 보기 (8/41)",
+        "현재 위치로 가까운 관측소 찾기"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "해양정보센터"
+          ],
+          "landed": "/sea-info",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "해양정보센터"
+          ],
+          "landed": "/sea-info",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/sea/navigation",
+      "name": "해양 항법 보조",
+      "engine": "Navigation",
+      "designFamily": "immersive",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/sea"
+      ],
+      "primaryActions": [
+        "GPS 위치 추적 시작",
+        "GPS 대지속도 SOG\n—\nkn",
+        "항해 기록 · 웨이포인트\n방위 -- · 직선거리 -- · GPS 꺼짐",
+        "Zoom in",
+        "Zoom out",
+        "Toggle attribution",
+        "지도 · 기본",
+        "육상 지형 ON\n2D 평면"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 320,
+          "http": 200,
+          "heading": [
+            "해양 항법 보조"
+          ],
+          "landed": "/sea/navigation",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 360,
+          "http": 200,
+          "heading": [
+            "해양 항법 보조"
+          ],
+          "landed": "/sea/navigation",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "해양 항법 보조"
+          ],
+          "landed": "/sea/navigation",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 430,
+          "http": 200,
+          "heading": [
+            "해양 항법 보조"
+          ],
+          "landed": "/sea/navigation",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 768,
+          "http": 200,
+          "heading": [
+            "해양 항법 보조"
+          ],
+          "landed": "/sea/navigation",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1024,
+          "http": 200,
+          "heading": [
+            "해양 항법 보조"
+          ],
+          "landed": "/sea/navigation",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "해양 항법 보조"
+          ],
+          "landed": "/sea/navigation",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1440,
+          "http": 200,
+          "heading": [
+            "해양 항법 보조"
+          ],
+          "landed": "/sea/navigation",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS_WITH_LIMITATION"
+    },
+    {
+      "route": "/study",
+      "name": "분류별 문제은행",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [
+        "전체 문제은행",
+        "기상 및 해양환경",
+        "조석·조류·해류",
+        "항해·해도·항로표지",
+        "선박 조종술 및 운용",
+        "기관 및 정비",
+        "구명·조난·소방",
+        "응급처치·인명구조"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "분류별 문제은행"
+          ],
+          "landed": "/study",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "분류별 문제은행"
+          ],
+          "landed": "/study",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/terms",
+      "name": "이용약관",
+      "engine": "information",
+      "designFamily": "detail / document",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/fish",
+        "/license-guide",
+        "/privacy",
+        "/sea"
+      ],
+      "primaryActions": [
+        "이전 화면으로"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "이용약관"
+          ],
+          "landed": "/terms",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "이용약관"
+          ],
+          "landed": "/terms",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/theory",
+      "name": "이론학습",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/dictionary",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/theory/%EA%B3%BC%ED%83%9C%EB%A3%8C%C2%B7%EB%B2%8C%EC%B9%99%C2%B7%ED%96%89%EC%A0%95%EC%B2%98%EB%B6%84",
+        "/theory/%EA%B5%AC%EB%AA%85%EC%84%A4%EB%B9%84",
+        "/theory/%EA%B8%B0%EA%B4%80%C2%B7%EC%97%94%EC%A7%84%20%EA%B8%B0%EC%B4%88",
+        "/theory/%EB%83%89%EA%B0%81%EA%B3%84%ED%86%B5",
+        "/theory/%EB%93%B1%EB%A1%9D%C2%B7%EA%B2%80%EC%82%AC%C2%B7%EC%95%88%EC%A0%84%EA%B2%80%EC%82%AC",
+        "/theory/%EB%93%B1%ED%99%94%20%EC%8B%9D%EB%B3%84",
+        "/theory/%EB%A0%88%EC%9D%B4%EB%8D%94%C2%B7%EA%B2%BD%EA%B3%84%C2%B7%EC%A0%9C%ED%95%9C%EC%8B%9C%EA%B3%84",
+        "/theory/%EB%AA%A8%ED%84%B0%EB%B3%B4%ED%8A%B8%20%EC%84%A0%EC%B2%B4%20%EA%B5%AC%EC%A1%B0",
+        "/theory/%EB%B0%94%EB%9E%8C%C2%B7%ED%92%8D%ED%96%A5%C2%B7%ED%92%8D%EC%86%8D",
+        "/theory/%EC%86%8C%EB%B0%A9%C2%B7%EC%86%8C%ED%99%94",
+        "/theory/%EC%88%98%EC%83%81%EB%A0%88%EC%A0%80%EC%82%AC%EC%97%85%C2%B7%EC%98%81%EC%97%85%EA%B4%80%EB%A6%AC",
+        "/theory/%EC%88%98%EC%83%81%EB%A0%88%EC%A0%80%EC%95%88%EC%A0%84%EB%B2%95%EA%B3%BC%20%EC%9A%B4%ED%95%AD%20%EC%A0%9C%ED%95%9C",
+        "/theory/%EC%8B%AC%ED%8F%90%EC%86%8C%EC%83%9D%EC%88%A0%C2%B7%EC%9D%B8%EB%AA%85%EA%B5%AC%EC%A1%B0",
+        "/theory/%EC%97%B0%EB%A3%8C%EA%B3%84%ED%86%B5",
+        "/theory/%EC%9A%94%ED%8A%B8%20%EC%84%B8%EC%9D%BC%C2%B7%EB%8F%9B%20%EC%9A%B4%EC%9A%A9",
+        "/theory/%EC%9C%A4%ED%99%9C%EA%B3%84%ED%86%B5",
+        "/theory/%EC%9D%8C%ED%96%A5%EC%8B%A0%ED%98%B8%EC%99%80%20%EA%B8%B0%EC%A0%81",
+        "/theory/%EC%9D%91%EA%B8%89%EC%B2%98%EC%B9%98%C2%B7%ED%99%98%EC%9E%90%20%ED%8F%89%EA%B0%80",
+        "/theory/%EC%A0%84%EA%B8%B0%C2%B7%EC%A0%90%ED%99%94%EA%B3%84%ED%86%B5",
+        "/theory/%EC%A1%B0%EB%82%9C%C2%B7%EB%B9%84%EC%83%81%EC%83%81%ED%99%A9",
+        "/theory/%EC%A1%B0%EC%84%9D%C2%B7%EC%A1%B0%EB%A5%98",
+        "/theory/%EC%A1%B0%EC%A2%85%20%EA%B8%B0%EB%B3%B8%EA%B3%BC%20%ED%82%A4%20%EC%A1%B0%EC%9E%91",
+        "/theory/%EC%A1%B0%EC%A2%85%EB%A9%B4%ED%97%88%C2%B7%EB%A9%B4%ED%97%88%EC%8B%9C%ED%97%98%C2%B7%EB%A9%B4%ED%97%88%EC%A6%9D",
+        "/theory/%EC%B6%9C%ED%95%AD%C2%B7%EC%9E%85%ED%95%AD%C2%B7%ED%95%AD%EB%A7%8C%2F%EB%AC%B4%EC%97%AD%ED%95%AD",
+        "/theory/%EC%B6%A9%EB%8F%8C%EC%98%88%EB%B0%A9%C2%B7%ED%9A%A1%EB%8B%A8%C2%B7%EC%B6%94%EC%9B%94",
+        "/theory/%ED%8C%8C%EB%8F%84%C2%B7%ED%8C%8C%EB%9E%91%C2%B7%EC%88%98%EB%A9%B4%EC%83%81%ED%83%9C",
+        "/theory/%ED%94%84%EB%A1%9C%ED%8E%A0%EB%9F%AC%C2%B7%EC%B6%94%EC%A7%84%EC%9E%A5%EC%B9%98"
+      ],
+      "primaryActions": [
+        "전체",
+        "법규·행정",
+        "항해·해도·항로표지",
+        "선박 조종술 및 운용",
+        "기관 및 정비",
+        "기상 및 해양환경",
+        "조석·조류·해류",
+        "구명·조난·소방"
+      ],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "이론학습"
+          ],
+          "landed": "/theory",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "이론학습"
+          ],
+          "landed": "/theory",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/theory/[tag]",
+      "name": "수상레저안전법과 운항 제한",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/theory/%EC%88%98%EC%83%81%EB%A0%88%EC%A0%80%EC%95%88%EC%A0%84%EB%B2%95%EA%B3%BC%20%EC%9A%B4%ED%95%AD%20%EC%A0%9C%ED%95%9C",
+        "/wrong"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "수상레저안전법과 운항 제한"
+          ],
+          "landed": "/theory/%EC%88%98%EC%83%81%EB%A0%88%EC%A0%80%EC%95%88%EC%A0%84%EB%B2%95%EA%B3%BC%20%EC%9A%B4%ED%95%AD%20%EC%A0%9C%ED%95%9C",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "수상레저안전법과 운항 제한"
+          ],
+          "landed": "/theory/%EC%88%98%EC%83%81%EB%A0%88%EC%A0%80%EC%95%88%EC%A0%84%EB%B2%95%EA%B3%BC%20%EC%9A%B4%ED%95%AD%20%EC%A0%9C%ED%95%9C",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/today-sea",
+      "name": "오늘의 바다를\n읽다",
+      "engine": "Sea",
+      "designFamily": "immersive",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/charters",
+        "/fish",
+        "/fishing-spots/conditions",
+        "/license-guide",
+        "/sea",
+        "/sea/navigation"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "오늘의 바다를\n읽다"
+          ],
+          "landed": "/today-sea",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "오늘의 바다를\n읽다"
+          ],
+          "landed": "/today-sea",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    },
+    {
+      "route": "/wrong",
+      "name": "오답노트",
+      "engine": "learning",
+      "designFamily": "learning / guide",
+      "access": "PUBLIC",
+      "publicInventory47": true,
+      "homeEntry": "CLICK_VERIFIED",
+      "homeExitModes": [
+        "direct / anchor"
+      ],
+      "relatedVisiblePaths": [
+        "/",
+        "/account",
+        "/analysis",
+        "/charters",
+        "/exam",
+        "/fish",
+        "/license-guide",
+        "/practice",
+        "/progress",
+        "/sea",
+        "/study",
+        "/theory",
+        "/wrong"
+      ],
+      "primaryActions": [],
+      "emptyErrorAuthObservations": [],
+      "ownerRecords": null,
+      "viewports": [
+        {
+          "width": 390,
+          "http": 200,
+          "heading": [
+            "오답노트"
+          ],
+          "landed": "/wrong",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        },
+        {
+          "width": 1280,
+          "http": 200,
+          "heading": [
+            "오답노트"
+          ],
+          "landed": "/wrong",
+          "bodyOverflowPx": 0,
+          "homeClick": true,
+          "applicationError": false
+        }
+      ],
+      "assessment": "PASS"
+    }
+  ],
+  "clickedGraph": {
+    "reached": {
+      "/": "/",
+      "/sea": "/sea",
+      "/fishing-spots": "/fishing-spots",
+      "/fish": "/fish",
+      "/market": "/market",
+      "/license-guide": "/license-guide",
+      "/account": "/account",
+      "/today-sea": "/today-sea",
+      "/charters": "/charters",
+      "/community": "/community",
+      "/faq": "/faq",
+      "/contact": "/contact",
+      "/privacy": "/privacy?from=%2Ffish",
+      "/terms": "/terms?from=%2Ffish",
+      "/fishing-spots/conditions": "/fishing-spots/conditions?spotId=boat-27&speciesId=BM-SPECIES-000751&source=fishing-spots",
+      "/fishing-spots/[id]": "/fishing-spots/boat-27",
+      "/fishing-safety": "/fishing-safety",
+      "/account/profile": "/account/profile",
+      "/account/saved": "/account/saved",
+      "/account/activity": "/account/activity",
+      "/account/login": "/account/login?returnTo=%2Faccount",
+      "/study": "/study?license=general",
+      "/theory": "/theory?license=general",
+      "/exam": "/exam?license=general",
+      "/wrong": "/wrong?license=general",
+      "/progress": "/progress?license=general",
+      "/analysis": "/analysis?license=general",
+      "/practice": "/practice?license=general",
+      "/exam-guide": "/exam-guide",
+      "/safety-guide": "/safety-guide",
+      "/license-issue": "/license-issue",
+      "/official-links": "/official-links",
+      "/centers": "/centers",
+      "/past": "/past",
+      "/boatpedia": "/boatpedia",
+      "/dictionary": "/dictionary",
+      "/marine-knowledge": "/marine-knowledge",
+      "/charters/partners": "/charters/partners",
+      "/sea/navigation": "/sea/navigation",
+      "/coming-soon": "/coming-soon",
+      "/sea-info": "/sea-info",
+      "/theory/[tag]": "/theory/%EC%88%98%EC%83%81%EB%A0%88%EC%A0%80%EC%95%88%EC%A0%84%EB%B2%95%EA%B3%BC%20%EC%9A%B4%ED%95%AD%20%EC%A0%9C%ED%95%9C",
+      "/random": "/random?license=general",
+      "/practice/course": "/practice/course",
+      "/practice/fail-items": "/practice/fail-items",
+      "/practice/checklist": "/practice/checklist",
+      "/practice/videos": "/practice/videos",
+      "/leisure-report": "/leisure-report",
+      "/charters/onboarding": "/charters/onboarding"
+    },
+    "edges": [
+      [
+        "/",
+        "/",
+        "/"
+      ],
+      [
+        "/",
+        "/",
+        "/"
+      ],
+      [
+        "/",
+        "/sea",
+        "/sea"
+      ],
+      [
+        "/",
+        "/fishing-spots",
+        "/fishing-spots"
+      ],
+      [
+        "/",
+        "/fish",
+        "/fish"
+      ],
+      [
+        "/",
+        "/market",
+        "/market"
+      ],
+      [
+        "/",
+        "/license-guide",
+        "/license-guide"
+      ],
+      [
+        "/",
+        "/account",
+        "/account"
+      ],
+      [
+        "/",
+        "/today-sea",
+        "/today-sea"
+      ],
+      [
+        "/",
+        "/sea",
+        "/sea"
+      ],
+      [
+        "/",
+        "/",
+        "#home-services"
+      ],
+      [
+        "/",
+        "/today-sea",
+        "/today-sea"
+      ],
+      [
+        "/",
+        "/sea",
+        "/sea"
+      ],
+      [
+        "/",
+        "/fishing-spots",
+        "/fishing-spots"
+      ],
+      [
+        "/",
+        "/charters",
+        "/charters"
+      ],
+      [
+        "/",
+        "/fish",
+        "/fish"
+      ],
+      [
+        "/",
+        "/market",
+        "/market"
+      ],
+      [
+        "/",
+        "/community",
+        "/community"
+      ],
+      [
+        "/",
+        "/license-guide",
+        "/license-guide"
+      ],
+      [
+        "/",
+        "/faq",
+        "/faq"
+      ],
+      [
+        "/",
+        "/contact",
+        "/contact"
+      ],
+      [
+        "/fish",
+        "/privacy",
+        "/privacy?from=%2Ffish"
+      ],
+      [
+        "/fish",
+        "/terms",
+        "/terms?from=%2Ffish"
+      ],
+      [
+        "/fishing-spots",
+        "/fishing-spots/conditions",
+        "/fishing-spots/conditions?spotId=boat-27&speciesId=BM-SPECIES-000751&source=fishing-spots"
+      ],
+      [
+        "/fishing-spots",
+        "/fishing-spots/[id]",
+        "/fishing-spots/boat-27"
+      ],
+      [
+        "/fishing-spots",
+        "/fishing-safety",
+        "/fishing-safety"
+      ],
+      [
+        "/account",
+        "/account/profile",
+        "/account/profile"
+      ],
+      [
+        "/account",
+        "/account/saved",
+        "/account/saved"
+      ],
+      [
+        "/account",
+        "/account/activity",
+        "/account/activity"
+      ],
+      [
+        "/account",
+        "/account/login",
+        "/account/login?returnTo=%2Faccount"
+      ],
+      [
+        "/license-guide",
+        "/study",
+        "/study?license=general"
+      ],
+      [
+        "/license-guide",
+        "/theory",
+        "/theory?license=general"
+      ],
+      [
+        "/license-guide",
+        "/exam",
+        "/exam?license=general"
+      ],
+      [
+        "/license-guide",
+        "/wrong",
+        "/wrong?license=general"
+      ],
+      [
+        "/license-guide",
+        "/progress",
+        "/progress?license=general"
+      ],
+      [
+        "/license-guide",
+        "/analysis",
+        "/analysis?license=general"
+      ],
+      [
+        "/license-guide",
+        "/practice",
+        "/practice?license=general"
+      ],
+      [
+        "/license-guide",
+        "/exam-guide",
+        "/exam-guide"
+      ],
+      [
+        "/license-guide",
+        "/safety-guide",
+        "/safety-guide"
+      ],
+      [
+        "/license-guide",
+        "/license-issue",
+        "/license-issue"
+      ],
+      [
+        "/license-guide",
+        "/official-links",
+        "/official-links"
+      ],
+      [
+        "/license-guide",
+        "/centers",
+        "/centers"
+      ],
+      [
+        "/license-guide",
+        "/past",
+        "/past"
+      ],
+      [
+        "/license-guide",
+        "/boatpedia",
+        "/boatpedia"
+      ],
+      [
+        "/license-guide",
+        "/dictionary",
+        "/dictionary"
+      ],
+      [
+        "/license-guide",
+        "/marine-knowledge",
+        "/marine-knowledge"
+      ],
+      [
+        "/charters",
+        "/charters/partners",
+        "/charters/partners"
+      ],
+      [
+        "/today-sea",
+        "/sea/navigation",
+        "/sea/navigation"
+      ],
+      [
+        "/faq",
+        "/coming-soon",
+        "/coming-soon"
+      ],
+      [
+        "/fishing-safety",
+        "/sea-info",
+        "/sea-info"
+      ],
+      [
+        "/theory",
+        "/theory/[tag]",
+        "/theory/%EC%88%98%EC%83%81%EB%A0%88%EC%A0%80%EC%95%88%EC%A0%84%EB%B2%95%EA%B3%BC%20%EC%9A%B4%ED%95%AD%20%EC%A0%9C%ED%95%9C"
+      ],
+      [
+        "/analysis",
+        "/random",
+        "/random?license=general"
+      ],
+      [
+        "/practice",
+        "/practice/course",
+        "/practice/course"
+      ],
+      [
+        "/practice",
+        "/practice/fail-items",
+        "/practice/fail-items"
+      ],
+      [
+        "/practice",
+        "/practice/checklist",
+        "/practice/checklist"
+      ],
+      [
+        "/practice",
+        "/practice/videos",
+        "/practice/videos"
+      ],
+      [
+        "/official-links",
+        "/leisure-report",
+        "/leisure-report"
+      ],
+      [
+        "/charters/partners",
+        "/charters/onboarding",
+        "/charters/onboarding"
+      ]
+    ],
+    "home": [
+      [
+        "/",
+        "BLUE MARINAMARINE · FISHING · NAVIGATION",
+        "PASS"
+      ],
+      [
+        "/",
+        "HOME",
+        "PASS"
+      ],
+      [
+        "/sea",
+        "SEA",
+        "PASS"
+      ],
+      [
+        "/fishing-spots",
+        "FISHING",
+        "PASS"
+      ],
+      [
+        "/fish",
+        "FISH",
+        "PASS"
+      ],
+      [
+        "/market",
+        "MARKET",
+        "PASS"
+      ],
+      [
+        "/license-guide",
+        "GUIDE",
+        "PASS"
+      ],
+      [
+        "/account",
+        "내 계정",
+        "PASS"
+      ],
+      [
+        "/today-sea",
+        "오늘의 바다",
+        "PASS"
+      ],
+      [
+        "/sea",
+        "바다 탐색",
+        "PASS"
+      ],
+      [
+        "#home-services",
+        "SCROLL TO DISCOVER",
+        "PASS"
+      ],
+      [
+        "/today-sea",
+        "오늘의 바다물때와 해양 기상",
+        "PASS"
+      ],
+      [
+        "/sea",
+        "바다 지도해역과 거점 탐색",
+        "PASS"
+      ],
+      [
+        "/fishing-spots",
+        "낚시 포인트지역·어종별 포인트 찾고 저장",
+        "PASS"
+      ],
+      [
+        "/charters",
+        "출조 찾기출조 찾기 · 업체 상품 등록",
+        "PASS"
+      ],
+      [
+        "/fish",
+        "어종 도감어종 정보와 조건",
+        "PASS"
+      ],
+      [
+        "/market",
+        "마켓중고 장비 찾기 · 판매글 등록",
+        "PASS"
+      ],
+      [
+        "/community",
+        "커뮤니티",
+        "PASS"
+      ],
+      [
+        "/license-guide",
+        "면허·가이드",
+        "PASS"
+      ],
+      [
+        "/faq",
+        "자주 묻는 질문",
+        "PASS"
+      ],
+      [
+        "/contact",
+        "문의하기",
+        "PASS"
+      ]
+    ],
+    "failures": [],
+    "description": "First-preview discovery edges clicked from Home. Multiple inbound routes may target the same template. Unavailable entities are opened directly and the three parent exits are checked separately."
+  },
+  "finalAdditionalClickEdges": [
+    [
+      "/charters",
+      "/reservations"
+    ],
+    [
+      "/reservations",
+      "/"
+    ],
+    [
+      "/theory?license=yacht",
+      "/theory/[tag]?license=yacht"
+    ],
+    [
+      "/theory/[tag]?license=yacht",
+      "/theory?license=yacht"
+    ],
+    [
+      "/theory?license=yacht",
+      "/study?license=yacht"
+    ]
+  ],
+  "homeMobile": [
+    [
+      "/",
+      "BLUE MARINAMARINE · FISHING · NAVIGATION",
+      "PASS"
+    ],
+    [
+      "/sea",
+      "바다 지도",
+      "PASS"
+    ],
+    [
+      "/account",
+      "내 계정",
+      "PASS"
+    ],
+    [
+      "/today-sea",
+      "오늘의 바다",
+      "PASS"
+    ],
+    [
+      "/sea",
+      "바다 탐색",
+      "PASS"
+    ],
+    [
+      "/today-sea",
+      "오늘의 바다물때와 해양 기상",
+      "PASS"
+    ],
+    [
+      "/sea",
+      "바다 지도해역과 거점 탐색",
+      "PASS"
+    ],
+    [
+      "/fishing-spots",
+      "낚시 포인트지역·어종별 포인트 찾고 저장",
+      "PASS"
+    ],
+    [
+      "/charters",
+      "출조 찾기출조 찾기 · 업체 상품 등록",
+      "PASS"
+    ],
+    [
+      "/fish",
+      "어종 도감어종 정보와 조건",
+      "PASS"
+    ],
+    [
+      "/market",
+      "마켓중고 장비 찾기 · 판매글 등록",
+      "PASS"
+    ],
+    [
+      "/community",
+      "커뮤니티",
+      "PASS"
+    ],
+    [
+      "/license-guide",
+      "면허·가이드",
+      "PASS"
+    ],
+    [
+      "/faq",
+      "자주 묻는 질문",
+      "PASS"
+    ],
+    [
+      "/contact",
+      "문의하기",
+      "PASS"
+    ],
+    [
+      "/",
+      "홈",
+      "PASS"
+    ],
+    [
+      "/sea",
+      "바다",
+      "PASS"
+    ],
+    [
+      "/charters",
+      "출조",
+      "PASS"
+    ],
+    [
+      "/fish",
+      "어종",
+      "PASS"
+    ],
+    [
+      "/license-guide",
+      "가이드",
+      "PASS"
+    ]
+  ],
+  "homeMobileFailed": [],
+  "journeys": {
+    "A": {
+      "status": "PASS_WITH_LIMITATION",
+      "clicked": [
+        "/today-sea",
+        "/sea",
+        "/"
+      ],
+      "mapProvider": "Preview SDK unavailable, site remains interactive"
+    },
+    "B": {
+      "status": "PASS",
+      "clicked": [
+        "/fishing-spots",
+        "/fishing-spots/boat-27",
+        "/fishing-spots/conditions?spotId=boat-27&speciesId=BM-SPECIES-000751&source=spot-detail&returnTo=%2Ffishing-spots%2Fboat-27",
+        "/sea/navigation?lat=34.612778&lng=128.596944&name=%EB%B9%84%EC%A7%84%EB%8F%84%C2%B7%EB%A7%A4%EB%AC%BC%EB%8F%84+-+%EC%86%8C%EB%A7%A4%EB%AC%BC%EB%8F%84%EB%93%B1%EA%B0%80%EB%8F%84%EB%B6%80%EA%B7%BC&type=fishing_spot&sourceId=boat-27",
+        "/fishing-spots/boat-27",
+        "/"
+      ]
+    },
+    "C": {
+      "status": "PASS",
+      "clicked": [
+        "/fish",
+        "/fishing-spots?q=%EA%B0%80%EB%8B%A4%EB%9E%91%EC%96%B4&source=fish",
+        "/"
+      ]
+    },
+    "D": {
+      "status": "PASS_WITH_LIMITATION",
+      "clicked": [
+        "/charters",
+        "/charters/partners",
+        "/account/login?returnTo=%2Fcharters%2Fonboarding",
+        "/"
+      ],
+      "ownerContinuation": "NOT_VERIFIED"
+    },
+    "E": {
+      "status": "PASS_WITH_LIMITATION",
+      "clicked": [
+        "/market",
+        "/account/login?returnTo=%2Fmarket%2Fnew",
+        "/"
+      ],
+      "ownerContinuation": "NOT_VERIFIED"
+    },
+    "F": {
+      "status": "PASS_WITH_LIMITATION",
+      "clicked": [
+        "/community",
+        "/account/login?returnTo=%2Fcommunity%2Fnew",
+        "/"
+      ],
+      "ownerContinuation": "NOT_VERIFIED"
+    },
+    "G": {
+      "status": "PASS",
+      "clicked": [
+        "/license-guide",
+        "/study?license=general",
+        "/theory?license=general",
+        "/theory/%EC%88%98%EC%83%81%EB%A0%88%EC%A0%80%EC%95%88%EC%A0%84%EB%B2%95%EA%B3%BC%20%EC%9A%B4%ED%95%AD%20%EC%A0%9C%ED%95%9C",
+        "/exam?license=general",
+        "/wrong?license=general",
+        "/progress?license=general",
+        "/analysis?license=general",
+        "/"
+      ],
+      "yachtRoundTrip": "PASS"
+    },
+    "H": {
+      "status": "PASS_WITH_LIMITATION",
+      "clicked": [
+        "/account",
+        "/account/profile",
+        "/account/saved",
+        "/"
+      ],
+      "ownerContinuation": "NOT_VERIFIED"
+    },
+    "I": {
+      "status": "PASS",
+      "clicked": [
+        "/license-guide",
+        "/dictionary",
+        "/boatpedia",
+        "/fishing-safety",
+        "/"
+      ]
+    },
+    "J": {
+      "status": "PASS",
+      "clicked": [
+        "/faq",
+        "/contact",
+        "/"
+      ]
+    }
+  },
+  "additionalChecks": {
+    "charterDraftCancelRetains": true,
+    "charterDraftConfirmReturnsHome": true,
+    "invalidFishingSpotHttp": 404,
+    "mapRenderedWithoutApplicationCrash": true,
+    "navigationControls": {
+      "syntheticGpsRecenter": true,
+      "항적 표시": true,
+      "보트 추적": true,
+      "mapModeRoundTrip": true,
+      "detailsOpen": true
+    },
+    "focusHitTestAndUnavailableDetailParentClicks": {
+      "390": {
+        "size": [
+          44,
+          44
+        ],
+        "isHit": true,
+        "overlapsBack": false,
+        "keyboardHome": true
+      },
+      "1280": {
+        "size": [
+          44,
+          44
+        ],
+        "isHit": true,
+        "overlapsBack": false,
+        "keyboardHome": true
+      },
+      "chartersMissingToParent": "PASS",
+      "marketMissingToParent": "PASS",
+      "communityMissingToParent": "PASS"
+    }
+  },
+  "test": {
+    "passed": 1449,
+    "skipped": 2,
+    "failed": 0,
+    "auditTargetedPassed": 5,
+    "total": 1451
+  },
+  "evidenceDirectory": "reports/platform/ui-engine-audit-v1",
+  "boundaries": [
+    "Authenticated OAuth, private entity reads/writes, privileged admin UI and real GPS not exercised.",
+    "No public business record invented. Dynamic not-found may stream HTTP 200; read UI and robots separately.",
+    "Screenshot coverage is viewport and anonymous session based. Physical keyboard, screen reader, sustained voyages and every asynchronous upstream failure remain unverified.",
+    "Full inventory on the first Preview. Final delta checked separately. Existing source code tests cover GPX, voyage and role contracts."
+  ],
+  "verificationLimits": {
+    "dormantBusinessDetail": "Public valid/private ID not exercised. Only unavailable detail and parent/Home exits verified.",
+    "admin": "Actual authenticated management actions NOT_VERIFIED",
+    "provider": "Preview Kakao SDK unavailable. UI fallbacks and constructor-readiness regression tested.",
+    "navigation": "Real GPS, at-sea track recording, real-device gestures and prolonged background operation NOT_VERIFIED.",
+    "visual": "Responsive Chrome viewports and screenshots, not real mobile device or screen reader."
+  }
+}
