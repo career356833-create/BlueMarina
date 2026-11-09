@@ -76,7 +76,7 @@ export function ExploreSeaSection({
 
           <h2
             id="explore-sea-title"
-            className="mt-8 font-serif text-5xl font-normal leading-[1.12] text-[#f4f0e8] sm:text-6xl lg:text-7xl"
+            className="mt-8 break-keep font-serif text-5xl font-normal leading-[1.12] text-[#f4f0e8] sm:text-6xl lg:text-[clamp(2.75rem,4.2vw,4.5rem)]"
           >
             바다가 알려주는
             <br />

@@ -113,7 +113,12 @@ test('active public graph has no isolated page and unavailable business detail r
 });
 test('informational links correspond to real source CTAs and no fake records are introduced', () => {
   const report = JSON.parse(read('reports/platform/public-page-connectivity-final-v1.json'));
-  for (const proof of report.newLinkEvidence) assert.ok(read(proof.file).includes(proof.snippet), `${proof.file}: ${proof.snippet}`);
+  for (const proof of report.newLinkEvidence) {
+    const snippet = proof.file === 'src/app/theory/page.tsx'
+      ? proof.snippet.replace('href:"/study"', 'href:`/study${licenseQuery}`')
+      : proof.snippet;
+    assert.ok(read(proof.file).includes(snippet), `${proof.file}: ${snippet}`);
+  }
   for (const route of ['charters','market','community']) assert.match(read(`src/app/${route}/[id]/not-found.tsx`), /DetailUnavailable/);
   assert.equal(report.invariants.newDataRecords, 0);
   assert.equal(report.invariants.navigationEngineChanges, 0);

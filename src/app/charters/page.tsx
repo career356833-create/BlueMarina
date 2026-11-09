@@ -37,6 +37,7 @@ export default function ChartersPage() {
             <Link href="/charters/partners" className="mt-5 inline-flex min-h-11 items-center px-3 text-sm font-semibold text-marine-accent underline underline-offset-4">업체용 출조 정보 등록 안내</Link>
           </EmptyState>
         ) : null}
+        <Link href="/reservations" className="bm-action-secondary mt-4 inline-flex min-h-11 items-center px-4 text-sm">예약·문의 안내</Link>
       </section>
     </AppFrame>
   );

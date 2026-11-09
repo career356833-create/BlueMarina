@@ -25,7 +25,7 @@ export default async function MarketPage({ searchParams }: { searchParams: Promi
     <div className="bm-page-hero p-6 sm:p-10">
       <p className="bm-eyebrow">BLUE MARINA MARKET</p>
       <div className="mt-4 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-        <div><h1 className="text-3xl font-black leading-tight text-white sm:text-5xl">바다 장비를 가까운 곳에서</h1><p className="mt-4 max-w-2xl bm-lede text-sm leading-7">낚시장비와 보트용품을 지역·상태·거래 방식으로 살펴보는 중고거래 공간입니다. 결제와 거래 보증은 제공하지 않습니다.</p></div>
+        <div><h1 className="break-keep text-3xl font-black leading-tight text-white sm:text-5xl">바다 장비를 가까운 곳에서</h1><p className="mt-4 max-w-2xl bm-lede text-sm leading-7">낚시장비와 보트용품을 지역·상태·거래 방식으로 살펴보는 중고거래 공간입니다. 결제와 거래 보증은 제공하지 않습니다.</p></div>
         <ParticipationLink href="/market/new" className="bm-action shrink-0 gap-2 px-6 text-sm"><Plus size={18}/>판매글 등록</ParticipationLink>
       </div>
     </div>

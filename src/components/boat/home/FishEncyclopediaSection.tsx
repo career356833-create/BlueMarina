@@ -45,7 +45,7 @@ export function FishEncyclopediaSection() {
 
           <h2
             id="fish-encyclopedia-title"
-            className="mt-8 font-serif text-[40px] font-normal leading-[1.16] text-[#f5efe4] sm:text-6xl lg:text-7xl"
+            className="mt-8 break-keep font-serif text-[40px] font-normal leading-[1.16] text-[#f5efe4] sm:text-6xl lg:text-[clamp(2.75rem,4.2vw,4.5rem)]"
           >
             바다의 생물을
             <br />
