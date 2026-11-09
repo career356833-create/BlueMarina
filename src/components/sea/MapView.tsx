@@ -825,15 +825,18 @@ export function SeaMapView() {
                 </div>
                 <div className="min-w-0">
                   <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#9FB3C8]">Blue Marina Sea</p>
-                  <p className="mt-1 text-sm font-black text-white">{hasMapKey ? "지도를 불러오는 중입니다." : "지도 키가 설정되면 지도가 열립니다."}</p>
+                  <p role="status" className="mt-1 text-sm font-black text-white">
+                    {sdkStatus === "error" ? "바다 지도를 표시할 수 없습니다." : "지도를 불러오는 중입니다."}
+                  </p>
                 </div>
               </div>
-              <p className="mt-2 text-[11px] font-semibold leading-5 text-[#9FB3C8]">{statusMessage}</p>
-              {!hasMapKey ? (
-                <p className="mt-2 rounded-xl bg-[#0E2233] px-3 py-2 text-[11px] font-bold leading-5 text-[#D7E4F6]">
-                  환경변수 <span className="font-black text-white">NEXT_PUBLIC_KAKAO_MAP_APP_KEY</span>를 넣으면 실지도가 표시됩니다.
-                </p>
-              ) : null}
+              {sdkStatus === "error" ? (
+                <Link href="/sea/navigation" className="mt-2 inline-flex min-h-11 items-center gap-2 rounded-xl px-3 text-sm font-bold text-white underline focus-visible:outline">
+                  항법 지도 열기 <ArrowRight size={16} aria-hidden="true" />
+                </Link>
+              ) : (
+                <p className="mt-2 text-[11px] font-semibold leading-5 text-[#9FB3C8]">{statusMessage}</p>
+              )}
             </div>
           </div>
         ) : null}
@@ -1364,12 +1367,6 @@ export function SeaMapView() {
               다시 시도
             </button>
           </div>
-        </div>
-      ) : null}
-
-      {sdkStatus === "error" ? (
-        <div className="pointer-events-none absolute left-3 top-[168px] z-20 max-w-[320px] rounded-[18px] border border-[#FF5A5F]/30 bg-[#FF5A5F]/15 p-3 text-xs font-bold leading-5 text-[#FFC0C3] shadow-lg backdrop-blur sm:left-4">
-          카카오 지도 SDK를 불러오지 못했습니다. 환경변수나 등록 도메인을 확인해 주세요.
         </div>
       ) : null}
 
