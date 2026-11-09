@@ -4,9 +4,9 @@ import type { NextConfig } from "next";
 // Keep static generation; nonce-based dynamic rendering is outside this baseline.
 const contentSecurityPolicy = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net",
+  "script-src 'self' 'unsafe-inline' https://dapi.kakao.com https://t1.daumcdn.net https://t1.kakaocdn.net/mapjsapi/js/main/",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net",
+  "img-src 'self' data: blob: https://t1.daumcdn.net https://mts.daumcdn.net https://t1.kakaocdn.net/mapjsapi/images/ https://mts.kakaocdn.net/api/v1/tile/",
   "font-src 'self'",
   "connect-src 'self' https://tile.openstreetmap.org https://api.maptiler.com https://mlfvpaikfpjrgrhwlrjn.supabase.co",
   "media-src 'self'",

@@ -26,8 +26,8 @@ test('enforced production CSP restricts defaults objects forms bases and embeddi
 
 test('Kakao origins are allowed only in observed script and image destinations', async () => {
   const d = await directives();
-  assert.deepEqual(d['script-src'], ["'self'", "'unsafe-inline'", 'https://dapi.kakao.com', 'https://t1.daumcdn.net']);
-  assert.deepEqual(d['img-src'], ["'self'", 'data:', 'blob:', 'https://t1.daumcdn.net', 'https://mts.daumcdn.net']);
+  assert.deepEqual(d['script-src'], ["'self'", "'unsafe-inline'", 'https://dapi.kakao.com', 'https://t1.daumcdn.net', 'https://t1.kakaocdn.net/mapjsapi/js/main/']);
+  assert.deepEqual(d['img-src'], ["'self'", 'data:', 'blob:', 'https://t1.daumcdn.net', 'https://mts.daumcdn.net', 'https://t1.kakaocdn.net/mapjsapi/images/', 'https://mts.kakaocdn.net/api/v1/tile/']);
 });
 
 test('MapLibre uses its local worker and only measured OSM and Supabase fetch origins', async () => {
