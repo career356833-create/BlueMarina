@@ -91,7 +91,7 @@ export default function TheoryDetailPage() {
   return (
     <LearningFrame>
       <div className="space-y-5">
-        <Link href="/theory" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-4 text-sm font-black text-slate-600 shadow-sm">
+        <Link href={`/theory?license=${licenseType}`} className="inline-flex min-h-11 items-center gap-2 rounded-full bg-white px-4 text-sm font-black text-slate-600 shadow-sm">
           <ArrowLeft size={16} />
           이론 목록
         </Link>

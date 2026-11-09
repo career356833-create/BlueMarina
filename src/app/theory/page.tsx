@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { normalizeLicenseType } from "@/lib/boat/questions";
 import { RelatedActions } from "@/components/platform/RelatedActions";
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import { ArrowRight, BookOpenCheck, Search } from "lucide-react";
 import { LearningFrame } from "@/components/platform/PageFamilies";
 import { getTheoryCategories, theories, type TheoryItem } from "@/data/theories";
@@ -26,6 +28,12 @@ function TheoryStatusBadge({ status }: { status: TheoryItem["status"] }) {
 }
 
 export default function TheoryPage() {
+  return <Suspense fallback={<LearningFrame><p role="status">이론 목록을 불러오는 중입니다.</p></LearningFrame>}><TheoryList /></Suspense>;
+}
+
+function TheoryList() {
+  const selectedLicense = useSearchParams().get("license");
+  const licenseQuery = selectedLicense ? `?license=${normalizeLicenseType(selectedLicense)}` : "";
   const [selectedCategory, setSelectedCategory] = useState("전체");
   const [query, setQuery] = useState("");
   const categories = useMemo(() => ["전체", ...getTheoryCategories()], []);
@@ -96,7 +104,7 @@ export default function TheoryPage() {
           {filteredTheories.map((theory) => (
             <Link
               key={theory.id}
-              href={`/theory/${encodeURIComponent(theory.tag)}`}
+              href={`/theory/${encodeURIComponent(theory.tag)}${licenseQuery}`}
               className="group rounded-[1.75rem] border border-sky-100 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-200 hover:shadow-lg"
             >
               <div className="flex items-start justify-between gap-3">
@@ -135,6 +143,6 @@ export default function TheoryPage() {
           </section>
         ) : null}
       </div>
-    <RelatedActions title="이론 학습 다음 단계" items={[{href:"/dictionary",label:"모르는 용어 찾기"},{href:"/study",label:"문제로 복습하기"}]} /></LearningFrame>
+    <RelatedActions title="이론 학습 다음 단계" items={[{href:"/dictionary",label:"모르는 용어 찾기"},{href:`/study${licenseQuery}`,label:"문제로 복습하기"}]} /></LearningFrame>
   );
 }
