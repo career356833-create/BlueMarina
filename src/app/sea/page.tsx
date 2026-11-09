@@ -9,7 +9,7 @@ export default function SeaPage() {
   return (
     <div className="h-[calc(100svh-5rem)] overflow-y-auto scroll-smooth bg-[#050f19]">
       <ExploreSeaIntro />
-      <div id="live-marine-map" className="relative h-[calc(100dvh-5rem)] scroll-mt-0">
+      <div id="live-marine-map" className="relative h-[calc(100dvh-5rem)] scroll-mt-[var(--bm-header-height)]">
         <Suspense fallback={null}>
           <SeaMapView />
         </Suspense>

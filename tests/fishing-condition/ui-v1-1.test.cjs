@@ -11,7 +11,7 @@ const css = fs.readFileSync(path.join(root, "src/app/globals.css"), "utf8");
 const fishingHero = fs.readFileSync(path.join(root, "src/components/boat/home/FishingExperienceSection.tsx"), "utf8");
 
 test("AI Captain content routes use a non-overlapping document anchor", () => {
-  assert.match(captain, /pathname !== "\/sea" && pathname !== "\/sea\/navigation"/);
+  assert.match(captain, /const usesContentSafeArea = pathname !== "\/sea\/navigation";/);
   assert.match(captain, /data-safe-area/);
   assert.match(css, /blue-captain-widget\[data-safe-area="true"\] \{\s*position: relative/);
 });

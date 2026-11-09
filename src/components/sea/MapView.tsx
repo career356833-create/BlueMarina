@@ -849,7 +849,7 @@ export function SeaMapView() {
                   <h1 className="text-[18px] font-black tracking-tight md:text-[26px]">바다 지도</h1>
                   <Link
                     href="/today-sea"
-                    className="inline-flex min-h-8 items-center gap-1.5 rounded-full border border-[#1F3A50] bg-[#0E2233] px-3 text-[10px] font-black text-[#D7E4F6] transition hover:border-[#2E8BFF] hover:text-white md:text-[11px]"
+                    className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-[#1F3A50] bg-[#0E2233] px-3 text-[10px] font-black text-[#D7E4F6] transition hover:border-[#2E8BFF] hover:text-white md:text-[11px]"
                   >
                     오늘의 바다
                     <ArrowRight size={13} aria-hidden="true" />
@@ -863,7 +863,7 @@ export function SeaMapView() {
                   type="button"
                   onClick={handleRequestCurrentLocation}
                   disabled={gpsStatus === "locating"}
-                  className="inline-flex min-h-9 items-center gap-1.5 rounded-full bg-[#2E8BFF] px-3 text-[11px] font-black text-white transition hover:bg-[#5aa4ff] disabled:cursor-not-allowed disabled:bg-[#2E8BFF]/55 md:hidden"
+                  className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-[#2E8BFF] px-3 text-[11px] font-black text-white transition hover:bg-[#5aa4ff] disabled:cursor-not-allowed disabled:bg-[#2E8BFF]/55 md:hidden"
                 >
                   <LocateFixed size={15} />
                   내 위치
@@ -872,7 +872,7 @@ export function SeaMapView() {
                   type="button"
                   onClick={handleRequestCurrentLocation}
                   disabled={gpsStatus === "locating"}
-                  className="hidden min-h-9 items-center gap-1.5 rounded-full bg-[#2E8BFF] px-3 text-[11px] font-black text-white transition hover:bg-[#5aa4ff] disabled:cursor-not-allowed disabled:bg-[#2E8BFF]/55 md:inline-flex"
+                  className="hidden min-h-11 items-center gap-1.5 rounded-full bg-[#2E8BFF] px-3 text-[11px] font-black text-white transition hover:bg-[#5aa4ff] disabled:cursor-not-allowed disabled:bg-[#2E8BFF]/55 md:inline-flex"
                 >
                   <LocateFixed size={15} />
                   현재 위치
@@ -880,7 +880,7 @@ export function SeaMapView() {
                 <button
                   type="button"
                   onClick={() => setIsTopPanelExpanded((value) => !value)}
-                  className="min-h-9 rounded-full border border-[#1F3A50] bg-[#0E2233] px-3 text-[11px] font-black text-[#EAF2FF] transition hover:border-[#2E8BFF] hover:text-white md:min-h-0 md:py-1"
+                  className="min-h-11 rounded-full border border-[#1F3A50] bg-[#0E2233] px-3 text-[11px] font-black text-[#EAF2FF] transition hover:border-[#2E8BFF] hover:text-white md:min-h-0 md:py-1"
                   aria-expanded={isTopPanelExpanded}
                 >
                   <span className="md:hidden">{isTopPanelExpanded ? "접기" : "레이어"}</span>
@@ -970,7 +970,7 @@ export function SeaMapView() {
                   <button
                     type="button"
                     onClick={() => setShowFishingLayer((value) => !value)}
-                    className={`${layerChipClass(showFishingLayer)} min-h-9 shrink-0 px-2.5 py-1.5 md:min-h-0 md:px-3 md:py-2`}
+                    className={`${layerChipClass(showFishingLayer)} min-h-11 shrink-0 px-2.5 py-1.5 md:min-h-0 md:px-3 md:py-2`}
                     aria-pressed={showFishingLayer}
                   >
                     <span className="md:hidden">낚시</span><span className="hidden md:inline">낚시포인트</span>
@@ -979,7 +979,7 @@ export function SeaMapView() {
                   <button
                     type="button"
                     onClick={() => setShowNationalLayer((value) => !value)}
-                    className={`${layerChipClass(showNationalLayer)} min-h-9 shrink-0 px-2.5 py-1.5 md:min-h-0 md:px-3 md:py-2`}
+                    className={`${layerChipClass(showNationalLayer)} min-h-11 shrink-0 px-2.5 py-1.5 md:min-h-0 md:px-3 md:py-2`}
                     aria-pressed={showNationalLayer}
                   >
                     <span className="md:hidden">국가</span><span className="hidden md:inline">국가어항</span>
@@ -988,7 +988,7 @@ export function SeaMapView() {
                   <button
                     type="button"
                     onClick={() => setShowLocalLayer((value) => !value)}
-                    className={`${layerChipClass(showLocalLayer)} min-h-9 shrink-0 px-2.5 py-1.5 md:min-h-0 md:px-3 md:py-2`}
+                    className={`${layerChipClass(showLocalLayer)} min-h-11 shrink-0 px-2.5 py-1.5 md:min-h-0 md:px-3 md:py-2`}
                     aria-pressed={showLocalLayer}
                   >
                     <span className="md:hidden">지방</span><span className="hidden md:inline">지방어항</span>
@@ -997,7 +997,7 @@ export function SeaMapView() {
                   <button
                     type="button"
                     onClick={() => setShowFixedLayer((value) => !value)}
-                    className={`${layerChipClass(showFixedLayer)} min-h-9 shrink-0 px-2.5 py-1.5 md:min-h-0 md:px-3 md:py-2`}
+                    className={`${layerChipClass(showFixedLayer)} min-h-11 shrink-0 px-2.5 py-1.5 md:min-h-0 md:px-3 md:py-2`}
                     aria-pressed={showFixedLayer}
                   >
                     <span className="md:hidden">정주</span><span className="hidden md:inline">어촌정주어항</span>
@@ -1006,7 +1006,7 @@ export function SeaMapView() {
                   <button
                     type="button"
                     onClick={() => setShowRevitalizationProjects((value) => !value)}
-                    className={`${layerChipClass(showRevitalizationProjects)} min-h-9 shrink-0 px-2.5 py-1.5 md:min-h-0 md:px-3 md:py-2`}
+                    className={`${layerChipClass(showRevitalizationProjects)} min-h-11 shrink-0 px-2.5 py-1.5 md:min-h-0 md:px-3 md:py-2`}
                     aria-pressed={showRevitalizationProjects}
                   >
                     <span className="md:hidden">신활력</span><span className="hidden md:inline">신활력 사업지</span>
@@ -1352,14 +1352,14 @@ export function SeaMapView() {
             <p className="text-[12px] font-black text-[#FFE2AB] md:text-sm">위치 권한이 거부되었습니다</p>
             <p className="text-[11px] font-semibold leading-4 text-[#FFE8BF] md:text-xs md:leading-5">브라우저 설정에서 위치 권한을 허용한 후 다시 시도해 주세요.</p>
             <div className="space-y-1 rounded-[14px] border border-[#FFB020]/20 bg-black/10 px-2.5 py-2 text-[10px] font-semibold leading-4 text-[#FFE8BF] md:px-3 md:text-[11px]">
-              <p>1. 주소창 자자손 아이콘을 눌러 권한을 확인하세요.</p>
-              <p>2. 위치 허용 훌 페이지를 다시 불러오세요.</p>
+              <p>1. 브라우저의 사이트 설정에서 위치 권한을 확인하세요.</p>
+              <p>2. 위치 허용 후 페이지를 다시 불러오세요.</p>
               <p>3. 그래도 안 되면 브라우저 설정에서 위치 권한을 켜 주세요.</p>
             </div>
             <button
               type="button"
               onClick={handleRequestCurrentLocation}
-              className="inline-flex min-h-9 items-center justify-center rounded-full bg-[#FFB020] px-3.5 text-[11px] font-black text-[#071827] md:min-h-10 md:px-4 md:text-[12px]"
+              className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#FFB020] px-3.5 text-[11px] font-black text-[#071827] md:min-h-10 md:px-4 md:text-[12px]"
             >
               다시 시도
             </button>

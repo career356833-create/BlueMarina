@@ -134,6 +134,7 @@ test("shared desktop navigation exposes active semantics", () => {
 });
 
 test("sea map retains the shared header while navigation uses its immersive viewport", () => {
+  assert.match(read("src/app/sea/page.tsx"), /id="live-marine-map"[^>]*scroll-mt-\[var\(--bm-header-height\)\]/);
   assert.match(read("src/app/sea/page.tsx"), /h-\[calc\(100svh-5rem\)\]/);
   assert.match(read("src/components/sea/MapView.tsx"), /relative h-full overflow-hidden/);
   assert.match(read("src/components/boat/navigation/MarineNavigation.tsx"), /data-navigation-immersive="true"/);
