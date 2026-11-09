@@ -64,7 +64,7 @@ test("form family keeps private and staged flows separate", () => {
 test("content companion cannot cover mobile actions or BottomNav", () => {
   const widget = read("src/components/boat/ai-captain/BlueMarinaCaptainWidget.tsx");
   const css = read("src/app/globals.css");
-  assert.match(widget, /pathname !== "\/sea" && pathname !== "\/sea\/navigation"/);
+  assert.match(widget, /const usesContentSafeArea = pathname !== "\/sea\/navigation";/);
   assert.match(widget, /!usesContentSafeArea && isFollowMode && lurePosition/);
   assert.match(css, /\.blue-captain-widget\[data-safe-area="true"\] \{\s*position: relative/);
   assert.match(css, /margin: 16px 16px calc\(var\(--bm-bottom-nav-height\) \+ env\(safe-area-inset-bottom\) \+ 16px\)/);

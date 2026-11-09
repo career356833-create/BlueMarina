@@ -78,9 +78,8 @@ export function BlueMarinaCaptainWidget() {
   const pauseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const followModeRef = useRef(false);
   const isFishSession = pathname?.startsWith("/fish") ?? false;
-  // Keep the companion out of titles and actions on document-style screens.
-  // The immersive map surfaces retain their existing free-moving behavior.
-  const usesContentSafeArea = pathname !== "/sea" && pathname !== "/sea/navigation";
+  // Sea discovery has map controls and a hero. Use its document footer for the companion.
+  const usesContentSafeArea = pathname !== "/sea/navigation";
   const panelTitle = isFishSession ? "어종 도감 안내" : `${defaultCaptainName} · ${defaultCaptainSpecies}`;
   const paused = usesContentSafeArea || isOpen || isHovered || (reducedMotion && !isFollowMode);
 

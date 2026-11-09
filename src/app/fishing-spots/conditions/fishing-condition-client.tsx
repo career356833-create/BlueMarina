@@ -288,7 +288,7 @@ export function FishingConditionClient({ initialSpeciesId = "", spotContext, jou
 
       <header className="rounded-[28px] border border-[#1F3A50] bg-[linear-gradient(135deg,#102C46_0%,#071827_72%)] p-6 sm:p-8">
         <p className="flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.28em] text-[#79C9D6]"><Waves size={15} /> Fishing Condition</p>
-        <h1 className="mt-3 max-w-3xl text-3xl font-black tracking-tight text-white sm:text-5xl">오늘 바다의 근거를 읽다</h1>
+        <h1 className="mt-3 max-w-3xl break-keep text-3xl font-black tracking-tight text-white sm:text-5xl">오늘 바다의 근거를 읽다</h1>
         <p className="mt-4 max-w-2xl text-sm font-semibold leading-7 text-[#B8CBDD] sm:text-base">어종, 관측 자료원, 정점과 수심을 직접 선택해 환경·계절성·원자료의 한계를 함께 확인합니다.</p>
       </header>
 

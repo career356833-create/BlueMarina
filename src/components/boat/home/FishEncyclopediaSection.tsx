@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BookOpen, Fish, Waves } from "lucide-react";
+import { ArrowRight, BookOpen, Fish } from "lucide-react";
 import { fishCategories, fishItems } from "@/data/fish-data";
 
 const featuredFishNames = ["참돔", "갈치", "문어", "우럭", "광어"] as const;
@@ -87,7 +87,7 @@ export function FishEncyclopediaSection() {
         </div>
 
         <div className="relative z-10 flex min-h-[380px] flex-col justify-end lg:min-h-[500px]">
-          <div className="ml-auto w-full max-w-[390px] border border-white/16 bg-[#06111d]/76 p-5 shadow-[0_22px_70px_rgba(0,0,0,0.36)] backdrop-blur-xl sm:p-6">
+          <div className="ml-auto w-full max-w-[390px] border border-white/20 bg-[#06111d]/80 p-5 shadow-[0_22px_70px_rgba(0,0,0,0.36)] backdrop-blur-xl sm:p-6">
             <div className="flex items-center justify-between gap-4">
               <p className="text-[10px] font-semibold tracking-[0.22em] text-[#d5b477]">BLUE MARINA SPECIES INDEX</p>
               <Fish size={19} className="shrink-0 text-[#e2bd7d]" strokeWidth={1.35} aria-hidden="true" />
@@ -153,10 +153,6 @@ export function FishEncyclopediaSection() {
             </div>
           </div>
 
-          <div className="pointer-events-none absolute right-0 top-8 hidden items-center gap-3 text-[10px] tracking-[0.2em] text-white/35 lg:flex">
-            <Waves size={15} strokeWidth={1.3} aria-hidden="true" />
-            KOREAN COASTAL SPECIES
-          </div>
         </div>
       </div>
     </section>
