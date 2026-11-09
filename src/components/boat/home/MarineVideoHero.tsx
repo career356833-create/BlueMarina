@@ -33,7 +33,7 @@ export function MarineVideoHero() {
 
           <h1
             id="marine-hero-title"
-            className="mt-8 font-serif text-5xl font-normal leading-[1.1] text-[#f4f0e8] sm:text-6xl lg:text-7xl xl:text-8xl"
+            className="mt-8 break-keep font-serif text-[clamp(2rem,10vw,3rem)] font-normal leading-[1.1] text-[#f4f0e8] sm:text-6xl lg:text-7xl xl:text-8xl"
           >
             바다를 읽고,
             <br />

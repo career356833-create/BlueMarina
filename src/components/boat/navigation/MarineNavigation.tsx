@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { useExitWarning } from "@/components/platform/useDraftExit";
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { ArrowLeft, ChevronDown, Layers3, LocateFixed, MapPinned, Radio, ShieldAlert, X } from "lucide-react";
+import { ArrowLeft, Home, ChevronDown, Layers3, LocateFixed, MapPinned, Radio, ShieldAlert, X } from "lucide-react";
 import { initialBearingDegrees, relativeBearingDegrees } from "@/lib/marine-navigation/bearing";
 import { useFieldDiagnostics } from './useFieldDiagnostics';
 import { FieldDiagnosticsPanel } from './FieldDiagnosticsPanel';
@@ -220,10 +221,14 @@ export function MarineNavigation({ initialDestination, initialQueryError, destin
   const focusNavigationWarning = useCallback((properties: KhoaNavigationWarning) => { setNavigationWarningsVisible(true); setSelectedMarineFeature({ kind: "navigation-warning", properties }); setNavigationWarningFocus(properties); }, []);
   useEffect(() => { if (selectedMarineFeature) setLayersOpen(true); }, [selectedMarineFeature]);
 
+  useExitWarning(Boolean(voyage.session && voyage.session.state !== "COMPLETED"), "진행 중인 항해 기록이 있습니다. 항법 화면을 떠날까요?");
+
   return (
     <main data-navigation-immersive="true" className="fixed inset-0 z-[120] flex h-[100dvh] w-full flex-col overflow-hidden bg-[#06131a] text-[#f2eee3]">
       <header className="z-[530] flex h-[calc(3.5rem+env(safe-area-inset-top))] shrink-0 items-center justify-between gap-2 border-b border-white/10 bg-[#06131a]/95 px-3 pt-[env(safe-area-inset-top)] backdrop-blur-md sm:px-5">
-        <div className="flex min-w-0 items-center gap-2"><Link href={returnHref} aria-label={journeySource?.sourceType === "fishing_spot" ? "낚시 포인트 상세로 돌아가기" : "바다 지도로 돌아가기"} className="grid size-11 shrink-0 place-items-center rounded-xl border border-white/20 text-[#d2b178] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8fffe9]"><ArrowLeft size={19} aria-hidden="true" /></Link><div className="min-w-0"><p className="truncate text-sm font-semibold">{destination?.name ?? "해양 항법 보조"}</p><p className="truncate text-[10px] text-[#9baea9]">직선 방위 참고 · 안전항로 아님</p></div></div>
+        <div className="flex min-w-0 items-center gap-2"><Link href={returnHref} aria-label={journeySource?.sourceType === "fishing_spot" ? "낚시 포인트 상세로 돌아가기" : "바다 지도로 돌아가기"} className="grid size-11 shrink-0 place-items-center rounded-xl border border-white/20 text-[#d2b178] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8fffe9]"><ArrowLeft size={19} aria-hidden="true" /></Link>
+          <Link href="/" aria-label="Blue Marina 홈" title="메인으로" className="grid size-11 shrink-0 place-items-center rounded-xl border border-white/20 text-marine-accent focus-visible:outline"><Home size={18} aria-hidden="true" /></Link>
+          <div className="min-w-0"><h1 className="truncate text-sm font-semibold">{destination?.name ?? "해양 항법 보조"}</h1><p className="truncate text-[10px] text-[#9baea9]">직선 방위 참고 · 안전항로 아님</p></div></div>
         <div className="flex shrink-0 items-center gap-2"><span role="status" className={`rounded-full px-2 py-1 text-[10px] font-semibold ${failure ? "bg-amber-900/70 text-amber-100" : "bg-white/10 text-[#d5e4df]"}`}>{gpsLabel}</span><button type="button" onClick={gpsActive ? stopGps : startGps} aria-label={gpsActive ? "GPS 추적 중지" : "GPS 위치 추적 시작"} className="grid size-11 place-items-center rounded-xl border border-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#8fffe9]">{gpsActive ? <Radio size={16} /> : <LocateFixed size={16} />}</button></div>
       </header>
       <NavigationInstruments elapsed={voyage.session ? formatVoyageTime(voyage.session.elapsedMs + (voyage.session.activeSince == null ? 0 : Math.max(0, voyage.now - voyage.session.activeSince))) : undefined} navigation={navigation} vessel={effectiveVessel} unit={speedUnit} onUnitChange={() => setSpeedUnit(unit => unit === "kn" ? "km/h" : "kn")} following={camera.follow} gpsState={vesselState} accuracy={displayVessel?.accuracyMeters} compass={deviceHeading && clock - deviceHeading.at <= POSITION_MAX_AGE_MS ? deviceHeading.degrees : null} />

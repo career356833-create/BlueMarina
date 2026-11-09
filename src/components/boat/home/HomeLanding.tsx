@@ -42,6 +42,10 @@ export function HomeLanding() {
 
       <footer className="bg-[var(--bm-background)] px-5 pb-24 pt-9 text-center sm:px-8 lg:pb-9">
         <p className="text-[10px] tracking-[0.34em] text-[var(--bm-brand-accent)]">BLUE MARINA</p>
+        <nav aria-label="이용 도움말" className="mt-2 flex flex-wrap justify-center gap-x-5">
+          <Link className="inline-flex min-h-11 items-center text-sm text-marine-secondary hover:text-marine-accent" href="/faq">자주 묻는 질문</Link>
+          <Link className="inline-flex min-h-11 items-center text-sm text-marine-secondary hover:text-marine-accent" href="/contact">문의하기</Link>
+        </nav>
         <p className="mt-3 text-xs text-white/35">Marine · Fishing · Navigation</p>
       </footer>
 

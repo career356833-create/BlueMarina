@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { useDraftExit } from "@/components/platform/useDraftExit";
 import { ArrowLeft, CheckCircle2, ImagePlus, ShieldCheck, Trash2 } from "lucide-react";
 import { communityPostTypeLabels } from "@/lib/community/route-helpers";
 import { COMMUNITY_POST_TYPES, type CommunityImageInput, type CommunityPostDraft } from "@/lib/community/types";
@@ -27,7 +28,8 @@ export function CommunityPostForm({catalog,initialContext={spotId:null,speciesId
   const removeLink=(key:keyof typeof links,value:string)=>setLinks(current=>({...current,[key]:current[key].filter(id=>id!==value)}));
   const addImages=(files:FileList|null)=>{if(!files)return;const next:Preview[]=[],issues:string[]=[];for(const file of Array.from(files)){if(images.length+next.length>=MAX_COMMUNITY_IMAGES){issues.push("이미지는 최대 10장입니다.");break}const invalid=validateCommunityImage(file);if(invalid.length){issues.push(`${file.name}: ${invalid.join(" ")}`);continue}next.push({id:crypto.randomUUID(),name:file.name,type:file.type,size:file.size,order:images.length+next.length,url:URL.createObjectURL(file)})}setImages(current=>[...current,...next]);setErrors(issues);setSavedId(null)};
   const removeImage=(id:string)=>setImages(current=>current.filter(image=>{if(image.id===id)URL.revokeObjectURL(image.url);return image.id!==id}).map((image,order)=>({...image,order})));
-  const submit=()=>{const result=validateCommunityPostDraft(draft(),allowed);setErrors(result.errors);setWarnings(result.warnings);if(!result.valid){setSavedId(null);return}const id=`community-local-${crypto.randomUUID()}`;localStorage.setItem(`blue-marina:${id}`,JSON.stringify({id,status:"SUBMITTED",moderationStatus:"REVIEW_REQUIRED",sourceType:"USER_SUBMITTED",productionVisible:false,createdAt:new Date().toISOString(),post:result.sanitized,safetyFlags:result.safetyFlags}));setSavedId(id)};
+  const markSaved = useDraftExit(JSON.stringify([type, title, body, province, district, links, images.map(image => image.url)]));
+  const submit=()=>{const result=validateCommunityPostDraft(draft(),allowed);setErrors(result.errors);setWarnings(result.warnings);if(!result.valid){setSavedId(null);return}const id=`community-local-${crypto.randomUUID()}`;localStorage.setItem(`blue-marina:${id}`,JSON.stringify({id,status:"SUBMITTED",moderationStatus:"REVIEW_REQUIRED",sourceType:"USER_SUBMITTED",productionVisible:false,createdAt:new Date().toISOString(),post:result.sanitized,safetyFlags:result.safetyFlags}));setSavedId(id);if (!images.length) markSaved()};
   const loadMine=async()=>{const token=(await createClient()?.auth.getSession())?.data.session?.access_token;if(!token)return;try{const response=await fetch("/api/community/posts?scope=mine",{headers:{Authorization:`Bearer ${token}`},cache:"no-store"});if(response.ok){const result=await response.json() as {posts?:Array<{id:string;title:string;status:string}>};setOwnPosts(result.posts??[])}}catch{/* Server limitation is shown on submit. */}};
   useEffect(()=>{void loadMine()},[]);
   const submitServer=async()=>{
@@ -41,7 +43,7 @@ export function CommunityPostForm({catalog,initialContext={spotId:null,speciesId
       const response=await fetch("/api/community/posts",{method:"POST",headers:{"Content-Type":"application/json",Authorization:`Bearer ${token}`},body:JSON.stringify(result.sanitized),cache:"no-store"});
       const payload=await response.json() as {post?:{id:string;status:string};code?:string};
       if(!response.ok||!payload.post){setServerError(payload.code??"서버 저장에 실패했습니다.");return}
-      setServerPost(payload.post);await loadMine();
+      markSaved();setServerPost(payload.post);await loadMine();
     }catch{setServerError("네트워크 문제로 저장 여부를 확인하지 못했습니다. 재제출 전 내 글을 확인해 주세요.")}finally{setBusy(false)}
   };
   const picker=(label:string,key:keyof typeof links,options:Option[])=><div><label className="grid gap-2 text-sm font-bold">{label}<select defaultValue="" onChange={event=>{addLink(key,event.target.value);event.currentTarget.value=""}} className="min-h-11 rounded-xl border border-[#29465D] bg-[#050F19] px-3"><option value="">{options.length?"명시적으로 선택":"연결 가능한 production 항목 없음"}</option>{options.map(option=><option key={option.id} value={option.id}>{option.label}</option>)}</select></label><div className="mt-2 flex flex-wrap gap-2">{links[key].map(id=><button type="button" key={id} onClick={()=>removeLink(key,id)} className="min-h-11 max-w-full break-all rounded-full border border-[#79C9D6]/40 px-3 text-xs font-black">{id} ×</button>)}</div></div>;

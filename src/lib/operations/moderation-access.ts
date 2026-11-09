@@ -25,6 +25,8 @@ export function canActModeration(roles: ModerationRole, domain: ModerationDomain
 
 export function canAccessAdminPath(pathname: string, metadata: Record<string, unknown> | undefined): boolean {
   const roles = moderationRoles(metadata);
+  if (pathname === "/market/admin" || pathname.startsWith("/market/admin/")) return roles.market;
+  if (pathname === "/charters/admin" || pathname.startsWith("/charters/admin/")) return roles.charter;
   if (pathname === "/admin/operations/moderation" || pathname.startsWith("/admin/operations/moderation/")) {
     return Object.values(roles).some(Boolean);
   }

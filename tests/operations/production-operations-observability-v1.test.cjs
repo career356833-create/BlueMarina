@@ -19,7 +19,7 @@ test('operations route is private, noindex, nofollow and absent from sitemap', (
   const layout = read('src/app/admin/operations/layout.tsx');
   const middleware = read('src/middleware.ts');
   assert.match(layout, /index: false, follow: false/);
-  assert.match(middleware, /matcher: \["\/admin\/operations\/:path\*"\]/);
+  for (const path of ["/admin/operations/:path*", "/charters/admin/:path*", "/market/admin/:path*"]) assert.ok(middleware.includes(JSON.stringify(path)));
   assert.match(middleware, /status: 404/);
   assert.match(middleware, /X-Robots-Tag": "noindex, nofollow"/);
   assert.match(read('src/app/robots.ts'), /"\/admin\/"/);

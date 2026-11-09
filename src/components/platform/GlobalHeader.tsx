@@ -12,6 +12,12 @@ export function GlobalHeader() {
 
   function goBack() {
     // Next's index counts in-app transitions. A direct entry falls back to its parent page.
+    const nav = (window as Window & { navigation?: { currentEntry?: { index: number }; entries(): { url?: string }[] } }).navigation;
+    const previous = nav?.entries()[(nav.currentEntry?.index ?? 0) - 1]?.url;
+    if (previous && new URL(previous).origin === window.location.origin) {
+      router.back();
+      return;
+    }
     if (typeof window.history.state?.idx === "number" && window.history.state.idx > 0) {
       router.back();
       return;

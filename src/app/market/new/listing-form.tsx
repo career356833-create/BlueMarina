@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useDraftExit } from "@/components/platform/useDraftExit";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, CheckCircle2, ImagePlus, ShieldCheck, Trash2 } from "lucide-react";
 import { categoryLabels, conditionLabels, priceTypeLabels, transactionLabels } from "@/lib/market/route-helpers";
@@ -24,7 +25,8 @@ export function MarketListingForm() {
   const toggleMethod=(value:string)=>{setMethods((current)=>current.includes(value)?current.filter((item)=>item!==value):[...current,value]);setSavedId(null);idempotencyKey.current=null};
   const price=useMemo(()=>form.priceType==="FREE"?0:form.priceType==="INQUIRY"||!form.price.trim()?null:Number(form.price.replaceAll(",","")),[form.price,form.priceType]);
   const draft=()=>({title:form.title,description:form.description,category:form.category,subcategory:form.subcategory||null,price,priceType:form.priceType,condition:form.condition,province:form.province,district:form.district||null,transactionMethods:methods,images:[...existingImages,...images.map(({name,type,size,order})=>({name,type,size,order}))],contactType:form.contactType,contactDestination:form.contactDestination||null});
-  const save=()=>{const result=validateMarketListingDraft(draft());setErrors(result.errors);setWarnings(result.warnings);if(!result.valid){setSavedId(null);return;}const id=`market-local-${crypto.randomUUID()}`;localStorage.setItem(`blue-marina:${id}`,JSON.stringify({id,status:"SUBMITTED",moderationStatus:"REVIEW_REQUIRED",currency:"KRW",sourceType:"USER_SUBMITTED",verificationStatus:"UNVERIFIED",productionVisible:false,createdAt:new Date().toISOString(),listing:result.sanitized}));setSavedId(id);};
+  const markSaved = useDraftExit(JSON.stringify([form, methods, images.map(image => image.url), existingImages]));
+  const save=()=>{const result=validateMarketListingDraft(draft());setErrors(result.errors);setWarnings(result.warnings);if(!result.valid){setSavedId(null);return;}const id=`market-local-${crypto.randomUUID()}`;localStorage.setItem(`blue-marina:${id}`,JSON.stringify({id,status:"SUBMITTED",moderationStatus:"REVIEW_REQUIRED",currency:"KRW",sourceType:"USER_SUBMITTED",verificationStatus:"UNVERIFIED",productionVisible:false,createdAt:new Date().toISOString(),listing:result.sanitized}));setSavedId(id);if (!images.length) markSaved();};
   const loadMine=async()=>{
     const client=createClient();const token=(await client?.auth.getSession())?.data.session?.access_token;
     if(!token){setOwnListings([]);setOwnMessage("로그인 후 본인 제출 내역을 확인할 수 있습니다.");return}
@@ -60,6 +62,7 @@ export function MarketListingForm() {
         if(!attachResponse.ok){setSubmitError("파일은 비공개 버킷에 저장됐지만 판매글 이미지 연결을 확인하지 못했습니다. 다시 제출하지 말고 운영자에게 문의해 주세요.");await loadMine();return}
       }
       setExistingImages(result.sanitized.images);setImages([]);
+      markSaved();
       setSubmitResult({listingId,status:body.record?.listing.status??body.status??"SUBMITTED",moderationStatus:body.record?.moderationStatus??body.moderationStatus??"REVIEW_REQUIRED"});
       await loadMine();
     }catch{setSubmitError("네트워크 문제로 제출을 완료하지 못했습니다. 본인 내역을 확인해 주세요.")}finally{setBusy(false)}
